@@ -1,6 +1,12 @@
 [build]
-  command = ""
+  # No build step needed — dashboard is static HTML + JSON
+  # Deploys are done via CLI from GitHub Actions (no build minutes consumed)
+  command = "/bin/true"
   publish = "."
+
+  # Stop Netlify auto-deploying on git push (we deploy via API instead)
+  [build.processing]
+    skip_processing = true
 
 [[headers]]
   for = "/data/*"

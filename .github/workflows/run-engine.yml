@@ -35,10 +35,21 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/signal_data.json data/portfolio_state.json
+          git add data/signal_data.json data/portfolio_state.json data/signal_log.jsonl
           if git diff --cached --quiet; then
             echo "No data changes to commit"
           else
             git commit -m "engine: update signals $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
           fi
+
+      # Deploy dashboard to Netlify via API (no build minutes consumed)
+      # Only uploads the files the dashboard actually needs
+      - name: Deploy to Netlify (API)
+        if: ${{ env.NETLIFY_SITE_ID != '' }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --prod --dir=. --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --message="engine update $(date -u +%H:%M)"
