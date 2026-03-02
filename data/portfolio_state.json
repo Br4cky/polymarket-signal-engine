@@ -2,24 +2,24 @@
   "fund_a": {
     "name": "5x Hunter",
     "band": "5x",
-    "capital": 250,
-    "available_cash": 212.57,
+    "capital": 2500,
+    "available_cash": 1878.05,
     "positions": [
       {
-        "position_id": "e1f0b7ca",
+        "position_id": "d69b9acf",
         "market_id": "958442",
         "question": "Will the Iranian regime fall by March 31?",
         "token_id": "48825140812430902098404528620382945035793471220915259967486864813738884055220",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.1709,
-        "entry_timestamp": "2026-03-02T20:17:51.026089+00:00",
-        "shares": 43.9,
-        "entry_usd": 7.5,
-        "current_price": 0.17,
-        "current_value": 7.46,
-        "unrealized_pnl": -0.04,
-        "unrealized_pnl_pct": -0.53,
+        "entry_price": 0.1759,
+        "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
+        "shares": 426.44,
+        "entry_usd": 75.0,
+        "current_price": 0.175,
+        "current_value": 74.63,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -29,20 +29,20 @@
         }
       },
       {
-        "position_id": "7faeddf6",
+        "position_id": "8bb673b9",
         "market_id": "1385748",
         "question": "Will France, UK, or Germany strike Iran by March 31?",
         "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.2281,
-        "entry_timestamp": "2026-03-02T20:17:51.026207+00:00",
-        "shares": 30.46,
-        "entry_usd": 6.95,
-        "current_price": 0.2195,
-        "current_value": 6.69,
-        "unrealized_pnl": -0.26,
-        "unrealized_pnl_pct": -3.74,
+        "entry_price": 0.2211,
+        "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
+        "shares": 324.65,
+        "entry_usd": 71.78,
+        "current_price": 0.22,
+        "current_value": 71.42,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -52,66 +52,20 @@
         }
       },
       {
-        "position_id": "5ce5d98e",
-        "market_id": "1469384",
-        "question": "Will Alireza Arafi be the next Supreme Leader of Iran?",
-        "token_id": "25227556023588911697250037340036299966685740925058429413810035196107956072774",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.203,
-        "entry_timestamp": "2026-03-02T20:17:51.026303+00:00",
-        "shares": 31.72,
-        "entry_usd": 6.44,
-        "current_price": 0.204,
-        "current_value": 6.47,
-        "unrealized_pnl": 0.03,
-        "unrealized_pnl_pct": 0.47,
-        "edge_score_at_entry": 31.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 9.5,
-          "external": 0.0
-        }
-      },
-      {
-        "position_id": "74f75052",
-        "market_id": "1466423",
-        "question": "Will Iran strike Cyprus in March?",
-        "token_id": "43849040965042844507777759840706002277693580873354818985912205362308537091627",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.2512,
-        "entry_timestamp": "2026-03-02T20:42:52.362337+00:00",
-        "shares": 23.72,
-        "entry_usd": 5.96,
-        "current_price": 0.245,
-        "current_value": 5.81,
-        "unrealized_pnl": -0.15,
-        "unrealized_pnl_pct": -2.52,
-        "edge_score_at_entry": 45.0,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 13.5,
-          "external": 0.0
-        }
-      },
-      {
-        "position_id": "85474e53",
+        "position_id": "272f40e5",
         "market_id": "1473075",
         "question": "Will Bitcoin dip to $55,000 in March?",
         "token_id": "3056478011660943904461466382920934987843622145282294244222474838030938303402",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.1859,
-        "entry_timestamp": "2026-03-02T20:42:52.362449+00:00",
-        "shares": 29.58,
-        "entry_usd": 5.5,
-        "current_price": 0.185,
-        "current_value": 5.47,
-        "unrealized_pnl": -0.03,
-        "unrealized_pnl_pct": -0.55,
+        "entry_price": 0.1759,
+        "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
+        "shares": 390.68,
+        "entry_usd": 68.71,
+        "current_price": 0.175,
+        "current_value": 68.37,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -121,20 +75,20 @@
         }
       },
       {
-        "position_id": "1e342aa5",
+        "position_id": "4be1234a",
         "market_id": "1473063",
         "question": "Will Bitcoin reach $85,000 in March?",
         "token_id": "115525206331954143666493722927087528093139997441327992335107710676655034238818",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.1256,
-        "entry_timestamp": "2026-03-02T20:42:52.362557+00:00",
-        "shares": 40.44,
-        "entry_usd": 5.08,
-        "current_price": 0.125,
-        "current_value": 5.05,
-        "unrealized_pnl": -0.03,
-        "unrealized_pnl_pct": -0.59,
+        "entry_price": 0.1357,
+        "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
+        "shares": 484.91,
+        "entry_usd": 65.79,
+        "current_price": 0.135,
+        "current_value": 65.46,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -142,58 +96,142 @@
           "dislocation": 8.0,
           "external": 0.0
         }
-      }
-    ],
-    "realized_trades": [],
-    "win_count": 0,
-    "loss_count": 0,
-    "peak_equity": 250,
-    "max_drawdown": -0.19,
-    "equity_history": [
-      {
-        "timestamp": "2026-03-02T20:17:51.026016+00:00",
-        "equity": 250
       },
       {
-        "timestamp": "2026-03-02T20:42:52.362252+00:00",
-        "equity": 249.53
-      },
-      {
-        "timestamp": "2026-03-02T20:49:31.418074+00:00",
-        "equity": 249.52
-      },
-      {
-        "timestamp": "2026-03-02T20:52:15.182370+00:00",
-        "equity": 249.52
-      }
-    ]
-  },
-  "fund_b": {
-    "name": "10x Hunter",
-    "band": "10x",
-    "capital": 250,
-    "available_cash": 244.75,
-    "positions": [
-      {
-        "position_id": "5fc2f9fe",
-        "market_id": "1466013",
-        "question": "US x Iran ceasefire by March 6?",
-        "token_id": "45384651537373960665605066318330086764816901476264060880498387434805925753491",
+        "position_id": "89e46c0a",
+        "market_id": "1402792",
+        "question": "US-Iran nuclear deal by March 31?",
+        "token_id": "74193761697677941585954766367922495031410290181541344957285147399752058444934",
         "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0653,
-        "entry_timestamp": "2026-03-02T20:17:51.026495+00:00",
-        "shares": 80.37,
-        "entry_usd": 5.25,
-        "current_price": 0.065,
-        "current_value": 5.22,
-        "unrealized_pnl": -0.03,
-        "unrealized_pnl_pct": -0.57,
-        "edge_score_at_entry": 31.7,
+        "convexity_band": "5x",
+        "entry_price": 0.1256,
+        "entry_timestamp": "2026-03-02T20:59:44.890089+00:00",
+        "shares": 501.57,
+        "entry_usd": 63.01,
+        "current_price": 0.125,
+        "current_value": 62.7,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
           "smart_money": 0.0,
-          "dislocation": 9.5,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "db0ab56f",
+        "market_id": "1467763",
+        "question": "Will Crude Oil (CL) hit (HIGH) $120 by end of March?",
+        "token_id": "69136365945621600854789649488423522395843457249417452310260493085275775221076",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.1407,
+        "entry_timestamp": "2026-03-02T20:59:44.890177+00:00",
+        "shares": 429.0,
+        "entry_usd": 60.36,
+        "current_price": 0.14,
+        "current_value": 60.06,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "e126c230",
+        "market_id": "677397",
+        "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+        "token_id": "109194950528471238221689772140031366300756554661469112835221485697222266375845",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.2161,
+        "entry_timestamp": "2026-03-02T20:59:44.890263+00:00",
+        "shares": 267.64,
+        "entry_usd": 57.83,
+        "current_price": 0.215,
+        "current_value": 57.54,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "03c815fb",
+        "market_id": "1466149",
+        "question": "Iran x Israel/US conflict ends by March 15?",
+        "token_id": "81325797569174911613409057281359521585771528908138546144994531752156467539030",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.2362,
+        "entry_timestamp": "2026-03-02T20:59:44.890356+00:00",
+        "shares": 234.66,
+        "entry_usd": 55.42,
+        "current_price": 0.235,
+        "current_value": 55.14,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "681d8a0c",
+        "market_id": "613835",
+        "question": "Will One Battle After Another win Best Picture at the 98th Academy Awards?",
+        "token_id": "101818439776033928818471919550932857351051302350112396692573347503051307979709",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.196,
+        "entry_timestamp": "2026-03-02T20:59:44.890443+00:00",
+        "shares": 271.05,
+        "entry_usd": 53.12,
+        "current_price": 0.195,
+        "current_value": 52.86,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 16.5,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 4.96,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "3ac1b873",
+        "market_id": "613837",
+        "question": "Will Sinners win Best Picture at the 98th Academy Awards?",
+        "token_id": "63433408040190943973509092025756868743192149481060781851142321049882584518043",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.1367,
+        "entry_timestamp": "2026-03-02T20:59:44.890524+00:00",
+        "shares": 372.62,
+        "entry_usd": 50.93,
+        "current_price": 0.136,
+        "current_value": 50.68,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 16.2,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 4.85,
           "external": 0.0
         }
       }
@@ -201,27 +239,180 @@
     "realized_trades": [],
     "win_count": 0,
     "loss_count": 0,
-    "peak_equity": 250,
-    "max_drawdown": -0.01,
+    "peak_equity": 2500,
+    "max_drawdown": 0.0,
     "equity_history": [
       {
-        "timestamp": "2026-03-02T20:17:51.026029+00:00",
-        "equity": 250
+        "timestamp": "2026-03-02T20:57:18.359041+00:00",
+        "equity": 2500
       },
       {
-        "timestamp": "2026-03-02T20:42:52.362270+00:00",
-        "equity": 249.97
-      },
-      {
-        "timestamp": "2026-03-02T20:49:31.418096+00:00",
-        "equity": 249.97
-      },
-      {
-        "timestamp": "2026-03-02T20:52:15.182390+00:00",
-        "equity": 249.97
+        "timestamp": "2026-03-02T20:59:44.889511+00:00",
+        "equity": 2500
       }
     ]
   },
-  "created_at": "2026-03-02T20:10:00+00:00",
-  "last_updated": "2026-03-02T20:52:15.182545+00:00"
+  "fund_b": {
+    "name": "10x+ Hunter",
+    "band": "10x",
+    "capital": 2500,
+    "available_cash": 2210.55,
+    "positions": [
+      {
+        "position_id": "08b5e8ca",
+        "market_id": "1473078",
+        "question": "Will Bitcoin dip to $50,000 in March?",
+        "token_id": "16750430841750281964633473509969688050218091484828573447113986659081710343189",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0904,
+        "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
+        "shares": 580.43,
+        "entry_usd": 52.5,
+        "current_price": 0.09,
+        "current_value": 52.24,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "a5544b16",
+        "market_id": "1466148",
+        "question": "Iran x Israel/US conflict ends by March 7?",
+        "token_id": "34607248775012434162023970679863902425653025984305214745980667340544918996830",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
+        "shares": 776.27,
+        "entry_usd": 50.71,
+        "current_price": 0.065,
+        "current_value": 50.46,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "270503ef",
+        "market_id": "1473060",
+        "question": "Will Bitcoin reach $90,000 in March?",
+        "token_id": "72288567685017756888828669131409064604859118327619100036098909334128768764531",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0673,
+        "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
+        "shares": 727.56,
+        "entry_usd": 48.99,
+        "current_price": 0.067,
+        "current_value": 48.75,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "0df2ac40",
+        "market_id": "1394368",
+        "question": "Will the U.S. invade Iran by March 31?",
+        "token_id": "60396150294056475674860934419619480139938118116601719506967369709790058295210",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.1055,
+        "entry_timestamp": "2026-03-02T20:59:44.890948+00:00",
+        "shares": 448.52,
+        "entry_usd": 47.33,
+        "current_price": 0.105,
+        "current_value": 47.09,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "2ec51275",
+        "market_id": "1473081",
+        "question": "Will Ethereum dip to $1,200 in March?",
+        "token_id": "74298501147110546338248054116106634377297784838457459699598954246400525367651",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0603,
+        "entry_timestamp": "2026-03-02T20:59:44.891036+00:00",
+        "shares": 758.37,
+        "entry_usd": 45.73,
+        "current_price": 0.06,
+        "current_value": 45.5,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "9eacb700",
+        "market_id": "665228",
+        "question": "Will Hezbollah disarm by March 31?",
+        "token_id": "13726222412844491860621369391578295764460056456966982436233358302388625569468",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0734,
+        "entry_timestamp": "2026-03-02T20:59:44.891113+00:00",
+        "shares": 602.33,
+        "entry_usd": 44.19,
+        "current_price": 0.073,
+        "current_value": 43.97,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 26.2,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 7.85,
+          "external": 0.0
+        }
+      }
+    ],
+    "realized_trades": [],
+    "win_count": 0,
+    "loss_count": 0,
+    "peak_equity": 2500,
+    "max_drawdown": 0.0,
+    "equity_history": [
+      {
+        "timestamp": "2026-03-02T20:57:18.359059+00:00",
+        "equity": 2500
+      },
+      {
+        "timestamp": "2026-03-02T20:59:44.889526+00:00",
+        "equity": 2500
+      }
+    ]
+  },
+  "created_at": "2026-03-02T20:57:18.359064+00:00",
+  "last_updated": "2026-03-02T20:59:44.891227+00:00"
 }
