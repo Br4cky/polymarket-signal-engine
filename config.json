@@ -1,0 +1,75 @@
+{
+  "polymarket": {
+    "gamma_api_base": "https://gamma-api.polymarket.com",
+    "clob_api_base": "https://clob.polymarket.com",
+    "data_api_base": "https://data-api.polymarket.com",
+    "rate_limit_per_minute": 55,
+    "cache_ttl_markets": 900,
+    "cache_ttl_prices": 300,
+    "price_history_days": 30,
+    "max_markets_per_fetch": 100
+  },
+  "kalshi": {
+    "api_base": "https://api.elections.kalshi.com/trade-api/v2",
+    "enabled": true,
+    "cache_ttl": 600,
+    "divergence_threshold_pct": 3.0
+  },
+  "whale_tracking": {
+    "subgraph_url": "https://gateway.thegraph.com/api/subgraphs/id/POLYMARKET_SUBGRAPH_ID",
+    "subgraph_api_key": "",
+    "enabled": true,
+    "leaderboard_enabled": true,
+    "whale_threshold_usd": 10000,
+    "concentration_alert_pct": 30
+  },
+  "news": {
+    "finnhub_api_key": "",
+    "finnhub_enabled": false,
+    "serpapi_key": "",
+    "google_trends_enabled": false
+  },
+  "scoring": {
+    "layer_weights": {
+      "structural": 0.30,
+      "smart_money": 0.25,
+      "dislocation": 0.30,
+      "external": 0.15
+    },
+    "edge_threshold": 50,
+    "strong_signal_threshold": 70
+  },
+  "funds": {
+    "fund_a": {
+      "name": "5x Hunter",
+      "band": "5x",
+      "price_range": [0.15, 0.25],
+      "capital": 250
+    },
+    "fund_b": {
+      "name": "10x Hunter",
+      "band": "10x",
+      "price_range": [0.05, 0.12],
+      "capital": 250
+    }
+  },
+  "portfolio": {
+    "total_capital": 500,
+    "max_positions_per_fund": 15,
+    "max_position_size_pct": 3,
+    "kelly_fraction": 0.5
+  },
+  "trading": {
+    "profit_target_pct": 50,
+    "stop_loss_pct": -80,
+    "min_liquidity_usd": 500,
+    "min_days_to_close": 2,
+    "slippage_pct": 0.5,
+    "max_trades_per_run": 3,
+    "auto_trade_enabled": false
+  },
+  "dashboard": {
+    "refresh_interval_seconds": 30,
+    "top_opportunities_count": 25
+  }
+}

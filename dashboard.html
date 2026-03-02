@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polymarket Signal Engine v2</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #21262d;
+    --border: #30363d; --text: #e6edf3; --text2: #8b949e;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922;
+    --blue: #58a6ff; --purple: #bc8cff; --orange: #f0883e;
+    --cyan: #39d353;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5; padding: 16px; }
+
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+  .header h1 { font-size: 20px; font-weight: 600; }
+  .header h1 span { color: var(--blue); }
+  .header-meta { display: flex; gap: 16px; align-items: center; font-size: 13px; color: var(--text2); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; margin-right: 4px; }
+
+  .grid { display: grid; gap: 16px; margin-bottom: 16px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card-title { font-size: 13px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .card-value { font-size: 28px; font-weight: 700; }
+  .card-sub { font-size: 12px; color: var(--text2); margin-top: 4px; }
+
+  .positive { color: var(--green); }
+  .negative { color: var(--red); }
+  .neutral { color: var(--text2); }
+
+  .fund-card { padding: 20px; }
+  .fund-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .fund-name { font-size: 16px; font-weight: 600; }
+  .fund-band { font-size: 12px; padding: 2px 8px; border-radius: 12px; font-weight: 500; }
+  .band-5x { background: rgba(88,166,255,0.15); color: var(--blue); }
+  .band-10x { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .fund-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .fund-stat-label { font-size: 11px; color: var(--text2); }
+  .fund-stat-value { font-size: 18px; font-weight: 600; }
+
+  .equity-chart { width: 100%; height: 120px; margin-top: 12px; }
+
+  .section-title { font-size: 16px; font-weight: 600; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--text2); font-weight: 500; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { text-align: left; padding: 8px 10px; color: var(--text2); font-weight: 500; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+  thead th:hover { color: var(--text); }
+  tbody td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tbody tr:hover { background: var(--surface2); }
+
+  .edge-bar { display: inline-flex; align-items: center; gap: 6px; }
+  .edge-bar-track { width: 60px; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+  .edge-bar-fill { height: 100%; border-radius: 3px; }
+
+  .layer-breakdown { display: flex; gap: 3px; align-items: center; }
+  .layer-bar { height: 16px; border-radius: 2px; min-width: 2px; }
+  .layer-s { background: var(--blue); }
+  .layer-m { background: var(--purple); }
+  .layer-d { background: var(--orange); }
+  .layer-e { background: var(--cyan); }
+
+  .layer-legend { display: flex; gap: 12px; font-size: 11px; color: var(--text2); margin-bottom: 8px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; margin-right: 3px; vertical-align: middle; }
+
+  .position-row td:first-child { font-weight: 500; }
+  .pnl-chip { padding: 1px 6px; border-radius: 4px; font-size: 12px; font-weight: 500; }
+  .pnl-positive { background: rgba(63,185,80,0.15); color: var(--green); }
+  .pnl-negative { background: rgba(248,81,73,0.15); color: var(--red); }
+
+  .tabs { display: flex; gap: 2px; margin-bottom: 16px; background: var(--surface2); padding: 2px; border-radius: 6px; width: fit-content; }
+  .tab { padding: 6px 14px; border-radius: 4px; font-size: 13px; cursor: pointer; color: var(--text2); border: none; background: none; }
+  .tab.active { background: var(--surface); color: var(--text); font-weight: 500; }
+
+  .question-link { color: var(--blue); text-decoration: none; max-width: 280px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .question-link:hover { text-decoration: underline; }
+
+  .refresh-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 6px 12px;
+    border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .refresh-btn:hover { background: var(--border); }
+
+  .empty-state { text-align: center; padding: 40px; color: var(--text2); }
+  .empty-state p { margin-top: 8px; }
+
+  .tooltip { position: relative; cursor: help; }
+  .tooltip .tip-text { visibility: hidden; background: var(--surface2); color: var(--text); padding: 8px 12px;
+    border-radius: 6px; border: 1px solid var(--border); position: absolute; z-index: 10; bottom: 120%; left: 50%;
+    transform: translateX(-50%); white-space: nowrap; font-size: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+  .tooltip:hover .tip-text { visibility: visible; }
+
+  canvas { image-rendering: auto; }
+
+  @media (max-width: 900px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .header { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Polymarket <span>Signal Engine</span> v2</h1>
+  <div class="header-meta">
+    <span id="scan-count">—</span>
+    <span id="last-updated"><span class="status-dot"></span>Loading...</span>
+    <button class="refresh-btn" onclick="loadData()">Refresh</button>
+  </div>
+</div>
+
+<!-- Combined Portfolio Overview -->
+<div class="grid grid-4" id="overview-cards">
+  <div class="card">
+    <div class="card-title">Combined Equity</div>
+    <div class="card-value" id="combined-equity">—</div>
+    <div class="card-sub" id="combined-pnl">—</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Win Rate</div>
+    <div class="card-value" id="combined-winrate">—</div>
+    <div class="card-sub" id="total-trades">—</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Opportunities Found</div>
+    <div class="card-value" id="opp-count">—</div>
+    <div class="card-sub" id="markets-scanned">—</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Avg Edge Score</div>
+    <div class="card-value" id="avg-edge">—</div>
+    <div class="card-sub" id="edge-range">—</div>
+  </div>
+</div>
+
+<!-- Fund Comparison -->
+<div class="section-title">Fund Comparison</div>
+<div class="grid grid-2">
+  <div class="card fund-card" id="fund-a-card">
+    <div class="fund-header">
+      <span class="fund-name" id="fund-a-name">Fund A</span>
+      <span class="fund-band band-5x" id="fund-a-band">5x Band</span>
+    </div>
+    <div class="fund-stats">
+      <div><div class="fund-stat-label">Equity</div><div class="fund-stat-value" id="fa-equity">—</div></div>
+      <div><div class="fund-stat-label">P&L</div><div class="fund-stat-value" id="fa-pnl">—</div></div>
+      <div><div class="fund-stat-label">Win Rate</div><div class="fund-stat-value" id="fa-winrate">—</div></div>
+    </div>
+    <div class="fund-stats" style="margin-top:12px;">
+      <div><div class="fund-stat-label">Open Positions</div><div class="fund-stat-value" id="fa-positions">—</div></div>
+      <div><div class="fund-stat-label">Closed Trades</div><div class="fund-stat-value" id="fa-closed">—</div></div>
+      <div><div class="fund-stat-label">Cash</div><div class="fund-stat-value" id="fa-cash">—</div></div>
+    </div>
+    <canvas id="fa-chart" class="equity-chart"></canvas>
+  </div>
+  <div class="card fund-card" id="fund-b-card">
+    <div class="fund-header">
+      <span class="fund-name" id="fund-b-name">Fund B</span>
+      <span class="fund-band band-10x" id="fund-b-band">10x Band</span>
+    </div>
+    <div class="fund-stats">
+      <div><div class="fund-stat-label">Equity</div><div class="fund-stat-value" id="fb-equity">—</div></div>
+      <div><div class="fund-stat-label">P&L</div><div class="fund-stat-value" id="fb-pnl">—</div></div>
+      <div><div class="fund-stat-label">Win Rate</div><div class="fund-stat-value" id="fb-winrate">—</div></div>
+    </div>
+    <div class="fund-stats" style="margin-top:12px;">
+      <div><div class="fund-stat-label">Open Positions</div><div class="fund-stat-value" id="fb-positions">—</div></div>
+      <div><div class="fund-stat-label">Closed Trades</div><div class="fund-stat-value" id="fb-closed">—</div></div>
+      <div><div class="fund-stat-label">Cash</div><div class="fund-stat-value" id="fb-cash">—</div></div>
+    </div>
+    <canvas id="fb-chart" class="equity-chart"></canvas>
+  </div>
+</div>
+
+<!-- Top Opportunities -->
+<div class="section-title">Top Opportunities <span class="badge" id="opp-badge">0</span></div>
+
+<div class="layer-legend">
+  <span><span class="legend-dot layer-s"></span>Structural</span>
+  <span><span class="legend-dot layer-m"></span>Smart Money</span>
+  <span><span class="legend-dot layer-d"></span>Dislocation</span>
+  <span><span class="legend-dot layer-e"></span>External</span>
+</div>
+
+<div class="card" style="overflow-x:auto;">
+  <table id="opp-table">
+    <thead>
+      <tr>
+        <th onclick="sortTable('opp-table',0)">Market</th>
+        <th onclick="sortTable('opp-table',1)">Outcome</th>
+        <th onclick="sortTable('opp-table',2)">Price</th>
+        <th onclick="sortTable('opp-table',3)">Edge</th>
+        <th onclick="sortTable('opp-table',4)">Layers</th>
+        <th onclick="sortTable('opp-table',5)">Band</th>
+        <th onclick="sortTable('opp-table',6)">Multiple</th>
+        <th onclick="sortTable('opp-table',7)">Liquidity</th>
+        <th onclick="sortTable('opp-table',8)">Days</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="empty-state" id="opp-empty" style="display:none;">
+    <p>No opportunities above threshold yet. Run the engine to scan markets.</p>
+  </div>
+</div>
+
+<!-- Positions -->
+<div class="section-title">Open Positions</div>
+<div class="tabs">
+  <button class="tab active" onclick="showPositions('all',this)">All</button>
+  <button class="tab" onclick="showPositions('fund_a',this)">Fund A</button>
+  <button class="tab" onclick="showPositions('fund_b',this)">Fund B</button>
+</div>
+<div class="card" style="overflow-x:auto;">
+  <table id="pos-table">
+    <thead>
+      <tr>
+        <th>Market</th>
+        <th>Side</th>
+        <th>Qty</th>
+        <th>Entry</th>
+        <th>Current</th>
+        <th>P&L</th>
+        <th>Fund</th>
+        <th>Opened</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="empty-state" id="pos-empty" style="display:none;">
+    <p>No open positions. Run with <code>--execute</code> to paper trade.</p>
+  </div>
+</div>
+
+<!-- Realized Trades -->
+<div class="section-title">Recent Realized Trades</div>
+<div class="card" style="overflow-x:auto;">
+  <table id="trades-table">
+    <thead>
+      <tr>
+        <th>Market</th>
+        <th>Side</th>
+        <th>Entry</th>
+        <th>Exit</th>
+        <th>P&L</th>
+        <th>Return</th>
+        <th>Fund</th>
+        <th>Closed</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="empty-state" id="trades-empty" style="display:none;">
+    <p>No realized trades yet.</p>
+  </div>
+</div>
+
+<!-- Statistics -->
+<div class="section-title">Signal Statistics</div>
+<div class="grid grid-2">
+  <div class="card">
+    <div class="card-title">By Category</div>
+    <table id="cat-table">
+      <thead><tr><th>Category</th><th>Count</th><th>Avg Edge</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">By Convexity Band</div>
+    <table id="band-table">
+      <thead><tr><th>Band</th><th>Count</th><th>Avg Edge</th><th>Liquidity</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<div style="text-align:center; padding:24px; color:var(--text2); font-size:12px;">
+  Polymarket Signal Engine v2 &mdash; Paper Trading Only &mdash; Not Financial Advice
+</div>
+
+<script>
+let DATA = null;
+let currentPositionFilter = 'all';
+
+// ── Data Loading ──
+async function loadData() {
+  try {
+    const resp = await fetch('data/signal_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('No data file');
+    DATA = await resp.json();
+    render();
+  } catch(e) {
+    console.warn('Load failed:', e);
+    document.getElementById('last-updated').innerHTML = '<span class="status-dot" style="background:var(--red)"></span>No data — run engine.py first';
+  }
+}
+
+// ── Rendering ──
+function render() {
+  if (!DATA) return;
+  renderMeta();
+  renderOverview();
+  renderFunds();
+  renderOpportunities();
+  renderPositions();
+  renderTrades();
+  renderStatistics();
+  renderCharts();
+}
+
+function renderMeta() {
+  const m = DATA.metadata || {};
+  const ts = m.timestamp ? new Date(m.timestamp) : null;
+  const timeStr = ts ? ts.toLocaleString() : '—';
+  document.getElementById('last-updated').innerHTML =
+    `<span class="status-dot"></span>Updated ${timeStr}`;
+  document.getElementById('scan-count').textContent =
+    `${m.markets_scanned || 0} markets · ${m.tokens_scored || 0} tokens scored`;
+}
+
+function renderOverview() {
+  const p = DATA.portfolio || {};
+  const opps = DATA.opportunities || [];
+
+  setText('combined-equity', money(p.combined_equity));
+  const pnl = p.combined_pnl || 0;
+  setText('combined-pnl', `${pnl >= 0 ? '+' : ''}${money(pnl)} P&L`, pnl >= 0 ? 'positive' : 'negative');
+
+  const wr = p.combined_win_rate;
+  setText('combined-winrate', wr != null ? pct(wr) : '—');
+  setText('total-trades', `${p.combined_total_trades || 0} total trades`);
+
+  setText('opp-count', opps.length);
+  setText('markets-scanned', `${DATA.metadata?.markets_scanned || 0} markets scanned`);
+
+  if (opps.length > 0) {
+    const edges = opps.map(o => o.edge_score);
+    const avg = edges.reduce((a,b) => a+b, 0) / edges.length;
+    setText('avg-edge', avg.toFixed(1));
+    setText('edge-range', `Range: ${Math.min(...edges).toFixed(1)} — ${Math.max(...edges).toFixed(1)}`);
+  }
+}
+
+function renderFunds() {
+  const p = DATA.portfolio || {};
+  for (const [key, prefix] of [['fund_a','fa'], ['fund_b','fb']]) {
+    const f = p[key] || {};
+    document.getElementById(`${prefix === 'fa' ? 'fund-a' : 'fund-b'}-name`).textContent = f.name || key;
+    const bandEl = document.getElementById(`${prefix === 'fa' ? 'fund-a' : 'fund-b'}-band`);
+    bandEl.textContent = (f.band || '?') + ' Band';
+
+    setText(`${prefix}-equity`, money(f.equity));
+    const pnl = f.pnl || 0;
+    setText(`${prefix}-pnl`, `${pnl >= 0 ? '+' : ''}${money(pnl)}`, pnl >= 0 ? 'positive' : 'negative');
+    setText(`${prefix}-winrate`, f.win_rate != null ? pct(f.win_rate) : '—');
+    setText(`${prefix}-positions`, f.open_positions || 0);
+    setText(`${prefix}-closed`, f.closed_trades || 0);
+    setText(`${prefix}-cash`, money(f.cash));
+  }
+}
+
+function renderOpportunities() {
+  const opps = DATA.opportunities || [];
+  document.getElementById('opp-badge').textContent = opps.length;
+  const tbody = document.querySelector('#opp-table tbody');
+  tbody.innerHTML = '';
+  document.getElementById('opp-empty').style.display = opps.length ? 'none' : 'block';
+
+  for (const o of opps) {
+    const tr = document.createElement('tr');
+    const layers = o.layer_scores || {};
+    const slug = o.slug || '';
+    const link = slug ? `https://polymarket.com/event/${slug}` : '#';
+
+    tr.innerHTML = `
+      <td><a class="question-link" href="${link}" target="_blank" title="${esc(o.question)}">${esc(trunc(o.question, 50))}</a></td>
+      <td>${o.outcome || '—'}</td>
+      <td>${cents(o.current_price)}</td>
+      <td><div class="edge-bar">
+        <div class="edge-bar-track"><div class="edge-bar-fill" style="width:${o.edge_score}%;background:${edgeColor(o.edge_score)}"></div></div>
+        <span style="font-weight:600;color:${edgeColor(o.edge_score)}">${o.edge_score.toFixed(1)}</span>
+      </div></td>
+      <td>${layerBars(layers)}</td>
+      <td><span class="fund-band ${o.convexity_band === '5x' ? 'band-5x' : 'band-10x'}">${o.convexity_band}</span></td>
+      <td>${(o.potential_multiple || 0).toFixed(1)}x</td>
+      <td>$${fmt(o.liquidity_usd)}</td>
+      <td>${o.days_to_close || '—'}d</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+function renderPositions() {
+  const pos_a = (DATA.positions?.fund_a || []).map(p => ({...p, fund: 'Fund A'}));
+  const pos_b = (DATA.positions?.fund_b || []).map(p => ({...p, fund: 'Fund B'}));
+  let all = [...pos_a, ...pos_b];
+
+  if (currentPositionFilter === 'fund_a') all = pos_a;
+  else if (currentPositionFilter === 'fund_b') all = pos_b;
+
+  const tbody = document.querySelector('#pos-table tbody');
+  tbody.innerHTML = '';
+  document.getElementById('pos-empty').style.display = all.length ? 'none' : 'block';
+
+  for (const p of all) {
+    const pnl = (p.unrealized_pnl || 0);
+    const tr = document.createElement('tr');
+    tr.className = 'position-row';
+    tr.innerHTML = `
+      <td>${esc(trunc(p.question || p.market_id || '—', 45))}</td>
+      <td>${p.outcome || '—'}</td>
+      <td>${p.quantity || 0}</td>
+      <td>${cents(p.entry_price)}</td>
+      <td>${cents(p.current_price)}</td>
+      <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)}</span></td>
+      <td>${p.fund}</td>
+      <td>${shortDate(p.opened_at)}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+function renderTrades() {
+  const tr_a = (DATA.realized_trades?.fund_a || []).map(t => ({...t, fund: 'Fund A'}));
+  const tr_b = (DATA.realized_trades?.fund_b || []).map(t => ({...t, fund: 'Fund B'}));
+  const all = [...tr_a, ...tr_b].sort((a,b) => (b.closed_at || '').localeCompare(a.closed_at || ''));
+
+  const tbody = document.querySelector('#trades-table tbody');
+  tbody.innerHTML = '';
+  document.getElementById('trades-empty').style.display = all.length ? 'none' : 'block';
+
+  for (const t of all.slice(0, 30)) {
+    const pnl = t.pnl || 0;
+    const ret = t.return_pct || 0;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${esc(trunc(t.question || t.market_id || '—', 45))}</td>
+      <td>${t.outcome || '—'}</td>
+      <td>${cents(t.entry_price)}</td>
+      <td>${cents(t.exit_price)}</td>
+      <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)}</span></td>
+      <td class="${ret >= 0 ? 'positive' : 'negative'}">${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%</td>
+      <td>${t.fund}</td>
+      <td>${shortDate(t.closed_at)}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+function renderStatistics() {
+  const stats = DATA.statistics || {};
+
+  // By category
+  const catTbody = document.querySelector('#cat-table tbody');
+  catTbody.innerHTML = '';
+  for (const [cat, s] of Object.entries(stats.by_category || {})) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${esc(cat)}</td><td>${s.count}</td><td>${s.avg_edge}</td>`;
+    catTbody.appendChild(tr);
+  }
+
+  // By convexity band
+  const bandTbody = document.querySelector('#band-table tbody');
+  bandTbody.innerHTML = '';
+  for (const [band, s] of Object.entries(stats.by_convexity || {})) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><span class="fund-band ${band === '5x' ? 'band-5x' : 'band-10x'}">${band}</span></td>
+      <td>${s.count}</td><td>${s.avg_edge}</td><td>$${fmt(s.total_liquidity || 0)}</td>`;
+    bandTbody.appendChild(tr);
+  }
+}
+
+// ── Mini Equity Charts ──
+function renderCharts() {
+  drawMiniChart('fa-chart', DATA.portfolio?.fund_a?.equity_history || [], 'rgba(88,166,255,');
+  drawMiniChart('fb-chart', DATA.portfolio?.fund_b?.equity_history || [], 'rgba(188,140,255,');
+}
+
+function drawMiniChart(canvasId, history, rgbPrefix) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.scale(dpr, dpr);
+  const w = rect.width, h = rect.height;
+
+  ctx.clearRect(0, 0, w, h);
+
+  if (history.length < 2) {
+    ctx.fillStyle = 'rgba(139,148,158,0.3)';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('No history yet', w/2, h/2);
+    return;
+  }
+
+  const values = history.map(p => typeof p === 'number' ? p : (p.equity || 0));
+  const min = Math.min(...values) * 0.98;
+  const max = Math.max(...values) * 1.02;
+  const range = max - min || 1;
+
+  const pts = values.map((v, i) => ({
+    x: (i / (values.length - 1)) * w,
+    y: h - ((v - min) / range) * (h - 8) - 4
+  }));
+
+  // Fill gradient
+  const grad = ctx.createLinearGradient(0, 0, 0, h);
+  grad.addColorStop(0, rgbPrefix + '0.15)');
+  grad.addColorStop(1, rgbPrefix + '0.0)');
+  ctx.beginPath();
+  ctx.moveTo(pts[0].x, h);
+  for (const p of pts) ctx.lineTo(p.x, p.y);
+  ctx.lineTo(pts[pts.length-1].x, h);
+  ctx.closePath();
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Line
+  ctx.beginPath();
+  ctx.moveTo(pts[0].x, pts[0].y);
+  for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y);
+  ctx.strokeStyle = rgbPrefix + '0.8)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Starting equity line
+  ctx.setLineDash([4, 4]);
+  const startY = h - ((values[0] - min) / range) * (h - 8) - 4;
+  ctx.beginPath();
+  ctx.moveTo(0, startY);
+  ctx.lineTo(w, startY);
+  ctx.strokeStyle = 'rgba(139,148,158,0.3)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// ── Helpers ──
+function money(v) { return v != null ? '£' + Number(v).toFixed(2) : '—'; }
+function cents(v) { return v != null ? (Number(v) * 100).toFixed(1) + '¢' : '—'; }
+function pct(v) { return v != null ? (Number(v) * 100).toFixed(1) + '%' : '—'; }
+function fmt(v) { return v >= 1e6 ? (v/1e6).toFixed(1)+'M' : v >= 1e3 ? (v/1e3).toFixed(1)+'K' : Number(v).toFixed(0); }
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function trunc(s, n) { return s && s.length > n ? s.slice(0, n) + '...' : (s || ''); }
+function shortDate(d) { if (!d) return '—'; const dt = new Date(d); return dt.toLocaleDateString('en-GB', {day:'numeric',month:'short'}); }
+
+function edgeColor(score) {
+  if (score >= 70) return 'var(--green)';
+  if (score >= 50) return 'var(--yellow)';
+  return 'var(--text2)';
+}
+
+function layerBars(layers) {
+  const s = layers.structural || 0;
+  const m = layers.smart_money || 0;
+  const d = layers.dislocation || 0;
+  const e = layers.external || 0;
+  const scale = 2; // pixels per point
+  return `<div class="layer-breakdown tooltip">
+    <div class="layer-bar layer-s" style="width:${Math.max(2, s*scale)}px" title="Structural: ${s.toFixed(1)}"></div>
+    <div class="layer-bar layer-m" style="width:${Math.max(2, m*scale)}px" title="Smart Money: ${m.toFixed(1)}"></div>
+    <div class="layer-bar layer-d" style="width:${Math.max(2, d*scale)}px" title="Dislocation: ${d.toFixed(1)}"></div>
+    <div class="layer-bar layer-e" style="width:${Math.max(2, e*scale)}px" title="External: ${e.toFixed(1)}"></div>
+    <span class="tip-text">S:${s.toFixed(1)} M:${m.toFixed(1)} D:${d.toFixed(1)} E:${e.toFixed(1)}</span>
+  </div>`;
+}
+
+function setText(id, text, cls) {
+  const el = document.getElementById(id);
+  if (el) { el.textContent = text; if (cls) el.className = 'card-sub ' + cls; }
+}
+
+function showPositions(filter, btn) {
+  currentPositionFilter = filter;
+  document.querySelectorAll('.tabs .tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderPositions();
+}
+
+// ── Table Sorting ──
+let sortState = {};
+function sortTable(tableId, colIdx) {
+  const key = tableId + colIdx;
+  const asc = sortState[key] = !sortState[key];
+  const tbody = document.querySelector(`#${tableId} tbody`);
+  const rows = Array.from(tbody.rows);
+  rows.sort((a, b) => {
+    let av = a.cells[colIdx].textContent.trim();
+    let bv = b.cells[colIdx].textContent.trim();
+    const an = parseFloat(av.replace(/[^0-9.\-]/g, ''));
+    const bn = parseFloat(bv.replace(/[^0-9.\-]/g, ''));
+    if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+    return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+// ── Auto-refresh ──
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>

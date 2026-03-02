@@ -1,0 +1,48 @@
+name: Signal Engine
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+  workflow_dispatch:          # Manual trigger from Actions tab
+
+permissions:
+  contents: write             # Needed to push data/ commits
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Ensure data directory exists
+        run: mkdir -p data
+
+      - name: Run signal engine
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          SUBGRAPH_API_KEY: ${{ secrets.SUBGRAPH_API_KEY }}
+        run: python engine.py --once --execute
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/signal_data.json data/portfolio_state.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "engine: update signals $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
