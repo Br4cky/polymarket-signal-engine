@@ -36,16 +36,21 @@ def compute_combinatorial_mispricing(tokens: List[dict]) -> dict:
     score = 0.0
     mispricing_type = 'none'
 
-    if total < 0.97:
-        # Can buy all outcomes for less than $1 → guaranteed profit
-        gap = 0.97 - total
-        score = min(15.0, gap * 500)
+    # Graduated scoring: even small deviations from 1.0 are a signal
+    # Perfect efficiency = sum of 1.00. Spread causes ~0.01-0.02 deviation.
+    # Anything beyond spread (>0.02) is interesting; >0.05 is strong.
+    deviation = abs(total - 1.0)
+
+    if total < 1.0:
         mispricing_type = 'underpriced'
-    elif total > 1.03:
-        # All outcomes overpriced → can sell short
-        gap = total - 1.03
-        score = min(15.0, gap * 500)
+    elif total > 1.0:
         mispricing_type = 'overpriced'
+
+    if deviation > 0.02:
+        # Graduated: 0.02-0.05 = 1-4pts, 0.05-0.10 = 4-8pts, >0.10 = 8-15pts
+        score = min(15.0, (deviation - 0.02) * 150)
+    else:
+        mispricing_type = 'none'
 
     return {
         'score': round(score, 2),

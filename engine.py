@@ -173,9 +173,9 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     if kalshi_markets:
                         kalshi_price = safe_float(kalshi_markets[0].get('yes_bid', 0)) / 100.0
 
-            # Layer 2: smart money
+            # Layer 2: smart money (use condition_id for matching with positions API)
             smart_money = whale_tracker.compute_smart_money_score(
-                market.get('market_id', ''),
+                market.get('condition_id', market.get('market_id', '')),
                 token.get('token_id', '')
             )
 

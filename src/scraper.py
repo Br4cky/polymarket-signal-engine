@@ -190,8 +190,11 @@ class PolymarketClient:
             resolution_date = raw.get("endDate") or raw.get("endDateIso")
             created_at = raw.get("createdAt") or raw.get("creationTime")
 
+            condition_id = raw.get("conditionId", raw.get("condition_id", ""))
+
             return {
                 "market_id": market_id,
+                "condition_id": condition_id,
                 "question": question,
                 "category": category,
                 "slug": slug,
