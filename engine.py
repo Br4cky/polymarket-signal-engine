@@ -129,18 +129,28 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     scored_items = []
     markets_with_history = 0
 
+    # Only tokens in our tradeable price range are worth deep analysis
+    # 5x band: 0.15-0.25, 10x band: 0.05-0.12 → overall: 0.03-0.30
+    MIN_PRICE = 0.03
+    MAX_PRICE = 0.30
+    MAX_HISTORY_FETCHES = 50  # Cap expensive API calls
+
+    history_fetches = 0
+
     for market in markets:
         for token in market.get('tokens', []):
             current_price = safe_float(token.get('current_price', 0))
 
-            # Skip tokens with no meaningful price
-            if current_price < 0.01 or current_price > 0.99:
+            # Skip tokens outside tradeable range entirely
+            if current_price < MIN_PRICE or current_price > MAX_PRICE:
                 continue
 
-            # Fetch price history for higher-volume markets
+            # Fetch price history only for candidates with decent volume (capped)
             price_history = []
-            if safe_float(market.get('volume_24h', 0)) > 100:
+            if (safe_float(market.get('volume_24h', 0)) > 100
+                    and history_fetches < MAX_HISTORY_FETCHES):
                 price_history = poly_client.fetch_price_history(token['token_id'])
+                history_fetches += 1
                 if price_history:
                     markets_with_history += 1
 
@@ -151,7 +161,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     market.get('question', ''), kalshi_events
                 )
                 if match:
-                    # find_matching_markets returns an event, need to fetch its markets for prices
                     kalshi_markets = kalshi_client.fetch_markets_for_event(match.get('ticker', ''))
                     if kalshi_markets:
                         kalshi_price = safe_float(kalshi_markets[0].get('yes_bid', 0)) / 100.0
