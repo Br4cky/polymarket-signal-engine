@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-03-02T20:49:31.418990+00:00",
+    "timestamp": "2026-03-02T20:52:15.183344+00:00",
     "markets_scanned": 44,
     "tokens_scored": 44,
     "engine_version": "2.0.0"
@@ -39,6 +39,10 @@
         {
           "timestamp": "2026-03-02T20:49:31.418074+00:00",
           "equity": 249.52
+        },
+        {
+          "timestamp": "2026-03-02T20:52:15.182370+00:00",
+          "equity": 249.52
         }
       ]
     },
@@ -68,6 +72,10 @@
         },
         {
           "timestamp": "2026-03-02T20:49:31.418096+00:00",
+          "equity": 249.97
+        },
+        {
+          "timestamp": "2026-03-02T20:52:15.182390+00:00",
           "equity": 249.97
         }
       ]
@@ -138,7 +146,7 @@
       "volume_24h": 710452.5385210016,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417098+00:00"
+      "timestamp": "2026-03-02T20:52:15.181544+00:00"
     },
     {
       "market_id": "1465970",
@@ -204,7 +212,7 @@
       "volume_24h": 134905.44576399997,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417310+00:00"
+      "timestamp": "2026-03-02T20:52:15.181747+00:00"
     },
     {
       "market_id": "958442",
@@ -270,7 +278,7 @@
       "volume_24h": 2670836.582120002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417011+00:00"
+      "timestamp": "2026-03-02T20:52:15.181482+00:00"
     },
     {
       "market_id": "1385748",
@@ -336,7 +344,7 @@
       "volume_24h": 935167.4770760002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417070+00:00"
+      "timestamp": "2026-03-02T20:52:15.181517+00:00"
     },
     {
       "market_id": "1473072",
@@ -402,7 +410,7 @@
       "volume_24h": 492867.04144400015,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417151+00:00"
+      "timestamp": "2026-03-02T20:52:15.181593+00:00"
     },
     {
       "market_id": "1466013",
@@ -468,7 +476,7 @@
       "volume_24h": 1093814.5116370006,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417054+00:00"
+      "timestamp": "2026-03-02T20:52:15.181506+00:00"
     },
     {
       "market_id": "1469384",
@@ -534,7 +542,7 @@
       "volume_24h": 682551.8294110002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417119+00:00"
+      "timestamp": "2026-03-02T20:52:15.181563+00:00"
     },
     {
       "market_id": "1198709",
@@ -600,7 +608,7 @@
       "volume_24h": 456964.2564830002,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417170+00:00"
+      "timestamp": "2026-03-02T20:52:15.181610+00:00"
     },
     {
       "market_id": "1469362",
@@ -666,7 +674,7 @@
       "volume_24h": 427030.5226289998,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417180+00:00"
+      "timestamp": "2026-03-02T20:52:15.181620+00:00"
     },
     {
       "market_id": "1473075",
@@ -732,7 +740,7 @@
       "volume_24h": 223384.87606099993,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417205+00:00"
+      "timestamp": "2026-03-02T20:52:15.181643+00:00"
     },
     {
       "market_id": "1473063",
@@ -798,7 +806,7 @@
       "volume_24h": 191896.7866200001,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417224+00:00"
+      "timestamp": "2026-03-02T20:52:15.181662+00:00"
     },
     {
       "market_id": "1473066",
@@ -864,7 +872,7 @@
       "volume_24h": 165609.47318200002,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417244+00:00"
+      "timestamp": "2026-03-02T20:52:15.181683+00:00"
     },
     {
       "market_id": "1473078",
@@ -930,7 +938,7 @@
       "volume_24h": 155933.67004799997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417272+00:00"
+      "timestamp": "2026-03-02T20:52:15.181710+00:00"
     },
     {
       "market_id": "1466148",
@@ -996,7 +1004,7 @@
       "volume_24h": 152474.64069099998,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417281+00:00"
+      "timestamp": "2026-03-02T20:52:15.181719+00:00"
     },
     {
       "market_id": "1473060",
@@ -1062,7 +1070,7 @@
       "volume_24h": 127214.48196699994,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417319+00:00"
+      "timestamp": "2026-03-02T20:52:15.181756+00:00"
     },
     {
       "market_id": "1402792",
@@ -1124,11 +1132,11 @@
       "convexity_band": "5x",
       "potential_multiple": 6.9,
       "days_to_close": 28,
-      "liquidity_usd": 28944.3459,
+      "liquidity_usd": 29158.5247,
       "volume_24h": 117507.72723500001,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417329+00:00"
+      "timestamp": "2026-03-02T20:52:15.181764+00:00"
     },
     {
       "market_id": "1467763",
@@ -1194,7 +1202,7 @@
       "volume_24h": 114923.35001299999,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417338+00:00"
+      "timestamp": "2026-03-02T20:52:15.181771+00:00"
     },
     {
       "market_id": "1473080",
@@ -1203,7 +1211,7 @@
       "slug": "will-bitcoin-dip-to-45k-in-march-2026",
       "token_id": "13377794642435611385847620240808138064594447585244290622688315269067148861161",
       "outcome": "Yes",
-      "current_price": 0.051,
+      "current_price": 0.0535,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1254,13 +1262,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 19.6,
+      "potential_multiple": 18.7,
       "days_to_close": 29,
-      "liquidity_usd": 91860.4828,
+      "liquidity_usd": 91710.18681,
       "volume_24h": 107369.41096299997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417358+00:00"
+      "timestamp": "2026-03-02T20:52:15.181789+00:00"
     },
     {
       "market_id": "1466149",
@@ -1269,7 +1277,7 @@
       "slug": "iran-x-israelus-conflict-ends-by-march-15",
       "token_id": "81325797569174911613409057281359521585771528908138546144994531752156467539030",
       "outcome": "Yes",
-      "current_price": 0.225,
+      "current_price": 0.235,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1320,13 +1328,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 4.4,
+      "potential_multiple": 4.3,
       "days_to_close": 28,
-      "liquidity_usd": 12950.9881,
+      "liquidity_usd": 12813.8346,
       "volume_24h": 106612.35463600008,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417367+00:00"
+      "timestamp": "2026-03-02T20:52:15.181796+00:00"
     },
     {
       "market_id": "1467766",
@@ -1392,7 +1400,7 @@
       "volume_24h": 100530.997384,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417395+00:00"
+      "timestamp": "2026-03-02T20:52:15.181819+00:00"
     },
     {
       "market_id": "1394368",
@@ -1458,7 +1466,7 @@
       "volume_24h": 95139.79793900003,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417414+00:00"
+      "timestamp": "2026-03-02T20:52:15.181835+00:00"
     },
     {
       "market_id": "1473081",
@@ -1520,11 +1528,11 @@
       "convexity_band": "10x",
       "potential_multiple": 16.7,
       "days_to_close": 29,
-      "liquidity_usd": 70646.6551,
+      "liquidity_usd": 70170.9843,
       "volume_24h": 91950.64140899999,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417433+00:00"
+      "timestamp": "2026-03-02T20:52:15.181850+00:00"
     },
     {
       "market_id": "665228",
@@ -1590,7 +1598,7 @@
       "volume_24h": 92467.22368200003,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417424+00:00"
+      "timestamp": "2026-03-02T20:52:15.181842+00:00"
     },
     {
       "market_id": "568634",
@@ -1656,7 +1664,7 @@
       "volume_24h": 617691.5135900005,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417139+00:00"
+      "timestamp": "2026-03-02T20:52:15.181581+00:00"
     },
     {
       "market_id": "1366655",
@@ -1722,7 +1730,7 @@
       "volume_24h": 265553.480817,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:49:31.417195+00:00"
+      "timestamp": "2026-03-02T20:52:15.181633+00:00"
     }
   ],
   "positions": {
@@ -1906,7 +1914,7 @@
     "by_convexity": {
       "5x": {
         "count": 19,
-        "total_liquidity": 1349727.9483899996,
+        "total_liquidity": 1346025.0542699997,
         "avg_edge": 26.2
       },
       "20x": {
@@ -1921,7 +1929,7 @@
       },
       "10x": {
         "count": 15,
-        "total_liquidity": 1253572.02243,
+        "total_liquidity": 1252951.00758,
         "avg_edge": 26.4
       }
     }
