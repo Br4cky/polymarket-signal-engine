@@ -1,60 +1,36 @@
 {
   "metadata": {
-    "timestamp": "2026-03-02T20:02:00.099429+00:00",
+    "timestamp": "2026-03-02T20:17:51.027173+00:00",
     "markets_scanned": 42,
     "tokens_scored": 42,
     "engine_version": "2.0.0"
   },
   "portfolio": {
     "total_capital": 500,
-    "combined_equity": 458.6,
-    "combined_pnl": -21.66,
-    "combined_pnl_pct": -4.33,
-    "combined_win_rate": 0.0,
-    "combined_total_trades": 3,
+    "combined_equity": 499.87,
+    "combined_pnl": 0.0,
+    "combined_pnl_pct": 0.0,
+    "combined_win_rate": 0,
+    "combined_total_trades": 0,
     "fund_a": {
       "name": "5x Hunter",
       "band": "5x",
       "capital": 250,
-      "cash": 213.17,
-      "equity": 218.32,
-      "pnl": -16.75,
-      "total_pnl": -16.75,
-      "win_rate": 0.0,
+      "cash": 229.11,
+      "equity": 249.9,
+      "pnl": 0.0,
+      "total_pnl": 0.0,
+      "win_rate": 0,
       "win_count": 0,
-      "loss_count": 2,
-      "open_positions": 4,
-      "closed_trades": 2,
-      "max_drawdown": -6.7,
+      "loss_count": 0,
+      "open_positions": 3,
+      "closed_trades": 0,
+      "max_drawdown": 0.0,
       "peak_equity": 250,
       "equity_history": [
         {
-          "timestamp": "2026-03-02T19:35:26.311571+00:00",
+          "timestamp": "2026-03-02T20:17:51.026016+00:00",
           "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:37:47.255873+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:44:58.653591+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:59:01.753037+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T20:02:00.097531+00:00",
-          "equity": 233.25
-        },
-        {
-          "timestamp": "2026-03-02T20:02:00.097588+00:00",
-          "equity": 233.25
-        },
-        {
-          "timestamp": "2026-03-02T20:02:00.097702+00:00",
-          "equity": 233.25
         }
       ]
     },
@@ -62,41 +38,21 @@
       "name": "10x Hunter",
       "band": "10x",
       "capital": 250,
-      "cash": 239.94,
-      "equity": 240.28,
-      "pnl": -4.91,
-      "total_pnl": -4.91,
-      "win_rate": 0.0,
+      "cash": 244.75,
+      "equity": 249.97,
+      "pnl": 0.0,
+      "total_pnl": 0.0,
+      "win_rate": 0,
       "win_count": 0,
-      "loss_count": 1,
+      "loss_count": 0,
       "open_positions": 1,
-      "closed_trades": 1,
-      "max_drawdown": -1.96,
+      "closed_trades": 0,
+      "max_drawdown": 0.0,
       "peak_equity": 250,
       "equity_history": [
         {
-          "timestamp": "2026-03-02T19:35:26.311585+00:00",
+          "timestamp": "2026-03-02T20:17:51.026029+00:00",
           "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:37:47.255890+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:44:58.653609+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T19:59:01.753050+00:00",
-          "equity": 250
-        },
-        {
-          "timestamp": "2026-03-02T20:02:00.097551+00:00",
-          "equity": 245.09
-        },
-        {
-          "timestamp": "2026-03-02T20:02:00.097850+00:00",
-          "equity": 245.09
         }
       ]
     }
@@ -109,7 +65,7 @@
       "slug": "will-iran-strike-cyprus-in-march",
       "token_id": "43849040965042844507777759840706002277693580873354818985912205362308537091627",
       "outcome": "Yes",
-      "current_price": 0.27,
+      "current_price": 0.295,
       "bid": 0.01,
       "ask": 0.99,
       "spread_pct": 9800.0,
@@ -160,13 +116,13 @@
         }
       },
       "convexity_band": "2x",
-      "potential_multiple": 3.7,
+      "potential_multiple": 3.4,
       "days_to_close": 4,
-      "liquidity_usd": 36722.8781,
+      "liquidity_usd": 36179.587,
       "volume_24h": 710452.5385210016,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096662+00:00"
+      "timestamp": "2026-03-02T20:17:51.025152+00:00"
     },
     {
       "market_id": "1465970",
@@ -175,7 +131,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-5-2026",
       "token_id": "51867797022833168169997745557218803207788822085021732358524417769871495955290",
       "outcome": "No",
-      "current_price": 0.0305,
+      "current_price": 0.0315,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -225,14 +181,14 @@
           "spike_detected": false
         }
       },
-      "convexity_band": "yield",
-      "potential_multiple": 1.0,
+      "convexity_band": "20x",
+      "potential_multiple": 31.7,
       "days_to_close": 7,
-      "liquidity_usd": 61635.86889,
+      "liquidity_usd": 62132.22909,
       "volume_24h": 134905.44576399997,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096866+00:00"
+      "timestamp": "2026-03-02T20:17:51.025337+00:00"
     },
     {
       "market_id": "958442",
@@ -241,7 +197,7 @@
       "slug": "will-the-iranian-regime-fall-by-march-31",
       "token_id": "48825140812430902098404528620382945035793471220915259967486864813738884055220",
       "outcome": "Yes",
-      "current_price": 0.1665,
+      "current_price": 0.17,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -292,13 +248,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 6.0,
+      "potential_multiple": 5.9,
       "days_to_close": 28,
-      "liquidity_usd": 482426.71188,
+      "liquidity_usd": 475131.44712,
       "volume_24h": 2670836.582120002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096598+00:00"
+      "timestamp": "2026-03-02T20:17:51.025091+00:00"
     },
     {
       "market_id": "1385748",
@@ -307,7 +263,7 @@
       "slug": "will-france-uk-or-germany-strike-iran-by-march-31-929",
       "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
       "outcome": "Yes",
-      "current_price": 0.2285,
+      "current_price": 0.227,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -360,11 +316,11 @@
       "convexity_band": "5x",
       "potential_multiple": 4.4,
       "days_to_close": 28,
-      "liquidity_usd": 53346.07618,
+      "liquidity_usd": 55019.22603,
       "volume_24h": 935167.4770760002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096634+00:00"
+      "timestamp": "2026-03-02T20:17:51.025126+00:00"
     },
     {
       "market_id": "1473072",
@@ -373,7 +329,7 @@
       "slug": "will-bitcoin-dip-to-65k-in-march-2026",
       "token_id": "64087619211543545431479218048939484178441767712621033463416084593776314629222",
       "outcome": "No",
-      "current_price": 0.2715,
+      "current_price": 0.2755,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -423,14 +379,14 @@
           "spike_detected": false
         }
       },
-      "convexity_band": "yield",
-      "potential_multiple": 1.4,
+      "convexity_band": "2x",
+      "potential_multiple": 3.6,
       "days_to_close": 29,
-      "liquidity_usd": 76534.33422,
+      "liquidity_usd": 72656.92936,
       "volume_24h": 492867.04144400015,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096714+00:00"
+      "timestamp": "2026-03-02T20:17:51.025200+00:00"
     },
     {
       "market_id": "1466013",
@@ -492,11 +448,11 @@
       "convexity_band": "10x",
       "potential_multiple": 15.4,
       "days_to_close": 999,
-      "liquidity_usd": 108542.0291,
+      "liquidity_usd": 116262.4819,
       "volume_24h": 1093814.5116370006,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096621+00:00"
+      "timestamp": "2026-03-02T20:17:51.025114+00:00"
     },
     {
       "market_id": "1469384",
@@ -505,7 +461,7 @@
       "slug": "will-alireza-arafi-be-the-next-supreme-leader-of-iran-944",
       "token_id": "25227556023588911697250037340036299966685740925058429413810035196107956072774",
       "outcome": "Yes",
-      "current_price": 0.197,
+      "current_price": 0.202,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -556,13 +512,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 5.1,
+      "potential_multiple": 5.0,
       "days_to_close": 303,
-      "liquidity_usd": 82753.54042,
+      "liquidity_usd": 78044.04212,
       "volume_24h": 682551.8294110002,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096682+00:00"
+      "timestamp": "2026-03-02T20:17:51.025172+00:00"
     },
     {
       "market_id": "1198709",
@@ -571,7 +527,7 @@
       "slug": "will-reza-pahlavi-enter-iran-by-march-31-282",
       "token_id": "71234839178991605382801314059946316250218609059082410958894693704291672758572",
       "outcome": "Yes",
-      "current_price": 0.0665,
+      "current_price": 0.0815,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -622,13 +578,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 15.0,
+      "potential_multiple": 12.3,
       "days_to_close": 119,
-      "liquidity_usd": 88048.00959,
+      "liquidity_usd": 79591.96341,
       "volume_24h": 456964.2564830002,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096724+00:00"
+      "timestamp": "2026-03-02T20:17:51.025210+00:00"
     },
     {
       "market_id": "1469362",
@@ -637,7 +593,7 @@
       "slug": "will-mojtaba-khamenei-be-the-next-supreme-leader-of-iran-573",
       "token_id": "17755827780507870103087739732569035075234386298574900130039408497123606676791",
       "outcome": "Yes",
-      "current_price": 0.094,
+      "current_price": 0.0725,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -688,13 +644,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 10.6,
+      "potential_multiple": 13.8,
       "days_to_close": 303,
-      "liquidity_usd": 9579.55321,
+      "liquidity_usd": 14988.45461,
       "volume_24h": 427030.5226289998,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096734+00:00"
+      "timestamp": "2026-03-02T20:17:51.025220+00:00"
     },
     {
       "market_id": "1473075",
@@ -703,7 +659,7 @@
       "slug": "will-bitcoin-dip-to-55k-in-march-2026",
       "token_id": "3056478011660943904461466382920934987843622145282294244222474838030938303402",
       "outcome": "Yes",
-      "current_price": 0.19,
+      "current_price": 0.175,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -754,13 +710,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 5.3,
+      "potential_multiple": 5.7,
       "days_to_close": 29,
-      "liquidity_usd": 74501.8582,
+      "liquidity_usd": 89465.1278,
       "volume_24h": 223384.87606099993,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096760+00:00"
+      "timestamp": "2026-03-02T20:17:51.025242+00:00"
     },
     {
       "market_id": "1473063",
@@ -769,7 +725,7 @@
       "slug": "will-bitcoin-reach-85k-in-march-2026",
       "token_id": "115525206331954143666493722927087528093139997441327992335107710676655034238818",
       "outcome": "Yes",
-      "current_price": 0.13,
+      "current_price": 0.135,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -820,13 +776,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 7.7,
+      "potential_multiple": 7.4,
       "days_to_close": 29,
-      "liquidity_usd": 60962.1413,
+      "liquidity_usd": 62343.7444,
       "volume_24h": 191896.7866200001,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096779+00:00"
+      "timestamp": "2026-03-02T20:17:51.025258+00:00"
     },
     {
       "market_id": "1473066",
@@ -888,11 +844,11 @@
       "convexity_band": "2x",
       "potential_multiple": 3.4,
       "days_to_close": 29,
-      "liquidity_usd": 68180.2377,
+      "liquidity_usd": 68093.6588,
       "volume_24h": 165609.47318200002,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096801+00:00"
+      "timestamp": "2026-03-02T20:17:51.025277+00:00"
     },
     {
       "market_id": "1473078",
@@ -901,7 +857,7 @@
       "slug": "will-bitcoin-dip-to-50k-in-march-2026",
       "token_id": "16750430841750281964633473509969688050218091484828573447113986659081710343189",
       "outcome": "Yes",
-      "current_price": 0.1,
+      "current_price": 0.085,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -952,13 +908,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 10.0,
+      "potential_multiple": 11.8,
       "days_to_close": 29,
-      "liquidity_usd": 85697.9557,
+      "liquidity_usd": 107146.6572,
       "volume_24h": 155933.67004799997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096827+00:00"
+      "timestamp": "2026-03-02T20:17:51.025302+00:00"
     },
     {
       "market_id": "1466148",
@@ -1020,11 +976,11 @@
       "convexity_band": "10x",
       "potential_multiple": 18.2,
       "days_to_close": 28,
-      "liquidity_usd": 66666.2293,
+      "liquidity_usd": 64903.4012,
       "volume_24h": 152474.64069099998,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096836+00:00"
+      "timestamp": "2026-03-02T20:17:51.025310+00:00"
     },
     {
       "market_id": "1473060",
@@ -1033,7 +989,7 @@
       "slug": "will-bitcoin-reach-90k-in-march-2026",
       "token_id": "72288567685017756888828669131409064604859118327619100036098909334128768764531",
       "outcome": "Yes",
-      "current_price": 0.0635,
+      "current_price": 0.0625,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1084,13 +1040,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 15.7,
+      "potential_multiple": 16.0,
       "days_to_close": 29,
-      "liquidity_usd": 61347.74453,
+      "liquidity_usd": 63190.77837,
       "volume_24h": 127214.48196699994,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096876+00:00"
+      "timestamp": "2026-03-02T20:17:51.025346+00:00"
     },
     {
       "market_id": "1402792",
@@ -1152,11 +1108,11 @@
       "convexity_band": "5x",
       "potential_multiple": 6.9,
       "days_to_close": 28,
-      "liquidity_usd": 30378.9253,
+      "liquidity_usd": 30564.8788,
       "volume_24h": 117507.72723500001,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096883+00:00"
+      "timestamp": "2026-03-02T20:17:51.025355+00:00"
     },
     {
       "market_id": "1467763",
@@ -1218,11 +1174,11 @@
       "convexity_band": "10x",
       "potential_multiple": 8.7,
       "days_to_close": 28,
-      "liquidity_usd": 71063.2662,
+      "liquidity_usd": 70723.9439,
       "volume_24h": 114923.35001299999,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096890+00:00"
+      "timestamp": "2026-03-02T20:17:51.025364+00:00"
     },
     {
       "market_id": "1473080",
@@ -1231,7 +1187,7 @@
       "slug": "will-bitcoin-dip-to-45k-in-march-2026",
       "token_id": "13377794642435611385847620240808138064594447585244290622688315269067148861161",
       "outcome": "Yes",
-      "current_price": 0.0385,
+      "current_price": 0.0395,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1282,13 +1238,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 26.0,
+      "potential_multiple": 25.3,
       "days_to_close": 29,
-      "liquidity_usd": 73564.41965,
+      "liquidity_usd": 77253.55199,
       "volume_24h": 107369.41096299997,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096905+00:00"
+      "timestamp": "2026-03-02T20:17:51.025398+00:00"
     },
     {
       "market_id": "1466149",
@@ -1297,7 +1253,7 @@
       "slug": "iran-x-israelus-conflict-ends-by-march-15",
       "token_id": "81325797569174911613409057281359521585771528908138546144994531752156467539030",
       "outcome": "Yes",
-      "current_price": 0.195,
+      "current_price": 0.225,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1348,13 +1304,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 5.1,
+      "potential_multiple": 4.4,
       "days_to_close": 28,
-      "liquidity_usd": 17820.5087,
+      "liquidity_usd": 16694.0603,
       "volume_24h": 106612.35463600008,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096913+00:00"
+      "timestamp": "2026-03-02T20:17:51.025406+00:00"
     },
     {
       "market_id": "1467766",
@@ -1363,7 +1319,7 @@
       "slug": "will-crude-oil-cl-hit-high-100-by-end-of-march-658-396-769",
       "token_id": "79605660806991457811890435537160628976099500543939220857753925926896831621219",
       "outcome": "Yes",
-      "current_price": 0.23,
+      "current_price": 0.205,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1414,13 +1370,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 4.3,
+      "potential_multiple": 4.9,
       "days_to_close": 28,
-      "liquidity_usd": 68757.5539,
+      "liquidity_usd": 67807.8883,
       "volume_24h": 100530.997384,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096934+00:00"
+      "timestamp": "2026-03-02T20:17:51.025428+00:00"
     },
     {
       "market_id": "1394368",
@@ -1429,7 +1385,7 @@
       "slug": "will-the-us-invade-iran-by-march-31",
       "token_id": "60396150294056475674860934419619480139938118116601719506967369709790058295210",
       "outcome": "Yes",
-      "current_price": 0.11,
+      "current_price": 0.115,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1480,13 +1436,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 9.1,
+      "potential_multiple": 8.7,
       "days_to_close": 28,
-      "liquidity_usd": 38371.3614,
+      "liquidity_usd": 38128.2385,
       "volume_24h": 95139.79793900003,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096953+00:00"
+      "timestamp": "2026-03-02T20:17:51.025444+00:00"
     },
     {
       "market_id": "1473081",
@@ -1548,11 +1504,11 @@
       "convexity_band": "10x",
       "potential_multiple": 16.7,
       "days_to_close": 29,
-      "liquidity_usd": 59528.6648,
+      "liquidity_usd": 59789.8148,
       "volume_24h": 91950.64140899999,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096968+00:00"
+      "timestamp": "2026-03-02T20:17:51.025460+00:00"
     },
     {
       "market_id": "665228",
@@ -1614,11 +1570,11 @@
       "convexity_band": "10x",
       "potential_multiple": 12.7,
       "days_to_close": 28,
-      "liquidity_usd": 50919.8686,
+      "liquidity_usd": 51672.95874,
       "volume_24h": 92467.22368200003,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096961+00:00"
+      "timestamp": "2026-03-02T20:17:51.025452+00:00"
     },
     {
       "market_id": "568634",
@@ -1627,15 +1583,15 @@
       "slug": "will-xander-schauffele-win-the-2026-masters-tournament",
       "token_id": "101224125717581883106048111538769728899093696763496070232425429569281195951517",
       "outcome": "Yes",
-      "current_price": 0.037,
+      "current_price": 0.0335,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
-      "edge_score": 26.0,
+      "edge_score": 25.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 7.79,
+        "dislocation": 7.77,
         "external": 0.0
       },
       "structural_detail": {
@@ -1652,9 +1608,9 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 7.79,
+        "dislocation_total": 7.77,
         "price_velocity": 0.0,
-        "volume_anomaly": 5.29,
+        "volume_anomaly": 5.27,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 0.0
@@ -1678,13 +1634,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 27.0,
+      "potential_multiple": 29.9,
       "days_to_close": 41,
-      "liquidity_usd": 39272.54028,
+      "liquidity_usd": 39204.09279,
       "volume_24h": 617691.5135900005,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096702+00:00"
+      "timestamp": "2026-03-02T20:17:51.025189+00:00"
     },
     {
       "market_id": "1366655",
@@ -1743,54 +1699,31 @@
           "spike_detected": false
         }
       },
-      "convexity_band": "yield",
-      "potential_multiple": 1.0,
+      "convexity_band": "20x",
+      "potential_multiple": 22.2,
       "days_to_close": 304,
-      "liquidity_usd": 111149.0166,
+      "liquidity_usd": 111612.2584,
       "volume_24h": 265553.480817,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-02T20:02:00.096748+00:00"
+      "timestamp": "2026-03-02T20:17:51.025232+00:00"
     }
   ],
   "positions": {
     "fund_a": [
       {
-        "position_id": "87b6bf79",
-        "market_id": "1385748",
-        "question": "Will France, UK, or Germany strike Iran by March 31?",
-        "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.99,
-        "entry_timestamp": "2026-03-02T19:59:01.753227+00:00",
-        "shares": 7.02,
-        "entry_usd": 6.95,
-        "current_price": 0.2285,
-        "current_value": 1.6,
-        "unrealized_pnl": -5.35,
-        "unrealized_pnl_pct": -76.98,
-        "edge_score_at_entry": 35.0,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 10.5,
-          "external": 0.0
-        }
-      },
-      {
-        "position_id": "ac4b86a2",
+        "position_id": "e1f0b7ca",
         "market_id": "958442",
         "question": "Will the Iranian regime fall by March 31?",
         "token_id": "48825140812430902098404528620382945035793471220915259967486864813738884055220",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.99,
-        "entry_timestamp": "2026-03-02T20:02:00.098023+00:00",
-        "shares": 6.71,
-        "entry_usd": 6.64,
-        "current_price": 0.1665,
-        "current_value": 1.12,
+        "entry_price": 0.1709,
+        "entry_timestamp": "2026-03-02T20:17:51.026089+00:00",
+        "shares": 43.9,
+        "entry_usd": 7.5,
+        "current_price": 0.17,
+        "current_value": 7.46,
         "unrealized_pnl": 0.0,
         "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 35.0,
@@ -1802,18 +1735,41 @@
         }
       },
       {
-        "position_id": "8c027ae4",
+        "position_id": "7faeddf6",
+        "market_id": "1385748",
+        "question": "Will France, UK, or Germany strike Iran by March 31?",
+        "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.2281,
+        "entry_timestamp": "2026-03-02T20:17:51.026207+00:00",
+        "shares": 30.46,
+        "entry_usd": 6.95,
+        "current_price": 0.227,
+        "current_value": 6.92,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 35.0,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 10.5,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "5ce5d98e",
         "market_id": "1469384",
         "question": "Will Alireza Arafi be the next Supreme Leader of Iran?",
         "token_id": "25227556023588911697250037340036299966685740925058429413810035196107956072774",
         "outcome": "Yes",
         "convexity_band": "5x",
-        "entry_price": 0.99,
-        "entry_timestamp": "2026-03-02T20:02:00.098120+00:00",
-        "shares": 6.21,
-        "entry_usd": 6.15,
-        "current_price": 0.197,
-        "current_value": 1.22,
+        "entry_price": 0.203,
+        "entry_timestamp": "2026-03-02T20:17:51.026303+00:00",
+        "shares": 31.72,
+        "entry_usd": 6.44,
+        "current_price": 0.202,
+        "current_value": 6.41,
         "unrealized_pnl": 0.0,
         "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 31.7,
@@ -1823,45 +1779,22 @@
           "dislocation": 9.5,
           "external": 0.0
         }
-      },
-      {
-        "position_id": "497b7768",
-        "market_id": "553828",
-        "question": "Will the Colorado Avalanche win the 2026 NHL Stanley Cup?",
-        "token_id": "101738487887518832481587379955535423775326921556438741919099866785354159699479",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.99,
-        "entry_timestamp": "2026-03-02T20:02:00.098287+00:00",
-        "shares": 5.75,
-        "entry_usd": 5.69,
-        "current_price": 0.2105,
-        "current_value": 1.21,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 18.2,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 5.47,
-          "external": 0.0
-        }
       }
     ],
     "fund_b": [
       {
-        "position_id": "6ede2053",
+        "position_id": "5fc2f9fe",
         "market_id": "1466013",
         "question": "US x Iran ceasefire by March 6?",
         "token_id": "45384651537373960665605066318330086764816901476264060880498387434805925753491",
         "outcome": "Yes",
         "convexity_band": "10x",
-        "entry_price": 0.99,
-        "entry_timestamp": "2026-03-02T20:02:00.098492+00:00",
-        "shares": 5.2,
-        "entry_usd": 5.15,
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-02T20:17:51.026495+00:00",
+        "shares": 80.37,
+        "entry_usd": 5.25,
         "current_price": 0.065,
-        "current_value": 0.34,
+        "current_value": 5.22,
         "unrealized_pnl": 0.0,
         "unrealized_pnl_pct": 0.0,
         "edge_score_at_entry": 31.7,
@@ -1875,67 +1808,8 @@
     ]
   },
   "realized_trades": {
-    "fund_a": [
-      {
-        "position_id": "26e25e0c",
-        "market_id": "958442",
-        "question": "Will the Iranian regime fall by March 31?",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.99,
-        "exit_price": 0.1665,
-        "entry_timestamp": "2026-03-02T19:59:01.753109+00:00",
-        "exit_timestamp": "2026-03-02T20:02:00.097573+00:00",
-        "shares": 7.58,
-        "entry_usd": 7.5,
-        "exit_usd": 1.26,
-        "pnl_usd": -6.24,
-        "pnl_pct": -83.17,
-        "win": false,
-        "reason": "stop_loss",
-        "edge_score_at_entry": 35.0
-      },
-      {
-        "position_id": "66da6865",
-        "market_id": "1469384",
-        "question": "Will Alireza Arafi be the next Supreme Leader of Iran?",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.99,
-        "exit_price": 0.197,
-        "entry_timestamp": "2026-03-02T19:59:01.753334+00:00",
-        "exit_timestamp": "2026-03-02T20:02:00.097688+00:00",
-        "shares": 6.51,
-        "entry_usd": 6.44,
-        "exit_usd": 1.28,
-        "pnl_usd": -5.16,
-        "pnl_pct": -80.09,
-        "win": false,
-        "reason": "stop_loss",
-        "edge_score_at_entry": 31.7
-      }
-    ],
-    "fund_b": [
-      {
-        "position_id": "2d3e3cf1",
-        "market_id": "1466013",
-        "question": "US x Iran ceasefire by March 6?",
-        "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.99,
-        "exit_price": 0.065,
-        "entry_timestamp": "2026-03-02T19:59:01.753513+00:00",
-        "exit_timestamp": "2026-03-02T20:02:00.097836+00:00",
-        "shares": 5.3,
-        "entry_usd": 5.25,
-        "exit_usd": 0.34,
-        "pnl_usd": -4.91,
-        "pnl_pct": -93.44,
-        "win": false,
-        "reason": "stop_loss",
-        "edge_score_at_entry": 31.7
-      }
-    ]
+    "fund_a": [],
+    "fund_b": []
   },
   "statistics": {
     "by_category": {
@@ -1946,29 +1820,24 @@
     },
     "by_convexity": {
       "2x": {
-        "count": 4,
-        "total_liquidity": 770519.36538,
-        "avg_edge": 27.6
+        "count": 5,
+        "total_liquidity": 841759.52289,
+        "avg_edge": 29.1
       },
-      "yield": {
-        "count": 4,
-        "total_liquidity": 304656.41331,
-        "avg_edge": 27.9
+      "20x": {
+        "count": 5,
+        "total_liquidity": 307948.17335,
+        "avg_edge": 27.2
       },
       "5x": {
-        "count": 15,
-        "total_liquidity": 1166910.6352600001,
-        "avg_edge": 25.7
+        "count": 16,
+        "total_liquidity": 1228587.40815,
+        "avg_edge": 25.2
       },
       "10x": {
         "count": 16,
-        "total_liquidity": 1161294.61544,
+        "total_liquidity": 1194015.97145,
         "avg_edge": 26.2
-      },
-      "20x": {
-        "count": 3,
-        "total_liquidity": 129233.84932,
-        "avg_edge": 25.3
       }
     }
   }
