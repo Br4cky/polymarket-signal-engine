@@ -57,16 +57,8 @@ def load_config() -> dict:
     with open(os.path.join(SCRIPT_DIR, 'config.json'), 'r') as f:
         config = json.load(f)
 
-    # Override API keys from environment variables (for GitHub Actions / CI)
-    env_map = {
-        'FINNHUB_API_KEY': ('news', 'finnhub_api_key'),
-        'SERPAPI_KEY': ('news', 'serpapi_key'),
-    }
-    for env_var, (section, key) in env_map.items():
-        val = os.environ.get(env_var)
-        if val:
-            config.setdefault(section, {})[key] = val
-            logger.info(f"Using {env_var} from environment")
+    # Note: External layer (GDELT + Wikipedia) requires no API keys.
+    # No environment variable overrides needed for news signals.
 
     return config
 
@@ -122,10 +114,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         kalshi_events = kalshi_client.fetch_events()
         logger.info(f"Got {len(kalshi_events)} Kalshi events")
 
-    # ── Step 3: Fetch news for external signals ──
-    logger.info("Step 3: Fetching news signals...")
-    all_news = news_signals.fetch_all_news()
-    logger.info(f"Got {len(all_news)} news articles")
+    # ── Step 3: External signals (GDELT + Wikipedia) ──
+    # GDELT searches are per-market-topic (done inside compute_external_score),
+    # so no bulk pre-fetch needed. Results are cached per query for 15 min.
+    logger.info("Step 3: External signals enabled (GDELT news + Wikipedia pageviews)")
 
     # ── Step 3b: Build whale index (one batch of API calls) ──
     logger.info("Step 3b: Building whale position index...")
@@ -144,6 +136,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     MAX_HISTORY_FETCHES = 50  # Cap expensive API calls
 
     history_fetches = 0
+
+    # Cache external scores per market question to avoid duplicate GDELT/Wiki calls
+    # (multiple tokens share the same market question)
+    _external_cache = {}
 
     for market in markets:
         for token in market.get('tokens', []):
@@ -179,10 +175,12 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 token.get('token_id', '')
             )
 
-            # Layer 4: external signals
-            external = news_signals.compute_external_score(
-                market.get('question', ''), all_news
-            )
+            # Layer 4: external signals (GDELT news + Wikipedia pageviews)
+            # Deduplicate: same market question = same external score
+            mkt_question = market.get('question', '')
+            if mkt_question not in _external_cache:
+                _external_cache[mkt_question] = news_signals.compute_external_score(mkt_question)
+            external = _external_cache[mkt_question]
 
             # Combined edge score
             scores = compute_edge_score(

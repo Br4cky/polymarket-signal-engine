@@ -29,10 +29,6 @@ jobs:
         run: mkdir -p data
 
       - name: Run signal engine
-        env:
-          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          SUBGRAPH_API_KEY: ${{ secrets.SUBGRAPH_API_KEY }}
         run: python engine.py --once --execute
 
       - name: Commit updated data

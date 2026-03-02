@@ -1,14 +1,20 @@
 """
-News Signals — External confirmation layer using news APIs and Google Trends.
-Finnhub free tier: 60 calls/min, general news + market news.
-SerpApi Google Trends: 100 searches/month free.
+News Signals — External confirmation layer using free, keyless APIs.
+
+Replaces paid Finnhub/SerpApi with:
+  1. GDELT Project API — free global news search (no key, no documented rate limit)
+  2. Wikipedia Pageviews API — free trend/spike detection (no key, 200 req/sec)
+
+Both provide *targeted* signals: we search for the specific market topic rather
+than keyword-matching against a generic news firehose.
 """
 
 import logging
-import time
 import re
+import time
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Optional
+from urllib.parse import quote
 
 import requests
 
@@ -18,245 +24,412 @@ logger = logging.getLogger(__name__)
 
 
 class NewsSignals:
-    """External signal detection via news and search trend APIs."""
+    """External signal detection via GDELT news search and Wikipedia pageview spikes."""
 
     def __init__(self, config: dict, cache: CacheManager):
         self.config = config
         self.cache = cache
-        self.finnhub_key = config.get('finnhub_api_key', '')
-        self.finnhub_enabled = config.get('finnhub_enabled', False) and bool(self.finnhub_key)
-        self.serpapi_key = config.get('serpapi_key', '')
-        self.trends_enabled = config.get('google_trends_enabled', False) and bool(self.serpapi_key)
         self.session = requests.Session()
-        self.session.headers.update({'User-Agent': 'PolySignalEngine/2.0'})
+        self.session.headers.update({
+            'User-Agent': 'PolySignalEngine/2.0 (https://github.com/Br4cky/polymarket-signal-engine)',
+            'Accept': 'application/json',
+        })
 
-    # ── Finnhub News ──
+        # Feature flags — both default ON since they need no keys
+        self.gdelt_enabled = config.get('gdelt_enabled', True)
+        self.wiki_enabled = config.get('wiki_pageviews_enabled', True)
 
-    def fetch_general_news(self, category: str = 'general') -> List[dict]:
+        # Tuning
+        self.gdelt_max_records = config.get('gdelt_max_records', 75)
+        self.gdelt_cache_ttl = config.get('gdelt_cache_ttl', 900)      # 15 min
+        self.wiki_cache_ttl = config.get('wiki_cache_ttl', 3600)        # 1 hour
+        self.wiki_lookback_days = config.get('wiki_lookback_days', 14)   # baseline window
+        self.wiki_spike_threshold = config.get('wiki_spike_threshold', 3.0)  # 3x avg = spike
+
+    # ─────────────────────────────────────────────────────────────────────
+    #  GDELT News Search (replaces Finnhub)
+    # ─────────────────────────────────────────────────────────────────────
+
+    def _build_gdelt_query(self, market_question: str) -> str:
         """
-        Fetch recent news from Finnhub.
-        Categories: general, forex, crypto, merger
+        Build an effective GDELT search query from a market question.
+
+        Strategy: extract the 3-5 most meaningful keywords, wrap multi-word
+        entities in quotes where possible. GDELT supports boolean operators.
         """
-        if not self.finnhub_enabled:
+        keywords = extract_keywords(market_question)
+        if not keywords:
+            return ''
+
+        # Try to detect named entities (consecutive capitalised words in original)
+        # For now, just use top keywords joined by space (GDELT does AND by default)
+        # Cap at 5 terms to keep queries focused
+        query_terms = keywords[:5]
+        return ' '.join(query_terms)
+
+    def fetch_gdelt_articles(self, query: str) -> List[dict]:
+        """
+        Search GDELT for recent news articles matching a query.
+
+        GDELT DOC 2.0 API: completely free, no API key, returns articles
+        from the last 3 months with title, URL, source, datetime.
+        """
+        if not self.gdelt_enabled or not query:
             return []
 
-        cache_key = f'finnhub_news_{category}'
-        cached = self.cache.get(cache_key, 600)  # 10 min cache
-        if cached:
+        cache_key = f'gdelt_{query.lower().replace(" ", "_")[:60]}'
+        cached = self.cache.get(cache_key, self.gdelt_cache_ttl)
+        if cached is not None:
             return cached
 
         try:
-            url = 'https://finnhub.io/api/v1/news'
+            url = 'https://api.gdeltproject.org/api/v2/doc/doc'
             params = {
-                'category': category,
-                'token': self.finnhub_key
+                'query': query,
+                'mode': 'artlist',
+                'maxrecords': self.gdelt_max_records,
+                'sort': 'datedesc',
+                'format': 'json',
             }
-            resp = self.session.get(url, params=params, timeout=10)
+            resp = self.session.get(url, params=params, timeout=15)
             resp.raise_for_status()
-            articles = resp.json()
 
-            if not isinstance(articles, list):
-                return []
+            data = resp.json()
+            raw_articles = data.get('articles', [])
 
-            normalized = []
-            for a in articles[:50]:  # Cap at 50 most recent
-                normalized.append({
-                    'headline': a.get('headline', ''),
-                    'summary': a.get('summary', ''),
-                    'source': a.get('source', ''),
+            articles = []
+            for a in raw_articles:
+                # Parse GDELT datetime format (YYYYMMDDHHmmSS or ISO)
+                dt_raw = a.get('seendate', '')
+                article_ts = self._parse_gdelt_datetime(dt_raw)
+
+                articles.append({
+                    'title': a.get('title', ''),
                     'url': a.get('url', ''),
-                    'datetime': a.get('datetime', 0),
-                    'category': category,
-                    'keywords': extract_keywords(
-                        (a.get('headline', '') + ' ' + a.get('summary', ''))[:200]
-                    )
+                    'source': a.get('domain', a.get('source', '')),
+                    'language': a.get('language', ''),
+                    'datetime': article_ts,
+                    'source_country': a.get('sourcecountry', ''),
                 })
 
-            self.cache.set(cache_key, normalized)
-            logger.info(f"Fetched {len(normalized)} news articles ({category})")
-            return normalized
+            self.cache.set(cache_key, articles)
+            logger.info(f"GDELT: {len(articles)} articles for query '{query[:40]}'")
+            return articles
 
         except Exception as e:
-            logger.warning(f"Finnhub news fetch failed: {e}")
+            logger.warning(f"GDELT fetch failed for '{query[:30]}': {e}")
             return []
 
-    def fetch_all_news(self) -> List[dict]:
-        """Fetch news across all relevant categories."""
-        all_articles = []
-        for cat in ['general', 'crypto']:
-            articles = self.fetch_general_news(cat)
-            all_articles.extend(articles)
-        return all_articles
+    def _parse_gdelt_datetime(self, dt_str: str) -> float:
+        """Parse GDELT datetime string to Unix timestamp."""
+        if not dt_str:
+            return 0
+        try:
+            # GDELT uses YYYYMMDDTHHmmSS or YYYYMMDDHHMMSS format
+            clean = dt_str.replace('T', '').replace('-', '').replace(':', '').replace(' ', '')
+            if len(clean) >= 14:
+                dt = datetime(
+                    int(clean[:4]), int(clean[4:6]), int(clean[6:8]),
+                    int(clean[8:10]), int(clean[10:12]), int(clean[12:14]),
+                    tzinfo=timezone.utc
+                )
+                return dt.timestamp()
+        except (ValueError, IndexError):
+            pass
+        return 0
 
-    def score_news_relevance(self, market_question: str, articles: List[dict]) -> dict:
+    def score_news_relevance(self, market_question: str, articles: List[dict] = None) -> dict:
         """
-        Score how relevant recent news is to a specific market.
+        Score how relevant recent GDELT news is to a specific market.
+
+        Unlike Finnhub's category-based approach, GDELT articles are already
+        topic-filtered by search query — so we focus on recency and volume
+        rather than keyword overlap (which is baked into the search).
 
         Returns: {
             news_score: float (0-8),
             matching_articles: int,
             most_relevant_headline: str,
-            recency_hours: float  # how recent the best match is
+            recency_hours: float
         }
         """
-        market_keywords = set(extract_keywords(market_question))
-        if not market_keywords:
+        query = self._build_gdelt_query(market_question)
+        if not query:
+            return {'news_score': 0, 'matching_articles': 0,
+                    'most_relevant_headline': '', 'recency_hours': 999}
+
+        if articles is None:
+            articles = self.fetch_gdelt_articles(query)
+
+        if not articles:
             return {'news_score': 0, 'matching_articles': 0,
                     'most_relevant_headline': '', 'recency_hours': 999}
 
         now = time.time()
-        best_score = 0
         best_headline = ''
         best_recency = 999
-        match_count = 0
+
+        # Count articles by recency bucket
+        recent_6h = 0
+        recent_24h = 0
+        recent_72h = 0
 
         for article in articles:
-            article_keywords = set(article.get('keywords', []))
-            overlap = market_keywords & article_keywords
-            overlap_ratio = len(overlap) / max(1, len(market_keywords))
-
-            if overlap_ratio < 0.2:  # Need at least 20% keyword overlap
+            article_ts = article.get('datetime', 0)
+            if article_ts <= 0:
                 continue
 
-            # Recency factor: articles from last 6h score higher
-            article_time = article.get('datetime', 0)
-            hours_ago = (now - article_time) / 3600 if article_time > 0 else 999
+            hours_ago = (now - article_ts) / 3600
 
-            # Combined relevance = keyword overlap * recency decay
-            recency_factor = max(0, 1.0 - (hours_ago / 72))  # Decays over 3 days
-            relevance = overlap_ratio * recency_factor
-            match_count += 1
-
-            if relevance > best_score:
-                best_score = relevance
-                best_headline = article.get('headline', '')[:100]
+            if hours_ago < best_recency:
                 best_recency = hours_ago
+                best_headline = article.get('title', '')[:120]
 
-        # Scale to 0-8 points
-        news_score = min(8.0, best_score * 10.0)
+            if hours_ago <= 6:
+                recent_6h += 1
+            if hours_ago <= 24:
+                recent_24h += 1
+            if hours_ago <= 72:
+                recent_72h += 1
 
-        # Bonus for multiple matching articles (suggests trending topic)
-        if match_count >= 3:
-            news_score = min(8.0, news_score + 1.0)
-        if match_count >= 5:
-            news_score = min(8.0, news_score + 1.0)
+        # Scoring logic:
+        # - Recency matters most: articles in last 6h = strong catalyst signal
+        # - Volume matters: many articles = trending topic (likely priced in)
+        #   but FEW very recent articles = possible not-yet-priced catalyst
+        # - Sweet spot: 1-5 articles in last 6h with many more in 24-72h range
+        #   means news is BREAKING and market may not have fully adjusted
+
+        score = 0.0
+
+        # Base: any recent coverage at all
+        if recent_72h > 0:
+            score += 1.0
+
+        # Recency bonus: articles in last 6 hours (strongest catalyst signal)
+        if recent_6h >= 1:
+            score += 2.0
+        if recent_6h >= 3:
+            score += 1.0
+
+        # Coverage depth: sustained attention over 24h
+        if recent_24h >= 3:
+            score += 1.5
+        if recent_24h >= 8:
+            score += 1.0
+
+        # "Breaking news" pattern: recent surge vs background
+        # If >50% of 72h articles appeared in last 6h → news is breaking
+        if recent_72h >= 3 and recent_6h > 0:
+            breaking_ratio = recent_6h / recent_72h
+            if breaking_ratio > 0.4:
+                score += 1.5  # News acceleration
+
+        # Cap at 8
+        news_score = min(8.0, score)
 
         return {
             'news_score': round(news_score, 2),
-            'matching_articles': match_count,
+            'matching_articles': recent_72h,
+            'articles_6h': recent_6h,
+            'articles_24h': recent_24h,
             'most_relevant_headline': best_headline,
-            'recency_hours': round(best_recency, 1)
+            'recency_hours': round(best_recency, 1) if best_recency < 999 else 999
         }
 
-    # ── Google Trends ──
+    # ─────────────────────────────────────────────────────────────────────
+    #  Wikipedia Pageview Spikes (replaces Google Trends / SerpApi)
+    # ─────────────────────────────────────────────────────────────────────
 
-    def fetch_google_trends(self, keyword: str) -> Optional[dict]:
+    def _market_to_wiki_titles(self, market_question: str) -> List[str]:
         """
-        Fetch Google Trends interest over time for a keyword.
-        Uses SerpApi free tier.
+        Extract likely Wikipedia article titles from a market question.
+
+        Heuristic: pull capitalised multi-word sequences (proper nouns)
+        and key topic words. Returns 1-3 candidate titles.
         """
-        if not self.trends_enabled:
+        # First pass: extract capitalised sequences (likely named entities)
+        # e.g. "Will Donald Trump win the 2026 election?" → ["Donald Trump"]
+        entity_pattern = r'[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+'
+        entities = re.findall(entity_pattern, market_question)
+
+        # Deduplicate and limit
+        seen = set()
+        titles = []
+        for e in entities:
+            normalised = e.strip()
+            if normalised not in seen and len(normalised) > 3:
+                seen.add(normalised)
+                titles.append(normalised)
+
+        # Fallback: use top 1-2 extracted keywords if no entities found
+        if not titles:
+            keywords = extract_keywords(market_question)
+            # Take nouns/proper nouns (longer keywords are usually more specific)
+            for kw in sorted(keywords, key=len, reverse=True)[:2]:
+                if len(kw) > 3:
+                    titles.append(kw.capitalize())
+
+        return titles[:3]  # Max 3 API calls per market
+
+    def fetch_wiki_pageviews(self, title: str) -> Optional[dict]:
+        """
+        Fetch daily pageview counts for a Wikipedia article.
+
+        Wikimedia REST API: free, no key, 200 req/sec.
+        Returns recent + baseline daily views for spike detection.
+        """
+        if not self.wiki_enabled or not title:
             return None
 
-        cache_key = f'gtrends_{keyword.lower().replace(" ", "_")}'
-        cached = self.cache.get(cache_key, 3600)  # 1 hour cache
-        if cached:
+        cache_key = f'wiki_pv_{title.lower().replace(" ", "_")[:50]}'
+        cached = self.cache.get(cache_key, self.wiki_cache_ttl)
+        if cached is not None:
             return cached
 
         try:
-            url = 'https://serpapi.com/search.json'
-            params = {
-                'engine': 'google_trends',
-                'q': keyword,
-                'data_type': 'TIMESERIES',
-                'api_key': self.serpapi_key
-            }
-            resp = self.session.get(url, params=params, timeout=15)
+            # URL-encode the title (spaces become underscores in Wikipedia)
+            wiki_title = title.replace(' ', '_')
+            encoded_title = quote(wiki_title, safe='')
+
+            # Fetch last N+2 days of data (extra buffer for API lag)
+            end_date = datetime.now(timezone.utc)
+            start_date = end_date - timedelta(days=self.wiki_lookback_days + 2)
+
+            url = (
+                f'https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article'
+                f'/en.wikipedia/all-access/all-agents/{encoded_title}/daily'
+                f'/{start_date.strftime("%Y%m%d")}/{end_date.strftime("%Y%m%d")}'
+            )
+
+            resp = self.session.get(url, timeout=10)
+
+            if resp.status_code == 404:
+                # Article doesn't exist — not an error, just no data
+                self.cache.set(cache_key, None)
+                return None
+
             resp.raise_for_status()
             data = resp.json()
 
-            # Extract interest over time
-            timeline = data.get('interest_over_time', {}).get('timeline_data', [])
-            if not timeline:
+            items = data.get('items', [])
+            if not items:
+                self.cache.set(cache_key, None)
                 return None
 
-            values = []
-            for point in timeline:
-                vals = point.get('values', [])
-                if vals:
-                    values.append(int(vals[0].get('extracted_value', 0)))
+            # Extract daily view counts
+            daily_views = [item.get('views', 0) for item in items]
 
-            if not values:
+            if len(daily_views) < 3:
+                self.cache.set(cache_key, None)
                 return None
+
+            # Recent = last 2 days, baseline = everything before that
+            recent_views = daily_views[-2:]
+            baseline_views = daily_views[:-2] if len(daily_views) > 2 else daily_views
+
+            recent_avg = sum(recent_views) / len(recent_views)
+            baseline_avg = sum(baseline_views) / max(1, len(baseline_views))
+            baseline_max = max(baseline_views) if baseline_views else 0
+
+            # Spike ratio
+            spike_ratio = recent_avg / max(1, baseline_avg)
 
             result = {
-                'keyword': keyword,
-                'current_interest': values[-1] if values else 0,
-                'avg_interest': sum(values) / len(values) if values else 0,
-                'max_interest': max(values) if values else 0,
-                'trend_direction': 'up' if len(values) >= 2 and values[-1] > values[-2] else 'down',
-                'data_points': len(values)
+                'title': title,
+                'recent_avg_views': round(recent_avg),
+                'baseline_avg_views': round(baseline_avg),
+                'baseline_max_views': baseline_max,
+                'spike_ratio': round(spike_ratio, 2),
+                'spike_detected': spike_ratio >= self.wiki_spike_threshold,
+                'data_points': len(daily_views),
             }
 
             self.cache.set(cache_key, result)
+            logger.debug(f"Wiki pageviews: {title} → ratio={spike_ratio:.1f}x")
             return result
 
         except Exception as e:
-            logger.warning(f"Google Trends fetch failed for '{keyword}': {e}")
+            logger.warning(f"Wiki pageviews failed for '{title}': {e}")
             return None
 
-    def score_trends(self, market_question: str) -> dict:
+    def score_wiki_trends(self, market_question: str) -> dict:
         """
-        Score Google Trends interest for a market topic.
+        Score Wikipedia pageview trends for a market's topic.
+
+        Detects attention spikes: if pageviews for related Wikipedia
+        articles are significantly above their baseline, something
+        newsworthy is happening.
 
         Returns: {
             trends_score: float (0-7),
-            current_interest: int,
-            spike_detected: bool
+            spike_detected: bool,
+            best_spike_ratio: float,
+            entities_checked: int
         }
         """
-        if not self.trends_enabled:
-            return {'trends_score': 0, 'current_interest': 0, 'spike_detected': False}
+        if not self.wiki_enabled:
+            return {'trends_score': 0, 'spike_detected': False,
+                    'best_spike_ratio': 0, 'entities_checked': 0}
 
-        # Extract the most meaningful keyword phrase (2-3 words)
-        keywords = extract_keywords(market_question)
-        if not keywords:
-            return {'trends_score': 0, 'current_interest': 0, 'spike_detected': False}
+        titles = self._market_to_wiki_titles(market_question)
+        if not titles:
+            return {'trends_score': 0, 'spike_detected': False,
+                    'best_spike_ratio': 0, 'entities_checked': 0}
 
-        # Use top 2-3 keywords as search query
-        query = ' '.join(keywords[:3])
-        trends = self.fetch_google_trends(query)
+        best_ratio = 0.0
+        any_spike = False
+        checked = 0
 
-        if not trends:
-            return {'trends_score': 0, 'current_interest': 0, 'spike_detected': False}
+        for title in titles:
+            result = self.fetch_wiki_pageviews(title)
+            if result is None:
+                continue
 
-        current = trends['current_interest']
-        avg = trends['avg_interest']
+            checked += 1
+            ratio = result.get('spike_ratio', 0)
 
-        # Spike detection: current interest > 2x average
-        spike = current > (avg * 2) if avg > 5 else False
+            if ratio > best_ratio:
+                best_ratio = ratio
 
-        # Score: based on spike ratio
-        if avg > 0:
-            spike_ratio = current / avg
-            score = min(7.0, (spike_ratio - 1.0) * 3.5)
-        else:
-            score = 0.0
+            if result.get('spike_detected', False):
+                any_spike = True
 
-        if score < 0:
-            score = 0.0
+        if checked == 0:
+            return {'trends_score': 0, 'spike_detected': False,
+                    'best_spike_ratio': 0, 'entities_checked': 0}
+
+        # Scoring: based on how extreme the pageview spike is
+        # 1-2x = normal fluctuation (score 0)
+        # 2-3x = mild interest (score 1-2)
+        # 3-5x = significant attention (score 3-4)
+        # 5-10x = major event (score 5-6)
+        # 10x+ = viral/breaking (score 7)
+        score = 0.0
+        if best_ratio >= 2.0:
+            score = min(7.0, (best_ratio - 1.0) * 1.2)
+
+        # Bonus if multiple entities are spiking (corroborates the signal)
+        if any_spike and checked >= 2:
+            score = min(7.0, score + 0.5)
 
         return {
             'trends_score': round(score, 2),
-            'current_interest': current,
-            'spike_detected': spike
+            'spike_detected': any_spike,
+            'best_spike_ratio': round(best_ratio, 2),
+            'entities_checked': checked,
         }
 
-    # ── Combined External Score ──
+    # ─────────────────────────────────────────────────────────────────────
+    #  Combined External Score
+    # ─────────────────────────────────────────────────────────────────────
 
     def compute_external_score(self, market_question: str, articles: List[dict] = None) -> dict:
         """
         Compute combined external confirmation score for a market.
+
+        Sub-signals:
+          - GDELT news relevance (0-8): targeted search for market topic
+          - Wikipedia pageview spikes (0-7): trend/attention detection
 
         Returns: {
             news_score: float (0-8),
@@ -265,12 +438,11 @@ class NewsSignals:
             details: dict
         }
         """
-        # News scoring
-        if articles is None:
-            articles = self.fetch_all_news()
-
+        # News scoring via GDELT
         news_result = self.score_news_relevance(market_question, articles)
-        trends_result = self.score_trends(market_question)
+
+        # Trend scoring via Wikipedia pageviews
+        trends_result = self.score_wiki_trends(market_question)
 
         total = news_result['news_score'] + trends_result['trends_score']
 
@@ -279,10 +451,13 @@ class NewsSignals:
             'trends_score': trends_result['trends_score'],
             'external_total': round(min(15.0, total), 2),
             'details': {
-                'matching_articles': news_result['matching_articles'],
-                'most_relevant_headline': news_result['most_relevant_headline'],
-                'recency_hours': news_result['recency_hours'],
-                'current_interest': trends_result['current_interest'],
-                'spike_detected': trends_result['spike_detected']
+                'matching_articles': news_result.get('matching_articles', 0),
+                'articles_6h': news_result.get('articles_6h', 0),
+                'articles_24h': news_result.get('articles_24h', 0),
+                'most_relevant_headline': news_result.get('most_relevant_headline', ''),
+                'recency_hours': news_result.get('recency_hours', 999),
+                'spike_detected': trends_result.get('spike_detected', False),
+                'best_spike_ratio': trends_result.get('best_spike_ratio', 0),
+                'entities_checked': trends_result.get('entities_checked', 0),
             }
         }

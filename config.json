@@ -24,10 +24,13 @@
     "concentration_alert_pct": 30
   },
   "news": {
-    "finnhub_api_key": "",
-    "finnhub_enabled": false,
-    "serpapi_key": "",
-    "google_trends_enabled": false
+    "gdelt_enabled": true,
+    "gdelt_max_records": 75,
+    "gdelt_cache_ttl": 900,
+    "wiki_pageviews_enabled": true,
+    "wiki_cache_ttl": 3600,
+    "wiki_lookback_days": 14,
+    "wiki_spike_threshold": 3.0
   },
   "scoring": {
     "layer_weights": {
