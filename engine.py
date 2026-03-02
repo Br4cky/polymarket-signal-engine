@@ -31,6 +31,7 @@ from src.news_signals import NewsSignals
 from src.manifold_client import ManifoldClient
 from src.scorer import compute_edge_score, rank_opportunities
 from src.calibration import compute_calibration, suggest_parameter_adjustments
+from src.signal_log import SignalLogger
 from src.portfolio import (
     load_portfolio, save_portfolio, create_portfolio,
     execute_paper_trade, update_portfolio, auto_close_positions,
@@ -96,6 +97,8 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     whale_tracker = WhaleTracker(whale_config, cache)
     news_signals = NewsSignals(config.get('news', {}), cache)
     manifold_client = ManifoldClient(config.get('manifold', {}), cache)
+
+    signal_logger = SignalLogger(data_dir)
 
     portfolio_path = os.path.join(data_dir, 'portfolio_state.json')
     portfolio = load_portfolio(portfolio_path, config)
@@ -252,6 +255,9 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             f"{opp['question'][:50]}"
         )
 
+    # Log top signals for future bot notifications
+    signal_logger.log_signals(opportunities, top_n=10)
+
     # ── Step 6: Update existing positions ──
     current_prices = {}
     for item in scored_items:
@@ -266,6 +272,8 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             closed = auto_close_positions(portfolio[fund_key], current_prices, config)
             if closed:
                 logger.info(f"[{portfolio[fund_key]['name']}] Auto-closed {len(closed)} positions")
+                for trade in closed:
+                    signal_logger.log_exit(portfolio[fund_key]['name'], trade)
 
     # ── Step 7: Execute trades (if enabled) ──
     if execute_trades and config.get('trading', {}).get('auto_trade_enabled', False):
@@ -294,6 +302,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 fund, position = execute_paper_trade(fund, opp, config)
                 if position:
                     trades_done += 1
+                    signal_logger.log_entry(fund['name'], position, opp)
 
             portfolio[fund_key] = fund
             if trades_done:
@@ -333,6 +342,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     elapsed = time.time() - start
     summary = portfolio_summary(portfolio)
+    signal_logger.log_summary(summary)
     logger.info(
         f"Pipeline complete in {elapsed:.1f}s — "
         f"Combined equity: ${summary['combined_equity']:.2f} "
