@@ -3,8 +3,78 @@
     "name": "5x Hunter",
     "band": "5x",
     "capital": 250,
-    "available_cash": 250,
-    "positions": [],
+    "available_cash": 229.11,
+    "positions": [
+      {
+        "position_id": "26e25e0c",
+        "market_id": "958442",
+        "question": "Will the Iranian regime fall by March 31?",
+        "token_id": "48825140812430902098404528620382945035793471220915259967486864813738884055220",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.99,
+        "entry_timestamp": "2026-03-02T19:59:01.753109+00:00",
+        "shares": 7.58,
+        "entry_usd": 7.5,
+        "current_price": 0.1665,
+        "current_value": 1.26,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 35.0,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 10.5,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "87b6bf79",
+        "market_id": "1385748",
+        "question": "Will France, UK, or Germany strike Iran by March 31?",
+        "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.99,
+        "entry_timestamp": "2026-03-02T19:59:01.753227+00:00",
+        "shares": 7.02,
+        "entry_usd": 6.95,
+        "current_price": 0.2335,
+        "current_value": 1.64,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 35.0,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 10.5,
+          "external": 0.0
+        }
+      },
+      {
+        "position_id": "66da6865",
+        "market_id": "1469384",
+        "question": "Will Alireza Arafi be the next Supreme Leader of Iran?",
+        "token_id": "25227556023588911697250037340036299966685740925058429413810035196107956072774",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.99,
+        "entry_timestamp": "2026-03-02T19:59:01.753334+00:00",
+        "shares": 6.51,
+        "entry_usd": 6.44,
+        "current_price": 0.2015,
+        "current_value": 1.31,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 31.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 9.5,
+          "external": 0.0
+        }
+      }
+    ],
     "realized_trades": [],
     "win_count": 0,
     "loss_count": 0,
@@ -22,6 +92,10 @@
       {
         "timestamp": "2026-03-02T19:44:58.653591+00:00",
         "equity": 250
+      },
+      {
+        "timestamp": "2026-03-02T19:59:01.753037+00:00",
+        "equity": 250
       }
     ]
   },
@@ -29,8 +103,32 @@
     "name": "10x Hunter",
     "band": "10x",
     "capital": 250,
-    "available_cash": 250,
-    "positions": [],
+    "available_cash": 244.75,
+    "positions": [
+      {
+        "position_id": "2d3e3cf1",
+        "market_id": "1466013",
+        "question": "US x Iran ceasefire by March 6?",
+        "token_id": "45384651537373960665605066318330086764816901476264060880498387434805925753491",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.99,
+        "entry_timestamp": "2026-03-02T19:59:01.753513+00:00",
+        "shares": 5.3,
+        "entry_usd": 5.25,
+        "current_price": 0.065,
+        "current_value": 0.34,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 31.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 9.5,
+          "external": 0.0
+        }
+      }
+    ],
     "realized_trades": [],
     "win_count": 0,
     "loss_count": 0,
@@ -48,9 +146,13 @@
       {
         "timestamp": "2026-03-02T19:44:58.653609+00:00",
         "equity": 250
+      },
+      {
+        "timestamp": "2026-03-02T19:59:01.753050+00:00",
+        "equity": 250
       }
     ]
   },
   "created_at": "2026-03-02T19:35:26.311590+00:00",
-  "last_updated": "2026-03-02T19:44:58.653625+00:00"
+  "last_updated": "2026-03-02T19:59:01.753752+00:00"
 }
