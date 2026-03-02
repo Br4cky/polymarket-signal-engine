@@ -29,6 +29,8 @@ class WhaleTracker:
         self.cache_ttl_leaderboard = config.get('cache_ttl_leaderboard', 3600)
         self.cache_ttl_positions = config.get('cache_ttl_positions', 1800)
         self.cache_manager = cache_manager
+        self._leaderboard_failed = False  # Circuit breaker for 401s
+        self._positions_failed = False
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'PolymarketSignalEngine/1.0'
@@ -45,6 +47,9 @@ class WhaleTracker:
             List of dicts with address, username, volume, profit, positions_count
             Cached for 1 hour. Returns empty list on API failure.
         """
+        if self._leaderboard_failed:
+            return []
+
         cache_key = f'polymarket_leaderboard_{limit}'
         cached = self.cache_manager.get(cache_key, self.cache_ttl_leaderboard)
         if cached is not None:
@@ -81,7 +86,8 @@ class WhaleTracker:
             return leaderboard
 
         except Exception as e:
-            logger.error(f"Error fetching Polymarket leaderboard: {e}")
+            logger.warning(f"Leaderboard API failed ({e}), disabling for this run")
+            self._leaderboard_failed = True
             return []
 
     def fetch_top_positions_for_market(self, market_id: str) -> dict:
@@ -95,6 +101,9 @@ class WhaleTracker:
             Dict with top_wallets, concentration_pct, and whale_count.
             Returns empty dict if subgraph not configured or fails.
         """
+        if self._positions_failed:
+            return {'top_wallets': [], 'concentration_pct': 0, 'whale_count': 0}
+
         cache_key = f'market_positions_{market_id}'
         cached = self.cache_manager.get(cache_key, self.cache_ttl_positions)
         if cached is not None:
@@ -169,7 +178,8 @@ class WhaleTracker:
             return result
 
         except Exception as e:
-            logger.error(f"Error fetching top positions for market {market_id}: {e}")
+            logger.warning(f"Subgraph API failed ({e}), disabling for this run")
+            self._positions_failed = True
             return {'top_wallets': [], 'concentration_pct': 0, 'whale_count': 0}
 
     def compute_smart_money_score(self, market_id: str, token_id: str) -> dict:
