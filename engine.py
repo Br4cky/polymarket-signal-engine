@@ -131,7 +131,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     # Only tokens in our tradeable price range are worth deep analysis
     # 5x band: 0.15-0.25, 10x band: 0.05-0.12 → overall: 0.03-0.30
-    MIN_PRICE = 0.03
+    MIN_PRICE = 0.01
     MAX_PRICE = 0.30
     MAX_HISTORY_FETCHES = 50  # Cap expensive API calls
 
@@ -240,21 +240,25 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     # ── Step 7: Execute trades (if enabled) ──
     if execute_trades and config.get('trading', {}).get('auto_trade_enabled', False):
-        max_per_run = config['trading'].get('max_trades_per_run', 3)
+        max_exposure_pct = config['trading'].get('max_exposure_pct', 70) / 100.0
 
         for fund_key in ['fund_a', 'fund_b']:
             fund = portfolio.get(fund_key)
             if not fund:
                 continue
 
-            fund_band = fund.get('band', '')
-            fund_opps = [o for o in opportunities if o.get('convexity_band') == fund_band]
+            fund_bands = set(fund.get('bands', [fund.get('band', '')]))
+            fund_opps = [o for o in opportunities if o.get('convexity_band') in fund_bands]
             existing_tokens = {p['token_id'] for p in fund['positions']}
             trades_done = 0
 
             for opp in fund_opps:
-                if trades_done >= max_per_run:
+                # Dynamic exposure check: stop if deployed capital exceeds threshold
+                total_deployed = sum(p['entry_usd'] for p in fund['positions'])
+                exposure_pct = total_deployed / fund['capital'] if fund['capital'] > 0 else 1.0
+                if exposure_pct >= max_exposure_pct:
                     break
+
                 if opp['token_id'] in existing_tokens:
                     continue
 
@@ -264,7 +268,11 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
             portfolio[fund_key] = fund
             if trades_done:
-                logger.info(f"[{fund['name']}] Executed {trades_done} paper trades")
+                logger.info(
+                    f"[{fund['name']}] Executed {trades_done} paper trades "
+                    f"(exposure: {sum(p['entry_usd'] for p in fund['positions']):.0f}/"
+                    f"{fund['capital']:.0f})"
+                )
 
     # ── Step 8: Save and write dashboard ──
     save_portfolio(portfolio, portfolio_path)

@@ -62,7 +62,7 @@ def create_portfolio(config: dict) -> dict:
 
 
 def load_portfolio(filepath: str, config: dict) -> dict:
-    """Load portfolio from file or create new. Validates structure."""
+    """Load portfolio from file or create new. Validates structure and capital."""
     if os.path.exists(filepath):
         try:
             with open(filepath, 'r') as f:
@@ -70,6 +70,17 @@ def load_portfolio(filepath: str, config: dict) -> dict:
             # Validate it has the expected structure
             if ('fund_a' in data and 'fund_b' in data
                     and 'available_cash' in data.get('fund_a', {})):
+                # Check if config capital changed — if so, reset
+                cfg_cap_a = config.get('funds', {}).get('fund_a', {}).get('capital', 250)
+                cfg_cap_b = config.get('funds', {}).get('fund_b', {}).get('capital', 250)
+                if (data['fund_a'].get('capital') != cfg_cap_a
+                        or data['fund_b'].get('capital') != cfg_cap_b):
+                    logger.warning(
+                        f"Capital changed (config: {cfg_cap_a}/{cfg_cap_b}, "
+                        f"portfolio: {data['fund_a'].get('capital')}/{data['fund_b'].get('capital')}). "
+                        f"Resetting portfolio."
+                    )
+                    return create_portfolio(config)
                 return data
             else:
                 logger.warning("Portfolio file has invalid structure, creating new")

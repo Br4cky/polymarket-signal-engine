@@ -161,12 +161,14 @@ def rank_opportunities(
     threshold = config.get('scoring', {}).get('edge_threshold', 50)
     min_liquidity = config.get('trading', {}).get('min_liquidity_usd', 500)
     min_days = config.get('trading', {}).get('min_days_to_close', 2)
+    max_days = config.get('trading', {}).get('max_days_to_close', 999)
 
-    # Bands we're trading (Fund A = 5x, Fund B = 10x)
+    # Bands we're trading (collect from all funds)
     active_bands = set()
     for fund_key in ['fund_a', 'fund_b']:
         fund = config.get('funds', {}).get(fund_key, {})
-        active_bands.add(fund.get('band', ''))
+        for b in fund.get('bands', [fund.get('band', '')]):
+            active_bands.add(b)
 
     opportunities = []
 
@@ -187,6 +189,10 @@ def rank_opportunities(
         if days < min_days:
             continue
 
+        # Skip markets that settle too far in the future
+        if days > max_days:
+            continue
+
         convexity = scores.get('convexity', {})
         band = convexity.get('band', 'invalid')
 
@@ -197,7 +203,8 @@ def rank_opportunities(
         fund_assignment = None
         for fund_key in ['fund_a', 'fund_b']:
             fund = config.get('funds', {}).get(fund_key, {})
-            if fund.get('band') == band:
+            fund_bands = set(fund.get('bands', [fund.get('band', '')]))
+            if band in fund_bands:
                 fund_assignment = fund_key
                 break
 

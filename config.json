@@ -44,28 +44,30 @@
       "name": "5x Hunter",
       "band": "5x",
       "price_range": [0.15, 0.25],
-      "capital": 250
+      "capital": 2500
     },
     "fund_b": {
-      "name": "10x Hunter",
+      "name": "10x+ Hunter",
       "band": "10x",
-      "price_range": [0.05, 0.12],
-      "capital": 250
+      "bands": ["10x", "20x"],
+      "price_range": [0.01, 0.12],
+      "capital": 2500
     }
   },
   "portfolio": {
-    "total_capital": 500,
-    "max_positions_per_fund": 15,
+    "total_capital": 5000,
+    "max_positions_per_fund": 50,
     "max_position_size_pct": 3,
     "kelly_fraction": 0.5
   },
   "trading": {
-    "profit_target_pct": 50,
+    "profit_target_pct": 300,
     "stop_loss_pct": -80,
     "min_liquidity_usd": 500,
     "min_days_to_close": 2,
+    "max_days_to_close": 45,
     "slippage_pct": 0.5,
-    "max_trades_per_run": 3,
+    "max_exposure_pct": 70,
     "auto_trade_enabled": false
   },
   "dashboard": {
