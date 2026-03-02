@@ -39,7 +39,7 @@ class KalshiClient:
             List of event dicts, cached for cache_ttl seconds
         """
         cache_key = 'kalshi_events'
-        cached = self.cache_manager.get(cache_key)
+        cached = self.cache_manager.get(cache_key, self.cache_ttl)
         if cached is not None:
             return cached
 
@@ -88,7 +88,7 @@ class KalshiClient:
             List of market dicts with ticker, title, yes_bid, yes_ask, no_bid, no_ask, volume
         """
         cache_key = f'kalshi_markets_{event_ticker}'
-        cached = self.cache_manager.get(cache_key)
+        cached = self.cache_manager.get(cache_key, self.cache_ttl)
         if cached is not None:
             return cached
 

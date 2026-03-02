@@ -46,7 +46,7 @@ class WhaleTracker:
             Cached for 1 hour. Returns empty list on API failure.
         """
         cache_key = f'polymarket_leaderboard_{limit}'
-        cached = self.cache_manager.get(cache_key)
+        cached = self.cache_manager.get(cache_key, self.cache_ttl_leaderboard)
         if cached is not None:
             return cached
 
@@ -96,7 +96,7 @@ class WhaleTracker:
             Returns empty dict if subgraph not configured or fails.
         """
         cache_key = f'market_positions_{market_id}'
-        cached = self.cache_manager.get(cache_key)
+        cached = self.cache_manager.get(cache_key, self.cache_ttl_positions)
         if cached is not None:
             return cached
 
