@@ -206,6 +206,7 @@ def execute_paper_trade(
         'edge_score_at_entry': opportunity['edge_score'],
         'layer_scores_at_entry': opportunity.get('layer_scores', {}),
         'days_to_close': opportunity.get('days_to_close', 0),
+        'resolution_date': opportunity.get('resolution_date', ''),
         'potential_multiple': opportunity.get('potential_multiple', 0),
         'slug': opportunity.get('slug', '')
     }
@@ -226,6 +227,8 @@ def execute_paper_trade(
 
 def update_fund_positions(fund: dict, current_prices: Dict[str, float]):
     """Update all positions in a fund with current market prices."""
+    now = datetime.now(timezone.utc)
+
     for pos in fund['positions']:
         token_id = pos['token_id']
         if token_id in current_prices:
@@ -237,6 +240,17 @@ def update_fund_positions(fund: dict, current_prices: Dict[str, float]):
                 pos['unrealized_pnl_pct'] = round(
                     (pos['unrealized_pnl'] / pos['entry_usd']) * 100, 2
                 )
+
+        # Recalculate days_to_close from resolution_date (live countdown)
+        res_date = pos.get('resolution_date', '')
+        if res_date:
+            try:
+                res = datetime.fromisoformat(str(res_date))
+                if res.tzinfo is None:
+                    res = res.replace(tzinfo=timezone.utc)
+                pos['days_to_close'] = max(0, (res - now).days)
+            except (ValueError, TypeError):
+                pass
 
     _recalculate_fund_metrics(fund)
 

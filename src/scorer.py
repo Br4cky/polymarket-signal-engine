@@ -238,6 +238,7 @@ def rank_opportunities(
             'convexity_band': band,
             'potential_multiple': convexity.get('potential_multiple', 0),
             'days_to_close': days,
+            'resolution_date': market.get('resolution_date', ''),
             'liquidity_usd': liquidity,
             'volume_24h': safe_float(market.get('volume_24h', 0)),
             'fund_assignment': fund_assignment,
