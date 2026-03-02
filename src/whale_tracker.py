@@ -25,7 +25,9 @@ class WhaleTracker:
                     subgraph_url, cache_ttl_leaderboard, cache_ttl_positions
             cache_manager: CacheManager instance for caching API responses
         """
-        self.subgraph_url = config.get('subgraph_url')
+        raw_url = config.get('subgraph_url', '')
+        # Disable subgraph if URL is empty or still has placeholder
+        self.subgraph_url = raw_url if (raw_url and 'POLYMARKET_SUBGRAPH_ID' not in raw_url) else None
         self.cache_ttl_leaderboard = config.get('cache_ttl_leaderboard', 3600)
         self.cache_ttl_positions = config.get('cache_ttl_positions', 1800)
         self.cache_manager = cache_manager

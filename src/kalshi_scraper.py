@@ -47,8 +47,9 @@ class KalshiClient:
             events = []
             offset = 0
             limit = 100
+            max_pages = 3  # Cap at 300 events to avoid rate limits
 
-            while True:
+            for _ in range(max_pages):
                 url = f"{self.api_base}/events"
                 params = {
                     'status': 'open',
