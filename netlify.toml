@@ -1,8 +1,6 @@
 [build]
+  command = ""
   publish = "."
-
-# No build command needed — static HTML + JSON
-# Netlify auto-deploys on every push (including data commits from GitHub Actions)
 
 [[headers]]
   for = "/data/*"
