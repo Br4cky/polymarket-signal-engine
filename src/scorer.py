@@ -74,7 +74,8 @@ def compute_edge_score(
     external_total = safe_float(external.get('external_total', 0))
 
     # ── Composite Score ──
-    # Each layer is normalised to its max, then weighted
+    # Each layer normalised to its max, weighted, then rescaled
+    # so the score reflects only layers that have data
     max_structural = 30.0
     max_smart_money = 25.0
     max_dislocation = 30.0
@@ -85,12 +86,23 @@ def compute_edge_score(
     dislocation_norm = dislocation['dislocation_total'] / max_dislocation
     external_norm = external_total / max_external
 
-    weighted = (
-        structural_norm * weights.get('structural', 0.30) +
-        smart_money_norm * weights.get('smart_money', 0.25) +
-        dislocation_norm * weights.get('dislocation', 0.30) +
-        external_norm * weights.get('external', 0.15)
-    )
+    # Track which layers have data so we can rescale
+    layers = [
+        (structural_norm, weights.get('structural', 0.30), structural['structural_total'] > 0),
+        (smart_money_norm, weights.get('smart_money', 0.25), smart_money_total > 0),
+        (dislocation_norm, weights.get('dislocation', 0.30), dislocation['dislocation_total'] > 0),
+        (external_norm, weights.get('external', 0.15), external_total > 0),
+    ]
+
+    active_weight = sum(w for _, w, active in layers if active)
+    total_weight = sum(w for _, w, _ in layers)
+
+    weighted = sum(norm * w for norm, w, _ in layers)
+
+    # Rescale: if only 60% of weight has data, scale up proportionally
+    # so a perfect score on active layers still reaches ~100
+    if active_weight > 0:
+        weighted = weighted * (total_weight / active_weight)
 
     # Scale to 0-100
     edge_score = round(min(100.0, weighted * 100.0), 1)
