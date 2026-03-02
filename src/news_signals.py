@@ -9,6 +9,7 @@ Both provide *targeted* signals: we search for the specific market topic rather
 than keyword-matching against a generic news firehose.
 """
 
+import hashlib
 import logging
 import re
 import time
@@ -77,7 +78,9 @@ class NewsSignals:
         if not self.gdelt_enabled or not query:
             return []
 
-        cache_key = f'gdelt_{query.lower().replace(" ", "_")[:60]}'
+        # Use hash suffix to avoid collisions from truncated queries
+        query_hash = hashlib.md5(query.lower().encode()).hexdigest()[:8]
+        cache_key = f'gdelt_{query.lower().replace(" ", "_")[:40]}_{query_hash}'
         cached = self.cache.get(cache_key, self.gdelt_cache_ttl)
         if cached is not None:
             return cached
@@ -281,7 +284,8 @@ class NewsSignals:
         if not self.wiki_enabled or not title:
             return None
 
-        cache_key = f'wiki_pv_{title.lower().replace(" ", "_")[:50]}'
+        title_hash = hashlib.md5(title.lower().encode()).hexdigest()[:8]
+        cache_key = f'wiki_pv_{title.lower().replace(" ", "_")[:40]}_{title_hash}'
         cached = self.cache.get(cache_key, self.wiki_cache_ttl)
         if cached is not None:
             return cached
@@ -334,13 +338,19 @@ class NewsSignals:
             # Spike ratio
             spike_ratio = recent_avg / max(1, baseline_avg)
 
+            # With short history (<7 days), baseline is unreliable — require
+            # a higher spike threshold to avoid false positives
+            effective_threshold = self.wiki_spike_threshold
+            if len(daily_views) < 7:
+                effective_threshold = max(self.wiki_spike_threshold, 5.0)
+
             result = {
                 'title': title,
                 'recent_avg_views': round(recent_avg),
                 'baseline_avg_views': round(baseline_avg),
                 'baseline_max_views': baseline_max,
                 'spike_ratio': round(spike_ratio, 2),
-                'spike_detected': spike_ratio >= self.wiki_spike_threshold,
+                'spike_detected': spike_ratio >= effective_threshold,
                 'data_points': len(daily_views),
             }
 

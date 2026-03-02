@@ -782,7 +782,7 @@ function renderPieChart() {
     ctx.fillRect(legendX, legendY - 5, 12, 12);
     ctx.fillStyle = '#e6edf3';
     ctx.font = '12px sans-serif';
-    ctx.fillText(`${slices[i].label}: £${slices[i].value.toFixed(0)}`, legendX + 18, legendY + 1);
+    ctx.fillText(`${slices[i].label}: $${slices[i].value.toFixed(0)}`, legendX + 18, legendY + 1);
     legendY += 22;
   }
 }
@@ -853,9 +853,9 @@ function renderPnlChart() {
   ctx.font = '11px sans-serif';
   ctx.textAlign = 'right';
   ctx.textBaseline = 'middle';
-  ctx.fillText(`+£${maxAbs.toFixed(0)}`, pad.left - 6, pad.top);
-  ctx.fillText(`£0`, pad.left - 6, zeroY);
-  ctx.fillText(`-£${maxAbs.toFixed(0)}`, pad.left - 6, pad.top + chartH);
+  ctx.fillText(`+$${maxAbs.toFixed(0)}`, pad.left - 6, pad.top);
+  ctx.fillText(`$0`, pad.left - 6, zeroY);
+  ctx.fillText(`-$${maxAbs.toFixed(0)}`, pad.left - 6, pad.top + chartH);
 
   // Bars
   for (let i = 0; i < labels.length; i++) {
@@ -873,7 +873,7 @@ function renderPnlChart() {
       ctx.font = 'bold 10px sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = v >= 0 ? 'bottom' : 'top';
-      ctx.fillText(`${v >= 0 ? '+' : ''}£${v.toFixed(0)}`, x + barW/2, v >= 0 ? y - 2 : y + barH + 2);
+      ctx.fillText(`${v >= 0 ? '+' : ''}$${v.toFixed(0)}`, x + barW/2, v >= 0 ? y - 2 : y + barH + 2);
     }
 
     // X label
@@ -962,7 +962,7 @@ function drawMiniChart(canvasId, history, rgbPrefix) {
 }
 
 // ── Helpers ──
-function money(v) { return v != null ? '£' + Number(v).toFixed(2) : '—'; }
+function money(v) { return v != null ? '$' + Number(v).toFixed(2) : '—'; }
 function cents(v) { return v != null ? (Number(v) * 100).toFixed(1) + '¢' : '—'; }
 function pct(v) { return v != null ? (Number(v) * 100).toFixed(1) + '%' : '—'; }
 function fmt(v) { return v >= 1e6 ? (v/1e6).toFixed(1)+'M' : v >= 1e3 ? (v/1e3).toFixed(1)+'K' : Number(v).toFixed(0); }

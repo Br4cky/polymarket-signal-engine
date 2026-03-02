@@ -51,6 +51,7 @@
     "fund_a": {
       "name": "5x Hunter",
       "band": "5x",
+      "bands": ["5x"],
       "price_range": [0.15, 0.25],
       "capital": 2500
     },

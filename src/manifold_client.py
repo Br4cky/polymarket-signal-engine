@@ -92,7 +92,7 @@ class ManifoldClient:
                     'id': m.get('id', ''),
                     'question': question,
                     'probability': prob,
-                    'keywords': set(keywords),
+                    'keywords': keywords,  # Use list (not set) for JSON cache serialisation
                     'volume': safe_float(m.get('volume', 0)),
                     'url': m.get('url', ''),
                 })
@@ -131,10 +131,12 @@ class ManifoldClient:
         best_overlap = 0.0
 
         for m in self._manifold_markets:
-            manifold_keywords = m.get('keywords', set())
-            # Handle case where keywords were serialized as list (from cache)
-            if isinstance(manifold_keywords, list):
+            manifold_keywords = m.get('keywords', [])
+            # Keywords stored as list for JSON serialisation; convert to set for matching
+            if isinstance(manifold_keywords, (list, tuple)):
                 manifold_keywords = set(manifold_keywords)
+            elif not isinstance(manifold_keywords, set):
+                manifold_keywords = set()
 
             overlap = poly_keywords & manifold_keywords
             overlap_ratio = len(overlap) / max(1, len(poly_keywords))

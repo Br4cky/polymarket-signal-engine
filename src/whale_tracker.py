@@ -17,7 +17,7 @@ Rate limit: ~1,000 calls/hour on the data API (free).
 import logging
 import requests
 from typing import List, Dict, Optional
-from src.utils import CacheManager
+from src.utils import CacheManager, safe_float
 
 logger = logging.getLogger(__name__)
 
@@ -80,8 +80,8 @@ class WhaleTracker:
                     entry = {
                         'address': user.get('proxyWallet', user.get('address', '')),
                         'username': user.get('userName', user.get('username', '')),
-                        'volume': float(user.get('vol', user.get('volume', 0))),
-                        'profit': float(user.get('pnl', user.get('profit', 0))),
+                        'volume': safe_float(user.get('vol', user.get('volume', 0))),
+                        'profit': safe_float(user.get('pnl', user.get('profit', 0))),
                     }
                     if entry['address'] and entry['profit'] > 0:
                         result.append(entry)
@@ -229,11 +229,11 @@ class WhaleTracker:
                         'conditionId': pos.get('conditionId', pos.get('asset', {}).get('conditionId', '')),
                         'market_slug': pos.get('market_slug', pos.get('slug', '')),
                         'title': pos.get('title', ''),
-                        'size': float(pos.get('size', pos.get('currentShares', 0))),
-                        'avgPrice': float(pos.get('avgPrice', pos.get('averagePrice', 0))),
-                        'currentValue': float(pos.get('curVal', pos.get('currentValue', 0))),
-                        'cashPnl': float(pos.get('cashPnl', 0)),
-                        'percentPnl': float(pos.get('percentPnl', 0)),
+                        'size': safe_float(pos.get('size', pos.get('currentShares', 0))),
+                        'avgPrice': safe_float(pos.get('avgPrice', pos.get('averagePrice', 0))),
+                        'currentValue': safe_float(pos.get('curVal', pos.get('currentValue', 0))),
+                        'cashPnl': safe_float(pos.get('cashPnl', 0)),
+                        'percentPnl': safe_float(pos.get('percentPnl', 0)),
                         'outcome': pos.get('outcome', pos.get('outcomeIndex', '')),
                     })
                 except (KeyError, ValueError, TypeError):

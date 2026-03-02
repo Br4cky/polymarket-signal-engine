@@ -376,9 +376,8 @@ class PolymarketClient:
                 except Exception as e:
                     logger.warning(f"Failed to enrich token {token.get('token_id')}: {e}")
 
-        # Set defaults for non-enriched markets
-        for i in range(num_to_enrich, len(markets)):
-            market = markets[i]
+        # Set defaults for ALL markets (including enrichment failures)
+        for market in markets:
             for token in market.get("tokens", []):
                 token.setdefault("bid", 0.0)
                 token.setdefault("ask", 0.0)

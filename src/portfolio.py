@@ -509,12 +509,15 @@ def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: d
 
     closed = []
     for pid, reason in to_close:
-        pos = next((p for p in fund['positions'] if p['position_id'] == pid), None)
-        if pos:
-            exit_price = current_prices.get(pos['token_id'], pos['current_price'])
-            trade = close_position(fund, pid, exit_price, reason)
-            if trade:
-                closed.append(trade)
+        try:
+            pos = next((p for p in fund['positions'] if p['position_id'] == pid), None)
+            if pos:
+                exit_price = current_prices.get(pos['token_id'], pos['current_price'])
+                trade = close_position(fund, pid, exit_price, reason)
+                if trade:
+                    closed.append(trade)
+        except Exception as e:
+            logger.error(f"Failed to close position {pid}: {e}")
 
     return closed
 
@@ -523,14 +526,14 @@ def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: d
 
 def fund_summary(fund: dict) -> dict:
     """Generate a clean summary of a fund for the dashboard."""
-    total_pos_value = sum(p['current_value'] for p in fund.get('positions', []))
-    equity = fund['available_cash'] + total_pos_value
+    total_pos_value = sum(p.get('current_value', 0) for p in fund.get('positions', []))
+    equity = fund.get('available_cash', 0) + total_pos_value
     total_realized = sum(t.get('pnl_usd', 0) for t in fund.get('realized_trades', []))
     total_unrealized = sum(p.get('unrealized_pnl', 0) for p in fund.get('positions', []))
     total_pnl = total_realized + total_unrealized
     total_trades = fund.get('win_count', 0) + fund.get('loss_count', 0)
 
-    capital = fund.get('capital', 250)
+    capital = fund.get('capital', 250) or 250  # Guard against 0/None capital
     win_rate = fund.get('win_count', 0) / total_trades if total_trades > 0 else 0
 
     return {
