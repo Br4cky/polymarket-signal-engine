@@ -336,10 +336,10 @@ def classify_convexity(current_price: float, outcome: str) -> dict:
 
     Returns: {band: str, potential_multiple: float, probability_implied: float}
     """
-    if outcome.upper() in ('YES', 'TRUE', '1'):
-        prob = current_price
-    else:
-        prob = 1.0 - current_price
+    # Price IS the implied probability of THIS outcome winning,
+    # regardless of YES/NO.  A NO token at 0.10 pays 10x if correct,
+    # just like a YES token at 0.10.
+    prob = current_price
 
     if prob < 0.001:
         return {'band': 'invalid', 'potential_multiple': 0, 'probability_implied': 0}

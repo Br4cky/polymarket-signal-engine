@@ -166,8 +166,10 @@ def execute_paper_trade(
     if size < 5.0:
         return fund, None
 
-    entry_price = safe_float(opportunity.get('ask', opportunity['current_price']))
-    entry_price *= (1.0 + slippage)
+    # Paper trade: simulate limit order fill near current price.
+    # Do NOT use the ask price — in thin prediction markets the best ask
+    # can be 0.99 even when current_price is 0.15 (no active sellers).
+    entry_price = opportunity['current_price'] * (1.0 + slippage)
     entry_price = min(entry_price, 0.99)
 
     if entry_price <= 0.001:
