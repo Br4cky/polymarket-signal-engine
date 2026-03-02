@@ -192,6 +192,9 @@ class PolymarketClient:
 
             condition_id = raw.get("conditionId", raw.get("condition_id", ""))
 
+            # Activity signals: comment count and competitive markets
+            comment_count = int(raw.get("commentCount", 0) or 0)
+
             return {
                 "market_id": market_id,
                 "condition_id": condition_id,
@@ -203,7 +206,8 @@ class PolymarketClient:
                 "volume_total": volume_total,
                 "liquidity": liquidity,
                 "resolution_date": resolution_date,
-                "created_at": created_at
+                "created_at": created_at,
+                "comment_count": comment_count,
             }
 
         except Exception as e:

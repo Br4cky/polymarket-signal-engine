@@ -23,6 +23,11 @@
     "whale_threshold_usd": 10000,
     "concentration_alert_pct": 30
   },
+  "manifold": {
+    "enabled": true,
+    "api_base": "https://api.manifold.markets/v0",
+    "cache_ttl": 1800
+  },
   "news": {
     "gdelt_enabled": true,
     "gdelt_max_records": 75,

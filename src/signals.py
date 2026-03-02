@@ -1,10 +1,10 @@
 """
 Signal Computations — All 4 layers of mispricing detection.
 
-Layer 1: Structural (0-30 pts) — combinatorial check + cross-platform divergence
+Layer 1: Structural (0-30 pts) — combinatorial check + cross-platform divergence (Kalshi + Manifold)
 Layer 2: Smart Money (0-25 pts) — whale tracking + leaderboard + concentration
 Layer 3: Price Dislocation (0-30 pts) — velocity, volume, order book, trajectory, time
-Layer 4: External (0-15 pts) — news relevance + Google Trends
+Layer 4: External (0-15 pts) — GDELT news + Wikipedia pageviews + Fear/Greed + comment velocity
 """
 
 import math
@@ -87,23 +87,69 @@ def compute_cross_platform_divergence(
     }
 
 
+def compute_manifold_divergence(
+    poly_price: float,
+    manifold_prob: Optional[float]
+) -> dict:
+    """
+    Compare Polymarket price vs Manifold Markets probability.
+    Manifold is a play-money prediction market with decent calibration.
+    Divergence > 5% = signal (wider threshold than Kalshi since different
+    market type and liquidity profile).
+
+    Args:
+        poly_price: Polymarket YES token price (0-1)
+        manifold_prob: Manifold probability (0-1) or None
+
+    Returns: {score: float (0-10), divergence_pct: float, direction: str}
+    """
+    if manifold_prob is None or manifold_prob <= 0:
+        return {'score': 0, 'divergence_pct': 0, 'direction': 'none'}
+
+    divergence = abs(poly_price - manifold_prob)
+    direction = 'poly_higher' if poly_price > manifold_prob else 'manifold_higher'
+
+    if divergence < 0.05:
+        score = 0.0
+    else:
+        # 5-10% = 1-5pts, 10-20% = 5-8pts, >20% = 8-10pts
+        score = min(10.0, (divergence - 0.05) * 60)
+
+    return {
+        'score': round(score, 2),
+        'divergence_pct': round(divergence * 100, 2),
+        'direction': direction
+    }
+
+
 def compute_structural_score(
     tokens: List[dict],
     poly_price: float,
-    kalshi_price: Optional[float] = None
+    kalshi_price: Optional[float] = None,
+    manifold_prob: Optional[float] = None
 ) -> dict:
     """
     Combined Layer 1 score (0-30 points).
+
+    Sub-signals:
+      - Combinatorial mispricing (0-15): YES+NO != $1.00
+      - Cross-platform Kalshi (0-15): Polymarket vs Kalshi divergence
+      - Cross-platform Manifold (0-10): Polymarket vs Manifold divergence
+
+    Note: total is capped at 30 even though sub-signals sum to 40 max.
+    This means multiple cross-platform divergences compound nicely.
     """
     combinatorial = compute_combinatorial_mispricing(tokens)
     cross_platform = compute_cross_platform_divergence(poly_price, kalshi_price)
+    manifold = compute_manifold_divergence(poly_price, manifold_prob)
 
-    total = combinatorial['score'] + cross_platform['score']
+    total = combinatorial['score'] + cross_platform['score'] + manifold['score']
 
     return {
         'structural_total': round(min(30.0, total), 2),
         'combinatorial': combinatorial,
-        'cross_platform': cross_platform
+        'cross_platform': cross_platform,
+        'manifold': manifold
     }
 
 

@@ -420,20 +420,188 @@ class NewsSignals:
         }
 
     # ─────────────────────────────────────────────────────────────────────
+    #  Crypto Fear & Greed Index (replaces nothing — new macro signal)
+    # ─────────────────────────────────────────────────────────────────────
+
+    def fetch_fear_greed(self) -> Optional[dict]:
+        """
+        Fetch the Crypto Fear & Greed Index from alternative.me.
+
+        Completely free, no API key, no documented rate limit.
+        One call per day is sufficient (index updates daily).
+
+        Returns: {value: int (0-100), classification: str, timestamp: str}
+        """
+        cache_key = 'fear_greed_index'
+        cached = self.cache.get(cache_key, 7200)  # 2 hour cache (index is daily)
+        if cached is not None:
+            return cached
+
+        try:
+            url = 'https://api.alternative.me/fng/?limit=1&format=json'
+            resp = self.session.get(url, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
+
+            entries = data.get('data', [])
+            if not entries:
+                return None
+
+            entry = entries[0]
+            result = {
+                'value': int(entry.get('value', 50)),
+                'classification': entry.get('value_classification', 'Neutral'),
+                'timestamp': entry.get('timestamp', ''),
+            }
+
+            self.cache.set(cache_key, result)
+            logger.info(f"Fear & Greed: {result['value']} ({result['classification']})")
+            return result
+
+        except Exception as e:
+            logger.warning(f"Fear & Greed fetch failed: {e}")
+            return None
+
+    def score_fear_greed(self, market_category: str) -> dict:
+        """
+        Score macro sentiment from Fear & Greed for a market.
+
+        Extreme fear (0-25) on crypto markets = contrarian buy signal.
+        Extreme greed (75-100) on crypto markets = caution signal.
+
+        Only applies to crypto-adjacent markets. Non-crypto markets
+        get a small sentiment context but not a strong signal.
+
+        Returns: {
+            sentiment_score: float (0-3),
+            fear_greed_value: int,
+            classification: str,
+            is_extreme: bool
+        }
+        """
+        fg = self.fetch_fear_greed()
+        if fg is None:
+            return {'sentiment_score': 0, 'fear_greed_value': 50,
+                    'classification': 'Neutral', 'is_extreme': False}
+
+        value = fg['value']
+        is_crypto = market_category.lower() in ('crypto', 'cryptocurrency', 'defi', 'nft')
+
+        score = 0.0
+        is_extreme = False
+
+        if value <= 20:
+            # Extreme Fear — strong contrarian buy for crypto markets
+            score = 3.0 if is_crypto else 1.0
+            is_extreme = True
+        elif value <= 35:
+            # Fear — mild contrarian signal
+            score = 1.5 if is_crypto else 0.5
+        elif value >= 80:
+            # Extreme Greed — reduces confidence (markets may be overpriced)
+            # We don't subtract, just don't add. The absence of fear signal
+            # is itself useful information.
+            score = 0.0
+            is_extreme = True
+        elif value >= 65:
+            # Greed — neutral
+            score = 0.0
+
+        return {
+            'sentiment_score': round(score, 2),
+            'fear_greed_value': value,
+            'classification': fg['classification'],
+            'is_extreme': is_extreme,
+        }
+
+    # ─────────────────────────────────────────────────────────────────────
+    #  Polymarket Comment Velocity (new — activity-based catalyst detection)
+    # ─────────────────────────────────────────────────────────────────────
+
+    def score_comment_velocity(self, comment_count: int, volume_24h: float,
+                                volume_total: float) -> dict:
+        """
+        Score market activity signals from comment count and volume patterns.
+
+        High comment counts relative to volume suggest retail attention/catalyst.
+        We can't track velocity (change over time) without historical comment counts,
+        but absolute count + volume ratio gives a useful proxy.
+
+        Args:
+            comment_count: Current comment count from Gamma API
+            volume_24h: 24h trading volume
+            volume_total: Total lifetime volume
+
+        Returns: {
+            activity_score: float (0-4),
+            comment_count: int,
+            engagement_ratio: float
+        }
+        """
+        if comment_count <= 0:
+            return {'activity_score': 0, 'comment_count': 0, 'engagement_ratio': 0}
+
+        score = 0.0
+
+        # Raw comment count signal: more comments = more attention
+        if comment_count >= 100:
+            score += 2.0
+        elif comment_count >= 50:
+            score += 1.5
+        elif comment_count >= 20:
+            score += 1.0
+        elif comment_count >= 5:
+            score += 0.5
+
+        # Engagement ratio: comments relative to volume
+        # High comments + low volume = retail attention not yet reflected in price
+        if volume_total > 0:
+            # Normalise: comments per $10k of volume
+            engagement = (comment_count / (volume_total / 10000)) if volume_total > 100 else 0
+            if engagement > 5.0:
+                score += 2.0  # Very high engagement per dollar traded
+            elif engagement > 2.0:
+                score += 1.0
+            elif engagement > 0.5:
+                score += 0.5
+        else:
+            engagement = 0
+
+        return {
+            'activity_score': round(min(4.0, score), 2),
+            'comment_count': comment_count,
+            'engagement_ratio': round(engagement, 2) if volume_total > 0 else 0,
+        }
+
+    # ─────────────────────────────────────────────────────────────────────
     #  Combined External Score
     # ─────────────────────────────────────────────────────────────────────
 
-    def compute_external_score(self, market_question: str, articles: List[dict] = None) -> dict:
+    def compute_external_score(self, market_question: str,
+                                market_category: str = '',
+                                comment_count: int = 0,
+                                volume_24h: float = 0,
+                                volume_total: float = 0,
+                                articles: List[dict] = None) -> dict:
         """
         Compute combined external confirmation score for a market.
 
         Sub-signals:
           - GDELT news relevance (0-8): targeted search for market topic
           - Wikipedia pageview spikes (0-7): trend/attention detection
+          - Crypto Fear & Greed (0-3): macro sentiment (strongest for crypto)
+          - Comment velocity (0-4): Polymarket community attention
+
+        Max raw sum: 22. Capped at 15 to maintain layer weight balance.
+        This means a market needs 2-3 sub-signals firing to max out,
+        which is exactly the behaviour we want — one noisy signal alone
+        isn't enough to dominate the score.
 
         Returns: {
             news_score: float (0-8),
             trends_score: float (0-7),
+            sentiment_score: float (0-3),
+            activity_score: float (0-4),
             external_total: float (0-15),
             details: dict
         }
@@ -444,11 +612,26 @@ class NewsSignals:
         # Trend scoring via Wikipedia pageviews
         trends_result = self.score_wiki_trends(market_question)
 
-        total = news_result['news_score'] + trends_result['trends_score']
+        # Macro sentiment via Fear & Greed
+        sentiment_result = self.score_fear_greed(market_category)
+
+        # Community activity via comment velocity
+        activity_result = self.score_comment_velocity(
+            comment_count, volume_24h, volume_total
+        )
+
+        total = (
+            news_result['news_score'] +
+            trends_result['trends_score'] +
+            sentiment_result['sentiment_score'] +
+            activity_result['activity_score']
+        )
 
         return {
             'news_score': news_result['news_score'],
             'trends_score': trends_result['trends_score'],
+            'sentiment_score': sentiment_result['sentiment_score'],
+            'activity_score': activity_result['activity_score'],
             'external_total': round(min(15.0, total), 2),
             'details': {
                 'matching_articles': news_result.get('matching_articles', 0),
@@ -459,5 +642,9 @@ class NewsSignals:
                 'spike_detected': trends_result.get('spike_detected', False),
                 'best_spike_ratio': trends_result.get('best_spike_ratio', 0),
                 'entities_checked': trends_result.get('entities_checked', 0),
+                'fear_greed_value': sentiment_result.get('fear_greed_value', 50),
+                'fear_greed_class': sentiment_result.get('classification', 'Neutral'),
+                'comment_count': activity_result.get('comment_count', 0),
+                'engagement_ratio': activity_result.get('engagement_ratio', 0),
             }
         }

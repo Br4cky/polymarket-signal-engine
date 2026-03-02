@@ -28,6 +28,7 @@ from src.scraper import PolymarketClient
 from src.kalshi_scraper import KalshiClient
 from src.whale_tracker import WhaleTracker
 from src.news_signals import NewsSignals
+from src.manifold_client import ManifoldClient
 from src.scorer import compute_edge_score, rank_opportunities
 from src.portfolio import (
     load_portfolio, save_portfolio, create_portfolio,
@@ -93,6 +94,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     )
     whale_tracker = WhaleTracker(whale_config, cache)
     news_signals = NewsSignals(config.get('news', {}), cache)
+    manifold_client = ManifoldClient(config.get('manifold', {}), cache)
 
     portfolio_path = os.path.join(data_dir, 'portfolio_state.json')
     portfolio = load_portfolio(portfolio_path, config)
@@ -114,10 +116,15 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         kalshi_events = kalshi_client.fetch_events()
         logger.info(f"Got {len(kalshi_events)} Kalshi events")
 
-    # ── Step 3: External signals (GDELT + Wikipedia) ──
-    # GDELT searches are per-market-topic (done inside compute_external_score),
-    # so no bulk pre-fetch needed. Results are cached per query for 15 min.
-    logger.info("Step 3: External signals enabled (GDELT news + Wikipedia pageviews)")
+    # ── Step 3: External signals (GDELT + Wikipedia + Fear/Greed + comments) ──
+    # GDELT and Wikipedia searches are per-market-topic (done inside compute_external_score).
+    # Fear & Greed is fetched once and cached. Comments come from market data.
+    logger.info("Step 3: External signals enabled (GDELT + Wikipedia + Fear/Greed + comments)")
+
+    # ── Step 3a: Build Manifold cross-reference index ──
+    logger.info("Step 3a: Building Manifold Markets cross-reference index...")
+    manifold_client.build_manifold_index()
+    logger.info(f"Manifold index: {len(manifold_client._manifold_markets)} binary markets")
 
     # ── Step 3b: Build whale index (one batch of API calls) ──
     logger.info("Step 3b: Building whale position index...")
@@ -175,12 +182,26 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 token.get('token_id', '')
             )
 
-            # Layer 4: external signals (GDELT news + Wikipedia pageviews)
-            # Deduplicate: same market question = same external score
+            # Layer 1 extension: Manifold cross-reference
+            # Deduplicate per market question (same as external cache)
             mkt_question = market.get('question', '')
             if mkt_question not in _external_cache:
-                _external_cache[mkt_question] = news_signals.compute_external_score(mkt_question)
+                # Manifold probability lookup
+                _manifold_cache = _external_cache.get('__manifold__', {})
+                if mkt_question not in _manifold_cache:
+                    _manifold_cache[mkt_question] = manifold_client.find_matching_probability(mkt_question)
+                    _external_cache['__manifold__'] = _manifold_cache
+
+                # External signals (GDELT + Wikipedia + Fear/Greed + comments)
+                _external_cache[mkt_question] = news_signals.compute_external_score(
+                    market_question=mkt_question,
+                    market_category=market.get('category', ''),
+                    comment_count=market.get('comment_count', 0),
+                    volume_24h=safe_float(market.get('volume_24h', 0)),
+                    volume_total=safe_float(market.get('volume_total', 0)),
+                )
             external = _external_cache[mkt_question]
+            manifold_prob = _external_cache.get('__manifold__', {}).get(mkt_question)
 
             # Combined edge score
             scores = compute_edge_score(
@@ -190,7 +211,8 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 kalshi_price=kalshi_price,
                 smart_money=smart_money,
                 external=external,
-                config=config
+                config=config,
+                manifold_prob=manifold_prob,
             )
 
             scored_items.append({

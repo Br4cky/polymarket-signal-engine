@@ -24,7 +24,8 @@ def compute_edge_score(
     kalshi_price: Optional[float],
     smart_money: dict,
     external: dict,
-    config: dict
+    config: dict,
+    manifold_prob: Optional[float] = None
 ) -> dict:
     """
     Compute the composite edge score for a market token across all 4 layers.
@@ -37,6 +38,7 @@ def compute_edge_score(
         smart_money: output from WhaleTracker.compute_smart_money_score()
         external: output from NewsSignals.compute_external_score()
         config: scoring section of config.json
+        manifold_prob: matched Manifold Markets probability or None
 
     Returns: dict with layer scores, composite edge score (0-100), and classification
     """
@@ -60,7 +62,8 @@ def compute_edge_score(
     structural = compute_structural_score(
         tokens=market.get('tokens', []),
         poly_price=current_price,
-        kalshi_price=kalshi_price
+        kalshi_price=kalshi_price,
+        manifold_prob=manifold_prob
     )
 
     # ── Layer 2: Smart Money (0-25) ──
