@@ -62,11 +62,17 @@ def create_portfolio(config: dict) -> dict:
 
 
 def load_portfolio(filepath: str, config: dict) -> dict:
-    """Load portfolio from file or create new."""
+    """Load portfolio from file or create new. Validates structure."""
     if os.path.exists(filepath):
         try:
             with open(filepath, 'r') as f:
-                return json.load(f)
+                data = json.load(f)
+            # Validate it has the expected structure
+            if ('fund_a' in data and 'fund_b' in data
+                    and 'available_cash' in data.get('fund_a', {})):
+                return data
+            else:
+                logger.warning("Portfolio file has invalid structure, creating new")
         except (json.JSONDecodeError, IOError):
             logger.warning("Failed to load portfolio, creating new")
     return create_portfolio(config)
@@ -341,22 +347,24 @@ def fund_summary(fund: dict) -> dict:
     total_pnl = total_realized + total_unrealized
     total_trades = fund.get('win_count', 0) + fund.get('loss_count', 0)
 
+    capital = fund.get('capital', 250)
+    win_rate = fund.get('win_count', 0) / total_trades if total_trades > 0 else 0
+
     return {
         'name': fund.get('name', ''),
         'band': fund.get('band', ''),
-        'capital': fund.get('capital', 250),
-        'available_cash': round(fund.get('available_cash', 0), 2),
-        'total_position_value': round(total_pos_value, 2),
+        'capital': capital,
+        'cash': round(fund.get('available_cash', 0), 2),
         'equity': round(equity, 2),
+        'pnl': round(total_pnl, 2),
         'total_pnl': round(total_pnl, 2),
-        'total_pnl_pct': round((total_pnl / fund.get('capital', 250)) * 100, 2) if fund.get('capital', 0) > 0 else 0,
+        'win_rate': round(win_rate, 3),
         'win_count': fund.get('win_count', 0),
         'loss_count': fund.get('loss_count', 0),
-        'win_rate': round(fund['win_count'] / total_trades * 100, 1) if total_trades > 0 else 0,
+        'open_positions': len(fund.get('positions', [])),
+        'closed_trades': total_trades,
         'max_drawdown': fund.get('max_drawdown', 0),
         'peak_equity': fund.get('peak_equity', 250),
-        'position_count': len(fund.get('positions', [])),
-        'total_trades': total_trades,
         'equity_history': fund.get('equity_history', [])[-100:]
     }
 
@@ -367,14 +375,18 @@ def portfolio_summary(portfolio: dict) -> dict:
     fund_b = fund_summary(portfolio.get('fund_b', {}))
 
     combined_equity = fund_a['equity'] + fund_b['equity']
-    combined_pnl = fund_a['total_pnl'] + fund_b['total_pnl']
+    combined_pnl = fund_a['pnl'] + fund_b['pnl']
     total_capital = fund_a['capital'] + fund_b['capital']
+    total_wins = fund_a['win_count'] + fund_b['win_count']
+    total_trades = fund_a['closed_trades'] + fund_b['closed_trades']
 
     return {
         'total_capital': total_capital,
         'combined_equity': round(combined_equity, 2),
         'combined_pnl': round(combined_pnl, 2),
         'combined_pnl_pct': round((combined_pnl / total_capital) * 100, 2) if total_capital > 0 else 0,
+        'combined_win_rate': round(total_wins / total_trades, 3) if total_trades > 0 else 0,
+        'combined_total_trades': total_trades,
         'fund_a': fund_a,
         'fund_b': fund_b
     }
