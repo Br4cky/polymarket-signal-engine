@@ -193,10 +193,22 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 'scores': scores
             })
 
-    logger.info(
-        f"Scored {len(scored_items)} tokens "
-        f"({markets_with_history} with price history)"
-    )
+    # Log score distribution for debugging
+    if scored_items:
+        all_edges = [s['scores']['edge_score'] for s in scored_items if 'edge_score' in s.get('scores', {})]
+        if all_edges:
+            all_edges.sort(reverse=True)
+            logger.info(
+                f"Scored {len(scored_items)} tokens "
+                f"({markets_with_history} with price history) — "
+                f"Edge scores: top5={all_edges[:5]}, "
+                f"min={min(all_edges):.1f}, max={max(all_edges):.1f}, "
+                f"median={all_edges[len(all_edges)//2]:.1f}"
+            )
+        else:
+            logger.info(f"Scored {len(scored_items)} tokens but no edge scores computed")
+    else:
+        logger.info("No tokens scored")
 
     # ── Step 5: Rank opportunities ──
     opportunities = rank_opportunities(scored_items, config)
