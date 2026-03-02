@@ -41,9 +41,19 @@ def compute_edge_score(
     Returns: dict with layer scores, composite edge score (0-100), and classification
     """
     current_price = safe_float(token.get('current_price', 0))
+
+    # Layer weights rationale:
+    #   Dislocation (45%): Hardest data — price velocity, volume anomalies,
+    #     order book depth, trajectory, time decay. Most reliable & data-rich.
+    #   Structural (20%): Mathematically sound (arb checks, cross-platform
+    #     divergence) but narrow — only fires on specific conditions.
+    #   Smart Money (20%): Directional confirmation from quality traders.
+    #     Valuable as conviction signal but should confirm, not drive.
+    #   External (15%): News/trends keyword matching. Fuzziest signal,
+    #     useful for spotting catalysts but lowest confidence.
     weights = config.get('scoring', {}).get('layer_weights', {
-        'structural': 0.30, 'smart_money': 0.25,
-        'dislocation': 0.30, 'external': 0.15
+        'structural': 0.20, 'smart_money': 0.20,
+        'dislocation': 0.45, 'external': 0.15
     })
 
     # ── Layer 1: Structural (0-30) ──

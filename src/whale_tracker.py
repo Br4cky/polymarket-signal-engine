@@ -1,10 +1,14 @@
 """
 Whale Tracker — Smart money detection via Polymarket's free REST APIs.
 
+Strategy: Pull leaderboard across multiple time windows (ALL, MONTH, WEEK)
+and only trust traders who are consistently profitable — not just one-hit
+wonders from a lucky bet. A trader appearing on multiple period leaderboards
+gets a higher "quality" score.
+
 Uses:
-  - data-api.polymarket.com/leaderboard  → top traders by profit/volume
+  - data-api.polymarket.com/leaderboard  → top traders by PnL across periods
   - data-api.polymarket.com/positions    → each trader's open positions
-  - data-api.polymarket.com/activity     → recent trade activity
 
 No paid APIs, no subgraph, no API keys required.
 Rate limit: ~1,000 calls/hour on the data API (free).
@@ -36,22 +40,20 @@ class WhaleTracker:
             'Accept': 'application/json'
         })
 
-        # Pre-built whale position index: {condition_id: [wallet_addresses]}
+        # Pre-built whale position index: {condition_id: [whale entries]}
         self._whale_market_index: Dict[str, List[dict]] = {}
         self._index_built = False
+        # Quality-filtered trader list
+        self._quality_traders: List[dict] = []
 
-    # ── Leaderboard ──────────────────────────────────────────────────────────
+    # ── Multi-Period Leaderboard ─────────────────────────────────────────────
 
-    def fetch_leaderboard(self, limit: int = None) -> List[dict]:
-        """
-        Fetch top traders from Polymarket leaderboard.
-        Cached for 1 hour. Returns list of {address, username, volume, profit}.
-        """
+    def _fetch_leaderboard_period(self, time_period: str, limit: int = 50) -> List[dict]:
+        """Fetch leaderboard for a single time period. Cached per period."""
         if self._leaderboard_failed:
             return []
 
-        limit = limit or self.top_n_traders
-        cache_key = f'pm_leaderboard_{limit}'
+        cache_key = f'pm_lb_{time_period}_{limit}'
         cached = self.cache.get(cache_key, self.cache_ttl_leaderboard)
         if cached is not None:
             return cached
@@ -60,9 +62,10 @@ class WhaleTracker:
             resp = self.session.get(
                 f"{self.data_api}/leaderboard",
                 params={
-                    'limit': min(limit, 100),
+                    'limit': min(limit, 50),
                     'orderBy': 'PNL',
-                    'timePeriod': 'ALL'
+                    'timePeriod': time_period,
+                    'category': 'OVERALL'
                 },
                 timeout=15
             )
@@ -70,7 +73,7 @@ class WhaleTracker:
             data = resp.json()
 
             users = data if isinstance(data, list) else data.get('leaderboard', data.get('users', []))
-            leaderboard = []
+            result = []
 
             for user in users:
                 try:
@@ -80,26 +83,119 @@ class WhaleTracker:
                         'volume': float(user.get('vol', user.get('volume', 0))),
                         'profit': float(user.get('pnl', user.get('profit', 0))),
                     }
-                    if entry['address']:
-                        leaderboard.append(entry)
+                    if entry['address'] and entry['profit'] > 0:
+                        result.append(entry)
                 except (KeyError, ValueError, TypeError):
                     continue
 
-            self.cache.set(cache_key, leaderboard)
-            logger.info(f"Fetched {len(leaderboard)} traders from leaderboard")
-            return leaderboard
+            self.cache.set(cache_key, result)
+            return result
 
         except Exception as e:
-            logger.warning(f"Leaderboard API failed ({e}), disabling for this run")
+            logger.warning(f"Leaderboard API failed for {time_period}: {e}")
             self._leaderboard_failed = True
             return []
+
+    def fetch_quality_traders(self) -> List[dict]:
+        """
+        Fetch traders who are CONSISTENTLY profitable across multiple time windows.
+
+        Scoring:
+          - On ALL-TIME top 50 by PnL:  +1 point
+          - On MONTHLY  top 50 by PnL:  +2 points (recent consistency matters more)
+          - On WEEKLY   top 50 by PnL:  +1 point  (very recent form)
+
+        Only traders with quality_score >= 2 are kept (must appear on at least
+        2 leaderboards, or be on the monthly which counts double).
+
+        This filters out:
+          - All-time winners who are currently losing (score=1, filtered out)
+          - Weekly flukes who got lucky on one bet (score=1, filtered out)
+          - Consistent performers (score 2-4, kept and ranked)
+        """
+        if self._quality_traders:
+            return self._quality_traders
+
+        cache_key = 'quality_traders'
+        cached = self.cache.get(cache_key, self.cache_ttl_leaderboard)
+        if cached is not None:
+            self._quality_traders = cached
+            return cached
+
+        # Pull all three time windows (3 API calls, each cached 1 hour)
+        lb_all = self._fetch_leaderboard_period('ALL', 50)
+        lb_month = self._fetch_leaderboard_period('MONTH', 50)
+        lb_week = self._fetch_leaderboard_period('WEEK', 50)
+
+        # Build address → trader info + quality score
+        trader_map: Dict[str, dict] = {}
+
+        for trader in lb_all:
+            addr = trader['address'].lower()
+            trader_map[addr] = {
+                **trader,
+                'quality_score': 1,
+                'periods': ['ALL'],
+                'all_time_profit': trader['profit'],
+                'monthly_profit': 0,
+                'weekly_profit': 0,
+            }
+
+        for trader in lb_month:
+            addr = trader['address'].lower()
+            if addr in trader_map:
+                trader_map[addr]['quality_score'] += 2
+                trader_map[addr]['periods'].append('MONTH')
+                trader_map[addr]['monthly_profit'] = trader['profit']
+            else:
+                trader_map[addr] = {
+                    **trader,
+                    'quality_score': 2,
+                    'periods': ['MONTH'],
+                    'all_time_profit': 0,
+                    'monthly_profit': trader['profit'],
+                    'weekly_profit': 0,
+                }
+
+        for trader in lb_week:
+            addr = trader['address'].lower()
+            if addr in trader_map:
+                trader_map[addr]['quality_score'] += 1
+                trader_map[addr]['periods'].append('WEEK')
+                trader_map[addr]['weekly_profit'] = trader['profit']
+            else:
+                trader_map[addr] = {
+                    **trader,
+                    'quality_score': 1,
+                    'periods': ['WEEK'],
+                    'all_time_profit': 0,
+                    'monthly_profit': 0,
+                    'weekly_profit': trader['profit'],
+                }
+
+        # Filter: quality_score >= 2 (must be on 2+ leaderboards or monthly)
+        quality = [t for t in trader_map.values() if t['quality_score'] >= 2]
+        quality.sort(key=lambda t: t['quality_score'], reverse=True)
+
+        self._quality_traders = quality
+        self.cache.set(cache_key, quality)
+
+        logger.info(
+            f"Quality trader filter: {len(lb_all)} all-time + {len(lb_month)} monthly + "
+            f"{len(lb_week)} weekly → {len(quality)} quality traders "
+            f"(score distribution: "
+            f"4={sum(1 for t in quality if t['quality_score']==4)}, "
+            f"3={sum(1 for t in quality if t['quality_score']==3)}, "
+            f"2={sum(1 for t in quality if t['quality_score']==2)})"
+        )
+
+        return quality
 
     # ── Trader Positions ─────────────────────────────────────────────────────
 
     def fetch_trader_positions(self, wallet_address: str) -> List[dict]:
         """
         Fetch all open positions for a specific trader wallet.
-        Returns list of {conditionId, market_slug, size, avgPrice, currentValue, pnl}.
         Cached for 30 min per wallet.
         """
         if self._positions_failed:
@@ -117,7 +213,7 @@ class WhaleTracker:
                     'user': wallet_address,
                     'sortBy': 'CURRENT',
                     'sortDirection': 'DESC',
-                    'sizeThreshold': 1  # Min 1 share
+                    'sizeThreshold': 1
                 },
                 timeout=15
             )
@@ -161,16 +257,16 @@ class WhaleTracker:
 
     def build_whale_index(self) -> None:
         """
-        Build an index of which markets the top traders are positioned in.
-        Called once per engine run. Maps condition_id → list of whale entries.
+        Build an index of which markets quality traders are positioned in.
+        Called once per engine run.
 
-        This is the key optimisation: instead of querying per-market,
-        we query per-trader (50 calls) and build a reverse index.
+        Uses quality-filtered traders only (consistent performers).
+        Maps condition_id → list of whale entries with quality metadata.
         """
         if self._index_built:
             return
 
-        cache_key = 'whale_market_index'
+        cache_key = 'whale_market_index_v2'
         cached = self.cache.get(cache_key, self.cache_ttl_positions)
         if cached is not None:
             self._whale_market_index = cached
@@ -178,8 +274,8 @@ class WhaleTracker:
             logger.info(f"Loaded whale index from cache ({len(cached)} markets)")
             return
 
-        leaderboard = self.fetch_leaderboard()
-        if not leaderboard:
+        traders = self.fetch_quality_traders()
+        if not traders:
             self._index_built = True
             return
 
@@ -187,7 +283,7 @@ class WhaleTracker:
         traders_fetched = 0
         total_positions = 0
 
-        for trader in leaderboard:
+        for trader in traders:
             address = trader.get('address', '')
             if not address:
                 continue
@@ -206,14 +302,15 @@ class WhaleTracker:
                 index[cid].append({
                     'address': address,
                     'username': trader.get('username', ''),
-                    'profit': trader.get('profit', 0),
+                    'quality_score': trader.get('quality_score', 0),
+                    'all_time_profit': trader.get('all_time_profit', 0),
+                    'monthly_profit': trader.get('monthly_profit', 0),
                     'size': pos.get('size', 0),
                     'currentValue': pos.get('currentValue', 0),
                     'outcome': pos.get('outcome', ''),
                 })
                 total_positions += 1
 
-            # Stop early if rate limited
             if self._positions_failed:
                 logger.warning(f"Rate limited after {traders_fetched} traders, using partial index")
                 break
@@ -222,7 +319,7 @@ class WhaleTracker:
         self._index_built = True
         self.cache.set(cache_key, index)
         logger.info(
-            f"Built whale index: {traders_fetched} traders → "
+            f"Built whale index: {traders_fetched} quality traders → "
             f"{total_positions} positions across {len(index)} markets"
         )
 
@@ -230,29 +327,30 @@ class WhaleTracker:
 
     def compute_smart_money_score(self, market_id: str, token_id: str) -> dict:
         """
-        Compute smart money score based on whale presence in a market.
+        Compute smart money score based on quality whale presence in a market.
 
-        Uses the pre-built whale index (condition_id → whale positions).
+        Sub-scores:
+          whale_accumulation (0-10):
+            How many quality traders are in this market, weighted by their
+            quality_score. A score-4 trader (all three leaderboards) counts
+            more than a score-2 trader (just monthly).
 
-        Returns:
-            whale_accumulation (0-10): How many top traders are in this market
-            leaderboard_alignment (0-8): Are the most profitable traders here
-            position_concentration (0-7): How concentrated is whale capital
-            smart_money_total (0-25): Combined score
+          leaderboard_alignment (0-8):
+            Are the highest-quality traders (score 3+) here?
+            Measures conviction from the best performers.
+
+          position_concentration (0-7):
+            How much capital do whales have concentrated here?
+            Bonus for large absolute capital (>$10k, >$50k).
+
+        Returns dict with sub-scores and smart_money_total (0-25).
         """
         try:
-            # Ensure index is built (no-op if already done)
             self.build_whale_index()
 
-            whale_accumulation = 0.0
-            leaderboard_alignment = 0.0
-            position_concentration = 0.0
+            whales = self._whale_market_index.get(market_id, [])
 
-            # Look up this market in the whale index
-            # Try both market_id and condition_id patterns
-            whales_in_market = self._whale_market_index.get(market_id, [])
-
-            if not whales_in_market:
+            if not whales:
                 return {
                     'whale_accumulation': 0.0,
                     'leaderboard_alignment': 0.0,
@@ -261,41 +359,45 @@ class WhaleTracker:
                 }
 
             # ── Whale Accumulation (0-10) ──
-            # How many top traders are positioned in this market
-            unique_whales = len(set(w['address'] for w in whales_in_market))
-            max_possible = min(self.top_n_traders, 50)
-            whale_accumulation = min(10.0, (unique_whales / max(1, max_possible)) * 30)
-            # Scale: 1 whale ≈ 0.6pts, 5 whales ≈ 3pts, 15 whales ≈ 9pts
+            # Weight by quality: score-4 trader = 4 points, score-2 = 2 points
+            # Normalise against max possible (if all 50 traders had score 4 = 200)
+            unique_whales = {}
+            for w in whales:
+                addr = w['address'].lower()
+                if addr not in unique_whales or w['quality_score'] > unique_whales[addr]:
+                    unique_whales[addr] = w['quality_score']
+
+            weighted_count = sum(unique_whales.values())
+            # Scale: realistically, 3-5 quality traders in one market is strong
+            # 1 whale (q=3) → 1.5pts, 3 whales (avg q=3) → 4.5pts, 8 whales → 10pts
+            whale_accumulation = min(10.0, weighted_count * 0.5)
 
             # ── Leaderboard Alignment (0-8) ──
-            # Are the most profitable traders (top 20 by PnL) in this market?
-            leaderboard = self.fetch_leaderboard()
-            if leaderboard:
-                top_20_addresses = set(
-                    t['address'].lower() for t in leaderboard[:20] if t.get('address')
-                )
-                whale_addresses = set(w['address'].lower() for w in whales_in_market)
-                alignment_count = len(whale_addresses & top_20_addresses)
-                leaderboard_alignment = min(8.0, alignment_count * 2.0)
-                # Scale: 1 top-20 trader = 2pts, 4 top-20 traders = 8pts (max)
+            # Only count high-quality traders (score >= 3 = on 2+ leaderboards
+            # with at least one being monthly or ALL+WEEK)
+            elite_count = sum(1 for q in unique_whales.values() if q >= 3)
+            # 1 elite = 2pts, 2 elites = 4pts, 4+ elites = 8pts
+            leaderboard_alignment = min(8.0, elite_count * 2.0)
 
             # ── Position Concentration (0-7) ──
-            # How much capital do whales have concentrated here?
-            total_whale_value = sum(w.get('currentValue', 0) for w in whales_in_market)
-            if total_whale_value > 0 and len(whales_in_market) >= 2:
-                # Sort by value, check if top holders dominate
-                sorted_whales = sorted(whales_in_market, key=lambda w: w.get('currentValue', 0), reverse=True)
+            total_whale_value = sum(w.get('currentValue', 0) for w in whales)
+            position_concentration = 0.0
+
+            if total_whale_value > 0 and len(whales) >= 2:
+                sorted_whales = sorted(whales, key=lambda w: w.get('currentValue', 0), reverse=True)
                 top_3_value = sum(w.get('currentValue', 0) for w in sorted_whales[:3])
-                concentration_pct = (top_3_value / total_whale_value) * 100 if total_whale_value > 0 else 0
+                conc_pct = (top_3_value / total_whale_value) * 100
 
-                if concentration_pct > 50:
-                    position_concentration = min(7.0, (concentration_pct - 50) / 7.0)
+                if conc_pct > 50:
+                    position_concentration = min(4.0, (conc_pct - 50) / 12.5)
 
-                # Bonus for sheer capital size (>$50k total whale capital = extra points)
-                if total_whale_value > 50000:
-                    position_concentration = min(7.0, position_concentration + 2.0)
-                elif total_whale_value > 10000:
-                    position_concentration = min(7.0, position_concentration + 1.0)
+            # Capital size bonus (whales putting serious money here)
+            if total_whale_value > 100000:
+                position_concentration = min(7.0, position_concentration + 3.0)
+            elif total_whale_value > 50000:
+                position_concentration = min(7.0, position_concentration + 2.0)
+            elif total_whale_value > 10000:
+                position_concentration = min(7.0, position_concentration + 1.0)
 
             smart_money_total = whale_accumulation + leaderboard_alignment + position_concentration
 
@@ -303,7 +405,10 @@ class WhaleTracker:
                 'whale_accumulation': round(whale_accumulation, 2),
                 'leaderboard_alignment': round(leaderboard_alignment, 2),
                 'position_concentration': round(position_concentration, 2),
-                'smart_money_total': round(min(25.0, smart_money_total), 2)
+                'smart_money_total': round(min(25.0, smart_money_total), 2),
+                'whale_count': len(unique_whales),
+                'elite_count': elite_count,
+                'total_whale_value': round(total_whale_value, 2),
             }
 
         except Exception as e:

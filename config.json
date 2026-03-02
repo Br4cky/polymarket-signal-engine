@@ -31,9 +31,9 @@
   },
   "scoring": {
     "layer_weights": {
-      "structural": 0.30,
-      "smart_money": 0.25,
-      "dislocation": 0.30,
+      "structural": 0.20,
+      "smart_money": 0.20,
+      "dislocation": 0.45,
       "external": 0.15
     },
     "edge_threshold": 15,
