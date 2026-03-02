@@ -204,7 +204,10 @@ def execute_paper_trade(
         'unrealized_pnl': 0.0,
         'unrealized_pnl_pct': 0.0,
         'edge_score_at_entry': opportunity['edge_score'],
-        'layer_scores_at_entry': opportunity.get('layer_scores', {})
+        'layer_scores_at_entry': opportunity.get('layer_scores', {}),
+        'days_to_close': opportunity.get('days_to_close', 0),
+        'potential_multiple': opportunity.get('potential_multiple', 0),
+        'slug': opportunity.get('slug', '')
     }
 
     fund['available_cash'] -= size

@@ -224,12 +224,15 @@
       <tr>
         <th>Market</th>
         <th>Side</th>
-        <th>Qty</th>
+        <th>Shares</th>
         <th>Entry</th>
         <th>Current</th>
         <th>P&L</th>
+        <th>If Wins</th>
+        <th>If Loses</th>
         <th>Fund</th>
         <th>Opened</th>
+        <th>Closes In</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -411,17 +414,30 @@ function renderPositions() {
 
   for (const p of all) {
     const pnl = (p.unrealized_pnl || 0);
+    const pnlPct = (p.unrealized_pnl_pct || 0);
+    const shares = p.shares || 0;
+    const entryUsd = p.entry_usd || 0;
+    const ifWins = shares * 1.00;  // $1 payout per share
+    const winProfit = ifWins - entryUsd;
+    const ifLoses = -entryUsd;  // total loss of stake
+    const slug = p.slug || '';
+    const link = slug ? `https://polymarket.com/event/${slug}` : '#';
+    const daysLeft = p.days_to_close;
+    const daysStr = daysLeft != null && daysLeft > 0 ? `${daysLeft}d` : '—';
     const tr = document.createElement('tr');
     tr.className = 'position-row';
     tr.innerHTML = `
-      <td>${esc(trunc(p.question || p.market_id || '—', 45))}</td>
+      <td><a class="question-link" href="${link}" target="_blank" title="${esc(p.question || '')}">${esc(trunc(p.question || p.market_id || '—', 40))}</a></td>
       <td>${p.outcome || '—'}</td>
-      <td>${p.quantity || 0}</td>
+      <td>${shares.toFixed(1)}</td>
       <td>${cents(p.entry_price)}</td>
       <td>${cents(p.current_price)}</td>
-      <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)}</span></td>
+      <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)} (${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(1)}%)</span></td>
+      <td><span class="positive">+${money(winProfit)}</span></td>
+      <td><span class="negative">${money(ifLoses)}</span></td>
       <td>${p.fund}</td>
-      <td>${shortDate(p.opened_at)}</td>
+      <td>${shortDate(p.entry_timestamp)}</td>
+      <td>${daysStr}</td>
     `;
     tbody.appendChild(tr);
   }
@@ -430,15 +446,16 @@ function renderPositions() {
 function renderTrades() {
   const tr_a = (DATA.realized_trades?.fund_a || []).map(t => ({...t, fund: 'Fund A'}));
   const tr_b = (DATA.realized_trades?.fund_b || []).map(t => ({...t, fund: 'Fund B'}));
-  const all = [...tr_a, ...tr_b].sort((a,b) => (b.closed_at || '').localeCompare(a.closed_at || ''));
+  const all = [...tr_a, ...tr_b].sort((a,b) => (b.exit_timestamp || '').localeCompare(a.exit_timestamp || ''));
 
   const tbody = document.querySelector('#trades-table tbody');
   tbody.innerHTML = '';
   document.getElementById('trades-empty').style.display = all.length ? 'none' : 'block';
 
   for (const t of all.slice(0, 30)) {
-    const pnl = t.pnl || 0;
-    const ret = t.return_pct || 0;
+    const pnl = t.pnl_usd || 0;
+    const ret = t.pnl_pct || 0;
+    const won = t.win || false;
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${esc(trunc(t.question || t.market_id || '—', 45))}</td>
@@ -448,7 +465,7 @@ function renderTrades() {
       <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)}</span></td>
       <td class="${ret >= 0 ? 'positive' : 'negative'}">${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%</td>
       <td>${t.fund}</td>
-      <td>${shortDate(t.closed_at)}</td>
+      <td>${shortDate(t.exit_timestamp)}</td>
     `;
     tbody.appendChild(tr);
   }
