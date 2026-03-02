@@ -284,7 +284,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     # ── Step 8: Save and write dashboard ──
     save_portfolio(portfolio, portfolio_path)
-    _write_dashboard(opportunities, portfolio, config, data_dir)
+
+    # Collect layer health stats for dashboard
+    layer_health = _compute_layer_health(scored_items, whale_tracker)
+    _write_dashboard(opportunities, portfolio, config, data_dir, layer_health)
 
     elapsed = time.time() - start
     summary = portfolio_summary(portfolio)
@@ -295,7 +298,37 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     )
 
 
-def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str):
+def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
+    """Compute health stats for each signal layer."""
+    layers = {'structural': [], 'smart_money': [], 'dislocation': [], 'external': []}
+
+    for item in scored_items:
+        scores = item.get('scores', {})
+        ls = scores.get('layer_scores', {})
+        for layer in layers:
+            val = ls.get(layer, 0)
+            layers[layer].append(val)
+
+    health = {}
+    for layer, values in layers.items():
+        non_zero = [v for v in values if v > 0]
+        health[layer] = {
+            'active': len(non_zero) > 0,
+            'tokens_scored': len(values),
+            'tokens_with_signal': len(non_zero),
+            'coverage_pct': round(len(non_zero) / max(1, len(values)) * 100, 1),
+            'avg_score': round(sum(non_zero) / max(1, len(non_zero)), 2) if non_zero else 0,
+            'max_score': round(max(non_zero), 2) if non_zero else 0,
+        }
+
+    # Add whale tracker specific stats
+    health['smart_money']['quality_traders'] = len(getattr(whale_tracker, '_quality_traders', []))
+    health['smart_money']['markets_indexed'] = len(getattr(whale_tracker, '_whale_market_index', {}))
+
+    return health
+
+
+def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str, layer_health: dict = None):
     """Write signal_data.json for the dashboard."""
     # Stats breakdowns
     by_category = {}
@@ -343,7 +376,8 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
         'statistics': {
             'by_category': by_category,
             'by_convexity': by_convexity
-        }
+        },
+        'layer_health': layer_health or {}
     }
 
     path = os.path.join(data_dir, 'signal_data.json')

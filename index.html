@@ -216,6 +216,31 @@
   </div>
 </div>
 
+<!-- Signal Health -->
+<div class="section-title">Signal Health</div>
+<div class="grid grid-4" id="layer-health">
+  <div class="card" id="health-structural">
+    <div class="card-title">Structural <span style="font-size:10px;opacity:0.6">(20%)</span></div>
+    <div class="card-value" id="h-structural-status">—</div>
+    <div class="card-sub" id="h-structural-detail">—</div>
+  </div>
+  <div class="card" id="health-smart-money">
+    <div class="card-title">Smart Money <span style="font-size:10px;opacity:0.6">(20%)</span></div>
+    <div class="card-value" id="h-smart-money-status">—</div>
+    <div class="card-sub" id="h-smart-money-detail">—</div>
+  </div>
+  <div class="card" id="health-dislocation">
+    <div class="card-title">Dislocation <span style="font-size:10px;opacity:0.6">(45%)</span></div>
+    <div class="card-value" id="h-dislocation-status">—</div>
+    <div class="card-sub" id="h-dislocation-detail">—</div>
+  </div>
+  <div class="card" id="health-external">
+    <div class="card-title">External <span style="font-size:10px;opacity:0.6">(15%)</span></div>
+    <div class="card-value" id="h-external-status">—</div>
+    <div class="card-sub" id="h-external-detail">—</div>
+  </div>
+</div>
+
 <!-- Portfolio Distribution & P&L Charts -->
 <div class="section-title">Portfolio Analytics</div>
 <div class="grid grid-2">
@@ -373,6 +398,7 @@ function render() {
   renderMeta();
   renderOverview();
   renderFunds();
+  renderLayerHealth();
   renderPieChart();
   renderPnlChart();
   renderOpportunities();
@@ -477,6 +503,59 @@ function renderFunds() {
     setText(`${prefix}-positions`, f.open_positions || 0);
     setText(`${prefix}-closed`, f.closed_trades || 0);
     setText(`${prefix}-cash`, money(f.cash));
+  }
+}
+
+function renderLayerHealth() {
+  const h = DATA.layer_health || {};
+  const layers = [
+    {key: 'structural', label: 'Structural', color: 'var(--blue)'},
+    {key: 'smart_money', label: 'Smart Money', color: 'var(--purple)'},
+    {key: 'dislocation', label: 'Dislocation', color: 'var(--orange)'},
+    {key: 'external', label: 'External', color: 'var(--cyan)'}
+  ];
+
+  for (const layer of layers) {
+    const data = h[layer.key] || {};
+    const statusEl = document.getElementById(`h-${layer.key.replace('_','-')}-status`);
+    const detailEl = document.getElementById(`h-${layer.key.replace('_','-')}-detail`);
+    const cardEl = document.getElementById(`health-${layer.key.replace('_','-')}`);
+    if (!statusEl || !detailEl) continue;
+
+    const coverage = data.coverage_pct || 0;
+    const active = data.active || false;
+    const signalCount = data.tokens_with_signal || 0;
+    const totalTokens = data.tokens_scored || 0;
+    const avgScore = data.avg_score || 0;
+    const maxScore = data.max_score || 0;
+
+    if (!active || signalCount === 0) {
+      statusEl.textContent = 'OFFLINE';
+      statusEl.style.color = 'var(--red)';
+      detailEl.textContent = totalTokens > 0
+        ? `0/${totalTokens} tokens scored — no signal`
+        : 'No data yet';
+      if (cardEl) cardEl.style.borderColor = 'rgba(248,81,73,0.3)';
+    } else if (coverage < 10) {
+      statusEl.textContent = 'WEAK';
+      statusEl.style.color = 'var(--yellow)';
+      detailEl.textContent = `${signalCount}/${totalTokens} tokens (${coverage}%) · avg ${avgScore} · max ${maxScore}`;
+      if (cardEl) cardEl.style.borderColor = 'rgba(210,153,34,0.3)';
+    } else {
+      statusEl.textContent = 'ACTIVE';
+      statusEl.style.color = 'var(--green)';
+      detailEl.textContent = `${signalCount}/${totalTokens} tokens (${coverage}%) · avg ${avgScore} · max ${maxScore}`;
+      if (cardEl) cardEl.style.borderColor = 'rgba(63,185,80,0.3)';
+    }
+
+    // Extra detail for smart money
+    if (layer.key === 'smart_money') {
+      const traders = data.quality_traders || 0;
+      const markets = data.markets_indexed || 0;
+      detailEl.textContent += traders > 0
+        ? ` · ${traders} whales · ${markets} mkts`
+        : '';
+    }
   }
 }
 
