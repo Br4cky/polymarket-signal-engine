@@ -191,7 +191,26 @@ def rank_opportunities(
         token = item.get('token', {})
 
         edge = scores.get('edge_score', 0)
-        if edge < threshold:
+        layer_scores = scores.get('layer_scores', {})
+
+        # ── Dynamic threshold by layer composition ──
+        # Dislocation signals are fleeting (hours); structural signals are durable (weeks).
+        # If most of the edge comes from dislocation, require higher overall score
+        # because the signal will decay before we can profit.
+        effective_threshold = threshold
+        if edge > 0:
+            dislocation_pct = layer_scores.get('dislocation', 0) / edge * 100
+            structural_score = layer_scores.get('structural', 0)
+            smart_money_score = layer_scores.get('smart_money', 0)
+
+            if dislocation_pct > 65:
+                # Mostly dislocation — signal is volatile, need higher bar
+                effective_threshold = max(threshold, threshold * 1.25)
+            elif structural_score > 10 or smart_money_score > 10:
+                # Strong structural or smart money confirmation — durable signal
+                effective_threshold = max(threshold * 0.85, 10)
+
+        if edge < effective_threshold:
             continue
 
         liquidity = safe_float(market.get('liquidity', 0))
@@ -211,6 +230,17 @@ def rank_opportunities(
 
         if band == 'invalid':
             continue
+
+        # ── Strict convexity entry gate ──
+        # Reject prices that don't deliver adequate multiple for their band.
+        # A "10x" token at 0.11 only delivers 9x — that's not 10x.
+        current_price = safe_float(token.get('current_price', 0))
+        min_multiples = {'20x': 18.0, '10x': 9.5, '5x': 4.5}
+        min_mult = min_multiples.get(band, 0)
+        if min_mult > 0 and current_price > 0:
+            actual_mult = 1.0 / current_price
+            if actual_mult < min_mult:
+                continue  # Price too high for this band's promised convexity
 
         # Determine which fund this belongs to (if any)
         fund_assignment = None

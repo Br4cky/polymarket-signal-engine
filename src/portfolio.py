@@ -98,16 +98,65 @@ def save_portfolio(portfolio: dict, filepath: str):
 
 # ─── Position Sizing (Half-Kelly) ───────────────────────────────────────────
 
+def _time_decay_multiplier(days_to_close: int) -> float:
+    """
+    Adjust position size based on resolution proximity.
+
+    Near-resolution markets have binary risk — either they resolve in your
+    favour (big win) or against (total loss). Size accordingly:
+    - Far out: full size, plenty of time for information to work
+    - Mid-range: slight reduction, increasing vol
+    - Close: aggressive reduction, binary outcome imminent
+    - Very close: minimal size, pure gamble territory
+    """
+    if days_to_close >= 30:
+        return 1.0
+    elif days_to_close >= 14:
+        return 0.85
+    elif days_to_close >= 7:
+        return 0.65
+    elif days_to_close >= 3:
+        return 0.40
+    else:
+        return 0.20
+
+
+def _conviction_multiplier(layer_scores: dict) -> float:
+    """
+    Scale position size by signal conviction quality.
+
+    Multi-layer confirmation = higher conviction = larger size.
+    Single-layer signal = lower conviction = smaller size.
+    """
+    active_layers = 0
+    if layer_scores.get('structural', 0) > 2:
+        active_layers += 1
+    if layer_scores.get('smart_money', 0) > 2:
+        active_layers += 1
+    if layer_scores.get('dislocation', 0) > 3:
+        active_layers += 1
+    if layer_scores.get('external', 0) > 1:
+        active_layers += 1
+
+    # 1 layer = 0.6x, 2 = 0.85x, 3 = 1.0x, 4 = 1.15x
+    conviction_map = {0: 0.4, 1: 0.6, 2: 0.85, 3: 1.0, 4: 1.15}
+    return conviction_map.get(active_layers, 1.0)
+
+
 def kelly_position_size(
     edge_score: float,
     current_price: float,
     convexity_band: str,
     available_cash: float,
     num_positions: int,
-    config: dict
+    config: dict,
+    days_to_close: int = 30,
+    layer_scores: dict = None
 ) -> float:
     """
-    Calculate position size using half-Kelly criterion.
+    Calculate position size using half-Kelly criterion with time-aware
+    and conviction-aware adjustments.
+
     Returns position size in USD (0 if no trade warranted).
     """
     max_pct = config.get('portfolio', {}).get('max_position_size_pct', 3) / 100.0
@@ -150,6 +199,13 @@ def kelly_position_size(
     multipliers = {'20x': 0.5, '10x': 0.7, '5x': 1.0, '2x': 1.0, 'yield': 1.2}
     position_size *= multipliers.get(convexity_band, 1.0)
 
+    # Time-aware sizing: reduce near resolution (binary risk increases)
+    position_size *= _time_decay_multiplier(days_to_close)
+
+    # Conviction sizing: multi-layer confirmation = larger bet
+    if layer_scores:
+        position_size *= _conviction_multiplier(layer_scores)
+
     position_size = min(position_size, available_cash)
 
     return max(0.0, round(position_size, 2))
@@ -171,7 +227,9 @@ def execute_paper_trade(
         convexity_band=opportunity['convexity_band'],
         available_cash=fund['available_cash'],
         num_positions=len(fund['positions']),
-        config=config
+        config=config,
+        days_to_close=opportunity.get('days_to_close', 30),
+        layer_scores=opportunity.get('layer_scores', {})
     )
 
     if size < 5.0:
@@ -320,7 +378,9 @@ def close_position(fund: dict, position_id: str, exit_price: float, reason: str 
         'pnl_pct': round(pnl_pct, 2),
         'win': pnl > 0,
         'reason': reason,
-        'edge_score_at_entry': pos.get('edge_score_at_entry', 0)
+        'edge_score_at_entry': pos.get('edge_score_at_entry', 0),
+        'layer_scores_at_entry': pos.get('layer_scores_at_entry', {}),
+        'days_to_close_at_entry': pos.get('days_to_close', 0),
     }
 
     fund['available_cash'] += exit_value
@@ -341,18 +401,111 @@ def close_position(fund: dict, position_id: str, exit_price: float, reason: str 
     return trade
 
 
-def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: dict) -> List[dict]:
-    """Auto-close positions hitting profit target or stop loss."""
-    profit_target = config.get('trading', {}).get('profit_target_pct', 50)
-    stop_loss = config.get('trading', {}).get('stop_loss_pct', -80)
+def _smart_stop_loss(pos: dict, config: dict) -> float:
+    """
+    Compute dynamic stop-loss threshold based on convexity band and conviction.
 
+    Key insight: a 20x token can absorb an -85% drawdown because the math
+    still works — you paid $5 for a chance at $100, losing $4.25 is fine
+    if the thesis holds. A 5x token losing -60% means the thesis is broken.
+
+    High conviction (multi-layer confirmation at entry) → wider stops.
+    Low conviction → tighter stops, cut losses faster.
+    """
+    band = pos.get('convexity_band', '5x')
+    entry_layers = pos.get('layer_scores_at_entry', {})
+    days = pos.get('days_to_close', 30)
+
+    # Base stop loss by band (respects convexity math)
+    base_stops = {
+        '20x': -85,
+        '10x': -75,
+        '5x': -60,
+        '2x': -40,
+        'yield': -25,
+    }
+    stop = base_stops.get(band, -60)
+
+    # Conviction adjustment: count active layers at entry
+    active_layers = 0
+    if entry_layers.get('structural', 0) > 2:
+        active_layers += 1
+    if entry_layers.get('smart_money', 0) > 2:
+        active_layers += 1
+    if entry_layers.get('dislocation', 0) > 3:
+        active_layers += 1
+    if entry_layers.get('external', 0) > 1:
+        active_layers += 1
+
+    # Low conviction → tighten stop by 25%
+    # High conviction → keep full stop width
+    if active_layers <= 1:
+        stop *= 0.75  # e.g., -75% → -56%
+    elif active_layers >= 3:
+        stop *= 1.05  # Slightly wider for high conviction
+
+    # Tighten near resolution (less time for thesis to play out)
+    if days < 5:
+        stop *= 0.80
+    elif days < 10:
+        stop *= 0.90
+
+    return round(stop, 1)
+
+
+def _trailing_profit_target(pos: dict, config: dict) -> float:
+    """
+    Dynamic profit target that scales with convexity band.
+
+    20x tokens should target much higher exits than 5x tokens.
+    Also implements a trailing mechanism: once up 100%+, lock in
+    at least 50% of peak gain.
+    """
+    band = pos.get('convexity_band', '5x')
+
+    # Base profit targets by band
+    base_targets = {
+        '20x': 500,   # 5x initial investment (not full 20x — take some off the table)
+        '10x': 400,   # 4x
+        '5x': 300,    # 3x (current default)
+        '2x': 150,    # 1.5x
+        'yield': 80,
+    }
+    return base_targets.get(band, 300)
+
+
+def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: dict) -> List[dict]:
+    """
+    Smart auto-close: band-aware stop-losses, conviction-weighted stops,
+    and dynamic profit targets.
+    """
     to_close = []
+
     for pos in fund['positions']:
         pnl_pct = pos.get('unrealized_pnl_pct', 0)
+
+        # Dynamic profit target based on band
+        profit_target = _trailing_profit_target(pos, config)
         if pnl_pct >= profit_target:
-            to_close.append((pos['position_id'], 'profit_target'))
-        elif pnl_pct <= stop_loss:
-            to_close.append((pos['position_id'], 'stop_loss'))
+            to_close.append((pos['position_id'], f'profit_target_{profit_target:.0f}pct'))
+            continue
+
+        # Trailing stop: if position was ever up 100%+, lock in at least
+        # half the peak gain. Track peak_pnl_pct on position.
+        peak = pos.get('peak_pnl_pct', pnl_pct)
+        if pnl_pct > peak:
+            pos['peak_pnl_pct'] = pnl_pct
+            peak = pnl_pct
+
+        if peak >= 100 and pnl_pct < peak * 0.50:
+            to_close.append((pos['position_id'], f'trailing_stop_from_{peak:.0f}pct'))
+            continue
+
+        # Smart stop loss: band + conviction + time aware
+        stop_loss = _smart_stop_loss(pos, config)
+        if pnl_pct <= stop_loss:
+            to_close.append((pos['position_id'], f'stop_loss_{stop_loss:.0f}pct'))
+            continue
 
     closed = []
     for pid, reason in to_close:
