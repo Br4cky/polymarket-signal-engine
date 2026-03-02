@@ -61,7 +61,6 @@ def load_config() -> dict:
     env_map = {
         'FINNHUB_API_KEY': ('news', 'finnhub_api_key'),
         'SERPAPI_KEY': ('news', 'serpapi_key'),
-        'SUBGRAPH_API_KEY': ('whale_tracking', 'subgraph_api_key'),
     }
     for env_var, (section, key) in env_map.items():
         val = os.environ.get(env_var)
@@ -96,7 +95,11 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     cache = CacheManager(data_dir)
     poly_client = PolymarketClient(config.get('polymarket', {}), cache)
     kalshi_client = KalshiClient(config.get('kalshi', {}), cache)
-    whale_tracker = WhaleTracker(config.get('whale_tracking', {}), cache)
+    whale_config = config.get('whale_tracking', {})
+    whale_config['data_api_base'] = config.get('polymarket', {}).get(
+        'data_api_base', 'https://data-api.polymarket.com'
+    )
+    whale_tracker = WhaleTracker(whale_config, cache)
     news_signals = NewsSignals(config.get('news', {}), cache)
 
     portfolio_path = os.path.join(data_dir, 'portfolio_state.json')
@@ -123,6 +126,11 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     logger.info("Step 3: Fetching news signals...")
     all_news = news_signals.fetch_all_news()
     logger.info(f"Got {len(all_news)} news articles")
+
+    # ── Step 3b: Build whale index (one batch of API calls) ──
+    logger.info("Step 3b: Building whale position index...")
+    whale_tracker.build_whale_index()
+    logger.info(f"Whale index covers {len(whale_tracker._whale_market_index)} markets")
 
     # ── Step 4: Score all market tokens across all 4 layers ──
     logger.info("Step 4: Computing edge scores (all 4 layers)...")

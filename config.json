@@ -16,10 +16,10 @@
     "divergence_threshold_pct": 3.0
   },
   "whale_tracking": {
-    "subgraph_url": "https://gateway.thegraph.com/api/subgraphs/id/POLYMARKET_SUBGRAPH_ID",
-    "subgraph_api_key": "",
     "enabled": true,
-    "leaderboard_enabled": true,
+    "top_n_traders": 50,
+    "cache_ttl_leaderboard": 3600,
+    "cache_ttl_positions": 1800,
     "whale_threshold_usd": 10000,
     "concentration_alert_pct": 30
   },
