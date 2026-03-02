@@ -56,25 +56,27 @@ class WhaleTracker:
             return cached
 
         try:
-            url = "https://gamma-api.polymarket.com/users"
+            url = "https://data-api.polymarket.com/v1/leaderboard"
             params = {
-                'limit': limit,
-                'sortBy': 'volume'
+                'limit': min(limit, 50),
+                'orderBy': 'VOL',
+                'timePeriod': 'ALL',
+                'category': 'OVERALL'
             }
             response = self.session.get(url, params=params, timeout=10)
             response.raise_for_status()
             data = response.json()
 
             leaderboard = []
-            users = data if isinstance(data, list) else data.get('users', [])
+            users = data if isinstance(data, list) else data.get('leaderboard', data.get('users', []))
 
             for user in users:
                 try:
                     entry = {
-                        'address': user.get('address', ''),
-                        'username': user.get('username', user.get('name', '')),
-                        'volume': float(user.get('volume', 0)),
-                        'profit': float(user.get('profit', 0)),
+                        'address': user.get('proxyWallet', user.get('address', '')),
+                        'username': user.get('userName', user.get('username', '')),
+                        'volume': float(user.get('vol', user.get('volume', 0))),
+                        'profit': float(user.get('pnl', user.get('profit', 0))),
                         'positions_count': int(user.get('positions_count', 0))
                     }
                     leaderboard.append(entry)
