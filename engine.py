@@ -140,7 +140,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             # Fetch price history for higher-volume markets
             price_history = []
             if safe_float(market.get('volume_24h', 0)) > 100:
-                price_history = poly_client.fetch_token_history(token['token_id'])
+                price_history = poly_client.fetch_price_history(token['token_id'])
                 if price_history:
                     markets_with_history += 1
 
@@ -151,7 +151,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     market.get('question', ''), kalshi_events
                 )
                 if match:
-                    kalshi_price = safe_float(match.get('yes_bid', 0)) / 100.0
+                    # find_matching_markets returns an event, need to fetch its markets for prices
+                    kalshi_markets = kalshi_client.fetch_markets_for_event(match.get('ticker', ''))
+                    if kalshi_markets:
+                        kalshi_price = safe_float(kalshi_markets[0].get('yes_bid', 0)) / 100.0
 
             # Layer 2: smart money
             smart_money = whale_tracker.compute_smart_money_score(

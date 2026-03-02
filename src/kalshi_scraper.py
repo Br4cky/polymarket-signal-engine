@@ -70,7 +70,7 @@ class KalshiClient:
 
                 offset += limit
 
-            self.cache_manager.set(cache_key, events, ttl=self.cache_ttl)
+            self.cache_manager.set(cache_key, events)
             return events
 
         except Exception as e:
@@ -103,7 +103,7 @@ class KalshiClient:
             data = response.json()
 
             markets = data.get('markets', [])
-            self.cache_manager.set(cache_key, markets, ttl=self.cache_ttl)
+            self.cache_manager.set(cache_key, markets)
             return markets
 
         except Exception as e:

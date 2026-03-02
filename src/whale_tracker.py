@@ -77,7 +77,7 @@ class WhaleTracker:
                     logger.debug(f"Skipping malformed leaderboard entry: {e}")
                     continue
 
-            self.cache_manager.set(cache_key, leaderboard, ttl=self.cache_ttl_leaderboard)
+            self.cache_manager.set(cache_key, leaderboard)
             return leaderboard
 
         except Exception as e:
@@ -165,7 +165,7 @@ class WhaleTracker:
                 'whale_count': len(top_wallets)
             }
 
-            self.cache_manager.set(cache_key, result, ttl=self.cache_ttl_positions)
+            self.cache_manager.set(cache_key, result)
             return result
 
         except Exception as e:
