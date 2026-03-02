@@ -60,7 +60,7 @@ class WhaleTracker:
 
         try:
             resp = self.session.get(
-                f"{self.data_api}/leaderboard",
+                f"{self.data_api}/v1/leaderboard",
                 params={
                     'limit': min(limit, 50),
                     'orderBy': 'PNL',

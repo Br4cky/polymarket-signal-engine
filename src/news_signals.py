@@ -43,9 +43,14 @@ class NewsSignals:
         # Tuning
         self.gdelt_max_records = config.get('gdelt_max_records', 75)
         self.gdelt_cache_ttl = config.get('gdelt_cache_ttl', 900)      # 15 min
+        self.gdelt_timeout = config.get('gdelt_timeout', 8)             # 8s (was 15s)
         self.wiki_cache_ttl = config.get('wiki_cache_ttl', 3600)        # 1 hour
         self.wiki_lookback_days = config.get('wiki_lookback_days', 14)   # baseline window
         self.wiki_spike_threshold = config.get('wiki_spike_threshold', 3.0)  # 3x avg = spike
+
+        # Circuit breaker: after N consecutive GDELT failures, skip remaining calls
+        self._gdelt_consecutive_failures = 0
+        self._gdelt_max_failures = 2  # Trip after 2 consecutive timeouts
 
     # ─────────────────────────────────────────────────────────────────────
     #  GDELT News Search (replaces Finnhub)
@@ -78,6 +83,10 @@ class NewsSignals:
         if not self.gdelt_enabled or not query:
             return []
 
+        # Circuit breaker: skip GDELT entirely if it's been failing
+        if self._gdelt_consecutive_failures >= self._gdelt_max_failures:
+            return []
+
         # Use hash suffix to avoid collisions from truncated queries
         query_hash = hashlib.md5(query.lower().encode()).hexdigest()[:8]
         cache_key = f'gdelt_{query.lower().replace(" ", "_")[:40]}_{query_hash}'
@@ -94,7 +103,7 @@ class NewsSignals:
                 'sort': 'datedesc',
                 'format': 'json',
             }
-            resp = self.session.get(url, params=params, timeout=15)
+            resp = self.session.get(url, params=params, timeout=self.gdelt_timeout)
             resp.raise_for_status()
 
             data = resp.json()
@@ -116,11 +125,16 @@ class NewsSignals:
                 })
 
             self.cache.set(cache_key, articles)
+            self._gdelt_consecutive_failures = 0  # Reset on success
             logger.info(f"GDELT: {len(articles)} articles for query '{query[:40]}'")
             return articles
 
         except Exception as e:
-            logger.warning(f"GDELT fetch failed for '{query[:30]}': {e}")
+            self._gdelt_consecutive_failures += 1
+            if self._gdelt_consecutive_failures >= self._gdelt_max_failures:
+                logger.warning(f"GDELT circuit breaker tripped after {self._gdelt_max_failures} failures — skipping remaining calls this run")
+            else:
+                logger.warning(f"GDELT fetch failed for '{query[:30]}': {e}")
             return []
 
     def _parse_gdelt_datetime(self, dt_str: str) -> float:
