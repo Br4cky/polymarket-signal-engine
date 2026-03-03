@@ -14,6 +14,7 @@ No paid APIs, no subgraph, no API keys required.
 Rate limit: ~1,000 calls/hour on the data API (free).
 """
 
+import json
 import logging
 import requests
 from typing import List, Dict, Optional
@@ -220,11 +221,33 @@ class WhaleTracker:
             resp.raise_for_status()
             data = resp.json()
 
-            positions_list = data if isinstance(data, list) else data.get('positions', [])
+            # Handle various response formats:
+            # - List of position objects (original)
+            # - Dict with 'positions' key
+            # - Dict with 'data' key
+            if isinstance(data, list):
+                positions_list = data
+            elif isinstance(data, dict):
+                positions_list = data.get('positions', data.get('data', data.get('history', [])))
+            else:
+                positions_list = []
             positions = []
+
+            # Log first item type on first call for debugging API format changes
+            if positions_list and not isinstance(positions_list[0], dict):
+                logger.info(f"Positions API returned {type(positions_list[0]).__name__} items, attempting parse")
 
             for pos in positions_list:
                 try:
+                    # Handle API returning stringified JSON items
+                    if isinstance(pos, str):
+                        try:
+                            pos = json.loads(pos)
+                        except (json.JSONDecodeError, TypeError):
+                            continue
+                    if not isinstance(pos, dict):
+                        continue
+
                     positions.append({
                         'conditionId': pos.get('conditionId', pos.get('asset', {}).get('conditionId', '')),
                         'market_slug': pos.get('market_slug', pos.get('slug', '')),
