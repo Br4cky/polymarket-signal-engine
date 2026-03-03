@@ -3,7 +3,7 @@
     "name": "5x Hunter",
     "band": "5x",
     "capital": 2500,
-    "available_cash": 1829.22,
+    "available_cash": 1795.39,
     "positions": [
       {
         "position_id": "d69b9acf",
@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1625,
-        "current_value": 69.3,
-        "unrealized_pnl": -5.7,
-        "unrealized_pnl_pct": -7.6,
+        "current_price": 0.1615,
+        "current_value": 68.87,
+        "unrealized_pnl": -6.13,
+        "unrealized_pnl_pct": -8.17,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.281,
-        "current_value": 91.23,
-        "unrealized_pnl": 19.45,
-        "unrealized_pnl_pct": 27.1,
+        "current_price": 0.2865,
+        "current_value": 93.01,
+        "unrealized_pnl": 21.23,
+        "unrealized_pnl_pct": 29.58,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -85,10 +85,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.095,
-        "current_value": 46.07,
-        "unrealized_pnl": -19.72,
-        "unrealized_pnl_pct": -29.97,
+        "current_price": 0.085,
+        "current_value": 41.22,
+        "unrealized_pnl": -24.57,
+        "unrealized_pnl_pct": -37.35,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -131,10 +131,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890177+00:00",
         "shares": 429.0,
         "entry_usd": 60.36,
-        "current_price": 0.14,
-        "current_value": 60.06,
-        "unrealized_pnl": -0.3,
-        "unrealized_pnl_pct": -0.5,
+        "current_price": 0.125,
+        "current_value": 53.62,
+        "unrealized_pnl": -6.74,
+        "unrealized_pnl_pct": -11.17,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -154,10 +154,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890263+00:00",
         "shares": 267.64,
         "entry_usd": 57.83,
-        "current_price": 0.21,
-        "current_value": 56.2,
-        "unrealized_pnl": -1.63,
-        "unrealized_pnl_pct": -2.82,
+        "current_price": 0.225,
+        "current_value": 60.22,
+        "unrealized_pnl": 2.39,
+        "unrealized_pnl_pct": 4.13,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -177,10 +177,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890356+00:00",
         "shares": 234.66,
         "entry_usd": 55.42,
-        "current_price": 0.175,
-        "current_value": 41.07,
-        "unrealized_pnl": -14.35,
-        "unrealized_pnl_pct": -25.89,
+        "current_price": 0.155,
+        "current_value": 36.37,
+        "unrealized_pnl": -19.05,
+        "unrealized_pnl_pct": -34.37,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -246,10 +246,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.255,
-        "current_value": 49.56,
-        "unrealized_pnl": 0.73,
-        "unrealized_pnl_pct": 1.49,
+        "current_price": 0.25,
+        "current_value": 48.59,
+        "unrealized_pnl": -0.24,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -260,6 +260,33 @@
         "days_to_close": 28,
         "potential_multiple": 4.0,
         "slug": "will-crude-oil-cl-hit-high-100-by-end-of-march-658-396-769"
+      },
+      {
+        "position_id": "59a11297",
+        "market_id": "1473072",
+        "question": "Will Bitcoin dip to $65,000 in March?",
+        "token_id": "64087619211543545431479218048939484178441767712621033463416084593776314629222",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.2176,
+        "entry_timestamp": "2026-03-03T06:03:06.028603+00:00",
+        "shares": 155.48,
+        "entry_usd": 33.83,
+        "current_price": 0.2165,
+        "current_value": 33.66,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 29.3,
+        "layer_scores_at_entry": {
+          "structural": 10.0,
+          "smart_money": 0.0,
+          "dislocation": 10.5,
+          "external": 1.0
+        },
+        "days_to_close": 28,
+        "resolution_date": "2026-04-01T04:00:00Z",
+        "potential_multiple": 4.6,
+        "slug": "will-bitcoin-dip-to-65k-in-march-2026"
       }
     ],
     "realized_trades": [],
@@ -307,6 +334,10 @@
       {
         "timestamp": "2026-03-03T05:02:39.534707+00:00",
         "equity": 2485.43
+      },
+      {
+        "timestamp": "2026-03-03T06:03:06.028378+00:00",
+        "equity": 2473.84
       }
     ]
   },
@@ -350,10 +381,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
         "shares": 776.27,
         "entry_usd": 50.71,
-        "current_price": 0.055,
-        "current_value": 42.69,
-        "unrealized_pnl": -8.02,
-        "unrealized_pnl_pct": -15.82,
+        "current_price": 0.065,
+        "current_value": 50.46,
+        "unrealized_pnl": -0.25,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -396,10 +427,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890948+00:00",
         "shares": 448.52,
         "entry_usd": 47.33,
-        "current_price": 0.095,
-        "current_value": 42.61,
-        "unrealized_pnl": -4.72,
-        "unrealized_pnl_pct": -9.97,
+        "current_price": 0.105,
+        "current_value": 47.09,
+        "unrealized_pnl": -0.24,
+        "unrealized_pnl_pct": -0.51,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -442,10 +473,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.891113+00:00",
         "shares": 602.33,
         "entry_usd": 44.19,
-        "current_price": 0.0735,
-        "current_value": 44.27,
-        "unrealized_pnl": 0.08,
-        "unrealized_pnl_pct": 0.18,
+        "current_price": 0.076,
+        "current_value": 45.78,
+        "unrealized_pnl": 1.59,
+        "unrealized_pnl_pct": 3.6,
         "edge_score_at_entry": 26.2,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -491,10 +522,10 @@
         "entry_timestamp": "2026-03-02T23:51:23.659382+00:00",
         "shares": 327.27,
         "entry_usd": 21.05,
-        "current_price": 0.0705,
-        "current_value": 23.07,
-        "unrealized_pnl": 2.02,
-        "unrealized_pnl_pct": 9.6,
+        "current_price": 0.0635,
+        "current_value": 20.78,
+        "unrealized_pnl": -0.27,
+        "unrealized_pnl_pct": -1.28,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -545,10 +576,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399377+00:00",
         "shares": 269.89,
         "entry_usd": 28.48,
-        "current_price": 0.095,
-        "current_value": 25.64,
-        "unrealized_pnl": -2.84,
-        "unrealized_pnl_pct": -9.97,
+        "current_price": 0.085,
+        "current_value": 22.94,
+        "unrealized_pnl": -5.54,
+        "unrealized_pnl_pct": -19.45,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -572,10 +603,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399552+00:00",
         "shares": 335.22,
         "entry_usd": 19.54,
-        "current_price": 0.0555,
-        "current_value": 18.6,
-        "unrealized_pnl": -0.94,
-        "unrealized_pnl_pct": -4.81,
+        "current_price": 0.054,
+        "current_value": 18.1,
+        "unrealized_pnl": -1.44,
+        "unrealized_pnl_pct": -7.37,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -599,10 +630,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399815+00:00",
         "shares": 180.62,
         "entry_usd": 19.06,
-        "current_price": 0.14,
-        "current_value": 25.29,
-        "unrealized_pnl": 6.23,
-        "unrealized_pnl_pct": 32.69,
+        "current_price": 0.125,
+        "current_value": 22.58,
+        "unrealized_pnl": 3.52,
+        "unrealized_pnl_pct": 18.47,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -661,9 +692,13 @@
       {
         "timestamp": "2026-03-03T05:02:39.534772+00:00",
         "equity": 2490.45
+      },
+      {
+        "timestamp": "2026-03-03T06:03:06.028435+00:00",
+        "equity": 2496.01
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-03T05:02:39.534922+00:00"
+  "last_updated": "2026-03-03T06:03:06.028937+00:00"
 }
