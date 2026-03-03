@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "timestamp": "2026-03-03T03:18:44.401661+00:00",
+    "timestamp": "2026-03-03T05:02:39.536109+00:00",
     "markets_scanned": 34,
     "tokens_scored": 34,
     "engine_version": "2.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 4963.96,
-    "combined_pnl": -35.64,
-    "combined_pnl_pct": -0.71,
+    "combined_equity": 4975.88,
+    "combined_pnl": -24.12,
+    "combined_pnl_pct": -0.48,
     "combined_win_rate": 0,
     "combined_total_trades": 0,
     "fund_a": {
@@ -17,9 +17,9 @@
       "band": "5x",
       "capital": 2500,
       "cash": 1829.22,
-      "equity": 2486.53,
-      "pnl": -13.47,
-      "total_pnl": -13.47,
+      "equity": 2485.43,
+      "pnl": -14.57,
+      "total_pnl": -14.57,
       "win_rate": 0,
       "win_count": 0,
       "loss_count": 0,
@@ -63,6 +63,10 @@
         {
           "timestamp": "2026-03-03T03:18:44.398998+00:00",
           "equity": 2486.53
+        },
+        {
+          "timestamp": "2026-03-03T05:02:39.534707+00:00",
+          "equity": 2485.43
         }
       ]
     },
@@ -71,9 +75,9 @@
       "band": "10x",
       "capital": 2500,
       "cash": 2066.02,
-      "equity": 2477.43,
-      "pnl": -22.17,
-      "total_pnl": -22.17,
+      "equity": 2490.45,
+      "pnl": -9.55,
+      "total_pnl": -9.55,
       "win_rate": 0,
       "win_count": 0,
       "loss_count": 0,
@@ -117,6 +121,10 @@
         {
           "timestamp": "2026-03-03T03:18:44.399037+00:00",
           "equity": 2477.83
+        },
+        {
+          "timestamp": "2026-03-03T05:02:39.534772+00:00",
+          "equity": 2490.45
         }
       ]
     }
@@ -129,7 +137,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-5-2026",
       "token_id": "51867797022833168169997745557218803207788822085021732358524417769871495955290",
       "outcome": "No",
-      "current_price": 0.034,
+      "current_price": 0.035,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -194,14 +202,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 29.4,
+      "potential_multiple": 28.6,
       "days_to_close": 6,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 50233.38723,
+      "liquidity_usd": 46698.62068,
       "volume_24h": 195524.54919000005,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397255+00:00"
+      "timestamp": "2026-03-03T05:02:39.532733+00:00"
     },
     {
       "market_id": "1465969",
@@ -210,7 +218,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-4-2026",
       "token_id": "66939659559715629322578052037067417083897910545293630846903056668783995994439",
       "outcome": "No",
-      "current_price": 0.021,
+      "current_price": 0.0145,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -275,14 +283,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 47.6,
+      "potential_multiple": 69.0,
       "days_to_close": 6,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 45214.05893,
+      "liquidity_usd": 46987.64056,
       "volume_24h": 156492.95379699994,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397298+00:00"
+      "timestamp": "2026-03-03T05:02:39.532774+00:00"
     },
     {
       "market_id": "1465971",
@@ -291,7 +299,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-6-2026",
       "token_id": "107146222609347176293391971937639421859973026690287048623458488832420148693044",
       "outcome": "No",
-      "current_price": 0.055,
+      "current_price": 0.065,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -356,14 +364,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 18.2,
+      "potential_multiple": 15.4,
       "days_to_close": 6,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 40613.8953,
+      "liquidity_usd": 39744.9153,
       "volume_24h": 133767.616914,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397332+00:00"
+      "timestamp": "2026-03-03T05:02:39.532808+00:00"
     },
     {
       "market_id": "958442",
@@ -372,15 +380,15 @@
       "slug": "will-the-iranian-regime-fall-by-march-31",
       "token_id": "48825140812430902098404528620382945035793471220915259967486864813738884055220",
       "outcome": "Yes",
-      "current_price": 0.1675,
+      "current_price": 0.1625,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
-      "edge_score": 28.8,
+      "edge_score": 28.7,
       "layer_scores": {
         "structural": 10.0,
         "smart_money": 0.0,
-        "dislocation": 10.25,
+        "dislocation": 10.21,
         "external": 1.0
       },
       "structural_detail": {
@@ -397,14 +405,14 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 28.61,
+          "divergence_pct": 28.06,
           "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 10.25,
+        "dislocation_total": 10.21,
         "price_velocity": 0.0,
-        "volume_anomaly": 6.75,
+        "volume_anomaly": 6.71,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 1.0
@@ -437,14 +445,14 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 6.0,
+      "potential_multiple": 6.2,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 541475.72672,
+      "liquidity_usd": 580652.71961,
       "volume_24h": 2530507.9596219943,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.396967+00:00"
+      "timestamp": "2026-03-03T05:02:39.532453+00:00"
     },
     {
       "market_id": "1385748",
@@ -453,7 +461,7 @@
       "slug": "will-france-uk-or-germany-strike-iran-by-march-31-929",
       "token_id": "99535854150125584073372680075762028968693385870149483240170023512322890475476",
       "outcome": "Yes",
-      "current_price": 0.2905,
+      "current_price": 0.281,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -518,14 +526,14 @@
         }
       },
       "convexity_band": "2x",
-      "potential_multiple": 3.4,
+      "potential_multiple": 3.6,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 35545.66239,
+      "liquidity_usd": 36814.98809,
       "volume_24h": 608888.7824750004,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397049+00:00"
+      "timestamp": "2026-03-03T05:02:39.532533+00:00"
     },
     {
       "market_id": "1430129",
@@ -534,7 +542,7 @@
       "slug": "will-opinion-launch-a-token-on-march-5",
       "token_id": "64852711432360055858527953589418614895873856217143532333511179250415403173529",
       "outcome": "No",
-      "current_price": 0.012,
+      "current_price": 0.0125,
       "bid": 0.001,
       "ask": 0.99,
       "spread_pct": 98900.0,
@@ -599,14 +607,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 83.3,
-      "days_to_close": 29,
+      "potential_multiple": 80.0,
+      "days_to_close": 28,
       "resolution_date": "2026-04-01T05:00:00Z",
-      "liquidity_usd": 13200.0103,
+      "liquidity_usd": 12396.80925,
       "volume_24h": 473232.9035500001,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397096+00:00"
+      "timestamp": "2026-03-03T05:02:39.532575+00:00"
     },
     {
       "market_id": "568637",
@@ -683,11 +691,11 @@
       "potential_multiple": 52.6,
       "days_to_close": 40,
       "resolution_date": "2026-04-13T00:00:00Z",
-      "liquidity_usd": 21836.29025,
+      "liquidity_usd": 22181.82913,
       "volume_24h": 504928.58915,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397074+00:00"
+      "timestamp": "2026-03-03T05:02:39.532552+00:00"
     },
     {
       "market_id": "568650",
@@ -764,11 +772,11 @@
       "potential_multiple": 60.6,
       "days_to_close": 40,
       "resolution_date": "2026-04-13T00:00:00Z",
-      "liquidity_usd": 13675.82914,
+      "liquidity_usd": 12334.57584,
       "volume_24h": 356050.79428699997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397152+00:00"
+      "timestamp": "2026-03-03T05:02:39.532630+00:00"
     },
     {
       "market_id": "568666",
@@ -777,7 +785,7 @@
       "slug": "will-matt-fitzpatrick-win-the-2026-masters-tournament",
       "token_id": "89412916687151175560118327444920315375809982155120674654821372692943297972641",
       "outcome": "Yes",
-      "current_price": 0.02,
+      "current_price": 0.0195,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
@@ -842,14 +850,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 50.0,
+      "potential_multiple": 51.3,
       "days_to_close": 40,
       "resolution_date": "2026-04-13T00:00:00Z",
-      "liquidity_usd": 4687.20106,
+      "liquidity_usd": 4884.04336,
       "volume_24h": 343580.21879400004,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397165+00:00"
+      "timestamp": "2026-03-03T05:02:39.532643+00:00"
     },
     {
       "market_id": "1466148",
@@ -858,7 +866,7 @@
       "slug": "iran-x-israelus-conflict-ends-by-march-7",
       "token_id": "34607248775012434162023970679863902425653025984305214745980667340544918996830",
       "outcome": "Yes",
-      "current_price": 0.065,
+      "current_price": 0.055,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -923,14 +931,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 15.4,
+      "potential_multiple": 18.2,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 63027.0936,
+      "liquidity_usd": 62098.5558,
       "volume_24h": 92891.93895799997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397473+00:00"
+      "timestamp": "2026-03-03T05:02:39.532949+00:00"
     },
     {
       "market_id": "1466149",
@@ -939,7 +947,7 @@
       "slug": "iran-x-israelus-conflict-ends-by-march-15",
       "token_id": "81325797569174911613409057281359521585771528908138546144994531752156467539030",
       "outcome": "Yes",
-      "current_price": 0.185,
+      "current_price": 0.175,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1004,14 +1012,14 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 5.4,
+      "potential_multiple": 5.7,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 21023.4107,
+      "liquidity_usd": 21803.3511,
       "volume_24h": 91832.60051,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397484+00:00"
+      "timestamp": "2026-03-03T05:02:39.532958+00:00"
     },
     {
       "market_id": "1473063",
@@ -1019,249 +1027,6 @@
       "category": "",
       "slug": "will-bitcoin-reach-85k-in-march-2026",
       "token_id": "115525206331954143666493722927087528093139997441327992335107710676655034238818",
-      "outcome": "Yes",
-      "current_price": 0.105,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 24.6,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 8.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 35.62,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 8.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 1.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 14,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 9.5,
-      "days_to_close": 29,
-      "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 110324.0214,
-      "volume_24h": 277665.026106,
-      "fund_assignment": "fund_b",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397191+00:00"
-    },
-    {
-      "market_id": "1473060",
-      "question": "Will Bitcoin reach $90,000 in March?",
-      "category": "",
-      "slug": "will-bitcoin-reach-90k-in-march-2026",
-      "token_id": "72288567685017756888828669131409064604859118327619100036098909334128768764531",
-      "outcome": "Yes",
-      "current_price": 0.0425,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 24.6,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 8.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 41.87,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 8.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 1.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 14,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 23.5,
-      "days_to_close": 29,
-      "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 108897.47303,
-      "volume_24h": 217260.35105599996,
-      "fund_assignment": "fund_b",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397235+00:00"
-    },
-    {
-      "market_id": "1473075",
-      "question": "Will Bitcoin dip to $55,000 in March?",
-      "category": "",
-      "slug": "will-bitcoin-dip-to-55k-in-march-2026",
-      "token_id": "3056478011660943904461466382920934987843622145282294244222474838030938303402",
-      "outcome": "Yes",
-      "current_price": 0.175,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 24.6,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 8.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 28.62,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 8.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 1.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 14,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 5.7,
-      "days_to_close": 29,
-      "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 108393.0322,
-      "volume_24h": 175855.61881300007,
-      "fund_assignment": "fund_a",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397269+00:00"
-    },
-    {
-      "market_id": "1473078",
-      "question": "Will Bitcoin dip to $50,000 in March?",
-      "category": "",
-      "slug": "will-bitcoin-dip-to-50k-in-march-2026",
-      "token_id": "16750430841750281964633473509969688050218091484828573447113986659081710343189",
       "outcome": "Yes",
       "current_price": 0.095,
       "bid": 0.0,
@@ -1329,13 +1094,256 @@
       },
       "convexity_band": "10x",
       "potential_multiple": 10.5,
-      "days_to_close": 29,
+      "days_to_close": 28,
       "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 103732.1995,
+      "liquidity_usd": 100684.5253,
+      "volume_24h": 277665.026106,
+      "fund_assignment": "fund_b",
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-03T05:02:39.532669+00:00"
+    },
+    {
+      "market_id": "1473060",
+      "question": "Will Bitcoin reach $90,000 in March?",
+      "category": "",
+      "slug": "will-bitcoin-reach-90k-in-march-2026",
+      "token_id": "72288567685017756888828669131409064604859118327619100036098909334128768764531",
+      "outcome": "Yes",
+      "current_price": 0.0435,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 24.6,
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 8.0,
+        "external": 1.0
+      },
+      "structural_detail": {
+        "structural_total": 10.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 10.0,
+          "divergence_pct": 41.77,
+          "direction": "manifold_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 8.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 1.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 1.0,
+        "activity_score": 0,
+        "external_total": 1.0,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 14,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 23.0,
+      "days_to_close": 28,
+      "resolution_date": "2026-04-01T04:00:00Z",
+      "liquidity_usd": 110283.29915,
+      "volume_24h": 217260.35105599996,
+      "fund_assignment": "fund_b",
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-03T05:02:39.532712+00:00"
+    },
+    {
+      "market_id": "1473075",
+      "question": "Will Bitcoin dip to $55,000 in March?",
+      "category": "",
+      "slug": "will-bitcoin-dip-to-55k-in-march-2026",
+      "token_id": "3056478011660943904461466382920934987843622145282294244222474838030938303402",
+      "outcome": "Yes",
+      "current_price": 0.185,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 24.6,
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 8.0,
+        "external": 1.0
+      },
+      "structural_detail": {
+        "structural_total": 10.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 10.0,
+          "divergence_pct": 27.62,
+          "direction": "manifold_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 8.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 1.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 1.0,
+        "activity_score": 0,
+        "external_total": 1.0,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 14,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 5.4,
+      "days_to_close": 28,
+      "resolution_date": "2026-04-01T04:00:00Z",
+      "liquidity_usd": 106176.0862,
+      "volume_24h": 175855.61881300007,
+      "fund_assignment": "fund_a",
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-03T05:02:39.532746+00:00"
+    },
+    {
+      "market_id": "1473078",
+      "question": "Will Bitcoin dip to $50,000 in March?",
+      "category": "",
+      "slug": "will-bitcoin-dip-to-50k-in-march-2026",
+      "token_id": "16750430841750281964633473509969688050218091484828573447113986659081710343189",
+      "outcome": "Yes",
+      "current_price": 0.105,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 24.6,
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 8.0,
+        "external": 1.0
+      },
+      "structural_detail": {
+        "structural_total": 10.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 10.0,
+          "divergence_pct": 35.62,
+          "direction": "manifold_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 8.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 1.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 1.0,
+        "activity_score": 0,
+        "external_total": 1.0,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 14,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 9.5,
+      "days_to_close": 28,
+      "resolution_date": "2026-04-01T04:00:00Z",
+      "liquidity_usd": 105268.0244,
       "volume_24h": 175742.3991449999,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397280+00:00"
+      "timestamp": "2026-03-03T05:02:39.532756+00:00"
     },
     {
       "market_id": "1473053",
@@ -1410,13 +1418,13 @@
       },
       "convexity_band": "20x",
       "potential_multiple": 90.9,
-      "days_to_close": 29,
+      "days_to_close": 28,
       "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 122346.91235,
+      "liquidity_usd": 124971.74347,
       "volume_24h": 124784.343793,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397349+00:00"
+      "timestamp": "2026-03-03T05:02:39.532825+00:00"
     },
     {
       "market_id": "1473057",
@@ -1425,7 +1433,7 @@
       "slug": "will-bitcoin-reach-95k-in-march-2026",
       "token_id": "3661906526641476957325710283602141134604825986462527417294041338714307953593",
       "outcome": "Yes",
-      "current_price": 0.0205,
+      "current_price": 0.022,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1450,7 +1458,7 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 44.07,
+          "divergence_pct": 43.92,
           "direction": "manifold_higher"
         }
       },
@@ -1490,14 +1498,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 48.8,
-      "days_to_close": 29,
+      "potential_multiple": 45.5,
+      "days_to_close": 28,
       "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 77192.03306,
+      "liquidity_usd": 75714.78116,
       "volume_24h": 122220.68381699998,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397374+00:00"
+      "timestamp": "2026-03-03T05:02:39.532848+00:00"
     },
     {
       "market_id": "1473080",
@@ -1506,7 +1514,7 @@
       "slug": "will-bitcoin-dip-to-45k-in-march-2026",
       "token_id": "13377794642435611385847620240808138064594447585244290622688315269067148861161",
       "outcome": "Yes",
-      "current_price": 0.0485,
+      "current_price": 0.048,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1531,7 +1539,7 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 41.27,
+          "divergence_pct": 41.32,
           "direction": "manifold_higher"
         }
       },
@@ -1571,95 +1579,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 20.6,
-      "days_to_close": 29,
+      "potential_multiple": 20.8,
+      "days_to_close": 28,
       "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 105125.79668,
+      "liquidity_usd": 105173.0984,
       "volume_24h": 93349.164433,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397462+00:00"
-    },
-    {
-      "market_id": "1473066",
-      "question": "Will Bitcoin reach $80,000 in March?",
-      "category": "",
-      "slug": "will-bitcoin-reach-80k-in-march-2026",
-      "token_id": "89985317983195116196847912662733840736741033181969862249321821942712441807494",
-      "outcome": "Yes",
-      "current_price": 0.255,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 24.1,
-      "layer_scores": {
-        "structural": 9.37,
-        "smart_money": 0.0,
-        "dislocation": 8.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 9.37,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 9.37,
-          "divergence_pct": 20.62,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 8.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 1.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 14,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.9,
-      "days_to_close": 29,
-      "resolution_date": "2026-04-01T04:00:00Z",
-      "liquidity_usd": 85622.2433,
-      "volume_24h": 218436.13649599993,
-      "fund_assignment": null,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397222+00:00"
+      "timestamp": "2026-03-03T05:02:39.532939+00:00"
     },
     {
       "market_id": "568647",
@@ -1668,15 +1595,15 @@
       "slug": "will-shane-lowry-win-the-2026-masters-tournament",
       "token_id": "43674349353781684232142600040007732831217070825178051847523003605970842714623",
       "outcome": "Yes",
-      "current_price": 0.019,
+      "current_price": 0.0205,
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
-      "edge_score": 22.2,
+      "edge_score": 21.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 8.21,
+        "dislocation": 8.1,
         "external": 1.0
       },
       "structural_detail": {
@@ -1698,9 +1625,9 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 8.21,
+        "dislocation_total": 8.1,
         "price_velocity": 0.0,
-        "volume_anomaly": 5.71,
+        "volume_anomaly": 5.6,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 0.0
@@ -1733,14 +1660,95 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 52.6,
+      "potential_multiple": 48.8,
       "days_to_close": 40,
       "resolution_date": "2026-04-13T00:00:00Z",
-      "liquidity_usd": 5036.31361,
+      "liquidity_usd": 4986.2396,
       "volume_24h": 496070.89807699993,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397085+00:00"
+      "timestamp": "2026-03-03T05:02:39.532564+00:00"
+    },
+    {
+      "market_id": "677397",
+      "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+      "category": "",
+      "slug": "will-israel-launch-a-major-ground-offensive-in-lebanon-by-march-31",
+      "token_id": "109194950528471238221689772140031366300756554661469112835221485697222266375845",
+      "outcome": "No",
+      "current_price": 0.21,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 21.7,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 8.0,
+        "external": 1.0
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 8.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 1.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 1.0,
+        "activity_score": 0,
+        "external_total": 1.0,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 14,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.8,
+      "days_to_close": 27,
+      "resolution_date": "2026-03-31T00:00:00Z",
+      "liquidity_usd": 50372.4093,
+      "volume_24h": 254346.7148240001,
+      "fund_assignment": "fund_a",
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-03T05:02:39.532685+00:00"
     },
     {
       "market_id": "1394368",
@@ -1749,7 +1757,7 @@
       "slug": "will-the-us-invade-iran-by-march-31",
       "token_id": "60396150294056475674860934419619480139938118116601719506967369709790058295210",
       "outcome": "Yes",
-      "current_price": 0.085,
+      "current_price": 0.095,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1814,14 +1822,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 11.8,
+      "potential_multiple": 10.5,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 51840.2179,
+      "liquidity_usd": 57339.4541,
       "volume_24h": 143769.08725599994,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397317+00:00"
+      "timestamp": "2026-03-03T05:02:39.532792+00:00"
     },
     {
       "market_id": "955824",
@@ -1830,7 +1838,7 @@
       "slug": "nuclear-weapon-detonation-by-march-31",
       "token_id": "83745161536963539374758363997483220394665712527717501198935570938573276596563",
       "outcome": "Yes",
-      "current_price": 0.058,
+      "current_price": 0.0555,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1895,14 +1903,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 17.2,
+      "potential_multiple": 18.0,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 57894.66749,
+      "liquidity_usd": 62027.38892,
       "volume_24h": 117910.46831499999,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397386+00:00"
+      "timestamp": "2026-03-03T05:02:39.532861+00:00"
     },
     {
       "market_id": "665228",
@@ -1911,7 +1919,7 @@
       "slug": "will-hezbollah-disarm-by-march-31",
       "token_id": "13726222412844491860621369391578295764460056456966982436233358302388625569468",
       "outcome": "Yes",
-      "current_price": 0.075,
+      "current_price": 0.0735,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1976,14 +1984,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 13.3,
+      "potential_multiple": 13.6,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 43844.26793,
+      "liquidity_usd": 44486.4313,
       "volume_24h": 105502.016946,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397404+00:00"
+      "timestamp": "2026-03-03T05:02:39.532879+00:00"
     },
     {
       "market_id": "1477563",
@@ -1992,7 +2000,7 @@
       "slug": "will-crude-oil-cl-hit-high-150-by-end-of-march-138",
       "token_id": "72223647059482161321777035355535254168984102436017216383672365031077799535046",
       "outcome": "Yes",
-      "current_price": 0.054,
+      "current_price": 0.0705,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -2057,14 +2065,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 18.5,
+      "potential_multiple": 14.2,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 33063.58866,
+      "liquidity_usd": 30073.9744,
       "volume_24h": 95934.191577,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397441+00:00"
+      "timestamp": "2026-03-03T05:02:39.532915+00:00"
     },
     {
       "market_id": "1467763",
@@ -2073,7 +2081,7 @@
       "slug": "will-crude-oil-cl-hit-high-120-by-end-of-march-766-813",
       "token_id": "69136365945621600854789649488423522395843457249417452310260493085275775221076",
       "outcome": "Yes",
-      "current_price": 0.105,
+      "current_price": 0.14,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -2137,15 +2145,15 @@
           "engagement_ratio": 0
         }
       },
-      "convexity_band": "10x",
-      "potential_multiple": 9.5,
+      "convexity_band": "5x",
+      "potential_multiple": 7.1,
       "days_to_close": 27,
       "resolution_date": "2026-03-31T00:00:00Z",
-      "liquidity_usd": 63255.4978,
+      "liquidity_usd": 62098.8036,
       "volume_24h": 94264.50163200003,
-      "fund_assignment": "fund_b",
+      "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-03T03:18:44.397450+00:00"
+      "timestamp": "2026-03-03T05:02:39.532927+00:00"
     }
   ],
   "positions": {
@@ -2161,10 +2169,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1675,
-        "current_value": 71.43,
-        "unrealized_pnl": -3.57,
-        "unrealized_pnl_pct": -4.76,
+        "current_price": 0.1625,
+        "current_value": 69.3,
+        "unrealized_pnl": -5.7,
+        "unrealized_pnl_pct": -7.6,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2184,10 +2192,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2905,
-        "current_value": 94.31,
-        "unrealized_pnl": 22.53,
-        "unrealized_pnl_pct": 31.39,
+        "current_price": 0.281,
+        "current_value": 91.23,
+        "unrealized_pnl": 19.45,
+        "unrealized_pnl_pct": 27.1,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2207,10 +2215,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
         "shares": 390.68,
         "entry_usd": 68.71,
-        "current_price": 0.175,
-        "current_value": 68.37,
-        "unrealized_pnl": -0.34,
-        "unrealized_pnl_pct": -0.49,
+        "current_price": 0.185,
+        "current_value": 72.28,
+        "unrealized_pnl": 3.57,
+        "unrealized_pnl_pct": 5.2,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2230,10 +2238,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.105,
-        "current_value": 50.92,
-        "unrealized_pnl": -14.87,
-        "unrealized_pnl_pct": -22.6,
+        "current_price": 0.095,
+        "current_value": 46.07,
+        "unrealized_pnl": -19.72,
+        "unrealized_pnl_pct": -29.97,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2276,10 +2284,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890177+00:00",
         "shares": 429.0,
         "entry_usd": 60.36,
-        "current_price": 0.105,
-        "current_value": 45.05,
-        "unrealized_pnl": -15.31,
-        "unrealized_pnl_pct": -25.36,
+        "current_price": 0.14,
+        "current_value": 60.06,
+        "unrealized_pnl": -0.3,
+        "unrealized_pnl_pct": -0.5,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2299,10 +2307,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890263+00:00",
         "shares": 267.64,
         "entry_usd": 57.83,
-        "current_price": 0.245,
-        "current_value": 65.57,
-        "unrealized_pnl": 7.74,
-        "unrealized_pnl_pct": 13.38,
+        "current_price": 0.21,
+        "current_value": 56.2,
+        "unrealized_pnl": -1.63,
+        "unrealized_pnl_pct": -2.82,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2322,10 +2330,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890356+00:00",
         "shares": 234.66,
         "entry_usd": 55.42,
-        "current_price": 0.185,
-        "current_value": 43.41,
-        "unrealized_pnl": -12.01,
-        "unrealized_pnl_pct": -21.67,
+        "current_price": 0.175,
+        "current_value": 41.07,
+        "unrealized_pnl": -14.35,
+        "unrealized_pnl_pct": -25.89,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2345,10 +2353,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890443+00:00",
         "shares": 271.05,
         "entry_usd": 53.12,
-        "current_price": 0.195,
-        "current_value": 52.85,
-        "unrealized_pnl": -0.27,
-        "unrealized_pnl_pct": -0.51,
+        "current_price": 0.205,
+        "current_value": 55.57,
+        "unrealized_pnl": 2.45,
+        "unrealized_pnl_pct": 4.61,
         "edge_score_at_entry": 16.5,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2391,10 +2399,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.26,
-        "current_value": 50.53,
-        "unrealized_pnl": 1.7,
-        "unrealized_pnl_pct": 3.48,
+        "current_price": 0.255,
+        "current_value": 49.56,
+        "unrealized_pnl": 0.73,
+        "unrealized_pnl_pct": 1.49,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2419,10 +2427,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.095,
-        "current_value": 55.14,
-        "unrealized_pnl": 2.64,
-        "unrealized_pnl_pct": 5.03,
+        "current_price": 0.105,
+        "current_value": 60.95,
+        "unrealized_pnl": 8.45,
+        "unrealized_pnl_pct": 16.1,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2442,10 +2450,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
         "shares": 776.27,
         "entry_usd": 50.71,
-        "current_price": 0.065,
-        "current_value": 50.46,
-        "unrealized_pnl": -0.25,
-        "unrealized_pnl_pct": -0.49,
+        "current_price": 0.055,
+        "current_value": 42.69,
+        "unrealized_pnl": -8.02,
+        "unrealized_pnl_pct": -15.82,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2465,10 +2473,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.0425,
-        "current_value": 30.92,
-        "unrealized_pnl": -18.07,
-        "unrealized_pnl_pct": -36.89,
+        "current_price": 0.0435,
+        "current_value": 31.65,
+        "unrealized_pnl": -17.34,
+        "unrealized_pnl_pct": -35.39,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2488,10 +2496,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890948+00:00",
         "shares": 448.52,
         "entry_usd": 47.33,
-        "current_price": 0.085,
-        "current_value": 38.12,
-        "unrealized_pnl": -9.21,
-        "unrealized_pnl_pct": -19.46,
+        "current_price": 0.095,
+        "current_value": 42.61,
+        "unrealized_pnl": -4.72,
+        "unrealized_pnl_pct": -9.97,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2534,10 +2542,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.891113+00:00",
         "shares": 602.33,
         "entry_usd": 44.19,
-        "current_price": 0.075,
-        "current_value": 45.17,
-        "unrealized_pnl": 0.98,
-        "unrealized_pnl_pct": 2.22,
+        "current_price": 0.0735,
+        "current_value": 44.27,
+        "unrealized_pnl": 0.08,
+        "unrealized_pnl_pct": 0.18,
         "edge_score_at_entry": 26.2,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2583,10 +2591,10 @@
         "entry_timestamp": "2026-03-02T23:51:23.659382+00:00",
         "shares": 327.27,
         "entry_usd": 21.05,
-        "current_price": 0.054,
-        "current_value": 17.67,
-        "unrealized_pnl": -3.38,
-        "unrealized_pnl_pct": -16.06,
+        "current_price": 0.0705,
+        "current_value": 23.07,
+        "unrealized_pnl": 2.02,
+        "unrealized_pnl_pct": 9.6,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2610,10 +2618,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399185+00:00",
         "shares": 247.67,
         "entry_usd": 13.69,
-        "current_price": 0.055,
-        "current_value": 13.62,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.065,
+        "current_value": 16.1,
+        "unrealized_pnl": 2.41,
+        "unrealized_pnl_pct": 17.6,
         "edge_score_at_entry": 32.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2637,10 +2645,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399377+00:00",
         "shares": 269.89,
         "entry_usd": 28.48,
-        "current_price": 0.105,
-        "current_value": 28.34,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.095,
+        "current_value": 25.64,
+        "unrealized_pnl": -2.84,
+        "unrealized_pnl_pct": -9.97,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -2648,7 +2656,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 29,
+        "days_to_close": 28,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 9.5,
         "slug": "will-bitcoin-reach-85k-in-march-2026"
@@ -2664,10 +2672,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399552+00:00",
         "shares": 335.22,
         "entry_usd": 19.54,
-        "current_price": 0.058,
-        "current_value": 19.44,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.0555,
+        "current_value": 18.6,
+        "unrealized_pnl": -0.94,
+        "unrealized_pnl_pct": -4.81,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2691,10 +2699,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399815+00:00",
         "shares": 180.62,
         "entry_usd": 19.06,
-        "current_price": 0.105,
-        "current_value": 18.97,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.14,
+        "current_value": 25.29,
+        "unrealized_pnl": 6.23,
+        "unrealized_pnl_pct": 32.69,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2717,65 +2725,65 @@
     "by_category": {
       "": {
         "count": 34,
-        "avg_edge": 23.6
+        "avg_edge": 23.5
       }
     },
     "by_convexity": {
       "20x": {
         "count": 18,
-        "total_liquidity": 2537322.1140099997,
+        "total_liquidity": 2447046.03793,
         "avg_edge": 23.2
       },
       "10x": {
-        "count": 9,
-        "total_liquidity": 567595.44958,
-        "avg_edge": 23.9
-      },
-      "5x": {
-        "count": 4,
-        "total_liquidity": 727148.5178200001,
+        "count": 8,
+        "total_liquidity": 501723.26952000003,
         "avg_edge": 24.2
       },
+      "5x": {
+        "count": 6,
+        "total_liquidity": 877693.0742100001,
+        "avg_edge": 23.3
+      },
       "2x": {
-        "count": 3,
-        "total_liquidity": 174845.67089,
-        "avg_edge": 24.6
+        "count": 2,
+        "total_liquidity": 91508.46799,
+        "avg_edge": 24.8
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 120,
-      "tokens_with_signal": 34,
-      "coverage_pct": 28.3,
-      "avg_score": 9.66,
+      "tokens_scored": 121,
+      "tokens_with_signal": 36,
+      "coverage_pct": 29.8,
+      "avg_score": 9.49,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 120,
+      "tokens_scored": 121,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
       "max_score": 0,
-      "quality_traders": 54,
+      "quality_traders": 53,
       "markets_indexed": 0
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 120,
+      "tokens_scored": 121,
       "tokens_with_signal": 105,
-      "coverage_pct": 87.5,
-      "avg_score": 7.6,
+      "coverage_pct": 86.8,
+      "avg_score": 7.18,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 120,
-      "tokens_with_signal": 120,
+      "tokens_scored": 121,
+      "tokens_with_signal": 121,
       "coverage_pct": 100.0,
-      "avg_score": 1.37,
+      "avg_score": 1.36,
       "max_score": 6.42
     }
   },
