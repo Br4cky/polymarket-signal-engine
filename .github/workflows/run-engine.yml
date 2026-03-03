@@ -48,10 +48,13 @@ jobs:
       # Deploy dashboard to Netlify via API (no build minutes consumed)
       # Only uploads the files the dashboard actually needs
       - name: Deploy to Netlify (API)
-        if: ${{ secrets.NETLIFY_SITE_ID != '' }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
+          if [ -z "$NETLIFY_SITE_ID" ] || [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "Netlify secrets not set, skipping deploy"
+            exit 0
+          fi
           npm install -g netlify-cli
           netlify deploy --prod --dir=. --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --message="engine update $(date -u +%H:%M)"
