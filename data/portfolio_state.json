@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2495,
-        "current_value": 81.0,
-        "unrealized_pnl": 9.22,
-        "unrealized_pnl_pct": 12.84,
+        "current_price": 0.217,
+        "current_value": 70.45,
+        "unrealized_pnl": -1.33,
+        "unrealized_pnl_pct": -1.85,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -62,10 +62,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
         "shares": 390.68,
         "entry_usd": 68.71,
-        "current_price": 0.195,
-        "current_value": 76.18,
-        "unrealized_pnl": 7.47,
-        "unrealized_pnl_pct": 10.87,
+        "current_price": 0.19,
+        "current_value": 74.23,
+        "unrealized_pnl": 5.52,
+        "unrealized_pnl_pct": 8.03,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -200,10 +200,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.255,
-        "current_value": 49.56,
-        "unrealized_pnl": 0.73,
-        "unrealized_pnl_pct": 1.49,
+        "current_price": 0.265,
+        "current_value": 51.5,
+        "unrealized_pnl": 2.67,
+        "unrealized_pnl_pct": 5.47,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -226,10 +226,10 @@
         "entry_timestamp": "2026-03-03T06:03:06.028603+00:00",
         "shares": 155.48,
         "entry_usd": 33.83,
-        "current_price": 0.266,
-        "current_value": 41.36,
-        "unrealized_pnl": 7.53,
-        "unrealized_pnl_pct": 22.26,
+        "current_price": 0.267,
+        "current_value": 41.51,
+        "unrealized_pnl": 7.68,
+        "unrealized_pnl_pct": 22.7,
         "edge_score_at_entry": 29.3,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -307,10 +307,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.202716+00:00",
         "shares": 158.04,
         "entry_usd": 32.56,
-        "current_price": 0.27,
-        "current_value": 42.67,
-        "unrealized_pnl": 10.11,
-        "unrealized_pnl_pct": 31.05,
+        "current_price": 0.265,
+        "current_value": 41.88,
+        "unrealized_pnl": 9.32,
+        "unrealized_pnl_pct": 28.62,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -388,10 +388,10 @@
         "entry_timestamp": "2026-03-03T11:05:09.342986+00:00",
         "shares": 44.37,
         "entry_usd": 9.81,
-        "current_price": 0.21,
-        "current_value": 9.32,
-        "unrealized_pnl": -0.49,
-        "unrealized_pnl_pct": -4.99,
+        "current_price": 0.225,
+        "current_value": 9.98,
+        "unrealized_pnl": 0.17,
+        "unrealized_pnl_pct": 1.73,
         "edge_score_at_entry": 37.9,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -751,6 +751,10 @@
       {
         "timestamp": "2026-03-03T22:36:51.481469+00:00",
         "equity": 2467.47
+      },
+      {
+        "timestamp": "2026-03-03T23:03:19.311187+00:00",
+        "equity": 2456.93
       }
     ]
   },
@@ -758,7 +762,7 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 1991.42,
+    "available_cash": 1974.93,
     "positions": [
       {
         "position_id": "08b5e8ca",
@@ -912,10 +916,10 @@
         "entry_timestamp": "2026-03-02T23:51:23.659382+00:00",
         "shares": 327.27,
         "entry_usd": 21.05,
-        "current_price": 0.0485,
-        "current_value": 15.87,
-        "unrealized_pnl": -5.18,
-        "unrealized_pnl_pct": -24.61,
+        "current_price": 0.045,
+        "current_value": 14.73,
+        "unrealized_pnl": -6.32,
+        "unrealized_pnl_pct": -30.02,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -939,10 +943,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399185+00:00",
         "shares": 247.67,
         "entry_usd": 13.69,
-        "current_price": 0.0295,
-        "current_value": 7.31,
-        "unrealized_pnl": -6.38,
-        "unrealized_pnl_pct": -46.6,
+        "current_price": 0.03,
+        "current_value": 7.43,
+        "unrealized_pnl": -6.26,
+        "unrealized_pnl_pct": -45.73,
         "edge_score_at_entry": 32.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -993,10 +997,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399552+00:00",
         "shares": 335.22,
         "entry_usd": 19.54,
-        "current_price": 0.048,
-        "current_value": 16.09,
-        "unrealized_pnl": -3.45,
-        "unrealized_pnl_pct": -17.66,
+        "current_price": 0.0455,
+        "current_value": 15.25,
+        "unrealized_pnl": -4.29,
+        "unrealized_pnl_pct": -21.95,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1074,10 +1078,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.203015+00:00",
         "shares": 477.61,
         "entry_usd": 25.68,
-        "current_price": 0.0405,
-        "current_value": 19.34,
-        "unrealized_pnl": -6.34,
-        "unrealized_pnl_pct": -24.69,
+        "current_price": 0.041,
+        "current_value": 19.58,
+        "unrealized_pnl": -6.1,
+        "unrealized_pnl_pct": -23.75,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -1101,10 +1105,10 @@
         "entry_timestamp": "2026-03-03T15:10:56.758017+00:00",
         "shares": 88.22,
         "entry_usd": 8.29,
-        "current_price": 0.266,
-        "current_value": 23.47,
-        "unrealized_pnl": 15.18,
-        "unrealized_pnl_pct": 183.11,
+        "current_price": 0.273,
+        "current_value": 24.08,
+        "unrealized_pnl": 15.79,
+        "unrealized_pnl_pct": 190.47,
         "edge_score_at_entry": 31.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1155,10 +1159,10 @@
         "entry_timestamp": "2026-03-03T21:08:36.020825+00:00",
         "shares": 167.36,
         "entry_usd": 16.82,
-        "current_price": 0.0885,
-        "current_value": 14.81,
-        "unrealized_pnl": -2.01,
-        "unrealized_pnl_pct": -11.95,
+        "current_price": 0.093,
+        "current_value": 15.56,
+        "unrealized_pnl": -1.26,
+        "unrealized_pnl_pct": -7.49,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1197,6 +1201,33 @@
         "resolution_date": "2026-03-10T18:00:00Z",
         "potential_multiple": 9.5,
         "slug": "atp-vukic-prizmic-2026-03-03"
+      },
+      {
+        "position_id": "58f623bb",
+        "market_id": "1394368",
+        "question": "Will the U.S. invade Iran by March 31?",
+        "token_id": "60396150294056475674860934419619480139938118116601719506967369709790058295210",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0593,
+        "entry_timestamp": "2026-03-03T23:03:19.311481+00:00",
+        "shares": 278.1,
+        "entry_usd": 16.49,
+        "current_price": 0.059,
+        "current_value": 16.41,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close": 27,
+        "resolution_date": "2026-03-31T00:00:00Z",
+        "potential_multiple": 16.9,
+        "slug": "will-the-us-invade-iran-by-march-31"
       }
     ],
     "realized_trades": [
@@ -1347,9 +1378,13 @@
       {
         "timestamp": "2026-03-03T22:36:51.481338+00:00",
         "equity": 2503.89
+      },
+      {
+        "timestamp": "2026-03-03T23:03:19.311248+00:00",
+        "equity": 2503.63
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-03T22:36:51.481912+00:00"
+  "last_updated": "2026-03-03T23:03:19.311843+00:00"
 }
