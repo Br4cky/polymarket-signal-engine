@@ -92,8 +92,8 @@ class SignalLogger:
             f"📊 {opportunity.get('question', '')[:100]}\n"
             f"💰 BUY {position.get('outcome', '')} "
             f"${position.get('entry_usd', 0):.2f} @ {position.get('entry_price', 0):.4f}\n"
-            f"🎯 Band: {position.get('convexity_band', '')} | "
-            f"Edge: {position.get('edge_score_at_entry', 0):.1f}"
+            f"🎯 Edge: {position.get('edge_score_at_entry', 0):.1f} "
+            f"[{position.get('edge_tier_at_entry', 'low')}]"
         )
 
         self._append({
@@ -150,16 +150,13 @@ class SignalLogger:
 
     def log_summary(self, portfolio_sum: dict):
         """Log end-of-run portfolio snapshot."""
-        fa = portfolio_sum.get('fund_a', {})
-        fb = portfolio_sum.get('fund_b', {})
+        pool = portfolio_sum.get('pool', {})
 
         message = (
             f"📈 Portfolio Update\n"
-            f"Combined: ${portfolio_sum.get('combined_equity', 0):.2f} "
+            f"Equity: ${portfolio_sum.get('combined_equity', 0):.2f} "
             f"({portfolio_sum.get('combined_pnl_pct', 0):+.1f}%)\n"
-            f"5x Fund: ${fa.get('equity', 0):.2f} | "
-            f"10x Fund: ${fb.get('equity', 0):.2f}\n"
-            f"Open: {fa.get('open_positions', 0) + fb.get('open_positions', 0)} | "
+            f"Open: {portfolio_sum.get('open_positions', 0)} | "
             f"Win rate: {portfolio_sum.get('combined_win_rate', 0):.0%}"
         )
 
@@ -169,9 +166,7 @@ class SignalLogger:
             'combined_pnl': portfolio_sum.get('combined_pnl', 0),
             'combined_pnl_pct': portfolio_sum.get('combined_pnl_pct', 0),
             'combined_win_rate': portfolio_sum.get('combined_win_rate', 0),
-            'fund_a_equity': fa.get('equity', 0),
-            'fund_b_equity': fb.get('equity', 0),
-            'open_positions': fa.get('open_positions', 0) + fb.get('open_positions', 0),
+            'open_positions': portfolio_sum.get('open_positions', 0),
             'closed_trades': portfolio_sum.get('combined_total_trades', 0),
             'message': message,
         })

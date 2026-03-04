@@ -1,6 +1,7 @@
 """
 Composite Scorer — Combines all 4 layers into a single edge score.
-Ranks opportunities and filters by convexity band and liquidity.
+Ranks opportunities by mispricing magnitude. No band routing — all markets
+compete in a single pool.
 """
 
 import logging
@@ -32,33 +33,13 @@ def compute_edge_score(
 ) -> dict:
     """
     Compute the composite edge score for a market token across all 4 layers.
-
-    Parameters:
-        token: {token_id, outcome, current_price, bid, ask, bid_depth, ask_depth, spread_pct}
-        market: {market_id, question, tokens, volume_24h, volume_total, liquidity, resolution_date}
-        price_history: [{timestamp, price}, ...]
-        kalshi_price: matched Kalshi price or None
-        smart_money: output from WhaleTracker.compute_smart_money_score()
-        external: output from NewsSignals.compute_external_score()
-        config: scoring section of config.json
-        manifold_prob: matched Manifold Markets probability or None
-
-    Returns: dict with layer scores, composite edge score (0-100), and classification
+    Returns: dict with layer scores, composite edge score (0-100), and classification.
     """
     current_price = safe_float(token.get('current_price', 0))
 
-    # Layer weights rationale:
-    #   Dislocation (45%): Hardest data — price velocity, volume anomalies,
-    #     order book depth, trajectory, time decay. Most reliable & data-rich.
-    #   Structural (20%): Mathematically sound (arb checks, cross-platform
-    #     divergence) but narrow — only fires on specific conditions.
-    #   Smart Money (20%): Directional confirmation from quality traders.
-    #     Valuable as conviction signal but should confirm, not drive.
-    #   External (15%): News/trends keyword matching. Fuzziest signal,
-    #     useful for spotting catalysts but lowest confidence.
     weights = config.get('scoring', {}).get('layer_weights', {
-        'structural': 0.20, 'smart_money': 0.20,
-        'dislocation': 0.45, 'external': 0.15
+        'structural': 0.25, 'smart_money': 0.15,
+        'dislocation': 0.50, 'external': 0.10
     })
 
     # ── Layer 1: Structural (0-30) ──
@@ -90,8 +71,6 @@ def compute_edge_score(
     external_total = safe_float(external.get('external_total', 0))
 
     # ── Composite Score ──
-    # Each layer normalised to its max, weighted, then rescaled
-    # so the score reflects only layers that have data
     max_structural = 30.0
     max_smart_money = 25.0
     max_dislocation = 30.0
@@ -102,33 +81,27 @@ def compute_edge_score(
     dislocation_norm = dislocation['dislocation_total'] / max_dislocation
     external_norm = external_total / max_external
 
-    # Track which layers have data so we can rescale
     layers = [
-        (structural_norm, weights.get('structural', 0.30), structural['structural_total'] > 0),
-        (smart_money_norm, weights.get('smart_money', 0.25), smart_money_total > 0),
-        (dislocation_norm, weights.get('dislocation', 0.30), dislocation['dislocation_total'] > 0),
-        (external_norm, weights.get('external', 0.15), external_total > 0),
+        (structural_norm, weights.get('structural', 0.25), structural['structural_total'] > 0),
+        (smart_money_norm, weights.get('smart_money', 0.15), smart_money_total > 0),
+        (dislocation_norm, weights.get('dislocation', 0.50), dislocation['dislocation_total'] > 0),
+        (external_norm, weights.get('external', 0.10), external_total > 0),
     ]
 
     active_weight = sum(w for _, w, active in layers if active)
     total_weight = sum(w for _, w, _ in layers)
-
     weighted = sum(norm * w for norm, w, _ in layers)
 
-    # Rescale: if only 60% of weight has data, scale up proportionally
-    # so a perfect score on active layers still reaches ~100
     if active_weight > 0:
         weighted = weighted * (total_weight / active_weight)
 
-    # Scale to 0-100
     edge_score = round(min(100.0, weighted * 100.0), 1)
 
     # ── Market Age Bonus (repricing strategy) ──
-    # Newer markets have more mispricing; add up to +5 pts directly
     age_bonus = compute_market_age_bonus(created_at)
     edge_score = round(min(100.0, edge_score + age_bonus), 1)
 
-    # ── Classification ──
+    # ── Classification (metadata only — does NOT drive trading decisions) ──
     convexity = classify_convexity(current_price, token.get('outcome', 'YES'))
 
     return {
@@ -169,28 +142,15 @@ def rank_opportunities(
     config: dict
 ) -> List[dict]:
     """
-    Filter and rank all scored market tokens into a list of opportunities.
+    Filter and rank all scored market tokens into tradeable opportunities.
 
-    Filters:
-    - Edge score above threshold
-    - Minimum liquidity
-    - Minimum days to close
-    - Valid convexity band (not 'invalid')
-    - Only 5x and 10x bands (per fund structure)
-
-    Returns sorted list, highest edge score first.
+    Single pool — no band routing. All markets above edge threshold with
+    sufficient liquidity enter the pool, ranked by edge score.
     """
-    threshold = config.get('scoring', {}).get('edge_threshold', 50)
+    threshold = config.get('scoring', {}).get('edge_threshold', 20)
     min_liquidity = config.get('trading', {}).get('min_liquidity_usd', 500)
-    min_days = config.get('trading', {}).get('min_days_to_close', 2)
-    max_days = config.get('trading', {}).get('max_days_to_close', 999)
-
-    # Bands we're trading (collect from all funds)
-    active_bands = set()
-    for fund_key in ['fund_a', 'fund_b']:
-        fund = config.get('funds', {}).get(fund_key, {})
-        for b in fund.get('bands', [fund.get('band', '')]):
-            active_bands.add(b)
+    min_days = config.get('trading', {}).get('min_days_to_close', 1)
+    max_days = config.get('trading', {}).get('max_days_to_close', 20)
 
     opportunities = []
 
@@ -203,20 +163,14 @@ def rank_opportunities(
         layer_scores = scores.get('layer_scores', {})
 
         # ── Dynamic threshold by layer composition ──
-        # Dislocation signals are fleeting (hours); structural signals are durable (weeks).
-        # If most of the edge comes from dislocation, require higher overall score
-        # because the signal will decay before we can profit.
         effective_threshold = threshold
         if edge > 0:
             dislocation_pct = layer_scores.get('dislocation', 0) / edge * 100
             structural_score = layer_scores.get('structural', 0)
-            smart_money_score = layer_scores.get('smart_money', 0)
 
             if dislocation_pct > 65:
-                # Mostly dislocation — signal is volatile, need higher bar
                 effective_threshold = max(threshold, threshold * 1.30)
             elif structural_score > 8:
-                # Strong structural divergence — reliable repricing signal
                 effective_threshold = max(threshold * 0.80, 10)
 
         if edge < effective_threshold:
@@ -229,36 +183,16 @@ def rank_opportunities(
         days = scores.get('days_to_close', 999)
         if days < min_days:
             continue
-
-        # Skip markets that settle too far in the future
         if days > max_days:
             continue
 
+        # Convexity band is metadata only — still useful for dashboard display
         convexity = scores.get('convexity', {})
-        band = convexity.get('band', 'invalid')
-
+        band = convexity.get('band', 'unknown')
         if band == 'invalid':
             continue
 
-        # ── Strict convexity entry gate ──
-        # Reject prices that don't deliver adequate multiple for their band.
-        # A "10x" token at 0.11 only delivers 9x — that's not 10x.
         current_price = safe_float(token.get('current_price', 0))
-        min_multiples = {'20x': 18.0, '10x': 9.5, '5x': 4.5}
-        min_mult = min_multiples.get(band, 0)
-        if min_mult > 0 and current_price > 0:
-            actual_mult = 1.0 / current_price
-            if actual_mult < min_mult:
-                continue  # Price too high for this band's promised convexity
-
-        # Determine which fund this belongs to (if any)
-        fund_assignment = None
-        for fund_key in ['fund_a', 'fund_b']:
-            fund = config.get('funds', {}).get(fund_key, {})
-            fund_bands = set(fund.get('bands', [fund.get('band', '')]))
-            if band in fund_bands:
-                fund_assignment = fund_key
-                break
 
         opportunities.append({
             'market_id': market.get('market_id', ''),
@@ -267,7 +201,7 @@ def rank_opportunities(
             'slug': market.get('slug', ''),
             'token_id': token.get('token_id', ''),
             'outcome': token.get('outcome', ''),
-            'current_price': safe_float(token.get('current_price', 0)),
+            'current_price': current_price,
             'bid': safe_float(token.get('bid', 0)),
             'ask': safe_float(token.get('ask', 0)),
             'spread_pct': safe_float(token.get('spread_pct', 0)),
@@ -283,7 +217,6 @@ def rank_opportunities(
             'resolution_date': market.get('resolution_date', ''),
             'liquidity_usd': liquidity,
             'volume_24h': safe_float(market.get('volume_24h', 0)),
-            'fund_assignment': fund_assignment,
             'recommended_action': 'BUY',
             'timestamp': datetime.now(timezone.utc).isoformat()
         })
@@ -292,13 +225,9 @@ def rank_opportunities(
 
     # ── Conflict filter ──
     # Remove opportunities that would create opposing bets on the same asset.
-    # e.g. "Bitcoin reach $85k" is fine alongside "Bitcoin reach $90k" (same direction),
-    # but NOT alongside "Bitcoin dip to $50k" (opposite direction = guaranteed loss on one side).
-    # We keep the highest-edge direction and drop the other.
     pre_filter_count = len(opportunities)
 
-    # Group by underlying asset and pick the best direction
-    asset_directions = {}  # {asset: {direction: [opps]}}
+    asset_directions = {}
     for opp in opportunities:
         question = opp.get('question', '')
         opp['base_event'] = extract_base_event(question, opp.get('slug', ''))
@@ -310,13 +239,11 @@ def rank_opportunities(
             continue
         asset_directions.setdefault(asset, {}).setdefault(direction, []).append(opp)
 
-    # For each asset with both bullish AND bearish bets, drop the weaker direction
     blocked_opps = set()
     for asset, dirs in asset_directions.items():
         if 'bullish' in dirs and 'bearish' in dirs:
             bull_best = max(o['edge_score'] for o in dirs['bullish'])
             bear_best = max(o['edge_score'] for o in dirs['bearish'])
-            # Block the weaker direction
             loser = 'bearish' if bull_best >= bear_best else 'bullish'
             for opp in dirs[loser]:
                 blocked_opps.add(id(opp))
@@ -335,8 +262,7 @@ def rank_opportunities(
         )
 
     logger.info(
-        f"Ranked {len(opportunities)} opportunities "
-        f"(threshold={threshold}, bands={active_bands})"
+        f"Ranked {len(opportunities)} opportunities (threshold={threshold})"
     )
 
     return opportunities

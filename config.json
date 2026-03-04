@@ -44,52 +44,44 @@
       "dislocation": 0.50,
       "external": 0.10
     },
-    "edge_threshold": 25,
+    "edge_threshold": 20,
     "strong_signal_threshold": 45
   },
   "funds": {
-    "fund_a": {
-      "name": "5x Hunter",
-      "band": "5x",
-      "bands": ["5x"],
-      "price_range": [0.15, 0.25],
-      "capital": 2500
-    },
-    "fund_b": {
-      "name": "10x+ Hunter",
-      "band": "10x",
-      "bands": ["10x", "20x"],
-      "price_range": [0.01, 0.12],
-      "capital": 2500
+    "main_pool": {
+      "name": "Repricing Engine",
+      "capital": 5000
     }
   },
   "portfolio": {
     "total_capital": 5000,
-    "max_positions_per_fund": 50,
+    "max_positions": 50,
     "max_position_size_pct": 4,
     "kelly_fraction": 0.4
   },
   "trading": {
-    "profit_targets": {
-      "20x": 70,
-      "10x": 45,
-      "5x": 35,
-      "2x": 20,
-      "yield": 15
-    },
-    "stop_losses": {
-      "20x": -35,
-      "10x": -30,
-      "5x": -25,
-      "2x": -15,
-      "yield": -10
-    },
-    "max_hold_days": {
-      "20x": 3,
-      "10x": 4,
-      "5x": 5,
-      "2x": 6,
-      "yield": 7
+    "edge_tiers": {
+      "high": {
+        "min_edge": 40,
+        "size_multiplier": 1.3,
+        "profit_target_pct": 35,
+        "stop_loss_pct": -25,
+        "max_hold_days": 7
+      },
+      "medium": {
+        "min_edge": 30,
+        "size_multiplier": 1.0,
+        "profit_target_pct": 25,
+        "stop_loss_pct": -20,
+        "max_hold_days": 5
+      },
+      "low": {
+        "min_edge": 20,
+        "size_multiplier": 0.6,
+        "profit_target_pct": 15,
+        "stop_loss_pct": -15,
+        "max_hold_days": 3
+      }
     },
     "min_liquidity_usd": 500,
     "min_days_to_close": 1,

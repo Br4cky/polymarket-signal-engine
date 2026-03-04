@@ -36,17 +36,13 @@
   .negative { color: var(--red); }
   .neutral { color: var(--text2); }
 
-  .fund-card { padding: 20px; }
-  .fund-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-  .fund-name { font-size: 16px; font-weight: 600; }
-  .fund-band { font-size: 12px; padding: 2px 8px; border-radius: 12px; font-weight: 500; }
-  .band-5x { background: rgba(88,166,255,0.15); color: var(--blue); }
-  .band-10x { background: rgba(188,140,255,0.15); color: var(--purple); }
-  .fund-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-  .fund-stat-label { font-size: 11px; color: var(--text2); }
-  .fund-stat-value { font-size: 18px; font-weight: 600; }
+  .edge-tier-card { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .edge-tier-header { font-size: 14px; font-weight: 600; }
+  .edge-tier-stat { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .edge-tier-stat-label { font-size: 12px; color: var(--text2); }
+  .edge-tier-stat-value { font-size: 18px; font-weight: 600; }
 
-  .equity-chart { width: 100%; height: 120px; margin-top: 12px; }
+  .equity-chart { width: 100%; height: 160px; margin-top: 12px; }
 
   .section-title { font-size: 16px; font-weight: 600; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
   .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--text2); font-weight: 500; }
@@ -116,12 +112,16 @@
   .pie-legend-item { display: flex; align-items: center; gap: 4px; }
   .pie-legend-dot { width: 10px; height: 10px; border-radius: 2px; }
 
+  .edge-tier-high { border-left: 3px solid var(--green); }
+  .edge-tier-medium { border-left: 3px solid var(--yellow); }
+  .edge-tier-low { border-left: 3px solid var(--orange); }
+
   @media (max-width: 900px) {
     .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr 1fr; }
     .header { flex-direction: column; gap: 8px; }
   }
   @media (max-width: 600px) {
-    .grid-6 { grid-template-columns: 1fr; }
+    .grid-3, .grid-6 { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -177,43 +177,48 @@
   </div>
 </div>
 
-<!-- Fund Comparison -->
-<div class="section-title">Fund Comparison</div>
-<div class="grid grid-2">
-  <div class="card fund-card" id="fund-a-card">
-    <div class="fund-header">
-      <span class="fund-name" id="fund-a-name">Fund A</span>
-      <span class="fund-band band-5x" id="fund-a-band">5x Band</span>
+<!-- Edge Tier Breakdown -->
+<div class="section-title">Conviction Levels</div>
+<div class="grid grid-3">
+  <div class="card edge-tier-card edge-tier-high" id="edge-high-tier">
+    <div class="edge-tier-header">High Conviction</div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Open Positions</span>
+      <span class="edge-tier-stat-value" id="high-pos-count">—</span>
     </div>
-    <div class="fund-stats">
-      <div><div class="fund-stat-label">Equity</div><div class="fund-stat-value" id="fa-equity">—</div></div>
-      <div><div class="fund-stat-label">P&L</div><div class="fund-stat-value" id="fa-pnl">—</div></div>
-      <div><div class="fund-stat-label">Win Rate</div><div class="fund-stat-value" id="fa-winrate">—</div></div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Deployed Equity</span>
+      <span class="edge-tier-stat-value" id="high-pos-equity">—</span>
     </div>
-    <div class="fund-stats" style="margin-top:12px;">
-      <div><div class="fund-stat-label">Open Positions</div><div class="fund-stat-value" id="fa-positions">—</div></div>
-      <div><div class="fund-stat-label">Closed Trades</div><div class="fund-stat-value" id="fa-closed">—</div></div>
-      <div><div class="fund-stat-label">Cash</div><div class="fund-stat-value" id="fa-cash">—</div></div>
-    </div>
-    <canvas id="fa-chart" class="equity-chart"></canvas>
   </div>
-  <div class="card fund-card" id="fund-b-card">
-    <div class="fund-header">
-      <span class="fund-name" id="fund-b-name">Fund B</span>
-      <span class="fund-band band-10x" id="fund-b-band">10x Band</span>
+  <div class="card edge-tier-card edge-tier-medium" id="edge-med-tier">
+    <div class="edge-tier-header">Medium Conviction</div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Open Positions</span>
+      <span class="edge-tier-stat-value" id="med-pos-count">—</span>
     </div>
-    <div class="fund-stats">
-      <div><div class="fund-stat-label">Equity</div><div class="fund-stat-value" id="fb-equity">—</div></div>
-      <div><div class="fund-stat-label">P&L</div><div class="fund-stat-value" id="fb-pnl">—</div></div>
-      <div><div class="fund-stat-label">Win Rate</div><div class="fund-stat-value" id="fb-winrate">—</div></div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Deployed Equity</span>
+      <span class="edge-tier-stat-value" id="med-pos-equity">—</span>
     </div>
-    <div class="fund-stats" style="margin-top:12px;">
-      <div><div class="fund-stat-label">Open Positions</div><div class="fund-stat-value" id="fb-positions">—</div></div>
-      <div><div class="fund-stat-label">Closed Trades</div><div class="fund-stat-value" id="fb-closed">—</div></div>
-      <div><div class="fund-stat-label">Cash</div><div class="fund-stat-value" id="fb-cash">—</div></div>
-    </div>
-    <canvas id="fb-chart" class="equity-chart"></canvas>
   </div>
+  <div class="card edge-tier-card edge-tier-low" id="edge-low-tier">
+    <div class="edge-tier-header">Low Conviction</div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Open Positions</span>
+      <span class="edge-tier-stat-value" id="low-pos-count">—</span>
+    </div>
+    <div class="edge-tier-stat">
+      <span class="edge-tier-stat-label">Deployed Equity</span>
+      <span class="edge-tier-stat-value" id="low-pos-equity">—</span>
+    </div>
+  </div>
+</div>
+
+<!-- Equity Chart -->
+<div class="section-title">Equity Over Time</div>
+<div class="card chart-section">
+  <canvas id="pool-chart" class="equity-chart"></canvas>
 </div>
 
 <!-- Signal Health -->
@@ -304,10 +309,9 @@
         <th onclick="sortTable('opp-table',2)">Price</th>
         <th onclick="sortTable('opp-table',3)">Edge</th>
         <th onclick="sortTable('opp-table',4)">Layers</th>
-        <th onclick="sortTable('opp-table',5)">Band</th>
-        <th onclick="sortTable('opp-table',6)">Multiple</th>
-        <th onclick="sortTable('opp-table',7)">Liquidity</th>
-        <th onclick="sortTable('opp-table',8)">Days</th>
+        <th onclick="sortTable('opp-table',5)">Multiple</th>
+        <th onclick="sortTable('opp-table',6)">Liquidity</th>
+        <th onclick="sortTable('opp-table',7)">Days</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -319,11 +323,6 @@
 
 <!-- Positions -->
 <div class="section-title">Open Positions</div>
-<div class="tabs">
-  <button class="tab active" onclick="showPositions('all',this)">All</button>
-  <button class="tab" onclick="showPositions('fund_a',this)">Fund A</button>
-  <button class="tab" onclick="showPositions('fund_b',this)">Fund B</button>
-</div>
 <div class="card" style="overflow-x:auto;">
   <table id="pos-table">
     <thead>
@@ -336,7 +335,7 @@
         <th>P&L</th>
         <th>If Wins</th>
         <th>If Loses</th>
-        <th>Fund</th>
+        <th>Edge Tier</th>
         <th>Opened</th>
         <th>Closes In</th>
       </tr>
@@ -360,7 +359,6 @@
         <th>Exit</th>
         <th>P&L</th>
         <th>Return</th>
-        <th>Fund</th>
         <th>Closed</th>
       </tr>
     </thead>
@@ -396,7 +394,6 @@
 
 <script>
 let DATA = null;
-let currentPositionFilter = 'all';
 let currentWinRateFilter = 'all';
 let currentPnlPeriod = 'daily';
 
@@ -422,7 +419,7 @@ function render() {
   if (!DATA) return;
   renderMeta();
   renderOverview();
-  renderFunds();
+  renderEdgeTiers();
   renderLayerHealth();
   renderPieChart();
   renderPnlChart();
@@ -453,17 +450,15 @@ function renderOverview() {
   setText('combined-pnl', `${pnl >= 0 ? '+' : ''}${money(pnl)} total P&L`, pnl >= 0 ? 'positive' : 'negative');
 
   // Open positions KPI
-  const posA = DATA.positions?.fund_a?.length || 0;
-  const posB = DATA.positions?.fund_b?.length || 0;
-  const totalPos = posA + posB;
+  const allPos = DATA.positions || [];
+  const totalPos = allPos.length;
   setText('open-pos-count', totalPos);
-  setText('open-pos-sub', `Fund A: ${posA} · Fund B: ${posB}`);
+  setText('open-pos-sub', `${totalPos} total positions`);
 
   // Win rate (filterable)
   renderWinRate();
 
   // Unrealised P&L
-  const allPos = [...(DATA.positions?.fund_a || []), ...(DATA.positions?.fund_b || [])];
   const unrealised = allPos.reduce((sum, pos) => sum + (pos.unrealized_pnl || 0), 0);
   setText('unrealised-pnl', `${unrealised >= 0 ? '+' : ''}${money(unrealised)}`,
     unrealised >= 0 ? 'positive' : 'negative');
@@ -482,10 +477,31 @@ function renderOverview() {
   }
 }
 
+function renderEdgeTiers() {
+  const allPos = DATA.positions || [];
+
+  // Categorize by edge score at entry
+  const high = allPos.filter(p => (p.edge_score_at_entry || 0) >= 40);
+  const medium = allPos.filter(p => {
+    const e = p.edge_score_at_entry || 0;
+    return e >= 30 && e < 40;
+  });
+  const low = allPos.filter(p => (p.edge_score_at_entry || 0) < 30);
+
+  const highEquity = high.reduce((sum, p) => sum + (p.current_value || 0), 0);
+  const medEquity = medium.reduce((sum, p) => sum + (p.current_value || 0), 0);
+  const lowEquity = low.reduce((sum, p) => sum + (p.current_value || 0), 0);
+
+  setText('high-pos-count', high.length);
+  setText('high-pos-equity', money(highEquity));
+  setText('med-pos-count', medium.length);
+  setText('med-pos-equity', money(medEquity));
+  setText('low-pos-count', low.length);
+  setText('low-pos-equity', money(lowEquity));
+}
+
 function getAllTrades() {
-  const a = DATA.realized_trades?.fund_a || [];
-  const b = DATA.realized_trades?.fund_b || [];
-  return [...a, ...b];
+  return DATA.realized_trades || [];
 }
 
 function renderWinRate() {
@@ -512,24 +528,6 @@ function setWinRateFilter(period, btn) {
   document.querySelectorAll('#winrate-filter .kpi-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderWinRate();
-}
-
-function renderFunds() {
-  const p = DATA.portfolio || {};
-  for (const [key, prefix] of [['fund_a','fa'], ['fund_b','fb']]) {
-    const f = p[key] || {};
-    document.getElementById(`${prefix === 'fa' ? 'fund-a' : 'fund-b'}-name`).textContent = f.name || key;
-    const bandEl = document.getElementById(`${prefix === 'fa' ? 'fund-a' : 'fund-b'}-band`);
-    bandEl.textContent = (f.band || '?') + ' Band';
-
-    setText(`${prefix}-equity`, money(f.equity));
-    const pnl = f.pnl || 0;
-    setText(`${prefix}-pnl`, `${pnl >= 0 ? '+' : ''}${money(pnl)}`, pnl >= 0 ? 'positive' : 'negative');
-    setText(`${prefix}-winrate`, f.win_rate != null ? pct(f.win_rate) : '—');
-    setText(`${prefix}-positions`, f.open_positions || 0);
-    setText(`${prefix}-closed`, f.closed_trades || 0);
-    setText(`${prefix}-cash`, money(f.cash));
-  }
 }
 
 function renderLayerHealth() {
@@ -597,7 +595,6 @@ function renderOpportunities() {
     const layers = o.layer_scores || {};
     const slug = o.slug || '';
     const link = slug ? `https://polymarket.com/event/${slug}` : '#';
-
     tr.innerHTML = `
       <td><a class="question-link" href="${link}" target="_blank" title="${esc(o.question)}">${esc(trunc(o.question, 50))}</a></td>
       <td>${o.outcome || '—'}</td>
@@ -607,7 +604,6 @@ function renderOpportunities() {
         <span style="font-weight:600;color:${edgeColor(o.edge_score)}">${o.edge_score.toFixed(1)}</span>
       </div></td>
       <td>${layerBars(layers)}</td>
-      <td><span class="fund-band ${o.convexity_band === '5x' ? 'band-5x' : 'band-10x'}">${o.convexity_band}</span></td>
       <td>${(o.potential_multiple || 0).toFixed(1)}x</td>
       <td>$${fmt(o.liquidity_usd)}</td>
       <td>${o.days_to_close || '—'}d</td>
@@ -617,12 +613,7 @@ function renderOpportunities() {
 }
 
 function renderPositions() {
-  const pos_a = (DATA.positions?.fund_a || []).map(p => ({...p, fund: 'Fund A'}));
-  const pos_b = (DATA.positions?.fund_b || []).map(p => ({...p, fund: 'Fund B'}));
-  let all = [...pos_a, ...pos_b];
-
-  if (currentPositionFilter === 'fund_a') all = pos_a;
-  else if (currentPositionFilter === 'fund_b') all = pos_b;
+  const all = DATA.positions || [];
 
   const tbody = document.querySelector('#pos-table tbody');
   tbody.innerHTML = '';
@@ -640,6 +631,13 @@ function renderPositions() {
     const link = slug ? `https://polymarket.com/event/${slug}` : '#';
     const daysLeft = p.days_to_close;
     const daysStr = daysLeft != null && daysLeft > 0 ? `${daysLeft}d` : '—';
+
+    // Determine edge tier
+    const edgeScore = p.edge_score_at_entry || 0;
+    let edgeTier = 'Low';
+    if (edgeScore >= 40) edgeTier = 'High';
+    else if (edgeScore >= 30) edgeTier = 'Medium';
+
     const tr = document.createElement('tr');
     tr.className = 'position-row';
     tr.innerHTML = `
@@ -651,7 +649,7 @@ function renderPositions() {
       <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)} (${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(1)}%)</span></td>
       <td><span class="positive">+${money(winProfit)}</span></td>
       <td><span class="negative">${money(ifLoses)}</span></td>
-      <td>${p.fund}</td>
+      <td>${edgeTier}</td>
       <td>${shortDate(p.entry_timestamp)}</td>
       <td>${daysStr}</td>
     `;
@@ -660,9 +658,7 @@ function renderPositions() {
 }
 
 function renderTrades() {
-  const tr_a = (DATA.realized_trades?.fund_a || []).map(t => ({...t, fund: 'Fund A'}));
-  const tr_b = (DATA.realized_trades?.fund_b || []).map(t => ({...t, fund: 'Fund B'}));
-  const all = [...tr_a, ...tr_b].sort((a,b) => (b.exit_timestamp || '').localeCompare(a.exit_timestamp || ''));
+  const all = (DATA.realized_trades || []).sort((a,b) => (b.exit_timestamp || '').localeCompare(a.exit_timestamp || ''));
 
   const tbody = document.querySelector('#trades-table tbody');
   tbody.innerHTML = '';
@@ -680,7 +676,6 @@ function renderTrades() {
       <td>${cents(t.exit_price)}</td>
       <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)}</span></td>
       <td class="${ret >= 0 ? 'positive' : 'negative'}">${ret >= 0 ? '+' : ''}${ret.toFixed(1)}%</td>
-      <td>${t.fund}</td>
       <td>${shortDate(t.exit_timestamp)}</td>
     `;
     tbody.appendChild(tr);
@@ -704,7 +699,7 @@ function renderStatistics() {
   bandTbody.innerHTML = '';
   for (const [band, s] of Object.entries(stats.by_convexity || {})) {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td><span class="fund-band ${band === '5x' ? 'band-5x' : 'band-10x'}">${band}</span></td>
+    tr.innerHTML = `<td>${band}</td>
       <td>${s.count}</td><td>${s.avg_edge}</td><td>$${fmt(s.total_liquidity || 0)}</td>`;
     bandTbody.appendChild(tr);
   }
@@ -723,41 +718,31 @@ function renderPieChart() {
   const w = rect.width, h = rect.height;
   ctx.clearRect(0, 0, w, h);
 
-  const posA = DATA.positions?.fund_a || [];
-  const posB = DATA.positions?.fund_b || [];
-  const cashA = DATA.portfolio?.fund_a?.cash || 0;
-  const cashB = DATA.portfolio?.fund_b?.cash || 0;
+  const allPos = DATA.positions || [];
+  const cash = DATA.portfolio?.pool?.cash || 0;
 
-  // Group by: Fund A positions by band, Fund B positions by band, Cash A, Cash B
+  // Group by convexity band
   const slices = [];
   const colors = {
     '5x': '#58a6ff', '10x': '#bc8cff', '20x': '#f0883e',
-    'cash_a': '#21262d', 'cash_b': '#30363d'
+    'cash': '#21262d'
   };
 
-  // Aggregate position values by fund+band
+  // Aggregate position values by band
   const bandValues = {};
-  for (const p of posA) {
+  for (const p of allPos) {
     const band = p.convexity_band || '5x';
-    const key = `A: ${band}`;
-    bandValues[key] = (bandValues[key] || 0) + (p.current_value || 0);
-  }
-  for (const p of posB) {
-    const band = p.convexity_band || '10x';
-    const key = `B: ${band}`;
-    bandValues[key] = (bandValues[key] || 0) + (p.current_value || 0);
+    bandValues[band] = (bandValues[band] || 0) + (p.current_value || 0);
   }
 
   const colorMap = [];
-  for (const [label, val] of Object.entries(bandValues)) {
+  for (const [band, val] of Object.entries(bandValues)) {
     if (val > 0) {
-      const band = label.split(': ')[1];
-      slices.push({label, value: val});
+      slices.push({label: `${band} Positions`, value: val});
       colorMap.push(colors[band] || '#58a6ff');
     }
   }
-  if (cashA > 0) { slices.push({label: 'Fund A: Cash', value: cashA}); colorMap.push('#1f3a2a'); }
-  if (cashB > 0) { slices.push({label: 'Fund B: Cash', value: cashB}); colorMap.push('#2a1f3a'); }
+  if (cash > 0) { slices.push({label: 'Cash', value: cash}); colorMap.push('#1f3a2a'); }
 
   const total = slices.reduce((s, sl) => s + sl.value, 0);
   if (total === 0) {
@@ -951,12 +936,10 @@ const SPREAD_COLORS = [
 
 function renderMarketSpread() {
   // Collect all markets (open + closed)
-  const openA = (DATA.positions?.fund_a || []);
-  const openB = (DATA.positions?.fund_b || []);
-  const closedA = (DATA.realized_trades?.fund_a || []);
-  const closedB = (DATA.realized_trades?.fund_b || []);
-  const allMarkets = [...openA, ...openB, ...closedA, ...closedB];
-  const openMarkets = [...openA, ...openB];
+  const allPos = DATA.positions || [];
+  const allTrades = DATA.realized_trades || [];
+  const allMarkets = [...allPos, ...allTrades];
+  const openMarkets = allPos;
 
   renderSpreadChart('spread-all-chart', 'spread-all-legend', 'spread-all-count', allMarkets, false);
   renderSpreadChart('spread-open-chart', 'spread-open-legend', 'spread-open-count', openMarkets, true);
@@ -1049,10 +1032,9 @@ function renderSpreadChart(canvasId, legendId, countId, markets, showPnl) {
   }
 }
 
-// ── Mini Equity Charts ──
+// ── Equity Chart ──
 function renderCharts() {
-  drawMiniChart('fa-chart', DATA.portfolio?.fund_a?.equity_history || [], 'rgba(88,166,255,');
-  drawMiniChart('fb-chart', DATA.portfolio?.fund_b?.equity_history || [], 'rgba(188,140,255,');
+  drawMiniChart('pool-chart', DATA.portfolio?.pool?.equity_history || [], 'rgba(88,166,255,');
 }
 
 function drawMiniChart(canvasId, history, rgbPrefix) {
@@ -1157,13 +1139,6 @@ function setText(id, text, cls) {
     const base = el.className.replace(/\s*(positive|negative|neutral)/g, '').trim();
     el.className = (base || 'card-sub') + ' ' + cls;
   }
-}
-
-function showPositions(filter, btn) {
-  currentPositionFilter = filter;
-  document.querySelectorAll('.tabs .tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  renderPositions();
 }
 
 // ── Table Sorting ──
