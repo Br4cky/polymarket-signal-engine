@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1745,
-        "current_value": 74.41,
-        "unrealized_pnl": -0.59,
-        "unrealized_pnl_pct": -0.79,
+        "current_price": 0.178,
+        "current_value": 75.91,
+        "unrealized_pnl": 0.91,
+        "unrealized_pnl_pct": 1.21,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2235,
-        "current_value": 72.56,
-        "unrealized_pnl": 0.78,
-        "unrealized_pnl_pct": 1.09,
+        "current_price": 0.243,
+        "current_value": 78.89,
+        "unrealized_pnl": 7.11,
+        "unrealized_pnl_pct": 9.91,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -62,10 +62,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
         "shares": 390.68,
         "entry_usd": 68.71,
-        "current_price": 0.185,
-        "current_value": 72.28,
-        "unrealized_pnl": 3.57,
-        "unrealized_pnl_pct": 5.2,
+        "current_price": 0.205,
+        "current_value": 80.09,
+        "unrealized_pnl": 11.38,
+        "unrealized_pnl_pct": 16.56,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -85,10 +85,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.095,
-        "current_value": 46.07,
-        "unrealized_pnl": -19.72,
-        "unrealized_pnl_pct": -29.97,
+        "current_price": 0.09,
+        "current_value": 43.64,
+        "unrealized_pnl": -22.15,
+        "unrealized_pnl_pct": -33.67,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -200,10 +200,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.225,
-        "current_value": 43.73,
-        "unrealized_pnl": -5.1,
-        "unrealized_pnl_pct": -10.44,
+        "current_price": 0.245,
+        "current_value": 47.62,
+        "unrealized_pnl": -1.21,
+        "unrealized_pnl_pct": -2.48,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -226,10 +226,10 @@
         "entry_timestamp": "2026-03-03T06:03:06.028603+00:00",
         "shares": 155.48,
         "entry_usd": 33.83,
-        "current_price": 0.255,
-        "current_value": 39.65,
-        "unrealized_pnl": 5.82,
-        "unrealized_pnl_pct": 17.2,
+        "current_price": 0.21,
+        "current_value": 32.65,
+        "unrealized_pnl": -1.18,
+        "unrealized_pnl_pct": -3.49,
         "edge_score_at_entry": 29.3,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -237,7 +237,7 @@
           "dislocation": 10.5,
           "external": 1.0
         },
-        "days_to_close": 28,
+        "days_to_close": 27,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 4.6,
         "slug": "will-bitcoin-dip-to-65k-in-march-2026"
@@ -253,10 +253,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.202319+00:00",
         "shares": 162.39,
         "entry_usd": 24.48,
-        "current_price": 0.245,
-        "current_value": 39.79,
-        "unrealized_pnl": 15.31,
-        "unrealized_pnl_pct": 62.54,
+        "current_price": 0.255,
+        "current_value": 41.41,
+        "unrealized_pnl": 16.93,
+        "unrealized_pnl_pct": 69.16,
         "edge_score_at_entry": 27.9,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -307,10 +307,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.202716+00:00",
         "shares": 158.04,
         "entry_usd": 32.56,
-        "current_price": 0.255,
-        "current_value": 40.3,
-        "unrealized_pnl": 7.74,
-        "unrealized_pnl_pct": 23.77,
+        "current_price": 0.245,
+        "current_value": 38.72,
+        "unrealized_pnl": 6.16,
+        "unrealized_pnl_pct": 18.92,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -318,7 +318,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 28,
+        "days_to_close": 27,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 4.9,
         "slug": "will-bitcoin-reach-80k-in-march-2026"
@@ -345,7 +345,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 28,
+        "days_to_close": 27,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 7.7,
         "slug": "will-bitcoin-dip-to-50k-in-march-2026"
@@ -415,10 +415,10 @@
         "entry_timestamp": "2026-03-03T14:10:05.992253+00:00",
         "shares": 127.88,
         "entry_usd": 19.92,
-        "current_price": 0.25,
-        "current_value": 31.97,
-        "unrealized_pnl": 12.05,
-        "unrealized_pnl_pct": 60.49,
+        "current_price": 0.26,
+        "current_value": 33.25,
+        "unrealized_pnl": 13.33,
+        "unrealized_pnl_pct": 66.92,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -469,10 +469,10 @@
         "entry_timestamp": "2026-03-03T17:10:54.760469+00:00",
         "shares": 100.39,
         "entry_usd": 19.17,
-        "current_price": 0.185,
-        "current_value": 18.57,
-        "unrealized_pnl": -0.6,
-        "unrealized_pnl_pct": -3.13,
+        "current_price": 0.255,
+        "current_value": 25.6,
+        "unrealized_pnl": 6.43,
+        "unrealized_pnl_pct": 33.54,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -523,10 +523,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.767042+00:00",
         "shares": 99.39,
         "entry_usd": 17.98,
-        "current_price": 0.18,
-        "current_value": 17.89,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.195,
+        "current_value": 19.38,
+        "unrealized_pnl": 1.4,
+        "unrealized_pnl_pct": 7.79,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -794,6 +794,10 @@
       {
         "timestamp": "2026-03-04T02:50:37.766758+00:00",
         "equity": 2448.75
+      },
+      {
+        "timestamp": "2026-03-04T04:46:41.570455+00:00",
+        "equity": 2468.6
       }
     ]
   },
@@ -801,7 +805,7 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 1918.29,
+    "available_cash": 1943.8,
     "positions": [
       {
         "position_id": "08b5e8ca",
@@ -827,29 +831,6 @@
         }
       },
       {
-        "position_id": "a5544b16",
-        "market_id": "1466148",
-        "question": "Iran x Israel/US conflict ends by March 7?",
-        "token_id": "34607248775012434162023970679863902425653025984305214745980667340544918996830",
-        "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0653,
-        "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
-        "shares": 776.27,
-        "entry_usd": 50.71,
-        "current_price": 0.0305,
-        "current_value": 23.68,
-        "unrealized_pnl": -27.03,
-        "unrealized_pnl_pct": -53.3,
-        "edge_score_at_entry": 26.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 0.0
-        }
-      },
-      {
         "position_id": "270503ef",
         "market_id": "1473060",
         "question": "Will Bitcoin reach $90,000 in March?",
@@ -860,10 +841,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.042,
-        "current_value": 30.56,
-        "unrealized_pnl": -18.43,
-        "unrealized_pnl_pct": -37.62,
+        "current_price": 0.0395,
+        "current_value": 28.74,
+        "unrealized_pnl": -20.25,
+        "unrealized_pnl_pct": -41.33,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -955,10 +936,10 @@
         "entry_timestamp": "2026-03-02T23:51:23.659382+00:00",
         "shares": 327.27,
         "entry_usd": 21.05,
-        "current_price": 0.037,
-        "current_value": 12.11,
-        "unrealized_pnl": -8.94,
-        "unrealized_pnl_pct": -42.47,
+        "current_price": 0.044,
+        "current_value": 14.4,
+        "unrealized_pnl": -6.65,
+        "unrealized_pnl_pct": -31.59,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1009,10 +990,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399377+00:00",
         "shares": 269.89,
         "entry_usd": 28.48,
-        "current_price": 0.095,
-        "current_value": 25.64,
-        "unrealized_pnl": -2.84,
-        "unrealized_pnl_pct": -9.97,
+        "current_price": 0.09,
+        "current_value": 24.29,
+        "unrealized_pnl": -4.19,
+        "unrealized_pnl_pct": -14.71,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -1020,7 +1001,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 28,
+        "days_to_close": 27,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 9.5,
         "slug": "will-bitcoin-reach-85k-in-march-2026"
@@ -1090,10 +1071,10 @@
         "entry_timestamp": "2026-03-03T08:06:49.940080+00:00",
         "shares": 205.53,
         "entry_usd": 18.59,
-        "current_price": 0.245,
-        "current_value": 50.35,
-        "unrealized_pnl": 31.76,
-        "unrealized_pnl_pct": 170.84,
+        "current_price": 0.255,
+        "current_value": 52.41,
+        "unrealized_pnl": 33.82,
+        "unrealized_pnl_pct": 181.93,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1117,10 +1098,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.203015+00:00",
         "shares": 477.61,
         "entry_usd": 25.68,
-        "current_price": 0.0435,
-        "current_value": 20.78,
-        "unrealized_pnl": -4.9,
-        "unrealized_pnl_pct": -19.08,
+        "current_price": 0.0425,
+        "current_value": 20.3,
+        "unrealized_pnl": -5.38,
+        "unrealized_pnl_pct": -20.95,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -1128,7 +1109,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 28,
+        "days_to_close": 27,
         "resolution_date": "2026-04-01T04:00:00Z",
         "potential_multiple": 18.7,
         "slug": "will-bitcoin-dip-to-45k-in-march-2026"
@@ -1144,10 +1125,10 @@
         "entry_timestamp": "2026-03-03T15:10:56.758017+00:00",
         "shares": 88.22,
         "entry_usd": 8.29,
-        "current_price": 0.265,
-        "current_value": 23.38,
-        "unrealized_pnl": 15.09,
-        "unrealized_pnl_pct": 182.03,
+        "current_price": 0.2885,
+        "current_value": 25.45,
+        "unrealized_pnl": 17.16,
+        "unrealized_pnl_pct": 207.0,
         "edge_score_at_entry": 31.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1171,10 +1152,10 @@
         "entry_timestamp": "2026-03-03T15:10:56.758242+00:00",
         "shares": 163.47,
         "entry_usd": 17.25,
-        "current_price": 0.25,
-        "current_value": 40.87,
-        "unrealized_pnl": 23.62,
-        "unrealized_pnl_pct": 136.93,
+        "current_price": 0.26,
+        "current_value": 42.5,
+        "unrealized_pnl": 25.25,
+        "unrealized_pnl_pct": 146.38,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1198,10 +1179,10 @@
         "entry_timestamp": "2026-03-03T21:08:36.020825+00:00",
         "shares": 167.36,
         "entry_usd": 16.82,
-        "current_price": 0.087,
-        "current_value": 14.56,
-        "unrealized_pnl": -2.26,
-        "unrealized_pnl_pct": -13.44,
+        "current_price": 0.0615,
+        "current_value": 10.29,
+        "unrealized_pnl": -6.53,
+        "unrealized_pnl_pct": -38.82,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1279,10 +1260,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.768066+00:00",
         "shares": 112.28,
         "entry_usd": 10.72,
-        "current_price": 0.095,
-        "current_value": 10.67,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.065,
+        "current_value": 7.3,
+        "unrealized_pnl": -3.42,
+        "unrealized_pnl_pct": -31.9,
         "edge_score_at_entry": 32.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1333,10 +1314,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.768457+00:00",
         "shares": 179.1,
         "entry_usd": 15.3,
-        "current_price": 0.085,
-        "current_value": 15.22,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.105,
+        "current_value": 18.81,
+        "unrealized_pnl": 3.51,
+        "unrealized_pnl_pct": 22.94,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1348,33 +1329,6 @@
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 11.8,
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-31-483-852-436-833-347"
-      },
-      {
-        "position_id": "1e5ffb07",
-        "market_id": "1487829",
-        "question": "Will Israel's Ben Gurion Airport reopen by March 4?",
-        "token_id": "93931923645646245930729185722105855517752900569637956716406001754696671116054",
-        "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0925,
-        "entry_timestamp": "2026-03-04T02:50:37.768620+00:00",
-        "shares": 161.26,
-        "entry_usd": 14.91,
-        "current_price": 0.092,
-        "current_value": 14.84,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 10.9,
-        "slug": "will-israels-ben-gurion-airport-reopen-by-march-4-546"
       }
     ],
     "realized_trades": [
@@ -1403,10 +1357,62 @@
           "external": 0.0
         },
         "days_to_close_at_entry": 0
+      },
+      {
+        "position_id": "a5544b16",
+        "market_id": "1466148",
+        "question": "Iran x Israel/US conflict ends by March 7?",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "exit_price": 0.0255,
+        "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
+        "exit_timestamp": "2026-03-04T04:46:41.570684+00:00",
+        "shares": 776.27,
+        "entry_usd": 50.71,
+        "exit_usd": 19.79,
+        "pnl_usd": -30.92,
+        "pnl_pct": -60.96,
+        "win": false,
+        "reason": "stop_loss_-56pct",
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        },
+        "days_to_close_at_entry": 0
+      },
+      {
+        "position_id": "1e5ffb07",
+        "market_id": "1487829",
+        "question": "Will Israel's Ben Gurion Airport reopen by March 4?",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0925,
+        "exit_price": 0.0355,
+        "entry_timestamp": "2026-03-04T02:50:37.768620+00:00",
+        "exit_timestamp": "2026-03-04T04:46:41.570843+00:00",
+        "shares": 161.26,
+        "entry_usd": 14.91,
+        "exit_usd": 5.72,
+        "pnl_usd": -9.19,
+        "pnl_pct": -61.6,
+        "win": false,
+        "reason": "stop_loss_-56pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
     "win_count": 0,
-    "loss_count": 1,
+    "loss_count": 3,
     "peak_equity": 2532.21,
     "max_drawdown": -2.21,
     "equity_history": [
@@ -1541,9 +1547,21 @@
       {
         "timestamp": "2026-03-04T02:50:37.766816+00:00",
         "equity": 2498.91
+      },
+      {
+        "timestamp": "2026-03-04T04:46:41.570525+00:00",
+        "equity": 2485.97
+      },
+      {
+        "timestamp": "2026-03-04T04:46:41.570720+00:00",
+        "equity": 2485.97
+      },
+      {
+        "timestamp": "2026-03-04T04:46:41.570861+00:00",
+        "equity": 2485.97
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T02:50:37.768864+00:00"
+  "last_updated": "2026-03-04T04:46:41.571347+00:00"
 }
