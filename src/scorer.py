@@ -13,7 +13,7 @@ from src.signals import (
     classify_convexity,
     compute_market_age_bonus,
 )
-from src.event_clustering import extract_base_event
+from src.event_clustering import extract_base_event, are_conflicting, extract_underlying_asset, extract_direction
 from src.utils import safe_float
 
 logger = logging.getLogger(__name__)
@@ -290,27 +290,48 @@ def rank_opportunities(
 
     opportunities.sort(key=lambda x: x['edge_score'], reverse=True)
 
-    # ── Event concentration limit ──
-    # Prevent taking 6 positions on "Iran successor by March 3/4/5/6/15/31"
-    max_per_event = config.get('portfolio', {}).get('max_positions_per_event', 2)
+    # ── Conflict filter ──
+    # Remove opportunities that would create opposing bets on the same asset.
+    # e.g. "Bitcoin reach $85k" is fine alongside "Bitcoin reach $90k" (same direction),
+    # but NOT alongside "Bitcoin dip to $50k" (opposite direction = guaranteed loss on one side).
+    # We keep the highest-edge direction and drop the other.
     pre_filter_count = len(opportunities)
 
-    event_groups = {}
-    filtered = []
+    # Group by underlying asset and pick the best direction
+    asset_directions = {}  # {asset: {direction: [opps]}}
     for opp in opportunities:
-        base = extract_base_event(opp.get('question', ''), opp.get('slug', ''))
-        opp['base_event'] = base  # Store for use in trade execution
-        count = event_groups.get(base, 0)
-        if count < max_per_event:
-            filtered.append(opp)
-            event_groups[base] = count + 1
+        question = opp.get('question', '')
+        opp['base_event'] = extract_base_event(question, opp.get('slug', ''))
+        asset = extract_underlying_asset(question)
+        if not asset:
+            continue
+        direction = extract_direction(question)
+        if direction == 'neutral':
+            continue
+        asset_directions.setdefault(asset, {}).setdefault(direction, []).append(opp)
 
-    opportunities = filtered
+    # For each asset with both bullish AND bearish bets, drop the weaker direction
+    blocked_opps = set()
+    for asset, dirs in asset_directions.items():
+        if 'bullish' in dirs and 'bearish' in dirs:
+            bull_best = max(o['edge_score'] for o in dirs['bullish'])
+            bear_best = max(o['edge_score'] for o in dirs['bearish'])
+            # Block the weaker direction
+            loser = 'bearish' if bull_best >= bear_best else 'bullish'
+            for opp in dirs[loser]:
+                blocked_opps.add(id(opp))
+            logger.info(
+                f"Conflict filter: {asset} has bullish (best={bull_best:.1f}) vs "
+                f"bearish (best={bear_best:.1f}) — dropping {loser} "
+                f"({len(dirs[loser])} opps)"
+            )
+
+    if blocked_opps:
+        opportunities = [o for o in opportunities if id(o) not in blocked_opps]
 
     if pre_filter_count != len(opportunities):
         logger.info(
-            f"Event concentration filter: {pre_filter_count} → {len(opportunities)} "
-            f"(max {max_per_event}/event, {len(event_groups)} unique events)"
+            f"Conflict filter: {pre_filter_count} → {len(opportunities)} opportunities"
         )
 
     logger.info(

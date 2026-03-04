@@ -30,7 +30,7 @@ from src.whale_tracker import WhaleTracker
 from src.news_signals import NewsSignals
 from src.manifold_client import ManifoldClient
 from src.scorer import compute_edge_score, rank_opportunities
-from src.event_clustering import extract_base_event
+from src.event_clustering import extract_base_event, are_conflicting
 from src.calibration import compute_calibration, suggest_parameter_adjustments
 from src.signal_log import SignalLogger
 from src.portfolio import (
@@ -291,7 +291,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             fund_opps = [o for o in opportunities if o.get('convexity_band') in fund_bands]
             existing_tokens = {p['token_id'] for p in fund['positions']}
             existing_markets = {p['market_id'] for p in fund['positions']}
-            max_per_event = config.get('portfolio', {}).get('max_positions_per_event', 2)
             trades_done = 0
 
             for opp in fund_opps:
@@ -308,15 +307,14 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 if opp['market_id'] in existing_markets:
                     continue
 
-                # Event concentration: max N positions per base event
-                opp_event = opp.get('base_event') or extract_base_event(
-                    opp.get('question', ''), opp.get('slug', '')
+                # Conflict check: don't take opposing directional bets on same asset
+                # e.g. if we hold "Bitcoin reach $85k", block "Bitcoin dip to $50k"
+                opp_question = opp.get('question', '')
+                has_conflict = any(
+                    are_conflicting(opp_question, p.get('question', ''))
+                    for p in fund['positions']
                 )
-                event_count = sum(
-                    1 for p in fund['positions']
-                    if extract_base_event(p.get('question', ''), p.get('slug', '')) == opp_event
-                )
-                if event_count >= max_per_event:
+                if has_conflict:
                     continue
 
                 fund, position = execute_paper_trade(fund, opp, config)

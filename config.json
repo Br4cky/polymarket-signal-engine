@@ -66,7 +66,6 @@
   "portfolio": {
     "total_capital": 5000,
     "max_positions_per_fund": 50,
-    "max_positions_per_event": 2,
     "max_position_size_pct": 4,
     "kelly_fraction": 0.4
   },
