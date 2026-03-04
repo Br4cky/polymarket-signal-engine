@@ -3,7 +3,7 @@
     "name": "5x Hunter",
     "band": "5x",
     "capital": 2500,
-    "available_cash": 1671.13,
+    "available_cash": 1648.34,
     "positions": [
       {
         "position_id": "d69b9acf",
@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1645,
-        "current_value": 70.15,
-        "unrealized_pnl": -4.85,
-        "unrealized_pnl_pct": -6.47,
+        "current_price": 0.159,
+        "current_value": 67.8,
+        "unrealized_pnl": -7.2,
+        "unrealized_pnl_pct": -9.6,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2525,
-        "current_value": 81.97,
-        "unrealized_pnl": 10.19,
-        "unrealized_pnl_pct": 14.2,
+        "current_price": 0.2515,
+        "current_value": 81.65,
+        "unrealized_pnl": 9.87,
+        "unrealized_pnl_pct": 13.75,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -85,10 +85,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.165,
-        "current_value": 80.01,
-        "unrealized_pnl": 14.22,
-        "unrealized_pnl_pct": 21.61,
+        "current_price": 0.155,
+        "current_value": 75.16,
+        "unrealized_pnl": 9.37,
+        "unrealized_pnl_pct": 14.24,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -200,10 +200,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.285,
-        "current_value": 55.39,
-        "unrealized_pnl": 6.56,
-        "unrealized_pnl_pct": 13.43,
+        "current_price": 0.29,
+        "current_value": 56.36,
+        "unrealized_pnl": 7.53,
+        "unrealized_pnl_pct": 15.42,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -334,10 +334,10 @@
         "entry_timestamp": "2026-03-03T17:10:54.760222+00:00",
         "shares": 109.12,
         "entry_usd": 19.74,
-        "current_price": 0.17,
-        "current_value": 18.55,
-        "unrealized_pnl": -1.19,
-        "unrealized_pnl_pct": -6.03,
+        "current_price": 0.16,
+        "current_value": 17.46,
+        "unrealized_pnl": -2.28,
+        "unrealized_pnl_pct": -11.55,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -349,33 +349,6 @@
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 5.6,
         "slug": "will-crude-oil-cl-hit-high-110-by-end-of-march-732-945-787"
-      },
-      {
-        "position_id": "26dfb8c8",
-        "market_id": "1467768",
-        "question": "Will Crude Oil (CL) hit (HIGH) $80 by end of March?",
-        "token_id": "107064346433922317182357542794464553492324123930820423689236863646938961265730",
-        "outcome": "No",
-        "convexity_band": "5x",
-        "entry_price": 0.1909,
-        "entry_timestamp": "2026-03-03T17:10:54.760469+00:00",
-        "shares": 100.39,
-        "entry_usd": 19.17,
-        "current_price": 0.255,
-        "current_value": 25.6,
-        "unrealized_pnl": 6.43,
-        "unrealized_pnl_pct": 33.54,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 5.3,
-        "slug": "will-crude-oil-cl-hit-high-80-by-end-of-march-113-384-528"
       },
       {
         "position_id": "e7827cba",
@@ -442,10 +415,10 @@
         "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
         "shares": 138.99,
         "entry_usd": 17.46,
-        "current_price": 0.11,
-        "current_value": 15.29,
-        "unrealized_pnl": -2.17,
-        "unrealized_pnl_pct": -12.43,
+        "current_price": 0.1,
+        "current_value": 13.9,
+        "unrealized_pnl": -3.56,
+        "unrealized_pnl_pct": -20.39,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -469,10 +442,10 @@
         "entry_timestamp": "2026-03-04T06:32:15.947768+00:00",
         "shares": 77.54,
         "entry_usd": 11.3,
-        "current_price": 0.14,
-        "current_value": 10.86,
-        "unrealized_pnl": -0.44,
-        "unrealized_pnl_pct": -3.89,
+        "current_price": 0.135,
+        "current_value": 10.47,
+        "unrealized_pnl": -0.83,
+        "unrealized_pnl_pct": -7.35,
         "edge_score_at_entry": 37.3,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -496,10 +469,10 @@
         "entry_timestamp": "2026-03-04T07:28:14.426931+00:00",
         "shares": 109.65,
         "entry_usd": 22.59,
-        "current_price": 0.265,
-        "current_value": 29.06,
-        "unrealized_pnl": 6.47,
-        "unrealized_pnl_pct": 28.64,
+        "current_price": 0.255,
+        "current_value": 27.96,
+        "unrealized_pnl": 5.37,
+        "unrealized_pnl_pct": 23.77,
         "edge_score_at_entry": 21.8,
         "layer_scores_at_entry": {
           "structural": 6.67,
@@ -511,6 +484,60 @@
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 4.9,
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-5-748-625"
+      },
+      {
+        "position_id": "425af247",
+        "market_id": "1423606",
+        "question": "Will Elon Musk post 120-139 tweets from February 27 to March 6, 2026?",
+        "token_id": "70219387710614084282157902250487579067515988630627675577841447698582763599503",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.1221,
+        "entry_timestamp": "2026-03-04T11:22:22.763626+00:00",
+        "shares": 207.69,
+        "entry_usd": 25.36,
+        "current_price": 0.1215,
+        "current_value": 25.23,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 38.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-06T17:00:00Z",
+        "potential_multiple": 8.2,
+        "slug": "elon-musk-of-tweets-february-27-march-6-120-139"
+      },
+      {
+        "position_id": "06b490f3",
+        "market_id": "1423621",
+        "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
+        "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.1462,
+        "entry_timestamp": "2026-03-04T11:22:22.764149+00:00",
+        "shares": 167.82,
+        "entry_usd": 24.54,
+        "current_price": 0.1455,
+        "current_value": 24.42,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 38.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-06T17:00:00Z",
+        "potential_multiple": 6.9,
+        "slug": "elon-musk-of-tweets-february-27-march-6-180-199"
       }
     ],
     "realized_trades": [
@@ -773,9 +800,35 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
+      },
+      {
+        "position_id": "26dfb8c8",
+        "market_id": "1467768",
+        "question": "Will Crude Oil (CL) hit (HIGH) $80 by end of March?",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.1909,
+        "exit_price": 0.27,
+        "entry_timestamp": "2026-03-03T17:10:54.760469+00:00",
+        "exit_timestamp": "2026-03-04T11:22:22.762585+00:00",
+        "shares": 100.39,
+        "entry_usd": 19.17,
+        "exit_usd": 27.11,
+        "pnl_usd": 7.94,
+        "pnl_pct": 41.39,
+        "win": true,
+        "reason": "profit_target_35pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
-    "win_count": 4,
+    "win_count": 5,
     "loss_count": 6,
     "peak_equity": 2508.12,
     "max_drawdown": -3.36,
@@ -987,6 +1040,14 @@
       {
         "timestamp": "2026-03-04T11:07:26.407867+00:00",
         "equity": 2494.97
+      },
+      {
+        "timestamp": "2026-03-04T11:22:22.762349+00:00",
+        "equity": 2485.96
+      },
+      {
+        "timestamp": "2026-03-04T11:22:22.762612+00:00",
+        "equity": 2485.96
       }
     ]
   },
@@ -994,7 +1055,7 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 2139.94,
+    "available_cash": 2085.07,
     "positions": [
       {
         "position_id": "08b5e8ca",
@@ -1007,10 +1068,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.085,
-        "current_value": 49.34,
-        "unrealized_pnl": -3.16,
-        "unrealized_pnl_pct": -6.02,
+        "current_price": 0.08,
+        "current_value": 46.43,
+        "unrealized_pnl": -6.07,
+        "unrealized_pnl_pct": -11.56,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1030,10 +1091,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.076,
-        "current_value": 55.29,
-        "unrealized_pnl": 6.3,
-        "unrealized_pnl_pct": 12.86,
+        "current_price": 0.0765,
+        "current_value": 55.66,
+        "unrealized_pnl": 6.67,
+        "unrealized_pnl_pct": 13.62,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1260,10 +1321,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.768457+00:00",
         "shares": 179.1,
         "entry_usd": 15.3,
-        "current_price": 0.11,
-        "current_value": 19.7,
-        "unrealized_pnl": 4.4,
-        "unrealized_pnl_pct": 28.76,
+        "current_price": 0.1,
+        "current_value": 17.91,
+        "unrealized_pnl": 2.61,
+        "unrealized_pnl_pct": 17.06,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1275,33 +1336,6 @@
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 11.8,
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-31-483-852-436-833-347"
-      },
-      {
-        "position_id": "5d038916",
-        "market_id": "1487829",
-        "question": "Will Israel's Ben Gurion Airport reopen by March 4?",
-        "token_id": "93931923645646245930729185722105855517752900569637956716406001754696671116054",
-        "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0543,
-        "entry_timestamp": "2026-03-04T05:38:29.757197+00:00",
-        "shares": 281.37,
-        "entry_usd": 15.27,
-        "current_price": 0.041,
-        "current_value": 11.54,
-        "unrealized_pnl": -3.73,
-        "unrealized_pnl_pct": -24.43,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 18.5,
-        "slug": "will-israels-ben-gurion-airport-reopen-by-march-4-546"
       },
       {
         "position_id": "5decfa7f",
@@ -1329,6 +1363,60 @@
         "resolution_date": "2026-03-10T00:00:00Z",
         "potential_multiple": 10.0,
         "slug": "will-us-or-israel-strike-iran-on-march-9-2026"
+      },
+      {
+        "position_id": "f4cfdaf1",
+        "market_id": "1465973",
+        "question": "Will US or Israel strike Iran on March 8, 2026?",
+        "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-04T11:22:22.764611+00:00",
+        "shares": 619.21,
+        "entry_usd": 40.45,
+        "current_price": 0.065,
+        "current_value": 40.25,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 43.1,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 6.8
+        },
+        "days_to_close": 5,
+        "resolution_date": "2026-03-10T00:00:00Z",
+        "potential_multiple": 15.4,
+        "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
+      },
+      {
+        "position_id": "00527f70",
+        "market_id": "1423624",
+        "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
+        "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0774,
+        "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
+        "shares": 315.44,
+        "entry_usd": 24.41,
+        "current_price": 0.077,
+        "current_value": 24.29,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 38.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-06T17:00:00Z",
+        "potential_multiple": 13.0,
+        "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
       }
     ],
     "realized_trades": [
@@ -1669,10 +1757,36 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
+      },
+      {
+        "position_id": "5d038916",
+        "market_id": "1487829",
+        "question": "Will Israel's Ben Gurion Airport reopen by March 4?",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0543,
+        "exit_price": 0.0355,
+        "entry_timestamp": "2026-03-04T05:38:29.757197+00:00",
+        "exit_timestamp": "2026-03-04T11:22:22.762982+00:00",
+        "shares": 281.37,
+        "entry_usd": 15.27,
+        "exit_usd": 9.99,
+        "pnl_usd": -5.28,
+        "pnl_pct": -34.59,
+        "win": false,
+        "reason": "stop_loss_-30pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
     "win_count": 5,
-    "loss_count": 8,
+    "loss_count": 9,
     "peak_equity": 2532.21,
     "max_drawdown": -2.21,
     "equity_history": [
@@ -1895,9 +2009,17 @@
       {
         "timestamp": "2026-03-04T11:07:26.407905+00:00",
         "equity": 2509.42
+      },
+      {
+        "timestamp": "2026-03-04T11:22:22.762392+00:00",
+        "equity": 2503.54
+      },
+      {
+        "timestamp": "2026-03-04T11:22:22.763000+00:00",
+        "equity": 2503.54
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T11:07:26.408618+00:00"
+  "last_updated": "2026-03-04T11:22:22.765698+00:00"
 }
