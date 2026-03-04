@@ -168,13 +168,14 @@ def kelly_position_size(
     """
     max_pct = config.get('portfolio', {}).get('max_position_size_pct', 3) / 100.0
     kelly_frac = config.get('portfolio', {}).get('kelly_fraction', 0.5)
-    max_positions = config.get('portfolio', {}).get('max_positions_per_fund', 15)
+    max_positions = config.get('portfolio', {}).get('max_positions_per_fund', 50)
 
     if edge_score < config.get('scoring', {}).get('edge_threshold', 50):
         return 0.0
 
-    if num_positions >= max_positions:
-        return 0.0
+    # No hard cap — Kelly sizing + diversification multiplier + event concentration
+    # limits naturally control position count. max_positions is just a reference
+    # for the diversification curve below.
 
     # Map edge score to estimated win probability
     estimated_win_prob = 0.50 + (edge_score - 50) / 100.0 * 0.40

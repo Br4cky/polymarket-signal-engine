@@ -30,6 +30,7 @@ from src.whale_tracker import WhaleTracker
 from src.news_signals import NewsSignals
 from src.manifold_client import ManifoldClient
 from src.scorer import compute_edge_score, rank_opportunities
+from src.event_clustering import extract_base_event
 from src.calibration import compute_calibration, suggest_parameter_adjustments
 from src.signal_log import SignalLogger
 from src.portfolio import (
@@ -180,10 +181,11 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     if kalshi_markets:
                         kalshi_price = safe_float(kalshi_markets[0].get('yes_bid', 0)) / 100.0
 
-            # Layer 2: smart money (use condition_id for matching with positions API)
+            # Layer 2: smart money (use condition_id + slug for matching with positions API)
             smart_money = whale_tracker.compute_smart_money_score(
-                market.get('condition_id', market.get('market_id', '')),
-                token.get('token_id', '')
+                market_id=market.get('condition_id', market.get('market_id', '')),
+                token_id=token.get('token_id', ''),
+                market_slug=market.get('slug', ''),
             )
 
             # Layer 1 extension: Manifold cross-reference
@@ -288,6 +290,8 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             fund_bands = set(fund.get('bands', [fund.get('band', '')]))
             fund_opps = [o for o in opportunities if o.get('convexity_band') in fund_bands]
             existing_tokens = {p['token_id'] for p in fund['positions']}
+            existing_markets = {p['market_id'] for p in fund['positions']}
+            max_per_event = config.get('portfolio', {}).get('max_positions_per_event', 2)
             trades_done = 0
 
             for opp in fund_opps:
@@ -298,6 +302,21 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     break
 
                 if opp['token_id'] in existing_tokens:
+                    continue
+
+                # Prevent YES+NO on same market
+                if opp['market_id'] in existing_markets:
+                    continue
+
+                # Event concentration: max N positions per base event
+                opp_event = opp.get('base_event') or extract_base_event(
+                    opp.get('question', ''), opp.get('slug', '')
+                )
+                event_count = sum(
+                    1 for p in fund['positions']
+                    if extract_base_event(p.get('question', ''), p.get('slug', '')) == opp_event
+                )
+                if event_count >= max_per_event:
                     continue
 
                 fund, position = execute_paper_trade(fund, opp, config)

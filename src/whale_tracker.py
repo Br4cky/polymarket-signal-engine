@@ -305,6 +305,7 @@ class WhaleTracker:
         index: Dict[str, List[dict]] = {}
         traders_fetched = 0
         total_positions = 0
+        keys_by_type = {'conditionId': 0, 'slug': 0}  # Diagnostic counters
 
         for trader in traders:
             address = trader.get('address', '')
@@ -315,14 +316,7 @@ class WhaleTracker:
             traders_fetched += 1
 
             for pos in positions:
-                cid = pos.get('conditionId', '')
-                if not cid:
-                    continue
-
-                if cid not in index:
-                    index[cid] = []
-
-                index[cid].append({
+                entry = {
                     'address': address,
                     'username': trader.get('username', ''),
                     'quality_score': trader.get('quality_score', 0),
@@ -331,8 +325,27 @@ class WhaleTracker:
                     'size': pos.get('size', 0),
                     'currentValue': pos.get('currentValue', 0),
                     'outcome': pos.get('outcome', ''),
-                })
-                total_positions += 1
+                }
+
+                indexed = False
+
+                # Index under conditionId (primary key)
+                cid = pos.get('conditionId', '')
+                if cid:
+                    index.setdefault(cid, []).append(entry)
+                    keys_by_type['conditionId'] += 1
+                    indexed = True
+
+                # Also index under slug (fallback key for matching)
+                slug = pos.get('market_slug', '')
+                if slug:
+                    slug_key = f"slug:{slug}"
+                    index.setdefault(slug_key, []).append(entry)
+                    keys_by_type['slug'] += 1
+                    indexed = True
+
+                if indexed:
+                    total_positions += 1
 
             if self._positions_failed:
                 logger.warning(f"Rate limited after {traders_fetched} traders, using partial index")
@@ -341,14 +354,19 @@ class WhaleTracker:
         self._whale_market_index = index
         self._index_built = True
         self.cache.set(cache_key, index)
+
+        # Diagnostic: log sample keys so we can verify matching
+        sample_keys = list(index.keys())[:5]
         logger.info(
             f"Built whale index: {traders_fetched} quality traders → "
-            f"{total_positions} positions across {len(index)} markets"
+            f"{total_positions} positions across {len(index)} index entries "
+            f"(keys: conditionId={keys_by_type['conditionId']}, slug={keys_by_type['slug']}) "
+            f"sample_keys={sample_keys}"
         )
 
     # ── Smart Money Score ────────────────────────────────────────────────────
 
-    def compute_smart_money_score(self, market_id: str, token_id: str) -> dict:
+    def compute_smart_money_score(self, market_id: str, token_id: str, market_slug: str = '') -> dict:
         """
         Compute smart money score based on quality whale presence in a market.
 
@@ -371,7 +389,10 @@ class WhaleTracker:
         try:
             self.build_whale_index()
 
+            # Try conditionId first, fall back to slug-based lookup
             whales = self._whale_market_index.get(market_id, [])
+            if not whales and market_slug:
+                whales = self._whale_market_index.get(f"slug:{market_slug}", [])
 
             if not whales:
                 return {
