@@ -440,8 +440,8 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
             'fund_b': portfolio.get('fund_b', {}).get('positions', [])
         },
         'realized_trades': {
-            'fund_a': portfolio.get('fund_a', {}).get('realized_trades', [])[-15:],
-            'fund_b': portfolio.get('fund_b', {}).get('realized_trades', [])[-15:]
+            'fund_a': portfolio.get('fund_a', {}).get('realized_trades', []),
+            'fund_b': portfolio.get('fund_b', {}).get('realized_trades', [])
         },
         'statistics': {
             'by_category': by_category,

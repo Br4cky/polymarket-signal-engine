@@ -264,6 +264,27 @@
   </div>
 </div>
 
+<!-- Market Spread -->
+<div class="section-title">Market Spread</div>
+<div class="grid grid-2">
+  <div class="card chart-section">
+    <div class="chart-header">
+      <span class="chart-title">All Traded Markets</span>
+      <span style="font-size:11px;color:var(--text2)" id="spread-all-count"></span>
+    </div>
+    <canvas id="spread-all-chart" class="chart-canvas" style="height:260px;"></canvas>
+    <div class="pie-legend" id="spread-all-legend"></div>
+  </div>
+  <div class="card chart-section">
+    <div class="chart-header">
+      <span class="chart-title">Open Positions</span>
+      <span style="font-size:11px;color:var(--text2)" id="spread-open-count"></span>
+    </div>
+    <canvas id="spread-open-chart" class="chart-canvas" style="height:260px;"></canvas>
+    <div class="pie-legend" id="spread-open-legend"></div>
+  </div>
+</div>
+
 <!-- Top Opportunities -->
 <div class="section-title">Top Opportunities <span class="badge" id="opp-badge">0</span></div>
 
@@ -405,6 +426,7 @@ function render() {
   renderLayerHealth();
   renderPieChart();
   renderPnlChart();
+  renderMarketSpread();
   renderOpportunities();
   renderPositions();
   renderTrades();
@@ -894,6 +916,137 @@ function setPnlPeriod(period, btn) {
   btn.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   renderPnlChart();
+}
+
+// ── Market Spread ──
+function classifyMarket(question) {
+  const q = question.toLowerCase();
+  const cats = [
+    [/bitcoin|btc/i, 'Bitcoin'],
+    [/ethereum|eth\b/i, 'Ethereum'],
+    [/crypto|solana|dogecoin|xrp|altcoin/i, 'Crypto (Other)'],
+    [/iran|tehran|iranian/i, 'Iran'],
+    [/israel|israeli|idf|gaza|hamas|hezbollah|lebanon/i, 'Israel/Middle East'],
+    [/trump|biden|congress|senate|republican|democrat|white house/i, 'US Politics'],
+    [/election|vote|ballot|governor|mayor/i, 'Elections'],
+    [/ukraine|russia|putin|zelensky/i, 'Russia/Ukraine'],
+    [/china|chinese|taiwan/i, 'China'],
+    [/elon|musk|tesla|spacex|twitter|tweet/i, 'Elon/Tesla'],
+    [/fed\b|interest rate|inflation|gdp|recession|tariff|trade war/i, 'Economy'],
+    [/oil|crude|gold|silver|commodity|wheat/i, 'Commodities'],
+    [/s&p|nasdaq|dow|stock|sp500|market crash/i, 'Stocks'],
+    [/ai\b|artificial intelligence|openai|google|apple|microsoft|meta\b/i, 'Tech'],
+    [/nfl|nba|mlb|nhl|soccer|football|sport|ufc|fight/i, 'Sports'],
+    [/weather|climate|earthquake|hurricane/i, 'Weather'],
+  ];
+  for (const [re, label] of cats) { if (re.test(q)) return label; }
+  return 'Other';
+}
+
+const SPREAD_COLORS = [
+  '#58a6ff','#bc8cff','#f0883e','#3fb950','#f85149','#d29922',
+  '#39d353','#ff7b72','#79c0ff','#d2a8ff','#ffa657','#7ee787',
+  '#ff9bce','#a5d6ff','#ffd700','#56d4dd'
+];
+
+function renderMarketSpread() {
+  // Collect all markets (open + closed)
+  const openA = (DATA.positions?.fund_a || []);
+  const openB = (DATA.positions?.fund_b || []);
+  const closedA = (DATA.realized_trades?.fund_a || []);
+  const closedB = (DATA.realized_trades?.fund_b || []);
+  const allMarkets = [...openA, ...openB, ...closedA, ...closedB];
+  const openMarkets = [...openA, ...openB];
+
+  renderSpreadChart('spread-all-chart', 'spread-all-legend', 'spread-all-count', allMarkets, false);
+  renderSpreadChart('spread-open-chart', 'spread-open-legend', 'spread-open-count', openMarkets, true);
+}
+
+function renderSpreadChart(canvasId, legendId, countId, markets, showPnl) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.scale(dpr, dpr);
+  const w = rect.width, h = rect.height;
+  ctx.clearRect(0, 0, w, h);
+
+  if (markets.length === 0) {
+    ctx.fillStyle = 'rgba(139,148,158,0.3)';
+    ctx.font = '13px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('No markets yet', w/2, h/2);
+    return;
+  }
+
+  // Group by category
+  const groups = {};
+  for (const m of markets) {
+    const cat = classifyMarket(m.question || '');
+    if (!groups[cat]) groups[cat] = { count: 0, usd: 0, pnl: 0, questions: new Set() };
+    groups[cat].count++;
+    groups[cat].usd += (m.entry_usd || 0);
+    groups[cat].pnl += (m.pnl_usd || m.unrealized_pnl || 0);
+    groups[cat].questions.add(m.question || '');
+  }
+
+  // Sort by count descending
+  const sorted = Object.entries(groups).sort((a,b) => b[1].count - a[1].count);
+  const countEl = document.getElementById(countId);
+  if (countEl) countEl.textContent = `${markets.length} positions across ${sorted.length} categories`;
+
+  // Draw horizontal bar chart
+  const pad = { top: 8, bottom: 8, left: 110, right: 50 };
+  const chartW = w - pad.left - pad.right;
+  const chartH = h - pad.top - pad.bottom;
+  const maxCount = Math.max(...sorted.map(s => s[1].count), 1);
+  const barH = Math.min(28, (chartH / sorted.length) - 4);
+  const gap = chartH / sorted.length;
+
+  for (let i = 0; i < sorted.length; i++) {
+    const [cat, data] = sorted[i];
+    const color = SPREAD_COLORS[i % SPREAD_COLORS.length];
+    const y = pad.top + i * gap;
+    const barWidth = (data.count / maxCount) * chartW;
+
+    // Category label
+    ctx.fillStyle = 'var(--text2)';
+    ctx.fillStyle = '#8b949e';
+    ctx.font = '12px -apple-system, sans-serif';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(cat, pad.left - 8, y + barH/2);
+
+    // Bar
+    ctx.fillStyle = color;
+    ctx.globalAlpha = 0.8;
+    const bx = pad.left, bw = Math.max(barWidth, 2), r = 4;
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(bx, y, bw, barH, r); }
+    else { ctx.moveTo(bx+r,y); ctx.lineTo(bx+bw-r,y); ctx.arcTo(bx+bw,y,bx+bw,y+r,r); ctx.lineTo(bx+bw,y+barH-r); ctx.arcTo(bx+bw,y+barH,bx+bw-r,y+barH,r); ctx.lineTo(bx+r,y+barH); ctx.arcTo(bx,y+barH,bx,y+barH-r,r); ctx.lineTo(bx,y+r); ctx.arcTo(bx,y,bx+r,y,r); ctx.closePath(); }
+    ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Count label
+    ctx.fillStyle = '#e6edf3';
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.textAlign = 'left';
+    const pnlStr = showPnl ? ` (${data.pnl >= 0 ? '+' : ''}$${data.pnl.toFixed(0)})` : '';
+    ctx.fillText(`${data.count}${pnlStr}`, pad.left + barWidth + 6, y + barH/2);
+  }
+
+  // Legend
+  const legendEl = document.getElementById(legendId);
+  if (legendEl) {
+    legendEl.innerHTML = sorted.map(([cat, data], i) => {
+      const color = SPREAD_COLORS[i % SPREAD_COLORS.length];
+      const pct = ((data.count / markets.length) * 100).toFixed(0);
+      return `<span class="pie-legend-item"><span class="pie-legend-dot" style="background:${color}"></span>${cat}: ${pct}%</span>`;
+    }).join('');
+  }
 }
 
 // ── Mini Equity Charts ──
