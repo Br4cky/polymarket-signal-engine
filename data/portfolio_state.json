@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1685,
-        "current_value": 71.86,
-        "unrealized_pnl": -3.14,
-        "unrealized_pnl_pct": -4.19,
+        "current_price": 0.167,
+        "current_value": 71.22,
+        "unrealized_pnl": -3.78,
+        "unrealized_pnl_pct": -5.04,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2395,
-        "current_value": 77.75,
-        "unrealized_pnl": 5.97,
-        "unrealized_pnl_pct": 8.32,
+        "current_price": 0.225,
+        "current_value": 73.05,
+        "unrealized_pnl": 1.27,
+        "unrealized_pnl_pct": 1.77,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -226,10 +226,10 @@
         "entry_timestamp": "2026-03-03T06:03:06.028603+00:00",
         "shares": 155.48,
         "entry_usd": 33.83,
-        "current_price": 0.2785,
-        "current_value": 43.3,
-        "unrealized_pnl": 9.47,
-        "unrealized_pnl_pct": 27.99,
+        "current_price": 0.2685,
+        "current_value": 41.75,
+        "unrealized_pnl": 7.92,
+        "unrealized_pnl_pct": 23.41,
         "edge_score_at_entry": 29.3,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -264,7 +264,7 @@
           "dislocation": 10.5,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 6.7,
         "slug": "will-israel-launch-a-major-ground-offensive-in-lebanon-by-march-31"
@@ -280,10 +280,10 @@
         "entry_timestamp": "2026-03-03T09:04:32.202522+00:00",
         "shares": 268.26,
         "entry_usd": 33.7,
-        "current_price": 0.15,
-        "current_value": 40.24,
-        "unrealized_pnl": 6.54,
-        "unrealized_pnl_pct": 19.41,
+        "current_price": 0.155,
+        "current_value": 41.58,
+        "unrealized_pnl": 7.88,
+        "unrealized_pnl_pct": 23.38,
         "edge_score_at_entry": 24.9,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -291,7 +291,7 @@
           "dislocation": 8.0,
           "external": 2.96
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 8.0,
         "slug": "iran-x-israelus-conflict-ends-by-march-15"
@@ -334,10 +334,10 @@
         "entry_timestamp": "2026-03-03T10:05:26.124572+00:00",
         "shares": 240.8,
         "entry_usd": 31.46,
-        "current_price": 0.11,
-        "current_value": 26.49,
-        "unrealized_pnl": -4.97,
-        "unrealized_pnl_pct": -15.8,
+        "current_price": 0.115,
+        "current_value": 27.69,
+        "unrealized_pnl": -3.77,
+        "unrealized_pnl_pct": -11.98,
         "edge_score_at_entry": 24.6,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -372,7 +372,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 5.4,
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246-866-876-465"
@@ -388,10 +388,10 @@
         "entry_timestamp": "2026-03-03T11:05:09.342986+00:00",
         "shares": 44.37,
         "entry_usd": 9.81,
-        "current_price": 0.225,
-        "current_value": 9.98,
-        "unrealized_pnl": 0.17,
-        "unrealized_pnl_pct": 1.73,
+        "current_price": 0.21,
+        "current_value": 9.32,
+        "unrealized_pnl": -0.49,
+        "unrealized_pnl_pct": -4.99,
         "edge_score_at_entry": 37.9,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -399,7 +399,7 @@
           "dislocation": 14.5,
           "external": 1.0
         },
-        "days_to_close": 3,
+        "days_to_close": 2,
         "resolution_date": "2026-03-07T00:00:00Z",
         "potential_multiple": 4.5,
         "slug": "will-iran-strike-cyprus-in-march"
@@ -415,10 +415,10 @@
         "entry_timestamp": "2026-03-03T14:10:05.992253+00:00",
         "shares": 127.88,
         "entry_usd": 19.92,
-        "current_price": 0.25,
-        "current_value": 31.97,
-        "unrealized_pnl": 12.05,
-        "unrealized_pnl_pct": 60.49,
+        "current_price": 0.245,
+        "current_value": 31.33,
+        "unrealized_pnl": 11.41,
+        "unrealized_pnl_pct": 57.28,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -426,7 +426,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 6.5,
         "slug": "will-another-country-strike-iran-by-march-31-833"
@@ -453,7 +453,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 5.6,
         "slug": "will-crude-oil-cl-hit-high-110-by-end-of-march-732-945-787"
@@ -480,7 +480,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 5.3,
         "slug": "will-crude-oil-cl-hit-high-80-by-end-of-march-113-384-528"
@@ -507,7 +507,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 6.1,
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246-866-876-465"
@@ -759,6 +759,10 @@
       {
         "timestamp": "2026-03-03T23:41:00.912363+00:00",
         "equity": 2456.13
+      },
+      {
+        "timestamp": "2026-03-04T00:03:55.945013+00:00",
+        "equity": 2450.48
       }
     ]
   },
@@ -779,10 +783,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.11,
-        "current_value": 63.85,
-        "unrealized_pnl": 11.35,
-        "unrealized_pnl_pct": 21.62,
+        "current_price": 0.115,
+        "current_value": 66.75,
+        "unrealized_pnl": 14.25,
+        "unrealized_pnl_pct": 27.14,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -825,10 +829,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.045,
-        "current_value": 32.74,
-        "unrealized_pnl": -16.25,
-        "unrealized_pnl_pct": -33.17,
+        "current_price": 0.0445,
+        "current_value": 32.38,
+        "unrealized_pnl": -16.61,
+        "unrealized_pnl_pct": -33.9,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -920,10 +924,10 @@
         "entry_timestamp": "2026-03-02T23:51:23.659382+00:00",
         "shares": 327.27,
         "entry_usd": 21.05,
-        "current_price": 0.0395,
-        "current_value": 12.93,
-        "unrealized_pnl": -8.12,
-        "unrealized_pnl_pct": -38.57,
+        "current_price": 0.0385,
+        "current_value": 12.6,
+        "unrealized_pnl": -8.45,
+        "unrealized_pnl_pct": -40.14,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -931,7 +935,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 15.6,
         "slug": "will-crude-oil-cl-hit-high-150-by-end-of-march-138"
@@ -947,10 +951,10 @@
         "entry_timestamp": "2026-03-03T03:18:44.399185+00:00",
         "shares": 247.67,
         "entry_usd": 13.69,
-        "current_price": 0.0285,
-        "current_value": 7.06,
-        "unrealized_pnl": -6.63,
-        "unrealized_pnl_pct": -48.43,
+        "current_price": 0.03,
+        "current_value": 7.43,
+        "unrealized_pnl": -6.26,
+        "unrealized_pnl_pct": -45.73,
         "edge_score_at_entry": 32.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -958,7 +962,7 @@
           "dislocation": 11.0,
           "external": 2.96
         },
-        "days_to_close": 6,
+        "days_to_close": 5,
         "resolution_date": "2026-03-10T00:00:00Z",
         "potential_multiple": 18.2,
         "slug": "will-us-or-israel-strike-iran-on-march-6-2026"
@@ -1012,7 +1016,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 17.2,
         "slug": "nuclear-weapon-detonation-by-march-31"
@@ -1039,7 +1043,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 9.5,
         "slug": "will-crude-oil-cl-hit-high-120-by-end-of-march-766-813"
@@ -1066,7 +1070,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 11.1,
         "slug": "will-israel-launch-a-major-ground-offensive-in-lebanon-by-march-31"
@@ -1109,10 +1113,10 @@
         "entry_timestamp": "2026-03-03T15:10:56.758017+00:00",
         "shares": 88.22,
         "entry_usd": 8.29,
-        "current_price": 0.2745,
-        "current_value": 24.22,
-        "unrealized_pnl": 15.93,
-        "unrealized_pnl_pct": 192.16,
+        "current_price": 0.2845,
+        "current_value": 25.1,
+        "unrealized_pnl": 16.81,
+        "unrealized_pnl_pct": 202.77,
         "edge_score_at_entry": 31.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1136,10 +1140,10 @@
         "entry_timestamp": "2026-03-03T15:10:56.758242+00:00",
         "shares": 163.47,
         "entry_usd": 17.25,
-        "current_price": 0.25,
-        "current_value": 40.87,
-        "unrealized_pnl": 23.62,
-        "unrealized_pnl_pct": 136.93,
+        "current_price": 0.245,
+        "current_value": 40.05,
+        "unrealized_pnl": 22.8,
+        "unrealized_pnl_pct": 132.17,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1147,7 +1151,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 9.5,
         "slug": "will-another-country-strike-iran-by-march-31-833"
@@ -1163,10 +1167,10 @@
         "entry_timestamp": "2026-03-03T21:08:36.020825+00:00",
         "shares": 167.36,
         "entry_usd": 16.82,
-        "current_price": 0.0925,
-        "current_value": 15.48,
-        "unrealized_pnl": -1.34,
-        "unrealized_pnl_pct": -7.97,
+        "current_price": 0.0855,
+        "current_value": 14.31,
+        "unrealized_pnl": -2.51,
+        "unrealized_pnl_pct": -14.92,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1174,7 +1178,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 10.0,
         "slug": "will-crude-oil-cl-hit-high-75-by-end-of-march-216-621-736"
@@ -1217,10 +1221,10 @@
         "entry_timestamp": "2026-03-03T23:03:19.311481+00:00",
         "shares": 278.1,
         "entry_usd": 16.49,
-        "current_price": 0.1025,
-        "current_value": 28.51,
-        "unrealized_pnl": 12.02,
-        "unrealized_pnl_pct": 72.89,
+        "current_price": 0.0965,
+        "current_value": 26.84,
+        "unrealized_pnl": 10.35,
+        "unrealized_pnl_pct": 62.77,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1228,7 +1232,7 @@
           "dislocation": 8.0,
           "external": 1.0
         },
-        "days_to_close": 27,
+        "days_to_close": 26,
         "resolution_date": "2026-03-31T00:00:00Z",
         "potential_multiple": 16.9,
         "slug": "will-the-us-invade-iran-by-march-31"
@@ -1390,9 +1394,13 @@
       {
         "timestamp": "2026-03-03T23:41:00.912504+00:00",
         "equity": 2506.78
+      },
+      {
+        "timestamp": "2026-03-04T00:03:55.945079+00:00",
+        "equity": 2506.58
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-03T23:41:00.912802+00:00"
+  "last_updated": "2026-03-04T00:03:55.945421+00:00"
 }
