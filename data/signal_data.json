@@ -1,32 +1,32 @@
 {
   "metadata": {
-    "timestamp": "2026-03-04T16:54:46.098015+00:00",
-    "markets_scanned": 10,
-    "tokens_scored": 10,
+    "timestamp": "2026-03-04T17:45:14.113223+00:00",
+    "markets_scanned": 5,
+    "tokens_scored": 5,
     "engine_version": "2.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 4991.71,
-    "combined_pnl": -7.16,
-    "combined_pnl_pct": -0.14,
-    "combined_win_rate": 0.45,
-    "combined_total_trades": 40,
+    "combined_equity": 4994.88,
+    "combined_pnl": -4.72,
+    "combined_pnl_pct": -0.09,
+    "combined_win_rate": 0.463,
+    "combined_total_trades": 41,
     "fund_a": {
       "name": "5x Hunter",
       "band": "5x",
       "capital": 2500,
-      "cash": 1851.85,
-      "equity": 2503.25,
-      "pnl": 3.65,
-      "total_pnl": 3.65,
-      "win_rate": 0.5,
-      "win_count": 10,
+      "cash": 1876.87,
+      "equity": 2509.18,
+      "pnl": 9.27,
+      "total_pnl": 9.27,
+      "win_rate": 0.524,
+      "win_count": 11,
       "loss_count": 10,
-      "open_positions": 15,
-      "closed_trades": 20,
+      "open_positions": 14,
+      "closed_trades": 21,
       "max_drawdown": -3.36,
-      "peak_equity": 2508.29,
+      "peak_equity": 2509.18,
       "equity_history": [
         {
           "timestamp": "2026-03-02T20:57:18.359041+00:00",
@@ -303,6 +303,14 @@
         {
           "timestamp": "2026-03-04T16:54:46.091887+00:00",
           "equity": 2503.56
+        },
+        {
+          "timestamp": "2026-03-04T17:45:14.109146+00:00",
+          "equity": 2509.18
+        },
+        {
+          "timestamp": "2026-03-04T17:45:14.109282+00:00",
+          "equity": 2509.18
         }
       ]
     },
@@ -311,9 +319,9 @@
       "band": "10x",
       "capital": 2500,
       "cash": 2131.15,
-      "equity": 2488.46,
-      "pnl": -10.81,
-      "total_pnl": -10.81,
+      "equity": 2485.7,
+      "pnl": -13.99,
+      "total_pnl": -13.99,
       "win_rate": 0.4,
       "win_count": 8,
       "loss_count": 12,
@@ -597,6 +605,10 @@
         {
           "timestamp": "2026-03-04T16:54:46.092243+00:00",
           "equity": 2488.88
+        },
+        {
+          "timestamp": "2026-03-04T17:45:14.109170+00:00",
+          "equity": 2485.7
         }
       ]
     }
@@ -677,11 +689,11 @@
       "potential_multiple": 15.4,
       "days_to_close": 5,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 44542.7055,
+      "liquidity_usd": 49269.2958,
       "volume_24h": 140466.74684300003,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089480+00:00",
+      "timestamp": "2026-03-04T17:45:14.107464+00:00",
       "base_event": "will-us-israel-strike-iran"
     },
     {
@@ -691,7 +703,7 @@
       "slug": "will-a-gulf-state-strike-iran-by-march-7",
       "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
       "outcome": "Yes",
-      "current_price": 0.21,
+      "current_price": 0.19,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -756,261 +768,15 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 4.8,
+      "potential_multiple": 5.3,
       "days_to_close": 2,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 24193.6911,
+      "liquidity_usd": 22819.3865,
       "volume_24h": 271519.821749,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089347+00:00",
+      "timestamp": "2026-03-04T17:45:14.107353+00:00",
       "base_event": "will-gulf-state-strike-iran"
-    },
-    {
-      "market_id": "1448515",
-      "question": "Will the price of Bitcoin be above $68,000 on March 5?",
-      "category": "",
-      "slug": "bitcoin-above-68k-on-march-5",
-      "token_id": "12795999705521478860780533447378076471418411364210599403570790575772100825681",
-      "outcome": "No",
-      "current_price": 0.0325,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 39.1,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 44.05,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.97,
-          "entities_checked": 2,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 30.8,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-05T17:00:00Z",
-      "liquidity_usd": 35813.90393,
-      "volume_24h": 186283.10169599994,
-      "fund_assignment": "fund_b",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089422+00:00",
-      "base_event": "bitcoin-above"
-    },
-    {
-      "market_id": "1448527",
-      "question": "Will the price of Bitcoin be above $70,000 on March 5?",
-      "category": "",
-      "slug": "bitcoin-above-70k-on-march-5",
-      "token_id": "78004462585473811724917791851323737862736341820018942700590535728547782928798",
-      "outcome": "No",
-      "current_price": 0.09,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 39.1,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 38.3,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.97,
-          "entities_checked": 2,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 11.1,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-05T17:00:00Z",
-      "liquidity_usd": 21947.0805,
-      "volume_24h": 122698.79398599996,
-      "fund_assignment": "fund_b",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089518+00:00",
-      "base_event": "bitcoin-above"
-    },
-    {
-      "market_id": "1448504",
-      "question": "Will the price of Bitcoin be above $66,000 on March 5?",
-      "category": "",
-      "slug": "bitcoin-above-66k-on-march-5",
-      "token_id": "28055671647032707430733783698679785869187638344618926431689746924431626111748",
-      "outcome": "No",
-      "current_price": 0.0115,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 39.1,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 46.15,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.97,
-          "entities_checked": 2,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 87.0,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-05T17:00:00Z",
-      "liquidity_usd": 24058.71467,
-      "volume_24h": 110490.44563300002,
-      "fund_assignment": "fund_b",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089536+00:00",
-      "base_event": "bitcoin-above"
     },
     {
       "market_id": "1423606",
@@ -1019,7 +785,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-120-139",
       "token_id": "70219387710614084282157902250487579067515988630627675577841447698582763599503",
       "outcome": "Yes",
-      "current_price": 0.024,
+      "current_price": 0.0185,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1084,178 +850,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 41.7,
-      "days_to_close": 2,
+      "potential_multiple": 54.1,
+      "days_to_close": 1,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 46574.87971,
+      "liquidity_usd": 57595.84192,
       "volume_24h": 418794.2450949997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089301+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423609",
-      "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-140-159",
-      "token_id": "34085644008921760142966349041085875304422499680806615803891246224496298224126",
-      "outcome": "Yes",
-      "current_price": 0.253,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.4,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 4.0,
-      "days_to_close": 2,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 28410.07867,
-      "volume_24h": 214748.9875419998,
-      "fund_assignment": null,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089383+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
-      "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
-      "outcome": "Yes",
-      "current_price": 0.217,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.4,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 4.6,
-      "days_to_close": 2,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 27920.36948,
-      "volume_24h": 198790.63937799988,
-      "fund_assignment": "fund_a",
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089404+00:00",
+      "timestamp": "2026-03-04T17:45:14.107304+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -1265,7 +867,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
       "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
       "outcome": "Yes",
-      "current_price": 0.0835,
+      "current_price": 0.082,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1330,14 +932,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 12.0,
-      "days_to_close": 2,
+      "potential_multiple": 12.2,
+      "days_to_close": 1,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 40124.16551,
+      "liquidity_usd": 31862.17734,
       "volume_24h": 183842.22956899996,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089435+00:00",
+      "timestamp": "2026-03-04T17:45:14.107420+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -1347,7 +949,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
       "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
       "outcome": "Yes",
-      "current_price": 0.0345,
+      "current_price": 0.029,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1412,14 +1014,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 29.0,
-      "days_to_close": 2,
+      "potential_multiple": 34.5,
+      "days_to_close": 1,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 34575.73068,
+      "liquidity_usd": 30468.24133,
       "volume_24h": 134706.19463999997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T16:54:46.089499+00:00",
+      "timestamp": "2026-03-04T17:45:14.107482+00:00",
       "base_event": "elon-musk-tweets-february-march"
     }
   ],
@@ -1436,10 +1038,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1605,
-        "current_value": 68.44,
-        "unrealized_pnl": -6.56,
-        "unrealized_pnl_pct": -8.75,
+        "current_price": 0.16,
+        "current_value": 68.23,
+        "unrealized_pnl": -6.77,
+        "unrealized_pnl_pct": -9.03,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1459,10 +1061,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2735,
-        "current_value": 88.79,
-        "unrealized_pnl": 17.01,
-        "unrealized_pnl_pct": 23.7,
+        "current_price": 0.2805,
+        "current_value": 91.06,
+        "unrealized_pnl": 19.28,
+        "unrealized_pnl_pct": 26.86,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1574,10 +1176,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.24,
-        "current_value": 46.64,
-        "unrealized_pnl": -2.19,
-        "unrealized_pnl_pct": -4.48,
+        "current_price": 0.255,
+        "current_value": 49.56,
+        "unrealized_pnl": 0.73,
+        "unrealized_pnl_pct": 1.49,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1698,33 +1300,6 @@
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246-866-876-465"
       },
       {
-        "position_id": "23f65e29",
-        "market_id": "1468354",
-        "question": "Will Iran name a successor to Khamenei by March 31?",
-        "token_id": "108303883282805733621907786823092933798578046999240564428529854116806430319839",
-        "outcome": "No",
-        "convexity_band": "5x",
-        "entry_price": 0.1256,
-        "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
-        "shares": 138.99,
-        "entry_usd": 17.46,
-        "current_price": 0.155,
-        "current_value": 21.54,
-        "unrealized_pnl": 4.08,
-        "unrealized_pnl_pct": 23.37,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 8.0,
-        "slug": "will-iran-name-a-successor-to-khamenei-by-march-31-483-852-436-833-347"
-      },
-      {
         "position_id": "dda113d2",
         "market_id": "1423609",
         "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
@@ -1735,10 +1310,10 @@
         "entry_timestamp": "2026-03-04T15:57:30.100057+00:00",
         "shares": 141.84,
         "entry_usd": 31.36,
-        "current_price": 0.253,
-        "current_value": 35.89,
-        "unrealized_pnl": 4.53,
-        "unrealized_pnl_pct": 14.45,
+        "current_price": 0.2465,
+        "current_value": 34.96,
+        "unrealized_pnl": 3.6,
+        "unrealized_pnl_pct": 11.48,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1746,7 +1321,7 @@
           "dislocation": 12.0,
           "external": 1.0
         },
-        "days_to_close": 2,
+        "days_to_close": 1,
         "resolution_date": "2026-03-06T17:00:00Z",
         "potential_multiple": 4.5,
         "slug": "elon-musk-of-tweets-february-27-march-6-140-159"
@@ -1762,10 +1337,10 @@
         "entry_timestamp": "2026-03-04T16:54:46.092727+00:00",
         "shares": 149.96,
         "entry_usd": 31.65,
-        "current_price": 0.21,
-        "current_value": 31.49,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.19,
+        "current_value": 28.49,
+        "unrealized_pnl": -3.16,
+        "unrealized_pnl_pct": -9.98,
         "edge_score_at_entry": 39.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1789,10 +1364,10 @@
         "entry_timestamp": "2026-03-04T16:54:46.093164+00:00",
         "shares": 140.4,
         "entry_usd": 30.62,
-        "current_price": 0.217,
-        "current_value": 30.47,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.227,
+        "current_value": 31.87,
+        "unrealized_pnl": 1.25,
+        "unrealized_pnl_pct": 4.08,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1800,7 +1375,7 @@
           "dislocation": 12.0,
           "external": 1.0
         },
-        "days_to_close": 2,
+        "days_to_close": 1,
         "resolution_date": "2026-03-06T17:00:00Z",
         "potential_multiple": 4.6,
         "slug": "elon-musk-of-tweets-february-27-march-6-180-199"
@@ -2025,10 +1600,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.0835,
-        "current_value": 26.34,
-        "unrealized_pnl": 1.93,
-        "unrealized_pnl_pct": 7.91,
+        "current_price": 0.082,
+        "current_value": 25.87,
+        "unrealized_pnl": 1.46,
+        "unrealized_pnl_pct": 5.98,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2036,7 +1611,7 @@
           "dislocation": 12.0,
           "external": 1.0
         },
-        "days_to_close": 2,
+        "days_to_close": 1,
         "resolution_date": "2026-03-06T17:00:00Z",
         "potential_multiple": 13.0,
         "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
@@ -2081,8 +1656,8 @@
         "entry_usd": 43.01,
         "current_price": 0.065,
         "current_value": 42.8,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.21,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 43.1,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2106,10 +1681,10 @@
         "entry_timestamp": "2026-03-04T16:54:46.093909+00:00",
         "shares": 459.15,
         "entry_usd": 41.53,
-        "current_price": 0.09,
-        "current_value": 41.32,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.085,
+        "current_value": 39.03,
+        "unrealized_pnl": -2.5,
+        "unrealized_pnl_pct": -6.02,
         "edge_score_at_entry": 39.1,
         "layer_scores_at_entry": {
           "structural": 10.0,
@@ -2117,7 +1692,7 @@
           "dislocation": 12.0,
           "external": 1.0
         },
-        "days_to_close": 1,
+        "days_to_close": 0,
         "resolution_date": "2026-03-05T17:00:00Z",
         "potential_multiple": 11.1,
         "slug": "bitcoin-above-70k-on-march-5"
@@ -2126,32 +1701,6 @@
   },
   "realized_trades": {
     "fund_a": [
-      {
-        "position_id": "bfe58a8c",
-        "market_id": "1473066",
-        "question": "Will Bitcoin reach $80,000 in March?",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.206,
-        "exit_price": 0.295,
-        "entry_timestamp": "2026-03-03T09:04:32.202716+00:00",
-        "exit_timestamp": "2026-03-04T10:52:42.838143+00:00",
-        "shares": 158.04,
-        "entry_usd": 32.56,
-        "exit_usd": 46.62,
-        "pnl_usd": 14.06,
-        "pnl_pct": 43.19,
-        "win": true,
-        "reason": "profit_target_35pct",
-        "edge_score_at_entry": 24.6,
-        "layer_scores_at_entry": {
-          "structural": 10.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close_at_entry": 27
-      },
       {
         "position_id": "1272da32",
         "market_id": "1473078",
@@ -2515,6 +2064,32 @@
           "external": 0.0
         },
         "days_to_close_at_entry": 0
+      },
+      {
+        "position_id": "23f65e29",
+        "market_id": "1468354",
+        "question": "Will Iran name a successor to Khamenei by March 31?",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.1256,
+        "exit_price": 0.18,
+        "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
+        "exit_timestamp": "2026-03-04T17:45:14.109271+00:00",
+        "shares": 138.99,
+        "entry_usd": 17.46,
+        "exit_usd": 25.02,
+        "pnl_usd": 7.56,
+        "pnl_pct": 43.29,
+        "win": true,
+        "reason": "profit_target_35pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
     "fund_b": [
@@ -2913,29 +2488,24 @@
   "statistics": {
     "by_category": {
       "": {
-        "count": 10,
-        "avg_edge": 39.2
+        "count": 5,
+        "avg_edge": 39.5
       }
     },
     "by_convexity": {
       "10x": {
-        "count": 3,
-        "total_liquidity": 106613.95150999998,
-        "avg_edge": 40.2
+        "count": 2,
+        "total_liquidity": 81131.47314,
+        "avg_edge": 40.8
       },
       "5x": {
-        "count": 2,
-        "total_liquidity": 52114.060580000005,
-        "avg_edge": 38.9
+        "count": 1,
+        "total_liquidity": 22819.3865,
+        "avg_edge": 39.4
       },
       "20x": {
-        "count": 4,
-        "total_liquidity": 141023.22899,
-        "avg_edge": 38.8
-      },
-      "2x": {
-        "count": 1,
-        "total_liquidity": 28410.07867,
+        "count": 2,
+        "total_liquidity": 88064.08325,
         "avg_edge": 38.4
       }
     }
@@ -2943,15 +2513,15 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 114,
+      "tokens_scored": 111,
       "tokens_with_signal": 34,
-      "coverage_pct": 29.8,
-      "avg_score": 9.59,
+      "coverage_pct": 30.6,
+      "avg_score": 9.6,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 114,
+      "tokens_scored": 111,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
@@ -2961,35 +2531,35 @@
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 114,
-      "tokens_with_signal": 105,
-      "coverage_pct": 92.1,
-      "avg_score": 7.49,
+      "tokens_scored": 111,
+      "tokens_with_signal": 102,
+      "coverage_pct": 91.9,
+      "avg_score": 7.29,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 114,
-      "tokens_with_signal": 114,
+      "tokens_scored": 111,
+      "tokens_with_signal": 111,
       "coverage_pct": 100.0,
-      "avg_score": 1.59,
+      "avg_score": 1.6,
       "max_score": 6.8
     }
   },
   "calibration": {
-    "total_trades": 40,
-    "overall_win_rate": 0.45,
-    "overall_avg_pnl_pct": 6.2,
+    "total_trades": 41,
+    "overall_win_rate": 0.463,
+    "overall_avg_pnl_pct": 7.1,
     "quintiles": [
       {
         "band": "15-25",
         "label": "low",
-        "trades": 22,
-        "wins": 14,
-        "actual_win_rate": 0.636,
+        "trades": 23,
+        "wins": 15,
+        "actual_win_rate": 0.652,
         "estimated_win_rate": 0.38,
-        "drift": 0.256,
-        "avg_pnl_pct": 27.7
+        "drift": 0.272,
+        "avg_pnl_pct": 28.4
       },
       {
         "band": "25-35",
@@ -3027,13 +2597,13 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 40,
-        "avg_score_winners": 8.44,
+        "trades_with_signal": 41,
+        "avg_score_winners": 8.42,
         "avg_score_losers": 9.2,
-        "predictive_power": 0.92
+        "predictive_power": 0.91
       },
       "external": {
-        "trades_with_signal": 32,
+        "trades_with_signal": 33,
         "avg_score_winners": 1.0,
         "avg_score_losers": 1.91,
         "predictive_power": 0.52
