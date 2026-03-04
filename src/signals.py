@@ -9,6 +9,7 @@ Layer 4: External (0-15 pts) — GDELT news + Wikipedia pageviews + Fear/Greed +
 
 import math
 import logging
+from datetime import datetime, timezone
 from typing import List, Dict, Optional
 
 from src.utils import mean, std_dev, z_score, safe_float
@@ -413,3 +414,49 @@ def classify_convexity(current_price: float, outcome: str) -> dict:
         'potential_multiple': round(multiple, 1),
         'probability_implied': round(prob * 100, 2)
     }
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# MARKET AGE BONUS — Favour newer markets for repricing strategy
+# ═══════════════════════════════════════════════════════════════════════════
+
+def compute_market_age_bonus(created_at: Optional[str]) -> float:
+    """
+    Newer markets have more mispricing because prices haven't converged yet.
+    Adds directly to edge score (capped at +5).
+
+    ≤ 7 days old:  +5 pts
+    8-14 days:     +4 pts
+    15-30 days:    +3 pts
+    31-60 days:    +2 pts
+    61-90 days:    +1 pt
+    90+ days:      +0
+
+    Args:
+        created_at: ISO date string of when the market was created
+
+    Returns: bonus points (0-5)
+    """
+    if not created_at:
+        return 0.0
+
+    try:
+        created = datetime.fromisoformat(str(created_at))
+        if created.tzinfo is None:
+            created = created.replace(tzinfo=timezone.utc)
+        age_days = (datetime.now(timezone.utc) - created).total_seconds() / 86400.0
+    except (ValueError, TypeError):
+        return 0.0
+
+    if age_days <= 7:
+        return 5.0
+    elif age_days <= 14:
+        return 4.0
+    elif age_days <= 30:
+        return 3.0
+    elif age_days <= 60:
+        return 2.0
+    elif age_days <= 90:
+        return 1.0
+    else:
+        return 0.0

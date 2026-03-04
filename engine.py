@@ -207,7 +207,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             external = _external_cache[mkt_question]
             manifold_prob = _external_cache.get('__manifold__', {}).get(mkt_question)
 
-            # Combined edge score
+            # Combined edge score (pass created_at for market age bonus)
             scores = compute_edge_score(
                 token=token,
                 market=market,
@@ -217,6 +217,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 external=external,
                 config=config,
                 manifold_prob=manifold_prob,
+                created_at=market.get('created_at', market.get('startDate', '')),
             )
 
             scored_items.append({

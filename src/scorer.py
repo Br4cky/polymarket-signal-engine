@@ -11,6 +11,7 @@ from src.signals import (
     compute_structural_score,
     compute_dislocation_score,
     classify_convexity,
+    compute_market_age_bonus,
 )
 from src.utils import safe_float
 
@@ -25,7 +26,8 @@ def compute_edge_score(
     smart_money: dict,
     external: dict,
     config: dict,
-    manifold_prob: Optional[float] = None
+    manifold_prob: Optional[float] = None,
+    created_at: Optional[str] = None
 ) -> dict:
     """
     Compute the composite edge score for a market token across all 4 layers.
@@ -120,6 +122,11 @@ def compute_edge_score(
     # Scale to 0-100
     edge_score = round(min(100.0, weighted * 100.0), 1)
 
+    # ── Market Age Bonus (repricing strategy) ──
+    # Newer markets have more mispricing; add up to +5 pts directly
+    age_bonus = compute_market_age_bonus(created_at)
+    edge_score = round(min(100.0, edge_score + age_bonus), 1)
+
     # ── Classification ──
     convexity = classify_convexity(current_price, token.get('outcome', 'YES'))
 
@@ -136,7 +143,8 @@ def compute_edge_score(
         'dislocation_detail': dislocation,
         'external_detail': external,
         'convexity': convexity,
-        'days_to_close': days_to_close
+        'days_to_close': days_to_close,
+        'age_bonus': age_bonus
     }
 
 
@@ -205,10 +213,10 @@ def rank_opportunities(
 
             if dislocation_pct > 65:
                 # Mostly dislocation — signal is volatile, need higher bar
-                effective_threshold = max(threshold, threshold * 1.25)
-            elif structural_score > 10 or smart_money_score > 10:
-                # Strong structural or smart money confirmation — durable signal
-                effective_threshold = max(threshold * 0.85, 10)
+                effective_threshold = max(threshold, threshold * 1.30)
+            elif structural_score > 8:
+                # Strong structural divergence — reliable repricing signal
+                effective_threshold = max(threshold * 0.80, 10)
 
         if edge < effective_threshold:
             continue

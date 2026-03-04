@@ -98,27 +98,33 @@ def save_portfolio(portfolio: dict, filepath: str):
 
 # ─── Position Sizing (Half-Kelly) ───────────────────────────────────────────
 
-def _time_decay_multiplier(days_to_close: int) -> float:
+def _hold_duration_decay(entry_timestamp: str) -> float:
     """
-    Adjust position size based on resolution proximity.
+    Adjust stop-loss tightness based on how long a position has been held.
 
-    Near-resolution markets have binary risk — either they resolve in your
-    favour (big win) or against (total loss). Size accordingly:
-    - Far out: full size, plenty of time for information to work
-    - Mid-range: slight reduction, increasing vol
-    - Close: aggressive reduction, binary outcome imminent
-    - Very close: minimal size, pure gamble territory
+    Repricing strategy: if the market hasn't corrected quickly, the thesis
+    is weakening. Tighten stops progressively.
+    - 0-24h: 1.0 (fresh signal, full stop width)
+    - 24-48h: 0.85 (should have repriced by now)
+    - 48-72h: 0.60 (thesis weakening)
+    - 72h+: 0.30 (approaching forced exit)
     """
-    if days_to_close >= 30:
+    try:
+        entry = datetime.fromisoformat(str(entry_timestamp))
+        if entry.tzinfo is None:
+            entry = entry.replace(tzinfo=timezone.utc)
+        hours_held = (datetime.now(timezone.utc) - entry).total_seconds() / 3600.0
+    except (ValueError, TypeError):
+        hours_held = 0
+
+    if hours_held <= 24:
         return 1.0
-    elif days_to_close >= 14:
+    elif hours_held <= 48:
         return 0.85
-    elif days_to_close >= 7:
-        return 0.65
-    elif days_to_close >= 3:
-        return 0.40
+    elif hours_held <= 72:
+        return 0.60
     else:
-        return 0.20
+        return 0.30
 
 
 def _conviction_multiplier(layer_scores: dict) -> float:
@@ -138,8 +144,9 @@ def _conviction_multiplier(layer_scores: dict) -> float:
     if layer_scores.get('external', 0) > 1:
         active_layers += 1
 
-    # 1 layer = 0.6x, 2 = 0.85x, 3 = 1.0x, 4 = 1.15x
-    conviction_map = {0: 0.4, 1: 0.6, 2: 0.85, 3: 1.0, 4: 1.15}
+    # Repricing strategy: fewer positions, higher conviction required
+    # 1 layer = 0.5x, 2 = 0.8x, 3 = 1.1x, 4 = 1.3x
+    conviction_map = {0: 0.3, 1: 0.5, 2: 0.8, 3: 1.1, 4: 1.3}
     return conviction_map.get(active_layers, 1.0)
 
 
@@ -199,8 +206,9 @@ def kelly_position_size(
     multipliers = {'20x': 0.5, '10x': 0.7, '5x': 1.0, '2x': 1.0, 'yield': 1.2}
     position_size *= multipliers.get(convexity_band, 1.0)
 
-    # Time-aware sizing: reduce near resolution (binary risk increases)
-    position_size *= _time_decay_multiplier(days_to_close)
+    # Repricing strategy: no time-to-resolution decay for sizing.
+    # We exit on repricing, not resolution. Hold-duration decay is
+    # applied to stop-loss tightening in auto_close_positions instead.
 
     # Conviction sizing: multi-layer confirmation = larger bet
     if layer_scores:
@@ -403,105 +411,110 @@ def close_position(fund: dict, position_id: str, exit_price: float, reason: str 
 
 def _smart_stop_loss(pos: dict, config: dict) -> float:
     """
-    Compute dynamic stop-loss threshold based on convexity band and conviction.
+    Compute dynamic stop-loss for repricing strategy.
 
-    Key insight: a 20x token can absorb an -85% drawdown because the math
-    still works — you paid $5 for a chance at $100, losing $4.25 is fine
-    if the thesis holds. A 5x token losing -60% means the thesis is broken.
-
-    High conviction (multi-layer confirmation at entry) → wider stops.
-    Low conviction → tighter stops, cut losses faster.
+    Repricing thesis: if the mispricing doesn't correct quickly, cut fast.
+    Tight base stops from config, tightened further by hold duration.
     """
     band = pos.get('convexity_band', '5x')
-    entry_layers = pos.get('layer_scores_at_entry', {})
-    days = pos.get('days_to_close', 30)
 
-    # Base stop loss by band (respects convexity math)
+    # Base stops from config (repricing-sized: -10% to -35%)
+    config_stops = config.get('trading', {}).get('stop_losses', {})
     base_stops = {
-        '20x': -85,
-        '10x': -75,
-        '5x': -60,
-        '2x': -40,
-        'yield': -25,
+        '20x': config_stops.get('20x', -35),
+        '10x': config_stops.get('10x', -30),
+        '5x': config_stops.get('5x', -25),
+        '2x': config_stops.get('2x', -15),
+        'yield': config_stops.get('yield', -10),
     }
-    stop = base_stops.get(band, -60)
+    stop = base_stops.get(band, -25)
 
-    # Conviction adjustment: count active layers at entry
-    active_layers = 0
-    if entry_layers.get('structural', 0) > 2:
-        active_layers += 1
-    if entry_layers.get('smart_money', 0) > 2:
-        active_layers += 1
-    if entry_layers.get('dislocation', 0) > 3:
-        active_layers += 1
-    if entry_layers.get('external', 0) > 1:
-        active_layers += 1
-
-    # Low conviction → tighten stop by 25%
-    # High conviction → keep full stop width
-    if active_layers <= 1:
-        stop *= 0.75  # e.g., -75% → -56%
-    elif active_layers >= 3:
-        stop *= 1.05  # Slightly wider for high conviction
-
-    # Tighten near resolution (less time for thesis to play out)
-    if days < 5:
-        stop *= 0.80
-    elif days < 10:
-        stop *= 0.90
+    # Hold-duration tightening: the longer we hold, the tighter the stop
+    # A stale position means the repricing thesis is failing
+    entry_ts = pos.get('entry_timestamp', '')
+    decay = _hold_duration_decay(entry_ts)
+    # decay=1.0 → full stop, decay=0.3 → stop tightened to 30% of original
+    # e.g. -25% base × 0.3 decay = -7.5% (very tight, about to force-close)
+    stop = stop * decay
 
     return round(stop, 1)
 
 
-def _trailing_profit_target(pos: dict, config: dict) -> float:
+def _repricing_profit_target(pos: dict, config: dict) -> float:
     """
-    Dynamic profit target that scales with convexity band.
+    Profit target sized for repricing, not resolution.
 
-    20x tokens should target much higher exits than 5x tokens.
-    Also implements a trailing mechanism: once up 100%+, lock in
-    at least 50% of peak gain.
+    A 5-cent mispricing on a 0.10 token = 50% gain when corrected.
+    We take what the market gives us and recycle capital.
     """
     band = pos.get('convexity_band', '5x')
 
-    # Base profit targets by band
-    base_targets = {
-        '20x': 500,   # 5x initial investment (not full 20x — take some off the table)
-        '10x': 400,   # 4x
-        '5x': 300,    # 3x (current default)
-        '2x': 150,    # 1.5x
-        'yield': 80,
+    # Repricing-sized targets from config (15-70%)
+    config_targets = config.get('trading', {}).get('profit_targets', {})
+    targets = {
+        '20x': config_targets.get('20x', 70),
+        '10x': config_targets.get('10x', 45),
+        '5x': config_targets.get('5x', 35),
+        '2x': config_targets.get('2x', 20),
+        'yield': config_targets.get('yield', 15),
     }
-    return base_targets.get(band, 300)
+    return targets.get(band, 35)
 
 
 def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: dict) -> List[dict]:
     """
-    Smart auto-close: band-aware stop-losses, conviction-weighted stops,
-    and dynamic profit targets.
+    Repricing auto-close: tight profit targets, aggressive trailing stops,
+    hold-duration-aware stop losses, and max hold enforcement.
     """
     to_close = []
+    max_hold_days = config.get('trading', {}).get('max_hold_days', {})
 
     for pos in fund['positions']:
         pnl_pct = pos.get('unrealized_pnl_pct', 0)
+        band = pos.get('convexity_band', '5x')
 
-        # Dynamic profit target based on band
-        profit_target = _trailing_profit_target(pos, config)
+        # ── 1. Max hold enforcement: force-close stale positions ──
+        entry_ts = pos.get('entry_timestamp', '')
+        try:
+            entry = datetime.fromisoformat(str(entry_ts))
+            if entry.tzinfo is None:
+                entry = entry.replace(tzinfo=timezone.utc)
+            days_held = (datetime.now(timezone.utc) - entry).total_seconds() / 86400.0
+        except (ValueError, TypeError):
+            days_held = 0
+
+        max_days = max_hold_days.get(band, 5)
+        if days_held >= max_days:
+            to_close.append((pos['position_id'], f'max_hold_exceeded_{days_held:.1f}d'))
+            continue
+
+        # ── 2. Repricing profit target ──
+        profit_target = _repricing_profit_target(pos, config)
         if pnl_pct >= profit_target:
             to_close.append((pos['position_id'], f'profit_target_{profit_target:.0f}pct'))
             continue
 
-        # Trailing stop: if position was ever up 100%+, lock in at least
-        # half the peak gain. Track peak_pnl_pct on position.
+        # ── 3. Aggressive trailing stop: lock gains early ──
+        # Track peak P&L on the position
         peak = pos.get('peak_pnl_pct', pnl_pct)
         if pnl_pct > peak:
             pos['peak_pnl_pct'] = pnl_pct
             peak = pnl_pct
 
-        if peak >= 100 and pnl_pct < peak * 0.50:
+        # Tiered trailing: lock increasing % of peak as gains grow
+        trailing_floor = None
+        if peak >= 80:
+            trailing_floor = peak * 0.50   # Lock 50% of peak (e.g. peak=80% → floor=40%)
+        elif peak >= 50:
+            trailing_floor = peak * 0.30   # Lock 30% of peak (e.g. peak=50% → floor=15%)
+        elif peak >= 30:
+            trailing_floor = peak * 0.15   # Lock 15% of peak (e.g. peak=30% → floor=4.5%)
+
+        if trailing_floor is not None and pnl_pct < trailing_floor:
             to_close.append((pos['position_id'], f'trailing_stop_from_{peak:.0f}pct'))
             continue
 
-        # Smart stop loss: band + conviction + time aware
+        # ── 4. Smart stop loss: band + hold-duration tightening ──
         stop_loss = _smart_stop_loss(pos, config)
         if pnl_pct <= stop_loss:
             to_close.append((pos['position_id'], f'stop_loss_{stop_loss:.0f}pct'))

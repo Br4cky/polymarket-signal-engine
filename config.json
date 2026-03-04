@@ -39,13 +39,13 @@
   },
   "scoring": {
     "layer_weights": {
-      "structural": 0.20,
-      "smart_money": 0.20,
-      "dislocation": 0.45,
-      "external": 0.15
+      "structural": 0.25,
+      "smart_money": 0.15,
+      "dislocation": 0.50,
+      "external": 0.10
     },
-    "edge_threshold": 15,
-    "strong_signal_threshold": 35
+    "edge_threshold": 25,
+    "strong_signal_threshold": 45
   },
   "funds": {
     "fund_a": {
@@ -65,18 +65,37 @@
   },
   "portfolio": {
     "total_capital": 5000,
-    "max_positions_per_fund": 50,
-    "max_position_size_pct": 3,
-    "kelly_fraction": 0.5
+    "max_positions_per_fund": 12,
+    "max_position_size_pct": 4,
+    "kelly_fraction": 0.4
   },
   "trading": {
-    "profit_target_pct": 300,
-    "stop_loss_pct": -80,
+    "profit_targets": {
+      "20x": 70,
+      "10x": 45,
+      "5x": 35,
+      "2x": 20,
+      "yield": 15
+    },
+    "stop_losses": {
+      "20x": -35,
+      "10x": -30,
+      "5x": -25,
+      "2x": -15,
+      "yield": -10
+    },
+    "max_hold_days": {
+      "20x": 3,
+      "10x": 4,
+      "5x": 5,
+      "2x": 6,
+      "yield": 7
+    },
     "min_liquidity_usd": 500,
-    "min_days_to_close": 2,
-    "max_days_to_close": 45,
+    "min_days_to_close": 1,
+    "max_days_to_close": 20,
     "slippage_pct": 0.5,
-    "max_exposure_pct": 70,
+    "max_exposure_pct": 60,
     "auto_trade_enabled": false
   },
   "dashboard": {
