@@ -382,7 +382,11 @@ let currentPnlPeriod = 'daily';
 // ── Data Loading ──
 async function loadData() {
   try {
-    const resp = await fetch('data/signal_data.json?t=' + Date.now());
+    // Try local file first (dev), fall back to GitHub raw (production)
+    let resp = await fetch('data/signal_data.json?t=' + Date.now()).catch(() => null);
+    if (!resp || !resp.ok) {
+      resp = await fetch('https://raw.githubusercontent.com/Br4cky/polymarket-signal-engine/main/data/signal_data.json?t=' + Date.now());
+    }
     if (!resp.ok) throw new Error('No data file');
     DATA = await resp.json();
     render();
