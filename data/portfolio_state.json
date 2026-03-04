@@ -3,7 +3,7 @@
     "name": "5x Hunter",
     "band": "5x",
     "capital": 2500,
-    "available_cash": 1865.28,
+    "available_cash": 1851.85,
     "positions": [
       {
         "position_id": "d69b9acf",
@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1595,
-        "current_value": 68.02,
-        "unrealized_pnl": -6.98,
-        "unrealized_pnl_pct": -9.31,
+        "current_price": 0.1605,
+        "current_value": 68.44,
+        "unrealized_pnl": -6.56,
+        "unrealized_pnl_pct": -8.75,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,38 +39,15 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2625,
-        "current_value": 85.22,
-        "unrealized_pnl": 13.44,
-        "unrealized_pnl_pct": 18.72,
+        "current_price": 0.2735,
+        "current_value": 88.79,
+        "unrealized_pnl": 17.01,
+        "unrealized_pnl_pct": 23.7,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
           "smart_money": 0.0,
           "dislocation": 10.5,
-          "external": 0.0
-        }
-      },
-      {
-        "position_id": "272f40e5",
-        "market_id": "1473075",
-        "question": "Will Bitcoin dip to $55,000 in March?",
-        "token_id": "3056478011660943904461466382920934987843622145282294244222474838030938303402",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.1759,
-        "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
-        "shares": 390.68,
-        "entry_usd": 68.71,
-        "current_price": 0.165,
-        "current_value": 64.46,
-        "unrealized_pnl": -4.25,
-        "unrealized_pnl_pct": -6.19,
-        "edge_score_at_entry": 26.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
           "external": 0.0
         }
       },
@@ -177,10 +154,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.235,
-        "current_value": 45.67,
-        "unrealized_pnl": -3.16,
-        "unrealized_pnl_pct": -6.47,
+        "current_price": 0.24,
+        "current_value": 46.64,
+        "unrealized_pnl": -2.19,
+        "unrealized_pnl_pct": -4.48,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -311,10 +288,10 @@
         "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
         "shares": 138.99,
         "entry_usd": 17.46,
-        "current_price": 0.14,
-        "current_value": 19.46,
-        "unrealized_pnl": 2.0,
-        "unrealized_pnl_pct": 11.45,
+        "current_price": 0.155,
+        "current_value": 21.54,
+        "unrealized_pnl": 4.08,
+        "unrealized_pnl_pct": 23.37,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -338,10 +315,10 @@
         "entry_timestamp": "2026-03-04T15:57:30.100057+00:00",
         "shares": 141.84,
         "entry_usd": 31.36,
-        "current_price": 0.22,
-        "current_value": 31.2,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.253,
+        "current_value": 35.89,
+        "unrealized_pnl": 4.53,
+        "unrealized_pnl_pct": 14.45,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -353,6 +330,60 @@
         "resolution_date": "2026-03-06T17:00:00Z",
         "potential_multiple": 4.5,
         "slug": "elon-musk-of-tweets-february-27-march-6-140-159"
+      },
+      {
+        "position_id": "c5f5dfeb",
+        "market_id": "1466766",
+        "question": "Will a Gulf State strike Iran by March 7?",
+        "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.211,
+        "entry_timestamp": "2026-03-04T16:54:46.092727+00:00",
+        "shares": 149.96,
+        "entry_usd": 31.65,
+        "current_price": 0.21,
+        "current_value": 31.49,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 39.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-07T00:00:00Z",
+        "potential_multiple": 4.8,
+        "slug": "will-a-gulf-state-strike-iran-by-march-7"
+      },
+      {
+        "position_id": "361629bb",
+        "market_id": "1423621",
+        "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
+        "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.2181,
+        "entry_timestamp": "2026-03-04T16:54:46.093164+00:00",
+        "shares": 140.4,
+        "entry_usd": 30.62,
+        "current_price": 0.217,
+        "current_value": 30.47,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 38.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-06T17:00:00Z",
+        "potential_multiple": 4.6,
+        "slug": "elon-musk-of-tweets-february-27-march-6-180-199"
       }
     ],
     "realized_trades": [
@@ -849,10 +880,36 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 2
+      },
+      {
+        "position_id": "272f40e5",
+        "market_id": "1473075",
+        "question": "Will Bitcoin dip to $55,000 in March?",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.1759,
+        "exit_price": 0.125,
+        "entry_timestamp": "2026-03-02T20:59:44.889872+00:00",
+        "exit_timestamp": "2026-03-04T16:54:46.091876+00:00",
+        "shares": 390.68,
+        "entry_usd": 68.71,
+        "exit_usd": 48.84,
+        "pnl_usd": -19.87,
+        "pnl_pct": -28.93,
+        "win": false,
+        "reason": "stop_loss_-21pct",
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        },
+        "days_to_close_at_entry": 0
       }
     ],
     "win_count": 10,
-    "loss_count": 9,
+    "loss_count": 10,
     "peak_equity": 2508.29,
     "max_drawdown": -3.36,
     "equity_history": [
@@ -1123,6 +1180,14 @@
       {
         "timestamp": "2026-03-04T15:57:30.098903+00:00",
         "equity": 2507.61
+      },
+      {
+        "timestamp": "2026-03-04T16:54:46.091703+00:00",
+        "equity": 2503.56
+      },
+      {
+        "timestamp": "2026-03-04T16:54:46.091887+00:00",
+        "equity": 2503.56
       }
     ]
   },
@@ -1130,31 +1195,8 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 2141.48,
+    "available_cash": 2131.15,
     "positions": [
-      {
-        "position_id": "270503ef",
-        "market_id": "1473060",
-        "question": "Will Bitcoin reach $90,000 in March?",
-        "token_id": "72288567685017756888828669131409064604859118327619100036098909334128768764531",
-        "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0673,
-        "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
-        "shares": 727.56,
-        "entry_usd": 48.99,
-        "current_price": 0.09,
-        "current_value": 65.48,
-        "unrealized_pnl": 16.49,
-        "unrealized_pnl_pct": 33.66,
-        "edge_score_at_entry": 26.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 0.0
-        }
-      },
       {
         "position_id": "2ec51275",
         "market_id": "1473081",
@@ -1373,10 +1415,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.0975,
-        "current_value": 30.76,
-        "unrealized_pnl": 6.35,
-        "unrealized_pnl_pct": 26.01,
+        "current_price": 0.0835,
+        "current_value": 26.34,
+        "unrealized_pnl": 1.93,
+        "unrealized_pnl_pct": 7.91,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1415,6 +1457,60 @@
         "resolution_date": "2026-03-10T12:30:00Z",
         "potential_multiple": 15.4,
         "slug": "atp-cosano-kuzmano-2026-03-03"
+      },
+      {
+        "position_id": "0eca8e7f",
+        "market_id": "1465975",
+        "question": "Will US or Israel strike Iran on March 10, 2026?",
+        "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-04T16:54:46.093607+00:00",
+        "shares": 658.4,
+        "entry_usd": 43.01,
+        "current_price": 0.065,
+        "current_value": 42.8,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 43.1,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 6.8
+        },
+        "days_to_close": 5,
+        "resolution_date": "2026-03-10T00:00:00Z",
+        "potential_multiple": 15.4,
+        "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
+      },
+      {
+        "position_id": "22e54cdc",
+        "market_id": "1448527",
+        "question": "Will the price of Bitcoin be above $70,000 on March 5?",
+        "token_id": "78004462585473811724917791851323737862736341820018942700590535728547782928798",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0904,
+        "entry_timestamp": "2026-03-04T16:54:46.093909+00:00",
+        "shares": 459.15,
+        "entry_usd": 41.53,
+        "current_price": 0.09,
+        "current_value": 41.32,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 39.1,
+        "layer_scores_at_entry": {
+          "structural": 10.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 1,
+        "resolution_date": "2026-03-05T17:00:00Z",
+        "potential_multiple": 11.1,
+        "slug": "bitcoin-above-70k-on-march-5"
       }
     ],
     "realized_trades": [
@@ -1911,9 +2007,35 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 2
+      },
+      {
+        "position_id": "270503ef",
+        "market_id": "1473060",
+        "question": "Will Bitcoin reach $90,000 in March?",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.0673,
+        "exit_price": 0.102,
+        "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
+        "exit_timestamp": "2026-03-04T16:54:46.092227+00:00",
+        "shares": 727.56,
+        "entry_usd": 48.99,
+        "exit_usd": 74.21,
+        "pnl_usd": 25.22,
+        "pnl_pct": 51.48,
+        "win": true,
+        "reason": "profit_target_45pct",
+        "edge_score_at_entry": 26.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 0.0
+        },
+        "days_to_close_at_entry": 0
       }
     ],
-    "win_count": 7,
+    "win_count": 8,
     "loss_count": 12,
     "peak_equity": 2532.21,
     "max_drawdown": -2.21,
@@ -2185,9 +2307,17 @@
       {
         "timestamp": "2026-03-04T15:57:30.099595+00:00",
         "equity": 2484.57
+      },
+      {
+        "timestamp": "2026-03-04T16:54:46.091734+00:00",
+        "equity": 2488.88
+      },
+      {
+        "timestamp": "2026-03-04T16:54:46.092243+00:00",
+        "equity": 2488.88
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T15:57:30.100851+00:00"
+  "last_updated": "2026-03-04T16:54:46.094714+00:00"
 }
