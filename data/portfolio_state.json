@@ -3,7 +3,7 @@
     "name": "5x Hunter",
     "band": "5x",
     "capital": 2500,
-    "available_cash": 1648.34,
+    "available_cash": 1684.63,
     "positions": [
       {
         "position_id": "d69b9acf",
@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.159,
-        "current_value": 67.8,
-        "unrealized_pnl": -7.2,
-        "unrealized_pnl_pct": -9.6,
+        "current_price": 0.1595,
+        "current_value": 68.02,
+        "unrealized_pnl": -6.98,
+        "unrealized_pnl_pct": -9.31,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2515,
-        "current_value": 81.65,
-        "unrealized_pnl": 9.87,
-        "unrealized_pnl_pct": 13.75,
+        "current_price": 0.2575,
+        "current_value": 83.6,
+        "unrealized_pnl": 11.82,
+        "unrealized_pnl_pct": 16.47,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -85,10 +85,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.155,
-        "current_value": 75.16,
-        "unrealized_pnl": 9.37,
-        "unrealized_pnl_pct": 14.24,
+        "current_price": 0.16,
+        "current_value": 77.59,
+        "unrealized_pnl": 11.8,
+        "unrealized_pnl_pct": 17.94,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -200,10 +200,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.29,
-        "current_value": 56.36,
-        "unrealized_pnl": 7.53,
-        "unrealized_pnl_pct": 15.42,
+        "current_price": 0.27,
+        "current_value": 52.47,
+        "unrealized_pnl": 3.64,
+        "unrealized_pnl_pct": 7.45,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -334,10 +334,10 @@
         "entry_timestamp": "2026-03-03T17:10:54.760222+00:00",
         "shares": 109.12,
         "entry_usd": 19.74,
-        "current_price": 0.16,
-        "current_value": 17.46,
-        "unrealized_pnl": -2.28,
-        "unrealized_pnl_pct": -11.55,
+        "current_price": 0.145,
+        "current_value": 15.82,
+        "unrealized_pnl": -3.92,
+        "unrealized_pnl_pct": -19.86,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -388,10 +388,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.767042+00:00",
         "shares": 99.39,
         "entry_usd": 17.98,
-        "current_price": 0.185,
-        "current_value": 18.39,
-        "unrealized_pnl": 0.41,
-        "unrealized_pnl_pct": 2.28,
+        "current_price": 0.225,
+        "current_value": 22.36,
+        "unrealized_pnl": 4.38,
+        "unrealized_pnl_pct": 24.36,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -432,60 +432,6 @@
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-31-483-852-436-833-347"
       },
       {
-        "position_id": "a296160f",
-        "market_id": "1484115",
-        "question": "Hersonissos: Javier Barranco Cosano vs Dimitar Kuzmanov",
-        "token_id": "13057488277551705394326855138053150865822450038552524270504096702515820856903",
-        "outcome": "Javier Barranco Cosano",
-        "convexity_band": "5x",
-        "entry_price": 0.1457,
-        "entry_timestamp": "2026-03-04T06:32:15.947768+00:00",
-        "shares": 77.54,
-        "entry_usd": 11.3,
-        "current_price": 0.135,
-        "current_value": 10.47,
-        "unrealized_pnl": -0.83,
-        "unrealized_pnl_pct": -7.35,
-        "edge_score_at_entry": 37.3,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 5.9
-        },
-        "days_to_close": 6,
-        "resolution_date": "2026-03-10T12:30:00Z",
-        "potential_multiple": 6.9,
-        "slug": "atp-cosano-kuzmano-2026-03-03"
-      },
-      {
-        "position_id": "f4dc70c0",
-        "market_id": "1485772",
-        "question": "Will Iran name a successor to Khamenei by March 5?",
-        "token_id": "11928201211132525824521109125451301709939291116101441965256470806062588861840",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.206,
-        "entry_timestamp": "2026-03-04T07:28:14.426931+00:00",
-        "shares": 109.65,
-        "entry_usd": 22.59,
-        "current_price": 0.255,
-        "current_value": 27.96,
-        "unrealized_pnl": 5.37,
-        "unrealized_pnl_pct": 23.77,
-        "edge_score_at_entry": 21.8,
-        "layer_scores_at_entry": {
-          "structural": 6.67,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 4.9,
-        "slug": "will-iran-name-a-successor-to-khamenei-by-march-5-748-625"
-      },
-      {
         "position_id": "425af247",
         "market_id": "1423606",
         "question": "Will Elon Musk post 120-139 tweets from February 27 to March 6, 2026?",
@@ -496,10 +442,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.763626+00:00",
         "shares": 207.69,
         "entry_usd": 25.36,
-        "current_price": 0.1215,
-        "current_value": 25.23,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.1045,
+        "current_value": 21.7,
+        "unrealized_pnl": -3.66,
+        "unrealized_pnl_pct": -14.43,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -523,10 +469,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.764149+00:00",
         "shares": 167.82,
         "entry_usd": 24.54,
-        "current_price": 0.1455,
-        "current_value": 24.42,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.136,
+        "current_value": 22.82,
+        "unrealized_pnl": -1.72,
+        "unrealized_pnl_pct": -7.01,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -826,10 +772,62 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
+      },
+      {
+        "position_id": "a296160f",
+        "market_id": "1484115",
+        "question": "Hersonissos: Javier Barranco Cosano vs Dimitar Kuzmanov",
+        "outcome": "Javier Barranco Cosano",
+        "convexity_band": "5x",
+        "entry_price": 0.1457,
+        "exit_price": 0.065,
+        "entry_timestamp": "2026-03-04T06:32:15.947768+00:00",
+        "exit_timestamp": "2026-03-04T11:50:13.551129+00:00",
+        "shares": 77.54,
+        "entry_usd": 11.3,
+        "exit_usd": 5.04,
+        "pnl_usd": -6.26,
+        "pnl_pct": -55.4,
+        "win": false,
+        "reason": "stop_loss_-25pct",
+        "edge_score_at_entry": 37.3,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 5.9
+        },
+        "days_to_close_at_entry": 6
+      },
+      {
+        "position_id": "f4dc70c0",
+        "market_id": "1485772",
+        "question": "Will Iran name a successor to Khamenei by March 5?",
+        "outcome": "Yes",
+        "convexity_band": "5x",
+        "entry_price": 0.206,
+        "exit_price": 0.285,
+        "entry_timestamp": "2026-03-04T07:28:14.426931+00:00",
+        "exit_timestamp": "2026-03-04T11:50:13.551277+00:00",
+        "shares": 109.65,
+        "entry_usd": 22.59,
+        "exit_usd": 31.25,
+        "pnl_usd": 8.66,
+        "pnl_pct": 38.34,
+        "win": true,
+        "reason": "profit_target_35pct",
+        "edge_score_at_entry": 21.8,
+        "layer_scores_at_entry": {
+          "structural": 6.67,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
-    "win_count": 5,
-    "loss_count": 6,
+    "win_count": 6,
+    "loss_count": 7,
     "peak_equity": 2508.12,
     "max_drawdown": -3.36,
     "equity_history": [
@@ -1048,6 +1046,18 @@
       {
         "timestamp": "2026-03-04T11:22:22.762612+00:00",
         "equity": 2485.96
+      },
+      {
+        "timestamp": "2026-03-04T11:50:13.550873+00:00",
+        "equity": 2481.48
+      },
+      {
+        "timestamp": "2026-03-04T11:50:13.551149+00:00",
+        "equity": 2481.48
+      },
+      {
+        "timestamp": "2026-03-04T11:50:13.551294+00:00",
+        "equity": 2481.48
       }
     ]
   },
@@ -1055,7 +1065,7 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 2085.07,
+    "available_cash": 2050.09,
     "positions": [
       {
         "position_id": "08b5e8ca",
@@ -1068,10 +1078,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.08,
-        "current_value": 46.43,
-        "unrealized_pnl": -6.07,
-        "unrealized_pnl_pct": -11.56,
+        "current_price": 0.075,
+        "current_value": 43.53,
+        "unrealized_pnl": -8.97,
+        "unrealized_pnl_pct": -17.09,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1091,10 +1101,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.0765,
-        "current_value": 55.66,
-        "unrealized_pnl": 6.67,
-        "unrealized_pnl_pct": 13.62,
+        "current_price": 0.0735,
+        "current_value": 53.48,
+        "unrealized_pnl": 4.49,
+        "unrealized_pnl_pct": 9.17,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1230,33 +1240,6 @@
         "slug": "will-crude-oil-cl-hit-high-120-by-end-of-march-766-813"
       },
       {
-        "position_id": "c6f2fa2c",
-        "market_id": "677397",
-        "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
-        "token_id": "109194950528471238221689772140031366300756554661469112835221485697222266375845",
-        "outcome": "No",
-        "convexity_band": "10x",
-        "entry_price": 0.0904,
-        "entry_timestamp": "2026-03-03T08:06:49.940080+00:00",
-        "shares": 205.53,
-        "entry_usd": 18.59,
-        "current_price": 0.125,
-        "current_value": 25.69,
-        "unrealized_pnl": 7.1,
-        "unrealized_pnl_pct": 38.19,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 11.1,
-        "slug": "will-israel-launch-a-major-ground-offensive-in-lebanon-by-march-31"
-      },
-      {
         "position_id": "b5f11cf8",
         "market_id": "1487096",
         "question": "BNP Paribas Open, Qualification: Aleksandar Vukic vs Dino Prizmic",
@@ -1375,10 +1358,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.764611+00:00",
         "shares": 619.21,
         "entry_usd": 40.45,
-        "current_price": 0.065,
-        "current_value": 40.25,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.055,
+        "current_value": 34.06,
+        "unrealized_pnl": -6.39,
+        "unrealized_pnl_pct": -15.8,
         "edge_score_at_entry": 43.1,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1402,10 +1385,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.077,
-        "current_value": 24.29,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.079,
+        "current_value": 24.92,
+        "unrealized_pnl": 0.51,
+        "unrealized_pnl_pct": 2.09,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1417,6 +1400,60 @@
         "resolution_date": "2026-03-06T17:00:00Z",
         "potential_multiple": 13.0,
         "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
+      },
+      {
+        "position_id": "03355638",
+        "market_id": "1484115",
+        "question": "Hersonissos: Javier Barranco Cosano vs Dimitar Kuzmanov",
+        "token_id": "13057488277551705394326855138053150865822450038552524270504096702515820856903",
+        "outcome": "Javier Barranco Cosano",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-04T11:50:13.552274+00:00",
+        "shares": 598.85,
+        "entry_usd": 39.12,
+        "current_price": 0.065,
+        "current_value": 38.93,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 42.1,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 5.9
+        },
+        "days_to_close": 6,
+        "resolution_date": "2026-03-10T12:30:00Z",
+        "potential_multiple": 15.4,
+        "slug": "atp-cosano-kuzmano-2026-03-03"
+      },
+      {
+        "position_id": "54c84184",
+        "market_id": "1423606",
+        "question": "Will Elon Musk post 120-139 tweets from February 27 to March 6, 2026?",
+        "token_id": "70219387710614084282157902250487579067515988630627675577841447698582763599503",
+        "outcome": "Yes",
+        "convexity_band": "10x",
+        "entry_price": 0.105,
+        "entry_timestamp": "2026-03-04T11:50:13.552700+00:00",
+        "shares": 224.81,
+        "entry_usd": 23.61,
+        "current_price": 0.1045,
+        "current_value": 23.49,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 38.4,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-06T17:00:00Z",
+        "potential_multiple": 9.6,
+        "slug": "elon-musk-of-tweets-february-27-march-6-120-139"
       }
     ],
     "realized_trades": [
@@ -1783,9 +1820,35 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
+      },
+      {
+        "position_id": "c6f2fa2c",
+        "market_id": "677397",
+        "question": "Will Israel launch a major ground offensive in Lebanon by March 31?",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0904,
+        "exit_price": 0.135,
+        "entry_timestamp": "2026-03-03T08:06:49.940080+00:00",
+        "exit_timestamp": "2026-03-04T11:50:13.551722+00:00",
+        "shares": 205.53,
+        "entry_usd": 18.59,
+        "exit_usd": 27.75,
+        "pnl_usd": 9.16,
+        "pnl_pct": 49.26,
+        "win": true,
+        "reason": "profit_target_45pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ],
-    "win_count": 5,
+    "win_count": 6,
     "loss_count": 9,
     "peak_equity": 2532.21,
     "max_drawdown": -2.21,
@@ -2017,9 +2080,17 @@
       {
         "timestamp": "2026-03-04T11:22:22.763000+00:00",
         "equity": 2503.54
+      },
+      {
+        "timestamp": "2026-03-04T11:50:13.550917+00:00",
+        "equity": 2494.64
+      },
+      {
+        "timestamp": "2026-03-04T11:50:13.551737+00:00",
+        "equity": 2494.64
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T11:22:22.765698+00:00"
+  "last_updated": "2026-03-04T11:50:13.553578+00:00"
 }
