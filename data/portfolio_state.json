@@ -39,10 +39,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889754+00:00",
         "shares": 324.65,
         "entry_usd": 71.78,
-        "current_price": 0.2575,
-        "current_value": 83.6,
-        "unrealized_pnl": 11.82,
-        "unrealized_pnl_pct": 16.47,
+        "current_price": 0.287,
+        "current_value": 93.17,
+        "unrealized_pnl": 21.39,
+        "unrealized_pnl_pct": 29.8,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -85,10 +85,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.16,
-        "current_value": 77.59,
-        "unrealized_pnl": 11.8,
-        "unrealized_pnl_pct": 17.94,
+        "current_price": 0.155,
+        "current_value": 75.16,
+        "unrealized_pnl": 9.37,
+        "unrealized_pnl_pct": 14.24,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -200,10 +200,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.27,
-        "current_value": 52.47,
-        "unrealized_pnl": 3.64,
-        "unrealized_pnl_pct": 7.45,
+        "current_price": 0.26,
+        "current_value": 50.53,
+        "unrealized_pnl": 1.7,
+        "unrealized_pnl_pct": 3.48,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -388,10 +388,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.767042+00:00",
         "shares": 99.39,
         "entry_usd": 17.98,
-        "current_price": 0.225,
-        "current_value": 22.36,
-        "unrealized_pnl": 4.38,
-        "unrealized_pnl_pct": 24.36,
+        "current_price": 0.23,
+        "current_value": 22.86,
+        "unrealized_pnl": 4.88,
+        "unrealized_pnl_pct": 27.14,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -415,10 +415,10 @@
         "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
         "shares": 138.99,
         "entry_usd": 17.46,
-        "current_price": 0.1,
-        "current_value": 13.9,
-        "unrealized_pnl": -3.56,
-        "unrealized_pnl_pct": -20.39,
+        "current_price": 0.115,
+        "current_value": 15.98,
+        "unrealized_pnl": -1.48,
+        "unrealized_pnl_pct": -8.48,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -442,10 +442,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.763626+00:00",
         "shares": 207.69,
         "entry_usd": 25.36,
-        "current_price": 0.1045,
-        "current_value": 21.7,
-        "unrealized_pnl": -3.66,
-        "unrealized_pnl_pct": -14.43,
+        "current_price": 0.1345,
+        "current_value": 27.93,
+        "unrealized_pnl": 2.57,
+        "unrealized_pnl_pct": 10.13,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -469,10 +469,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.764149+00:00",
         "shares": 167.82,
         "entry_usd": 24.54,
-        "current_price": 0.136,
-        "current_value": 22.82,
-        "unrealized_pnl": -1.72,
-        "unrealized_pnl_pct": -7.01,
+        "current_price": 0.1315,
+        "current_value": 22.07,
+        "unrealized_pnl": -2.47,
+        "unrealized_pnl_pct": -10.07,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1058,6 +1058,10 @@
       {
         "timestamp": "2026-03-04T11:50:13.551294+00:00",
         "equity": 2481.48
+      },
+      {
+        "timestamp": "2026-03-04T13:06:01.127782+00:00",
+        "equity": 2494.74
       }
     ]
   },
@@ -1065,7 +1069,7 @@
     "name": "10x+ Hunter",
     "band": "10x",
     "capital": 2500,
-    "available_cash": 2050.09,
+    "available_cash": 2076.41,
     "positions": [
       {
         "position_id": "08b5e8ca",
@@ -1078,10 +1082,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.075,
-        "current_value": 43.53,
-        "unrealized_pnl": -8.97,
-        "unrealized_pnl_pct": -17.09,
+        "current_price": 0.085,
+        "current_value": 49.34,
+        "unrealized_pnl": -3.16,
+        "unrealized_pnl_pct": -6.02,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1101,10 +1105,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.0735,
-        "current_value": 53.48,
-        "unrealized_pnl": 4.49,
-        "unrealized_pnl_pct": 9.17,
+        "current_price": 0.0765,
+        "current_value": 55.66,
+        "unrealized_pnl": 6.67,
+        "unrealized_pnl_pct": 13.62,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1304,10 +1308,10 @@
         "entry_timestamp": "2026-03-04T02:50:37.768457+00:00",
         "shares": 179.1,
         "entry_usd": 15.3,
-        "current_price": 0.1,
-        "current_value": 17.91,
-        "unrealized_pnl": 2.61,
-        "unrealized_pnl_pct": 17.06,
+        "current_price": 0.115,
+        "current_value": 20.6,
+        "unrealized_pnl": 5.3,
+        "unrealized_pnl_pct": 34.64,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1348,33 +1352,6 @@
         "slug": "will-us-or-israel-strike-iran-on-march-9-2026"
       },
       {
-        "position_id": "f4cfdaf1",
-        "market_id": "1465973",
-        "question": "Will US or Israel strike Iran on March 8, 2026?",
-        "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
-        "outcome": "No",
-        "convexity_band": "10x",
-        "entry_price": 0.0653,
-        "entry_timestamp": "2026-03-04T11:22:22.764611+00:00",
-        "shares": 619.21,
-        "entry_usd": 40.45,
-        "current_price": 0.055,
-        "current_value": 34.06,
-        "unrealized_pnl": -6.39,
-        "unrealized_pnl_pct": -15.8,
-        "edge_score_at_entry": 43.1,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 6.8
-        },
-        "days_to_close": 5,
-        "resolution_date": "2026-03-10T00:00:00Z",
-        "potential_multiple": 15.4,
-        "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
-      },
-      {
         "position_id": "00527f70",
         "market_id": "1423624",
         "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
@@ -1385,10 +1362,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.079,
-        "current_value": 24.92,
-        "unrealized_pnl": 0.51,
-        "unrealized_pnl_pct": 2.09,
+        "current_price": 0.062,
+        "current_value": 19.56,
+        "unrealized_pnl": -4.85,
+        "unrealized_pnl_pct": -19.87,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1423,7 +1400,7 @@
           "dislocation": 11.0,
           "external": 5.9
         },
-        "days_to_close": 6,
+        "days_to_close": 5,
         "resolution_date": "2026-03-10T12:30:00Z",
         "potential_multiple": 15.4,
         "slug": "atp-cosano-kuzmano-2026-03-03"
@@ -1439,10 +1416,10 @@
         "entry_timestamp": "2026-03-04T11:50:13.552700+00:00",
         "shares": 224.81,
         "entry_usd": 23.61,
-        "current_price": 0.1045,
-        "current_value": 23.49,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.1345,
+        "current_value": 30.24,
+        "unrealized_pnl": 6.63,
+        "unrealized_pnl_pct": 28.08,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1846,10 +1823,36 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
+      },
+      {
+        "position_id": "f4cfdaf1",
+        "market_id": "1465973",
+        "question": "Will US or Israel strike Iran on March 8, 2026?",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "exit_price": 0.0425,
+        "entry_timestamp": "2026-03-04T11:22:22.764611+00:00",
+        "exit_timestamp": "2026-03-04T13:06:01.128105+00:00",
+        "shares": 619.21,
+        "entry_usd": 40.45,
+        "exit_usd": 26.32,
+        "pnl_usd": -14.13,
+        "pnl_pct": -34.94,
+        "win": false,
+        "reason": "stop_loss_-30pct",
+        "edge_score_at_entry": 43.1,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 6.8
+        },
+        "days_to_close_at_entry": 5
       }
     ],
     "win_count": 6,
-    "loss_count": 9,
+    "loss_count": 10,
     "peak_equity": 2532.21,
     "max_drawdown": -2.21,
     "equity_history": [
@@ -2088,9 +2091,17 @@
       {
         "timestamp": "2026-03-04T11:50:13.551737+00:00",
         "equity": 2494.64
+      },
+      {
+        "timestamp": "2026-03-04T13:06:01.127827+00:00",
+        "equity": 2498.66
+      },
+      {
+        "timestamp": "2026-03-04T13:06:01.128121+00:00",
+        "equity": 2498.66
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T11:50:13.553578+00:00"
+  "last_updated": "2026-03-04T13:06:01.128974+00:00"
 }
