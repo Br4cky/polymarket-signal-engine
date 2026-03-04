@@ -16,10 +16,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.889616+00:00",
         "shares": 426.44,
         "entry_usd": 75.0,
-        "current_price": 0.1625,
-        "current_value": 69.3,
-        "unrealized_pnl": -5.7,
-        "unrealized_pnl_pct": -7.6,
+        "current_price": 0.1605,
+        "current_value": 68.44,
+        "unrealized_pnl": -6.56,
+        "unrealized_pnl_pct": -8.75,
         "edge_score_at_entry": 35.0,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -154,10 +154,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.2,
-        "current_value": 38.87,
-        "unrealized_pnl": -9.96,
-        "unrealized_pnl_pct": -20.4,
+        "current_price": 0.215,
+        "current_value": 41.79,
+        "unrealized_pnl": -7.04,
+        "unrealized_pnl_pct": -14.42,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -261,10 +261,10 @@
         "entry_timestamp": "2026-03-04T15:57:30.100057+00:00",
         "shares": 141.84,
         "entry_usd": 31.36,
-        "current_price": 0.2895,
-        "current_value": 41.06,
-        "unrealized_pnl": 9.7,
-        "unrealized_pnl_pct": 30.93,
+        "current_price": 0.2285,
+        "current_value": 32.41,
+        "unrealized_pnl": 1.05,
+        "unrealized_pnl_pct": 3.35,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -288,10 +288,10 @@
         "entry_timestamp": "2026-03-04T16:54:46.092727+00:00",
         "shares": 149.96,
         "entry_usd": 31.65,
-        "current_price": 0.205,
-        "current_value": 30.74,
-        "unrealized_pnl": -0.91,
-        "unrealized_pnl_pct": -2.88,
+        "current_price": 0.195,
+        "current_value": 29.24,
+        "unrealized_pnl": -2.41,
+        "unrealized_pnl_pct": -7.61,
         "edge_score_at_entry": 39.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -315,10 +315,10 @@
         "entry_timestamp": "2026-03-04T16:54:46.093164+00:00",
         "shares": 140.4,
         "entry_usd": 30.62,
-        "current_price": 0.1785,
-        "current_value": 25.06,
-        "unrealized_pnl": -5.56,
-        "unrealized_pnl_pct": -18.16,
+        "current_price": 0.223,
+        "current_value": 31.31,
+        "unrealized_pnl": 0.69,
+        "unrealized_pnl_pct": 2.25,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1214,6 +1214,10 @@
       {
         "timestamp": "2026-03-04T20:44:56.052320+00:00",
         "equity": 2473.05
+      },
+      {
+        "timestamp": "2026-03-04T21:09:09.861184+00:00",
+        "equity": 2471.21
       }
     ]
   },
@@ -1441,10 +1445,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.0665,
-        "current_value": 20.98,
-        "unrealized_pnl": -3.43,
-        "unrealized_pnl_pct": -14.05,
+        "current_price": 0.0725,
+        "current_value": 22.87,
+        "unrealized_pnl": -1.54,
+        "unrealized_pnl_pct": -6.31,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2364,9 +2368,13 @@
       {
         "timestamp": "2026-03-04T20:44:56.052350+00:00",
         "equity": 2462.74
+      },
+      {
+        "timestamp": "2026-03-04T21:09:09.861219+00:00",
+        "equity": 2464.63
       }
     ]
   },
   "created_at": "2026-03-02T20:57:18.359064+00:00",
-  "last_updated": "2026-03-04T20:44:56.053065+00:00"
+  "last_updated": "2026-03-04T21:09:09.861899+00:00"
 }
