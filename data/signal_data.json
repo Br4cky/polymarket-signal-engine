@@ -1,32 +1,32 @@
 {
   "metadata": {
-    "timestamp": "2026-03-04T13:06:01.132714+00:00",
-    "markets_scanned": 8,
-    "tokens_scored": 8,
+    "timestamp": "2026-03-04T14:08:12.411113+00:00",
+    "markets_scanned": 7,
+    "tokens_scored": 7,
     "engine_version": "2.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 4993.4,
-    "combined_pnl": -6.2,
-    "combined_pnl_pct": -0.12,
-    "combined_win_rate": 0.414,
-    "combined_total_trades": 29,
+    "combined_equity": 5002.7,
+    "combined_pnl": 3.1,
+    "combined_pnl_pct": 0.06,
+    "combined_win_rate": 0.469,
+    "combined_total_trades": 32,
     "fund_a": {
       "name": "5x Hunter",
       "band": "5x",
       "capital": 2500,
-      "cash": 1684.63,
-      "equity": 2494.74,
-      "pnl": -5.17,
-      "total_pnl": -5.17,
-      "win_rate": 0.462,
-      "win_count": 6,
+      "cash": 1744.6,
+      "equity": 2508.29,
+      "pnl": 8.38,
+      "total_pnl": 8.38,
+      "win_rate": 0.533,
+      "win_count": 8,
       "loss_count": 7,
-      "open_positions": 19,
-      "closed_trades": 13,
+      "open_positions": 17,
+      "closed_trades": 15,
       "max_drawdown": -3.36,
-      "peak_equity": 2508.12,
+      "peak_equity": 2508.29,
       "equity_history": [
         {
           "timestamp": "2026-03-02T20:57:18.359041+00:00",
@@ -259,6 +259,18 @@
         {
           "timestamp": "2026-03-04T13:06:01.127782+00:00",
           "equity": 2494.74
+        },
+        {
+          "timestamp": "2026-03-04T14:08:12.406787+00:00",
+          "equity": 2508.29
+        },
+        {
+          "timestamp": "2026-03-04T14:08:12.406938+00:00",
+          "equity": 2508.29
+        },
+        {
+          "timestamp": "2026-03-04T14:08:12.407058+00:00",
+          "equity": 2508.29
         }
       ]
     },
@@ -266,15 +278,15 @@
       "name": "10x+ Hunter",
       "band": "10x",
       "capital": 2500,
-      "cash": 2076.41,
-      "equity": 2498.66,
-      "pnl": -1.03,
-      "total_pnl": -1.03,
-      "win_rate": 0.375,
-      "win_count": 6,
+      "cash": 2098.8,
+      "equity": 2494.41,
+      "pnl": -5.28,
+      "total_pnl": -5.28,
+      "win_rate": 0.412,
+      "win_count": 7,
       "loss_count": 10,
-      "open_positions": 14,
-      "closed_trades": 16,
+      "open_positions": 13,
+      "closed_trades": 17,
       "max_drawdown": -2.21,
       "peak_equity": 2532.21,
       "equity_history": [
@@ -521,93 +533,19 @@
         {
           "timestamp": "2026-03-04T13:06:01.128121+00:00",
           "equity": 2498.66
+        },
+        {
+          "timestamp": "2026-03-04T14:08:12.406816+00:00",
+          "equity": 2494.41
+        },
+        {
+          "timestamp": "2026-03-04T14:08:12.407502+00:00",
+          "equity": 2494.41
         }
       ]
     }
   },
   "opportunities": [
-    {
-      "market_id": "1466766",
-      "question": "Will a Gulf State strike Iran by March 7?",
-      "category": "",
-      "slug": "will-a-gulf-state-strike-iran-by-march-7",
-      "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
-      "outcome": "Yes",
-      "current_price": 0.265,
-      "bid": 0.01,
-      "ask": 0.99,
-      "spread_pct": 9800.0,
-      "edge_score": 46.4,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 14.5,
-        "external": 1.0
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 14.5,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 2.5,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 1.0,
-        "activity_score": 0,
-        "external_total": 1.0,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.67,
-          "entities_checked": 1,
-          "fear_greed_value": 10,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.8,
-      "days_to_close": 2,
-      "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 17336.7212,
-      "volume_24h": 438115.1725030005,
-      "fund_assignment": null,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125521+00:00",
-      "base_event": "will-gulf-state-strike-iran"
-    },
     {
       "market_id": "1465973",
       "question": "Will US or Israel strike Iran on March 8, 2026?",
@@ -615,7 +553,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-8-2026",
       "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
       "outcome": "No",
-      "current_price": 0.0425,
+      "current_price": 0.043,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -680,14 +618,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 23.5,
+      "potential_multiple": 23.3,
       "days_to_close": 5,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 19907.20015,
+      "liquidity_usd": 28485.82557,
       "volume_24h": 90735.21388499996,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125763+00:00",
+      "timestamp": "2026-03-04T14:08:12.405027+00:00",
       "base_event": "will-us-israel-strike-iran"
     },
     {
@@ -697,7 +635,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-120-139",
       "token_id": "70219387710614084282157902250487579067515988630627675577841447698582763599503",
       "outcome": "Yes",
-      "current_price": 0.1345,
+      "current_price": 0.13,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -762,14 +700,14 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 7.4,
+      "potential_multiple": 7.7,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 33299.79687,
+      "liquidity_usd": 32023.25657,
       "volume_24h": 224930.30557999978,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125589+00:00",
+      "timestamp": "2026-03-04T14:08:12.404834+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -779,7 +717,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
       "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
       "outcome": "Yes",
-      "current_price": 0.062,
+      "current_price": 0.0645,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -844,14 +782,14 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 16.1,
+      "potential_multiple": 15.5,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 26989.34427,
+      "liquidity_usd": 29528.63842,
       "volume_24h": 191703.44610399997,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125620+00:00",
+      "timestamp": "2026-03-04T14:08:12.404878+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -861,7 +799,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
       "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
       "outcome": "Yes",
-      "current_price": 0.1315,
+      "current_price": 0.132,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -929,11 +867,11 @@
       "potential_multiple": 7.6,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 34206.08102,
+      "liquidity_usd": 32469.03451,
       "volume_24h": 160054.14314600022,
       "fund_assignment": "fund_a",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125649+00:00",
+      "timestamp": "2026-03-04T14:08:12.404910+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -943,7 +881,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
       "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
       "outcome": "Yes",
-      "current_price": 0.0245,
+      "current_price": 0.0215,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1008,14 +946,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 40.8,
+      "potential_multiple": 46.5,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 30570.45922,
+      "liquidity_usd": 31760.00641,
       "volume_24h": 129605.90017000004,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125680+00:00",
+      "timestamp": "2026-03-04T14:08:12.404951+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -1025,7 +963,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
       "token_id": "4284618815400015346562299037200818934075614223431208243554061109185692792805",
       "outcome": "Yes",
-      "current_price": 0.271,
+      "current_price": 0.267,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1093,11 +1031,11 @@
       "potential_multiple": 3.7,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 25600.50875,
+      "liquidity_usd": 25784.22696,
       "volume_24h": 125229.60303000014,
       "fund_assignment": null,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125694+00:00",
+      "timestamp": "2026-03-04T14:08:12.404965+00:00",
       "base_event": "elon-musk-tweets-february-march"
     },
     {
@@ -1107,7 +1045,7 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-240-259",
       "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
       "outcome": "Yes",
-      "current_price": 0.0125,
+      "current_price": 0.017,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1172,14 +1110,14 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 80.0,
+      "potential_multiple": 58.8,
       "days_to_close": 2,
       "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 33767.13983,
+      "liquidity_usd": 30965.46049,
       "volume_24h": 89233.24010000001,
       "fund_assignment": "fund_b",
       "recommended_action": "BUY",
-      "timestamp": "2026-03-04T13:06:01.125778+00:00",
+      "timestamp": "2026-03-04T14:08:12.405040+00:00",
       "base_event": "elon-musk-tweets-february-march"
     }
   ],
@@ -1265,10 +1203,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890000+00:00",
         "shares": 484.91,
         "entry_usd": 65.79,
-        "current_price": 0.155,
-        "current_value": 75.16,
-        "unrealized_pnl": 9.37,
-        "unrealized_pnl_pct": 14.24,
+        "current_price": 0.17,
+        "current_value": 82.43,
+        "unrealized_pnl": 16.64,
+        "unrealized_pnl_pct": 25.29,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1380,10 +1318,10 @@
         "entry_timestamp": "2026-03-02T21:45:37.971613+00:00",
         "shares": 194.35,
         "entry_usd": 48.83,
-        "current_price": 0.26,
-        "current_value": 50.53,
-        "unrealized_pnl": 1.7,
-        "unrealized_pnl_pct": 3.48,
+        "current_price": 0.235,
+        "current_value": 45.67,
+        "unrealized_pnl": -3.16,
+        "unrealized_pnl_pct": -6.47,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1450,33 +1388,6 @@
         "slug": "iran-x-israelus-conflict-ends-by-march-15"
       },
       {
-        "position_id": "26fb70c6",
-        "market_id": "1468352",
-        "question": "Will Iran name a successor to Khamenei by March 6?",
-        "token_id": "54018358080201749743239543912905993122605149986355991681021124721869371052919",
-        "outcome": "Yes",
-        "convexity_band": "5x",
-        "entry_price": 0.1859,
-        "entry_timestamp": "2026-03-03T10:05:26.124931+00:00",
-        "shares": 115.42,
-        "entry_usd": 21.46,
-        "current_price": 0.225,
-        "current_value": 25.97,
-        "unrealized_pnl": 4.51,
-        "unrealized_pnl_pct": 21.02,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 5.4,
-        "slug": "will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246-866-876-465"
-      },
-      {
         "position_id": "8667426e",
         "market_id": "1466423",
         "question": "Will Iran strike Cyprus in March?",
@@ -1514,10 +1425,10 @@
         "entry_timestamp": "2026-03-03T17:10:54.760222+00:00",
         "shares": 109.12,
         "entry_usd": 19.74,
-        "current_price": 0.145,
-        "current_value": 15.82,
-        "unrealized_pnl": -3.92,
-        "unrealized_pnl_pct": -19.86,
+        "current_price": 0.14,
+        "current_value": 15.28,
+        "unrealized_pnl": -4.46,
+        "unrealized_pnl_pct": -22.59,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1558,33 +1469,6 @@
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246-866-876-465"
       },
       {
-        "position_id": "a8e96b10",
-        "market_id": "1468353",
-        "question": "Will Iran name a successor to Khamenei by March 15?",
-        "token_id": "52542052069536281685447496659944610857507916350932276741919265940766544116341",
-        "outcome": "No",
-        "convexity_band": "5x",
-        "entry_price": 0.1809,
-        "entry_timestamp": "2026-03-04T02:50:37.767042+00:00",
-        "shares": 99.39,
-        "entry_usd": 17.98,
-        "current_price": 0.23,
-        "current_value": 22.86,
-        "unrealized_pnl": 4.88,
-        "unrealized_pnl_pct": 27.14,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 5.6,
-        "slug": "will-iran-name-a-successor-to-khamenei-by-march-15-153-144-999-648-116-955-829"
-      },
-      {
         "position_id": "23f65e29",
         "market_id": "1468354",
         "question": "Will Iran name a successor to Khamenei by March 31?",
@@ -1595,10 +1479,10 @@
         "entry_timestamp": "2026-03-04T05:38:29.756867+00:00",
         "shares": 138.99,
         "entry_usd": 17.46,
-        "current_price": 0.115,
-        "current_value": 15.98,
-        "unrealized_pnl": -1.48,
-        "unrealized_pnl_pct": -8.48,
+        "current_price": 0.125,
+        "current_value": 17.37,
+        "unrealized_pnl": -0.09,
+        "unrealized_pnl_pct": -0.52,
         "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1622,10 +1506,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.763626+00:00",
         "shares": 207.69,
         "entry_usd": 25.36,
-        "current_price": 0.1345,
-        "current_value": 27.93,
-        "unrealized_pnl": 2.57,
-        "unrealized_pnl_pct": 10.13,
+        "current_price": 0.13,
+        "current_value": 27.0,
+        "unrealized_pnl": 1.64,
+        "unrealized_pnl_pct": 6.47,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1649,10 +1533,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.764149+00:00",
         "shares": 167.82,
         "entry_usd": 24.54,
-        "current_price": 0.1315,
-        "current_value": 22.07,
-        "unrealized_pnl": -2.47,
-        "unrealized_pnl_pct": -10.07,
+        "current_price": 0.132,
+        "current_value": 22.15,
+        "unrealized_pnl": -2.39,
+        "unrealized_pnl_pct": -9.74,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1678,10 +1562,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890701+00:00",
         "shares": 580.43,
         "entry_usd": 52.5,
-        "current_price": 0.085,
-        "current_value": 49.34,
-        "unrealized_pnl": -3.16,
-        "unrealized_pnl_pct": -6.02,
+        "current_price": 0.08,
+        "current_value": 46.43,
+        "unrealized_pnl": -6.07,
+        "unrealized_pnl_pct": -11.56,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1701,10 +1585,10 @@
         "entry_timestamp": "2026-03-02T20:59:44.890870+00:00",
         "shares": 727.56,
         "entry_usd": 48.99,
-        "current_price": 0.0765,
-        "current_value": 55.66,
-        "unrealized_pnl": 6.67,
-        "unrealized_pnl_pct": 13.62,
+        "current_price": 0.0725,
+        "current_value": 52.75,
+        "unrealized_pnl": 3.76,
+        "unrealized_pnl_pct": 7.68,
         "edge_score_at_entry": 26.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -1894,33 +1778,6 @@
         "slug": "will-iran-name-a-successor-to-khamenei-by-march-3-345"
       },
       {
-        "position_id": "2babc1b6",
-        "market_id": "1468354",
-        "question": "Will Iran name a successor to Khamenei by March 31?",
-        "token_id": "108303883282805733621907786823092933798578046999240564428529854116806430319839",
-        "outcome": "No",
-        "convexity_band": "10x",
-        "entry_price": 0.0854,
-        "entry_timestamp": "2026-03-04T02:50:37.768457+00:00",
-        "shares": 179.1,
-        "entry_usd": 15.3,
-        "current_price": 0.115,
-        "current_value": 20.6,
-        "unrealized_pnl": 5.3,
-        "unrealized_pnl_pct": 34.64,
-        "edge_score_at_entry": 21.7,
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.0,
-          "external": 1.0
-        },
-        "days_to_close": 26,
-        "resolution_date": "2026-03-31T00:00:00Z",
-        "potential_multiple": 11.8,
-        "slug": "will-iran-name-a-successor-to-khamenei-by-march-31-483-852-436-833-347"
-      },
-      {
         "position_id": "5decfa7f",
         "market_id": "1465974",
         "question": "Will US or Israel strike Iran on March 9, 2026?",
@@ -1958,10 +1815,10 @@
         "entry_timestamp": "2026-03-04T11:22:22.765039+00:00",
         "shares": 315.44,
         "entry_usd": 24.41,
-        "current_price": 0.062,
-        "current_value": 19.56,
-        "unrealized_pnl": -4.85,
-        "unrealized_pnl_pct": -19.87,
+        "current_price": 0.0645,
+        "current_value": 20.35,
+        "unrealized_pnl": -4.06,
+        "unrealized_pnl_pct": -16.63,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2012,10 +1869,10 @@
         "entry_timestamp": "2026-03-04T11:50:13.552700+00:00",
         "shares": 224.81,
         "entry_usd": 23.61,
-        "current_price": 0.1345,
-        "current_value": 30.24,
-        "unrealized_pnl": 6.63,
-        "unrealized_pnl_pct": 28.08,
+        "current_price": 0.13,
+        "current_value": 29.23,
+        "unrealized_pnl": 5.62,
+        "unrealized_pnl_pct": 23.8,
         "edge_score_at_entry": 38.4,
         "layer_scores_at_entry": {
           "structural": 0.0,
@@ -2369,35 +2226,61 @@
           "external": 1.0
         },
         "days_to_close_at_entry": 26
-      }
-    ],
-    "fund_b": [
+      },
       {
-        "position_id": "a5544b16",
-        "market_id": "1466148",
-        "question": "Iran x Israel/US conflict ends by March 7?",
+        "position_id": "26fb70c6",
+        "market_id": "1468352",
+        "question": "Will Iran name a successor to Khamenei by March 6?",
         "outcome": "Yes",
-        "convexity_band": "10x",
-        "entry_price": 0.0653,
-        "exit_price": 0.0255,
-        "entry_timestamp": "2026-03-02T20:59:44.890789+00:00",
-        "exit_timestamp": "2026-03-04T04:46:41.570684+00:00",
-        "shares": 776.27,
-        "entry_usd": 50.71,
-        "exit_usd": 19.79,
-        "pnl_usd": -30.92,
-        "pnl_pct": -60.96,
-        "win": false,
-        "reason": "stop_loss_-56pct",
-        "edge_score_at_entry": 26.7,
+        "convexity_band": "5x",
+        "entry_price": 0.1859,
+        "exit_price": 0.3,
+        "entry_timestamp": "2026-03-03T10:05:26.124931+00:00",
+        "exit_timestamp": "2026-03-04T14:08:12.406927+00:00",
+        "shares": 115.42,
+        "entry_usd": 21.46,
+        "exit_usd": 34.63,
+        "pnl_usd": 13.17,
+        "pnl_pct": 61.35,
+        "win": true,
+        "reason": "profit_target_35pct",
+        "edge_score_at_entry": 21.7,
         "layer_scores_at_entry": {
           "structural": 0.0,
           "smart_money": 0.0,
           "dislocation": 8.0,
-          "external": 0.0
+          "external": 1.0
         },
-        "days_to_close_at_entry": 0
+        "days_to_close_at_entry": 26
       },
+      {
+        "position_id": "a8e96b10",
+        "market_id": "1468353",
+        "question": "Will Iran name a successor to Khamenei by March 15?",
+        "outcome": "No",
+        "convexity_band": "5x",
+        "entry_price": 0.1809,
+        "exit_price": 0.255,
+        "entry_timestamp": "2026-03-04T02:50:37.767042+00:00",
+        "exit_timestamp": "2026-03-04T14:08:12.407040+00:00",
+        "shares": 99.39,
+        "entry_usd": 17.98,
+        "exit_usd": 25.34,
+        "pnl_usd": 7.36,
+        "pnl_pct": 40.96,
+        "win": true,
+        "reason": "profit_target_35pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
+      }
+    ],
+    "fund_b": [
       {
         "position_id": "1e5ffb07",
         "market_id": "1487829",
@@ -2761,35 +2644,61 @@
           "external": 6.8
         },
         "days_to_close_at_entry": 5
+      },
+      {
+        "position_id": "2babc1b6",
+        "market_id": "1468354",
+        "question": "Will Iran name a successor to Khamenei by March 31?",
+        "outcome": "No",
+        "convexity_band": "10x",
+        "entry_price": 0.0854,
+        "exit_price": 0.125,
+        "entry_timestamp": "2026-03-04T02:50:37.768457+00:00",
+        "exit_timestamp": "2026-03-04T14:08:12.407486+00:00",
+        "shares": 179.1,
+        "entry_usd": 15.3,
+        "exit_usd": 22.39,
+        "pnl_usd": 7.09,
+        "pnl_pct": 46.32,
+        "win": true,
+        "reason": "profit_target_45pct",
+        "edge_score_at_entry": 21.7,
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.0,
+          "external": 1.0
+        },
+        "days_to_close_at_entry": 26
       }
     ]
   },
   "statistics": {
     "by_category": {
       "": {
-        "count": 8,
-        "avg_edge": 40.0
+        "count": 7,
+        "avg_edge": 39.1
       }
     },
     "by_convexity": {
-      "2x": {
-        "count": 2,
-        "total_liquidity": 42937.22995,
-        "avg_edge": 42.4
-      },
       "20x": {
         "count": 3,
-        "total_liquidity": 84244.79920000001,
+        "total_liquidity": 91211.29247,
         "avg_edge": 40.0
       },
       "5x": {
         "count": 2,
-        "total_liquidity": 67505.87789,
+        "total_liquidity": 64492.29108,
         "avg_edge": 38.4
       },
       "10x": {
         "count": 1,
-        "total_liquidity": 26989.34427,
+        "total_liquidity": 29528.63842,
+        "avg_edge": 38.4
+      },
+      "2x": {
+        "count": 1,
+        "total_liquidity": 25784.22696,
         "avg_edge": 38.4
       }
     }
@@ -2797,15 +2706,15 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 125,
-      "tokens_with_signal": 36,
-      "coverage_pct": 28.8,
-      "avg_score": 9.52,
+      "tokens_scored": 123,
+      "tokens_with_signal": 35,
+      "coverage_pct": 28.5,
+      "avg_score": 9.53,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 125,
+      "tokens_scored": 123,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
@@ -2815,35 +2724,35 @@
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 125,
-      "tokens_with_signal": 107,
-      "coverage_pct": 85.6,
-      "avg_score": 7.55,
+      "tokens_scored": 123,
+      "tokens_with_signal": 105,
+      "coverage_pct": 85.4,
+      "avg_score": 7.37,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 125,
-      "tokens_with_signal": 125,
+      "tokens_scored": 123,
+      "tokens_with_signal": 123,
       "coverage_pct": 100.0,
       "avg_score": 1.52,
       "max_score": 6.8
     }
   },
   "calibration": {
-    "total_trades": 29,
-    "overall_win_rate": 0.414,
-    "overall_avg_pnl_pct": 6.7,
+    "total_trades": 32,
+    "overall_win_rate": 0.469,
+    "overall_avg_pnl_pct": 10.7,
     "quintiles": [
       {
         "band": "15-25",
         "label": "low",
-        "trades": 18,
-        "wins": 11,
-        "actual_win_rate": 0.611,
+        "trades": 21,
+        "wins": 14,
+        "actual_win_rate": 0.667,
         "estimated_win_rate": 0.38,
-        "drift": 0.231,
-        "avg_pnl_pct": 27.0
+        "drift": 0.287,
+        "avg_pnl_pct": 30.2
       },
       {
         "band": "25-35",
@@ -2881,13 +2790,13 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 29,
-        "avg_score_winners": 8.33,
+        "trades_with_signal": 32,
+        "avg_score_winners": 8.27,
         "avg_score_losers": 9.09,
-        "predictive_power": 0.92
+        "predictive_power": 0.91
       },
       "external": {
-        "trades_with_signal": 25,
+        "trades_with_signal": 28,
         "avg_score_winners": 1.0,
         "avg_score_losers": 2.12,
         "predictive_power": 0.47
