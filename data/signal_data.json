@@ -1,31 +1,31 @@
 {
   "metadata": {
-    "timestamp": "2026-03-05T19:47:21.591879+00:00",
+    "timestamp": "2026-03-05T20:28:02.039891+00:00",
     "markets_scanned": 11,
-    "tokens_scored": 17,
+    "tokens_scored": 18,
     "engine_version": "3.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 5028.89,
-    "combined_pnl": 30.45,
-    "combined_pnl_pct": 0.61,
-    "combined_win_rate": 0.403,
-    "combined_total_trades": 62,
-    "open_positions": 17,
+    "combined_equity": 4991.77,
+    "combined_pnl": -5.48,
+    "combined_pnl_pct": -0.11,
+    "combined_win_rate": 0.397,
+    "combined_total_trades": 63,
+    "open_positions": 22,
     "pool": {
       "name": "Repricing Engine",
       "capital": 5000,
-      "cash": 3668.1,
-      "equity": 5028.89,
-      "pnl": 30.45,
-      "total_pnl": 30.45,
-      "win_rate": 0.403,
+      "cash": 3389.89,
+      "equity": 4991.77,
+      "pnl": -5.48,
+      "total_pnl": -5.48,
+      "win_rate": 0.397,
       "win_count": 25,
-      "loss_count": 37,
-      "open_positions": 17,
-      "closed_trades": 62,
-      "max_drawdown": -7.06,
+      "loss_count": 38,
+      "open_positions": 22,
+      "closed_trades": 63,
+      "max_drawdown": -7.73,
       "peak_equity": 5411.570000000001,
       "equity_history": [
         {
@@ -355,497 +355,19 @@
         {
           "timestamp": "2026-03-05T19:47:21.587315+00:00",
           "equity": 5029.4
+        },
+        {
+          "timestamp": "2026-03-05T20:28:02.032407+00:00",
+          "equity": 4993.47
+        },
+        {
+          "timestamp": "2026-03-05T20:28:02.032572+00:00",
+          "equity": 4993.47
         }
       ]
     }
   },
   "opportunities": [
-    {
-      "market_id": "1465972",
-      "question": "Will US or Israel strike Iran on March 7, 2026?",
-      "category": "",
-      "slug": "will-us-or-israel-strike-iran-on-march-7-2026",
-      "token_id": "17306684704175597544286440461693867872355091236405877382504692031344384136825",
-      "outcome": "No",
-      "current_price": 0.0105,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 40.7,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 4.59
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 4.09,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 4.59,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": true,
-          "best_spike_ratio": 3.99,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 95.2,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 40490.90401,
-      "volume_24h": 56842.199252,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584196+00:00",
-      "base_event": "will-us-israel-strike-iran"
-    },
-    {
-      "market_id": "1465973",
-      "question": "Will US or Israel strike Iran on March 8, 2026?",
-      "category": "",
-      "slug": "will-us-or-israel-strike-iran-on-march-8-2026",
-      "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
-      "outcome": "No",
-      "current_price": 0.017,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 40.7,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 4.59
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 4.09,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 4.59,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": true,
-          "best_spike_ratio": 3.99,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 58.8,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 37667.09527,
-      "volume_24h": 37748.79298299999,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584326+00:00",
-      "base_event": "will-us-israel-strike-iran"
-    },
-    {
-      "market_id": "1466422",
-      "question": "Will Iran strike Turkey in March?",
-      "category": "",
-      "slug": "will-iran-strike-turkey-in-march",
-      "token_id": "76497587474899410702393858148175744586577470884641292303368534746887184155851",
-      "outcome": "Yes",
-      "current_price": 0.152,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 6.6,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 22228.35322,
-      "volume_24h": 45398.95682799999,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584268+00:00",
-      "base_event": "will-iran-strike-turkey"
-    },
-    {
-      "market_id": "1466422",
-      "question": "Will Iran strike Turkey in March?",
-      "category": "",
-      "slug": "will-iran-strike-turkey-in-march",
-      "token_id": "1999923658412163313296820198344980596127017728707317386305776483285524248793",
-      "outcome": "No",
-      "current_price": 0.848,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.2,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 22228.35322,
-      "volume_24h": 45398.95682799999,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584274+00:00",
-      "base_event": "will-iran-strike-turkey"
-    },
-    {
-      "market_id": "1480668",
-      "question": "Will Ethereum reach $2,200 March 2-8?",
-      "category": "",
-      "slug": "will-ethereum-reach-2200-march-2-8",
-      "token_id": "54204965918857220637311206530170655841601056237822495860575278385612188900760",
-      "outcome": "Yes",
-      "current_price": 0.385,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 2.6,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 33471.2251,
-      "volume_24h": 41097.82328,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584298+00:00",
-      "base_event": "will-ethereum-reach-march"
-    },
-    {
-      "market_id": "1480668",
-      "question": "Will Ethereum reach $2,200 March 2-8?",
-      "category": "",
-      "slug": "will-ethereum-reach-2200-march-2-8",
-      "token_id": "67118538144967038046069871719723515007377485805295686853133851678794616425853",
-      "outcome": "No",
-      "current_price": 0.615,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.6,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 33471.2251,
-      "volume_24h": 41097.82328,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584304+00:00",
-      "base_event": "will-ethereum-reach-march"
-    },
     {
       "market_id": "1480650",
       "question": "Will Bitcoin reach $80,000 March 2-8?",
@@ -853,7 +375,7 @@
       "slug": "will-bitcoin-reach-80k-march-2-8",
       "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
       "outcome": "Yes",
-      "current_price": 0.0345,
+      "current_price": 0.0335,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -878,7 +400,7 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 43.27,
+          "divergence_pct": 45.37,
           "direction": "manifold_higher"
         }
       },
@@ -918,175 +440,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 29.0,
+      "potential_multiple": 29.9,
       "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 45495.34423,
-      "volume_24h": 63130.14098200002,
+      "liquidity_usd": 25604.63905,
+      "volume_24h": 106511.69571,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584088+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480653",
-      "question": "Will Bitcoin reach $78,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-78k-march-2-8",
-      "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
-      "outcome": "Yes",
-      "current_price": 0.072,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 39.52,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 13.9,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 48625.89471,
-      "volume_24h": 60110.47966600003,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584117+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480653",
-      "question": "Will Bitcoin reach $78,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-78k-march-2-8",
-      "token_id": "46057457733194950444941967906803920497219074002595819506327540825641373787800",
-      "outcome": "No",
-      "current_price": 0.928,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 46.08,
-          "direction": "poly_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 48625.89471,
-      "volume_24h": 60110.47966600003,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584127+00:00",
+      "timestamp": "2026-03-05T20:28:02.029769+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1121,7 +481,7 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 31.22,
+          "divergence_pct": 33.22,
           "direction": "manifold_higher"
         }
       },
@@ -1164,10 +524,10 @@
       "potential_multiple": 6.5,
       "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 41136.3159,
-      "volume_24h": 42602.317285999976,
+      "liquidity_usd": 37790.1531,
+      "volume_24h": 105309.89519899998,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584286+00:00",
+      "timestamp": "2026-03-05T20:28:02.029793+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1202,7 +562,7 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 37.78,
+          "divergence_pct": 35.78,
           "direction": "poly_higher"
         }
       },
@@ -1245,10 +605,10 @@
       "potential_multiple": 1.2,
       "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 41136.3159,
-      "volume_24h": 42602.317285999976,
+      "liquidity_usd": 37790.1531,
+      "volume_24h": 105309.89519899998,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584291+00:00",
+      "timestamp": "2026-03-05T20:28:02.029802+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1258,7 +618,7 @@
       "slug": "lal-cel-rea-2026-03-07-rea",
       "token_id": "51582434704558553601126476211496236017255283111300728038217042022067569642637",
       "outcome": "Yes",
-      "current_price": 0.445,
+      "current_price": 0.425,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1323,13 +683,13 @@
         }
       },
       "convexity_band": "2x",
-      "potential_multiple": 2.2,
-      "days_to_close": 2,
+      "potential_multiple": 2.4,
+      "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 162509.8012,
-      "volume_24h": 32215.497634,
+      "liquidity_usd": 154961.9921,
+      "volume_24h": 152902.39662900014,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584373+00:00",
+      "timestamp": "2026-03-05T20:28:02.029563+00:00",
       "base_event": "lal-cel-rea-rea"
     },
     {
@@ -1339,7 +699,7 @@
       "slug": "lal-cel-rea-2026-03-07-rea",
       "token_id": "30460198104425192234011482627716526429118981289164193924263317826299055501303",
       "outcome": "No",
-      "current_price": 0.555,
+      "current_price": 0.575,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -1404,112 +764,31 @@
         }
       },
       "convexity_band": "yield",
-      "potential_multiple": 1.8,
-      "days_to_close": 2,
+      "potential_multiple": 1.7,
+      "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 162509.8012,
-      "volume_24h": 32215.497634,
+      "liquidity_usd": 154961.9921,
+      "volume_24h": 152902.39662900014,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584378+00:00",
+      "timestamp": "2026-03-05T20:28:02.029573+00:00",
       "base_event": "lal-cel-rea-rea"
     },
     {
-      "market_id": "1465975",
-      "question": "Will US or Israel strike Iran on March 10, 2026?",
+      "market_id": "1488936",
+      "question": "BNP Paribas Open: Kamil Majchrzak vs Giovanni Mpetshi Perricard",
       "category": "",
-      "slug": "will-us-or-israel-strike-iran-on-march-10-2026",
-      "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
-      "outcome": "No",
-      "current_price": 0.026,
+      "slug": "atp-majchrz-perrica-2026-03-04",
+      "token_id": "79348077811497883624175580196502404612441509634829240877018259225106109548433",
+      "outcome": "Kamil Majchrzak",
+      "current_price": 0.485,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 33.1,
+      "edge_score": 36.1,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 8.29,
-        "external": 4.59
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 8.29,
-        "price_velocity": 0.0,
-        "volume_anomaly": 4.29,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 4.09,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 4.59,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": true,
-          "best_spike_ratio": 3.99,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 38.5,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 47182.84361,
-      "volume_24h": 31110.408567999995,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584391+00:00",
-      "base_event": "will-us-israel-strike-iran"
-    },
-    {
-      "market_id": "1466766",
-      "question": "Will a Gulf State strike Iran by March 7?",
-      "category": "",
-      "slug": "will-a-gulf-state-strike-iran-by-march-7",
-      "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
-      "outcome": "Yes",
-      "current_price": 0.12,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 23.1,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 6.3,
+        "dislocation": 11.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1531,12 +810,12 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 6.3,
+        "dislocation_total": 11.0,
         "price_velocity": 0.0,
-        "volume_anomaly": 1.3,
+        "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 5.0
+        "time_decay": 4.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1557,40 +836,40 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": false,
-          "best_spike_ratio": 0.75,
-          "entities_checked": 1,
+          "best_spike_ratio": 1.33,
+          "entities_checked": 2,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
           "comment_count": 0,
           "engagement_ratio": 0
         }
       },
-      "convexity_band": "10x",
-      "potential_multiple": 8.3,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 17196.2454,
-      "volume_24h": 57006.80675399999,
+      "convexity_band": "2x",
+      "potential_multiple": 2.1,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 32269.912,
+      "volume_24h": 192080.5731300001,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584156+00:00",
-      "base_event": "will-gulf-state-strike-iran"
+      "timestamp": "2026-03-05T20:28:02.029480+00:00",
+      "base_event": "atp-majchrz-perrica"
     },
     {
-      "market_id": "1466766",
-      "question": "Will a Gulf State strike Iran by March 7?",
+      "market_id": "1488936",
+      "question": "BNP Paribas Open: Kamil Majchrzak vs Giovanni Mpetshi Perricard",
       "category": "",
-      "slug": "will-a-gulf-state-strike-iran-by-march-7",
-      "token_id": "58816541889584715498009165390917975076577621188456054628110307363191550362174",
-      "outcome": "No",
-      "current_price": 0.88,
+      "slug": "atp-majchrz-perrica-2026-03-04",
+      "token_id": "71860624245007230968761650874889664248830293372823609462114085879436945524291",
+      "outcome": "Giovanni Mpetshi Perricard",
+      "current_price": 0.515,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 23.1,
+      "edge_score": 36.1,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 6.3,
+        "dislocation": 11.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1612,9 +891,576 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 6.3,
+        "dislocation_total": 11.0,
         "price_velocity": 0.0,
-        "volume_anomaly": 1.3,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.33,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.9,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 32269.912,
+      "volume_24h": 192080.5731300001,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029498+00:00",
+      "base_event": "atp-majchrz-perrica"
+    },
+    {
+      "market_id": "1496843",
+      "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
+      "category": "",
+      "slug": "atp-shevche-shimabu-2026-03-05",
+      "token_id": "96060874670733476165935726126535491523912736484259674610671567608586061365542",
+      "outcome": "Alexander Shevchenko",
+      "current_price": 0.6,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.99,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 6,
+      "resolution_date": "2026-03-12T19:00:00Z",
+      "liquidity_usd": 34861.7951,
+      "volume_24h": 152572.9936320001,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029587+00:00",
+      "base_event": "atp-shevche-shimabu"
+    },
+    {
+      "market_id": "1496843",
+      "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
+      "category": "",
+      "slug": "atp-shevche-shimabu-2026-03-05",
+      "token_id": "81481194201574135835584949049132362229504995887958189914287302866215811469050",
+      "outcome": "Sho Shimabukuro",
+      "current_price": 0.4,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.99,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.5,
+      "days_to_close": 6,
+      "resolution_date": "2026-03-12T19:00:00Z",
+      "liquidity_usd": 34861.7951,
+      "volume_24h": 152572.9936320001,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029596+00:00",
+      "base_event": "atp-shevche-shimabu"
+    },
+    {
+      "market_id": "1488925",
+      "question": "BNP Paribas Open: Terence Atmane vs Grigor Dimitrov",
+      "category": "",
+      "slug": "atp-atmane-dimitro-2026-03-04",
+      "token_id": "81361620091265009998083065974335191234470801243147449078555997935285595410273",
+      "outcome": "Terence Atmane",
+      "current_price": 0.24,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.29,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.2,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 23635.7234,
+      "volume_24h": 114821.55581600004,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029715+00:00",
+      "base_event": "atp-atmane-dimitro"
+    },
+    {
+      "market_id": "1488925",
+      "question": "BNP Paribas Open: Terence Atmane vs Grigor Dimitrov",
+      "category": "",
+      "slug": "atp-atmane-dimitro-2026-03-04",
+      "token_id": "91708081283925362201396431348296694382232347134988567924866788437720819607439",
+      "outcome": "Grigor Dimitrov",
+      "current_price": 0.76,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.29,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.3,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 23635.7234,
+      "volume_24h": 114821.55581600004,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029721+00:00",
+      "base_event": "atp-atmane-dimitro"
+    },
+    {
+      "market_id": "1462808",
+      "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-march-3-march-10-180-199",
+      "token_id": "59059371156910253918083944148371353064424603124754557211185640032833962729639",
+      "outcome": "Yes",
+      "current_price": 0.0455,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 22.0,
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "liquidity_usd": 30859.84648,
+      "volume_24h": 100554.06213499983,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029834+00:00",
+      "base_event": "elon-musk-tweets-march-march"
+    },
+    {
+      "market_id": "1462803",
+      "question": "Will Elon Musk post 140-159 tweets from March 3 to March 10, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-march-3-march-10-140-159",
+      "token_id": "108012892915259667697003458294413066487108169908553385483928812256540507844061",
+      "outcome": "Yes",
+      "current_price": 0.011,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 90.9,
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "liquidity_usd": 29296.23819,
+      "volume_24h": 97279.80644399997,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029881+00:00",
+      "base_event": "elon-musk-tweets-march-march"
+    },
+    {
+      "market_id": "956344",
+      "question": "Will India win the 2026 ICC Men\u2019s T20 World Cup?",
+      "category": "",
+      "slug": "will-india-win-the-2026-icc-mens-t20-world-cup",
+      "token_id": "36190803750786635844165995661794551716343290080007015981336350366434982775233",
+      "outcome": "Yes",
+      "current_price": 0.695,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 34.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
         "time_decay": 5.0
@@ -1647,31 +1493,31 @@
         }
       },
       "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 17196.2454,
-      "volume_24h": 57006.80675399999,
+      "potential_multiple": 1.4,
+      "days_to_close": 2,
+      "resolution_date": "2026-03-08T00:00:00Z",
+      "liquidity_usd": 27573.0195,
+      "volume_24h": 97484.99557199999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.584182+00:00",
-      "base_event": "will-gulf-state-strike-iran"
+      "timestamp": "2026-03-05T20:28:02.029860+00:00",
+      "base_event": "will-india-win-theicc-mens-t-world-cup"
     },
     {
-      "market_id": "654414",
-      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "market_id": "956344",
+      "question": "Will India win the 2026 ICC Men\u2019s T20 World Cup?",
       "category": "",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
-      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "slug": "will-india-win-the-2026-icc-mens-t20-world-cup",
+      "token_id": "85713399276764589733546658542324459490852641984839087495926728837133909240937",
       "outcome": "No",
-      "current_price": 0.0105,
-      "bid": 0.001,
-      "ask": 0.999,
-      "spread_pct": 99800.0,
-      "edge_score": 22.9,
+      "current_price": 0.305,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 34.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 8.05,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1693,9 +1539,252 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 8.05,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
-        "volume_anomaly": 2.55,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0.75,
+          "entities_checked": 1,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.3,
+      "days_to_close": 2,
+      "resolution_date": "2026-03-08T00:00:00Z",
+      "liquidity_usd": 27573.0195,
+      "volume_24h": 97484.99557199999,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029868+00:00",
+      "base_event": "will-india-win-theicc-mens-t-world-cup"
+    },
+    {
+      "market_id": "1235861",
+      "question": "Will Dominican Republic win the 2026 World Baseball Classic?",
+      "category": "",
+      "slug": "will-dominican-republic-win-the-2026-world-baseball-classic",
+      "token_id": "97893788746871779757313364951471825239159808921574330360889765524315646961497",
+      "outcome": "Yes",
+      "current_price": 0.225,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 33.8,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 10.0,
+        "external": 3.58
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 10.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 3.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 3.08,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 3.58,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": true,
+          "best_spike_ratio": 3.57,
+          "entities_checked": 1,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.4,
+      "days_to_close": 12,
+      "resolution_date": "2026-03-17T23:55:00Z",
+      "liquidity_usd": 20765.7976,
+      "volume_24h": 149601.365747,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029610+00:00",
+      "base_event": "will-dominican-republic-win-theworld-baseball-classic"
+    },
+    {
+      "market_id": "1235861",
+      "question": "Will Dominican Republic win the 2026 World Baseball Classic?",
+      "category": "",
+      "slug": "will-dominican-republic-win-the-2026-world-baseball-classic",
+      "token_id": "16904677589447338513063055059245835961087475491374033941796117920522889911543",
+      "outcome": "No",
+      "current_price": 0.775,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 33.8,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 10.0,
+        "external": 3.58
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 10.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 3.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 3.08,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 3.58,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": true,
+          "best_spike_ratio": 3.57,
+          "entities_checked": 1,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.3,
+      "days_to_close": 12,
+      "resolution_date": "2026-03-17T23:55:00Z",
+      "liquidity_usd": 20765.7976,
+      "volume_24h": 149601.365747,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T20:28:02.029619+00:00",
+      "base_event": "will-dominican-republic-win-theworld-baseball-classic"
+    },
+    {
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "category": "",
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "current_price": 0.0105,
+      "bid": 0.001,
+      "ask": 0.999,
+      "spread_pct": 99800.0,
+      "edge_score": 33.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.72,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.72,
+        "price_velocity": 0.0,
+        "volume_anomaly": 6.22,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 3.0
@@ -1731,10 +1820,10 @@
       "potential_multiple": 95.2,
       "days_to_close": 12,
       "resolution_date": "2026-03-18T00:00:00Z",
-      "liquidity_usd": 2786885.86692,
-      "volume_24h": 2270732.7762989993,
+      "liquidity_usd": 2576718.18386,
+      "volume_24h": 4866225.566275,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T19:47:21.583815+00:00",
+      "timestamp": "2026-03-05T20:28:02.029186+00:00",
       "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
     }
   ],
@@ -1964,34 +2053,6 @@
       "slug": "will-ethereum-reach-2200-march-2-8"
     },
     {
-      "position_id": "f3dbf599",
-      "market_id": "1455342",
-      "question": "Will the price of Bitcoin be above $74,000 on March 6?",
-      "token_id": "30860142449045024956735730988372274492930649048461326394310749458331257998624",
-      "outcome": "Yes",
-      "convexity_band": "5x",
-      "entry_price": 0.1382,
-      "entry_timestamp": "2026-03-05T16:08:54.312939+00:00",
-      "shares": 685.73,
-      "entry_usd": 94.76,
-      "current_price": 0.1375,
-      "current_value": 94.29,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 38.7,
-      "edge_tier_at_entry": "medium",
-      "layer_scores_at_entry": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "days_to_close": 0,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "potential_multiple": 7.3,
-      "slug": "bitcoin-above-74k-on-march-6"
-    },
-    {
       "position_id": "bd6148e5",
       "market_id": "1465973",
       "question": "Will US or Israel strike Iran on March 8, 2026?",
@@ -2030,10 +2091,10 @@
       "entry_timestamp": "2026-03-05T18:26:58.127134+00:00",
       "shares": 3212.86,
       "entry_usd": 104.94,
-      "current_price": 0.0345,
-      "current_value": 110.84,
-      "unrealized_pnl": 5.9,
-      "unrealized_pnl_pct": 5.62,
+      "current_price": 0.0335,
+      "current_value": 107.63,
+      "unrealized_pnl": 2.69,
+      "unrealized_pnl_pct": 2.56,
       "edge_score_at_entry": 38.7,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2170,10 +2231,10 @@
       "entry_timestamp": "2026-03-05T19:47:21.587813+00:00",
       "shares": 16.03,
       "entry_usd": 7.17,
-      "current_price": 0.445,
-      "current_value": 7.13,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.425,
+      "current_value": 6.81,
+      "unrealized_pnl": -0.36,
+      "unrealized_pnl_pct": -5.02,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2182,7 +2243,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 2,
+      "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
       "potential_multiple": 2.2,
       "slug": "lal-cel-rea-2026-03-07-rea"
@@ -2214,6 +2275,174 @@
       "resolution_date": "2026-03-10T00:00:00Z",
       "potential_multiple": 38.5,
       "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
+    },
+    {
+      "position_id": "ce3ecaf9",
+      "market_id": "1496843",
+      "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
+      "token_id": "81481194201574135835584949049132362229504995887958189914287302866215811469050",
+      "outcome": "Sho Shimabukuro",
+      "convexity_band": "2x",
+      "entry_price": 0.402,
+      "entry_timestamp": "2026-03-05T20:28:02.033477+00:00",
+      "shares": 108.03,
+      "entry_usd": 43.43,
+      "current_price": 0.4,
+      "current_value": 43.21,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "days_to_close": 6,
+      "resolution_date": "2026-03-12T19:00:00Z",
+      "potential_multiple": 2.5,
+      "slug": "atp-shevche-shimabu-2026-03-05"
+    },
+    {
+      "position_id": "2a575e42",
+      "market_id": "1488925",
+      "question": "BNP Paribas Open: Terence Atmane vs Grigor Dimitrov",
+      "token_id": "81361620091265009998083065974335191234470801243147449078555997935285595410273",
+      "outcome": "Terence Atmane",
+      "convexity_band": "5x",
+      "entry_price": 0.2412,
+      "entry_timestamp": "2026-03-05T20:28:02.033842+00:00",
+      "shares": 236.44,
+      "entry_usd": 57.03,
+      "current_price": 0.24,
+      "current_value": 56.75,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "potential_multiple": 4.2,
+      "slug": "atp-atmane-dimitro-2026-03-04"
+    },
+    {
+      "position_id": "fbda152d",
+      "market_id": "1462808",
+      "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
+      "token_id": "59059371156910253918083944148371353064424603124754557211185640032833962729639",
+      "outcome": "Yes",
+      "convexity_band": "20x",
+      "entry_price": 0.0457,
+      "entry_timestamp": "2026-03-05T20:28:02.034357+00:00",
+      "shares": 1206.71,
+      "entry_usd": 55.18,
+      "current_price": 0.0455,
+      "current_value": 54.91,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "potential_multiple": 22.0,
+      "slug": "elon-musk-of-tweets-march-3-march-10-180-199"
+    },
+    {
+      "position_id": "39bff24f",
+      "market_id": "1462803",
+      "question": "Will Elon Musk post 140-159 tweets from March 3 to March 10, 2026?",
+      "token_id": "108012892915259667697003458294413066487108169908553385483928812256540507844061",
+      "outcome": "Yes",
+      "convexity_band": "20x",
+      "entry_price": 0.0111,
+      "entry_timestamp": "2026-03-05T20:28:02.034750+00:00",
+      "shares": 4828.58,
+      "entry_usd": 53.38,
+      "current_price": 0.011,
+      "current_value": 53.11,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "potential_multiple": 90.9,
+      "slug": "elon-musk-of-tweets-march-3-march-10-140-159"
+    },
+    {
+      "position_id": "b80aebf8",
+      "market_id": "956344",
+      "question": "Will India win the 2026 ICC Men\u2019s T20 World Cup?",
+      "token_id": "85713399276764589733546658542324459490852641984839087495926728837133909240937",
+      "outcome": "No",
+      "convexity_band": "2x",
+      "entry_price": 0.3065,
+      "entry_timestamp": "2026-03-05T20:28:02.035308+00:00",
+      "shares": 168.5,
+      "entry_usd": 51.65,
+      "current_price": 0.305,
+      "current_value": 51.39,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 34.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "days_to_close": 2,
+      "resolution_date": "2026-03-08T00:00:00Z",
+      "potential_multiple": 3.3,
+      "slug": "will-india-win-the-2026-icc-mens-t20-world-cup"
+    },
+    {
+      "position_id": "7de08779",
+      "market_id": "1235861",
+      "question": "Will Dominican Republic win the 2026 World Baseball Classic?",
+      "token_id": "97893788746871779757313364951471825239159808921574330360889765524315646961497",
+      "outcome": "Yes",
+      "convexity_band": "5x",
+      "entry_price": 0.2261,
+      "entry_timestamp": "2026-03-05T20:28:02.035713+00:00",
+      "shares": 353.52,
+      "entry_usd": 79.94,
+      "current_price": 0.225,
+      "current_value": 79.54,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 33.8,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 10.0,
+        "external": 3.58
+      },
+      "days_to_close": 12,
+      "resolution_date": "2026-03-17T23:55:00Z",
+      "potential_multiple": 4.4,
+      "slug": "will-dominican-republic-win-the-2026-world-baseball-classic"
     }
   ],
   "realized_trades": [
@@ -3828,55 +4057,76 @@
         "dislocation": 12.0,
         "external": 0.5
       }
+    },
+    {
+      "position_id": "f3dbf599",
+      "market_id": "1455342",
+      "question": "Will the price of Bitcoin be above $74,000 on March 6?",
+      "outcome": "Yes",
+      "convexity_band": "5x",
+      "entry_price": 0.1382,
+      "exit_price": 0.091,
+      "entry_timestamp": "2026-03-05T16:08:54.312939+00:00",
+      "exit_timestamp": "2026-03-05T20:28:02.032560+00:00",
+      "shares": 685.73,
+      "entry_usd": 94.76,
+      "exit_usd": 62.4,
+      "pnl_usd": -32.36,
+      "pnl_pct": -34.15,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
     }
   ],
   "statistics": {
     "by_category": {
       "": {
-        "count": 17,
-        "avg_edge": 35.8
+        "count": 18,
+        "avg_edge": 36.2
       }
     },
     "by_convexity": {
       "20x": {
-        "count": 5,
-        "total_liquidity": 2957722.05404,
-        "avg_edge": 35.2
-      },
-      "5x": {
-        "count": 2,
-        "total_liquidity": 63364.669120000006,
-        "avg_edge": 38.8
-      },
-      "yield": {
-        "count": 6,
-        "total_liquidity": 325167.83553,
+        "count": 4,
+        "total_liquidity": 2662478.9075800003,
         "avg_edge": 36.0
       },
-      "2x": {
-        "count": 2,
-        "total_liquidity": 195981.0263,
-        "avg_edge": 38.4
+      "5x": {
+        "count": 3,
+        "total_liquidity": 82191.6741,
+        "avg_edge": 36.2
       },
-      "10x": {
-        "count": 2,
-        "total_liquidity": 65822.14011000001,
-        "avg_edge": 30.9
+      "yield": {
+        "count": 7,
+        "total_liquidity": 331858.39280000003,
+        "avg_edge": 36.2
+      },
+      "2x": {
+        "count": 4,
+        "total_liquidity": 249666.71870000003,
+        "avg_edge": 36.2
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 300,
-      "tokens_with_signal": 82,
-      "coverage_pct": 27.3,
-      "avg_score": 8.96,
+      "tokens_scored": 279,
+      "tokens_with_signal": 49,
+      "coverage_pct": 17.6,
+      "avg_score": 8.57,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 300,
+      "tokens_scored": 279,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
@@ -3886,25 +4136,25 @@
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 300,
-      "tokens_with_signal": 229,
-      "coverage_pct": 76.3,
-      "avg_score": 6.67,
+      "tokens_scored": 279,
+      "tokens_with_signal": 251,
+      "coverage_pct": 90.0,
+      "avg_score": 9.16,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 300,
-      "tokens_with_signal": 300,
+      "tokens_scored": 279,
+      "tokens_with_signal": 279,
       "coverage_pct": 100.0,
-      "avg_score": 0.78,
+      "avg_score": 0.82,
       "max_score": 4.59
     }
   },
   "calibration": {
-    "total_trades": 62,
-    "overall_win_rate": 0.403,
-    "overall_avg_pnl_pct": 6.8,
+    "total_trades": 63,
+    "overall_win_rate": 0.397,
+    "overall_avg_pnl_pct": 6.2,
     "quintiles": [
       {
         "band": "15-25",
@@ -3929,21 +4179,21 @@
       {
         "band": "35-50",
         "label": "average",
-        "trades": 56,
+        "trades": 57,
         "wins": 25,
-        "actual_win_rate": 0.446,
+        "actual_win_rate": 0.439,
         "estimated_win_rate": 0.47,
-        "drift": -0.024,
-        "avg_pnl_pct": 10.0
+        "drift": -0.031,
+        "avg_pnl_pct": 9.3
       }
     ],
     "calibration_score": 70.0,
     "layer_accuracy": {
       "structural": {
-        "trades_with_signal": 22,
+        "trades_with_signal": 23,
         "avg_score_winners": 9.26,
-        "avg_score_losers": 8.35,
-        "predictive_power": 1.11
+        "avg_score_losers": 8.45,
+        "predictive_power": 1.1
       },
       "smart_money": {
         "trades_with_signal": 0,
@@ -3952,16 +4202,16 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 62,
+        "trades_with_signal": 63,
         "avg_score_winners": 12.0,
-        "avg_score_losers": 11.55,
+        "avg_score_losers": 11.56,
         "predictive_power": 1.04
       },
       "external": {
-        "trades_with_signal": 62,
+        "trades_with_signal": 63,
         "avg_score_winners": 0.58,
-        "avg_score_losers": 1.15,
-        "predictive_power": 0.5
+        "avg_score_losers": 1.14,
+        "predictive_power": 0.51
       }
     },
     "recommendations": [
