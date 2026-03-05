@@ -2,7 +2,7 @@
   "main_pool": {
     "name": "Repricing Engine",
     "capital": 5000,
-    "available_cash": 3389.89,
+    "available_cash": 3367.21,
     "positions": [
       {
         "position_id": "0bab0f2a",
@@ -267,10 +267,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.127134+00:00",
         "shares": 3212.86,
         "entry_usd": 104.94,
-        "current_price": 0.0335,
-        "current_value": 107.63,
-        "unrealized_pnl": 2.69,
-        "unrealized_pnl_pct": 2.56,
+        "current_price": 0.0325,
+        "current_value": 104.42,
+        "unrealized_pnl": -0.52,
+        "unrealized_pnl_pct": -0.5,
         "edge_score_at_entry": 38.7,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -323,10 +323,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.127968+00:00",
         "shares": 684.43,
         "entry_usd": 96.3,
-        "current_price": 0.155,
-        "current_value": 106.09,
-        "unrealized_pnl": 9.79,
-        "unrealized_pnl_pct": 10.17,
+        "current_price": 0.16,
+        "current_value": 109.51,
+        "unrealized_pnl": 13.21,
+        "unrealized_pnl_pct": 13.72,
         "edge_score_at_entry": 38.7,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -453,62 +453,6 @@
         "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
       },
       {
-        "position_id": "ce3ecaf9",
-        "market_id": "1496843",
-        "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
-        "token_id": "81481194201574135835584949049132362229504995887958189914287302866215811469050",
-        "outcome": "Sho Shimabukuro",
-        "convexity_band": "2x",
-        "entry_price": 0.402,
-        "entry_timestamp": "2026-03-05T20:28:02.033477+00:00",
-        "shares": 108.03,
-        "entry_usd": 43.43,
-        "current_price": 0.4,
-        "current_value": 43.21,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 36.1,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 0.5
-        },
-        "days_to_close": 6,
-        "resolution_date": "2026-03-12T19:00:00Z",
-        "potential_multiple": 2.5,
-        "slug": "atp-shevche-shimabu-2026-03-05"
-      },
-      {
-        "position_id": "2a575e42",
-        "market_id": "1488925",
-        "question": "BNP Paribas Open: Terence Atmane vs Grigor Dimitrov",
-        "token_id": "81361620091265009998083065974335191234470801243147449078555997935285595410273",
-        "outcome": "Terence Atmane",
-        "convexity_band": "5x",
-        "entry_price": 0.2412,
-        "entry_timestamp": "2026-03-05T20:28:02.033842+00:00",
-        "shares": 236.44,
-        "entry_usd": 57.03,
-        "current_price": 0.24,
-        "current_value": 56.75,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 36.1,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 0.5
-        },
-        "days_to_close": 5,
-        "resolution_date": "2026-03-11T19:00:00Z",
-        "potential_multiple": 4.2,
-        "slug": "atp-atmane-dimitro-2026-03-04"
-      },
-      {
         "position_id": "fbda152d",
         "market_id": "1462808",
         "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
@@ -521,8 +465,8 @@
         "entry_usd": 55.18,
         "current_price": 0.0455,
         "current_value": 54.91,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.27,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 36.1,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -547,10 +491,10 @@
         "entry_timestamp": "2026-03-05T20:28:02.034750+00:00",
         "shares": 4828.58,
         "entry_usd": 53.38,
-        "current_price": 0.011,
-        "current_value": 53.11,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.0105,
+        "current_value": 50.7,
+        "unrealized_pnl": -2.68,
+        "unrealized_pnl_pct": -5.02,
         "edge_score_at_entry": 36.1,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -577,8 +521,8 @@
         "entry_usd": 51.65,
         "current_price": 0.305,
         "current_value": 51.39,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.26,
+        "unrealized_pnl_pct": -0.5,
         "edge_score_at_entry": 34.9,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -603,10 +547,10 @@
         "entry_timestamp": "2026-03-05T20:28:02.035713+00:00",
         "shares": 353.52,
         "entry_usd": 79.94,
-        "current_price": 0.225,
-        "current_value": 79.54,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.215,
+        "current_value": 76.01,
+        "unrealized_pnl": -3.93,
+        "unrealized_pnl_pct": -4.92,
         "edge_score_at_entry": 33.8,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -619,6 +563,62 @@
         "resolution_date": "2026-03-17T23:55:00Z",
         "potential_multiple": 4.4,
         "slug": "will-dominican-republic-win-the-2026-world-baseball-classic"
+      },
+      {
+        "position_id": "407243ff",
+        "market_id": "1496854",
+        "question": "BNP Paribas Open: Lanlana Tararudee vs Sonay Kartal",
+        "token_id": "98560542450633464505061133662723562018275880041369182246402016119000548222671",
+        "outcome": "Lanlana Tararudee",
+        "convexity_band": "10x",
+        "entry_price": 0.0653,
+        "entry_timestamp": "2026-03-05T21:06:11.207236+00:00",
+        "shares": 1645.62,
+        "entry_usd": 107.5,
+        "current_price": 0.065,
+        "current_value": 106.97,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 42.5,
+        "edge_tier_at_entry": "high",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 6.28
+        },
+        "days_to_close": 6,
+        "resolution_date": "2026-03-12T19:00:00Z",
+        "potential_multiple": 15.4,
+        "slug": "wta-tararud-kartal-2026-03-05"
+      },
+      {
+        "position_id": "e6af65de",
+        "market_id": "1496843",
+        "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
+        "token_id": "81481194201574135835584949049132362229504995887958189914287302866215811469050",
+        "outcome": "Sho Shimabukuro",
+        "convexity_band": "5x",
+        "entry_price": 0.1909,
+        "entry_timestamp": "2026-03-05T21:06:11.207936+00:00",
+        "shares": 257.66,
+        "entry_usd": 49.2,
+        "current_price": 0.19,
+        "current_value": 48.96,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 36.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 0.5
+        },
+        "days_to_close": 6,
+        "resolution_date": "2026-03-12T19:00:00Z",
+        "potential_multiple": 5.3,
+        "slug": "atp-shevche-shimabu-2026-03-05"
       }
     ],
     "realized_trades": [
@@ -2259,10 +2259,62 @@
           "dislocation": 12.0,
           "external": 0.5
         }
+      },
+      {
+        "position_id": "ce3ecaf9",
+        "market_id": "1496843",
+        "question": "BNP Paribas Open: Alexander Shevchenko vs Sho Shimabukuro",
+        "outcome": "Sho Shimabukuro",
+        "convexity_band": "2x",
+        "entry_price": 0.402,
+        "exit_price": 0.19,
+        "entry_timestamp": "2026-03-05T20:28:02.033477+00:00",
+        "exit_timestamp": "2026-03-05T21:06:11.206539+00:00",
+        "shares": 108.03,
+        "entry_usd": 43.43,
+        "exit_usd": 20.53,
+        "pnl_usd": -22.9,
+        "pnl_pct": -52.74,
+        "win": false,
+        "reason": "stop_loss_-20pct",
+        "edge_score_at_entry": 36.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 0.5
+        }
+      },
+      {
+        "position_id": "2a575e42",
+        "market_id": "1488925",
+        "question": "BNP Paribas Open: Terence Atmane vs Grigor Dimitrov",
+        "outcome": "Terence Atmane",
+        "convexity_band": "5x",
+        "entry_price": 0.2412,
+        "exit_price": 0.48,
+        "entry_timestamp": "2026-03-05T20:28:02.033842+00:00",
+        "exit_timestamp": "2026-03-05T21:06:11.206643+00:00",
+        "shares": 236.44,
+        "entry_usd": 57.03,
+        "exit_usd": 113.49,
+        "pnl_usd": 56.46,
+        "pnl_pct": 99.0,
+        "win": true,
+        "reason": "profit_target_25pct",
+        "edge_score_at_entry": 36.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 0.5
+        }
       }
     ],
-    "win_count": 25,
-    "loss_count": 38,
+    "win_count": 26,
+    "loss_count": 39,
     "peak_equity": 5411.570000000001,
     "max_drawdown": -7.73,
     "equity_history": [
@@ -2601,9 +2653,21 @@
       {
         "timestamp": "2026-03-05T20:28:02.032572+00:00",
         "equity": 4993.47
+      },
+      {
+        "timestamp": "2026-03-05T21:06:11.206399+00:00",
+        "equity": 5020.1
+      },
+      {
+        "timestamp": "2026-03-05T21:06:11.206551+00:00",
+        "equity": 5020.1
+      },
+      {
+        "timestamp": "2026-03-05T21:06:11.206659+00:00",
+        "equity": 5020.1
       }
     ]
   },
   "created_at": "2026-03-04T23:31:07.320008+00:00",
-  "last_updated": "2026-03-05T20:28:02.036647+00:00"
+  "last_updated": "2026-03-05T21:06:11.208931+00:00"
 }
