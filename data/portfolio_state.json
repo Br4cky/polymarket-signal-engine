@@ -2,7 +2,7 @@
   "main_pool": {
     "name": "Repricing Engine",
     "capital": 5000,
-    "available_cash": 3518.35,
+    "available_cash": 3668.1,
     "positions": [
       {
         "position_id": "0bab0f2a",
@@ -33,34 +33,6 @@
         "slug": "elon-musk-of-tweets-february-27-march-6-120-139"
       },
       {
-        "position_id": "f73f1a82",
-        "market_id": "1465975",
-        "question": "Will US or Israel strike Iran on March 10, 2026?",
-        "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
-        "outcome": "No",
-        "convexity_band": "20x",
-        "entry_price": 0.0452,
-        "entry_timestamp": "2026-03-04T23:37:20.186514+00:00",
-        "shares": 4419.9,
-        "entry_usd": 199.89,
-        "current_price": 0.043,
-        "current_value": 190.06,
-        "unrealized_pnl": -9.83,
-        "unrealized_pnl_pct": -4.92,
-        "edge_score_at_entry": 43.1,
-        "edge_tier_at_entry": "high",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 6.8
-        },
-        "days_to_close": 4,
-        "resolution_date": "2026-03-10T00:00:00Z",
-        "potential_multiple": 22.2,
-        "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
-      },
-      {
         "position_id": "2cab5949",
         "market_id": "1466422",
         "question": "Will Iran strike Turkey in March?",
@@ -71,10 +43,10 @@
         "entry_timestamp": "2026-03-05T08:52:22.268030+00:00",
         "shares": 403.91,
         "entry_usd": 62.31,
-        "current_price": 0.1555,
-        "current_value": 62.81,
-        "unrealized_pnl": 0.5,
-        "unrealized_pnl_pct": 0.8,
+        "current_price": 0.152,
+        "current_value": 61.39,
+        "unrealized_pnl": -0.92,
+        "unrealized_pnl_pct": -1.48,
         "edge_score_at_entry": 38.9,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -127,10 +99,10 @@
         "entry_timestamp": "2026-03-05T11:26:23.686711+00:00",
         "shares": 448.87,
         "entry_usd": 60.9,
-        "current_price": 0.11,
-        "current_value": 49.38,
-        "unrealized_pnl": -11.52,
-        "unrealized_pnl_pct": -18.92,
+        "current_price": 0.12,
+        "current_value": 53.86,
+        "unrealized_pnl": -7.04,
+        "unrealized_pnl_pct": -11.56,
         "edge_score_at_entry": 32.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -183,10 +155,10 @@
         "entry_timestamp": "2026-03-05T14:12:13.304403+00:00",
         "shares": 11081.26,
         "entry_usd": 133.64,
-        "current_price": 0.012,
-        "current_value": 132.98,
-        "unrealized_pnl": -0.66,
-        "unrealized_pnl_pct": -0.49,
+        "current_price": 0.0105,
+        "current_value": 116.35,
+        "unrealized_pnl": -17.29,
+        "unrealized_pnl_pct": -12.94,
         "edge_score_at_entry": 40.7,
         "edge_tier_at_entry": "high",
         "layer_scores_at_entry": {
@@ -229,62 +201,6 @@
         "slug": "elon-musk-of-tweets-february-27-march-6-160-179"
       },
       {
-        "position_id": "85567c81",
-        "market_id": "1423624",
-        "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
-        "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
-        "outcome": "Yes",
-        "convexity_band": "2x",
-        "entry_price": 0.4161,
-        "entry_timestamp": "2026-03-05T15:10:33.816133+00:00",
-        "shares": 96.45,
-        "entry_usd": 40.13,
-        "current_price": 0.486,
-        "current_value": 46.87,
-        "unrealized_pnl": 6.74,
-        "unrealized_pnl_pct": 16.8,
-        "edge_score_at_entry": 37.9,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 12.0,
-          "external": 0.5
-        },
-        "days_to_close": 0,
-        "resolution_date": "2026-03-06T17:00:00Z",
-        "potential_multiple": 2.4,
-        "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
-      },
-      {
-        "position_id": "8bfb5224",
-        "market_id": "1423634",
-        "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
-        "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
-        "outcome": "Yes",
-        "convexity_band": "20x",
-        "entry_price": 0.0447,
-        "entry_timestamp": "2026-03-05T15:10:33.817188+00:00",
-        "shares": 1317.01,
-        "entry_usd": 58.9,
-        "current_price": 0.048,
-        "current_value": 63.22,
-        "unrealized_pnl": 4.32,
-        "unrealized_pnl_pct": 7.33,
-        "edge_score_at_entry": 37.9,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 12.0,
-          "external": 0.5
-        },
-        "days_to_close": 0,
-        "resolution_date": "2026-03-06T17:00:00Z",
-        "potential_multiple": 22.5,
-        "slug": "elon-musk-of-tweets-february-27-march-6-240-259"
-      },
-      {
         "position_id": "deb47290",
         "market_id": "1480668",
         "question": "Will Ethereum reach $2,200 March 2-8?",
@@ -295,10 +211,10 @@
         "entry_timestamp": "2026-03-05T16:08:54.311083+00:00",
         "shares": 57.44,
         "entry_usd": 25.11,
-        "current_price": 0.365,
-        "current_value": 20.97,
-        "unrealized_pnl": -4.14,
-        "unrealized_pnl_pct": -16.49,
+        "current_price": 0.385,
+        "current_value": 22.11,
+        "unrealized_pnl": -3.0,
+        "unrealized_pnl_pct": -11.95,
         "edge_score_at_entry": 38.9,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -351,10 +267,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.126785+00:00",
         "shares": 8662.14,
         "entry_usd": 143.64,
-        "current_price": 0.0165,
-        "current_value": 142.93,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.017,
+        "current_value": 147.26,
+        "unrealized_pnl": 3.62,
+        "unrealized_pnl_pct": 2.52,
         "edge_score_at_entry": 40.7,
         "edge_tier_at_entry": "high",
         "layer_scores_at_entry": {
@@ -379,10 +295,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.127134+00:00",
         "shares": 3212.86,
         "entry_usd": 104.94,
-        "current_price": 0.0325,
-        "current_value": 104.42,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.0345,
+        "current_value": 110.84,
+        "unrealized_pnl": 5.9,
+        "unrealized_pnl_pct": 5.62,
         "edge_score_at_entry": 38.7,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -407,10 +323,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.127499+00:00",
         "shares": 1360.81,
         "entry_usd": 100.52,
-        "current_price": 0.0735,
-        "current_value": 100.02,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.072,
+        "current_value": 97.98,
+        "unrealized_pnl": -2.54,
+        "unrealized_pnl_pct": -2.53,
         "edge_score_at_entry": 38.7,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -435,10 +351,10 @@
         "entry_timestamp": "2026-03-05T18:26:58.127968+00:00",
         "shares": 684.43,
         "entry_usd": 96.3,
-        "current_price": 0.14,
-        "current_value": 95.82,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "current_price": 0.155,
+        "current_value": 106.09,
+        "unrealized_pnl": 9.79,
+        "unrealized_pnl_pct": 10.17,
         "edge_score_at_entry": 38.7,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -465,8 +381,8 @@
         "entry_usd": 57.67,
         "current_price": 0.055,
         "current_value": 57.38,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.29,
+        "unrealized_pnl_pct": -0.5,
         "edge_score_at_entry": 37.9,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -475,7 +391,7 @@
           "dislocation": 12.0,
           "external": 0.5
         },
-        "days_to_close": 1,
+        "days_to_close": 0,
         "resolution_date": "2026-03-06T19:30:00Z",
         "potential_multiple": 18.2,
         "slug": "bun-bay-moe-2026-03-06-moe"
@@ -493,8 +409,8 @@
         "entry_usd": 89.28,
         "current_price": 0.0105,
         "current_value": 88.84,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.44,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 30.2,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -507,6 +423,62 @@
         "resolution_date": "2026-03-18T00:00:00Z",
         "potential_multiple": 95.2,
         "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
+      },
+      {
+        "position_id": "00aa9146",
+        "market_id": "1413025",
+        "question": "Will Real Madrid CF win on 2026-03-07?",
+        "token_id": "51582434704558553601126476211496236017255283111300728038217042022067569642637",
+        "outcome": "Yes",
+        "convexity_band": "2x",
+        "entry_price": 0.4472,
+        "entry_timestamp": "2026-03-05T19:47:21.587813+00:00",
+        "shares": 16.03,
+        "entry_usd": 7.17,
+        "current_price": 0.445,
+        "current_value": 7.13,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 37.9,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 0.5
+        },
+        "days_to_close": 2,
+        "resolution_date": "2026-03-07T20:00:00Z",
+        "potential_multiple": 2.2,
+        "slug": "lal-cel-rea-2026-03-07-rea"
+      },
+      {
+        "position_id": "e2124d1d",
+        "market_id": "1465975",
+        "question": "Will US or Israel strike Iran on March 10, 2026?",
+        "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
+        "outcome": "No",
+        "convexity_band": "20x",
+        "entry_price": 0.0261,
+        "entry_timestamp": "2026-03-05T19:47:21.588262+00:00",
+        "shares": 3624.95,
+        "entry_usd": 94.72,
+        "current_price": 0.026,
+        "current_value": 94.25,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0,
+        "edge_score_at_entry": 33.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.29,
+          "external": 4.59
+        },
+        "days_to_close": 4,
+        "resolution_date": "2026-03-10T00:00:00Z",
+        "potential_multiple": 38.5,
+        "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
       }
     ],
     "realized_trades": [
@@ -2043,12 +2015,90 @@
           "dislocation": 12.0,
           "external": 0.5
         }
+      },
+      {
+        "position_id": "f73f1a82",
+        "market_id": "1465975",
+        "question": "Will US or Israel strike Iran on March 10, 2026?",
+        "outcome": "No",
+        "convexity_band": "20x",
+        "entry_price": 0.0452,
+        "exit_price": 0.026,
+        "entry_timestamp": "2026-03-04T23:37:20.186514+00:00",
+        "exit_timestamp": "2026-03-05T19:47:21.587064+00:00",
+        "shares": 4419.9,
+        "entry_usd": 199.89,
+        "exit_usd": 114.92,
+        "pnl_usd": -84.97,
+        "pnl_pct": -42.51,
+        "win": false,
+        "reason": "stop_loss_-25pct",
+        "edge_score_at_entry": 43.1,
+        "edge_tier_at_entry": "high",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 6.8
+        }
+      },
+      {
+        "position_id": "85567c81",
+        "market_id": "1423624",
+        "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
+        "outcome": "Yes",
+        "convexity_band": "2x",
+        "entry_price": 0.4161,
+        "exit_price": 0.5845,
+        "entry_timestamp": "2026-03-05T15:10:33.816133+00:00",
+        "exit_timestamp": "2026-03-05T19:47:21.587195+00:00",
+        "shares": 96.45,
+        "entry_usd": 40.13,
+        "exit_usd": 56.38,
+        "pnl_usd": 16.25,
+        "pnl_pct": 40.48,
+        "win": true,
+        "reason": "profit_target_25pct",
+        "edge_score_at_entry": 37.9,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 0.5
+        }
+      },
+      {
+        "position_id": "8bfb5224",
+        "market_id": "1423634",
+        "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
+        "outcome": "Yes",
+        "convexity_band": "20x",
+        "entry_price": 0.0447,
+        "exit_price": 0.061,
+        "entry_timestamp": "2026-03-05T15:10:33.817188+00:00",
+        "exit_timestamp": "2026-03-05T19:47:21.587297+00:00",
+        "shares": 1317.01,
+        "entry_usd": 58.9,
+        "exit_usd": 80.34,
+        "pnl_usd": 21.44,
+        "pnl_pct": 36.4,
+        "win": true,
+        "reason": "profit_target_25pct",
+        "edge_score_at_entry": 37.9,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 0.5
+        }
       }
     ],
-    "win_count": 23,
-    "loss_count": 36,
+    "win_count": 25,
+    "loss_count": 37,
     "peak_equity": 5411.570000000001,
-    "max_drawdown": -6.23,
+    "max_drawdown": -7.06,
     "equity_history": [
       {
         "timestamp": "2026-03-04T23:31:07.319896+00:00",
@@ -2361,9 +2411,25 @@
       {
         "timestamp": "2026-03-05T18:26:58.125990+00:00",
         "equity": 5074.3
+      },
+      {
+        "timestamp": "2026-03-05T19:47:21.586954+00:00",
+        "equity": 5029.4
+      },
+      {
+        "timestamp": "2026-03-05T19:47:21.587076+00:00",
+        "equity": 5029.4
+      },
+      {
+        "timestamp": "2026-03-05T19:47:21.587215+00:00",
+        "equity": 5029.4
+      },
+      {
+        "timestamp": "2026-03-05T19:47:21.587315+00:00",
+        "equity": 5029.4
       }
     ]
   },
   "created_at": "2026-03-04T23:31:07.320008+00:00",
-  "last_updated": "2026-03-05T18:26:58.129960+00:00"
+  "last_updated": "2026-03-05T19:47:21.588916+00:00"
 }
