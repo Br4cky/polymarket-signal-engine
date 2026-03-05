@@ -384,13 +384,14 @@ class WhaleTracker:
             return cached
 
         try:
+            # Try primary endpoint: /positions?user=<address>
             resp = self.session.get(
                 f"{self.data_api}/positions",
                 params={
                     'user': wallet_address,
                     'sortBy': 'CURRENT',
                     'sortDirection': 'DESC',
-                    'sizeThreshold': 0.01  # Lower threshold to catch more positions
+                    'sizeThreshold': 0.01
                 },
                 timeout=15
             )
@@ -398,6 +399,27 @@ class WhaleTracker:
             data = resp.json()
 
             positions = self._parse_positions_response(data, wallet_address, is_first=is_first)
+
+            # If primary returned nothing, try alternative endpoint patterns
+            if not positions and not self._positions_failed:
+                # Try /v1/positions (some API versions use versioned path)
+                try:
+                    resp2 = self.session.get(
+                        f"{self.data_api}/v1/positions",
+                        params={
+                            'user': wallet_address,
+                            'sortBy': 'CURRENT',
+                            'sortDirection': 'DESC',
+                        },
+                        timeout=15
+                    )
+                    if resp2.ok:
+                        data2 = resp2.json()
+                        positions = self._parse_positions_response(data2, wallet_address, is_first=is_first)
+                        if is_first and positions:
+                            logger.info(f"WHALE_DIAG: /v1/positions worked! Got {len(positions)} positions")
+                except Exception:
+                    pass
 
             if is_first and not positions:
                 # Log raw response snippet for the first trader to diagnose empty results
@@ -530,6 +552,110 @@ class WhaleTracker:
             f"sample_slugs={sample_slug_keys}"
         )
 
+    # ── On-Demand Market Holders (Fallback) ─────────────────────────────────
+
+    def _fetch_market_holders(self, condition_id: str) -> List[dict]:
+        """
+        Fetch top holders for a specific market via data-api /top-holders.
+        Returns list of holder dicts with wallet, amount, etc.
+
+        This is a more reliable fallback than per-trader positions:
+        - 1 API call per market (vs 50+ for all trader positions)
+        - Returns up to 20 top holders per token
+        - Cross-reference with quality_traders to identify smart money
+        """
+        if not condition_id:
+            return []
+
+        cache_key = f'holders_{condition_id[:20]}'
+        cached = self.cache.get(cache_key, self.cache_ttl_positions)
+        if cached is not None:
+            return cached
+
+        try:
+            resp = self.session.get(
+                f"{self.data_api}/top-holders",
+                params={'market': condition_id},
+                timeout=15
+            )
+            resp.raise_for_status()
+            data = resp.json()
+
+            # Response is array of {token, holders: [{proxyWallet, amount, ...}]}
+            holders = []
+            if isinstance(data, list):
+                for token_entry in data:
+                    for holder in token_entry.get('holders', []):
+                        holders.append({
+                            'address': (holder.get('proxyWallet') or '').lower(),
+                            'amount': safe_float(holder.get('amount', 0)),
+                            'name': holder.get('name', holder.get('pseudonym', '')),
+                            'outcome_index': holder.get('outcomeIndex', ''),
+                        })
+            elif isinstance(data, dict):
+                for holder in data.get('holders', []):
+                    holders.append({
+                        'address': (holder.get('proxyWallet') or '').lower(),
+                        'amount': safe_float(holder.get('amount', 0)),
+                        'name': holder.get('name', holder.get('pseudonym', '')),
+                        'outcome_index': holder.get('outcomeIndex', ''),
+                    })
+
+            self.cache.set(cache_key, holders)
+            return holders
+
+        except Exception as e:
+            logger.debug(f"Top-holders failed for {condition_id[:20]}: {e}")
+            return []
+
+    # ── Holders → Quality Trader Cross-Reference ────────────────────────────
+
+    def _holders_fallback(self, condition_id: str) -> List[dict]:
+        """
+        On-demand fallback when the pre-built whale index has no data for a market.
+
+        Calls /top-holders for this specific market (1 API call), then cross-
+        references the returned wallets against our quality_traders list to
+        identify which top holders are proven, consistently-profitable traders.
+
+        Returns whale entries in the same format as the pre-built index so the
+        scoring logic works identically.
+        """
+        holders = self._fetch_market_holders(condition_id)
+        if not holders:
+            return []
+
+        # Build lookup: address → quality trader info
+        qt_lookup = {}
+        for trader in self._quality_traders:
+            addr = trader.get('address', '').lower()
+            if addr:
+                qt_lookup[addr] = trader
+
+        matched = []
+        for h in holders:
+            addr = h.get('address', '').lower()
+            if addr in qt_lookup:
+                trader = qt_lookup[addr]
+                matched.append({
+                    'address': addr,
+                    'username': trader.get('username', h.get('name', '')),
+                    'quality_score': trader.get('quality_score', 0),
+                    'all_time_profit': trader.get('all_time_profit', 0),
+                    'monthly_profit': trader.get('monthly_profit', 0),
+                    'size': h.get('amount', 0),
+                    'currentValue': h.get('amount', 0),  # amount ≈ shares held
+                    'outcome': str(h.get('outcome_index', '')),
+                })
+
+        if matched:
+            logger.info(
+                f"Holders fallback: {len(holders)} top holders → "
+                f"{len(matched)} quality-trader matches for {condition_id[:20]}"
+            )
+
+        return matched
+
     # ── Smart Money Score ────────────────────────────────────────────────────
 
     def compute_smart_money_score(self, market_id: str, token_id: str, market_slug: str = '') -> dict:
@@ -563,12 +689,19 @@ class WhaleTracker:
             if not whales and market_slug:
                 whales = self._whale_market_index.get(f"slug:{market_slug}", [])
 
+            # ── On-demand fallback: top-holders API ──────────────────────
+            # If the pre-built index has nothing (positions API dead), use
+            # /top-holders to get the biggest holders and cross-reference
+            # against our quality trader list.  1 call per market, cheap.
+            if not whales and normalized_id:
+                whales = self._holders_fallback(normalized_id)
+
             if not whales:
                 return {
                     'whale_accumulation': 0.0,
                     'leaderboard_alignment': 0.0,
                     'position_concentration': 0.0,
-                    'smart_money_total': 0.0
+                    'smart_money_total': 0.0,
                 }
 
             # ── Whale Accumulation (0-10) ──

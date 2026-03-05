@@ -31,28 +31,116 @@ def compute_tp_sl(
     entry_price: float,
     edge_tier: dict,
     edge_tier_name: str,
+    opportunity: dict = None,
 ) -> dict:
     """
-    Compute take-profit, stop-loss, and max-entry prices from edge tier config.
+    Compute take-profit, stop-loss, and max-entry prices using actual
+    mispricing data from the scoring layers — not just fixed percentages.
 
-    For cheap tokens, tighter SL to account for gap risk on thin order books.
-    Max entry = entry + buffer so users don't chase into moved markets.
+    TP logic (where we think fair value actually is):
+      1. Cross-platform divergence: if Kalshi/Manifold says 40¢ and we're at 30¢,
+         TP should be near 40¢ (the implied fair value from another market).
+      2. Structural mispricing: combinatorial (YES+NO != $1) gives an implied
+         fair price; TP moves toward the corrected price.
+      3. Dislocation: if the score is velocity-driven (overreaction), we target
+         a reversion proportional to the overreaction magnitude.
+      4. Fallback: tier-based percentage if no layer gives a clear target.
+
+    SL logic:
+      - Base from tier config, but tightened for cheap tokens (gap risk)
+      - Widened slightly when mispricing evidence is very strong (more room)
+
+    Max entry:
+      - Wider buffer for cheap tokens (thin books, wide spreads)
 
     Returns dict with tp_price, sl_price, max_entry_price and percentage values.
     """
-    tp_pct = edge_tier.get('profit_target_pct', 25) / 100.0
+    opp = opportunity or {}
+    structural = opp.get('structural_detail', {})
+    dislocation = opp.get('dislocation_detail', {})
+    layer_scores = opp.get('layer_scores', {})
+    edge_score = opp.get('edge_score', 0)
+
+    # ── Take-Profit: based on where we think price SHOULD be ──
+    # Collect implied fair-value estimates from each layer
+    fair_value_estimates = []
+
+    # 1. Cross-platform: Kalshi says price should be X
+    kalshi = structural.get('cross_platform', {})
+    kalshi_div = kalshi.get('divergence_pct', 0)  # in percentage points
+    if kalshi_div > 3 and kalshi.get('direction') == 'kalshi_higher':
+        # Kalshi is higher → Poly is underpriced → fair value is above entry
+        implied_fv = entry_price + (kalshi_div / 100.0)
+        fair_value_estimates.append(('kalshi', implied_fv, kalshi_div))
+
+    # 2. Manifold cross-reference
+    manifold = structural.get('manifold', {})
+    manifold_div = manifold.get('divergence_pct', 0)
+    if manifold_div > 3 and manifold.get('direction') in ('manifold_higher', 'kalshi_higher'):
+        implied_fv = entry_price + (manifold_div / 100.0)
+        fair_value_estimates.append(('manifold', implied_fv, manifold_div))
+
+    # 3. Combinatorial: YES+NO gap means one side is overpriced
+    combo = structural.get('combinatorial', {})
+    combo_gap = combo.get('mispricing_pct', 0)
+    if combo_gap > 2:
+        # Implied correction: half the gap (conservative)
+        implied_fv = entry_price + (combo_gap / 200.0)
+        fair_value_estimates.append(('combo', implied_fv, combo_gap))
+
+    # 4. Dislocation: price velocity overreaction → mean reversion target
+    velocity_score = dislocation.get('price_velocity', 0)
+    if velocity_score > 3:
+        # Strong overreaction → expect partial reversion
+        # Use the velocity magnitude as a proxy for how far to revert
+        reversion_pct = min(0.40, velocity_score * 0.04)  # 3pts → 12%, 8pts → 32%
+        implied_fv = entry_price * (1.0 + reversion_pct)
+        fair_value_estimates.append(('velocity', implied_fv, reversion_pct * 100))
+
+    # ── Determine TP from mispricing estimates ──
+    tier_tp_pct = edge_tier.get('profit_target_pct', 25) / 100.0  # fallback
+
+    if fair_value_estimates:
+        # Weight by source reliability: cross-platform > combo > velocity
+        weights = {'kalshi': 3.0, 'manifold': 2.0, 'combo': 2.0, 'velocity': 1.0}
+        weighted_fv = sum(fv * weights.get(src, 1) for src, fv, _ in fair_value_estimates)
+        total_weight = sum(weights.get(src, 1) for src, _, _ in fair_value_estimates)
+        target_fv = weighted_fv / total_weight
+
+        # TP = partway to fair value (80% of the way — leave some on the table)
+        tp_price = entry_price + (target_fv - entry_price) * 0.80
+
+        # But never less than the tier minimum
+        tier_min_tp = entry_price * (1.0 + tier_tp_pct * 0.5)  # at least half of tier %
+        tp_price = max(tp_price, tier_min_tp)
+
+        # And never more than 2x the tier target (don't be unrealistic)
+        tier_max_tp = entry_price * (1.0 + tier_tp_pct * 2.0)
+        tp_price = min(tp_price, tier_max_tp)
+
+        tp_pct = (tp_price - entry_price) / entry_price if entry_price > 0 else tier_tp_pct
+    else:
+        # No layer gave a clear target — use tier-based fallback
+        tp_pct = tier_tp_pct
+        tp_price = entry_price * (1.0 + tp_pct)
+
+    # ── Stop-Loss ──
     sl_pct = abs(edge_tier.get('stop_loss_pct', -20)) / 100.0
 
-    # Cheap token adjustment (mirrors portfolio.py _smart_stop_loss)
+    # Cheap token adjustment: tighter SL for thin order books
     if entry_price < 0.03:
         sl_pct = min(sl_pct, 0.12)   # Max 12% SL for penny tokens
     elif entry_price < 0.08:
         sl_pct = min(sl_pct, 0.15)   # Max 15% for cheap tokens
 
-    tp_price = entry_price * (1.0 + tp_pct)
+    # Widen SL slightly when mispricing evidence is very strong
+    # (more conviction = give it more room to work)
+    if edge_score >= 50 and len(fair_value_estimates) >= 2:
+        sl_pct = min(sl_pct * 1.15, 0.30)  # Up to 15% wider, max 30%
+
     sl_price = entry_price * (1.0 - sl_pct)
 
-    # Max entry: don't chase — wider buffer for cheap tokens (wider spreads)
+    # ── Max Entry: don't chase ──
     if entry_price < 0.05:
         max_entry_buffer = 0.20   # 20% buffer for very cheap
     elif entry_price < 0.10:
@@ -73,6 +161,7 @@ def compute_tp_sl(
         'max_entry_price': round(max_entry_price, 4),
         'tp_pct': round(tp_pct * 100, 1),
         'sl_pct': round(-sl_pct * 100, 1),
+        'tp_sources': [src for src, _, _ in fair_value_estimates],  # which layers drove the TP
     }
 
 
@@ -143,8 +232,8 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
     tier = get_edge_tier(edge_score, config)
     tier_name = get_edge_tier_name(edge_score, config)
 
-    # Compute TP/SL/max entry
-    targets = compute_tp_sl(entry_price, tier, tier_name)
+    # Compute TP/SL/max entry — using actual mispricing data from layers
+    targets = compute_tp_sl(entry_price, tier, tier_name, opportunity=opportunity)
 
     # Compute expiry: min of resolution date and now + max_hold_days
     max_hold_days = tier.get('max_hold_days', 5)
@@ -196,6 +285,7 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
         'liquidity_usd': opportunity.get('liquidity_usd', 0),
         'volume_24h': opportunity.get('volume_24h', 0),
         'rationale': generate_rationale(opportunity),
+        'tp_sources': targets.get('tp_sources', []),
 
         # Resolution (filled when signal resolves)
         'resolved_at': None,
