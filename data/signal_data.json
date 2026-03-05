@@ -1,31 +1,31 @@
 {
   "metadata": {
-    "timestamp": "2026-03-05T16:08:54.318451+00:00",
-    "markets_scanned": 16,
-    "tokens_scored": 26,
+    "timestamp": "2026-03-05T18:26:58.133077+00:00",
+    "markets_scanned": 10,
+    "tokens_scored": 16,
     "engine_version": "3.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 5088.53,
-    "combined_pnl": 91.96,
-    "combined_pnl_pct": 1.84,
-    "combined_win_rate": 0.412,
-    "combined_total_trades": 51,
-    "open_positions": 20,
+    "combined_equity": 5071.36,
+    "combined_pnl": 75.35,
+    "combined_pnl_pct": 1.51,
+    "combined_win_rate": 0.39,
+    "combined_total_trades": 59,
+    "open_positions": 18,
     "pool": {
       "name": "Repricing Engine",
       "capital": 5000,
-      "cash": 3525.07,
-      "equity": 5088.53,
-      "pnl": 91.96,
-      "total_pnl": 91.96,
-      "win_rate": 0.412,
-      "win_count": 21,
-      "loss_count": 30,
-      "open_positions": 20,
-      "closed_trades": 51,
-      "max_drawdown": -5.92,
+      "cash": 3518.35,
+      "equity": 5071.36,
+      "pnl": 75.35,
+      "total_pnl": 75.35,
+      "win_rate": 0.39,
+      "win_count": 23,
+      "loss_count": 36,
+      "open_positions": 18,
+      "closed_trades": 59,
+      "max_drawdown": -6.23,
       "peak_equity": 5411.570000000001,
       "equity_history": [
         {
@@ -303,92 +303,47 @@
         {
           "timestamp": "2026-03-05T16:08:54.310349+00:00",
           "equity": 5091.38
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125175+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125313+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125422+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125532+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125632+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125723+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125811+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125900+00:00",
+          "equity": 5074.3
+        },
+        {
+          "timestamp": "2026-03-05T18:26:58.125990+00:00",
+          "equity": 5074.3
         }
       ]
     }
   },
   "opportunities": [
-    {
-      "market_id": "1465975",
-      "question": "Will US or Israel strike Iran on March 10, 2026?",
-      "category": "",
-      "slug": "will-us-or-israel-strike-iran-on-march-10-2026",
-      "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
-      "outcome": "No",
-      "current_price": 0.043,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 40.7,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 4.59
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 4.09,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 4.59,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": true,
-          "best_spike_ratio": 3.99,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 23.3,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 33606.51065,
-      "volume_24h": 115983.85630099995,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306636+00:00",
-      "base_event": "will-us-israel-strike-iran"
-    },
     {
       "market_id": "1465972",
       "question": "Will US or Israel strike Iran on March 7, 2026?",
@@ -396,7 +351,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-7-2026",
       "token_id": "17306684704175597544286440461693867872355091236405877382504692031344384136825",
       "outcome": "No",
-      "current_price": 0.011,
+      "current_price": 0.012,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -461,13 +416,94 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 90.9,
+      "potential_multiple": 83.3,
       "days_to_close": 4,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 18732.77867,
-      "volume_24h": 68540.31177,
+      "liquidity_usd": 19064.15206,
+      "volume_24h": 56842.199252,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306899+00:00",
+      "timestamp": "2026-03-05T18:26:58.122569+00:00",
+      "base_event": "will-us-israel-strike-iran"
+    },
+    {
+      "market_id": "1465973",
+      "question": "Will US or Israel strike Iran on March 8, 2026?",
+      "category": "",
+      "slug": "will-us-or-israel-strike-iran-on-march-8-2026",
+      "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
+      "outcome": "No",
+      "current_price": 0.0165,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 40.7,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 4.59
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 4.09,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 4.59,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": true,
+          "best_spike_ratio": 3.99,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 60.6,
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T00:00:00Z",
+      "liquidity_usd": 33136.98633,
+      "volume_24h": 37748.79298299999,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T18:26:58.122696+00:00",
       "base_event": "will-us-israel-strike-iran"
     },
     {
@@ -477,7 +513,7 @@
       "slug": "will-iran-strike-turkey-in-march",
       "token_id": "76497587474899410702393858148175744586577470884641292303368534746887184155851",
       "outcome": "Yes",
-      "current_price": 0.1585,
+      "current_price": 0.1555,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -542,13 +578,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 6.3,
+      "potential_multiple": 6.4,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 20040.07625,
-      "volume_24h": 89343.57397800004,
+      "liquidity_usd": 23372.76985,
+      "volume_24h": 45398.95682799999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306728+00:00",
+      "timestamp": "2026-03-05T18:26:58.122633+00:00",
       "base_event": "will-iran-strike-turkey"
     },
     {
@@ -558,7 +594,7 @@
       "slug": "will-iran-strike-turkey-in-march",
       "token_id": "1999923658412163313296820198344980596127017728707317386305776483285524248793",
       "outcome": "No",
-      "current_price": 0.8415,
+      "current_price": 0.8445,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -626,10 +662,10 @@
       "potential_multiple": 1.2,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 20040.07625,
-      "volume_24h": 89343.57397800004,
+      "liquidity_usd": 23372.76985,
+      "volume_24h": 45398.95682799999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306737+00:00",
+      "timestamp": "2026-03-05T18:26:58.122638+00:00",
       "base_event": "will-iran-strike-turkey"
     },
     {
@@ -639,1064 +675,11 @@
       "slug": "will-ethereum-reach-2200-march-2-8",
       "token_id": "54204965918857220637311206530170655841601056237822495860575278385612188900760",
       "outcome": "Yes",
-      "current_price": 0.435,
+      "current_price": 0.365,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
       "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 2.3,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 27791.1691,
-      "volume_24h": 54284.759555000004,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306995+00:00",
-      "base_event": "will-ethereum-reach-march"
-    },
-    {
-      "market_id": "1480668",
-      "question": "Will Ethereum reach $2,200 March 2-8?",
-      "category": "",
-      "slug": "will-ethereum-reach-2200-march-2-8",
-      "token_id": "67118538144967038046069871719723515007377485805295686853133851678794616425853",
-      "outcome": "No",
-      "current_price": 0.565,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.8,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 27791.1691,
-      "volume_24h": 54284.759555000004,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.307002+00:00",
-      "base_event": "will-ethereum-reach-march"
-    },
-    {
-      "market_id": "1480657",
-      "question": "Will Bitcoin reach $76,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-76k-march-2-8",
-      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
-      "outcome": "Yes",
-      "current_price": 0.225,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 24.22,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 4.4,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 39963.1526,
-      "volume_24h": 124969.77263999994,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306552+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480657",
-      "question": "Will Bitcoin reach $76,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-76k-march-2-8",
-      "token_id": "27789632087983911216998287546939851792464346644407884877045664886886884415150",
-      "outcome": "No",
-      "current_price": 0.775,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 30.78,
-          "direction": "poly_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.3,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 39963.1526,
-      "volume_24h": 124969.77263999994,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306561+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480653",
-      "question": "Will Bitcoin reach $78,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-78k-march-2-8",
-      "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
-      "outcome": "Yes",
-      "current_price": 0.1065,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 36.07,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 9.4,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 22090.32101,
-      "volume_24h": 124599.94803300007,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306572+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480653",
-      "question": "Will Bitcoin reach $78,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-78k-march-2-8",
-      "token_id": "46057457733194950444941967906803920497219074002595819506327540825641373787800",
-      "outcome": "No",
-      "current_price": 0.8935,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 42.63,
-          "direction": "poly_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 22090.32101,
-      "volume_24h": 124599.94803300007,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306581+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480650",
-      "question": "Will Bitcoin reach $80,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-80k-march-2-8",
-      "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
-      "outcome": "Yes",
-      "current_price": 0.052,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 41.52,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 19.2,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 53110.6148,
-      "volume_24h": 79897.047016,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306827+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1480650",
-      "question": "Will Bitcoin reach $80,000 March 2-8?",
-      "category": "",
-      "slug": "will-bitcoin-reach-80k-march-2-8",
-      "token_id": "9278651162177470110408690828569331011957650302554973492952673497628311647372",
-      "outcome": "No",
-      "current_price": 0.948,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 48.08,
-          "direction": "poly_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 53110.6148,
-      "volume_24h": 79897.047016,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306837+00:00",
-      "base_event": "will-bitcoin-reach-march"
-    },
-    {
-      "market_id": "1455342",
-      "question": "Will the price of Bitcoin be above $74,000 on March 6?",
-      "category": "",
-      "slug": "bitcoin-above-74k-on-march-6",
-      "token_id": "30860142449045024956735730988372274492930649048461326394310749458331257998624",
-      "outcome": "Yes",
-      "current_price": 0.1375,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 32.97,
-          "direction": "manifold_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.96,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 7.3,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 23268.90345,
-      "volume_24h": 55490.54428000002,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306974+00:00",
-      "base_event": "bitcoin-above"
-    },
-    {
-      "market_id": "1455342",
-      "question": "Will the price of Bitcoin be above $74,000 on March 6?",
-      "category": "",
-      "slug": "bitcoin-above-74k-on-march-6",
-      "token_id": "27457854441067157810003882726928610276227051101816121380002161488114104379418",
-      "outcome": "No",
-      "current_price": 0.8625,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 38.7,
-      "layer_scores": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 10.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 10.0,
-          "divergence_pct": 39.53,
-          "direction": "poly_higher"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0.96,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.2,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 23268.90345,
-      "volume_24h": 55490.54428000002,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306984+00:00",
-      "base_event": "bitcoin-above"
-    },
-    {
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
-      "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
-      "outcome": "Yes",
-      "current_price": 0.4145,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 2.4,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 21893.06761,
-      "volume_24h": 129087.20382099993,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306521+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
-      "token_id": "75749532256231066568276706672899577534364547460864181032706339820234376148586",
-      "outcome": "No",
-      "current_price": 0.5855,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.7,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 21893.06761,
-      "volume_24h": 129087.20382099993,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306535+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423617",
-      "question": "Will Elon Musk post 160-179 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
-      "token_id": "4284618815400015346562299037200818934075614223431208243554061109185692792805",
-      "outcome": "Yes",
-      "current_price": 0.03,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 33.3,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 36920.67063,
-      "volume_24h": 123641.67484900008,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306593+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423624",
-      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
-      "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
-      "outcome": "Yes",
-      "current_price": 0.3665,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
@@ -1758,26 +741,26 @@
       },
       "convexity_band": "2x",
       "potential_multiple": 2.7,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 17405.60172,
-      "volume_24h": 111372.18061799995,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 35277.0494,
+      "volume_24h": 41097.82328,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306660+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122665+00:00",
+      "base_event": "will-ethereum-reach-march"
     },
     {
-      "market_id": "1423624",
-      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
+      "market_id": "1480668",
+      "question": "Will Ethereum reach $2,200 March 2-8?",
       "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
-      "token_id": "112537663018197374694617069143327483053644124983075964396702735764715317003738",
+      "slug": "will-ethereum-reach-2200-march-2-8",
+      "token_id": "67118538144967038046069871719723515007377485805295686853133851678794616425853",
       "outcome": "No",
-      "current_price": 0.6335,
+      "current_price": 0.635,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 37.9,
+      "edge_score": 38.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
@@ -1839,34 +822,34 @@
       },
       "convexity_band": "yield",
       "potential_multiple": 1.6,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 17405.60172,
-      "volume_24h": 111372.18061799995,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 35277.0494,
+      "volume_24h": 41097.82328,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306669+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122670+00:00",
+      "base_event": "will-ethereum-reach-march"
     },
     {
-      "market_id": "1423640",
-      "question": "Will Elon Musk post 260-279 tweets from February 27 to March 6, 2026?",
+      "market_id": "1480650",
+      "question": "Will Bitcoin reach $80,000 March 2-8?",
       "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-260-279",
-      "token_id": "104884974918673834100233293945291058294923143248753654651485270216362851841546",
+      "slug": "will-bitcoin-reach-80k-march-2-8",
+      "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
       "outcome": "Yes",
-      "current_price": 0.01,
+      "current_price": 0.0325,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 37.9,
+      "edge_score": 38.7,
       "layer_scores": {
-        "structural": 0.0,
+        "structural": 10.0,
         "smart_money": 0.0,
         "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
-        "structural_total": 0.0,
+        "structural_total": 10.0,
         "combinatorial": {
           "score": 0.0,
           "yes_no_sum": 1.0,
@@ -1878,9 +861,9 @@
           "direction": "none"
         },
         "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
+          "score": 10.0,
+          "divergence_pct": 43.47,
+          "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
@@ -1919,35 +902,35 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 100.0,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 20145.04014,
-      "volume_24h": 90071.41687099994,
+      "potential_multiple": 30.8,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 39537.70223,
+      "volume_24h": 63130.14098200002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306717+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122477+00:00",
+      "base_event": "will-bitcoin-reach-march"
     },
     {
-      "market_id": "1423634",
-      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
+      "market_id": "1480653",
+      "question": "Will Bitcoin reach $78,000 March 2-8?",
       "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-240-259",
-      "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
+      "slug": "will-bitcoin-reach-78k-march-2-8",
+      "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
       "outcome": "Yes",
-      "current_price": 0.0395,
+      "current_price": 0.0735,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 37.9,
+      "edge_score": 38.7,
       "layer_scores": {
-        "structural": 0.0,
+        "structural": 10.0,
         "smart_money": 0.0,
         "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
-        "structural_total": 0.0,
+        "structural_total": 10.0,
         "combinatorial": {
           "score": 0.0,
           "yes_no_sum": 1.0,
@@ -1959,9 +942,9 @@
           "direction": "none"
         },
         "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
+          "score": 10.0,
+          "divergence_pct": 39.37,
+          "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
@@ -1999,36 +982,36 @@
           "engagement_ratio": 0
         }
       },
-      "convexity_band": "20x",
-      "potential_multiple": 25.3,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 23922.96307,
-      "volume_24h": 89090.49305299994,
+      "convexity_band": "10x",
+      "potential_multiple": 13.6,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 54171.467,
+      "volume_24h": 60110.47966600003,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306748+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122508+00:00",
+      "base_event": "will-bitcoin-reach-march"
     },
     {
-      "market_id": "1423629",
-      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
+      "market_id": "1480653",
+      "question": "Will Bitcoin reach $78,000 March 2-8?",
       "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
-      "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
-      "outcome": "Yes",
-      "current_price": 0.127,
+      "slug": "will-bitcoin-reach-78k-march-2-8",
+      "token_id": "46057457733194950444941967906803920497219074002595819506327540825641373787800",
+      "outcome": "No",
+      "current_price": 0.9265,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 37.9,
+      "edge_score": 38.7,
       "layer_scores": {
-        "structural": 0.0,
+        "structural": 10.0,
         "smart_money": 0.0,
         "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
-        "structural_total": 0.0,
+        "structural_total": 10.0,
         "combinatorial": {
           "score": 0.0,
           "yes_no_sum": 1.0,
@@ -2040,9 +1023,90 @@
           "direction": "none"
         },
         "manifold": {
+          "score": 10.0,
+          "divergence_pct": 45.93,
+          "direction": "poly_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 54171.467,
+      "volume_24h": 60110.47966600003,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T18:26:58.122517+00:00",
+      "base_event": "will-bitcoin-reach-march"
+    },
+    {
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "category": "",
+      "slug": "will-bitcoin-reach-76k-march-2-8",
+      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
+      "outcome": "Yes",
+      "current_price": 0.14,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 38.7,
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 10.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
           "score": 0,
           "divergence_pct": 0,
           "direction": "none"
+        },
+        "manifold": {
+          "score": 10.0,
+          "divergence_pct": 32.72,
+          "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
@@ -2081,23 +1145,185 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 7.9,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 16858.51125,
-      "volume_24h": 85904.60822299996,
+      "potential_multiple": 7.1,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 26033.9504,
+      "volume_24h": 42602.317285999976,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306786+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122651+00:00",
+      "base_event": "will-bitcoin-reach-march"
     },
     {
-      "market_id": "1423629",
-      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
       "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
-      "token_id": "6226558688948207872023014108806008609139824171205301015693623347461096437689",
+      "slug": "will-bitcoin-reach-76k-march-2-8",
+      "token_id": "27789632087983911216998287546939851792464346644407884877045664886886884415150",
       "outcome": "No",
-      "current_price": 0.873,
+      "current_price": 0.86,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 38.7,
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 10.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 10.0,
+          "divergence_pct": 39.28,
+          "direction": "poly_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 26033.9504,
+      "volume_24h": 42602.317285999976,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T18:26:58.122657+00:00",
+      "base_event": "will-bitcoin-reach-march"
+    },
+    {
+      "market_id": "1405368",
+      "question": "Will Borussia M\u00f6nchengladbach win on 2026-03-06?",
+      "category": "",
+      "slug": "bun-bay-moe-2026-03-06-moe",
+      "token_id": "68778299350173833744270328680960544521912329273119787367064241195533792376332",
+      "outcome": "Yes",
+      "current_price": 0.055,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 18.2,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T19:30:00Z",
+      "liquidity_usd": 215743.5509,
+      "volume_24h": 36800.30957700001,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T18:26:58.122711+00:00",
+      "base_event": "bun-bay-moe-moe"
+    },
+    {
+      "market_id": "1405368",
+      "question": "Will Borussia M\u00f6nchengladbach win on 2026-03-06?",
+      "category": "",
+      "slug": "bun-bay-moe-2026-03-06-moe",
+      "token_id": "20668046568920513299080152213943576969730941331117388505344200495517343146903",
+      "outcome": "No",
+      "current_price": 0.945,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -2164,12 +1390,93 @@
       "convexity_band": "yield",
       "potential_multiple": 1.1,
       "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 16858.51125,
-      "volume_24h": 85904.60822299996,
+      "resolution_date": "2026-03-06T19:30:00Z",
+      "liquidity_usd": 215743.5509,
+      "volume_24h": 36800.30957700001,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306795+00:00",
-      "base_event": "elon-musk-tweets-february-march"
+      "timestamp": "2026-03-05T18:26:58.122716+00:00",
+      "base_event": "bun-bay-moe-moe"
+    },
+    {
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "category": "",
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "current_price": 0.0105,
+      "bid": 0.001,
+      "ask": 0.999,
+      "spread_pct": 99800.0,
+      "edge_score": 30.2,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 8.06,
+        "external": 7.0
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 8.06,
+        "price_velocity": 0.0,
+        "volume_anomaly": 2.56,
+        "order_book": 2.5,
+        "price_trajectory": 0.0,
+        "time_decay": 3.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 6.5,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 7.0,
+        "details": {
+          "matching_articles": 75,
+          "articles_6h": 6,
+          "articles_24h": 59,
+          "most_relevant_headline": "Erratic Futures , Oil Jittery As Iran Newsflow Drives Markets",
+          "recency_hours": 1.4,
+          "spike_detected": false,
+          "best_spike_ratio": 1.47,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 95.2,
+      "days_to_close": 12,
+      "resolution_date": "2026-03-18T00:00:00Z",
+      "liquidity_usd": 2695869.1472,
+      "volume_24h": 2270732.7762989993,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T18:26:58.122179+00:00",
+      "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
     },
     {
       "market_id": "1466766",
@@ -2178,15 +1485,15 @@
       "slug": "will-a-gulf-state-strike-iran-by-march-7",
       "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
       "outcome": "Yes",
-      "current_price": 0.115,
+      "current_price": 0.11,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 32.3,
+      "edge_score": 23.1,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 9.64,
+        "dislocation": 6.3,
         "external": 0.5
       },
       "structural_detail": {
@@ -2208,9 +1515,9 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 9.64,
+        "dislocation_total": 6.3,
         "price_velocity": 0.0,
-        "volume_anomaly": 4.64,
+        "volume_anomaly": 1.3,
         "order_book": 0.0,
         "price_trajectory": 0.0,
         "time_decay": 5.0
@@ -2243,13 +1550,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 8.7,
+      "potential_multiple": 9.1,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 42145.5537,
-      "volume_24h": 123523.63356899997,
+      "liquidity_usd": 40221.1693,
+      "volume_24h": 57006.80675399999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306603+00:00",
+      "timestamp": "2026-03-05T18:26:58.122550+00:00",
       "base_event": "will-gulf-state-strike-iran"
     },
     {
@@ -2259,15 +1566,15 @@
       "slug": "will-a-gulf-state-strike-iran-by-march-7",
       "token_id": "58816541889584715498009165390917975076577621188456054628110307363191550362174",
       "outcome": "No",
-      "current_price": 0.885,
+      "current_price": 0.89,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 32.3,
+      "edge_score": 23.1,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 9.64,
+        "dislocation": 6.3,
         "external": 0.5
       },
       "structural_detail": {
@@ -2289,9 +1596,9 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 9.64,
+        "dislocation_total": 6.3,
         "price_velocity": 0.0,
-        "volume_anomaly": 4.64,
+        "volume_anomaly": 1.3,
         "order_book": 0.0,
         "price_trajectory": 0.0,
         "time_decay": 5.0
@@ -2327,10 +1634,10 @@
       "potential_multiple": 1.1,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 42145.5537,
-      "volume_24h": 123523.63356899997,
+      "liquidity_usd": 40221.1693,
+      "volume_24h": 57006.80675399999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T16:08:54.306611+00:00",
+      "timestamp": "2026-03-05T18:26:58.122560+00:00",
       "base_event": "will-gulf-state-strike-iran"
     }
   ],
@@ -2358,7 +1665,7 @@
         "dislocation": 14.5,
         "external": 1.0
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 87.0,
       "slug": "elon-musk-of-tweets-february-27-march-6-120-139"
@@ -2392,62 +1699,6 @@
       "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
     },
     {
-      "position_id": "a4bba0e5",
-      "market_id": "1465973",
-      "question": "Will US or Israel strike Iran on March 8, 2026?",
-      "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
-      "outcome": "No",
-      "convexity_band": "20x",
-      "entry_price": 0.0231,
-      "entry_timestamp": "2026-03-04T23:37:20.186818+00:00",
-      "shares": 8180.83,
-      "entry_usd": 189.1,
-      "current_price": 0.0175,
-      "current_value": 143.16,
-      "unrealized_pnl": -45.94,
-      "unrealized_pnl_pct": -24.29,
-      "edge_score_at_entry": 43.1,
-      "edge_tier_at_entry": "high",
-      "layer_scores_at_entry": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 6.8
-      },
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "potential_multiple": 43.5,
-      "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
-    },
-    {
-      "position_id": "9b6c4def",
-      "market_id": "654414",
-      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
-      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
-      "outcome": "No",
-      "convexity_band": "20x",
-      "entry_price": 0.0126,
-      "entry_timestamp": "2026-03-05T05:00:12.296707+00:00",
-      "shares": 2795.62,
-      "entry_usd": 35.12,
-      "current_price": 0.011,
-      "current_value": 30.75,
-      "unrealized_pnl": -4.37,
-      "unrealized_pnl_pct": -12.44,
-      "edge_score_at_entry": 22.0,
-      "edge_tier_at_entry": "low",
-      "layer_scores_at_entry": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 7.71,
-        "external": 0.5
-      },
-      "days_to_close": 12,
-      "resolution_date": "2026-03-18T00:00:00Z",
-      "potential_multiple": 80.0,
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
-    },
-    {
       "position_id": "2cab5949",
       "market_id": "1466422",
       "question": "Will Iran strike Turkey in March?",
@@ -2458,10 +1709,10 @@
       "entry_timestamp": "2026-03-05T08:52:22.268030+00:00",
       "shares": 403.91,
       "entry_usd": 62.31,
-      "current_price": 0.1585,
-      "current_value": 64.02,
-      "unrealized_pnl": 1.71,
-      "unrealized_pnl_pct": 2.74,
+      "current_price": 0.1555,
+      "current_value": 62.81,
+      "unrealized_pnl": 0.5,
+      "unrealized_pnl_pct": 0.8,
       "edge_score_at_entry": 38.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2498,7 +1749,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 13.5,
       "slug": "elon-musk-of-tweets-february-27-march-6-140-159"
@@ -2514,10 +1765,10 @@
       "entry_timestamp": "2026-03-05T11:26:23.686711+00:00",
       "shares": 448.87,
       "entry_usd": 60.9,
-      "current_price": 0.115,
-      "current_value": 51.62,
-      "unrealized_pnl": -9.28,
-      "unrealized_pnl_pct": -15.24,
+      "current_price": 0.11,
+      "current_value": 49.38,
+      "unrealized_pnl": -11.52,
+      "unrealized_pnl_pct": -18.92,
       "edge_score_at_entry": 32.4,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2554,7 +1805,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 100.0,
       "slug": "elon-musk-of-tweets-february-27-march-6-280-299"
@@ -2570,10 +1821,10 @@
       "entry_timestamp": "2026-03-05T14:12:13.304403+00:00",
       "shares": 11081.26,
       "entry_usd": 133.64,
-      "current_price": 0.011,
-      "current_value": 121.89,
-      "unrealized_pnl": -11.75,
-      "unrealized_pnl_pct": -8.79,
+      "current_price": 0.012,
+      "current_value": 132.98,
+      "unrealized_pnl": -0.66,
+      "unrealized_pnl_pct": -0.49,
       "edge_score_at_entry": 40.7,
       "edge_tier_at_entry": "high",
       "layer_scores_at_entry": {
@@ -2610,7 +1861,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 36.4,
       "slug": "elon-musk-of-tweets-february-27-march-6-160-179"
@@ -2626,10 +1877,10 @@
       "entry_timestamp": "2026-03-05T15:10:33.816133+00:00",
       "shares": 96.45,
       "entry_usd": 40.13,
-      "current_price": 0.3665,
-      "current_value": 35.35,
-      "unrealized_pnl": -4.78,
-      "unrealized_pnl_pct": -11.91,
+      "current_price": 0.486,
+      "current_value": 46.87,
+      "unrealized_pnl": 6.74,
+      "unrealized_pnl_pct": 16.8,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2638,7 +1889,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 2.4,
       "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
@@ -2654,10 +1905,10 @@
       "entry_timestamp": "2026-03-05T15:10:33.817188+00:00",
       "shares": 1317.01,
       "entry_usd": 58.9,
-      "current_price": 0.0395,
-      "current_value": 52.02,
-      "unrealized_pnl": -6.88,
-      "unrealized_pnl_pct": -11.68,
+      "current_price": 0.048,
+      "current_value": 63.22,
+      "unrealized_pnl": 4.32,
+      "unrealized_pnl_pct": 7.33,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2666,7 +1917,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 22.5,
       "slug": "elon-musk-of-tweets-february-27-march-6-240-259"
@@ -2682,10 +1933,10 @@
       "entry_timestamp": "2026-03-05T16:08:54.311083+00:00",
       "shares": 57.44,
       "entry_usd": 25.11,
-      "current_price": 0.435,
-      "current_value": 24.99,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.365,
+      "current_value": 20.97,
+      "unrealized_pnl": -4.14,
+      "unrealized_pnl_pct": -16.49,
       "edge_score_at_entry": 38.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2698,90 +1949,6 @@
       "resolution_date": "2026-03-09T04:00:00Z",
       "potential_multiple": 2.3,
       "slug": "will-ethereum-reach-2200-march-2-8"
-    },
-    {
-      "position_id": "3cfbfb62",
-      "market_id": "1480657",
-      "question": "Will Bitcoin reach $76,000 March 2-8?",
-      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
-      "outcome": "Yes",
-      "convexity_band": "5x",
-      "entry_price": 0.2261,
-      "entry_timestamp": "2026-03-05T16:08:54.311554+00:00",
-      "shares": 476.64,
-      "entry_usd": 107.78,
-      "current_price": 0.225,
-      "current_value": 107.24,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 38.7,
-      "edge_tier_at_entry": "medium",
-      "layer_scores_at_entry": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "potential_multiple": 4.4,
-      "slug": "will-bitcoin-reach-76k-march-2-8"
-    },
-    {
-      "position_id": "39c76bd9",
-      "market_id": "1480653",
-      "question": "Will Bitcoin reach $78,000 March 2-8?",
-      "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
-      "outcome": "Yes",
-      "convexity_band": "10x",
-      "entry_price": 0.107,
-      "entry_timestamp": "2026-03-05T16:08:54.312000+00:00",
-      "shares": 964.57,
-      "entry_usd": 103.24,
-      "current_price": 0.1065,
-      "current_value": 102.73,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 38.7,
-      "edge_tier_at_entry": "medium",
-      "layer_scores_at_entry": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "potential_multiple": 9.4,
-      "slug": "will-bitcoin-reach-78k-march-2-8"
-    },
-    {
-      "position_id": "fa3118e6",
-      "market_id": "1480650",
-      "question": "Will Bitcoin reach $80,000 March 2-8?",
-      "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
-      "outcome": "Yes",
-      "convexity_band": "10x",
-      "entry_price": 0.0523,
-      "entry_timestamp": "2026-03-05T16:08:54.312474+00:00",
-      "shares": 1892.46,
-      "entry_usd": 98.9,
-      "current_price": 0.052,
-      "current_value": 98.41,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 38.7,
-      "edge_tier_at_entry": "medium",
-      "layer_scores_at_entry": {
-        "structural": 10.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "days_to_close": 3,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "potential_multiple": 19.2,
-      "slug": "will-bitcoin-reach-80k-march-2-8"
     },
     {
       "position_id": "f3dbf599",
@@ -2806,80 +1973,136 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-06T17:00:00Z",
       "potential_multiple": 7.3,
       "slug": "bitcoin-above-74k-on-march-6"
     },
     {
-      "position_id": "7e1b28d1",
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
-      "outcome": "Yes",
-      "convexity_band": "2x",
-      "entry_price": 0.4166,
-      "entry_timestamp": "2026-03-05T16:08:54.313494+00:00",
-      "shares": 86.32,
-      "entry_usd": 35.96,
-      "current_price": 0.4145,
-      "current_value": 35.78,
+      "position_id": "bd6148e5",
+      "market_id": "1465973",
+      "question": "Will US or Israel strike Iran on March 8, 2026?",
+      "token_id": "16325545027707101470007537235006449214418834127844451407199449933122861040951",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0166,
+      "entry_timestamp": "2026-03-05T18:26:58.126785+00:00",
+      "shares": 8662.14,
+      "entry_usd": 143.64,
+      "current_price": 0.0165,
+      "current_value": 142.93,
       "unrealized_pnl": 0.0,
       "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 37.9,
-      "edge_tier_at_entry": "medium",
+      "edge_score_at_entry": 40.7,
+      "edge_tier_at_entry": "high",
       "layer_scores_at_entry": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
+        "dislocation": 11.0,
+        "external": 4.59
       },
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "potential_multiple": 2.4,
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199"
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T00:00:00Z",
+      "potential_multiple": 60.6,
+      "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
     },
     {
-      "position_id": "f661a052",
-      "market_id": "1423640",
-      "question": "Will Elon Musk post 260-279 tweets from February 27 to March 6, 2026?",
-      "token_id": "104884974918673834100233293945291058294923143248753654651485270216362851841546",
+      "position_id": "a4920aab",
+      "market_id": "1480650",
+      "question": "Will Bitcoin reach $80,000 March 2-8?",
+      "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
       "outcome": "Yes",
       "convexity_band": "20x",
-      "entry_price": 0.01,
-      "entry_timestamp": "2026-03-05T16:08:54.314091+00:00",
-      "shares": 5495.52,
-      "entry_usd": 55.23,
-      "current_price": 0.01,
-      "current_value": 54.96,
+      "entry_price": 0.0327,
+      "entry_timestamp": "2026-03-05T18:26:58.127134+00:00",
+      "shares": 3212.86,
+      "entry_usd": 104.94,
+      "current_price": 0.0325,
+      "current_value": 104.42,
       "unrealized_pnl": 0.0,
       "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 37.9,
+      "edge_score_at_entry": 38.7,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
-        "structural": 0.0,
+        "structural": 10.0,
         "smart_money": 0.0,
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "potential_multiple": 100.0,
-      "slug": "elon-musk-of-tweets-february-27-march-6-260-279"
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "potential_multiple": 30.8,
+      "slug": "will-bitcoin-reach-80k-march-2-8"
     },
     {
-      "position_id": "f9fbe93c",
-      "market_id": "1423629",
-      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
-      "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
+      "position_id": "10c1522b",
+      "market_id": "1480653",
+      "question": "Will Bitcoin reach $78,000 March 2-8?",
+      "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
+      "outcome": "Yes",
+      "convexity_band": "10x",
+      "entry_price": 0.0739,
+      "entry_timestamp": "2026-03-05T18:26:58.127499+00:00",
+      "shares": 1360.81,
+      "entry_usd": 100.52,
+      "current_price": 0.0735,
+      "current_value": 100.02,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "potential_multiple": 13.6,
+      "slug": "will-bitcoin-reach-78k-march-2-8"
+    },
+    {
+      "position_id": "a3e1bbb8",
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
       "outcome": "Yes",
       "convexity_band": "5x",
-      "entry_price": 0.1276,
-      "entry_timestamp": "2026-03-05T16:08:54.314570+00:00",
-      "shares": 418.69,
-      "entry_usd": 53.44,
-      "current_price": 0.127,
-      "current_value": 53.17,
+      "entry_price": 0.1407,
+      "entry_timestamp": "2026-03-05T18:26:58.127968+00:00",
+      "shares": 684.43,
+      "entry_usd": 96.3,
+      "current_price": 0.14,
+      "current_value": 95.82,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "potential_multiple": 7.1,
+      "slug": "will-bitcoin-reach-76k-march-2-8"
+    },
+    {
+      "position_id": "dec74f2c",
+      "market_id": "1405368",
+      "question": "Will Borussia M\u00f6nchengladbach win on 2026-03-06?",
+      "token_id": "68778299350173833744270328680960544521912329273119787367064241195533792376332",
+      "outcome": "Yes",
+      "convexity_band": "10x",
+      "entry_price": 0.0553,
+      "entry_timestamp": "2026-03-05T18:26:58.128518+00:00",
+      "shares": 1043.33,
+      "entry_usd": 57.67,
+      "current_price": 0.055,
+      "current_value": 57.38,
       "unrealized_pnl": 0.0,
       "unrealized_pnl_pct": 0.0,
       "edge_score_at_entry": 37.9,
@@ -2891,9 +2114,37 @@
         "external": 0.5
       },
       "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "potential_multiple": 7.9,
-      "slug": "elon-musk-of-tweets-february-27-march-6-220-239"
+      "resolution_date": "2026-03-06T19:30:00Z",
+      "potential_multiple": 18.2,
+      "slug": "bun-bay-moe-2026-03-06-moe"
+    },
+    {
+      "position_id": "25e6f69e",
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0106,
+      "entry_timestamp": "2026-03-05T18:26:58.129156+00:00",
+      "shares": 8460.55,
+      "entry_usd": 89.28,
+      "current_price": 0.0105,
+      "current_value": 88.84,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 30.2,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 8.06,
+        "external": 7.0
+      },
+      "days_to_close": 12,
+      "resolution_date": "2026-03-18T00:00:00Z",
+      "potential_multiple": 95.2,
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
     }
   ],
   "realized_trades": [
@@ -4222,55 +3473,263 @@
         "dislocation": 12.0,
         "external": 0.5
       }
+    },
+    {
+      "position_id": "a4bba0e5",
+      "market_id": "1465973",
+      "question": "Will US or Israel strike Iran on March 8, 2026?",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0231,
+      "exit_price": 0.0165,
+      "entry_timestamp": "2026-03-04T23:37:20.186818+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125302+00:00",
+      "shares": 8180.83,
+      "entry_usd": 189.1,
+      "exit_usd": 134.98,
+      "pnl_usd": -54.12,
+      "pnl_pct": -28.62,
+      "win": false,
+      "reason": "stop_loss_-25pct",
+      "edge_score_at_entry": 43.1,
+      "edge_tier_at_entry": "high",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 6.8
+      }
+    },
+    {
+      "position_id": "9b6c4def",
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0126,
+      "exit_price": 0.0105,
+      "entry_timestamp": "2026-03-05T05:00:12.296707+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125401+00:00",
+      "shares": 2795.62,
+      "entry_usd": 35.12,
+      "exit_usd": 29.35,
+      "pnl_usd": -5.77,
+      "pnl_pct": -16.42,
+      "win": false,
+      "reason": "stop_loss_-15pct",
+      "edge_score_at_entry": 22.0,
+      "edge_tier_at_entry": "low",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 7.71,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "3cfbfb62",
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "outcome": "Yes",
+      "convexity_band": "5x",
+      "entry_price": 0.2261,
+      "exit_price": 0.14,
+      "entry_timestamp": "2026-03-05T16:08:54.311554+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125515+00:00",
+      "shares": 476.64,
+      "entry_usd": 107.78,
+      "exit_usd": 66.73,
+      "pnl_usd": -41.05,
+      "pnl_pct": -38.09,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "39c76bd9",
+      "market_id": "1480653",
+      "question": "Will Bitcoin reach $78,000 March 2-8?",
+      "outcome": "Yes",
+      "convexity_band": "10x",
+      "entry_price": 0.107,
+      "exit_price": 0.0735,
+      "entry_timestamp": "2026-03-05T16:08:54.312000+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125609+00:00",
+      "shares": 964.57,
+      "entry_usd": 103.24,
+      "exit_usd": 70.9,
+      "pnl_usd": -32.34,
+      "pnl_pct": -31.33,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "fa3118e6",
+      "market_id": "1480650",
+      "question": "Will Bitcoin reach $80,000 March 2-8?",
+      "outcome": "Yes",
+      "convexity_band": "10x",
+      "entry_price": 0.0523,
+      "exit_price": 0.0325,
+      "entry_timestamp": "2026-03-05T16:08:54.312474+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125708+00:00",
+      "shares": 1892.46,
+      "entry_usd": 98.9,
+      "exit_usd": 61.5,
+      "pnl_usd": -37.4,
+      "pnl_pct": -37.81,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 38.7,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 10.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "7e1b28d1",
+      "market_id": "1423621",
+      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
+      "outcome": "Yes",
+      "convexity_band": "2x",
+      "entry_price": 0.4166,
+      "exit_price": 0.197,
+      "entry_timestamp": "2026-03-05T16:08:54.313494+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125797+00:00",
+      "shares": 86.32,
+      "entry_usd": 35.96,
+      "exit_usd": 17.01,
+      "pnl_usd": -18.95,
+      "pnl_pct": -52.71,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 37.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "f661a052",
+      "market_id": "1423640",
+      "question": "Will Elon Musk post 260-279 tweets from February 27 to March 6, 2026?",
+      "outcome": "Yes",
+      "convexity_band": "20x",
+      "entry_price": 0.01,
+      "exit_price": 0.02,
+      "entry_timestamp": "2026-03-05T16:08:54.314091+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125883+00:00",
+      "shares": 5495.52,
+      "entry_usd": 55.23,
+      "exit_usd": 109.91,
+      "pnl_usd": 54.68,
+      "pnl_pct": 99.0,
+      "win": true,
+      "reason": "profit_target_25pct",
+      "edge_score_at_entry": 37.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
+    },
+    {
+      "position_id": "f9fbe93c",
+      "market_id": "1423629",
+      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
+      "outcome": "Yes",
+      "convexity_band": "5x",
+      "entry_price": 0.1276,
+      "exit_price": 0.2275,
+      "entry_timestamp": "2026-03-05T16:08:54.314570+00:00",
+      "exit_timestamp": "2026-03-05T18:26:58.125976+00:00",
+      "shares": 418.69,
+      "entry_usd": 53.44,
+      "exit_usd": 95.25,
+      "pnl_usd": 41.81,
+      "pnl_pct": 78.24,
+      "win": true,
+      "reason": "profit_target_25pct",
+      "edge_score_at_entry": 37.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
     }
   ],
   "statistics": {
     "by_category": {
       "": {
-        "count": 26,
-        "avg_edge": 37.5
+        "count": 16,
+        "avg_edge": 36.4
       }
     },
     "by_convexity": {
       "20x": {
-        "count": 6,
-        "total_liquidity": 2158906.77478,
-        "avg_edge": 36.2
+        "count": 4,
+        "total_liquidity": 2787607.98782,
+        "avg_edge": 37.6
       },
       "5x": {
-        "count": 4,
-        "total_liquidity": 100130.64355,
-        "avg_edge": 38.5
+        "count": 2,
+        "total_liquidity": 49406.72025,
+        "avg_edge": 38.8
       },
       "yield": {
-        "count": 10,
-        "total_liquidity": 284566.97149,
-        "avg_edge": 37.9
+        "count": 6,
+        "total_liquidity": 394819.95685,
+        "avg_edge": 36.0
       },
       "2x": {
-        "count": 3,
-        "total_liquidity": 67089.83843,
-        "avg_edge": 38.2
+        "count": 1,
+        "total_liquidity": 35277.0494,
+        "avg_edge": 38.9
       },
       "10x": {
         "count": 3,
-        "total_liquidity": 117346.48950999998,
-        "avg_edge": 36.6
+        "total_liquidity": 310136.1872,
+        "avg_edge": 33.2
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 77,
-      "coverage_pct": 28.9,
-      "avg_score": 9.07,
+      "tokens_scored": 280,
+      "tokens_with_signal": 76,
+      "coverage_pct": 27.1,
+      "avg_score": 8.77,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 266,
+      "tokens_scored": 280,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
@@ -4280,35 +3739,35 @@
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 227,
-      "coverage_pct": 85.3,
-      "avg_score": 7.43,
+      "tokens_scored": 280,
+      "tokens_with_signal": 216,
+      "coverage_pct": 77.1,
+      "avg_score": 6.87,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 266,
+      "tokens_scored": 280,
+      "tokens_with_signal": 280,
       "coverage_pct": 100.0,
-      "avg_score": 0.8,
-      "max_score": 4.59
+      "avg_score": 0.88,
+      "max_score": 8.44
     }
   },
   "calibration": {
-    "total_trades": 51,
-    "overall_win_rate": 0.412,
-    "overall_avg_pnl_pct": 8.2,
+    "total_trades": 59,
+    "overall_win_rate": 0.39,
+    "overall_avg_pnl_pct": 6.6,
     "quintiles": [
       {
         "band": "15-25",
         "label": "low",
-        "trades": 1,
+        "trades": 2,
         "wins": 0,
         "actual_win_rate": 0.0,
         "estimated_win_rate": 0.38,
         "drift": -0.38,
-        "avg_pnl_pct": -24.6
+        "avg_pnl_pct": -20.5
       },
       {
         "band": "25-35",
@@ -4323,21 +3782,21 @@
       {
         "band": "35-50",
         "label": "average",
-        "trades": 46,
-        "wins": 21,
-        "actual_win_rate": 0.457,
+        "trades": 53,
+        "wins": 23,
+        "actual_win_rate": 0.434,
         "estimated_win_rate": 0.47,
-        "drift": -0.013,
-        "avg_pnl_pct": 11.7
+        "drift": -0.036,
+        "avg_pnl_pct": 9.9
       }
     ],
     "calibration_score": 70.0,
     "layer_accuracy": {
       "structural": {
-        "trades_with_signal": 19,
+        "trades_with_signal": 22,
         "avg_score_winners": 9.26,
-        "avg_score_losers": 7.97,
-        "predictive_power": 1.16
+        "avg_score_losers": 8.35,
+        "predictive_power": 1.11
       },
       "smart_money": {
         "trades_with_signal": 0,
@@ -4346,20 +3805,20 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 51,
+        "trades_with_signal": 59,
         "avg_score_winners": 12.0,
-        "avg_score_losers": 11.65,
-        "predictive_power": 1.03
+        "avg_score_losers": 11.56,
+        "predictive_power": 1.04
       },
       "external": {
-        "trades_with_signal": 51,
-        "avg_score_winners": 0.6,
-        "avg_score_losers": 0.89,
-        "predictive_power": 0.67
+        "trades_with_signal": 59,
+        "avg_score_winners": 0.59,
+        "avg_score_losers": 1.0,
+        "predictive_power": 0.59
       }
     },
     "recommendations": [
-      "Layer 'external' is counter-predictive (power=0.7) \u2014 consider reducing its weight"
+      "Layer 'external' is counter-predictive (power=0.6) \u2014 consider reducing its weight"
     ]
   }
 }
