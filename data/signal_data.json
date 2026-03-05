@@ -1,31 +1,31 @@
 {
   "metadata": {
-    "timestamp": "2026-03-05T21:55:25.144603+00:00",
-    "markets_scanned": 7,
-    "tokens_scored": 12,
+    "timestamp": "2026-03-05T22:39:19.119235+00:00",
+    "markets_scanned": 8,
+    "tokens_scored": 15,
     "engine_version": "3.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 5020.12,
-    "combined_pnl": 22.43,
-    "combined_pnl_pct": 0.45,
-    "combined_win_rate": 0.394,
-    "combined_total_trades": 66,
-    "open_positions": 23,
+    "combined_equity": 4986.51,
+    "combined_pnl": -10.95,
+    "combined_pnl_pct": -0.22,
+    "combined_win_rate": 0.388,
+    "combined_total_trades": 67,
+    "open_positions": 24,
     "pool": {
       "name": "Repricing Engine",
       "capital": 5000,
-      "cash": 3384.87,
-      "equity": 5020.12,
-      "pnl": 22.43,
-      "total_pnl": 22.43,
-      "win_rate": 0.394,
+      "cash": 3302.71,
+      "equity": 4986.51,
+      "pnl": -10.95,
+      "total_pnl": -10.95,
+      "win_rate": 0.388,
       "win_count": 26,
-      "loss_count": 40,
-      "open_positions": 23,
-      "closed_trades": 66,
-      "max_drawdown": -7.73,
+      "loss_count": 41,
+      "open_positions": 24,
+      "closed_trades": 67,
+      "max_drawdown": -7.85,
       "peak_equity": 5411.570000000001,
       "equity_history": [
         {
@@ -383,11 +383,100 @@
         {
           "timestamp": "2026-03-05T21:55:25.138963+00:00",
           "equity": 5020.61
+        },
+        {
+          "timestamp": "2026-03-05T22:39:19.113244+00:00",
+          "equity": 4986.98
+        },
+        {
+          "timestamp": "2026-03-05T22:39:19.113410+00:00",
+          "equity": 4986.98
         }
       ]
     }
   },
   "opportunities": [
+    {
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "category": "",
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "current_price": 0.0105,
+      "bid": 0.001,
+      "ask": 0.999,
+      "spread_pct": 99800.0,
+      "edge_score": 39.6,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.46,
+        "external": 7.0
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.46,
+        "price_velocity": 0.0,
+        "volume_anomaly": 5.96,
+        "order_book": 2.5,
+        "price_trajectory": 0.0,
+        "time_decay": 3.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 6.5,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 7.0,
+        "details": {
+          "matching_articles": 75,
+          "articles_6h": 5,
+          "articles_24h": 47,
+          "most_relevant_headline": "Chilling employment warning sends shockwaves , exposing an economic truth Trump desperately tries to ignore",
+          "recency_hours": 0.9,
+          "spike_detected": false,
+          "best_spike_ratio": 1.47,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 95.2,
+      "days_to_close": 12,
+      "resolution_date": "2026-03-18T00:00:00Z",
+      "liquidity_usd": 2473611.50082,
+      "volume_24h": 4722092.451572,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.110676+00:00",
+      "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
+    },
     {
       "market_id": "1413025",
       "question": "Will Real Madrid CF win on 2026-03-07?",
@@ -395,7 +484,7 @@
       "slug": "lal-cel-rea-2026-03-07-rea",
       "token_id": "51582434704558553601126476211496236017255283111300728038217042022067569642637",
       "outcome": "Yes",
-      "current_price": 0.425,
+      "current_price": 0.415,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -463,10 +552,10 @@
       "potential_multiple": 2.4,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 256118.6362,
-      "volume_24h": 219864.0484890003,
+      "liquidity_usd": 310243.1628,
+      "volume_24h": 273038.92971800023,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136543+00:00",
+      "timestamp": "2026-03-05T22:39:19.110836+00:00",
       "base_event": "lal-cel-rea-rea"
     },
     {
@@ -476,7 +565,7 @@
       "slug": "lal-cel-rea-2026-03-07-rea",
       "token_id": "30460198104425192234011482627716526429118981289164193924263317826299055501303",
       "outcome": "No",
-      "current_price": 0.575,
+      "current_price": 0.585,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -544,20 +633,20 @@
       "potential_multiple": 1.7,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 256118.6362,
-      "volume_24h": 219864.0484890003,
+      "liquidity_usd": 310243.1628,
+      "volume_24h": 273038.92971800023,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136553+00:00",
+      "timestamp": "2026-03-05T22:39:19.110846+00:00",
       "base_event": "lal-cel-rea-rea"
     },
     {
-      "market_id": "1488955",
-      "question": "BNP Paribas Open: Laura Siegemund vs Petra Marcinko",
+      "market_id": "1488938",
+      "question": "BNP Paribas Open: Hubert Hurkacz vs Aleksandar Kovacevic",
       "category": "",
-      "slug": "wta-siegemu-marcink-2026-03-04",
-      "token_id": "113970152700234050629554221537688828167304054931643878212615703030535231984499",
-      "outcome": "Laura Siegemund",
-      "current_price": 0.7545,
+      "slug": "atp-hurkacz-kovacev-2026-03-04",
+      "token_id": "86328961027554649795434618467208253072904921783109609680403280491555236158708",
+      "outcome": "Hubert Hurkacz",
+      "current_price": 0.35,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -613,7 +702,331 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": false,
-          "best_spike_ratio": 1.08,
+          "best_spike_ratio": 0.91,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.9,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 31614.3809,
+      "volume_24h": 138212.94140699992,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.110992+00:00",
+      "base_event": "atp-hurkacz-kovacev"
+    },
+    {
+      "market_id": "1488938",
+      "question": "BNP Paribas Open: Hubert Hurkacz vs Aleksandar Kovacevic",
+      "category": "",
+      "slug": "atp-hurkacz-kovacev-2026-03-04",
+      "token_id": "51644599335370495704709020191778522828091048705097590808885626473354671153211",
+      "outcome": "Aleksandar Kovacevic",
+      "current_price": 0.65,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0.91,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.5,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 31614.3809,
+      "volume_24h": 138212.94140699992,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.110998+00:00",
+      "base_event": "atp-hurkacz-kovacev"
+    },
+    {
+      "market_id": "1488945",
+      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
+      "category": "",
+      "slug": "atp-fearnle-dzumhur-2026-03-04",
+      "token_id": "5789508186710706355146620430237978154639032782895566212545760492996738726350",
+      "outcome": "Jacob Fearnley",
+      "current_price": 0.93,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.4,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 87724.7575,
+      "volume_24h": 128061.36099199999,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.111025+00:00",
+      "base_event": "atp-fearnle-dzumhur"
+    },
+    {
+      "market_id": "1488945",
+      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
+      "category": "",
+      "slug": "atp-fearnle-dzumhur-2026-03-04",
+      "token_id": "112551151716008019231269504225767782444558069451752936582224549892779880130256",
+      "outcome": "Damir Dzumhur",
+      "current_price": 0.07,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.4,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 14.3,
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "liquidity_usd": 87724.7575,
+      "volume_24h": 128061.36099199999,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.111031+00:00",
+      "base_event": "atp-fearnle-dzumhur"
+    },
+    {
+      "market_id": "1488943",
+      "question": "BNP Paribas Open: Donna Vekic vs Tereza Valentova",
+      "category": "",
+      "slug": "wta-vekic-valento-2026-03-04",
+      "token_id": "64155724836776202372756015569209811804154909276108608658751043977921346763320",
+      "outcome": "Donna Vekic",
+      "current_price": 0.785,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0.0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 1.16,
           "entities_checked": 2,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -625,20 +1038,20 @@
       "potential_multiple": 1.3,
       "days_to_close": 5,
       "resolution_date": "2026-03-11T18:00:00Z",
-      "liquidity_usd": 37267.21672,
-      "volume_24h": 149238.458705,
+      "liquidity_usd": 43428.606,
+      "volume_24h": 103274.36820500002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136642+00:00",
-      "base_event": "wta-siegemu-marcink"
+      "timestamp": "2026-03-05T22:39:19.111100+00:00",
+      "base_event": "wta-vekic-valento"
     },
     {
-      "market_id": "1488955",
-      "question": "BNP Paribas Open: Laura Siegemund vs Petra Marcinko",
+      "market_id": "1488943",
+      "question": "BNP Paribas Open: Donna Vekic vs Tereza Valentova",
       "category": "",
-      "slug": "wta-siegemu-marcink-2026-03-04",
-      "token_id": "91740674396662962526732438815639600163559439824839315244604721658321351997202",
-      "outcome": "Petra Marcinko",
-      "current_price": 0.2455,
+      "slug": "wta-vekic-valento-2026-03-04",
+      "token_id": "5313438807680862048471824543055039318604744113528398966451551253892797046281",
+      "outcome": "Tereza Valentova",
+      "current_price": 0.215,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -694,7 +1107,7 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": false,
-          "best_spike_ratio": 1.08,
+          "best_spike_ratio": 1.16,
           "entities_checked": 2,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -703,176 +1116,14 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 4.1,
+      "potential_multiple": 4.7,
       "days_to_close": 5,
       "resolution_date": "2026-03-11T18:00:00Z",
-      "liquidity_usd": 37267.21672,
-      "volume_24h": 149238.458705,
+      "liquidity_usd": 43428.606,
+      "volume_24h": 103274.36820500002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136647+00:00",
-      "base_event": "wta-siegemu-marcink"
-    },
-    {
-      "market_id": "1488945",
-      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
-      "category": "",
-      "slug": "atp-fearnle-dzumhur-2026-03-04",
-      "token_id": "5789508186710706355146620430237978154639032782895566212545760492996738726350",
-      "outcome": "Jacob Fearnley",
-      "current_price": 0.725,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 36.1,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 1.4,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.4,
-      "days_to_close": 5,
-      "resolution_date": "2026-03-11T19:00:00Z",
-      "liquidity_usd": 70989.3684,
-      "volume_24h": 100591.74090299998,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136759+00:00",
-      "base_event": "atp-fearnle-dzumhur"
-    },
-    {
-      "market_id": "1488945",
-      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
-      "category": "",
-      "slug": "atp-fearnle-dzumhur-2026-03-04",
-      "token_id": "112551151716008019231269504225767782444558069451752936582224549892779880130256",
-      "outcome": "Damir Dzumhur",
-      "current_price": 0.275,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 36.1,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 1.4,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.6,
-      "days_to_close": 5,
-      "resolution_date": "2026-03-11T19:00:00Z",
-      "liquidity_usd": 70989.3684,
-      "volume_24h": 100591.74090299998,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136764+00:00",
-      "base_event": "atp-fearnle-dzumhur"
+      "timestamp": "2026-03-05T22:39:19.111107+00:00",
+      "base_event": "wta-vekic-valento"
     },
     {
       "market_id": "1462808",
@@ -881,7 +1132,7 @@
       "slug": "elon-musk-of-tweets-march-3-march-10-180-199",
       "token_id": "59059371156910253918083944148371353064424603124754557211185640032833962729639",
       "outcome": "Yes",
-      "current_price": 0.0495,
+      "current_price": 0.052,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -945,14 +1196,95 @@
           "engagement_ratio": 0
         }
       },
-      "convexity_band": "20x",
-      "potential_multiple": 20.2,
+      "convexity_band": "10x",
+      "potential_multiple": 19.2,
       "days_to_close": 4,
       "resolution_date": "2026-03-10T16:00:00Z",
-      "liquidity_usd": 29687.02366,
-      "volume_24h": 100502.9250039998,
+      "liquidity_usd": 29595.77876,
+      "volume_24h": 100812.36792599979,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136770+00:00",
+      "timestamp": "2026-03-05T22:39:19.111119+00:00",
+      "base_event": "elon-musk-tweets-march-march"
+    },
+    {
+      "market_id": "1462808",
+      "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-march-3-march-10-180-199",
+      "token_id": "100289612450168123966721285708336201022236114095708523012585129177655607122127",
+      "outcome": "No",
+      "current_price": 0.948,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "liquidity_usd": 29595.77876,
+      "volume_24h": 100812.36792599979,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T22:39:19.111125+00:00",
       "base_event": "elon-musk-tweets-march-march"
     },
     {
@@ -1030,10 +1362,10 @@
       "potential_multiple": 1.4,
       "days_to_close": 2,
       "resolution_date": "2026-03-08T00:00:00Z",
-      "liquidity_usd": 31895.8401,
-      "volume_24h": 98300.80983199998,
+      "liquidity_usd": 39266.626,
+      "volume_24h": 100536.10330799998,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136778+00:00",
+      "timestamp": "2026-03-05T22:39:19.111131+00:00",
       "base_event": "will-india-win-theicc-mens-t-world-cup"
     },
     {
@@ -1111,10 +1443,10 @@
       "potential_multiple": 3.3,
       "days_to_close": 2,
       "resolution_date": "2026-03-08T00:00:00Z",
-      "liquidity_usd": 31895.8401,
-      "volume_24h": 98300.80983199998,
+      "liquidity_usd": 39266.626,
+      "volume_24h": 100536.10330799998,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136783+00:00",
+      "timestamp": "2026-03-05T22:39:19.111136+00:00",
       "base_event": "will-india-win-theicc-mens-t-world-cup"
     },
     {
@@ -1192,10 +1524,10 @@
       "potential_multiple": 4.9,
       "days_to_close": 12,
       "resolution_date": "2026-03-17T23:55:00Z",
-      "liquidity_usd": 24987.888,
-      "volume_24h": 149664.275747,
+      "liquidity_usd": 24632.7217,
+      "volume_24h": 149611.888469,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136630+00:00",
+      "timestamp": "2026-03-05T22:39:19.110951+00:00",
       "base_event": "will-dominican-republic-win-theworld-baseball-classic"
     },
     {
@@ -1273,92 +1605,11 @@
       "potential_multiple": 1.3,
       "days_to_close": 12,
       "resolution_date": "2026-03-17T23:55:00Z",
-      "liquidity_usd": 24987.888,
-      "volume_24h": 149664.275747,
+      "liquidity_usd": 24632.7217,
+      "volume_24h": 149611.888469,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136636+00:00",
+      "timestamp": "2026-03-05T22:39:19.110957+00:00",
       "base_event": "will-dominican-republic-win-theworld-baseball-classic"
-    },
-    {
-      "market_id": "654414",
-      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
-      "category": "",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
-      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
-      "outcome": "No",
-      "current_price": 0.0105,
-      "bid": 0.001,
-      "ask": 0.999,
-      "spread_pct": 99800.0,
-      "edge_score": 32.6,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.53,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.53,
-        "price_velocity": 0.0,
-        "volume_anomaly": 6.03,
-        "order_book": 2.5,
-        "price_trajectory": 0.0,
-        "time_decay": 3.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0.0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 1.47,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 95.2,
-      "days_to_close": 12,
-      "resolution_date": "2026-03-18T00:00:00Z",
-      "liquidity_usd": 2483403.35861,
-      "volume_24h": 4760130.63365,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T21:55:25.136323+00:00",
-      "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
     }
   ],
   "positions": [
@@ -1737,10 +1988,10 @@
       "entry_timestamp": "2026-03-05T19:47:21.587813+00:00",
       "shares": 16.03,
       "entry_usd": 7.17,
-      "current_price": 0.425,
-      "current_value": 6.81,
-      "unrealized_pnl": -0.36,
-      "unrealized_pnl_pct": -5.02,
+      "current_price": 0.415,
+      "current_value": 6.65,
+      "unrealized_pnl": -0.52,
+      "unrealized_pnl_pct": -7.25,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -1793,10 +2044,10 @@
       "entry_timestamp": "2026-03-05T20:28:02.034357+00:00",
       "shares": 1206.71,
       "entry_usd": 55.18,
-      "current_price": 0.0495,
-      "current_value": 59.73,
-      "unrealized_pnl": 4.55,
-      "unrealized_pnl_pct": 8.25,
+      "current_price": 0.052,
+      "current_value": 62.75,
+      "unrealized_pnl": 7.57,
+      "unrealized_pnl_pct": 13.72,
       "edge_score_at_entry": 36.1,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -1979,18 +2230,18 @@
       "slug": "wta-siegemu-marcink-2026-03-04"
     },
     {
-      "position_id": "54129f0a",
-      "market_id": "1488945",
-      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
-      "token_id": "112551151716008019231269504225767782444558069451752936582224549892779880130256",
-      "outcome": "Damir Dzumhur",
+      "position_id": "480011a2",
+      "market_id": "1488938",
+      "question": "BNP Paribas Open: Hubert Hurkacz vs Aleksandar Kovacevic",
+      "token_id": "86328961027554649795434618467208253072904921783109609680403280491555236158708",
+      "outcome": "Hubert Hurkacz",
       "convexity_band": "2x",
-      "entry_price": 0.2764,
-      "entry_timestamp": "2026-03-05T21:55:25.140630+00:00",
-      "shares": 175.59,
-      "entry_usd": 48.53,
-      "current_price": 0.275,
-      "current_value": 48.29,
+      "entry_price": 0.3517,
+      "entry_timestamp": "2026-03-05T22:39:19.114239+00:00",
+      "shares": 136.49,
+      "entry_usd": 48.01,
+      "current_price": 0.35,
+      "current_value": 47.77,
       "unrealized_pnl": 0.0,
       "unrealized_pnl_pct": 0.0,
       "edge_score_at_entry": 36.1,
@@ -2003,8 +2254,36 @@
       },
       "days_to_close": 5,
       "resolution_date": "2026-03-11T19:00:00Z",
-      "potential_multiple": 3.6,
-      "slug": "atp-fearnle-dzumhur-2026-03-04"
+      "potential_multiple": 2.9,
+      "slug": "atp-hurkacz-kovacev-2026-03-04"
+    },
+    {
+      "position_id": "fa196150",
+      "market_id": "1488943",
+      "question": "BNP Paribas Open: Donna Vekic vs Tereza Valentova",
+      "token_id": "5313438807680862048471824543055039318604744113528398966451551253892797046281",
+      "outcome": "Tereza Valentova",
+      "convexity_band": "5x",
+      "entry_price": 0.2161,
+      "entry_timestamp": "2026-03-05T22:39:19.115074+00:00",
+      "shares": 214.93,
+      "entry_usd": 46.44,
+      "current_price": 0.215,
+      "current_value": 46.21,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "days_to_close": 5,
+      "resolution_date": "2026-03-11T18:00:00Z",
+      "potential_multiple": 4.7,
+      "slug": "wta-vekic-valento-2026-03-04"
     }
   ],
   "realized_trades": [
@@ -3723,78 +4002,109 @@
         "dislocation": 11.0,
         "external": 4.59
       }
+    },
+    {
+      "position_id": "54129f0a",
+      "market_id": "1488945",
+      "question": "BNP Paribas Open: Jacob Fearnley vs Damir Dzumhur",
+      "outcome": "Damir Dzumhur",
+      "convexity_band": "2x",
+      "entry_price": 0.2764,
+      "exit_price": 0.07,
+      "entry_timestamp": "2026-03-05T21:55:25.140630+00:00",
+      "exit_timestamp": "2026-03-05T22:39:19.113391+00:00",
+      "shares": 175.59,
+      "entry_usd": 48.53,
+      "exit_usd": 12.29,
+      "pnl_usd": -36.24,
+      "pnl_pct": -74.67,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 36.1,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      }
     }
   ],
   "statistics": {
     "by_category": {
       "": {
-        "count": 12,
-        "avg_edge": 35.5
+        "count": 15,
+        "avg_edge": 36.1
       }
     },
     "by_convexity": {
+      "20x": {
+        "count": 1,
+        "total_liquidity": 2473611.50082,
+        "avg_edge": 39.6
+      },
       "2x": {
         "count": 3,
-        "total_liquidity": 359003.8447,
+        "total_liquidity": 381124.16969999997,
         "avg_edge": 36.3
       },
       "yield": {
-        "count": 5,
-        "total_liquidity": 421258.94942,
-        "avg_edge": 35.8
+        "count": 7,
+        "total_liquidity": 566506.0336600001,
+        "avg_edge": 35.9
+      },
+      "10x": {
+        "count": 2,
+        "total_liquidity": 117320.53626000001,
+        "avg_edge": 36.1
       },
       "5x": {
         "count": 2,
-        "total_liquidity": 62255.104719999996,
+        "total_liquidity": 68061.3277,
         "avg_edge": 35.0
-      },
-      "20x": {
-        "count": 2,
-        "total_liquidity": 2513090.38227,
-        "avg_edge": 34.4
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 46,
-      "coverage_pct": 16.8,
-      "avg_score": 8.61,
+      "tokens_scored": 270,
+      "tokens_with_signal": 43,
+      "coverage_pct": 15.9,
+      "avg_score": 8.51,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 273,
+      "tokens_scored": 270,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
       "max_score": 0,
-      "quality_traders": 53,
+      "quality_traders": 52,
       "markets_indexed": 0
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 240,
-      "coverage_pct": 87.9,
-      "avg_score": 9.1,
+      "tokens_scored": 270,
+      "tokens_with_signal": 236,
+      "coverage_pct": 87.4,
+      "avg_score": 9.25,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 273,
+      "tokens_scored": 270,
+      "tokens_with_signal": 270,
       "coverage_pct": 100.0,
       "avg_score": 0.83,
       "max_score": 7.0
     }
   },
   "calibration": {
-    "total_trades": 66,
-    "overall_win_rate": 0.394,
-    "overall_avg_pnl_pct": 6.4,
+    "total_trades": 67,
+    "overall_win_rate": 0.388,
+    "overall_avg_pnl_pct": 5.2,
     "quintiles": [
       {
         "band": "15-25",
@@ -3819,12 +4129,12 @@
       {
         "band": "35-50",
         "label": "average",
-        "trades": 60,
+        "trades": 61,
         "wins": 26,
-        "actual_win_rate": 0.433,
+        "actual_win_rate": 0.426,
         "estimated_win_rate": 0.47,
-        "drift": -0.037,
-        "avg_pnl_pct": 9.3
+        "drift": -0.044,
+        "avg_pnl_pct": 8.0
       }
     ],
     "calibration_score": 70.0,
@@ -3842,15 +4152,15 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 66,
+        "trades_with_signal": 67,
         "avg_score_winners": 11.96,
-        "avg_score_losers": 11.53,
+        "avg_score_losers": 11.52,
         "predictive_power": 1.04
       },
       "external": {
-        "trades_with_signal": 66,
+        "trades_with_signal": 67,
         "avg_score_winners": 0.58,
-        "avg_score_losers": 1.21,
+        "avg_score_losers": 1.19,
         "predictive_power": 0.48
       }
     },
