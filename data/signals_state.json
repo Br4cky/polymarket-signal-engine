@@ -343,16 +343,59 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.205,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "35bee424",
+      "timestamp": "2026-03-05T23:45:52.733965+00:00",
+      "status": "active",
+      "market_id": "1496852",
+      "condition_id": "",
+      "token_id": "42710151130914711556784994022550871767767803022402471963515351069836771937855",
+      "question": "BNP Paribas Open: Diane Parry vs Venus Williams",
+      "outcome": "Diane Parry",
+      "slug": "wta-parry-william-2026-03-05",
+      "category": "",
+      "resolution_date": "2026-03-12T19:00:00Z",
+      "entry_price": 0.935,
+      "max_entry_price": 0.99,
+      "tp_price": 0.99,
+      "sl_price": 0.7013,
+      "tp_pct": 35.0,
+      "sl_pct": -25.0,
+      "expiry": "2026-03-12T19:00:00+00:00",
+      "edge_score": 49.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.4,
+        "dislocation": 11.0,
+        "external": 5.94
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 61168.50295,
+      "volume_24h": 124363.026319,
+      "rationale": "Smart money 18/25 (5 whales) | Dislocation 11/30 (vol spike, time decay) | External 5.9/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.935,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 8,
+    "total_signals": 9,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-05T23:13:46.944515+00:00"
+  "last_updated": "2026-03-05T23:45:52.734381+00:00"
 }
