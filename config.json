@@ -88,6 +88,8 @@
     "max_days_to_close": 20,
     "slippage_pct": 0.5,
     "max_exposure_pct": 60,
+    "stop_cooldown_hours": 24,
+    "max_cluster_pct": 12,
     "auto_trade_enabled": false
   },
   "dashboard": {

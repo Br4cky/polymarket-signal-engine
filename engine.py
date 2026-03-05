@@ -36,7 +36,7 @@ from src.signal_log import SignalLogger
 from src.portfolio import (
     load_portfolio, save_portfolio, create_portfolio,
     execute_paper_trade, update_portfolio, auto_close_positions,
-    portfolio_summary
+    portfolio_summary, is_on_cooldown
 )
 
 # ─── Logging ────────────────────────────────────────────────────────────────
@@ -271,6 +271,17 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             existing_tokens = {p['token_id'] for p in fund['positions']}
             existing_markets = {p['market_id'] for p in fund['positions']}
             trades_done = 0
+            cooldown_skips = 0
+            cluster_skips = 0
+
+            # Build cluster exposure map (base_event → total $USD deployed)
+            cluster_exposure = {}
+            for p in fund['positions']:
+                base = extract_base_event(p.get('question', ''), p.get('slug', ''))
+                cluster_exposure[base] = cluster_exposure.get(base, 0) + p.get('entry_usd', 0)
+
+            max_cluster_pct = config['trading'].get('max_cluster_pct', 12) / 100.0
+            max_cluster_usd = fund['capital'] * max_cluster_pct
 
             for opp in opportunities:
                 # Dynamic exposure check
@@ -283,6 +294,18 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                     continue
 
                 if opp['market_id'] in existing_markets:
+                    continue
+
+                # Stop-out cooldown: don't re-enter markets we were stopped out of
+                cooldown_hours = config['trading'].get('stop_cooldown_hours', 24)
+                if is_on_cooldown(fund, opp['market_id'], cooldown_hours=cooldown_hours):
+                    cooldown_skips += 1
+                    continue
+
+                # Cluster cap: don't overload correlated positions
+                opp_base = extract_base_event(opp.get('question', ''), opp.get('slug', ''))
+                if cluster_exposure.get(opp_base, 0) >= max_cluster_usd:
+                    cluster_skips += 1
                     continue
 
                 # Conflict check: don't take opposing directional bets
@@ -298,6 +321,13 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 if position:
                     trades_done += 1
                     signal_logger.log_entry(fund['name'], position, opp)
+                    # Update cluster exposure map
+                    cluster_exposure[opp_base] = cluster_exposure.get(opp_base, 0) + position.get('entry_usd', 0)
+
+            if cooldown_skips:
+                logger.info(f"Cooldown filter: skipped {cooldown_skips} re-entry attempts")
+            if cluster_skips:
+                logger.info(f"Cluster cap: skipped {cluster_skips} correlated opportunities")
 
             portfolio['main_pool'] = fund
             if trades_done:

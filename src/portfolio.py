@@ -291,6 +291,12 @@ def kelly_position_size(
     if layer_scores:
         position_size *= _conviction_multiplier(layer_scores)
 
+    # Thin market haircut: cheap tokens gap through stops, size down
+    if current_price < 0.03:
+        position_size *= 0.4  # Penny tokens: 40% of normal size
+    elif current_price < 0.08:
+        position_size *= 0.65  # Cheap tokens: 65% of normal size
+
     position_size = min(position_size, available_cash)
 
     return max(0.0, round(position_size, 2))
@@ -425,6 +431,27 @@ def update_portfolio(portfolio: dict, current_prices: Dict[str, float]):
         update_fund_positions(portfolio['main_pool'], current_prices)
 
 
+# ─── Cooldown Check ──────────────────────────────────────────────────────────
+
+def is_on_cooldown(fund: dict, market_id: str, cooldown_hours: int = 24) -> bool:
+    """
+    Check if a market is on stop-out cooldown.
+    Returns True if the market was stopped out within the last `cooldown_hours`.
+    """
+    cooldowns = fund.get('stop_cooldowns', {})
+    ts_str = cooldowns.get(market_id)
+    if not ts_str:
+        return False
+    try:
+        ts = datetime.fromisoformat(str(ts_str))
+        if ts.tzinfo is None:
+            ts = ts.replace(tzinfo=timezone.utc)
+        hours_since = (datetime.now(timezone.utc) - ts).total_seconds() / 3600.0
+        return hours_since < cooldown_hours
+    except (ValueError, TypeError):
+        return False
+
+
 # ─── Position Closing ───────────────────────────────────────────────────────
 
 def close_position(fund: dict, position_id: str, exit_price: float, reason: str = 'manual') -> Optional[dict]:
@@ -474,6 +501,25 @@ def close_position(fund: dict, position_id: str, exit_price: float, reason: str 
         fund['loss_count'] = fund.get('loss_count', 0) + 1
 
     fund.setdefault('realized_trades', []).append(trade)
+
+    # Track stop-out cooldowns — prevent re-entering same market after a loss
+    if not trade['win'] and 'stop_loss' in reason:
+        cooldowns = fund.setdefault('stop_cooldowns', {})
+        cooldowns[trade['market_id']] = datetime.now(timezone.utc).isoformat()
+        # Clean old cooldowns (>48h) to prevent unbounded growth
+        cutoff = datetime.now(timezone.utc).timestamp() - 48 * 3600
+        cooldowns_clean = {}
+        for mid, ts in cooldowns.items():
+            try:
+                t = datetime.fromisoformat(str(ts))
+                if t.tzinfo is None:
+                    t = t.replace(tzinfo=timezone.utc)
+                if t.timestamp() > cutoff:
+                    cooldowns_clean[mid] = ts
+            except (ValueError, TypeError):
+                pass
+        fund['stop_cooldowns'] = cooldowns_clean
+
     _recalculate_fund_metrics(fund)
 
     logger.info(
@@ -488,10 +534,20 @@ def _smart_stop_loss(pos: dict, config: dict) -> float:
     Compute dynamic stop-loss based on edge score at entry.
     Higher edge = wider stop (more confident). Lower edge = tighter stop.
     Hold-duration decay tightens stops as positions age.
+
+    For very cheap tokens (< $0.05), use tighter stops since these
+    can gap 50%+ between scans on thin order books.
     """
     edge = pos.get('edge_score_at_entry', 25)
     tier = get_edge_tier(edge, config)
     base_stop = tier.get('stop_loss_pct', -20)
+
+    # Cheap token adjustment — these gap massively, tighter stop triggers sooner
+    entry_price = pos.get('entry_price', 0.5)
+    if entry_price < 0.03:
+        base_stop = max(base_stop, -12)  # Tighter: -12% max for penny tokens
+    elif entry_price < 0.08:
+        base_stop = max(base_stop, -15)  # -15% for cheap tokens
 
     # Hold-duration tightening
     entry_ts = pos.get('entry_timestamp', '')
