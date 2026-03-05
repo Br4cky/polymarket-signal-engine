@@ -503,7 +503,7 @@ function renderMeta() {
   document.getElementById('last-updated').innerHTML =
     `<span class="status-dot"></span>Updated ${timeStr}`;
   document.getElementById('scan-count').textContent =
-    `${m.markets_scanned || 0} markets · v${m.engine_version || '4.0'}`;
+    `${m.markets_scanned || 0} markets · ${m.tokens_scored || 0} tokens · ${m.opportunities_found || 0} opps · v${m.engine_version || '4.0'}`;
 }
 
 function renderSignalKPIs() {
@@ -535,7 +535,7 @@ function renderSignalKPIs() {
   setText('avg-loss-sub', `${metrics.losses || 0} losing signals`);
 
   setText('opp-count', opps.length);
-  setText('markets-scanned', `${DATA.metadata?.markets_scanned || 0} markets scanned`);
+  setText('markets-scanned', `${DATA.metadata?.markets_scanned || 0} markets · ${DATA.metadata?.tokens_scored || 0} tokens scored`);
 }
 
 function renderSignalTiers() {

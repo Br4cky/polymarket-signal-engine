@@ -421,7 +421,8 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     layer_health = _compute_layer_health(scored_items, whale_tracker)
     sig_metrics = signal_metrics(signals_state)
     _write_dashboard(opportunities, portfolio, config, data_dir, layer_health, calibration,
-                     signals_state=signals_state, sig_metrics=sig_metrics)
+                     signals_state=signals_state, sig_metrics=sig_metrics,
+                     markets_scanned=len(markets), tokens_scored=len(scored_items))
 
     elapsed = time.time() - start
     # Log signal-focused summary
@@ -474,7 +475,8 @@ def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
 
 def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str,
                      layer_health: dict = None, calibration: dict = None,
-                     signals_state: dict = None, sig_metrics: dict = None):
+                     signals_state: dict = None, sig_metrics: dict = None,
+                     markets_scanned: int = 0, tokens_scored: int = 0):
     """Write signal_data.json for the dashboard."""
     by_category = {}
     by_convexity = {}
@@ -506,8 +508,9 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
     data = {
         'metadata': {
             'timestamp': datetime.now(timezone.utc).isoformat(),
-            'markets_scanned': len(set(o['market_id'] for o in opportunities)) if opportunities else 0,
-            'tokens_scored': len(opportunities),
+            'markets_scanned': markets_scanned,
+            'tokens_scored': tokens_scored,
+            'opportunities_found': len(opportunities),
             'engine_version': '4.0.0'
         },
         # Signal-based tracking (primary)
