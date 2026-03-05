@@ -2,36 +2,8 @@
   "main_pool": {
     "name": "Repricing Engine",
     "capital": 5000,
-    "available_cash": 3302.71,
+    "available_cash": 3603.59,
     "positions": [
-      {
-        "position_id": "0bab0f2a",
-        "market_id": "1423606",
-        "question": "Will Elon Musk post 120-139 tweets from February 27 to March 6, 2026?",
-        "token_id": "70219387710614084282157902250487579067515988630627675577841447698582763599503",
-        "outcome": "Yes",
-        "convexity_band": "20x",
-        "entry_price": 0.0116,
-        "entry_timestamp": "2026-03-04T23:37:20.186229+00:00",
-        "shares": 11248.11,
-        "entry_usd": 130.0,
-        "current_price": 0.0105,
-        "current_value": 118.11,
-        "unrealized_pnl": -11.89,
-        "unrealized_pnl_pct": -9.15,
-        "edge_score_at_entry": 45.4,
-        "edge_tier_at_entry": "high",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 14.5,
-          "external": 1.0
-        },
-        "days_to_close": 0,
-        "resolution_date": "2026-03-06T17:00:00Z",
-        "potential_multiple": 87.0,
-        "slug": "elon-musk-of-tweets-february-27-march-6-120-139"
-      },
       {
         "position_id": "2cab5949",
         "market_id": "1466422",
@@ -397,34 +369,6 @@
         "slug": "lal-cel-rea-2026-03-07-rea"
       },
       {
-        "position_id": "e2124d1d",
-        "market_id": "1465975",
-        "question": "Will US or Israel strike Iran on March 10, 2026?",
-        "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
-        "outcome": "No",
-        "convexity_band": "20x",
-        "entry_price": 0.0261,
-        "entry_timestamp": "2026-03-05T19:47:21.588262+00:00",
-        "shares": 3624.95,
-        "entry_usd": 94.72,
-        "current_price": 0.026,
-        "current_value": 94.25,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 33.1,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 8.29,
-          "external": 4.59
-        },
-        "days_to_close": 4,
-        "resolution_date": "2026-03-10T00:00:00Z",
-        "potential_multiple": 38.5,
-        "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
-      },
-      {
         "position_id": "fbda152d",
         "market_id": "1462808",
         "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
@@ -435,10 +379,10 @@
         "entry_timestamp": "2026-03-05T20:28:02.034357+00:00",
         "shares": 1206.71,
         "entry_usd": 55.18,
-        "current_price": 0.052,
-        "current_value": 62.75,
-        "unrealized_pnl": 7.57,
-        "unrealized_pnl_pct": 13.72,
+        "current_price": 0.049,
+        "current_value": 59.13,
+        "unrealized_pnl": 3.95,
+        "unrealized_pnl_pct": 7.16,
         "edge_score_at_entry": 36.1,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -619,62 +563,6 @@
         "resolution_date": "2026-03-11T18:00:00Z",
         "potential_multiple": 4.1,
         "slug": "wta-siegemu-marcink-2026-03-04"
-      },
-      {
-        "position_id": "480011a2",
-        "market_id": "1488938",
-        "question": "BNP Paribas Open: Hubert Hurkacz vs Aleksandar Kovacevic",
-        "token_id": "86328961027554649795434618467208253072904921783109609680403280491555236158708",
-        "outcome": "Hubert Hurkacz",
-        "convexity_band": "2x",
-        "entry_price": 0.3517,
-        "entry_timestamp": "2026-03-05T22:39:19.114239+00:00",
-        "shares": 136.49,
-        "entry_usd": 48.01,
-        "current_price": 0.35,
-        "current_value": 47.77,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 36.1,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 0.5
-        },
-        "days_to_close": 5,
-        "resolution_date": "2026-03-11T19:00:00Z",
-        "potential_multiple": 2.9,
-        "slug": "atp-hurkacz-kovacev-2026-03-04"
-      },
-      {
-        "position_id": "fa196150",
-        "market_id": "1488943",
-        "question": "BNP Paribas Open: Donna Vekic vs Tereza Valentova",
-        "token_id": "5313438807680862048471824543055039318604744113528398966451551253892797046281",
-        "outcome": "Tereza Valentova",
-        "convexity_band": "5x",
-        "entry_price": 0.2161,
-        "entry_timestamp": "2026-03-05T22:39:19.115074+00:00",
-        "shares": 214.93,
-        "entry_usd": 46.44,
-        "current_price": 0.215,
-        "current_value": 46.21,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
-        "edge_score_at_entry": 36.1,
-        "edge_tier_at_entry": "medium",
-        "layer_scores_at_entry": {
-          "structural": 0.0,
-          "smart_money": 0.0,
-          "dislocation": 11.0,
-          "external": 0.5
-        },
-        "days_to_close": 5,
-        "resolution_date": "2026-03-11T18:00:00Z",
-        "potential_multiple": 4.7,
-        "slug": "wta-vekic-valento-2026-03-04"
       }
     ],
     "realized_trades": [
@@ -2419,12 +2307,116 @@
           "dislocation": 11.0,
           "external": 0.5
         }
+      },
+      {
+        "position_id": "0bab0f2a",
+        "market_id": "1423606",
+        "question": "Will Elon Musk post 120-139 tweets from February 27 to March 6, 2026?",
+        "outcome": "Yes",
+        "convexity_band": "20x",
+        "entry_price": 0.0116,
+        "exit_price": 0.0105,
+        "entry_timestamp": "2026-03-04T23:37:20.186229+00:00",
+        "exit_timestamp": "2026-03-05T23:13:46.936625+00:00",
+        "shares": 11248.11,
+        "entry_usd": 130.0,
+        "exit_usd": 118.11,
+        "pnl_usd": -11.89,
+        "pnl_pct": -9.15,
+        "win": false,
+        "reason": "gap_risk_exit_-9pct_near_stop_-12pct",
+        "edge_score_at_entry": 45.4,
+        "edge_tier_at_entry": "high",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 14.5,
+          "external": 1.0
+        }
+      },
+      {
+        "position_id": "e2124d1d",
+        "market_id": "1465975",
+        "question": "Will US or Israel strike Iran on March 10, 2026?",
+        "outcome": "No",
+        "convexity_band": "20x",
+        "entry_price": 0.0261,
+        "exit_price": 0.0165,
+        "entry_timestamp": "2026-03-05T19:47:21.588262+00:00",
+        "exit_timestamp": "2026-03-05T23:13:46.936774+00:00",
+        "shares": 3624.95,
+        "entry_usd": 94.72,
+        "exit_usd": 59.81,
+        "pnl_usd": -34.91,
+        "pnl_pct": -36.85,
+        "win": false,
+        "reason": "stop_loss_-12pct",
+        "edge_score_at_entry": 33.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 8.29,
+          "external": 4.59
+        }
+      },
+      {
+        "position_id": "480011a2",
+        "market_id": "1488938",
+        "question": "BNP Paribas Open: Hubert Hurkacz vs Aleksandar Kovacevic",
+        "outcome": "Hubert Hurkacz",
+        "convexity_band": "2x",
+        "entry_price": 0.3517,
+        "exit_price": 0.145,
+        "entry_timestamp": "2026-03-05T22:39:19.114239+00:00",
+        "exit_timestamp": "2026-03-05T23:13:46.936919+00:00",
+        "shares": 136.49,
+        "entry_usd": 48.01,
+        "exit_usd": 19.79,
+        "pnl_usd": -28.22,
+        "pnl_pct": -58.78,
+        "win": false,
+        "reason": "stop_loss_-20pct",
+        "edge_score_at_entry": 36.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 0.5
+        }
+      },
+      {
+        "position_id": "fa196150",
+        "market_id": "1488943",
+        "question": "BNP Paribas Open: Donna Vekic vs Tereza Valentova",
+        "outcome": "Tereza Valentova",
+        "convexity_band": "5x",
+        "entry_price": 0.2161,
+        "exit_price": 0.48,
+        "entry_timestamp": "2026-03-05T22:39:19.115074+00:00",
+        "exit_timestamp": "2026-03-05T23:13:46.937070+00:00",
+        "shares": 214.93,
+        "entry_usd": 46.44,
+        "exit_usd": 103.17,
+        "pnl_usd": 56.73,
+        "pnl_pct": 122.15,
+        "win": true,
+        "reason": "profit_target_25pct",
+        "edge_score_at_entry": 36.1,
+        "edge_tier_at_entry": "medium",
+        "layer_scores_at_entry": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 11.0,
+          "external": 0.5
+        }
       }
     ],
-    "win_count": 26,
-    "loss_count": 41,
+    "win_count": 27,
+    "loss_count": 44,
     "peak_equity": 5411.570000000001,
-    "max_drawdown": -7.85,
+    "max_drawdown": -8.02,
     "equity_history": [
       {
         "timestamp": "2026-03-04T23:31:07.319896+00:00",
@@ -2789,13 +2781,35 @@
       {
         "timestamp": "2026-03-05T22:39:19.113410+00:00",
         "equity": 4986.98
+      },
+      {
+        "timestamp": "2026-03-05T23:13:46.936355+00:00",
+        "equity": 4977.43
+      },
+      {
+        "timestamp": "2026-03-05T23:13:46.936645+00:00",
+        "equity": 4977.43
+      },
+      {
+        "timestamp": "2026-03-05T23:13:46.936812+00:00",
+        "equity": 4977.43
+      },
+      {
+        "timestamp": "2026-03-05T23:13:46.936956+00:00",
+        "equity": 4977.43
+      },
+      {
+        "timestamp": "2026-03-05T23:13:46.937092+00:00",
+        "equity": 4977.43
       }
     ],
     "stop_cooldowns": {
       "1465972": "2026-03-05T21:55:25.138954+00:00",
-      "1488945": "2026-03-05T22:39:19.113400+00:00"
+      "1488945": "2026-03-05T22:39:19.113400+00:00",
+      "1465975": "2026-03-05T23:13:46.936789+00:00",
+      "1488938": "2026-03-05T23:13:46.936934+00:00"
     }
   },
   "created_at": "2026-03-04T23:31:07.320008+00:00",
-  "last_updated": "2026-03-05T22:39:19.115868+00:00"
+  "last_updated": "2026-03-05T23:13:46.945569+00:00"
 }
