@@ -15,10 +15,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.186229+00:00",
         "shares": 11248.11,
         "entry_usd": 130.0,
-        "current_price": 0.013,
-        "current_value": 146.23,
-        "unrealized_pnl": 16.23,
-        "unrealized_pnl_pct": 12.48,
+        "current_price": 0.0105,
+        "current_value": 118.11,
+        "unrealized_pnl": -11.89,
+        "unrealized_pnl_pct": -9.15,
         "edge_score_at_entry": 45.4,
         "edge_tier_at_entry": "high",
         "layer_scores_at_entry": {
@@ -43,10 +43,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.186514+00:00",
         "shares": 4419.9,
         "entry_usd": 199.89,
-        "current_price": 0.0355,
-        "current_value": 156.91,
-        "unrealized_pnl": -42.98,
-        "unrealized_pnl_pct": -21.5,
+        "current_price": 0.0365,
+        "current_value": 161.33,
+        "unrealized_pnl": -38.56,
+        "unrealized_pnl_pct": -19.29,
         "edge_score_at_entry": 43.1,
         "edge_tier_at_entry": "high",
         "layer_scores_at_entry": {
@@ -55,7 +55,7 @@
           "dislocation": 11.0,
           "external": 6.8
         },
-        "days_to_close": 5,
+        "days_to_close": 4,
         "resolution_date": "2026-03-10T00:00:00Z",
         "potential_multiple": 22.2,
         "slug": "will-us-or-israel-strike-iran-on-march-10-2026"
@@ -83,7 +83,7 @@
           "dislocation": 11.0,
           "external": 6.8
         },
-        "days_to_close": 5,
+        "days_to_close": 4,
         "resolution_date": "2026-03-10T00:00:00Z",
         "potential_multiple": 43.5,
         "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
@@ -99,10 +99,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.187141+00:00",
         "shares": 634.16,
         "entry_usd": 86.04,
-        "current_price": 0.135,
-        "current_value": 85.61,
-        "unrealized_pnl": -0.43,
-        "unrealized_pnl_pct": -0.5,
+        "current_price": 0.155,
+        "current_value": 98.29,
+        "unrealized_pnl": 12.25,
+        "unrealized_pnl_pct": 14.24,
         "edge_score_at_entry": 39.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -111,7 +111,7 @@
           "dislocation": 12.0,
           "external": 1.0
         },
-        "days_to_close": 2,
+        "days_to_close": 1,
         "resolution_date": "2026-03-07T00:00:00Z",
         "potential_multiple": 7.4,
         "slug": "will-a-gulf-state-strike-iran-by-march-7"
@@ -127,10 +127,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.187586+00:00",
         "shares": 365.55,
         "entry_usd": 83.21,
-        "current_price": 0.2375,
-        "current_value": 86.82,
-        "unrealized_pnl": 3.61,
-        "unrealized_pnl_pct": 4.34,
+        "current_price": 0.2295,
+        "current_value": 83.89,
+        "unrealized_pnl": 0.68,
+        "unrealized_pnl_pct": 0.82,
         "edge_score_at_entry": 38.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -155,10 +155,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.187977+00:00",
         "shares": 331.63,
         "entry_usd": 80.49,
-        "current_price": 0.2395,
-        "current_value": 79.43,
-        "unrealized_pnl": -1.06,
-        "unrealized_pnl_pct": -1.32,
+        "current_price": 0.26,
+        "current_value": 86.22,
+        "unrealized_pnl": 5.73,
+        "unrealized_pnl_pct": 7.12,
         "edge_score_at_entry": 38.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -183,10 +183,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.188428+00:00",
         "shares": 927.82,
         "entry_usd": 77.86,
-        "current_price": 0.0835,
-        "current_value": 77.47,
-        "unrealized_pnl": -0.39,
-        "unrealized_pnl_pct": -0.5,
+        "current_price": 0.076,
+        "current_value": 70.51,
+        "unrealized_pnl": -7.35,
+        "unrealized_pnl_pct": -9.44,
         "edge_score_at_entry": 38.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -211,10 +211,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.188876+00:00",
         "shares": 172.26,
         "entry_usd": 68.99,
-        "current_price": 0.3985,
-        "current_value": 68.65,
-        "unrealized_pnl": -0.34,
-        "unrealized_pnl_pct": -0.49,
+        "current_price": 0.403,
+        "current_value": 69.42,
+        "unrealized_pnl": 0.43,
+        "unrealized_pnl_pct": 0.62,
         "edge_score_at_entry": 38.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -239,10 +239,10 @@
         "entry_timestamp": "2026-03-04T23:37:20.189715+00:00",
         "shares": 512.06,
         "entry_usd": 112.96,
-        "current_price": 0.219,
-        "current_value": 112.14,
-        "unrealized_pnl": -0.82,
-        "unrealized_pnl_pct": -0.73,
+        "current_price": 0.2385,
+        "current_value": 122.13,
+        "unrealized_pnl": 9.17,
+        "unrealized_pnl_pct": 8.12,
         "edge_score_at_entry": 37.2,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -307,7 +307,7 @@
           "dislocation": 5.62,
           "external": 5.54
         },
-        "days_to_close": 13,
+        "days_to_close": 12,
         "resolution_date": "2026-03-18T00:00:00Z",
         "potential_multiple": 60.6,
         "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
@@ -325,8 +325,8 @@
         "entry_usd": 64.95,
         "current_price": 0.0205,
         "current_value": 64.63,
-        "unrealized_pnl": 0.0,
-        "unrealized_pnl_pct": 0.0,
+        "unrealized_pnl": -0.32,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 38.4,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -372,7 +372,7 @@
     "win_count": 0,
     "loss_count": 1,
     "peak_equity": 5000,
-    "max_drawdown": -1.8,
+    "max_drawdown": -1.87,
     "equity_history": [
       {
         "timestamp": "2026-03-04T23:31:07.319896+00:00",
@@ -389,9 +389,13 @@
       {
         "timestamp": "2026-03-04T23:49:31.659282+00:00",
         "equity": 4910.06
+      },
+      {
+        "timestamp": "2026-03-05T00:06:27.669954+00:00",
+        "equity": 4906.38
       }
     ]
   },
   "created_at": "2026-03-04T23:31:07.320008+00:00",
-  "last_updated": "2026-03-04T23:49:31.660044+00:00"
+  "last_updated": "2026-03-05T00:06:27.670137+00:00"
 }
