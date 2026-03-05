@@ -304,8 +304,9 @@
         <th onclick="sortTable('signals-table',5)">Edge</th>
         <th onclick="sortTable('signals-table',6)">Layers</th>
         <th onclick="sortTable('signals-table',7)">Tier</th>
-        <th onclick="sortTable('signals-table',8)">Called</th>
-        <th onclick="sortTable('signals-table',9)">Expires</th>
+        <th onclick="sortTable('signals-table',8)">Liquidity</th>
+        <th onclick="sortTable('signals-table',9)">Called</th>
+        <th onclick="sortTable('signals-table',10)">Expires</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -424,6 +425,32 @@
   </div>
 </div>
 
+<!-- Model Calibration -->
+<div id="calibration-section" style="display:none;">
+  <div class="section-title">Model Calibration</div>
+  <div class="grid grid-3" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-title">Calibration Score</div>
+      <div class="card-value" id="cal-score"></div>
+      <div class="card-sub" id="cal-score-sub"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Paper Win Rate</div>
+      <div class="card-value" id="cal-wr"></div>
+      <div class="card-sub" id="cal-wr-sub"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Paper Avg P&L</div>
+      <div class="card-value" id="cal-pnl"></div>
+      <div class="card-sub" id="cal-pnl-sub"></div>
+    </div>
+  </div>
+  <div id="cal-recommendations" class="card" style="display:none;">
+    <div class="card-title">Recommendations</div>
+    <div id="cal-recs-list" style="font-size:13px;line-height:2;"></div>
+  </div>
+</div>
+
 <div style="text-align:center; padding:24px; color:var(--text2); font-size:12px;">
   Polymarket Signal Engine v4 &mdash; Signal Calls Only &mdash; Not Financial Advice
 </div>
@@ -440,6 +467,11 @@ async function loadData() {
     }
     if (!resp.ok) throw new Error('No data file');
     DATA = await resp.json();
+    // Ensure signals structure exists (handles pre-v4 data files gracefully)
+    if (!DATA.signals) DATA.signals = { active: [], recent_resolved: [], metrics: {} };
+    if (!DATA.signals.metrics) DATA.signals.metrics = {};
+    if (!DATA.signals.active) DATA.signals.active = [];
+    if (!DATA.signals.recent_resolved) DATA.signals.recent_resolved = [];
     render();
   } catch(e) {
     console.warn('Load failed:', e);
@@ -461,6 +493,7 @@ function render() {
   renderStatistics();
   renderEVChart();
   renderResolutionChart();
+  renderCalibration();
 }
 
 function renderMeta() {
@@ -538,8 +571,15 @@ function renderActiveSignals() {
     const expiry = s.expiry ? new Date(s.expiry) : null;
     const expiryStr = expiry ? expiry.toLocaleDateString('en-GB', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '—';
 
+    const rationale = s.rationale || '';
+    const liq = s.liquidity_usd || 0;
+    const vol24 = s.volume_24h || 0;
+    const liqTitle = `Liq: $${fmt(liq)} · Vol24h: $${fmt(vol24)}`;
+
     tr.innerHTML = `
-      <td><a class="question-link" href="${link}" target="_blank" title="${esc(s.question)}">${esc(trunc(s.question, 45))}</a></td>
+      <td><a class="question-link" href="${link}" target="_blank" title="${esc(rationale || s.question)}">${esc(trunc(s.question, 45))}</a>
+        ${rationale ? `<div class="rationale" title="${esc(rationale)}">${esc(trunc(rationale, 60))}</div>` : ''}
+      </td>
       <td>${s.outcome || '—'}</td>
       <td>${cents(s.entry_price)}</td>
       <td class="signal-prices">
@@ -554,6 +594,7 @@ function renderActiveSignals() {
       </div></td>
       <td>${layerBars(layers)}</td>
       <td><span class="tier-chip ${tierClass}">${s.edge_tier || '?'}</span></td>
+      <td title="${esc(liqTitle)}" style="font-size:12px;">$${fmt(liq)}</td>
       <td>${shortDate(s.timestamp)}</td>
       <td>${expiryStr}</td>
     `;
@@ -612,8 +653,8 @@ function renderOpportunities() {
       <td>${o.outcome || '—'}</td>
       <td>${cents(o.current_price)}</td>
       <td><div class="edge-bar">
-        <div class="edge-bar-track"><div class="edge-bar-fill" style="width:${o.edge_score}%;background:${edgeColor(o.edge_score)}"></div></div>
-        <span style="font-weight:600;color:${edgeColor(o.edge_score)}">${o.edge_score.toFixed(1)}</span>
+        <div class="edge-bar-track"><div class="edge-bar-fill" style="width:${o.edge_score || 0}%;background:${edgeColor(o.edge_score || 0)}"></div></div>
+        <span style="font-weight:600;color:${edgeColor(o.edge_score || 0)}">${(o.edge_score || 0).toFixed(1)}</span>
       </div></td>
       <td>${layerBars(layers)}</td>
       <td>${(o.potential_multiple || 0).toFixed(1)}x</td>
@@ -916,6 +957,45 @@ function renderResolutionChart() {
     ctx.textBaseline = 'middle';
     ctx.fillText(slice.label, legendX + 18, legendY + 1);
     legendY += 24;
+  }
+}
+
+function renderCalibration() {
+  const cal = DATA.calibration || {};
+  const section = document.getElementById('calibration-section');
+  if (!cal || cal.total_trades === undefined || cal.total_trades < 10) {
+    if (section) section.style.display = 'none';
+    return;
+  }
+  section.style.display = 'block';
+
+  const score = cal.calibration_score || 0;
+  const scoreEl = document.getElementById('cal-score');
+  if (scoreEl) {
+    scoreEl.textContent = score.toFixed(0);
+    scoreEl.style.color = score >= 60 ? 'var(--green)' : score >= 40 ? 'var(--yellow)' : 'var(--red)';
+  }
+  setText('cal-score-sub', `Based on ${cal.total_trades || 0} paper trades`);
+
+  const wr = cal.overall_win_rate || 0;
+  setText('cal-wr', (wr * 100).toFixed(1) + '%');
+  setText('cal-wr-sub', `${cal.total_trades || 0} total trades`);
+
+  const avgPnl = cal.overall_avg_pnl_pct || 0;
+  const pnlEl = document.getElementById('cal-pnl');
+  if (pnlEl) {
+    pnlEl.textContent = `${avgPnl >= 0 ? '+' : ''}${avgPnl.toFixed(1)}%`;
+    pnlEl.className = 'card-value ' + (avgPnl >= 0 ? 'positive' : 'negative');
+  }
+  setText('cal-pnl-sub', 'per trade average');
+
+  const recs = cal.recommendations || [];
+  const recsSection = document.getElementById('cal-recommendations');
+  if (recs.length > 0 && recsSection) {
+    recsSection.style.display = 'block';
+    document.getElementById('cal-recs-list').innerHTML = recs.map(r =>
+      `<div style="padding:4px 0;border-bottom:1px solid var(--border);color:var(--text2);">${esc(r)}</div>`
+    ).join('');
   }
 }
 
