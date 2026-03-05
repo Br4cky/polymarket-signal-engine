@@ -17,10 +17,65 @@ Rate limit: ~1,000 calls/hour on the data API (free).
 import json
 import logging
 import requests
+import time
 from typing import List, Dict, Optional
 from src.utils import CacheManager, safe_float
 
 logger = logging.getLogger(__name__)
+
+
+def _normalize_condition_id(cid: str) -> str:
+    """
+    Normalize a conditionId to lowercase for consistent matching.
+    Handles both hex (0x...) and numeric formats.
+    Returns empty string if input is falsy.
+    """
+    if not cid:
+        return ''
+    return str(cid).strip().lower()
+
+
+def _extract_condition_id(pos: dict) -> str:
+    """
+    Extract conditionId from a position object, trying multiple field paths.
+
+    Known Polymarket positions API formats:
+      - Top-level 'conditionId' (standard)
+      - Nested under 'asset.conditionId' (if asset is a dict)
+      - 'asset' itself may BE the conditionId (some API versions)
+      - 'condition_id' (snake_case variant)
+      - Under 'market.conditionId' (if nested market object)
+    """
+    # 1. Direct top-level conditionId (most common)
+    cid = pos.get('conditionId', '')
+    if cid:
+        return _normalize_condition_id(cid)
+
+    # 2. Snake-case variant
+    cid = pos.get('condition_id', '')
+    if cid:
+        return _normalize_condition_id(cid)
+
+    # 3. Nested under asset (if asset is a dict)
+    asset = pos.get('asset')
+    if isinstance(asset, dict):
+        cid = asset.get('conditionId', asset.get('condition_id', ''))
+        if cid:
+            return _normalize_condition_id(cid)
+
+    # 4. asset itself might be the conditionId (hex string starting with 0x)
+    if isinstance(asset, str) and asset.startswith('0x') and len(asset) > 10:
+        # This is likely the token asset ID, not the conditionId — skip
+        pass
+
+    # 5. Nested under market object
+    market = pos.get('market')
+    if isinstance(market, dict):
+        cid = market.get('conditionId', market.get('condition_id', ''))
+        if cid:
+            return _normalize_condition_id(cid)
+
+    return ''
 
 
 class WhaleTracker:
@@ -35,9 +90,10 @@ class WhaleTracker:
         self.cache_ttl_positions = config.get('cache_ttl_positions', 1800)
         self._leaderboard_failed = False
         self._positions_failed = False
+        self._positions_empty_count = 0  # Track how many traders returned 0 positions
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'PolymarketSignalEngine/2.0',
+            'User-Agent': 'PolymarketSignalEngine/3.1',
             'Accept': 'application/json'
         })
 
@@ -194,7 +250,127 @@ class WhaleTracker:
 
     # ── Trader Positions ─────────────────────────────────────────────────────
 
-    def fetch_trader_positions(self, wallet_address: str) -> List[dict]:
+    def _parse_positions_response(self, data, wallet_address: str, is_first: bool = False) -> List[dict]:
+        """
+        Parse positions API response robustly. Handles multiple response formats.
+        Logs diagnostic info for the first trader to help debug format issues.
+        """
+        # Unwrap response envelope
+        if isinstance(data, list):
+            positions_list = data
+        elif isinstance(data, dict):
+            # Try common wrapper keys
+            positions_list = (
+                data.get('positions') or
+                data.get('data') or
+                data.get('history') or
+                data.get('results') or
+                []
+            )
+            if is_first and not positions_list:
+                logger.info(
+                    f"WHALE_DIAG: Dict response with no known list key. "
+                    f"Top-level keys: {list(data.keys())[:15]}"
+                )
+                # Maybe the dict IS a single position? Check for position-like keys
+                if 'conditionId' in data or 'size' in data or 'curVal' in data:
+                    positions_list = [data]
+        else:
+            positions_list = []
+
+        if is_first:
+            logger.info(
+                f"WHALE_DIAG: Response type={type(data).__name__}, "
+                f"positions_list type={type(positions_list).__name__}, "
+                f"count={len(positions_list) if isinstance(positions_list, list) else 'N/A'}"
+            )
+
+        if not isinstance(positions_list, list):
+            if is_first:
+                logger.warning(
+                    f"WHALE_DIAG: positions_list is {type(positions_list).__name__}, not list. "
+                    f"Value preview: {str(positions_list)[:200]}"
+                )
+            return []
+
+        positions = []
+        parse_failures = 0
+
+        for i, pos in enumerate(positions_list):
+            try:
+                # Handle stringified JSON
+                if isinstance(pos, str):
+                    try:
+                        pos = json.loads(pos)
+                    except (json.JSONDecodeError, TypeError):
+                        parse_failures += 1
+                        continue
+                if not isinstance(pos, dict):
+                    parse_failures += 1
+                    continue
+
+                # Log first position's raw keys for diagnostics
+                if is_first and i == 0:
+                    logger.info(
+                        f"WHALE_DIAG: First position keys: {sorted(pos.keys())}"
+                    )
+                    # Log conditionId-related fields specifically
+                    logger.info(
+                        f"WHALE_DIAG: conditionId={pos.get('conditionId', 'MISSING')}, "
+                        f"condition_id={pos.get('condition_id', 'MISSING')}, "
+                        f"asset type={type(pos.get('asset')).__name__}, "
+                        f"asset={str(pos.get('asset', ''))[:80]}, "
+                        f"slug={pos.get('slug', 'MISSING')}, "
+                        f"market_slug={pos.get('market_slug', 'MISSING')}, "
+                        f"eventSlug={pos.get('eventSlug', 'MISSING')}, "
+                        f"title={pos.get('title', 'MISSING')[:60]}"
+                    )
+
+                # Extract conditionId using robust multi-path extractor
+                condition_id = _extract_condition_id(pos)
+
+                # Extract slug (try multiple field names)
+                slug = (
+                    pos.get('slug') or
+                    pos.get('market_slug') or
+                    pos.get('marketSlug') or
+                    ''
+                )
+
+                # Extract event slug for cluster-level matching
+                event_slug = pos.get('eventSlug', '')
+
+                positions.append({
+                    'conditionId': condition_id,
+                    'market_slug': slug,
+                    'event_slug': event_slug,
+                    'title': pos.get('title', ''),
+                    'size': safe_float(pos.get('size', pos.get('currentShares', 0))),
+                    'avgPrice': safe_float(pos.get('avgPrice', pos.get('averagePrice', 0))),
+                    'currentValue': safe_float(pos.get('curVal', pos.get('currentValue', 0))),
+                    'cashPnl': safe_float(pos.get('cashPnl', 0)),
+                    'percentPnl': safe_float(pos.get('percentPnl', 0)),
+                    'outcome': pos.get('outcome', str(pos.get('outcomeIndex', ''))),
+                })
+            except (KeyError, ValueError, TypeError) as e:
+                parse_failures += 1
+                if is_first and i < 3:
+                    logger.warning(f"WHALE_DIAG: Failed to parse position {i}: {e}")
+                continue
+
+        if is_first:
+            cids_present = sum(1 for p in positions if p['conditionId'])
+            slugs_present = sum(1 for p in positions if p['market_slug'])
+            logger.info(
+                f"WHALE_DIAG: Parsed {len(positions)} positions from {len(positions_list)} raw items "
+                f"({parse_failures} parse failures). "
+                f"conditionId present: {cids_present}/{len(positions)}, "
+                f"slug present: {slugs_present}/{len(positions)}"
+            )
+
+        return positions
+
+    def fetch_trader_positions(self, wallet_address: str, is_first: bool = False) -> List[dict]:
         """
         Fetch all open positions for a specific trader wallet.
         Cached for 30 min per wallet.
@@ -214,63 +390,37 @@ class WhaleTracker:
                     'user': wallet_address,
                     'sortBy': 'CURRENT',
                     'sortDirection': 'DESC',
-                    'sizeThreshold': 1
+                    'sizeThreshold': 0.01  # Lower threshold to catch more positions
                 },
                 timeout=15
             )
             resp.raise_for_status()
             data = resp.json()
 
-            # Handle various response formats:
-            # - List of position objects (original)
-            # - Dict with 'positions' key
-            # - Dict with 'data' key
-            if isinstance(data, list):
-                positions_list = data
-            elif isinstance(data, dict):
-                positions_list = data.get('positions', data.get('data', data.get('history', [])))
-            else:
-                positions_list = []
-            positions = []
+            positions = self._parse_positions_response(data, wallet_address, is_first=is_first)
 
-            # Log first item type on first call for debugging API format changes
-            if positions_list and not isinstance(positions_list[0], dict):
-                logger.info(f"Positions API returned {type(positions_list[0]).__name__} items, attempting parse")
+            if is_first and not positions:
+                # Log raw response snippet for the first trader to diagnose empty results
+                raw_str = json.dumps(data, default=str)[:500] if data else 'null/empty'
+                logger.warning(
+                    f"WHALE_DIAG: First trader {wallet_address[:10]}... returned 0 positions. "
+                    f"HTTP {resp.status_code}, response preview: {raw_str}"
+                )
 
-            for pos in positions_list:
-                try:
-                    # Handle API returning stringified JSON items
-                    if isinstance(pos, str):
-                        try:
-                            pos = json.loads(pos)
-                        except (json.JSONDecodeError, TypeError):
-                            continue
-                    if not isinstance(pos, dict):
-                        continue
-
-                    positions.append({
-                        'conditionId': pos.get('conditionId', pos.get('asset', {}).get('conditionId', '')),
-                        'market_slug': pos.get('market_slug', pos.get('slug', '')),
-                        'title': pos.get('title', ''),
-                        'size': safe_float(pos.get('size', pos.get('currentShares', 0))),
-                        'avgPrice': safe_float(pos.get('avgPrice', pos.get('averagePrice', 0))),
-                        'currentValue': safe_float(pos.get('curVal', pos.get('currentValue', 0))),
-                        'cashPnl': safe_float(pos.get('cashPnl', 0)),
-                        'percentPnl': safe_float(pos.get('percentPnl', 0)),
-                        'outcome': pos.get('outcome', pos.get('outcomeIndex', '')),
-                    })
-                except (KeyError, ValueError, TypeError):
-                    continue
+            if not positions:
+                self._positions_empty_count += 1
 
             self.cache.set(cache_key, positions)
             return positions
 
         except requests.exceptions.HTTPError as e:
-            if e.response and e.response.status_code == 429:
+            if e.response is not None and e.response.status_code == 429:
                 logger.warning("Rate limited on positions API, pausing")
                 self._positions_failed = True
             else:
                 logger.warning(f"Positions API failed for {wallet_address[:10]}...: {e}")
+                if is_first:
+                    logger.warning(f"WHALE_DIAG: HTTP error details: status={getattr(e.response, 'status_code', '?')}, body={getattr(e.response, 'text', '')[:300]}")
             return []
         except Exception as e:
             logger.warning(f"Positions API failed for {wallet_address[:10]}...: {e}")
@@ -285,11 +435,15 @@ class WhaleTracker:
 
         Uses quality-filtered traders only (consistent performers).
         Maps condition_id → list of whale entries with quality metadata.
+
+        Index keys (all normalized to lowercase):
+          - conditionId (primary — hex string from positions API)
+          - slug:{market_slug} (fallback for slug-based matching)
         """
         if self._index_built:
             return
 
-        cache_key = 'whale_market_index_v2'
+        cache_key = 'whale_market_index_v3'  # Bumped version for new format
         cached = self.cache.get(cache_key, self.cache_ttl_positions)
         if cached is not None:
             self._whale_market_index = cached
@@ -305,15 +459,19 @@ class WhaleTracker:
         index: Dict[str, List[dict]] = {}
         traders_fetched = 0
         total_positions = 0
+        total_raw_positions = 0
         keys_by_type = {'conditionId': 0, 'slug': 0}  # Diagnostic counters
+        self._positions_empty_count = 0
 
-        for trader in traders:
+        for i, trader in enumerate(traders):
             address = trader.get('address', '')
             if not address:
                 continue
 
-            positions = self.fetch_trader_positions(address)
+            is_first = (i == 0)  # Enable detailed logging for first trader
+            positions = self.fetch_trader_positions(address, is_first=is_first)
             traders_fetched += 1
+            total_raw_positions += len(positions)
 
             for pos in positions:
                 entry = {
@@ -329,7 +487,7 @@ class WhaleTracker:
 
                 indexed = False
 
-                # Index under conditionId (primary key)
+                # Index under conditionId (primary key, already normalized)
                 cid = pos.get('conditionId', '')
                 if cid:
                     index.setdefault(cid, []).append(entry)
@@ -351,17 +509,25 @@ class WhaleTracker:
                 logger.warning(f"Rate limited after {traders_fetched} traders, using partial index")
                 break
 
+            # Brief pause between traders to avoid rate limiting
+            if i > 0 and i % 10 == 0:
+                time.sleep(0.5)
+
         self._whale_market_index = index
         self._index_built = True
         self.cache.set(cache_key, index)
 
         # Diagnostic: log sample keys so we can verify matching
-        sample_keys = list(index.keys())[:5]
+        sample_cid_keys = [k for k in index.keys() if not k.startswith('slug:')][:5]
+        sample_slug_keys = [k for k in index.keys() if k.startswith('slug:')][:3]
         logger.info(
             f"Built whale index: {traders_fetched} quality traders → "
-            f"{total_positions} positions across {len(index)} index entries "
+            f"{total_raw_positions} raw positions → "
+            f"{total_positions} indexed across {len(index)} index entries "
             f"(keys: conditionId={keys_by_type['conditionId']}, slug={keys_by_type['slug']}) "
-            f"sample_keys={sample_keys}"
+            f"empty_responses={self._positions_empty_count}/{traders_fetched} "
+            f"sample_cids={sample_cid_keys} "
+            f"sample_slugs={sample_slug_keys}"
         )
 
     # ── Smart Money Score ────────────────────────────────────────────────────
@@ -389,8 +555,11 @@ class WhaleTracker:
         try:
             self.build_whale_index()
 
-            # Try conditionId first, fall back to slug-based lookup
-            whales = self._whale_market_index.get(market_id, [])
+            # Normalize the lookup key to match index format
+            normalized_id = _normalize_condition_id(market_id)
+
+            # Try conditionId first (normalized), fall back to slug-based lookup
+            whales = self._whale_market_index.get(normalized_id, [])
             if not whales and market_slug:
                 whales = self._whale_market_index.get(f"slug:{market_slug}", [])
 

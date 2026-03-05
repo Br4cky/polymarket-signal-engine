@@ -83,6 +83,47 @@ class SignalLogger:
                 'message': message,
             })
 
+    def log_signal_call(self, signal: dict):
+        """Log a new signal call (replaces log_entry for the signal-based system)."""
+        layers = signal.get('layer_scores', {})
+
+        message = (
+            f"🎯 NEW CALL: {signal.get('outcome', '')} "
+            f"@ ${signal.get('entry_price', 0):.4f}\n"
+            f"📊 {signal.get('question', '')[:100]}\n"
+            f"✅ TP: ${signal.get('tp_price', 0):.4f} ({signal.get('tp_pct', 0):+.0f}%)\n"
+            f"🛑 SL: ${signal.get('sl_price', 0):.4f} ({signal.get('sl_pct', 0):.0f}%)\n"
+            f"⚠️ Don't enter above: ${signal.get('max_entry_price', 0):.4f}\n"
+            f"⚡ Edge: {signal.get('edge_score', 0):.1f} [{signal.get('edge_tier', '')}] "
+            f"[S:{layers.get('structural', 0):.0f} "
+            f"W:{layers.get('smart_money', 0):.0f} "
+            f"D:{layers.get('dislocation', 0):.0f} "
+            f"E:{layers.get('external', 0):.0f}]\n"
+            f"📋 {signal.get('rationale', '')}\n"
+            f"🔗 https://polymarket.com/event/{signal.get('slug', '')}"
+        )
+
+        self._append({
+            'type': 'signal_call',
+            'signal_id': signal.get('signal_id', ''),
+            'market_id': signal.get('market_id', ''),
+            'token_id': signal.get('token_id', ''),
+            'question': signal.get('question', ''),
+            'outcome': signal.get('outcome', ''),
+            'slug': signal.get('slug', ''),
+            'entry_price': signal.get('entry_price', 0),
+            'tp_price': signal.get('tp_price', 0),
+            'sl_price': signal.get('sl_price', 0),
+            'max_entry_price': signal.get('max_entry_price', 0),
+            'edge_score': signal.get('edge_score', 0),
+            'edge_tier': signal.get('edge_tier', ''),
+            'layer_scores': layers,
+            'rationale': signal.get('rationale', ''),
+            'convexity_band': signal.get('convexity_band', ''),
+            'expiry': signal.get('expiry', ''),
+            'message': message,
+        })
+
     def log_entry(self, fund_name: str, position: dict, opportunity: dict):
         """Log a new paper trade entry."""
         layers = opportunity.get('layer_scores', {})

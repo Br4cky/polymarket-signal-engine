@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-Polymarket Signal Engine v2 — Main Orchestrator
+Polymarket Signal Engine v4 — Main Orchestrator
 
-4-layer mispricing detection with single-pool paper trading.
+4-layer mispricing detection → signal emission + retroactive verification.
+
+Instead of paper trading, the engine emits signals with entry/TP/SL parameters,
+then verifies them retroactively using price history on subsequent scans.
 
 Usage:
-  python engine.py --once              # Single scan, update dashboard
+  python engine.py --once              # Single scan, emit signals, verify active
   python engine.py --loop              # Continuous (every 15 min)
-  python engine.py --execute --once    # Scan + auto-trade (paper)
-  python engine.py --init              # Reset portfolio
+  python engine.py --execute --once    # Legacy: also runs paper trade close logic
+  python engine.py --init              # Reset portfolio + signals
 """
 
 import argparse
@@ -38,6 +41,11 @@ from src.portfolio import (
     execute_paper_trade, update_portfolio, auto_close_positions,
     portfolio_summary, is_on_cooldown
 )
+from src.signal_manager import (
+    load_signals, save_signals, emit_signal, verify_signals,
+    is_signal_on_cooldown, update_signal_stats, signal_metrics
+)
+from src.telegram import send_signal, send_resolution
 
 # ─── Logging ────────────────────────────────────────────────────────────────
 
@@ -80,7 +88,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     os.makedirs(data_dir, exist_ok=True)
 
     logger.info("=" * 60)
-    logger.info("Signal Engine v2 — Pipeline starting")
+    logger.info("Signal Engine v4 — Pipeline starting")
     logger.info("=" * 60)
 
     # ── Initialize components ──
@@ -128,7 +136,20 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     # ── Step 3b: Build whale index (one batch of API calls) ──
     logger.info("Step 3b: Building whale position index...")
     whale_tracker.build_whale_index()
-    logger.info(f"Whale index covers {len(whale_tracker._whale_market_index)} markets")
+    whale_index_size = len(whale_tracker._whale_market_index)
+    logger.info(f"Whale index covers {whale_index_size} markets")
+
+    # Diagnostic: log sample market condition_ids vs whale index keys
+    if whale_index_size > 0:
+        sample_idx_keys = [k for k in list(whale_tracker._whale_market_index.keys())[:5] if not k.startswith('slug:')]
+        sample_mkt_cids = []
+        for m in markets[:5]:
+            cid = m.get('condition_id', '')
+            mid = m.get('market_id', '')
+            slug = m.get('slug', '')
+            sample_mkt_cids.append(f"cid={cid[:20]}.. mid={mid} slug={slug[:30]}")
+        logger.info(f"WHALE_DIAG: Index keys sample: {sample_idx_keys}")
+        logger.info(f"WHALE_DIAG: Market lookup IDs: {sample_mkt_cids}")
 
     # ── Step 4: Score all market tokens across all 4 layers ──
     logger.info("Step 4: Computing edge scores (all 4 layers)...")
@@ -245,97 +266,137 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     signal_logger.log_signals(opportunities, top_n=10)
 
-    # ── Step 6: Update existing positions ──
+    # ── Step 6: Build current prices map ──
     current_prices = {}
     for item in scored_items:
         tok = item['token']
         current_prices[tok['token_id']] = safe_float(tok['current_price'])
 
-    update_portfolio(portfolio, current_prices)
-
-    # Auto-close positions hitting targets/stops
+    # ── Step 6a: Legacy position management (runs until existing positions close) ──
     fund = portfolio.get('main_pool')
-    if fund:
+    if fund and fund.get('positions'):
+        update_portfolio(portfolio, current_prices)
         closed = auto_close_positions(fund, current_prices, config)
         if closed:
-            logger.info(f"Auto-closed {len(closed)} positions")
+            logger.info(f"Legacy auto-closed {len(closed)} positions")
             for trade in closed:
                 signal_logger.log_exit(fund['name'], trade)
+        remaining = len(fund.get('positions', []))
+        if remaining > 0:
+            logger.info(f"Legacy positions remaining: {remaining} (will close naturally)")
+    else:
+        logger.info("No legacy positions — paper trading fully retired")
 
-    # ── Step 7: Execute trades (if enabled) ──
-    if execute_trades and config.get('trading', {}).get('auto_trade_enabled', False):
-        max_exposure_pct = config['trading'].get('max_exposure_pct', 60) / 100.0
-        fund = portfolio.get('main_pool')
+    # ── Step 7: Verify active signals against price history ──
+    signals_path = os.path.join(data_dir, 'signals_state.json')
+    signals_state = load_signals(signals_path)
 
-        if fund:
-            existing_tokens = {p['token_id'] for p in fund['positions']}
-            existing_markets = {p['market_id'] for p in fund['positions']}
-            trades_done = 0
-            cooldown_skips = 0
-            cluster_skips = 0
+    logger.info(f"Step 7: Verifying {len(signals_state.get('active', []))} active signals...")
+    newly_resolved, still_active = verify_signals(
+        signals_state,
+        fetch_price_history=poly_client.fetch_price_history,
+    )
 
-            # Build cluster exposure map (base_event → total $USD deployed)
-            cluster_exposure = {}
+    if newly_resolved:
+        signals_state['resolved'].extend(newly_resolved)
+        # Keep last 200 resolved signals
+        signals_state['resolved'] = signals_state['resolved'][-200:]
+        update_signal_stats(signals_state, newly_resolved)
+        wins = sum(1 for s in newly_resolved if s.get('resolution_type') == 'tp_hit')
+        losses = sum(1 for s in newly_resolved if s.get('resolution_type') == 'sl_hit')
+        expired = sum(1 for s in newly_resolved if s.get('resolution_type') == 'expired')
+        logger.info(f"Signal verification: {len(newly_resolved)} resolved ({wins} wins, {losses} losses, {expired} expired)")
+
+        # Send Telegram notifications for resolved signals
+        for resolved_sig in newly_resolved:
+            send_resolution(resolved_sig, config)
+
+    signals_state['active'] = still_active
+
+    # ── Step 8: Emit new signals ──
+    signals_cfg = config.get('signals', {})
+    if signals_cfg.get('enabled', True):
+        max_active = signals_cfg.get('max_active_signals', 30)
+        cooldown_hours = signals_cfg.get('cooldown_after_loss_hours', 24)
+        max_per_cluster = signals_cfg.get('max_signals_per_cluster', 4)
+
+        active_tokens = {s['token_id'] for s in signals_state['active']}
+        active_markets = {s['market_id'] for s in signals_state['active']}
+
+        # Build cluster count map (base_event → active signal count)
+        cluster_counts = {}
+        for s in signals_state['active']:
+            base = extract_base_event(s.get('question', ''), s.get('slug', ''))
+            cluster_counts[base] = cluster_counts.get(base, 0) + 1
+
+        # Also count legacy positions in clusters
+        if fund and fund.get('positions'):
             for p in fund['positions']:
                 base = extract_base_event(p.get('question', ''), p.get('slug', ''))
-                cluster_exposure[base] = cluster_exposure.get(base, 0) + p.get('entry_usd', 0)
+                cluster_counts[base] = cluster_counts.get(base, 0) + 1
 
-            max_cluster_pct = config['trading'].get('max_cluster_pct', 12) / 100.0
-            max_cluster_usd = fund['capital'] * max_cluster_pct
+        signals_emitted = 0
+        cooldown_skips = 0
+        cluster_skips = 0
+        conflict_skips = 0
 
-            for opp in opportunities:
-                # Dynamic exposure check
-                total_deployed = sum(p['entry_usd'] for p in fund['positions'])
-                exposure_pct = total_deployed / fund['capital'] if fund['capital'] > 0 else 1.0
-                if exposure_pct >= max_exposure_pct:
-                    break
+        for opp in opportunities:
+            # Max active signals cap
+            if len(signals_state['active']) >= max_active:
+                break
 
-                if opp['token_id'] in existing_tokens:
-                    continue
+            # Already have signal for this token or market
+            if opp['token_id'] in active_tokens:
+                continue
+            if opp['market_id'] in active_markets:
+                continue
 
-                if opp['market_id'] in existing_markets:
-                    continue
+            # Cooldown: don't re-signal markets where we recently got stopped out
+            if is_signal_on_cooldown(signals_state, opp['market_id'], cooldown_hours):
+                cooldown_skips += 1
+                continue
 
-                # Stop-out cooldown: don't re-enter markets we were stopped out of
-                cooldown_hours = config['trading'].get('stop_cooldown_hours', 24)
-                if is_on_cooldown(fund, opp['market_id'], cooldown_hours=cooldown_hours):
-                    cooldown_skips += 1
-                    continue
+            # Cluster cap: don't flood with correlated signals
+            opp_base = extract_base_event(opp.get('question', ''), opp.get('slug', ''))
+            if cluster_counts.get(opp_base, 0) >= max_per_cluster:
+                cluster_skips += 1
+                continue
 
-                # Cluster cap: don't overload correlated positions
-                opp_base = extract_base_event(opp.get('question', ''), opp.get('slug', ''))
-                if cluster_exposure.get(opp_base, 0) >= max_cluster_usd:
-                    cluster_skips += 1
-                    continue
+            # Conflict check: don't signal opposing directions
+            all_active_questions = [s.get('question', '') for s in signals_state['active']]
+            if fund and fund.get('positions'):
+                all_active_questions.extend(p.get('question', '') for p in fund['positions'])
+            opp_question = opp.get('question', '')
+            has_conflict = any(are_conflicting(opp_question, q) for q in all_active_questions)
+            if has_conflict:
+                conflict_skips += 1
+                continue
 
-                # Conflict check: don't take opposing directional bets
-                opp_question = opp.get('question', '')
-                has_conflict = any(
-                    are_conflicting(opp_question, p.get('question', ''))
-                    for p in fund['positions']
-                )
-                if has_conflict:
-                    continue
+            # Emit the signal
+            signal = emit_signal(opp, config)
+            signals_state['active'].append(signal)
+            signals_state['stats']['total_signals'] = signals_state['stats'].get('total_signals', 0) + 1
+            active_tokens.add(opp['token_id'])
+            active_markets.add(opp['market_id'])
+            cluster_counts[opp_base] = cluster_counts.get(opp_base, 0) + 1
+            signals_emitted += 1
 
-                fund, position = execute_paper_trade(fund, opp, config)
-                if position:
-                    trades_done += 1
-                    signal_logger.log_entry(fund['name'], position, opp)
-                    # Update cluster exposure map
-                    cluster_exposure[opp_base] = cluster_exposure.get(opp_base, 0) + position.get('entry_usd', 0)
+            signal_logger.log_signal_call(signal)
+            send_signal(signal, config)
 
-            if cooldown_skips:
-                logger.info(f"Cooldown filter: skipped {cooldown_skips} re-entry attempts")
-            if cluster_skips:
-                logger.info(f"Cluster cap: skipped {cluster_skips} correlated opportunities")
+        if cooldown_skips:
+            logger.info(f"Signal cooldown: skipped {cooldown_skips} re-signal attempts")
+        if cluster_skips:
+            logger.info(f"Signal cluster cap: skipped {cluster_skips} correlated signals")
+        if conflict_skips:
+            logger.info(f"Signal conflict: skipped {conflict_skips} opposing directions")
+        if signals_emitted:
+            logger.info(f"Emitted {signals_emitted} new signals (total active: {len(signals_state['active'])})")
+    else:
+        logger.info("Signal emission disabled in config")
 
-            portfolio['main_pool'] = fund
-            if trades_done:
-                logger.info(
-                    f"Executed {trades_done} paper trades "
-                    f"(exposure: {sum(p['entry_usd'] for p in fund['positions']):.0f}/"
-                    f"{fund['capital']:.0f})"
-                )
+    # Save signals state
+    save_signals(signals_state, signals_path)
 
     # ── Step 8: Calibration analysis ──
     all_realized = portfolio.get('main_pool', {}).get('realized_trades', [])
@@ -358,16 +419,28 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     save_portfolio(portfolio, portfolio_path)
 
     layer_health = _compute_layer_health(scored_items, whale_tracker)
-    _write_dashboard(opportunities, portfolio, config, data_dir, layer_health, calibration)
+    sig_metrics = signal_metrics(signals_state)
+    _write_dashboard(opportunities, portfolio, config, data_dir, layer_health, calibration,
+                     signals_state=signals_state, sig_metrics=sig_metrics)
 
     elapsed = time.time() - start
-    summary = portfolio_summary(portfolio)
-    signal_logger.log_summary(summary)
+    # Log signal-focused summary
     logger.info(
         f"Pipeline complete in {elapsed:.1f}s — "
-        f"Equity: ${summary['combined_equity']:.2f} "
-        f"(PnL: ${summary['combined_pnl']:+.2f})"
+        f"Signals: {sig_metrics['active_signals']} active, "
+        f"{sig_metrics['total_resolved']} resolved "
+        f"(win rate: {sig_metrics['win_rate']:.0%}, "
+        f"EV: {sig_metrics['ev_per_signal']:+.1f}%/signal)"
     )
+    # Legacy portfolio summary (while positions exist)
+    fund = portfolio.get('main_pool', {})
+    if fund.get('positions'):
+        summary = portfolio_summary(portfolio)
+        signal_logger.log_summary(summary)
+        logger.info(
+            f"Legacy portfolio: ${summary['combined_equity']:.2f} equity, "
+            f"{summary['open_positions']} positions remaining"
+        )
 
 
 def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
@@ -399,7 +472,9 @@ def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
     return health
 
 
-def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str, layer_health: dict = None, calibration: dict = None):
+def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str,
+                     layer_health: dict = None, calibration: dict = None,
+                     signals_state: dict = None, sig_metrics: dict = None):
     """Write signal_data.json for the dashboard."""
     by_category = {}
     by_convexity = {}
@@ -433,12 +508,20 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
             'timestamp': datetime.now(timezone.utc).isoformat(),
             'markets_scanned': len(set(o['market_id'] for o in opportunities)) if opportunities else 0,
             'tokens_scored': len(opportunities),
-            'engine_version': '3.0.0'
+            'engine_version': '4.0.0'
         },
+        # Signal-based tracking (primary)
+        'signals': {
+            'active': (signals_state or {}).get('active', []),
+            'recent_resolved': (signals_state or {}).get('resolved', [])[-50:],
+            'metrics': sig_metrics or {},
+        },
+        # Legacy portfolio (will empty out as positions close)
         'portfolio': portfolio_summary(portfolio),
-        'opportunities': opportunities[:top_n],
         'positions': pool.get('positions', []),
-        'realized_trades': pool.get('realized_trades', []),
+        'realized_trades': pool.get('realized_trades', [])[-50:],
+        # Opportunities (scored tokens above threshold)
+        'opportunities': opportunities[:top_n],
         'statistics': {
             'by_category': by_category,
             'by_convexity': by_convexity
@@ -456,12 +539,12 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
 # ─── Entry Point ────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description='Polymarket Signal Engine v2')
+    parser = argparse.ArgumentParser(description='Polymarket Signal Engine v4')
     parser.add_argument('--once', action='store_true', help='Run once and exit')
     parser.add_argument('--loop', action='store_true', help='Run continuously')
     parser.add_argument('--interval', type=int, default=900, help='Loop interval (seconds)')
-    parser.add_argument('--execute', action='store_true', help='Enable paper trade execution')
-    parser.add_argument('--init', action='store_true', help='Reset portfolio')
+    parser.add_argument('--execute', action='store_true', help='Legacy: also run paper trade close logic')
+    parser.add_argument('--init', action='store_true', help='Reset portfolio + signals')
     args = parser.parse_args()
 
     config = load_config()
@@ -475,7 +558,11 @@ def main():
         path = os.path.join(data_dir, 'portfolio_state.json')
         portfolio = create_portfolio(config)
         save_portfolio(portfolio, path)
-        logger.info("Portfolio reset to initial state")
+        # Also reset signals state
+        from src.signal_manager import _create_empty_state, save_signals as _save_signals
+        signals_path = os.path.join(data_dir, 'signals_state.json')
+        _save_signals(_create_empty_state(), signals_path)
+        logger.info("Portfolio and signals reset to initial state")
         if not args.once and not args.loop:
             return
 

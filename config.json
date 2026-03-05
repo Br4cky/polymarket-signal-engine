@@ -92,6 +92,18 @@
     "max_cluster_pct": 12,
     "auto_trade_enabled": false
   },
+  "signals": {
+    "enabled": true,
+    "max_active_signals": 30,
+    "cooldown_after_loss_hours": 24,
+    "max_signals_per_cluster": 4,
+    "max_entry_buffer_pct": 15
+  },
+  "telegram": {
+    "enabled": false,
+    "bot_token": "",
+    "channel_id": ""
+  },
   "dashboard": {
     "refresh_interval_seconds": 30,
     "top_opportunities_count": 25

@@ -624,6 +624,22 @@ def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: d
             to_close.append((pos['position_id'], f'stop_loss_{stop_loss:.0f}pct'))
             continue
 
+        # ── 5. Gap-risk early exit for thin markets ──
+        # Penny tokens can gap 10-20% between 15-min scans on thin order books.
+        # If we're within a gap-risk buffer of the stop, close early to avoid
+        # getting gapped through and taking a much larger loss.
+        entry_price = pos.get('entry_price', 0.5)
+        if entry_price < 0.03:
+            gap_buffer = 3.0  # Close if within 3% of stop for penny tokens
+        elif entry_price < 0.08:
+            gap_buffer = 2.0  # Close if within 2% of stop for cheap tokens
+        else:
+            gap_buffer = 0.0  # No early exit for liquid markets
+
+        if gap_buffer > 0 and pnl_pct <= (stop_loss + gap_buffer):
+            to_close.append((pos['position_id'], f'gap_risk_exit_{pnl_pct:.0f}pct_near_stop_{stop_loss:.0f}pct'))
+            continue
+
     closed = []
     for pid, reason in to_close:
         try:
