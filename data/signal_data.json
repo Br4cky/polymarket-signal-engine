@@ -1,30 +1,30 @@
 {
   "metadata": {
-    "timestamp": "2026-03-05T03:14:03.313365+00:00",
+    "timestamp": "2026-03-05T05:00:12.298352+00:00",
     "markets_scanned": 13,
     "tokens_scored": 22,
     "engine_version": "3.0.0"
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 5017.72,
-    "combined_pnl": 20.62,
-    "combined_pnl_pct": 0.41,
-    "combined_win_rate": 0.6,
-    "combined_total_trades": 5,
+    "combined_equity": 5008.71,
+    "combined_pnl": 9.18,
+    "combined_pnl_pct": 0.18,
+    "combined_win_rate": 0.429,
+    "combined_total_trades": 7,
     "open_positions": 15,
     "pool": {
       "name": "Repricing Engine",
       "capital": 5000,
-      "cash": 3586.07,
-      "equity": 5017.72,
-      "pnl": 20.62,
-      "total_pnl": 20.62,
-      "win_rate": 0.6,
+      "cash": 3562.83,
+      "equity": 5008.71,
+      "pnl": 9.18,
+      "total_pnl": 9.18,
+      "win_rate": 0.429,
       "win_count": 3,
-      "loss_count": 2,
+      "loss_count": 4,
       "open_positions": 15,
-      "closed_trades": 5,
+      "closed_trades": 7,
       "max_drawdown": -1.87,
       "peak_equity": 5020.620000000001,
       "equity_history": [
@@ -67,6 +67,18 @@
         {
           "timestamp": "2026-03-05T03:14:03.308031+00:00",
           "equity": 5020.62
+        },
+        {
+          "timestamp": "2026-03-05T05:00:12.295510+00:00",
+          "equity": 5009.18
+        },
+        {
+          "timestamp": "2026-03-05T05:00:12.295632+00:00",
+          "equity": 5009.18
+        },
+        {
+          "timestamp": "2026-03-05T05:00:12.295743+00:00",
+          "equity": 5009.18
         }
       ]
     }
@@ -79,7 +91,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-10-2026",
       "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
       "outcome": "No",
-      "current_price": 0.041,
+      "current_price": 0.0445,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -144,13 +156,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 24.4,
+      "potential_multiple": 22.5,
       "days_to_close": 4,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 57306.59914,
+      "liquidity_usd": 72916.53351,
       "volume_24h": 106295.67490699994,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304616+00:00",
+      "timestamp": "2026-03-05T05:00:12.292798+00:00",
       "base_event": "will-us-israel-strike-iran"
     },
     {
@@ -160,7 +172,7 @@
       "slug": "will-us-or-israel-strike-iran-on-march-7-2026",
       "token_id": "17306684704175597544286440461693867872355091236405877382504692031344384136825",
       "outcome": "No",
-      "current_price": 0.016,
+      "current_price": 0.0185,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -225,13 +237,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 62.5,
+      "potential_multiple": 54.1,
       "days_to_close": 4,
       "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 26277.77207,
+      "liquidity_usd": 24531.44386,
       "volume_24h": 76286.89220400002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304792+00:00",
+      "timestamp": "2026-03-05T05:00:12.292937+00:00",
       "base_event": "will-us-israel-strike-iran"
     },
     {
@@ -241,7 +253,7 @@
       "slug": "will-a-gulf-state-strike-iran-by-march-7",
       "token_id": "91690921038632176461889168687730669028001990614770171548741382966812858465840",
       "outcome": "Yes",
-      "current_price": 0.165,
+      "current_price": 0.145,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -306,13 +318,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 6.1,
+      "potential_multiple": 6.9,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 35508.6031,
+      "liquidity_usd": 35241.2148,
       "volume_24h": 174394.33219700007,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304384+00:00",
+      "timestamp": "2026-03-05T05:00:12.292568+00:00",
       "base_event": "will-gulf-state-strike-iran"
     },
     {
@@ -322,7 +334,7 @@
       "slug": "will-a-gulf-state-strike-iran-by-march-7",
       "token_id": "58816541889584715498009165390917975076577621188456054628110307363191550362174",
       "outcome": "No",
-      "current_price": 0.835,
+      "current_price": 0.855,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
@@ -390,902 +402,11 @@
       "potential_multiple": 1.2,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T00:00:00Z",
-      "liquidity_usd": 35508.6031,
+      "liquidity_usd": 35241.2148,
       "volume_24h": 174394.33219700007,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304394+00:00",
+      "timestamp": "2026-03-05T05:00:12.292576+00:00",
       "base_event": "will-gulf-state-strike-iran"
-    },
-    {
-      "market_id": "1423609",
-      "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-140-159",
-      "token_id": "34085644008921760142966349041085875304422499680806615803891246224496298224126",
-      "outcome": "Yes",
-      "current_price": 0.108,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "10x",
-      "potential_multiple": 9.3,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 40992.84976,
-      "volume_24h": 239914.08662400005,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304311+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423609",
-      "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-140-159",
-      "token_id": "102206293755333581270196919509718875095700873722772939921643345779532057771430",
-      "outcome": "No",
-      "current_price": 0.892,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 40992.84976,
-      "volume_24h": 239914.08662400005,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304322+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
-      "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
-      "outcome": "Yes",
-      "current_price": 0.328,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.0,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 33736.90486,
-      "volume_24h": 172916.47348800005,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304408+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423621",
-      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
-      "token_id": "75749532256231066568276706672899577534364547460864181032706339820234376148586",
-      "outcome": "No",
-      "current_price": 0.672,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.5,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 33736.90486,
-      "volume_24h": 172916.47348800005,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304419+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423617",
-      "question": "Will Elon Musk post 160-179 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
-      "token_id": "4284618815400015346562299037200818934075614223431208243554061109185692792805",
-      "outcome": "Yes",
-      "current_price": 0.3335,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.0,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 28529.98033,
-      "volume_24h": 151016.85455200012,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304472+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423617",
-      "question": "Will Elon Musk post 160-179 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
-      "token_id": "111233399277156997363052007543543259233077852627548524152877656877850771262591",
-      "outcome": "No",
-      "current_price": 0.6665,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.5,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 28529.98033,
-      "volume_24h": 151016.85455200012,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304481+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423624",
-      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
-      "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
-      "outcome": "Yes",
-      "current_price": 0.1305,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "5x",
-      "potential_multiple": 7.7,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 30889.80923,
-      "volume_24h": 133476.277526,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304523+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423624",
-      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
-      "token_id": "112537663018197374694617069143327483053644124983075964396702735764715317003738",
-      "outcome": "No",
-      "current_price": 0.8695,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.2,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 30889.80923,
-      "volume_24h": 133476.277526,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304531+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423634",
-      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-240-259",
-      "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
-      "outcome": "Yes",
-      "current_price": 0.0365,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 27.4,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 27186.7518,
-      "volume_24h": 108231.51280199998,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304605+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423629",
-      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
-      "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
-      "outcome": "Yes",
-      "current_price": 0.05,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 20.0,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 26849.30499,
-      "volume_24h": 102585.57034100006,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304633+00:00",
-      "base_event": "elon-musk-tweets-february-march"
-    },
-    {
-      "market_id": "1423629",
-      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
-      "category": "",
-      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
-      "token_id": "6226558688948207872023014108806008609139824171205301015693623347461096437689",
-      "outcome": "No",
-      "current_price": 0.95,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 37.9,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 12.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 5.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 0,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 0.5,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": false,
-          "best_spike_ratio": 0,
-          "entities_checked": 0,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.1,
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "liquidity_usd": 26849.30499,
-      "volume_24h": 102585.57034100006,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304641+00:00",
-      "base_event": "elon-musk-tweets-february-march"
     },
     {
       "market_id": "1480653",
@@ -1294,15 +415,15 @@
       "slug": "will-bitcoin-reach-78k-march-2-8",
       "token_id": "1994473921316353989493680486691332487857769140114834222643148492995194390538",
       "outcome": "Yes",
-      "current_price": 0.2165,
+      "current_price": 0.224,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 36.8,
+      "edge_score": 38.7,
       "layer_scores": {
         "structural": 10.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1319,17 +440,17 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 25.07,
+          "divergence_pct": 24.32,
           "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1359,13 +480,13 @@
         }
       },
       "convexity_band": "5x",
-      "potential_multiple": 4.6,
-      "days_to_close": 4,
+      "potential_multiple": 4.5,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 21395.7838,
+      "liquidity_usd": 22916.36227,
       "volume_24h": 112495.06653500002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304580+00:00",
+      "timestamp": "2026-03-05T05:00:12.292761+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1375,15 +496,15 @@
       "slug": "will-bitcoin-reach-78k-march-2-8",
       "token_id": "46057457733194950444941967906803920497219074002595819506327540825641373787800",
       "outcome": "No",
-      "current_price": 0.7835,
+      "current_price": 0.776,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 36.8,
+      "edge_score": 38.7,
       "layer_scores": {
         "structural": 10.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1400,17 +521,17 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 31.63,
+          "divergence_pct": 30.88,
           "direction": "poly_higher"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1441,12 +562,12 @@
       },
       "convexity_band": "yield",
       "potential_multiple": 1.3,
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 21395.7838,
+      "liquidity_usd": 22916.36227,
       "volume_24h": 112495.06653500002,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304588+00:00",
+      "timestamp": "2026-03-05T05:00:12.292770+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1456,15 +577,15 @@
       "slug": "will-bitcoin-reach-80k-march-2-8",
       "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
       "outcome": "Yes",
-      "current_price": 0.104,
+      "current_price": 0.095,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 36.8,
+      "edge_score": 38.7,
       "layer_scores": {
         "structural": 10.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1481,17 +602,17 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 36.32,
+          "divergence_pct": 37.22,
           "direction": "manifold_higher"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1521,13 +642,13 @@
         }
       },
       "convexity_band": "10x",
-      "potential_multiple": 9.6,
-      "days_to_close": 4,
+      "potential_multiple": 10.5,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 29561.55245,
+      "liquidity_usd": 32559.02384,
       "volume_24h": 87289.694476,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304683+00:00",
+      "timestamp": "2026-03-05T05:00:12.292851+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
@@ -1537,15 +658,15 @@
       "slug": "will-bitcoin-reach-80k-march-2-8",
       "token_id": "9278651162177470110408690828569331011957650302554973492952673497628311647372",
       "outcome": "No",
-      "current_price": 0.896,
+      "current_price": 0.905,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 36.8,
+      "edge_score": 38.7,
       "layer_scores": {
         "structural": 10.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
@@ -1562,17 +683,17 @@
         },
         "manifold": {
           "score": 10.0,
-          "divergence_pct": 42.88,
+          "divergence_pct": 43.78,
           "direction": "poly_higher"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1603,34 +724,34 @@
       },
       "convexity_band": "yield",
       "potential_multiple": 1.1,
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 29561.55245,
+      "liquidity_usd": 32559.02384,
       "volume_24h": 87289.694476,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304691+00:00",
+      "timestamp": "2026-03-05T05:00:12.292857+00:00",
       "base_event": "will-bitcoin-reach-march"
     },
     {
-      "market_id": "1480657",
-      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "market_id": "1423609",
+      "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
       "category": "",
-      "slug": "will-bitcoin-reach-76k-march-2-8",
-      "token_id": "27789632087983911216998287546939851792464346644407884877045664886886884415150",
-      "outcome": "No",
-      "current_price": 0.66,
+      "slug": "elon-musk-of-tweets-february-27-march-6-140-159",
+      "token_id": "34085644008921760142966349041085875304422499680806615803891246224496298224126",
+      "outcome": "Yes",
+      "current_price": 0.129,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 35.4,
+      "edge_score": 37.9,
       "layer_scores": {
-        "structural": 8.57,
+        "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
-        "structural_total": 8.57,
+        "structural_total": 0.0,
         "combinatorial": {
           "score": 0.0,
           "yes_no_sum": 1.0,
@@ -1642,18 +763,99 @@
           "direction": "none"
         },
         "manifold": {
-          "score": 8.57,
-          "divergence_pct": 19.28,
-          "direction": "poly_higher"
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 7.8,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 35955.43963,
+      "volume_24h": 239914.08662400005,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292491+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423609",
+      "question": "Will Elon Musk post 140-159 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-140-159",
+      "token_id": "102206293755333581270196919509718875095700873722772939921643345779532057771430",
+      "outcome": "No",
+      "current_price": 0.871,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1683,35 +885,35 @@
         }
       },
       "convexity_band": "yield",
-      "potential_multiple": 1.5,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 27579.7207,
-      "volume_24h": 130142.57226199993,
+      "potential_multiple": 1.1,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 35955.43963,
+      "volume_24h": 239914.08662400005,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304552+00:00",
-      "base_event": "will-bitcoin-reach-march"
+      "timestamp": "2026-03-05T05:00:12.292503+00:00",
+      "base_event": "elon-musk-tweets-february-march"
     },
     {
-      "market_id": "1480657",
-      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "market_id": "1423621",
+      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
       "category": "",
-      "slug": "will-bitcoin-reach-76k-march-2-8",
-      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
+      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
+      "token_id": "60234437703124780887569257599659069922244210510019932100944618675797968170769",
       "outcome": "Yes",
-      "current_price": 0.34,
+      "current_price": 0.291,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 31.5,
+      "edge_score": 37.9,
       "layer_scores": {
-        "structural": 4.63,
+        "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 11.0,
+        "dislocation": 12.0,
         "external": 0.5
       },
       "structural_detail": {
-        "structural_total": 4.63,
+        "structural_total": 0.0,
         "combinatorial": {
           "score": 0.0,
           "yes_no_sum": 1.0,
@@ -1723,18 +925,18 @@
           "direction": "none"
         },
         "manifold": {
-          "score": 4.63,
-          "divergence_pct": 12.72,
-          "direction": "manifold_higher"
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.0,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
         "volume_anomaly": 7.0,
         "order_book": 0.0,
         "price_trajectory": 0.0,
-        "time_decay": 4.0
+        "time_decay": 5.0
       },
       "smart_money_detail": {
         "whale_accumulation": 0.0,
@@ -1764,32 +966,32 @@
         }
       },
       "convexity_band": "2x",
-      "potential_multiple": 2.9,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-09T04:00:00Z",
-      "liquidity_usd": 27579.7207,
-      "volume_24h": 130142.57226199993,
+      "potential_multiple": 3.4,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 29282.73802,
+      "volume_24h": 172916.47348800005,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304544+00:00",
-      "base_event": "will-bitcoin-reach-march"
+      "timestamp": "2026-03-05T05:00:12.292587+00:00",
+      "base_event": "elon-musk-tweets-february-march"
     },
     {
-      "market_id": "654414",
-      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "market_id": "1423621",
+      "question": "Will Elon Musk post 180-199 tweets from February 27 to March 6, 2026?",
       "category": "",
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
-      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "slug": "elon-musk-of-tweets-february-27-march-6-180-199",
+      "token_id": "75749532256231066568276706672899577534364547460864181032706339820234376148586",
       "outcome": "No",
-      "current_price": 0.0155,
-      "bid": 0.001,
-      "ask": 0.999,
-      "spread_pct": 99800.0,
-      "edge_score": 29.3,
+      "current_price": 0.709,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
-        "dislocation": 7.74,
-        "external": 7.0
+        "dislocation": 12.0,
+        "external": 0.5
       },
       "structural_detail": {
         "structural_total": 0.0,
@@ -1810,9 +1012,819 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 7.74,
+        "dislocation_total": 12.0,
         "price_velocity": 0.0,
-        "volume_anomaly": 2.24,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 29282.73802,
+      "volume_24h": 172916.47348800005,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292595+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423617",
+      "question": "Will Elon Musk post 160-179 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
+      "token_id": "4284618815400015346562299037200818934075614223431208243554061109185692792805",
+      "outcome": "Yes",
+      "current_price": 0.389,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.6,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 25627.4862,
+      "volume_24h": 151016.85455200012,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292652+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423617",
+      "question": "Will Elon Musk post 160-179 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-160-179",
+      "token_id": "111233399277156997363052007543543259233077852627548524152877656877850771262591",
+      "outcome": "No",
+      "current_price": 0.611,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.6,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 25627.4862,
+      "volume_24h": 151016.85455200012,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292661+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423624",
+      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
+      "token_id": "19335635848638930006389862370795788468864191936184624295736509993095012014844",
+      "outcome": "Yes",
+      "current_price": 0.117,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 8.5,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 24230.209,
+      "volume_24h": 133476.277526,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292702+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423624",
+      "question": "Will Elon Musk post 200-219 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-200-219",
+      "token_id": "112537663018197374694617069143327483053644124983075964396702735764715317003738",
+      "outcome": "No",
+      "current_price": 0.883,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 24230.209,
+      "volume_24h": 133476.277526,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292710+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423634",
+      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-240-259",
+      "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
+      "outcome": "Yes",
+      "current_price": 0.0145,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 69.0,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 25563.84071,
+      "volume_24h": 108231.51280199998,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292789+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423629",
+      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
+      "token_id": "70908401086624920470942468092127666218217576437099339458803486976341857440992",
+      "outcome": "Yes",
+      "current_price": 0.0505,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 19.8,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 25262.68011,
+      "volume_24h": 102585.57034100006,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292812+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1423629",
+      "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-february-27-march-6-220-239",
+      "token_id": "6226558688948207872023014108806008609139824171205301015693623347461096437689",
+      "outcome": "No",
+      "current_price": 0.9495,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 37.9,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "liquidity_usd": 25262.68011,
+      "volume_24h": 102585.57034100006,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292817+00:00",
+      "base_event": "elon-musk-tweets-february-march"
+    },
+    {
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "category": "",
+      "slug": "will-bitcoin-reach-76k-march-2-8",
+      "token_id": "27789632087983911216998287546939851792464346644407884877045664886886884415150",
+      "outcome": "No",
+      "current_price": 0.62,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 35.0,
+      "layer_scores": {
+        "structural": 6.17,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 6.17,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 6.17,
+          "divergence_pct": 15.28,
+          "direction": "poly_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.6,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 26707.6893,
+      "volume_24h": 130142.57226199993,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292730+00:00",
+      "base_event": "will-bitcoin-reach-march"
+    },
+    {
+      "market_id": "1480657",
+      "question": "Will Bitcoin reach $76,000 March 2-8?",
+      "category": "",
+      "slug": "will-bitcoin-reach-76k-march-2-8",
+      "token_id": "107227940149525427476476196186823748082170816870540839976539127025171698054879",
+      "outcome": "Yes",
+      "current_price": 0.38,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 31.1,
+      "layer_scores": {
+        "structural": 2.23,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 2.23,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 2.23,
+          "divergence_pct": 8.72,
+          "direction": "manifold_higher"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.6,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "liquidity_usd": 26707.6893,
+      "volume_24h": 130142.57226199993,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-05T05:00:12.292722+00:00",
+      "base_event": "will-bitcoin-reach-march"
+    },
+    {
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "category": "",
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "current_price": 0.0125,
+      "bid": 0.001,
+      "ask": 0.999,
+      "spread_pct": 99800.0,
+      "edge_score": 22.0,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 7.71,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 7.71,
+        "price_velocity": 0.0,
+        "volume_anomaly": 2.21,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 3.0
@@ -1824,17 +1836,17 @@
         "smart_money_total": 0.0
       },
       "external_detail": {
-        "news_score": 6.5,
+        "news_score": 0,
         "trends_score": 0.0,
         "sentiment_score": 0.5,
         "activity_score": 0,
-        "external_total": 7.0,
+        "external_total": 0.5,
         "details": {
-          "matching_articles": 75,
-          "articles_6h": 19,
-          "articles_24h": 75,
-          "most_relevant_headline": "\u4e2d\u4e1c\u50a8\u6cb9\u7a7a\u95f4\u544a\u6025 \uff01 \u59d4\u5185\u745e\u62c92 . 0  \u5b9a\u4ef7\u9884\u671f\u8fd8\u80fd\u6491\u591a\u4e45 \uff1f ",
-          "recency_hours": 0.7,
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
           "spike_detected": false,
           "best_spike_ratio": 1.47,
           "entities_checked": 2,
@@ -1845,13 +1857,13 @@
         }
       },
       "convexity_band": "20x",
-      "potential_multiple": 64.5,
+      "potential_multiple": 80.0,
       "days_to_close": 12,
       "resolution_date": "2026-03-18T00:00:00Z",
-      "liquidity_usd": 1882013.06755,
+      "liquidity_usd": 1636165.30495,
       "volume_24h": 1977562.8576899993,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T03:14:03.304159+00:00",
+      "timestamp": "2026-03-05T05:00:12.292332+00:00",
       "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
     }
   ],
@@ -1895,10 +1907,10 @@
       "entry_timestamp": "2026-03-04T23:37:20.186514+00:00",
       "shares": 4419.9,
       "entry_usd": 199.89,
-      "current_price": 0.041,
-      "current_value": 181.22,
-      "unrealized_pnl": -18.67,
-      "unrealized_pnl_pct": -9.34,
+      "current_price": 0.0445,
+      "current_value": 196.69,
+      "unrealized_pnl": -3.2,
+      "unrealized_pnl_pct": -1.6,
       "edge_score_at_entry": 43.1,
       "edge_tier_at_entry": "high",
       "layer_scores_at_entry": {
@@ -1951,10 +1963,10 @@
       "entry_timestamp": "2026-03-04T23:37:20.187141+00:00",
       "shares": 634.16,
       "entry_usd": 86.04,
-      "current_price": 0.165,
-      "current_value": 104.64,
-      "unrealized_pnl": 18.6,
-      "unrealized_pnl_pct": 21.62,
+      "current_price": 0.145,
+      "current_value": 91.95,
+      "unrealized_pnl": 5.91,
+      "unrealized_pnl_pct": 6.87,
       "edge_score_at_entry": 39.4,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -1979,10 +1991,10 @@
       "entry_timestamp": "2026-03-04T23:37:20.188876+00:00",
       "shares": 172.26,
       "entry_usd": 68.99,
-      "current_price": 0.3335,
-      "current_value": 57.45,
-      "unrealized_pnl": -11.54,
-      "unrealized_pnl_pct": -16.73,
+      "current_price": 0.389,
+      "current_value": 67.01,
+      "unrealized_pnl": -1.98,
+      "unrealized_pnl_pct": -2.87,
       "edge_score_at_entry": 38.4,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2007,10 +2019,10 @@
       "entry_timestamp": "2026-03-04T23:37:20.189715+00:00",
       "shares": 512.06,
       "entry_usd": 112.96,
-      "current_price": 0.2165,
-      "current_value": 110.86,
-      "unrealized_pnl": -2.1,
-      "unrealized_pnl_pct": -1.86,
+      "current_price": 0.224,
+      "current_value": 114.7,
+      "unrealized_pnl": 1.74,
+      "unrealized_pnl_pct": 1.54,
       "edge_score_at_entry": 37.2,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2019,7 +2031,7 @@
         "dislocation": 11.0,
         "external": 1.0
       },
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
       "potential_multiple": 4.6,
       "slug": "will-bitcoin-reach-78k-march-2-8"
@@ -2035,10 +2047,10 @@
       "entry_timestamp": "2026-03-04T23:37:20.190115+00:00",
       "shares": 232.59,
       "entry_usd": 86.49,
-      "current_price": 0.34,
-      "current_value": 79.08,
-      "unrealized_pnl": -7.41,
-      "unrealized_pnl_pct": -8.57,
+      "current_price": 0.38,
+      "current_value": 88.38,
+      "unrealized_pnl": 1.89,
+      "unrealized_pnl_pct": 2.19,
       "edge_score_at_entry": 30.1,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2047,38 +2059,10 @@
         "dislocation": 11.0,
         "external": 1.0
       },
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
       "potential_multiple": 2.7,
       "slug": "will-bitcoin-reach-76k-march-2-8"
-    },
-    {
-      "position_id": "6da9c21a",
-      "market_id": "654414",
-      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
-      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
-      "outcome": "No",
-      "convexity_band": "20x",
-      "entry_price": 0.0166,
-      "entry_timestamp": "2026-03-04T23:37:20.190440+00:00",
-      "shares": 3766.62,
-      "entry_usd": 62.46,
-      "current_price": 0.0155,
-      "current_value": 58.38,
-      "unrealized_pnl": -4.08,
-      "unrealized_pnl_pct": -6.53,
-      "edge_score_at_entry": 21.8,
-      "edge_tier_at_entry": "low",
-      "layer_scores_at_entry": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 5.62,
-        "external": 5.54
-      },
-      "days_to_close": 12,
-      "resolution_date": "2026-03-18T00:00:00Z",
-      "potential_multiple": 60.6,
-      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
     },
     {
       "position_id": "b3fa4b48",
@@ -2091,10 +2075,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.308785+00:00",
       "shares": 9631.84,
       "entry_usd": 154.88,
-      "current_price": 0.016,
-      "current_value": 154.11,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.0185,
+      "current_value": 178.19,
+      "unrealized_pnl": 23.31,
+      "unrealized_pnl_pct": 15.05,
       "edge_score_at_entry": 40.7,
       "edge_tier_at_entry": "high",
       "layer_scores_at_entry": {
@@ -2119,10 +2103,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.309184+00:00",
       "shares": 650.73,
       "entry_usd": 70.63,
-      "current_price": 0.108,
-      "current_value": 70.28,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.129,
+      "current_value": 83.94,
+      "unrealized_pnl": 13.31,
+      "unrealized_pnl_pct": 18.84,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2147,10 +2131,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.309729+00:00",
       "shares": 207.29,
       "entry_usd": 68.33,
-      "current_price": 0.328,
-      "current_value": 67.99,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.291,
+      "current_value": 60.32,
+      "unrealized_pnl": -8.01,
+      "unrealized_pnl_pct": -11.72,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2175,10 +2159,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.310337+00:00",
       "shares": 504.07,
       "entry_usd": 66.11,
-      "current_price": 0.1305,
-      "current_value": 65.78,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.117,
+      "current_value": 58.98,
+      "unrealized_pnl": -7.13,
+      "unrealized_pnl_pct": -10.79,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2193,34 +2177,6 @@
       "slug": "elon-musk-of-tweets-february-27-march-6-200-219"
     },
     {
-      "position_id": "2c392295",
-      "market_id": "1423634",
-      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
-      "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
-      "outcome": "Yes",
-      "convexity_band": "20x",
-      "entry_price": 0.0367,
-      "entry_timestamp": "2026-03-05T03:14:03.310995+00:00",
-      "shares": 1743.88,
-      "entry_usd": 63.97,
-      "current_price": 0.0365,
-      "current_value": 63.65,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "edge_score_at_entry": 37.9,
-      "edge_tier_at_entry": "medium",
-      "layer_scores_at_entry": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 12.0,
-        "external": 0.5
-      },
-      "days_to_close": 1,
-      "resolution_date": "2026-03-06T17:00:00Z",
-      "potential_multiple": 27.4,
-      "slug": "elon-musk-of-tweets-february-27-march-6-240-259"
-    },
-    {
       "position_id": "cd3630f3",
       "market_id": "1423629",
       "question": "Will Elon Musk post 220-239 tweets from February 27 to March 6, 2026?",
@@ -2231,10 +2187,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.311348+00:00",
       "shares": 1231.84,
       "entry_usd": 61.9,
-      "current_price": 0.05,
-      "current_value": 61.59,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.0505,
+      "current_value": 62.21,
+      "unrealized_pnl": 0.31,
+      "unrealized_pnl_pct": 0.5,
       "edge_score_at_entry": 37.9,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2259,10 +2215,10 @@
       "entry_timestamp": "2026-03-05T03:14:03.311777+00:00",
       "shares": 916.86,
       "entry_usd": 95.83,
-      "current_price": 0.104,
-      "current_value": 95.35,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
+      "current_price": 0.095,
+      "current_value": 87.1,
+      "unrealized_pnl": -8.73,
+      "unrealized_pnl_pct": -9.11,
       "edge_score_at_entry": 36.8,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -2271,10 +2227,66 @@
         "dislocation": 11.0,
         "external": 0.5
       },
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-09T04:00:00Z",
       "potential_multiple": 9.6,
       "slug": "will-bitcoin-reach-80k-march-2-8"
+    },
+    {
+      "position_id": "0c977366",
+      "market_id": "1423634",
+      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
+      "token_id": "17967777195260440808632559140555706871542421523561927458464130559501953935955",
+      "outcome": "Yes",
+      "convexity_band": "20x",
+      "entry_price": 0.0146,
+      "entry_timestamp": "2026-03-05T05:00:12.296300+00:00",
+      "shares": 4150.97,
+      "entry_usd": 60.49,
+      "current_price": 0.0145,
+      "current_value": 60.19,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 37.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      },
+      "days_to_close": 1,
+      "resolution_date": "2026-03-06T17:00:00Z",
+      "potential_multiple": 69.0,
+      "slug": "elon-musk-of-tweets-february-27-march-6-240-259"
+    },
+    {
+      "position_id": "9b6c4def",
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "token_id": "114350083305515876605975857295292847572608542141507135338338719165921048222327",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0126,
+      "entry_timestamp": "2026-03-05T05:00:12.296707+00:00",
+      "shares": 2795.62,
+      "entry_usd": 35.12,
+      "current_price": 0.0125,
+      "current_value": 34.95,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "edge_score_at_entry": 22.0,
+      "edge_tier_at_entry": "low",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 7.71,
+        "external": 0.5
+      },
+      "days_to_close": 12,
+      "resolution_date": "2026-03-18T00:00:00Z",
+      "potential_multiple": 80.0,
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
     }
   ],
   "realized_trades": [
@@ -2407,6 +2419,58 @@
         "dislocation": 12.0,
         "external": 1.0
       }
+    },
+    {
+      "position_id": "6da9c21a",
+      "market_id": "654414",
+      "question": "Will there be no change in Fed interest rates after the March 2026 meeting?",
+      "outcome": "No",
+      "convexity_band": "20x",
+      "entry_price": 0.0166,
+      "exit_price": 0.0125,
+      "entry_timestamp": "2026-03-04T23:37:20.190440+00:00",
+      "exit_timestamp": "2026-03-05T05:00:12.295621+00:00",
+      "shares": 3766.62,
+      "entry_usd": 62.46,
+      "exit_usd": 47.08,
+      "pnl_usd": -15.38,
+      "pnl_pct": -24.62,
+      "win": false,
+      "reason": "stop_loss_-15pct",
+      "edge_score_at_entry": 21.8,
+      "edge_tier_at_entry": "low",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 5.62,
+        "external": 5.54
+      }
+    },
+    {
+      "position_id": "2c392295",
+      "market_id": "1423634",
+      "question": "Will Elon Musk post 240-259 tweets from February 27 to March 6, 2026?",
+      "outcome": "Yes",
+      "convexity_band": "20x",
+      "entry_price": 0.0367,
+      "exit_price": 0.0145,
+      "entry_timestamp": "2026-03-05T03:14:03.310995+00:00",
+      "exit_timestamp": "2026-03-05T05:00:12.295727+00:00",
+      "shares": 1743.88,
+      "entry_usd": 63.97,
+      "exit_usd": 25.29,
+      "pnl_usd": -38.68,
+      "pnl_pct": -60.47,
+      "win": false,
+      "reason": "stop_loss_-20pct",
+      "edge_score_at_entry": 37.9,
+      "edge_tier_at_entry": "medium",
+      "layer_scores_at_entry": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 0.5
+      }
     }
   ],
   "statistics": {
@@ -2418,44 +2482,44 @@
     },
     "by_convexity": {
       "20x": {
-        "count": 5,
-        "total_liquidity": 2019633.49555,
-        "avg_edge": 37.3
+        "count": 4,
+        "total_liquidity": 1759177.12303,
+        "avg_edge": 35.3
       },
       "5x": {
         "count": 3,
-        "total_liquidity": 87794.19613,
-        "avg_edge": 37.9
+        "total_liquidity": 94113.01670000001,
+        "avg_edge": 38.5
       },
       "yield": {
         "count": 9,
-        "total_liquidity": 275044.50921999995,
-        "avg_edge": 37.5
+        "total_liquidity": 257782.84316999998,
+        "avg_edge": 37.9
       },
       "10x": {
-        "count": 2,
-        "total_liquidity": 70554.40221,
-        "avg_edge": 37.3
+        "count": 3,
+        "total_liquidity": 82051.91295,
+        "avg_edge": 38.2
       },
       "2x": {
         "count": 3,
-        "total_liquidity": 89846.60589,
-        "avg_edge": 35.8
+        "total_liquidity": 81617.91352,
+        "avg_edge": 35.6
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 251,
-      "tokens_with_signal": 77,
-      "coverage_pct": 30.7,
-      "avg_score": 9.0,
+      "tokens_scored": 244,
+      "tokens_with_signal": 79,
+      "coverage_pct": 32.4,
+      "avg_score": 8.85,
       "max_score": 10.0
     },
     "smart_money": {
       "active": false,
-      "tokens_scored": 251,
+      "tokens_scored": 244,
       "tokens_with_signal": 0,
       "coverage_pct": 0.0,
       "avg_score": 0,
@@ -2465,38 +2529,48 @@
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 251,
-      "tokens_with_signal": 220,
-      "coverage_pct": 87.6,
-      "avg_score": 7.83,
+      "tokens_scored": 244,
+      "tokens_with_signal": 211,
+      "coverage_pct": 86.5,
+      "avg_score": 7.73,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 251,
-      "tokens_with_signal": 251,
+      "tokens_scored": 244,
+      "tokens_with_signal": 244,
       "coverage_pct": 100.0,
-      "avg_score": 0.84,
+      "avg_score": 0.82,
       "max_score": 7.0
     }
   },
   "calibration": {
-    "total_trades": 5,
-    "overall_win_rate": 0.6,
-    "overall_avg_pnl_pct": 31.6,
+    "total_trades": 7,
+    "overall_win_rate": 0.429,
+    "overall_avg_pnl_pct": 10.4,
     "quintiles": [
+      {
+        "band": "15-25",
+        "label": "low",
+        "trades": 1,
+        "wins": 0,
+        "actual_win_rate": 0.0,
+        "estimated_win_rate": 0.38,
+        "drift": -0.38,
+        "avg_pnl_pct": -24.6
+      },
       {
         "band": "35-50",
         "label": "average",
-        "trades": 5,
+        "trades": 6,
         "wins": 3,
-        "actual_win_rate": 0.6,
+        "actual_win_rate": 0.5,
         "estimated_win_rate": 0.47,
-        "drift": 0.13,
-        "avg_pnl_pct": 31.6
+        "drift": 0.03,
+        "avg_pnl_pct": 16.2
       }
     ],
-    "calibration_score": 50.0,
+    "calibration_score": 70.0,
     "layer_accuracy": {
       "structural": {
         "trades_with_signal": 0,
@@ -2511,20 +2585,20 @@
         "predictive_power": 1.0
       },
       "dislocation": {
-        "trades_with_signal": 5,
+        "trades_with_signal": 7,
         "avg_score_winners": 12.0,
-        "avg_score_losers": 12.0,
-        "predictive_power": 1.0
+        "avg_score_losers": 10.41,
+        "predictive_power": 1.15
       },
       "external": {
-        "trades_with_signal": 5,
+        "trades_with_signal": 7,
         "avg_score_winners": 1.0,
-        "avg_score_losers": 1.0,
-        "predictive_power": 1.0
+        "avg_score_losers": 2.01,
+        "predictive_power": 0.5
       }
     },
     "recommendations": [
-      "Only 5 trades \u2014 need 20+ for reliable calibration"
+      "Only 7 trades \u2014 need 20+ for reliable calibration"
     ]
   }
 }
