@@ -83,8 +83,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0175,
-      "live_pnl_pct": 66.67
+      "current_price": 0.022,
+      "live_pnl_pct": 109.52
     },
     {
       "signal_id": "e5b43940",
@@ -603,8 +603,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.012,
-      "live_pnl_pct": -84.0
+      "current_price": 0.017,
+      "live_pnl_pct": -77.33
     },
     {
       "signal_id": "f5e6e08f",
@@ -1076,8 +1076,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3155,
-      "live_pnl_pct": 1.77
+      "current_price": 0.314,
+      "live_pnl_pct": 1.29
     },
     {
       "signal_id": "153b1be0",
@@ -1205,8 +1205,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0145,
-      "live_pnl_pct": 3.57
+      "current_price": 0.013,
+      "live_pnl_pct": -7.14
     },
     {
       "signal_id": "83fb3e3d",
@@ -1250,16 +1250,59 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.385,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "70f7561e",
+      "timestamp": "2026-03-06T15:54:39.374137+00:00",
+      "status": "active",
+      "market_id": "1511169",
+      "condition_id": "",
+      "token_id": "108857440081570440993512324483809312476299063354838613737021551663750486690802",
+      "question": "Brasilia: Thiago Monteiro vs Pedro Boscardin Dias",
+      "outcome": "Thiago Monteiro",
+      "slug": "atp-monteir-dias-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T14:00:00Z",
+      "entry_price": 0.92,
+      "max_entry_price": 0.99,
+      "tp_price": 0.99,
+      "sl_price": 0.69,
+      "tp_pct": 35.0,
+      "sl_pct": -25.0,
+      "expiry": "2026-03-13T14:00:00+00:00",
+      "edge_score": 43.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 8.34,
+        "dislocation": 11.0,
+        "external": 7.92
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 16644.9824,
+      "volume_24h": 93594.05343599996,
+      "rationale": "Smart money 8/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 7.9/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.92,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 29,
+    "total_signals": 30,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T15:02:42.906103+00:00"
+  "last_updated": "2026-03-06T15:54:39.374457+00:00"
 }

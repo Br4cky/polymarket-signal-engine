@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T15:02:42.908037+00:00",
+    "timestamp": "2026-03-06T15:54:39.376250+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 243,
-    "opportunities_found": 12,
+    "tokens_scored": 253,
+    "opportunities_found": 14,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -91,8 +91,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0175,
-        "live_pnl_pct": 66.67
+        "current_price": 0.022,
+        "live_pnl_pct": 109.52
       },
       {
         "signal_id": "e5b43940",
@@ -611,8 +611,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.012,
-        "live_pnl_pct": -84.0
+        "current_price": 0.017,
+        "live_pnl_pct": -77.33
       },
       {
         "signal_id": "f5e6e08f",
@@ -1084,8 +1084,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3155,
-        "live_pnl_pct": 1.77
+        "current_price": 0.314,
+        "live_pnl_pct": 1.29
       },
       {
         "signal_id": "153b1be0",
@@ -1213,8 +1213,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0145,
-        "live_pnl_pct": 3.57
+        "current_price": 0.013,
+        "live_pnl_pct": -7.14
       },
       {
         "signal_id": "83fb3e3d",
@@ -1258,12 +1258,55 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.385,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "70f7561e",
+        "timestamp": "2026-03-06T15:54:39.374137+00:00",
+        "status": "active",
+        "market_id": "1511169",
+        "condition_id": "",
+        "token_id": "108857440081570440993512324483809312476299063354838613737021551663750486690802",
+        "question": "Brasilia: Thiago Monteiro vs Pedro Boscardin Dias",
+        "outcome": "Thiago Monteiro",
+        "slug": "atp-monteir-dias-2026-03-06",
+        "category": "",
+        "resolution_date": "2026-03-13T14:00:00Z",
+        "entry_price": 0.92,
+        "max_entry_price": 0.99,
+        "tp_price": 0.99,
+        "sl_price": 0.69,
+        "tp_pct": 35.0,
+        "sl_pct": -25.0,
+        "expiry": "2026-03-13T14:00:00+00:00",
+        "edge_score": 43.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 8.34,
+          "dislocation": 11.0,
+          "external": 7.92
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 16644.9824,
+        "volume_24h": 93594.05343599996,
+        "rationale": "Smart money 8/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 7.9/15",
+        "tp_sources": [],
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.92,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [],
     "metrics": {
-      "total_signals_issued": 29,
-      "active_signals": 29,
+      "total_signals_issued": 30,
+      "active_signals": 30,
       "total_resolved": 0,
       "wins": 0,
       "losses": 0,
@@ -1300,37 +1343,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 243,
-      "tokens_with_signal": 47,
-      "coverage_pct": 19.3,
-      "avg_score": 8.49,
+      "tokens_scored": 253,
+      "tokens_with_signal": 46,
+      "coverage_pct": 18.2,
+      "avg_score": 8.75,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 243,
-      "tokens_with_signal": 134,
-      "coverage_pct": 55.1,
-      "avg_score": 9.29,
-      "max_score": 21.63,
+      "tokens_scored": 253,
+      "tokens_with_signal": 151,
+      "coverage_pct": 59.7,
+      "avg_score": 9.58,
+      "max_score": 23.25,
       "quality_traders": 51,
-      "markets_indexed": 4344
+      "markets_indexed": 4504
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 243,
-      "tokens_with_signal": 213,
-      "coverage_pct": 87.7,
-      "avg_score": 9.02,
+      "tokens_scored": 253,
+      "tokens_with_signal": 220,
+      "coverage_pct": 87.0,
+      "avg_score": 9.16,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 243,
-      "tokens_with_signal": 243,
+      "tokens_scored": 253,
+      "tokens_with_signal": 253,
       "coverage_pct": 100.0,
-      "avg_score": 1.05,
-      "max_score": 3.47
+      "avg_score": 1.12,
+      "max_score": 7.92
     }
   },
   "calibration": {}
