@@ -298,8 +298,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.69,
-      "live_pnl_pct": -0.72
+      "current_price": 0.685,
+      "live_pnl_pct": -1.44
     },
     {
       "signal_id": "2647fa37",
@@ -472,8 +472,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.013,
-      "live_pnl_pct": -67.09
+      "current_price": 0.01,
+      "live_pnl_pct": -74.68
     },
     {
       "signal_id": "c0667f71",
@@ -558,8 +558,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.305,
-      "live_pnl_pct": 0.0
+      "current_price": 0.295,
+      "live_pnl_pct": -3.28
     },
     {
       "signal_id": "3806466a",
@@ -603,8 +603,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.055,
-      "live_pnl_pct": -26.67
+      "current_price": 0.04,
+      "live_pnl_pct": -46.67
     },
     {
       "signal_id": "f5e6e08f",
@@ -775,8 +775,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0395,
-      "live_pnl_pct": -41.04
+      "current_price": 0.037,
+      "live_pnl_pct": -44.78
     },
     {
       "signal_id": "9e2dfb58",
@@ -990,8 +990,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.059,
-      "live_pnl_pct": -26.25
+      "current_price": 0.0465,
+      "live_pnl_pct": -41.88
     },
     {
       "signal_id": "a06f953e",
@@ -1076,18 +1076,61 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.311,
-      "live_pnl_pct": 0.32
+      "current_price": 0.314,
+      "live_pnl_pct": 1.29
+    },
+    {
+      "signal_id": "153b1be0",
+      "timestamp": "2026-03-06T12:04:37.488370+00:00",
+      "status": "active",
+      "market_id": "1508195",
+      "condition_id": "",
+      "token_id": "83361345839151754414906804925826005909971460838184869485247823726411952098851",
+      "question": "Antalya 2: Katarzyna Kawa vs Tamara Zidansek",
+      "outcome": "Katarzyna Kawa",
+      "slug": "wta-kawa-zidanse-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T09:30:00Z",
+      "entry_price": 0.665,
+      "max_entry_price": 0.7315,
+      "tp_price": 0.8313,
+      "sl_price": 0.532,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-11T12:04:37.488343+00:00",
+      "edge_score": 38.1,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 9.7,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.5,
+      "days_to_close": 6,
+      "liquidity_usd": 31545.3464,
+      "volume_24h": 121069.76464600003,
+      "rationale": "Smart money 10/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.665,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 25,
+    "total_signals": 26,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T11:40:18.486621+00:00"
+  "last_updated": "2026-03-06T12:04:37.488731+00:00"
 }
