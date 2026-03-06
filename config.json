@@ -66,26 +66,26 @@
         "size_multiplier": 1.3,
         "profit_target_pct": 35,
         "stop_loss_pct": -25,
-        "max_hold_days": 7
+        "max_hold_days": 14
       },
       "medium": {
         "min_edge": 30,
         "size_multiplier": 1.0,
         "profit_target_pct": 25,
         "stop_loss_pct": -20,
-        "max_hold_days": 5
+        "max_hold_days": 10
       },
       "low": {
         "min_edge": 20,
         "size_multiplier": 0.6,
         "profit_target_pct": 15,
         "stop_loss_pct": -15,
-        "max_hold_days": 3
+        "max_hold_days": 7
       }
     },
     "min_liquidity_usd": 500,
-    "min_days_to_close": 1,
-    "max_days_to_close": 20,
+    "min_days_to_close": 0,
+    "max_days_to_close": 90,
     "slippage_pct": 0.5,
     "max_exposure_pct": 60,
     "stop_cooldown_hours": 24,
