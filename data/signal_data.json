@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T19:46:01.998461+00:00",
+    "timestamp": "2026-03-06T20:06:28.408535+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 254,
-    "opportunities_found": 15,
+    "tokens_scored": 267,
+    "opportunities_found": 13,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -45,11 +45,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.425,
-        "trough_price": 0.385,
+        "trough_price": 0.375,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.385,
-        "live_pnl_pct": -7.23
+        "current_price": 0.375,
+        "live_pnl_pct": -9.64
       },
       {
         "signal_id": "2fed7d16",
@@ -134,8 +134,8 @@
         "trough_price": 0.205,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.22,
-        "live_pnl_pct": 7.32
+        "current_price": 0.205,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "26119f95",
@@ -173,12 +173,12 @@
         "tp_sources": [],
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.315,
+        "peak_price": 0.32,
         "trough_price": 0.295,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.315,
-        "live_pnl_pct": 3.28
+        "current_price": 0.32,
+        "live_pnl_pct": 4.92
       },
       {
         "signal_id": "9e2dfb58",
@@ -306,8 +306,8 @@
         "trough_price": 0.3095,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3125,
-        "live_pnl_pct": 0.81
+        "current_price": 0.311,
+        "live_pnl_pct": 0.32
       },
       {
         "signal_id": "717c1e8b",
@@ -345,55 +345,12 @@
         "tp_sources": [],
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.35,
-        "trough_price": 0.33,
+        "peak_price": 0.345,
+        "trough_price": 0.32,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.35,
-        "live_pnl_pct": 4.48
-      },
-      {
-        "signal_id": "1469cfe7",
-        "timestamp": "2026-03-06T19:46:01.993167+00:00",
-        "status": "active",
-        "market_id": "1502746",
-        "condition_id": "",
-        "token_id": "10325246312333258612193836902232781852687024114865486936782827190148694389324",
-        "question": "BNP Paribas Open: Flavio Cobolli vs Miomir Kecmanovic",
-        "outcome": "Flavio Cobolli",
-        "slug": "atp-cobolli-kecmano-2026-03-06",
-        "category": "",
-        "resolution_date": "2026-03-13T19:00:00Z",
-        "entry_price": 0.46,
-        "max_entry_price": 0.506,
-        "tp_price": 0.621,
-        "sl_price": 0.345,
-        "tp_pct": 35.0,
-        "sl_pct": -25.0,
-        "expiry": "2026-03-13T19:00:00+00:00",
-        "edge_score": 40.2,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 12.37,
-          "dislocation": 11.0,
-          "external": 1.0
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 2.2,
-        "days_to_close": 6,
-        "liquidity_usd": 28896.5493,
-        "volume_24h": 163316.42878900006,
-        "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
-        "tp_sources": [],
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.46,
-        "live_pnl_pct": 0.0
+        "current_price": 0.32,
+        "live_pnl_pct": -4.48
       },
       {
         "signal_id": "9bcd71a8",
@@ -431,12 +388,12 @@
         "tp_sources": [],
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.03,
+        "trough_price": 0.028,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.028,
-        "live_pnl_pct": 0.0
+        "current_price": 0.03,
+        "live_pnl_pct": 7.14
       }
     ],
     "recent_resolved": [
@@ -1737,26 +1694,69 @@
         "hypothetical_pnl_pct": 25.0,
         "current_price": 0.37,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "1469cfe7",
+        "timestamp": "2026-03-06T19:46:01.993167+00:00",
+        "status": "sl_hit",
+        "market_id": "1502746",
+        "condition_id": "",
+        "token_id": "10325246312333258612193836902232781852687024114865486936782827190148694389324",
+        "question": "BNP Paribas Open: Flavio Cobolli vs Miomir Kecmanovic",
+        "outcome": "Flavio Cobolli",
+        "slug": "atp-cobolli-kecmano-2026-03-06",
+        "category": "",
+        "resolution_date": "2026-03-13T19:00:00Z",
+        "entry_price": 0.46,
+        "max_entry_price": 0.506,
+        "tp_price": 0.621,
+        "sl_price": 0.345,
+        "tp_pct": 35.0,
+        "sl_pct": -25.0,
+        "expiry": "2026-03-13T19:00:00+00:00",
+        "edge_score": 40.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 12.37,
+          "dislocation": 11.0,
+          "external": 1.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.2,
+        "days_to_close": 6,
+        "liquidity_usd": 28896.5493,
+        "volume_24h": 163316.42878900006,
+        "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": "2026-03-06T20:00:42+00:00",
+        "resolution_type": "sl_hit",
+        "peak_price": 0.46,
+        "trough_price": 0.245,
+        "final_price": 0.345,
+        "hypothetical_pnl_pct": -25.0,
+        "current_price": 0.46,
+        "live_pnl_pct": 0.0
       }
     ],
     "metrics": {
       "total_signals_issued": 40,
-      "active_signals": 10,
-      "total_resolved": 30,
+      "active_signals": 9,
+      "total_resolved": 31,
       "wins": 13,
-      "losses": 17,
+      "losses": 18,
       "expired": 0,
-      "win_rate": 0.433,
+      "win_rate": 0.419,
       "avg_win_pct": 23.91,
-      "avg_loss_pct": -17.63,
-      "ev_per_signal": 0.37,
+      "avg_loss_pct": -18.04,
+      "ev_per_signal": -0.45,
       "by_tier": {
         "high": {
-          "total": 10,
+          "total": 11,
           "wins": 3,
-          "losses": 7,
-          "win_rate": 0.3,
-          "avg_pnl": -6.07
+          "losses": 8,
+          "win_rate": 0.273,
+          "avg_pnl": -7.79
         },
         "medium": {
           "total": 18,
@@ -1778,41 +1778,41 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 254,
-      "tokens_with_signal": 48,
-      "coverage_pct": 18.9,
-      "avg_score": 8.76,
+      "tokens_scored": 267,
+      "tokens_with_signal": 49,
+      "coverage_pct": 18.4,
+      "avg_score": 8.78,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 254,
-      "tokens_with_signal": 182,
-      "coverage_pct": 71.7,
-      "avg_score": 10.67,
-      "max_score": 22.71,
+      "tokens_scored": 267,
+      "tokens_with_signal": 194,
+      "coverage_pct": 72.7,
+      "avg_score": 10.69,
+      "max_score": 24.27,
       "quality_traders": 51,
-      "markets_indexed": 4666
+      "markets_indexed": 4628
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 254,
-      "tokens_with_signal": 227,
-      "coverage_pct": 89.4,
-      "avg_score": 9.7,
-      "max_score": 23.53
+      "tokens_scored": 267,
+      "tokens_with_signal": 239,
+      "coverage_pct": 89.5,
+      "avg_score": 9.78,
+      "max_score": 24.7
     },
     "external": {
       "active": true,
-      "tokens_scored": 254,
-      "tokens_with_signal": 254,
+      "tokens_scored": 267,
+      "tokens_with_signal": 267,
       "coverage_pct": 100.0,
-      "avg_score": 1.05,
+      "avg_score": 1.07,
       "max_score": 4.09
     }
   },
   "calibration": {
-    "total_trades": 30,
+    "total_trades": 31,
     "overall_win_rate": 0,
     "overall_avg_pnl_pct": 0,
     "quintiles": [],

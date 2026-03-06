@@ -37,11 +37,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.425,
-      "trough_price": 0.385,
+      "trough_price": 0.375,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.385,
-      "live_pnl_pct": -7.23
+      "current_price": 0.375,
+      "live_pnl_pct": -9.64
     },
     {
       "signal_id": "2fed7d16",
@@ -126,8 +126,8 @@
       "trough_price": 0.205,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.22,
-      "live_pnl_pct": 7.32
+      "current_price": 0.205,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "26119f95",
@@ -165,12 +165,12 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.315,
+      "peak_price": 0.32,
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.315,
-      "live_pnl_pct": 3.28
+      "current_price": 0.32,
+      "live_pnl_pct": 4.92
     },
     {
       "signal_id": "9e2dfb58",
@@ -298,8 +298,8 @@
       "trough_price": 0.3095,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3125,
-      "live_pnl_pct": 0.81
+      "current_price": 0.311,
+      "live_pnl_pct": 0.32
     },
     {
       "signal_id": "717c1e8b",
@@ -337,55 +337,12 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.35,
-      "trough_price": 0.33,
+      "peak_price": 0.345,
+      "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.35,
-      "live_pnl_pct": 4.48
-    },
-    {
-      "signal_id": "1469cfe7",
-      "timestamp": "2026-03-06T19:46:01.993167+00:00",
-      "status": "active",
-      "market_id": "1502746",
-      "condition_id": "",
-      "token_id": "10325246312333258612193836902232781852687024114865486936782827190148694389324",
-      "question": "BNP Paribas Open: Flavio Cobolli vs Miomir Kecmanovic",
-      "outcome": "Flavio Cobolli",
-      "slug": "atp-cobolli-kecmano-2026-03-06",
-      "category": "",
-      "resolution_date": "2026-03-13T19:00:00Z",
-      "entry_price": 0.46,
-      "max_entry_price": 0.506,
-      "tp_price": 0.621,
-      "sl_price": 0.345,
-      "tp_pct": 35.0,
-      "sl_pct": -25.0,
-      "expiry": "2026-03-13T19:00:00+00:00",
-      "edge_score": 40.2,
-      "edge_tier": "high",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 12.37,
-        "dislocation": 11.0,
-        "external": 1.0
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 2.2,
-      "days_to_close": 6,
-      "liquidity_usd": 28896.5493,
-      "volume_24h": 163316.42878900006,
-      "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
-      "tp_sources": [],
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.46,
-      "live_pnl_pct": 0.0
+      "current_price": 0.32,
+      "live_pnl_pct": -4.48
     },
     {
       "signal_id": "9bcd71a8",
@@ -423,12 +380,12 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
+      "peak_price": 0.03,
+      "trough_price": 0.028,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.028,
-      "live_pnl_pct": 0.0
+      "current_price": 0.03,
+      "live_pnl_pct": 7.14
     }
   ],
   "resolved": [
@@ -1729,6 +1686,49 @@
       "hypothetical_pnl_pct": 25.0,
       "current_price": 0.37,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "1469cfe7",
+      "timestamp": "2026-03-06T19:46:01.993167+00:00",
+      "status": "sl_hit",
+      "market_id": "1502746",
+      "condition_id": "",
+      "token_id": "10325246312333258612193836902232781852687024114865486936782827190148694389324",
+      "question": "BNP Paribas Open: Flavio Cobolli vs Miomir Kecmanovic",
+      "outcome": "Flavio Cobolli",
+      "slug": "atp-cobolli-kecmano-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T19:00:00Z",
+      "entry_price": 0.46,
+      "max_entry_price": 0.506,
+      "tp_price": 0.621,
+      "sl_price": 0.345,
+      "tp_pct": 35.0,
+      "sl_pct": -25.0,
+      "expiry": "2026-03-13T19:00:00+00:00",
+      "edge_score": 40.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 12.37,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.2,
+      "days_to_close": 6,
+      "liquidity_usd": 28896.5493,
+      "volume_24h": 163316.42878900006,
+      "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": "2026-03-06T20:00:42+00:00",
+      "resolution_type": "sl_hit",
+      "peak_price": 0.46,
+      "trough_price": 0.245,
+      "final_price": 0.345,
+      "hypothetical_pnl_pct": -25.0,
+      "current_price": 0.46,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -1748,14 +1748,15 @@
     "664912": "2026-03-06T17:28:35.373779+00:00",
     "654414": "2026-03-06T19:46:01.986531+00:00",
     "1504628": "2026-03-06T19:46:01.986539+00:00",
-    "654413": "2026-03-06T19:46:01.986543+00:00"
+    "654413": "2026-03-06T19:46:01.986543+00:00",
+    "1502746": "2026-03-06T20:06:28.405486+00:00"
   },
   "stats": {
     "total_signals": 40,
     "total_wins": 13,
-    "total_losses": 17,
+    "total_losses": 18,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T19:46:01.994262+00:00"
+  "last_updated": "2026-03-06T20:06:28.406006+00:00"
 }
