@@ -442,25 +442,36 @@ def verify_signals(
     signals_state: dict,
     fetch_price_history: Callable[[str], List[dict]],
     current_prices: dict = None,
+    active_market_ids: set = None,
 ) -> Tuple[List[dict], List[dict]]:
     """
     Verify all active signals against price history.
 
     For each active signal:
-      1. Check if signal expired (past expiry datetime)
-      2. Fetch price history (CLOB 60s candles) since signal was issued
-      3. Check if TP or SL was hit at any point
-      4. Update peak/trough tracking if still active
+      1. Check if the underlying market has resolved (settled YES/NO)
+      2. Check if signal expired (past expiry datetime)
+      3. Fetch price history (CLOB 60s candles) since signal was issued
+      4. Check if TP or SL was hit at any point
+      5. Update peak/trough tracking if still active
+
+    Market resolution detection:
+      - If the signal's market_id is no longer in the actively-traded markets list,
+        it's likely resolved/closed.
+      - Confirmed by checking if current price is near $1.00 (win) or $0.00 (loss).
+      - P&L is based on the actual payout ($1 or $0), NOT our TP/SL levels.
 
     Args:
         signals_state: Full signals state dict with 'active' list
         fetch_price_history: Callable(token_id) → List[{timestamp, price}]
         current_prices: Optional {token_id: price} fallback when history is empty
+        active_market_ids: Optional set of currently active/trading market IDs.
+            If a signal's market is not in this set, we check if it resolved.
 
     Returns:
         (newly_resolved, still_active) — lists of signal dicts
     """
     current_prices = current_prices or {}
+    active_market_ids = active_market_ids or set()
     active = signals_state.get('active', [])
     newly_resolved = []
     still_active = []
@@ -468,6 +479,38 @@ def verify_signals(
 
     for signal in active:
         token_id = signal['token_id']
+        entry = signal['entry_price']
+
+        # 0. Check if market has resolved (contract settled at $1 or $0)
+        # Detection: market no longer in active list AND price at extreme
+        if active_market_ids and signal['market_id'] not in active_market_ids:
+            cp = current_prices.get(token_id, 0)
+            if cp <= 0:
+                cp = safe_float(signal.get('current_price', 0))
+
+            if cp >= 0.95 or cp <= 0.05:
+                # Market resolved — payout is $1 (win) or $0 (loss)
+                payout = 1.0 if cp >= 0.50 else 0.0
+                pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
+                won = payout > entry
+
+                signal['status'] = 'market_resolved'
+                signal['resolved_at'] = now.isoformat()
+                signal['resolution_type'] = 'market_resolved'
+                signal['final_price'] = payout
+                signal['peak_price'] = signal.get('peak_price') or max(entry, cp)
+                signal['trough_price'] = signal.get('trough_price') or min(entry, cp)
+                signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
+                newly_resolved.append(signal)
+
+                result_str = 'WIN' if won else 'LOSS'
+                logger.info(
+                    f"MARKET RESOLVED ({result_str}): {signal['signal_id']} "
+                    f"entry=${entry:.4f} → payout=${payout:.2f} "
+                    f"pnl={pnl_pct:+.1f}% "
+                    f"({signal['question'][:40]}...)"
+                )
+                continue
 
         # 1. Check expiry
         try:
@@ -643,6 +686,15 @@ def update_signal_stats(signals_state: dict, newly_resolved: List[dict]):
             stats['total_losses'] = stats.get('total_losses', 0) + 1
             # Set cooldown for this market
             cooldowns[signal['market_id']] = datetime.now(timezone.utc).isoformat()
+        elif rt == 'market_resolved':
+            # Market settled at $1 or $0 — classify as win or loss
+            pnl = signal.get('hypothetical_pnl_pct', 0)
+            if pnl > 0:
+                stats['total_wins'] = stats.get('total_wins', 0) + 1
+            else:
+                stats['total_losses'] = stats.get('total_losses', 0) + 1
+                cooldowns[signal['market_id']] = datetime.now(timezone.utc).isoformat()
+            stats['total_market_resolved'] = stats.get('total_market_resolved', 0) + 1
         elif rt == 'expired':
             stats['total_expired'] = stats.get('total_expired', 0) + 1
 
@@ -672,9 +724,18 @@ def signal_metrics(signals_state: dict) -> dict:
     resolved = signals_state.get('resolved', [])
     active = signals_state.get('active', [])
 
-    wins = [s for s in resolved if s.get('resolution_type') == 'tp_hit']
-    losses = [s for s in resolved if s.get('resolution_type') == 'sl_hit']
+    # Classify resolved signals: market_resolved counts as win or loss based on P&L
+    tp_hits = [s for s in resolved if s.get('resolution_type') == 'tp_hit']
+    sl_hits = [s for s in resolved if s.get('resolution_type') == 'sl_hit']
+    market_resolved = [s for s in resolved if s.get('resolution_type') == 'market_resolved']
     expired = [s for s in resolved if s.get('resolution_type') == 'expired']
+
+    # Market-resolved signals split into wins (pnl > 0) and losses
+    mr_wins = [s for s in market_resolved if s.get('hypothetical_pnl_pct', 0) > 0]
+    mr_losses = [s for s in market_resolved if s.get('hypothetical_pnl_pct', 0) <= 0]
+
+    wins = tp_hits + mr_wins
+    losses = sl_hits + mr_losses
 
     total_resolved = len(resolved)
     win_count = len(wins)
@@ -703,8 +764,10 @@ def signal_metrics(signals_state: dict) -> dict:
     tier_stats = {}
     for tier_name in ['high', 'medium', 'low']:
         tier_resolved = [s for s in resolved if s.get('edge_tier') == tier_name]
-        tier_wins = [s for s in tier_resolved if s.get('resolution_type') == 'tp_hit']
-        tier_losses = [s for s in tier_resolved if s.get('resolution_type') == 'sl_hit']
+        tier_wins = [s for s in tier_resolved if s.get('resolution_type') == 'tp_hit'
+                     or (s.get('resolution_type') == 'market_resolved' and s.get('hypothetical_pnl_pct', 0) > 0)]
+        tier_losses = [s for s in tier_resolved if s.get('resolution_type') == 'sl_hit'
+                       or (s.get('resolution_type') == 'market_resolved' and s.get('hypothetical_pnl_pct', 0) <= 0)]
         tier_decisive = len(tier_wins) + len(tier_losses)
         tier_stats[tier_name] = {
             'total': len(tier_resolved),
@@ -723,6 +786,7 @@ def signal_metrics(signals_state: dict) -> dict:
         'wins': win_count,
         'losses': loss_count,
         'expired': len(expired),
+        'market_resolved': len(market_resolved),
         'win_rate': round(win_rate, 3),
         'avg_win_pct': round(avg_win_pct, 2),
         'avg_loss_pct': round(avg_loss_pct, 2),

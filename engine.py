@@ -267,11 +267,16 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     signals_path = os.path.join(data_dir, 'signals_state.json')
     signals_state = load_signals(signals_path)
 
+    # Build set of currently active/trading market IDs so we can detect
+    # markets that have resolved (settled YES/NO) since the signal was issued
+    active_market_ids = {m['market_id'] for m in markets}
+
     logger.info(f"Step 7: Verifying {len(signals_state.get('active', []))} active signals...")
     newly_resolved, still_active = verify_signals(
         signals_state,
         fetch_price_history=poly_client.fetch_price_history,
         current_prices=current_prices,
+        active_market_ids=active_market_ids,
     )
 
     if newly_resolved:
@@ -282,7 +287,11 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         wins = sum(1 for s in newly_resolved if s.get('resolution_type') == 'tp_hit')
         losses = sum(1 for s in newly_resolved if s.get('resolution_type') == 'sl_hit')
         expired = sum(1 for s in newly_resolved if s.get('resolution_type') == 'expired')
-        logger.info(f"Signal verification: {len(newly_resolved)} resolved ({wins} wins, {losses} losses, {expired} expired)")
+        mkt_resolved = sum(1 for s in newly_resolved if s.get('resolution_type') == 'market_resolved')
+        logger.info(
+            f"Signal verification: {len(newly_resolved)} resolved "
+            f"({wins} TP, {losses} SL, {mkt_resolved} market settled, {expired} expired)"
+        )
 
         # Send Telegram notifications for resolved signals
         for resolved_sig in newly_resolved:

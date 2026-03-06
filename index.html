@@ -83,6 +83,8 @@
   .status-active { background: rgba(88,166,255,0.15); color: var(--blue); }
   .status-tp { background: rgba(63,185,80,0.15); color: var(--green); }
   .status-sl { background: rgba(248,81,73,0.15); color: var(--red); }
+  .status-mkt-win { background: rgba(63,185,80,0.25); color: var(--green); }
+  .status-mkt-loss { background: rgba(248,81,73,0.25); color: var(--red); }
   .status-expired { background: rgba(139,148,158,0.15); color: var(--text2); }
 
   .tabs { display: flex; gap: 2px; margin-bottom: 16px; background: var(--surface2); padding: 2px; border-radius: 6px; width: fit-content; }
@@ -336,7 +338,7 @@
     <tbody></tbody>
   </table>
   <div class="empty-state" id="resolved-empty" style="display:none;">
-    <p>No resolved signals yet. Signals resolve when TP, SL, or expiry is hit.</p>
+    <p>No resolved signals yet. Signals resolve when TP, SL, market settlement, or expiry is hit.</p>
   </div>
 </div>
 
@@ -427,7 +429,8 @@ function renderSignalKPIs() {
 
   const wr = metrics.win_rate || 0;
   setText('signal-winrate', wr > 0 ? (wr * 100).toFixed(1) + '%' : '—');
-  setText('signal-wl', `${metrics.wins || 0}W / ${metrics.losses || 0}L / ${metrics.expired || 0}E`);
+  const mr = metrics.market_resolved || 0;
+  setText('signal-wl', `${metrics.wins || 0}W / ${metrics.losses || 0}L / ${mr}S / ${metrics.expired || 0}E`);
 
   const ev = metrics.ev_per_signal || 0;
   const evEl = document.getElementById('ev-per-signal');
@@ -531,6 +534,10 @@ function renderResolvedSignals() {
     let statusLabel = rt;
     if (rt === 'tp_hit') { statusClass = 'status-tp'; statusLabel = 'TP HIT'; }
     else if (rt === 'sl_hit') { statusClass = 'status-sl'; statusLabel = 'SL HIT'; }
+    else if (rt === 'market_resolved') {
+      if (pnl > 0) { statusClass = 'status-mkt-win'; statusLabel = 'SETTLED WIN'; }
+      else { statusClass = 'status-mkt-loss'; statusLabel = 'SETTLED LOSS'; }
+    }
     else if (rt === 'expired') { statusClass = 'status-expired'; statusLabel = 'EXPIRED'; }
 
     tr.innerHTML = `
@@ -710,9 +717,10 @@ function renderResolutionChart() {
   const metrics = (DATA.signals || {}).metrics || {};
   const wins = metrics.wins || 0;
   const losses = metrics.losses || 0;
+  const settled = metrics.market_resolved || 0;
   const expired = metrics.expired || 0;
   const activeCount = metrics.active_signals || 0;
-  const total = wins + losses + expired + activeCount;
+  const total = wins + losses + settled + expired + activeCount;
 
   if (total === 0) {
     ctx.fillStyle = 'rgba(139,148,158,0.3)';
@@ -725,6 +733,7 @@ function renderResolutionChart() {
   const slices = [
     { label: `Wins (${wins})`, value: wins, color: '#3fb950' },
     { label: `Losses (${losses})`, value: losses, color: '#f85149' },
+    { label: `Settled (${settled})`, value: settled, color: '#d2a8ff' },
     { label: `Expired (${expired})`, value: expired, color: '#8b949e' },
     { label: `Active (${activeCount})`, value: activeCount, color: '#58a6ff' },
   ].filter(s => s.value > 0);
