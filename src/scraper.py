@@ -270,8 +270,20 @@ class PolymarketClient:
             return []
 
         # Normalize response format
+        # CLOB API returns {"history": [...]} — NOT {"data": [...]}
         history = []
-        data = result.get("data", []) if isinstance(result, dict) else result
+        if isinstance(result, dict):
+            data = result.get("history") or result.get("data") or []
+        elif isinstance(result, list):
+            data = result
+        else:
+            data = []
+
+        if not data:
+            logger.debug(
+                f"Empty price history for token {token_id[:30]}... "
+                f"(response keys: {list(result.keys()) if isinstance(result, dict) else type(result).__name__})"
+            )
 
         for entry in data:
             if isinstance(entry, dict):

@@ -511,7 +511,12 @@ def verify_signals(
             logger.warning(f"Price history failed for signal {signal['signal_id']}: {e}")
             history = []
 
-        if not history:
+        if history:
+            logger.info(
+                f"Signal {signal['signal_id']}: got {len(history)} price points, "
+                f"checking TP={signal['tp_price']:.4f} SL={signal['sl_price']:.4f}"
+            )
+        else:
             logger.info(
                 f"No price history for signal {signal['signal_id']} "
                 f"token={token_id[:20]}... — using current_prices fallback"
