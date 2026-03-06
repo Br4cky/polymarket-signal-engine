@@ -126,8 +126,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0165,
-      "live_pnl_pct": 0.0
+      "current_price": 0.018,
+      "live_pnl_pct": 9.09
     },
     {
       "signal_id": "0308ac14",
@@ -255,8 +255,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.049,
-      "live_pnl_pct": 0.0
+      "current_price": 0.0515,
+      "live_pnl_pct": 5.1
     },
     {
       "signal_id": "2fed7d16",
@@ -341,8 +341,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.205,
-      "live_pnl_pct": 0.0
+      "current_price": 0.22,
+      "live_pnl_pct": 7.32
     },
     {
       "signal_id": "35bee424",
@@ -386,16 +386,104 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.935,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "b88008de",
+      "timestamp": "2026-03-06T01:04:52.768251+00:00",
+      "status": "active",
+      "market_id": "1488941",
+      "condition_id": "",
+      "token_id": "63650528988464457358697720207285461957267838888440224435522621433694931998818",
+      "question": "BNP Paribas Open: Fabian Marozsan vs Roberto Bautista Agut",
+      "outcome": "Fabian Marozsan",
+      "slug": "atp-marozsa-agut-2026-03-04",
+      "category": "",
+      "resolution_date": "2026-03-11T19:00:00Z",
+      "entry_price": 0.285,
+      "max_entry_price": 0.3135,
+      "tp_price": 0.3847,
+      "sl_price": 0.2137,
+      "tp_pct": 35.0,
+      "sl_pct": -25.0,
+      "expiry": "2026-03-11T19:00:00+00:00",
+      "edge_score": 43.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.17,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.5,
+      "days_to_close": 5,
+      "liquidity_usd": 42459.8024,
+      "volume_24h": 228645.088638,
+      "rationale": "Smart money 16/25 (4 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.285,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "13e055ae",
+      "timestamp": "2026-03-06T01:04:52.768657+00:00",
+      "status": "active",
+      "market_id": "1480650",
+      "condition_id": "",
+      "token_id": "27496941482146408319292018016197000403558681643338641794163291841776480539201",
+      "question": "Will Bitcoin reach $80,000 March 2-8?",
+      "outcome": "Yes",
+      "slug": "will-bitcoin-reach-80k-march-2-8",
+      "category": "",
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "entry_price": 0.0395,
+      "max_entry_price": 0.0474,
+      "tp_price": 0.0672,
+      "sl_price": 0.0336,
+      "tp_pct": 70.0,
+      "sl_pct": -15.0,
+      "expiry": "2026-03-09T04:00:00+00:00",
+      "edge_score": 41.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 12.0,
+        "dislocation": 12.0,
+        "external": 1.0
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 25.3,
+      "days_to_close": 3,
+      "liquidity_usd": 45879.51019,
+      "volume_24h": 103633.59817800001,
+      "rationale": "Structural 10/30 (Manifold div 44.8%) | Smart money 12/25 (2 whales) | Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [
+        "manifold"
+      ],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.0395,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 9,
+    "total_signals": 11,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T00:01:13.899992+00:00"
+  "last_updated": "2026-03-06T01:04:52.768989+00:00"
 }
