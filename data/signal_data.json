@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T07:08:44.086690+00:00",
+    "timestamp": "2026-03-06T07:57:56.300781+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 206,
+    "tokens_scored": 213,
     "opportunities_found": 13,
     "engine_version": "4.0.0"
   },
@@ -48,8 +48,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.425,
-        "live_pnl_pct": 2.41
+        "current_price": 0.415,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "a6c61ad5",
@@ -263,8 +263,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.054,
-        "live_pnl_pct": 10.2
+        "current_price": 0.048,
+        "live_pnl_pct": -2.04
       },
       {
         "signal_id": "2fed7d16",
@@ -611,8 +611,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.08,
-        "live_pnl_pct": 6.67
+        "current_price": 0.09,
+        "live_pnl_pct": 20.0
       },
       {
         "signal_id": "f5e6e08f",
@@ -654,8 +654,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.091,
-        "live_pnl_pct": -2.67
+        "current_price": 0.088,
+        "live_pnl_pct": -5.88
       },
       {
         "signal_id": "85510544",
@@ -742,12 +742,55 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.013,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "cae9dfa1",
+        "timestamp": "2026-03-06T07:57:56.298992+00:00",
+        "status": "active",
+        "market_id": "1483987",
+        "condition_id": "",
+        "token_id": "40709683873519422087268720613155229943709263496565749339852053480804313845146",
+        "question": "Will Elon Musk post <40 tweets from March 5 to March 7, 2026?",
+        "outcome": "Yes",
+        "slug": "elon-musk-of-tweets-march-5-march-7-0-39",
+        "category": "",
+        "resolution_date": "2026-03-07T17:00:00Z",
+        "entry_price": 0.067,
+        "max_entry_price": 0.077,
+        "tp_price": 0.0838,
+        "sl_price": 0.057,
+        "tp_pct": 25.0,
+        "sl_pct": -15.0,
+        "expiry": "2026-03-07T17:00:00+00:00",
+        "edge_score": 39.4,
+        "edge_tier": "medium",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 0.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "convexity_band": "10x",
+        "potential_multiple": 14.9,
+        "days_to_close": 1,
+        "liquidity_usd": 8052.6454,
+        "volume_24h": 88355.530877,
+        "rationale": "Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.067,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [],
     "metrics": {
-      "total_signals_issued": 17,
-      "active_signals": 17,
+      "total_signals_issued": 18,
+      "active_signals": 18,
       "total_resolved": 0,
       "wins": 0,
       "losses": 0,
@@ -784,37 +827,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 206,
-      "tokens_with_signal": 50,
-      "coverage_pct": 24.3,
-      "avg_score": 8.82,
+      "tokens_scored": 213,
+      "tokens_with_signal": 53,
+      "coverage_pct": 24.9,
+      "avg_score": 9.05,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 206,
-      "tokens_with_signal": 133,
-      "coverage_pct": 64.6,
-      "avg_score": 7.55,
+      "tokens_scored": 213,
+      "tokens_with_signal": 127,
+      "coverage_pct": 59.6,
+      "avg_score": 7.79,
       "max_score": 19.49,
-      "quality_traders": 52,
-      "markets_indexed": 4708
+      "quality_traders": 51,
+      "markets_indexed": 4638
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 206,
-      "tokens_with_signal": 165,
-      "coverage_pct": 80.1,
-      "avg_score": 8.72,
+      "tokens_scored": 213,
+      "tokens_with_signal": 171,
+      "coverage_pct": 80.3,
+      "avg_score": 8.56,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 206,
-      "tokens_with_signal": 206,
+      "tokens_scored": 213,
+      "tokens_with_signal": 213,
       "coverage_pct": 100.0,
-      "avg_score": 1.16,
-      "max_score": 9.0
+      "avg_score": 1.11,
+      "max_score": 7.5
     }
   },
   "calibration": {}
