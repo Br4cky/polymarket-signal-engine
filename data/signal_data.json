@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T05:07:09.966599+00:00",
+    "timestamp": "2026-03-06T06:04:32.442304+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 200,
-    "opportunities_found": 13,
+    "tokens_scored": 197,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -48,8 +48,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.415,
-        "live_pnl_pct": 0.0
+        "current_price": 0.425,
+        "live_pnl_pct": 2.41
       },
       {
         "signal_id": "a6c61ad5",
@@ -263,8 +263,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0525,
-        "live_pnl_pct": 7.14
+        "current_price": 0.063,
+        "live_pnl_pct": 28.57
       },
       {
         "signal_id": "2fed7d16",
@@ -480,8 +480,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0315,
-        "live_pnl_pct": -20.25
+        "current_price": 0.0115,
+        "live_pnl_pct": -70.89
       },
       {
         "signal_id": "c0667f71",
@@ -611,8 +611,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.075,
-        "live_pnl_pct": 0.0
+        "current_price": 0.065,
+        "live_pnl_pct": -13.33
       },
       {
         "signal_id": "f5e6e08f",
@@ -654,14 +654,57 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0935,
+        "current_price": 0.095,
+        "live_pnl_pct": 1.6
+      },
+      {
+        "signal_id": "85510544",
+        "timestamp": "2026-03-06T06:04:32.440638+00:00",
+        "status": "active",
+        "market_id": "1506319",
+        "condition_id": "",
+        "token_id": "7993567674793395655878917157953086542601037313663379679091071448401657456973",
+        "question": "BNP Paribas Open: Michael Zheng vs Vit Kopriva",
+        "outcome": "Michael Zheng",
+        "slug": "atp-zheng-kopriva-2026-03-05",
+        "category": "",
+        "resolution_date": "2026-03-13T03:30:00Z",
+        "entry_price": 0.245,
+        "max_entry_price": 0.2695,
+        "tp_price": 0.3307,
+        "sl_price": 0.1837,
+        "tp_pct": 35.0,
+        "sl_pct": -25.0,
+        "expiry": "2026-03-13T03:30:00+00:00",
+        "edge_score": 43.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.0,
+          "dislocation": 11.0,
+          "external": 2.86
+        },
+        "convexity_band": "5x",
+        "potential_multiple": 4.1,
+        "days_to_close": 6,
+        "liquidity_usd": 28561.5795,
+        "volume_24h": 143521.34047800006,
+        "rationale": "Smart money 14/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 2.9/15",
+        "tp_sources": [],
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.245,
         "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [],
     "metrics": {
-      "total_signals_issued": 15,
-      "active_signals": 15,
+      "total_signals_issued": 16,
+      "active_signals": 16,
       "total_resolved": 0,
       "wins": 0,
       "losses": 0,
@@ -698,36 +741,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 200,
-      "tokens_with_signal": 44,
-      "coverage_pct": 22.0,
-      "avg_score": 8.38,
+      "tokens_scored": 197,
+      "tokens_with_signal": 48,
+      "coverage_pct": 24.4,
+      "avg_score": 8.23,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 200,
-      "tokens_with_signal": 137,
-      "coverage_pct": 68.5,
-      "avg_score": 8.99,
-      "max_score": 24.62,
+      "tokens_scored": 197,
+      "tokens_with_signal": 129,
+      "coverage_pct": 65.5,
+      "avg_score": 7.61,
+      "max_score": 19.5,
       "quality_traders": 52,
-      "markets_indexed": 4758
+      "markets_indexed": 4812
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 200,
-      "tokens_with_signal": 164,
-      "coverage_pct": 82.0,
-      "avg_score": 9.22,
+      "tokens_scored": 197,
+      "tokens_with_signal": 153,
+      "coverage_pct": 77.7,
+      "avg_score": 8.89,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 200,
-      "tokens_with_signal": 200,
+      "tokens_scored": 197,
+      "tokens_with_signal": 197,
       "coverage_pct": 100.0,
-      "avg_score": 1.12,
+      "avg_score": 1.14,
       "max_score": 4.18
     }
   },
