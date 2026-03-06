@@ -433,6 +433,7 @@ def _make_resolution(
 def verify_signals(
     signals_state: dict,
     fetch_price_history: Callable[[str], List[dict]],
+    current_prices: dict = None,
 ) -> Tuple[List[dict], List[dict]]:
     """
     Verify all active signals against price history.
@@ -446,10 +447,12 @@ def verify_signals(
     Args:
         signals_state: Full signals state dict with 'active' list
         fetch_price_history: Callable(token_id) → List[{timestamp, price}]
+        current_prices: Optional {token_id: price} fallback when history is empty
 
     Returns:
         (newly_resolved, still_active) — lists of signal dicts
     """
+    current_prices = current_prices or {}
     active = signals_state.get('active', [])
     newly_resolved = []
     still_active = []
@@ -498,10 +501,21 @@ def verify_signals(
             history = fetch_price_history(token_id)
         except Exception as e:
             logger.warning(f"Price history failed for signal {signal['signal_id']}: {e}")
-            still_active.append(signal)
-            continue
+            history = []
 
         if not history:
+            logger.info(
+                f"No price history for signal {signal['signal_id']} "
+                f"token={token_id[:20]}... — using current_prices fallback"
+            )
+            # Fallback: update from current_prices map if available
+            cp = current_prices.get(token_id, 0)
+            if cp > 0 and cp != signal.get('current_price'):
+                entry = signal['entry_price']
+                signal['current_price'] = round(cp, 4)
+                signal['live_pnl_pct'] = round(
+                    ((cp - entry) / entry * 100) if entry > 0 else 0, 2
+                )
             still_active.append(signal)
             continue
 

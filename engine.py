@@ -10,8 +10,7 @@ then verifies them retroactively using price history on subsequent scans.
 Usage:
   python engine.py --once              # Single scan, emit signals, verify active
   python engine.py --loop              # Continuous (every 15 min)
-  python engine.py --execute --once    # Legacy: also runs paper trade close logic
-  python engine.py --init              # Reset portfolio + signals
+  python engine.py --init              # Reset signals state
 """
 
 import argparse
@@ -34,13 +33,8 @@ from src.news_signals import NewsSignals
 from src.manifold_client import ManifoldClient
 from src.scorer import compute_edge_score, rank_opportunities
 from src.event_clustering import extract_base_event, are_conflicting
-from src.calibration import compute_calibration, suggest_parameter_adjustments
+from src.calibration import compute_calibration
 from src.signal_log import SignalLogger
-from src.portfolio import (
-    load_portfolio, save_portfolio, create_portfolio,
-    execute_paper_trade, update_portfolio, auto_close_positions,
-    portfolio_summary, is_on_cooldown
-)
 from src.signal_manager import (
     load_signals, save_signals, emit_signal, verify_signals,
     is_signal_on_cooldown, update_signal_stats, signal_metrics
@@ -105,9 +99,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     signal_logger = SignalLogger(data_dir)
 
-    portfolio_path = os.path.join(data_dir, 'portfolio_state.json')
-    portfolio = load_portfolio(portfolio_path, config)
-
     # ── Step 1: Fetch Polymarket data ──
     logger.info("Step 1: Fetching Polymarket data...")
     markets = poly_client.fetch_enriched_markets(max_markets=300)
@@ -115,7 +106,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
     if not markets:
         logger.warning("No markets fetched. Check API connectivity.")
-        _write_dashboard([], portfolio, config, data_dir)
+        _write_dashboard([], config, data_dir)
         return
 
     # ── Step 2: Fetch cross-platform data ──
@@ -272,21 +263,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         tok = item['token']
         current_prices[tok['token_id']] = safe_float(tok['current_price'])
 
-    # ── Step 6a: Legacy position management (runs until existing positions close) ──
-    fund = portfolio.get('main_pool')
-    if fund and fund.get('positions'):
-        update_portfolio(portfolio, current_prices)
-        closed = auto_close_positions(fund, current_prices, config)
-        if closed:
-            logger.info(f"Legacy auto-closed {len(closed)} positions")
-            for trade in closed:
-                signal_logger.log_exit(fund['name'], trade)
-        remaining = len(fund.get('positions', []))
-        if remaining > 0:
-            logger.info(f"Legacy positions remaining: {remaining} (will close naturally)")
-    else:
-        logger.info("No legacy positions — paper trading fully retired")
-
     # ── Step 7: Verify active signals against price history ──
     signals_path = os.path.join(data_dir, 'signals_state.json')
     signals_state = load_signals(signals_path)
@@ -295,6 +271,7 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     newly_resolved, still_active = verify_signals(
         signals_state,
         fetch_price_history=poly_client.fetch_price_history,
+        current_prices=current_prices,
     )
 
     if newly_resolved:
@@ -329,12 +306,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
             base = extract_base_event(s.get('question', ''), s.get('slug', ''))
             cluster_counts[base] = cluster_counts.get(base, 0) + 1
 
-        # Also count legacy positions in clusters
-        if fund and fund.get('positions'):
-            for p in fund['positions']:
-                base = extract_base_event(p.get('question', ''), p.get('slug', ''))
-                cluster_counts[base] = cluster_counts.get(base, 0) + 1
-
         signals_emitted = 0
         cooldown_skips = 0
         cluster_skips = 0
@@ -364,8 +335,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
 
             # Conflict check: don't signal opposing directions
             all_active_questions = [s.get('question', '') for s in signals_state['active']]
-            if fund and fund.get('positions'):
-                all_active_questions.extend(p.get('question', '') for p in fund['positions'])
             opp_question = opp.get('question', '')
             has_conflict = any(are_conflicting(opp_question, q) for q in all_active_questions)
             if has_conflict:
@@ -398,34 +367,25 @@ def run_pipeline(config: dict, execute_trades: bool = False):
     # Save signals state
     save_signals(signals_state, signals_path)
 
-    # ── Step 8: Calibration analysis ──
-    all_realized = portfolio.get('main_pool', {}).get('realized_trades', [])
-    calibration = compute_calibration(all_realized)
+    # ── Step 8: Calibration from resolved signals ──
+    resolved_signals = signals_state.get('resolved', [])
+    calibration = compute_calibration(resolved_signals) if len(resolved_signals) >= 10 else {}
     if calibration.get('total_trades', 0) >= 20:
         cal_score = calibration.get('calibration_score', 50)
         logger.info(
             f"Calibration: score={cal_score}, "
             f"win_rate={calibration.get('overall_win_rate', 0):.1%}, "
-            f"trades={calibration['total_trades']}"
+            f"signals={calibration['total_trades']}"
         )
-        for rec in calibration.get('recommendations', []):
-            logger.info(f"  Recommendation: {rec}")
 
-        adjustments = suggest_parameter_adjustments(calibration, config)
-        if adjustments:
-            logger.warning(f"Suggested parameter changes: {adjustments}")
-
-    # ── Step 9: Save and write dashboard ──
-    save_portfolio(portfolio, portfolio_path)
-
+    # ── Step 9: Write dashboard ──
     layer_health = _compute_layer_health(scored_items, whale_tracker)
     sig_metrics = signal_metrics(signals_state)
-    _write_dashboard(opportunities, portfolio, config, data_dir, layer_health, calibration,
+    _write_dashboard(opportunities, config, data_dir, layer_health, calibration,
                      signals_state=signals_state, sig_metrics=sig_metrics,
                      markets_scanned=len(markets), tokens_scored=len(scored_items))
 
     elapsed = time.time() - start
-    # Log signal-focused summary
     logger.info(
         f"Pipeline complete in {elapsed:.1f}s — "
         f"Signals: {sig_metrics['active_signals']} active, "
@@ -433,15 +393,6 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         f"(win rate: {sig_metrics['win_rate']:.0%}, "
         f"EV: {sig_metrics['ev_per_signal']:+.1f}%/signal)"
     )
-    # Legacy portfolio summary (while positions exist)
-    fund = portfolio.get('main_pool', {})
-    if fund.get('positions'):
-        summary = portfolio_summary(portfolio)
-        signal_logger.log_summary(summary)
-        logger.info(
-            f"Legacy portfolio: ${summary['combined_equity']:.2f} equity, "
-            f"{summary['open_positions']} positions remaining"
-        )
 
 
 def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
@@ -473,38 +424,11 @@ def _compute_layer_health(scored_items: list, whale_tracker) -> dict:
     return health
 
 
-def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_dir: str,
+def _write_dashboard(opportunities: list, config: dict, data_dir: str,
                      layer_health: dict = None, calibration: dict = None,
                      signals_state: dict = None, sig_metrics: dict = None,
                      markets_scanned: int = 0, tokens_scored: int = 0):
     """Write signal_data.json for the dashboard."""
-    by_category = {}
-    by_convexity = {}
-
-    for opp in opportunities:
-        cat = opp.get('category', 'other')
-        band = opp.get('convexity_band', 'other')
-
-        by_category.setdefault(cat, {'count': 0, 'total_edge': 0})
-        by_category[cat]['count'] += 1
-        by_category[cat]['total_edge'] += opp['edge_score']
-
-        by_convexity.setdefault(band, {'count': 0, 'total_edge': 0, 'total_liquidity': 0})
-        by_convexity[band]['count'] += 1
-        by_convexity[band]['total_edge'] += opp['edge_score']
-        by_convexity[band]['total_liquidity'] += opp.get('liquidity_usd', 0)
-
-    for v in by_category.values():
-        v['avg_edge'] = round(v['total_edge'] / v['count'], 1) if v['count'] > 0 else 0
-        del v['total_edge']
-    for v in by_convexity.values():
-        v['avg_edge'] = round(v['total_edge'] / v['count'], 1) if v['count'] > 0 else 0
-        del v['total_edge']
-
-    top_n = config.get('dashboard', {}).get('top_opportunities_count', 25)
-
-    pool = portfolio.get('main_pool', {})
-
     data = {
         'metadata': {
             'timestamp': datetime.now(timezone.utc).isoformat(),
@@ -513,21 +437,10 @@ def _write_dashboard(opportunities: list, portfolio: dict, config: dict, data_di
             'opportunities_found': len(opportunities),
             'engine_version': '4.0.0'
         },
-        # Signal-based tracking (primary)
         'signals': {
             'active': (signals_state or {}).get('active', []),
             'recent_resolved': (signals_state or {}).get('resolved', [])[-50:],
             'metrics': sig_metrics or {},
-        },
-        # Legacy portfolio (will empty out as positions close)
-        'portfolio': portfolio_summary(portfolio),
-        'positions': pool.get('positions', []),
-        'realized_trades': pool.get('realized_trades', [])[-50:],
-        # Opportunities (scored tokens above threshold)
-        'opportunities': opportunities[:top_n],
-        'statistics': {
-            'by_category': by_category,
-            'by_convexity': by_convexity
         },
         'layer_health': layer_health or {},
         'calibration': calibration or {}
@@ -546,26 +459,19 @@ def main():
     parser.add_argument('--once', action='store_true', help='Run once and exit')
     parser.add_argument('--loop', action='store_true', help='Run continuously')
     parser.add_argument('--interval', type=int, default=900, help='Loop interval (seconds)')
-    parser.add_argument('--execute', action='store_true', help='Legacy: also run paper trade close logic')
-    parser.add_argument('--init', action='store_true', help='Reset portfolio + signals')
+    parser.add_argument('--execute', action='store_true', help='(Ignored, kept for GH Actions compat)')
+    parser.add_argument('--init', action='store_true', help='Reset signals state')
     args = parser.parse_args()
 
     config = load_config()
 
-    if args.execute:
-        config['trading']['auto_trade_enabled'] = True
-
     if args.init:
         data_dir = os.path.join(SCRIPT_DIR, 'data')
         os.makedirs(data_dir, exist_ok=True)
-        path = os.path.join(data_dir, 'portfolio_state.json')
-        portfolio = create_portfolio(config)
-        save_portfolio(portfolio, path)
-        # Also reset signals state
         from src.signal_manager import _create_empty_state, save_signals as _save_signals
         signals_path = os.path.join(data_dir, 'signals_state.json')
         _save_signals(_create_empty_state(), signals_path)
-        logger.info("Portfolio and signals reset to initial state")
+        logger.info("Signals state reset")
         if not args.once and not args.loop:
             return
 

@@ -184,9 +184,8 @@
     <div class="card-sub" id="avg-loss-sub"></div>
   </div>
   <div class="card">
-    <div class="card-title">Opportunities</div>
-    <div class="card-value" id="opp-count"></div>
-    <div class="card-sub" id="markets-scanned"></div>
+    <div class="card-title">Markets Scanned</div>
+    <div class="card-value" id="markets-scanned"></div>
   </div>
 </div>
 
@@ -341,90 +340,6 @@
   </div>
 </div>
 
-<!-- Top Opportunities -->
-<div class="section-title">Top Opportunities <span class="badge" id="opp-badge">0</span></div>
-
-<div class="layer-legend">
-  <span><span class="legend-dot layer-s"></span>Structural</span>
-  <span><span class="legend-dot layer-m"></span>Smart Money</span>
-  <span><span class="legend-dot layer-d"></span>Dislocation</span>
-  <span><span class="legend-dot layer-e"></span>External</span>
-</div>
-
-<div class="card" style="overflow-x:auto;">
-  <table id="opp-table">
-    <thead>
-      <tr>
-        <th onclick="sortTable('opp-table',0)">Market</th>
-        <th onclick="sortTable('opp-table',1)">Outcome</th>
-        <th onclick="sortTable('opp-table',2)">Price</th>
-        <th onclick="sortTable('opp-table',3)">Edge</th>
-        <th onclick="sortTable('opp-table',4)">Layers</th>
-        <th onclick="sortTable('opp-table',5)">Multiple</th>
-        <th onclick="sortTable('opp-table',6)">Liquidity</th>
-        <th onclick="sortTable('opp-table',7)">Days</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <div class="empty-state" id="opp-empty" style="display:none;">
-    <p>No opportunities above threshold yet.</p>
-  </div>
-</div>
-
-<!-- Legacy Positions (collapsible, shows only if any remain) -->
-<div id="legacy-section" style="display:none;">
-  <div class="section-title collapsible-header" onclick="toggleLegacy()">
-    Legacy Positions <span class="badge badge-yellow" id="legacy-badge">0</span>
-    <span style="font-size:12px;color:var(--text2);margin-left:8px;">(paper trading retired — closing naturally)</span>
-  </div>
-  <div id="legacy-content">
-    <div class="grid grid-3" style="margin-bottom:16px;">
-      <div class="card">
-        <div class="card-title">Equity</div>
-        <div class="card-value" id="legacy-equity"></div>
-      </div>
-      <div class="card">
-        <div class="card-title">Unrealised P&L</div>
-        <div class="card-value" id="legacy-pnl"></div>
-      </div>
-      <div class="card">
-        <div class="card-title">Win Rate (Paper)</div>
-        <div class="card-value" id="legacy-wr"></div>
-      </div>
-    </div>
-    <div class="card" style="overflow-x:auto;">
-      <table id="pos-table">
-        <thead>
-          <tr>
-            <th>Market</th><th>Side</th><th>Entry</th><th>Current</th><th>P&L</th><th>Edge</th><th>Opened</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- Signal Statistics -->
-<div class="section-title">Opportunity Statistics</div>
-<div class="grid grid-2">
-  <div class="card">
-    <div class="card-title">By Category</div>
-    <table id="cat-table">
-      <thead><tr><th>Category</th><th>Count</th><th>Avg Edge</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-  <div class="card">
-    <div class="card-title">By Convexity Band</div>
-    <table id="band-table">
-      <thead><tr><th>Band</th><th>Count</th><th>Avg Edge</th><th>Liquidity</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-</div>
-
 <!-- Model Calibration -->
 <div id="calibration-section" style="display:none;">
   <div class="section-title">Model Calibration</div>
@@ -487,10 +402,7 @@ function render() {
   renderSignalTiers();
   renderActiveSignals();
   renderResolvedSignals();
-  renderOpportunities();
   renderLayerHealth();
-  renderLegacyPositions();
-  renderStatistics();
   renderEVChart();
   renderResolutionChart();
   renderCalibration();
@@ -509,7 +421,6 @@ function renderMeta() {
 function renderSignalKPIs() {
   const sig = DATA.signals || {};
   const metrics = sig.metrics || {};
-  const opps = DATA.opportunities || [];
 
   setText('active-signals', metrics.active_signals || 0);
   setText('total-issued', `${metrics.total_signals_issued || 0} total issued`);
@@ -534,7 +445,6 @@ function renderSignalKPIs() {
   setText('avg-loss', avgL !== 0 ? `${avgL.toFixed(1)}%` : '—');
   setText('avg-loss-sub', `${metrics.losses || 0} losing signals`);
 
-  setText('opp-count', opps.length);
   setText('markets-scanned', `${DATA.metadata?.markets_scanned || 0} markets · ${DATA.metadata?.tokens_scored || 0} tokens scored`);
 }
 
@@ -636,35 +546,6 @@ function renderResolvedSignals() {
   }
 }
 
-function renderOpportunities() {
-  const opps = DATA.opportunities || [];
-  document.getElementById('opp-badge').textContent = opps.length;
-  const tbody = document.querySelector('#opp-table tbody');
-  tbody.innerHTML = '';
-  document.getElementById('opp-empty').style.display = opps.length ? 'none' : 'block';
-
-  for (const o of opps) {
-    const tr = document.createElement('tr');
-    const layers = o.layer_scores || {};
-    const slug = o.slug || '';
-    const link = slug ? `https://polymarket.com/event/${slug}` : '#';
-    tr.innerHTML = `
-      <td><a class="question-link" href="${link}" target="_blank" title="${esc(o.question)}">${esc(trunc(o.question, 50))}</a></td>
-      <td>${o.outcome || '—'}</td>
-      <td>${cents(o.current_price)}</td>
-      <td><div class="edge-bar">
-        <div class="edge-bar-track"><div class="edge-bar-fill" style="width:${o.edge_score || 0}%;background:${edgeColor(o.edge_score || 0)}"></div></div>
-        <span style="font-weight:600;color:${edgeColor(o.edge_score || 0)}">${(o.edge_score || 0).toFixed(1)}</span>
-      </div></td>
-      <td>${layerBars(layers)}</td>
-      <td>${(o.potential_multiple || 0).toFixed(1)}x</td>
-      <td>$${fmt(o.liquidity_usd)}</td>
-      <td>${o.days_to_close || '—'}d</td>
-    `;
-    tbody.appendChild(tr);
-  }
-}
-
 function renderLayerHealth() {
   const h = DATA.layer_health || {};
   const layers = [
@@ -710,66 +591,6 @@ function renderLayerHealth() {
       const markets = data.markets_indexed || 0;
       detailEl.textContent += traders > 0 ? ` · ${traders} whales · ${markets} mkts` : '';
     }
-  }
-}
-
-function renderLegacyPositions() {
-  const allPos = DATA.positions || [];
-  const section = document.getElementById('legacy-section');
-  if (allPos.length === 0) { section.style.display = 'none'; return; }
-  section.style.display = 'block';
-  document.getElementById('legacy-badge').textContent = allPos.length;
-
-  const p = DATA.portfolio || {};
-  setText('legacy-equity', money(p.combined_equity));
-  const unrealised = allPos.reduce((sum, pos) => sum + (pos.unrealized_pnl || 0), 0);
-  const el = document.getElementById('legacy-pnl');
-  if (el) {
-    el.textContent = `${unrealised >= 0 ? '+' : ''}${money(unrealised)}`;
-    el.className = 'card-value ' + (unrealised >= 0 ? 'positive' : 'negative');
-  }
-  const trades = DATA.realized_trades || [];
-  const wins = trades.filter(t => t.win).length;
-  setText('legacy-wr', trades.length > 0 ? `${(wins / trades.length * 100).toFixed(0)}%` : '—');
-
-  const tbody = document.querySelector('#pos-table tbody');
-  tbody.innerHTML = '';
-  for (const pos of allPos) {
-    const pnl = pos.unrealized_pnl || 0;
-    const pnlPct = pos.unrealized_pnl_pct || 0;
-    const slug = pos.slug || '';
-    const link = slug ? `https://polymarket.com/event/${slug}` : '#';
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><a class="question-link" href="${link}" target="_blank">${esc(trunc(pos.question || '', 35))}</a></td>
-      <td>${pos.outcome || '—'}</td>
-      <td>${cents(pos.entry_price)}</td>
-      <td>${cents(pos.current_price)}</td>
-      <td><span class="pnl-chip ${pnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${pnl >= 0 ? '+' : ''}${money(pnl)} (${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(1)}%)</span></td>
-      <td>${(pos.edge_score_at_entry || 0).toFixed(0)}</td>
-      <td>${shortDate(pos.entry_timestamp)}</td>
-    `;
-    tbody.appendChild(tr);
-  }
-}
-
-function renderStatistics() {
-  const stats = DATA.statistics || {};
-
-  const catTbody = document.querySelector('#cat-table tbody');
-  catTbody.innerHTML = '';
-  for (const [cat, s] of Object.entries(stats.by_category || {})) {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${esc(cat)}</td><td>${s.count}</td><td>${s.avg_edge}</td>`;
-    catTbody.appendChild(tr);
-  }
-
-  const bandTbody = document.querySelector('#band-table tbody');
-  bandTbody.innerHTML = '';
-  for (const [band, s] of Object.entries(stats.by_convexity || {})) {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${band}</td><td>${s.count}</td><td>${s.avg_edge}</td><td>$${fmt(s.total_liquidity || 0)}</td>`;
-    bandTbody.appendChild(tr);
   }
 }
 
@@ -997,11 +818,6 @@ function renderCalibration() {
       `<div style="padding:4px 0;border-bottom:1px solid var(--border);color:var(--text2);">${esc(r)}</div>`
     ).join('');
   }
-}
-
-function toggleLegacy() {
-  const content = document.getElementById('legacy-content');
-  content.style.display = content.style.display === 'none' ? 'block' : 'none';
 }
 
 // ── Helpers ──
