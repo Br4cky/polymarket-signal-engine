@@ -288,6 +288,11 @@ class PolymarketClient:
                 )
 
                 if timestamp and price is not None:
+                    # Normalise timestamp to numeric (CLOB often returns string)
+                    try:
+                        timestamp = float(timestamp)
+                    except (ValueError, TypeError):
+                        pass  # keep as-is (likely ISO string)
                     history.append({
                         "timestamp": timestamp,
                         "price": safe_float(price)

@@ -497,7 +497,10 @@ function renderActiveSignals() {
         <span class="sl">SL ${cents(s.sl_price)}</span> /
         <span class="max">Max ${cents(s.max_entry_price)}</span>
       </td>
-      <td><span class="pnl-chip ${livePnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${livePnl >= 0 ? '+' : ''}${livePnl.toFixed(1)}%</span></td>
+      <td>
+        <span class="pnl-chip ${livePnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${livePnl >= 0 ? '+' : ''}${livePnl.toFixed(1)}%</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">Now ${cents(s.current_price || s.entry_price)}</div>
+      </td>
       <td><div class="edge-bar">
         <div class="edge-bar-track"><div class="edge-bar-fill" style="width:${s.edge_score}%;background:${edgeColor(s.edge_score)}"></div></div>
         <span style="font-weight:600;color:${edgeColor(s.edge_score)}">${(s.edge_score||0).toFixed(1)}</span>

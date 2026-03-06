@@ -313,10 +313,16 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
 # ─── Signal Verification ────────────────────────────────────────────────────
 
 def _parse_ts(ts) -> datetime:
-    """Parse a timestamp (int/float epoch or ISO string) to datetime."""
+    """Parse a timestamp (int/float epoch, string epoch, or ISO string) to datetime."""
     if isinstance(ts, (int, float)):
         return datetime.fromtimestamp(ts, tz=timezone.utc)
     ts_str = str(ts).strip()
+    # Handle string-encoded Unix timestamps (e.g. "1709683200" from CLOB API)
+    try:
+        epoch = float(ts_str)
+        return datetime.fromtimestamp(epoch, tz=timezone.utc)
+    except (ValueError, OverflowError):
+        pass
     # Python 3.10 doesn't support 'Z' suffix in fromisoformat
     if ts_str.endswith('Z'):
         ts_str = ts_str[:-1] + '+00:00'
@@ -367,7 +373,9 @@ def _check_price_history_for_resolution(
                 if point_time < signal_time:
                     continue
             except (ValueError, TypeError, OSError):
-                continue
+                # Can't parse timestamp — still use the data point rather than
+                # silently skipping it (which previously caused 0 resolutions)
+                pass
 
         # Track extremes
         peak_price = max(peak_price, price)
