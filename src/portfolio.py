@@ -30,7 +30,7 @@ def get_edge_tier(edge_score: float, config: dict) -> dict:
     # Default fallback (low tier values)
     return {
         'min_edge': 20, 'size_multiplier': 0.6,
-        'profit_target_pct': 15, 'stop_loss_pct': -15, 'max_hold_days': 3
+        'profit_target_pct': 15, 'stop_loss_pct': -15
     }
 
 
@@ -570,7 +570,7 @@ def _repricing_profit_target(pos: dict, config: dict) -> float:
 def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: dict) -> List[dict]:
     """
     Repricing auto-close: edge-tier profit targets, aggressive trailing stops,
-    hold-duration-aware stop losses, and max hold enforcement.
+    and hold-duration-aware stop losses.
     """
     to_close = []
 
@@ -579,22 +579,7 @@ def auto_close_positions(fund: dict, current_prices: Dict[str, float], config: d
         edge = pos.get('edge_score_at_entry', 25)
         tier = get_edge_tier(edge, config)
 
-        # ── 1. Max hold enforcement ──
-        entry_ts = pos.get('entry_timestamp', '')
-        try:
-            entry = datetime.fromisoformat(str(entry_ts))
-            if entry.tzinfo is None:
-                entry = entry.replace(tzinfo=timezone.utc)
-            days_held = (datetime.now(timezone.utc) - entry).total_seconds() / 86400.0
-        except (ValueError, TypeError):
-            days_held = 0
-
-        max_days = tier.get('max_hold_days', 5)
-        if days_held >= max_days:
-            to_close.append((pos['position_id'], f'max_hold_exceeded_{days_held:.1f}d'))
-            continue
-
-        # ── 2. Repricing profit target ──
+        # ── 1. Repricing profit target ──
         profit_target = _repricing_profit_target(pos, config)
         if pnl_pct >= profit_target:
             to_close.append((pos['position_id'], f'profit_target_{profit_target:.0f}pct'))

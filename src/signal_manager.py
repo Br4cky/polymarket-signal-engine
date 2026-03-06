@@ -6,11 +6,11 @@ we emit signals with clear parameters (entry, TP, SL, max entry) and verify them
 retroactively by checking actual price history between scans.
 
 Signal lifecycle:
-  ACTIVE      → Signal issued, awaiting resolution
-  TP_HIT      → Price reached take-profit target (win)
-  SL_HIT      → Price hit stop-loss level (loss)
-  EXPIRED     → Max hold duration exceeded without TP or SL
-  INVALIDATED → Entry price moved past max_entry before anyone could act
+  ACTIVE          → Signal issued, awaiting resolution
+  TP_HIT          → Price reached take-profit target (win)
+  SL_HIT          → Price hit stop-loss level (loss)
+  MARKET_RESOLVED → Contract settled at $1 or $0 (win or loss based on P&L)
+  INVALIDATED     → Entry price moved past max_entry before anyone could act
 """
 
 import json
@@ -235,27 +235,20 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
     # Compute TP/SL/max entry — using actual mispricing data from layers
     targets = compute_tp_sl(entry_price, tier, tier_name, opportunity=opportunity)
 
-    # Compute expiry: min of resolution date and now + max_hold_days
-    # But NEVER set expiry in the past (can happen if resolution_date has passed)
-    max_hold_days = tier.get('max_hold_days', 5)
+    # Expiry = contract resolution date (every Polymarket contract resolves)
+    # No artificial max_hold_days — signals run until TP, SL, or market resolution.
     now = datetime.now(timezone.utc)
-    hold_expiry = now + timedelta(days=max_hold_days)
-
     resolution_date = opportunity.get('resolution_date', '')
+    expiry = None
     if resolution_date:
         try:
             res = datetime.fromisoformat(str(resolution_date))
             if res.tzinfo is None:
                 res = res.replace(tzinfo=timezone.utc)
-            # Only use resolution date if it's in the future
             if res > now:
-                expiry = min(hold_expiry, res)
-            else:
-                expiry = hold_expiry
+                expiry = res
         except (ValueError, TypeError):
-            expiry = hold_expiry
-    else:
-        expiry = hold_expiry
+            pass
 
     signal = {
         'signal_id': str(uuid.uuid4())[:8],
@@ -279,7 +272,7 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
         'sl_price': targets['sl_price'],
         'tp_pct': targets['tp_pct'],
         'sl_pct': targets['sl_pct'],
-        'expiry': expiry.isoformat(),
+        'expiry': expiry.isoformat() if expiry else None,
 
         # Scoring context
         'edge_score': round(edge_score, 1),
@@ -511,15 +504,13 @@ def verify_signals(
     Verify all active signals against price history.
 
     Resolution priority (in order):
-      1. Price history TP/SL: did price cross TP or SL during the signal's
-         lifetime? Always checked FIRST, even if the signal has expired.
+      1. Price history TP/SL: did price cross TP or SL?
          → _check_price_history_for_resolution handles this, INCLUDING
            detecting resolution jumps (price leaping to ~$1 or ~$0 in one
            candle, which is a market settlement, not a genuine TP/SL hit).
       2. Market resolution fallback: if TP/SL wasn't hit but market has
          disappeared from active list with extreme price → settled.
-      3. Expiry: ONLY if neither TP/SL was hit NOR market resolved,
-         and past expiry datetime → close with last known price.
+      No artificial expiry — every Polymarket contract resolves at $1 or $0.
 
     Args:
         signals_state: Full signals state dict with 'active' list
@@ -543,16 +534,8 @@ def verify_signals(
         entry = signal['entry_price']
         market_gone = active_market_ids and signal['market_id'] not in active_market_ids
 
-        # Check if signal has expired (used later as fallback)
-        is_expired = False
-        try:
-            expiry = _parse_ts(signal.get('expiry', ''))
-            is_expired = now >= expiry
-        except (ValueError, TypeError):
-            pass
-
-        # 1. Fetch price history and check TP/SL FIRST (even if expired)
-        #    A signal that expired but hit TP during its lifetime is a WIN, not an expiry.
+        # 1. Fetch price history and check TP/SL
+        #    Every Polymarket contract resolves — no artificial expiry needed.
         try:
             history = fetch_price_history(token_id)
         except Exception as e:
@@ -627,27 +610,6 @@ def verify_signals(
                     )
                     continue
 
-            # 4. Expiry fallback: TP/SL wasn't hit in price history, market not gone
-            if is_expired:
-                last_price = signal.get('current_price', entry)
-                lp = safe_float(history[-1].get('price', 0))
-                if lp > 0:
-                    last_price = lp
-                signal['status'] = 'expired'
-                signal['resolved_at'] = now.isoformat()
-                signal['resolution_type'] = 'expired'
-                signal['final_price'] = round(last_price, 4)
-                signal['hypothetical_pnl_pct'] = round(
-                    ((last_price - entry) / entry * 100) if entry > 0 else 0, 2
-                )
-                newly_resolved.append(signal)
-                logger.info(
-                    f"SIGNAL EXPIRED: {signal['signal_id']} "
-                    f"pnl={signal['hypothetical_pnl_pct']:+.1f}% "
-                    f"({signal['question'][:40]}...)"
-                )
-                continue
-
             still_active.append(signal)
             continue
 
@@ -678,27 +640,6 @@ def verify_signals(
                     f"({signal['question'][:40]}...)"
                 )
                 continue
-
-        # 6. Expiry fallback (no price history path)
-        if is_expired:
-            last_price = signal.get('current_price', entry)
-            cp = current_prices.get(token_id, 0)
-            if cp > 0:
-                last_price = cp
-            signal['status'] = 'expired'
-            signal['resolved_at'] = now.isoformat()
-            signal['resolution_type'] = 'expired'
-            signal['final_price'] = round(last_price, 4)
-            signal['hypothetical_pnl_pct'] = round(
-                ((last_price - entry) / entry * 100) if entry > 0 else 0, 2
-            )
-            newly_resolved.append(signal)
-            logger.info(
-                f"SIGNAL EXPIRED: {signal['signal_id']} "
-                f"pnl={signal['hypothetical_pnl_pct']:+.1f}% "
-                f"({signal['question'][:40]}...)"
-            )
-            continue
 
         # Update from current_prices map if available
         cp = current_prices.get(token_id, 0)
@@ -738,7 +679,6 @@ def _create_empty_state() -> dict:
             'total_signals': 0,
             'total_wins': 0,
             'total_losses': 0,
-            'total_expired': 0,
         },
         'created_at': datetime.now(timezone.utc).isoformat(),
         'last_updated': datetime.now(timezone.utc).isoformat(),
@@ -770,7 +710,7 @@ def is_signal_on_cooldown(signals_state: dict, market_id: str, cooldown_hours: i
 def update_signal_stats(signals_state: dict, newly_resolved: List[dict]):
     """Update stats and cooldowns after verification resolves signals."""
     stats = signals_state.setdefault('stats', {
-        'total_signals': 0, 'total_wins': 0, 'total_losses': 0, 'total_expired': 0,
+        'total_signals': 0, 'total_wins': 0, 'total_losses': 0,
     })
     cooldowns = signals_state.setdefault('cooldowns', {})
 
@@ -791,8 +731,7 @@ def update_signal_stats(signals_state: dict, newly_resolved: List[dict]):
                 stats['total_losses'] = stats.get('total_losses', 0) + 1
                 cooldowns[signal['market_id']] = datetime.now(timezone.utc).isoformat()
             stats['total_market_resolved'] = stats.get('total_market_resolved', 0) + 1
-        elif rt == 'expired':
-            stats['total_expired'] = stats.get('total_expired', 0) + 1
+        # No 'expired' type — every contract resolves at $1 or $0
 
     # Clean old cooldowns (>48h)
     cutoff = datetime.now(timezone.utc) - timedelta(hours=48)
@@ -824,8 +763,6 @@ def signal_metrics(signals_state: dict) -> dict:
     tp_hits = [s for s in resolved if s.get('resolution_type') == 'tp_hit']
     sl_hits = [s for s in resolved if s.get('resolution_type') == 'sl_hit']
     market_resolved = [s for s in resolved if s.get('resolution_type') == 'market_resolved']
-    expired = [s for s in resolved if s.get('resolution_type') == 'expired']
-
     # Market-resolved signals split into wins (pnl > 0) and losses
     mr_wins = [s for s in market_resolved if s.get('hypothetical_pnl_pct', 0) > 0]
     mr_losses = [s for s in market_resolved if s.get('hypothetical_pnl_pct', 0) <= 0]
@@ -837,7 +774,6 @@ def signal_metrics(signals_state: dict) -> dict:
     win_count = len(wins)
     loss_count = len(losses)
 
-    # Win rate excludes expired (they're inconclusive)
     decisive = win_count + loss_count
     win_rate = win_count / decisive if decisive > 0 else 0
 
@@ -881,7 +817,6 @@ def signal_metrics(signals_state: dict) -> dict:
         'total_resolved': total_resolved,
         'wins': win_count,
         'losses': loss_count,
-        'expired': len(expired),
         'market_resolved': len(market_resolved),
         'win_rate': round(win_rate, 3),
         'avg_win_pct': round(avg_win_pct, 2),

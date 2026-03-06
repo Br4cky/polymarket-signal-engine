@@ -430,7 +430,7 @@ function renderSignalKPIs() {
   const wr = metrics.win_rate || 0;
   setText('signal-winrate', wr > 0 ? (wr * 100).toFixed(1) + '%' : '—');
   const mr = metrics.market_resolved || 0;
-  setText('signal-wl', `${metrics.wins || 0}W / ${metrics.losses || 0}L / ${mr}S / ${metrics.expired || 0}E`);
+  setText('signal-wl', `${metrics.wins || 0}W / ${metrics.losses || 0}L / ${mr}S`);
 
   const ev = metrics.ev_per_signal || 0;
   const evEl = document.getElementById('ev-per-signal');
@@ -530,7 +530,7 @@ function renderResolvedSignals() {
     const pnl = s.hypothetical_pnl_pct || 0;
     const rt = s.resolution_type || 'unknown';
     const tierClass = `tier-${s.edge_tier || 'low'}`;
-    let statusClass = 'status-expired';
+    let statusClass = 'status-tp';
     let statusLabel = rt;
     if (rt === 'tp_hit') { statusClass = 'status-tp'; statusLabel = 'TP HIT'; }
     else if (rt === 'sl_hit') { statusClass = 'status-sl'; statusLabel = 'SL HIT'; }
@@ -538,7 +538,6 @@ function renderResolvedSignals() {
       if (pnl > 0) { statusClass = 'status-mkt-win'; statusLabel = 'SETTLED WIN'; }
       else { statusClass = 'status-mkt-loss'; statusLabel = 'SETTLED LOSS'; }
     }
-    else if (rt === 'expired') { statusClass = 'status-expired'; statusLabel = 'EXPIRED'; }
 
     tr.innerHTML = `
       <td>${esc(trunc(s.question || '', 40))}</td>
@@ -718,9 +717,8 @@ function renderResolutionChart() {
   const wins = metrics.wins || 0;
   const losses = metrics.losses || 0;
   const settled = metrics.market_resolved || 0;
-  const expired = metrics.expired || 0;
   const activeCount = metrics.active_signals || 0;
-  const total = wins + losses + settled + expired + activeCount;
+  const total = wins + losses + settled + activeCount;
 
   if (total === 0) {
     ctx.fillStyle = 'rgba(139,148,158,0.3)';
@@ -734,7 +732,6 @@ function renderResolutionChart() {
     { label: `Wins (${wins})`, value: wins, color: '#3fb950' },
     { label: `Losses (${losses})`, value: losses, color: '#f85149' },
     { label: `Settled (${settled})`, value: settled, color: '#d2a8ff' },
-    { label: `Expired (${expired})`, value: expired, color: '#8b949e' },
     { label: `Active (${activeCount})`, value: activeCount, color: '#58a6ff' },
   ].filter(s => s.value > 0);
 

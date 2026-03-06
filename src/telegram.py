@@ -66,7 +66,7 @@ def format_signal_message(signal: dict) -> str:
 
 def format_resolution_message(signal: dict) -> str:
     """
-    Format a signal resolution (TP hit, SL hit, expired) for Telegram.
+    Format a signal resolution (TP hit, SL hit, market resolved) for Telegram.
     """
     rt = signal.get('resolution_type', 'unknown')
     pnl = signal.get('hypothetical_pnl_pct') or 0
@@ -81,8 +81,9 @@ def format_resolution_message(signal: dict) -> str:
         header = f"✅ SIGNAL WIN +{pnl:.1f}%"
     elif rt == 'sl_hit':
         header = f"❌ SIGNAL LOSS {pnl:.1f}%"
-    elif rt == 'expired':
-        header = f"⏰ SIGNAL EXPIRED {pnl:+.1f}%"
+    elif rt == 'market_resolved':
+        won = pnl > 0
+        header = f"{'✅' if won else '❌'} SETTLED {'WIN' if won else 'LOSS'} {pnl:+.1f}%"
     else:
         header = f"📋 SIGNAL CLOSED {pnl:+.1f}%"
 
