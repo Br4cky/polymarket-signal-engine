@@ -174,9 +174,16 @@ def compute_price_velocity(
     lookback_hours: int = 24
 ) -> float:
     """
-    Price Velocity (0-8 points).
+    Price Velocity (0-10 points).
     Measures how fast price moved recently vs historical volatility.
-    A 3+ std dev move in 24h suggests overreaction.
+    A 2+ std dev move in 24h suggests overreaction or new information.
+
+    Scoring (z-score based):
+        < 1.0σ  → 0 pts  (normal movement)
+        1.0-1.5σ → 2 pts  (notable)
+        1.5-2.0σ → 4 pts  (unusual)
+        2.0-3.0σ → 6-8 pts (significant dislocation)
+        3.0+σ    → 10 pts (extreme)
     """
     if len(price_history) < 48:
         return 0.0
@@ -214,35 +221,59 @@ def compute_price_velocity(
     daily_vol = vol * math.sqrt(24)
     velocity_z = abs(recent_return) / max(0.001, daily_vol)
 
-    return round(min(8.0, max(0.0, velocity_z * 2.0)), 2)
+    # Stepped scoring for better differentiation
+    if velocity_z < 1.0:
+        score = 0.0
+    elif velocity_z < 1.5:
+        score = 2.0 + (velocity_z - 1.0) * 4.0  # 2-4
+    elif velocity_z < 2.0:
+        score = 4.0 + (velocity_z - 1.5) * 4.0  # 4-6
+    elif velocity_z < 3.0:
+        score = 6.0 + (velocity_z - 2.0) * 2.0  # 6-8
+    else:
+        score = 8.0 + min(2.0, (velocity_z - 3.0))  # 8-10
+
+    return round(min(10.0, max(0.0, score)), 2)
 
 
 def compute_volume_anomaly(volume_24h: float, volume_total: float) -> float:
     """
-    Volume Anomaly (0-7 points).
+    Volume Anomaly (0-8 points).
     Current 24h volume vs estimated daily average.
-    3-5x spike = informed trading or panic.
+    A spike suggests informed trading or a catalyst event.
+
+    Scoring (ratio of 24h vol to avg daily):
+        ≤ 1.5x → 0 pts  (normal)
+        2x     → 2 pts  (elevated)
+        3x     → 4 pts  (notable spike)
+        5x     → 6 pts  (significant)
+        8x+    → 8 pts  (extreme)
     """
-    if volume_total <= 0:
+    if volume_total <= 0 or volume_24h <= 0:
         return 0.0
 
-    # Rough daily average from total volume (assume market ~30 days old)
+    # Estimate avg daily volume. We don't know the exact market age,
+    # so use a conservative 30-day assumption. If total volume is
+    # very small (< $5k), the data is too thin to be meaningful.
     avg_daily = volume_total / 30.0
+
     if avg_daily < 10:
         return 0.0
 
     ratio = volume_24h / avg_daily
 
-    if ratio <= 1.0:
+    if ratio <= 1.5:
         return 0.0
-    elif ratio <= 2.0:
-        score = (ratio - 1.0) * 2.0
+    elif ratio <= 3.0:
+        score = (ratio - 1.5) / 1.5 * 4.0  # 0-4
     elif ratio <= 5.0:
-        score = 2.0 + (ratio - 2.0) * 1.67
+        score = 4.0 + (ratio - 3.0) / 2.0 * 2.0  # 4-6
+    elif ratio <= 8.0:
+        score = 6.0 + (ratio - 5.0) / 3.0 * 2.0  # 6-8
     else:
-        score = 7.0
+        score = 8.0
 
-    return round(min(7.0, max(0.0, score)), 2)
+    return round(min(8.0, max(0.0, score)), 2)
 
 
 def compute_order_book_score(
@@ -252,41 +283,56 @@ def compute_order_book_score(
     ask_depth: float
 ) -> float:
     """
-    Order Book Analysis (0-5 points).
-    Wide spreads + thin books = mispricing opportunity.
-    But also need enough liquidity to actually trade.
+    Order Book Imbalance (0-5 points).
+    Scores DIRECTIONAL PRESSURE — not market existence.
+
+    A balanced order book (50/50 depth) scores 0 — that's normal.
+    A skewed book (e.g. 80% depth on bid side) suggests smart money
+    is loading up on one side, which is actual mispricing evidence.
+
+    Sub-components:
+      - Depth imbalance (0-3): how skewed is bid vs ask depth
+      - Spread stress (0-2): abnormally wide spreads suggest
+        market makers are uncertain (potential catalyst/repricing)
+
+    Normal spreads + balanced depth = 0 (not evidence of mispricing).
     """
     mid = (bid + ask) / 2.0
     if mid < 0.001:
         return 0.0
 
+    total_depth = bid_depth + ask_depth
+    if total_depth < 50:
+        return 0.0  # Not enough data to assess
+
+    # ── Depth imbalance (0-3) ──
+    # Ratio of larger side to total. 50% = balanced, 80%+ = strong imbalance
+    larger_side = max(bid_depth, ask_depth)
+    imbalance_ratio = larger_side / total_depth  # 0.5 to 1.0
+
+    if imbalance_ratio < 0.60:
+        imbalance_score = 0.0  # Balanced — no signal
+    elif imbalance_ratio < 0.70:
+        imbalance_score = 1.0  # Mild lean
+    elif imbalance_ratio < 0.80:
+        imbalance_score = 2.0  # Notable imbalance
+    else:
+        imbalance_score = 3.0  # Heavy one-sided pressure
+
+    # ── Spread stress (0-2) ──
+    # Only score WIDE spreads — they indicate market maker uncertainty
     spread_pct = ((ask - bid) / mid) * 100.0
 
-    # Spread component: moderate spreads (1-5%) are interesting
-    # Too tight = well-priced, too wide = untradeable
-    if spread_pct < 0.5:
-        spread_score = 1.0  # Very efficient, less opportunity
-    elif spread_pct < 2.0:
-        spread_score = 2.5  # Some room for edge
-    elif spread_pct < 5.0:
-        spread_score = 2.0  # Wider but still tradeable
-    elif spread_pct < 10.0:
-        spread_score = 1.0  # Getting thin
+    if spread_pct < 3.0:
+        spread_score = 0.0  # Normal — no signal
+    elif spread_pct < 6.0:
+        spread_score = 1.0  # Elevated — some uncertainty
+    elif spread_pct < 15.0:
+        spread_score = 2.0  # Wide — market makers pulling back
     else:
-        spread_score = 0.0  # Untradeable
+        spread_score = 0.0  # Too wide — untradeable, not useful
 
-    # Depth component
-    total_depth = bid_depth + ask_depth
-    if total_depth > 5000:
-        depth_score = 2.5
-    elif total_depth > 1000:
-        depth_score = 2.0
-    elif total_depth > 100:
-        depth_score = 1.0
-    else:
-        depth_score = 0.0
-
-    return round(min(5.0, spread_score + depth_score), 2)
+    return round(min(5.0, imbalance_score + spread_score), 2)
 
 
 def compute_price_trajectory(
@@ -294,9 +340,17 @@ def compute_price_trajectory(
     price_history: List[dict]
 ) -> float:
     """
-    Price Trajectory (0-5 points).
-    How far current price is from 30-day mean.
-    Large deviations suggest mean reversion opportunity.
+    Price Trajectory (0-7 points).
+    How far current price is from historical mean, measured in
+    standard deviations. Large deviations suggest mean-reversion
+    opportunity or genuine repricing event.
+
+    Scoring:
+        < 1.0σ  → 0 pts  (within normal range)
+        1.0-1.5σ → 2 pts  (moderately displaced)
+        1.5-2.0σ → 3-4 pts (significantly displaced)
+        2.0-3.0σ → 5-6 pts (heavily displaced)
+        3.0+σ    → 7 pts  (extreme displacement)
     """
     if len(price_history) < 24:
         return 0.0
@@ -315,7 +369,18 @@ def compute_price_trajectory(
 
     deviation = abs(current_price - hist_mean) / hist_std
 
-    return round(min(5.0, max(0.0, deviation * 1.5)), 2)
+    if deviation < 1.0:
+        score = 0.0
+    elif deviation < 1.5:
+        score = 2.0 + (deviation - 1.0) * 2.0  # 2-3
+    elif deviation < 2.0:
+        score = 3.0 + (deviation - 1.5) * 2.0  # 3-4
+    elif deviation < 3.0:
+        score = 4.0 + (deviation - 2.0) * 2.0  # 4-6
+    else:
+        score = 6.0 + min(1.0, (deviation - 3.0))  # 6-7
+
+    return round(min(7.0, max(0.0, score)), 2)
 
 
 def compute_time_decay(days_to_close: int) -> float:
@@ -350,14 +415,21 @@ def compute_dislocation_score(
 ) -> dict:
     """
     Combined Layer 3 score (0-30 points).
+
+    Sub-components measure ACTUAL price dislocation evidence:
+      - Price velocity (0-10): abnormal recent price movement
+      - Volume anomaly (0-8): unusual volume spike vs history
+      - Order book (0-5): spread/depth imbalances
+      - Price trajectory (0-7): deviation from historical mean
+
+    time_decay removed — calendar proximity is not dislocation.
     """
     velocity = compute_price_velocity(current_price, price_history)
     volume = compute_volume_anomaly(volume_24h, volume_total)
     order_book = compute_order_book_score(bid, ask, bid_depth, ask_depth)
     trajectory = compute_price_trajectory(current_price, price_history)
-    time_decay = compute_time_decay(days_to_close)
 
-    total = velocity + volume + order_book + trajectory + time_decay
+    total = velocity + volume + order_book + trajectory
 
     return {
         'dislocation_total': round(min(30.0, total), 2),
@@ -365,7 +437,6 @@ def compute_dislocation_score(
         'volume_anomaly': volume,
         'order_book': order_book,
         'price_trajectory': trajectory,
-        'time_decay': time_decay
     }
 
 

@@ -203,10 +203,10 @@ def generate_rationale(opportunity: dict) -> str:
             sub.append("velocity")
         if d_detail.get('volume_anomaly', 0) > 2:
             sub.append("vol spike")
-        if d_detail.get('time_decay', 0) > 2:
-            sub.append("time decay")
         if d_detail.get('order_book', 0) > 2:
             sub.append("book imbalance")
+        if d_detail.get('price_trajectory', 0) > 2:
+            sub.append("trajectory")
         detail_str = f" ({', '.join(sub)})" if sub else ""
         parts.append(f"Dislocation {dislocation:.0f}/30{detail_str}")
 

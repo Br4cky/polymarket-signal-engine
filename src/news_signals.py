@@ -511,20 +511,24 @@ class NewsSignals:
         value = fg['value']
         is_crypto = market_category.lower() in ('crypto', 'cryptocurrency', 'defi', 'nft')
 
+        # Only apply to crypto markets — a crypto sentiment index has
+        # zero relevance to sports, politics, or other market categories.
+        if not is_crypto:
+            return {'sentiment_score': 0, 'fear_greed_value': value,
+                    'classification': fg['classification'], 'is_extreme': False}
+
         score = 0.0
         is_extreme = False
 
         if value <= 20:
-            # Extreme Fear — strong contrarian buy for crypto markets
-            score = 3.0 if is_crypto else 1.0
+            # Extreme Fear — strong contrarian buy for crypto
+            score = 3.0
             is_extreme = True
         elif value <= 35:
             # Fear — mild contrarian signal
-            score = 1.5 if is_crypto else 0.5
+            score = 1.5
         elif value >= 80:
-            # Extreme Greed — reduces confidence (markets may be overpriced)
-            # We don't subtract, just don't add. The absence of fear signal
-            # is itself useful information.
+            # Extreme Greed — markets may be overpriced
             score = 0.0
             is_extreme = True
         elif value >= 65:

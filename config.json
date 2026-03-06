@@ -39,13 +39,13 @@
   },
   "scoring": {
     "layer_weights": {
-      "structural": 0.25,
-      "smart_money": 0.15,
+      "structural": 0.10,
+      "smart_money": 0.25,
       "dislocation": 0.50,
-      "external": 0.10
+      "external": 0.15
     },
-    "edge_threshold": 20,
-    "strong_signal_threshold": 45
+    "edge_threshold": 15,
+    "strong_signal_threshold": 35
   },
   "funds": {
     "main_pool": {
@@ -62,21 +62,21 @@
   "trading": {
     "edge_tiers": {
       "high": {
-        "min_edge": 40,
+        "min_edge": 30,
         "size_multiplier": 1.3,
         "profit_target_pct": 35,
         "stop_loss_pct": -25,
         "max_hold_days": 14
       },
       "medium": {
-        "min_edge": 30,
+        "min_edge": 22,
         "size_multiplier": 1.0,
         "profit_target_pct": 25,
         "stop_loss_pct": -20,
         "max_hold_days": 10
       },
       "low": {
-        "min_edge": 20,
+        "min_edge": 15,
         "size_multiplier": 0.6,
         "profit_target_pct": 15,
         "stop_loss_pct": -15,

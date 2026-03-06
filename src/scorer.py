@@ -81,19 +81,17 @@ def compute_edge_score(
     dislocation_norm = dislocation['dislocation_total'] / max_dislocation
     external_norm = external_total / max_external
 
-    layers = [
-        (structural_norm, weights.get('structural', 0.25), structural['structural_total'] > 0),
-        (smart_money_norm, weights.get('smart_money', 0.15), smart_money_total > 0),
-        (dislocation_norm, weights.get('dislocation', 0.50), dislocation['dislocation_total'] > 0),
-        (external_norm, weights.get('external', 0.10), external_total > 0),
-    ]
-
-    active_weight = sum(w for _, w, active in layers if active)
-    total_weight = sum(w for _, w, _ in layers)
-    weighted = sum(norm * w for norm, w, _ in layers)
-
-    if active_weight > 0:
-        weighted = weighted * (total_weight / active_weight)
+    # ── Weighted sum — NO redistribution ──
+    # If a layer has no data it contributes 0. A signal confirmed by
+    # multiple layers naturally scores higher than one carried by a
+    # single layer. This prevents dislocation-only signals from being
+    # inflated to pass threshold.
+    weighted = (
+        structural_norm  * weights.get('structural', 0.10)
+        + smart_money_norm * weights.get('smart_money', 0.25)
+        + dislocation_norm * weights.get('dislocation', 0.50)
+        + external_norm    * weights.get('external', 0.15)
+    )
 
     edge_score = round(min(100.0, weighted * 100.0), 1)
 

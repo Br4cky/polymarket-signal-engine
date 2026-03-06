@@ -704,26 +704,47 @@ class WhaleTracker:
                     'smart_money_total': 0.0,
                 }
 
-            # ── Whale Accumulation (0-10) ──
-            # Weight by quality: score-4 trader = 4 points, score-2 = 2 points
-            # Normalise against max possible (if all 50 traders had score 4 = 200)
+            # ── Whale Accumulation (0-8) ──
+            # Diminishing returns on whale count. 1-3 quality traders
+            # in a market is a strong signal. 8+ whales often means
+            # it's a popular/obvious market, not genuinely mispriced.
             unique_whales = {}
             for w in whales:
                 addr = w['address'].lower()
                 if addr not in unique_whales or w['quality_score'] > unique_whales[addr]:
                     unique_whales[addr] = w['quality_score']
 
-            weighted_count = sum(unique_whales.values())
-            # Scale: realistically, 3-5 quality traders in one market is strong
-            # 1 whale (q=3) → 1.5pts, 3 whales (avg q=3) → 4.5pts, 8 whales → 10pts
-            whale_accumulation = min(10.0, weighted_count * 0.5)
+            n_whales = len(unique_whales)
+            avg_quality = sum(unique_whales.values()) / max(1, n_whales)
 
-            # ── Leaderboard Alignment (0-8) ──
-            # Only count high-quality traders (score >= 3 = on 2+ leaderboards
-            # with at least one being monthly or ALL+WEEK)
+            # Logarithmic scaling: 1→2, 2→3.4, 3→4.4, 5→5.6, 8→6.6
+            import math
+            if n_whales == 0:
+                whale_accumulation = 0.0
+            else:
+                raw = math.log2(n_whales + 1) * 2.0
+                # Quality multiplier: avg quality 2→0.7x, 3→1.0x, 4→1.2x
+                quality_mult = min(1.2, max(0.5, avg_quality / 3.0))
+                whale_accumulation = min(8.0, raw * quality_mult)
+
+            # ── Leaderboard Alignment (0-10) ──
+            # Elite traders (score >= 3) are the strongest signal.
+            # More weight here since quality > quantity.
             elite_count = sum(1 for q in unique_whales.values() if q >= 3)
-            # 1 elite = 2pts, 2 elites = 4pts, 4+ elites = 8pts
-            leaderboard_alignment = min(8.0, elite_count * 2.0)
+            top_elite = sum(1 for q in unique_whales.values() if q >= 4)
+
+            # 1 elite = 3pts, 2 = 5pts, 3+ = 7pts, + bonus for score-4 traders
+            if elite_count == 0:
+                leaderboard_alignment = 0.0
+            elif elite_count == 1:
+                leaderboard_alignment = 3.0
+            elif elite_count == 2:
+                leaderboard_alignment = 5.0
+            else:
+                leaderboard_alignment = 7.0
+
+            # Top-tier bonus: score-4 traders on ALL leaderboards
+            leaderboard_alignment = min(10.0, leaderboard_alignment + top_elite * 1.5)
 
             # ── Position Concentration (0-7) ──
             total_whale_value = sum(w.get('currentValue', 0) for w in whales)
@@ -752,8 +773,9 @@ class WhaleTracker:
                 'leaderboard_alignment': round(leaderboard_alignment, 2),
                 'position_concentration': round(position_concentration, 2),
                 'smart_money_total': round(min(25.0, smart_money_total), 2),
-                'whale_count': len(unique_whales),
+                'whale_count': n_whales,
                 'elite_count': elite_count,
+                'top_elite_count': top_elite,
                 'total_whale_value': round(total_whale_value, 2),
             }
 
