@@ -26,9 +26,8 @@ def format_signal_message(signal: dict) -> str:
     Format a new signal call for Telegram.
 
     Includes everything a user needs:
-    - What to buy and at what price
+    - What to buy and the safe entry range
     - TP and SL levels
-    - Max entry price (don't chase)
     - Edge score and conviction breakdown
     - Link to the market
     """
@@ -39,15 +38,18 @@ def format_signal_message(signal: dict) -> str:
     # Conviction emoji
     tier_emoji = {'HIGH': '🔴', 'MEDIUM': '🟡', 'LOW': '🟢'}.get(tier, '⚪')
 
+    min_entry = signal.get('min_entry_price') or signal.get('entry_price', 0)
+    max_entry = signal.get('max_entry_price', 0)
+
     msg = (
         f"{tier_emoji} NEW SIGNAL [{tier}]\n"
         f"\n"
         f"📊 {signal.get('question', '')}\n"
-        f"➡️ {signal.get('outcome', '')} @ ${signal.get('entry_price', 0):.4f}\n"
+        f"➡️ {signal.get('outcome', '')}\n"
         f"\n"
+        f"📍 Entry Range: ${min_entry:.4f} – ${max_entry:.4f}\n"
         f"✅ Take Profit: ${signal.get('tp_price', 0):.4f} ({signal.get('tp_pct', 0):+.0f}%)\n"
         f"🛑 Stop Loss: ${signal.get('sl_price', 0):.4f} ({signal.get('sl_pct', 0):.0f}%)\n"
-        f"⚠️ Max Entry: ${signal.get('max_entry_price', 0):.4f}\n"
         f"\n"
         f"Edge: {edge:.0f}/100 "
         f"[S:{layers.get('structural', 0):.0f} "

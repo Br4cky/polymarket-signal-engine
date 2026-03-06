@@ -212,6 +212,8 @@ def rank_opportunities(
             'current_price': current_price,
             'bid': safe_float(token.get('bid', 0)),
             'ask': safe_float(token.get('ask', 0)),
+            'bid_depth': safe_float(token.get('bid_depth', 0)),
+            'ask_depth': safe_float(token.get('ask_depth', 0)),
             'spread_pct': safe_float(token.get('spread_pct', 0)),
             'edge_score': edge,
             'layer_scores': scores.get('layer_scores', {}),

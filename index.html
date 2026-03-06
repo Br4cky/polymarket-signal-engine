@@ -299,8 +299,8 @@
       <tr>
         <th onclick="sortTable('signals-table',0)">Market</th>
         <th onclick="sortTable('signals-table',1)">Side</th>
-        <th onclick="sortTable('signals-table',2)">Entry</th>
-        <th onclick="sortTable('signals-table',3)">TP / SL / Max</th>
+        <th onclick="sortTable('signals-table',2)">Entry Range</th>
+        <th onclick="sortTable('signals-table',3)">TP / SL</th>
         <th onclick="sortTable('signals-table',4)">Live P&L</th>
         <th onclick="sortTable('signals-table',5)">Edge</th>
         <th onclick="sortTable('signals-table',6)">Layers</th>
@@ -494,11 +494,10 @@ function renderActiveSignals() {
         ${rationale ? `<div class="rationale" title="${esc(rationale)}">${esc(trunc(rationale, 60))}</div>` : ''}
       </td>
       <td>${s.outcome || '—'}</td>
-      <td>${cents(s.entry_price)}</td>
+      <td style="white-space:nowrap;">${cents(s.min_entry_price || s.entry_price)} – ${cents(s.max_entry_price)}</td>
       <td class="signal-prices">
         <span class="tp">TP ${cents(s.tp_price)}</span> /
-        <span class="sl">SL ${cents(s.sl_price)}</span> /
-        <span class="max">Max ${cents(s.max_entry_price)}</span>
+        <span class="sl">SL ${cents(s.sl_price)}</span>
       </td>
       <td>
         <span class="pnl-chip ${livePnl >= 0 ? 'pnl-positive' : 'pnl-negative'}">${livePnl >= 0 ? '+' : ''}${livePnl.toFixed(1)}%</span>

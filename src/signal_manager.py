@@ -34,134 +34,193 @@ def compute_tp_sl(
     opportunity: dict = None,
 ) -> dict:
     """
-    Compute take-profit, stop-loss, and max-entry prices using actual
-    mispricing data from the scoring layers — not just fixed percentages.
+    Compute take-profit, stop-loss, and entry range for a binary contract.
 
-    TP logic (where we think fair value actually is):
-      1. Cross-platform divergence: if Kalshi/Manifold says 40¢ and we're at 30¢,
-         TP should be near 40¢ (the implied fair value from another market).
-      2. Structural mispricing: combinatorial (YES+NO != $1) gives an implied
-         fair price; TP moves toward the corrected price.
-      3. Dislocation: if the score is velocity-driven (overreaction), we target
-         a reversion proportional to the overreaction magnitude.
-      4. Fallback: tier-based percentage if no layer gives a clear target.
+    Key principle: every Polymarket contract resolves at $1 or $0.
+    A token at 30¢ has 70¢ of upside and 30¢ of downside. TP/SL must
+    respect this structure rather than using arbitrary fixed percentages.
 
-    SL logic:
-      - Base from tier config, but tightened for cheap tokens (gap risk)
-      - Widened slightly when mispricing evidence is very strong (more room)
+    TP logic — fraction of available upside:
+      available_upside = 1.0 - entry_price
+      tp_fraction = base_fraction (from edge tier) scaled by:
+        - Edge score strength (higher edge → larger fraction)
+        - Number of confirming layers (multi-layer → more confident)
+        - Price level (cheap tokens have more room, so fraction is conservative)
+      TP = entry + (tp_fraction × available_upside)
 
-    Max entry:
-      - Wider buffer for cheap tokens (thin books, wide spreads)
+    SL logic — fraction of downside, informed by order book:
+      available_downside = entry_price (goes to $0 at worst)
+      sl_fraction = base_fraction scaled by:
+        - Order book depth on bid side (thin support → tighter SL)
+        - Edge score (higher confidence → slightly more room)
+      SL = entry - (sl_fraction × available_downside)
 
-    Returns dict with tp_price, sl_price, max_entry_price and percentage values.
+    Entry range — based on order book spread and liquidity:
+      min_entry = bid price (best realistic fill)
+      max_entry = entry + buffer derived from spread width and depth
+      If spread is very tight, buffer is small. If wide, buffer is larger.
+
+    Returns dict with tp_price, sl_price, min_entry_price, max_entry_price.
     """
+    import math
+
     opp = opportunity or {}
-    structural = opp.get('structural_detail', {})
-    dislocation = opp.get('dislocation_detail', {})
-    layer_scores = opp.get('layer_scores', {})
     edge_score = opp.get('edge_score', 0)
+    layer_scores = opp.get('layer_scores', {})
+    bid = opp.get('bid', entry_price - 0.01)
+    ask = opp.get('ask', entry_price + 0.01)
+    bid_depth = opp.get('bid_depth', 0)
+    ask_depth = opp.get('ask_depth', 0)
+    spread_pct = opp.get('spread_pct', 0)
 
-    # ── Take-Profit: based on where we think price SHOULD be ──
-    # Collect implied fair-value estimates from each layer
-    fair_value_estimates = []
+    # ── How many scoring layers actually contributed? ──
+    active_layers = sum(1 for v in layer_scores.values() if v and v > 0)
 
-    # 1. Cross-platform: Kalshi says price should be X
-    kalshi = structural.get('cross_platform', {})
-    kalshi_div = kalshi.get('divergence_pct', 0)  # in percentage points
-    if kalshi_div > 3 and kalshi.get('direction') == 'kalshi_higher':
-        # Kalshi is higher → Poly is underpriced → fair value is above entry
-        implied_fv = entry_price + (kalshi_div / 100.0)
-        fair_value_estimates.append(('kalshi', implied_fv, kalshi_div))
+    # ══════════════════════════════════════════════════════════════════
+    # TAKE-PROFIT: fraction of available upside
+    # ══════════════════════════════════════════════════════════════════
+    available_upside = max(0.01, 1.0 - entry_price)
 
-    # 2. Manifold cross-reference
-    manifold = structural.get('manifold', {})
-    manifold_div = manifold.get('divergence_pct', 0)
-    if manifold_div > 3 and manifold.get('direction') in ('manifold_higher', 'kalshi_higher'):
-        implied_fv = entry_price + (manifold_div / 100.0)
-        fair_value_estimates.append(('manifold', implied_fv, manifold_div))
+    # Base TP fraction by tier (conservative starting points)
+    # These represent how much of the available upside we target
+    base_tp = {'high': 0.20, 'medium': 0.15, 'low': 0.10}
+    tp_fraction = base_tp.get(edge_tier_name, 0.12)
 
-    # 3. Combinatorial: YES+NO gap means one side is overpriced
-    combo = structural.get('combinatorial', {})
-    combo_gap = combo.get('mispricing_pct', 0)
-    if combo_gap > 2:
-        # Implied correction: half the gap (conservative)
-        implied_fv = entry_price + (combo_gap / 200.0)
-        fair_value_estimates.append(('combo', implied_fv, combo_gap))
+    # Scale by edge strength: edge 15-70 maps to 0.8x-1.4x multiplier
+    # Stronger edge = we think mispricing is larger = target more upside
+    edge_mult = 0.8 + (min(edge_score, 70) - 15) * (0.6 / 55)
+    tp_fraction *= edge_mult
 
-    # 4. Dislocation: price velocity overreaction → mean reversion target
-    velocity_score = dislocation.get('price_velocity', 0)
-    if velocity_score > 3:
-        # Strong overreaction → expect partial reversion
-        # Use the velocity magnitude as a proxy for how far to revert
-        reversion_pct = min(0.40, velocity_score * 0.04)  # 3pts → 12%, 8pts → 32%
-        implied_fv = entry_price * (1.0 + reversion_pct)
-        fair_value_estimates.append(('velocity', implied_fv, reversion_pct * 100))
+    # Multi-layer confirmation bonus: each additional confirming layer
+    # adds confidence, so we can target slightly more
+    if active_layers >= 3:
+        tp_fraction *= 1.20   # 3+ layers: 20% more aggressive
+    elif active_layers >= 2:
+        tp_fraction *= 1.10   # 2 layers: 10% more aggressive
 
-    # ── Determine TP from mispricing estimates ──
-    tier_tp_pct = edge_tier.get('profit_target_pct', 25) / 100.0  # fallback
+    # Cheap token dampener: tokens under 15¢ have huge theoretical upside
+    # but price moves are noisy, so be conservative with TP target
+    if entry_price < 0.08:
+        tp_fraction *= 0.70
+    elif entry_price < 0.15:
+        tp_fraction *= 0.85
 
-    if fair_value_estimates:
-        # Weight by source reliability: cross-platform > combo > velocity
-        weights = {'kalshi': 3.0, 'manifold': 2.0, 'combo': 2.0, 'velocity': 1.0}
-        weighted_fv = sum(fv * weights.get(src, 1) for src, fv, _ in fair_value_estimates)
-        total_weight = sum(weights.get(src, 1) for src, _, _ in fair_value_estimates)
-        target_fv = weighted_fv / total_weight
+    # Clamp: never target less than 5% or more than 50% of available upside
+    tp_fraction = max(0.05, min(0.50, tp_fraction))
 
-        # TP = partway to fair value (80% of the way — leave some on the table)
-        tp_price = entry_price + (target_fv - entry_price) * 0.80
+    tp_price = entry_price + (tp_fraction * available_upside)
 
-        # But never less than the tier minimum
-        tier_min_tp = entry_price * (1.0 + tier_tp_pct * 0.5)  # at least half of tier %
-        tp_price = max(tp_price, tier_min_tp)
+    # ══════════════════════════════════════════════════════════════════
+    # STOP-LOSS: fraction of downside, informed by order book
+    # ══════════════════════════════════════════════════════════════════
+    available_downside = max(0.01, entry_price)  # price can go to $0
 
-        # And never more than 2x the tier target (don't be unrealistic)
-        tier_max_tp = entry_price * (1.0 + tier_tp_pct * 2.0)
-        tp_price = min(tp_price, tier_max_tp)
+    # Base SL fraction by tier
+    base_sl = {'high': 0.30, 'medium': 0.25, 'low': 0.20}
+    sl_fraction = base_sl.get(edge_tier_name, 0.22)
 
-        tp_pct = (tp_price - entry_price) / entry_price if entry_price > 0 else tier_tp_pct
+    # Order book depth adjustment:
+    # If there's substantial bid depth, price has support → can use wider SL
+    # If bid side is thin, price could gap → tighten SL
+    total_depth = bid_depth + ask_depth
+    if total_depth > 0:
+        bid_ratio = bid_depth / total_depth  # 0-1, how much depth on our side
+        if bid_ratio > 0.6:
+            sl_fraction *= 1.10  # Good support, slightly wider OK
+        elif bid_ratio < 0.3:
+            sl_fraction *= 0.80  # Thin support, tighten up
     else:
-        # No layer gave a clear target — use tier-based fallback
-        tp_pct = tier_tp_pct
-        tp_price = entry_price * (1.0 + tp_pct)
+        # No depth data — be conservative
+        sl_fraction *= 0.85
 
-    # ── Stop-Loss ──
-    sl_pct = abs(edge_tier.get('stop_loss_pct', -20)) / 100.0
+    # High edge → slightly more room (more conviction, give it time to work)
+    if edge_score >= 50 and active_layers >= 2:
+        sl_fraction *= 1.10
 
-    # Cheap token adjustment: tighter SL for thin order books
-    if entry_price < 0.03:
-        sl_pct = min(sl_pct, 0.12)   # Max 12% SL for penny tokens
-    elif entry_price < 0.08:
-        sl_pct = min(sl_pct, 0.15)   # Max 15% for cheap tokens
-
-    # Widen SL slightly when mispricing evidence is very strong
-    # (more conviction = give it more room to work)
-    if edge_score >= 50 and len(fair_value_estimates) >= 2:
-        sl_pct = min(sl_pct * 1.15, 0.30)  # Up to 15% wider, max 30%
-
-    sl_price = entry_price * (1.0 - sl_pct)
-
-    # ── Max Entry: don't chase ──
+    # Cheap token tightening: under 10¢, a 25% drop is only 2.5¢
+    # which could happen from one order in a thin book. Tighten to limit damage.
     if entry_price < 0.05:
-        max_entry_buffer = 0.20   # 20% buffer for very cheap
+        sl_fraction = min(sl_fraction, 0.25)
     elif entry_price < 0.10:
-        max_entry_buffer = 0.15
+        sl_fraction = min(sl_fraction, 0.30)
+
+    # Clamp: never less than 10% or more than 40% of downside
+    sl_fraction = max(0.10, min(0.40, sl_fraction))
+
+    sl_price = entry_price - (sl_fraction * available_downside)
+
+    # ══════════════════════════════════════════════════════════════════
+    # RISK/REWARD ENFORCEMENT: ensure SL never risks more than TP gains
+    # ══════════════════════════════════════════════════════════════════
+    # Minimum R:R of 1.0 — if the current SL risks more than TP rewards,
+    # tighten the SL until R:R >= 1.0. This is critical for expensive
+    # tokens (60¢+) where available upside is small but downside is large.
+    reward = tp_price - entry_price
+    risk = entry_price - sl_price
+    min_rr = 1.0  # at minimum, reward must equal risk
+
+    if risk > 0 and reward > 0 and (reward / risk) < min_rr:
+        # Tighten SL so risk = reward / min_rr
+        max_risk = reward / min_rr
+        sl_price = entry_price - max_risk
+
+    # ══════════════════════════════════════════════════════════════════
+    # ENTRY RANGE: grounded in order book reality
+    # ══════════════════════════════════════════════════════════════════
+    # Min entry: the bid price (realistic fill). If no bid data, use entry - 1¢
+    min_entry = bid if bid > 0 and bid < entry_price else entry_price - 0.01
+
+    # Max entry buffer: based on spread width and price level
+    # Tight spread → small buffer (easy to fill near current price)
+    # Wide spread → larger buffer (may need to cross more of the spread)
+    if spread_pct > 0:
+        # Spread-based: buffer is roughly half the spread (you'll fill inside it)
+        spread_abs = (ask - bid) if (ask > bid > 0) else entry_price * spread_pct / 100
+        max_entry_buffer = max(0.005, spread_abs * 0.6)
     else:
-        max_entry_buffer = 0.10
+        # No spread data — use price-level heuristic
+        if entry_price < 0.05:
+            max_entry_buffer = 0.008
+        elif entry_price < 0.15:
+            max_entry_buffer = 0.012
+        elif entry_price < 0.50:
+            max_entry_buffer = 0.02
+        else:
+            max_entry_buffer = 0.03
 
-    max_entry_price = entry_price * (1.0 + max_entry_buffer)
+    # Liquidity adjustment: very liquid markets have tighter fills
+    liquidity = opp.get('liquidity_usd', 0)
+    if liquidity > 100000:
+        max_entry_buffer *= 0.7  # Deep liquidity, tighter fill
+    elif liquidity < 10000:
+        max_entry_buffer *= 1.3  # Thin, may need wider entry
 
-    # Clamp to valid range
+    max_entry_price = entry_price + max_entry_buffer
+
+    # ── Final clamps ──
     tp_price = min(tp_price, 0.99)
     sl_price = max(sl_price, 0.001)
+    min_entry = max(min_entry, 0.001)
     max_entry_price = min(max_entry_price, 0.99)
+
+    # Ensure entry range makes sense
+    if min_entry >= max_entry_price:
+        min_entry = entry_price - 0.005
+        max_entry_price = entry_price + 0.01
+
+    # TP/SL percentages for display
+    tp_pct = ((tp_price - entry_price) / entry_price * 100) if entry_price > 0 else 0
+    sl_pct = ((sl_price - entry_price) / entry_price * 100) if entry_price > 0 else 0
 
     return {
         'tp_price': round(tp_price, 4),
         'sl_price': round(sl_price, 4),
+        'min_entry_price': round(min_entry, 4),
         'max_entry_price': round(max_entry_price, 4),
-        'tp_pct': round(tp_pct * 100, 1),
-        'sl_pct': round(-sl_pct * 100, 1),
-        'tp_sources': [src for src, _, _ in fair_value_estimates],  # which layers drove the TP
+        'tp_pct': round(tp_pct, 1),
+        'sl_pct': round(sl_pct, 1),
+        'tp_fraction': round(tp_fraction, 3),   # what % of upside we're targeting
+        'sl_fraction': round(sl_fraction, 3),   # what % of downside we're risking
     }
 
 
@@ -267,6 +326,7 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
 
         # Call parameters — this is what we tell users
         'entry_price': round(entry_price, 4),
+        'min_entry_price': targets['min_entry_price'],
         'max_entry_price': targets['max_entry_price'],
         'tp_price': targets['tp_price'],
         'sl_price': targets['sl_price'],
@@ -284,7 +344,8 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
         'liquidity_usd': opportunity.get('liquidity_usd', 0),
         'volume_24h': opportunity.get('volume_24h', 0),
         'rationale': generate_rationale(opportunity),
-        'tp_sources': targets.get('tp_sources', []),
+        'tp_fraction': targets.get('tp_fraction', 0),
+        'sl_fraction': targets.get('sl_fraction', 0),
 
         # Resolution (filled when signal resolves)
         'resolved_at': None,
@@ -299,9 +360,9 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
 
     logger.info(
         f"NEW SIGNAL: {opportunity['outcome']} @ ${entry_price:.4f} "
+        f"Enter ${targets['min_entry_price']:.4f}-${targets['max_entry_price']:.4f} "
         f"TP ${targets['tp_price']:.4f} ({targets['tp_pct']:+.0f}%) "
         f"SL ${targets['sl_price']:.4f} ({targets['sl_pct']:.0f}%) "
-        f"Max entry ${targets['max_entry_price']:.4f} "
         f"[edge={edge_score:.0f}, {tier_name}] "
         f"({opportunity['question'][:50]}...)"
     )
