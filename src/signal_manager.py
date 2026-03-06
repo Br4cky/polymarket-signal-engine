@@ -236,8 +236,10 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
     targets = compute_tp_sl(entry_price, tier, tier_name, opportunity=opportunity)
 
     # Compute expiry: min of resolution date and now + max_hold_days
+    # But NEVER set expiry in the past (can happen if resolution_date has passed)
     max_hold_days = tier.get('max_hold_days', 5)
-    hold_expiry = datetime.now(timezone.utc) + timedelta(days=max_hold_days)
+    now = datetime.now(timezone.utc)
+    hold_expiry = now + timedelta(days=max_hold_days)
 
     resolution_date = opportunity.get('resolution_date', '')
     if resolution_date:
@@ -245,7 +247,11 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
             res = datetime.fromisoformat(str(resolution_date))
             if res.tzinfo is None:
                 res = res.replace(tzinfo=timezone.utc)
-            expiry = min(hold_expiry, res)
+            # Only use resolution date if it's in the future
+            if res > now:
+                expiry = min(hold_expiry, res)
+            else:
+                expiry = hold_expiry
         except (ValueError, TypeError):
             expiry = hold_expiry
     else:

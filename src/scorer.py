@@ -123,7 +123,8 @@ def compute_edge_score(
 
 
 def _days_to_close(resolution_date_str: Optional[str]) -> int:
-    """Parse resolution date and return days until close."""
+    """Parse resolution date and return days until close.
+    Returns -1 for markets whose resolution date has already passed."""
     if not resolution_date_str:
         return 999
 
@@ -132,7 +133,7 @@ def _days_to_close(resolution_date_str: Optional[str]) -> int:
         if res.tzinfo is None:
             res = res.replace(tzinfo=timezone.utc)
         delta = (res - datetime.now(timezone.utc)).days
-        return max(0, delta)
+        return delta  # negative = already past resolution
     except (ValueError, TypeError):
         return 999
 
