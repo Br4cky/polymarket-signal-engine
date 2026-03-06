@@ -124,7 +124,10 @@ def compute_edge_score(
 
 def _days_to_close(resolution_date_str: Optional[str]) -> int:
     """Parse resolution date and return days until close.
-    Returns -1 for markets whose resolution date has already passed."""
+    Returns 0 for markets whose scheduled resolution date has passed but
+    are still actively trading (e.g. a football match still in progress).
+    The Gamma API already filters active=true / closed=false, so if we
+    see the market it is still live — don't filter it out."""
     if not resolution_date_str:
         return 999
 
@@ -133,7 +136,7 @@ def _days_to_close(resolution_date_str: Optional[str]) -> int:
         if res.tzinfo is None:
             res = res.replace(tzinfo=timezone.utc)
         delta = (res - datetime.now(timezone.utc)).days
-        return delta  # negative = already past resolution
+        return max(0, delta)  # clamp to 0 — market still live if Gamma says so
     except (ValueError, TypeError):
         return 999
 
