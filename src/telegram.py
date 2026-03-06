@@ -69,7 +69,13 @@ def format_resolution_message(signal: dict) -> str:
     Format a signal resolution (TP hit, SL hit, expired) for Telegram.
     """
     rt = signal.get('resolution_type', 'unknown')
-    pnl = signal.get('hypothetical_pnl_pct', 0)
+    pnl = signal.get('hypothetical_pnl_pct') or 0
+    entry = signal.get('entry_price') or 0
+    final = signal.get('final_price') or 0
+    peak = signal.get('peak_price') or 0
+    trough = signal.get('trough_price') or 0
+    edge = signal.get('edge_score') or 0
+    tier = signal.get('edge_tier') or ''
 
     if rt == 'tp_hit':
         header = f"✅ SIGNAL WIN +{pnl:.1f}%"
@@ -84,12 +90,10 @@ def format_resolution_message(signal: dict) -> str:
         f"{header}\n"
         f"\n"
         f"📊 {signal.get('question', '')[:80]}\n"
-        f"Entry: ${signal.get('entry_price', 0):.4f} → "
-        f"Final: ${signal.get('final_price', 0):.4f}\n"
-        f"Peak: ${signal.get('peak_price', 0):.4f} | "
-        f"Trough: ${signal.get('trough_price', 0):.4f}\n"
+        f"Entry: ${entry:.4f} → Final: ${final:.4f}\n"
+        f"Peak: ${peak:.4f} | Trough: ${trough:.4f}\n"
         f"\n"
-        f"Edge at call: {signal.get('edge_score', 0):.0f} [{signal.get('edge_tier', '')}]"
+        f"Edge at call: {edge:.0f} [{tier}]"
     )
     return msg
 
