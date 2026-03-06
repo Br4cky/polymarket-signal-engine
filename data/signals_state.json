@@ -126,8 +126,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0215,
-      "live_pnl_pct": 30.3
+      "current_price": 0.022,
+      "live_pnl_pct": 33.33
     },
     {
       "signal_id": "0308ac14",
@@ -255,8 +255,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.037,
-      "live_pnl_pct": -24.49
+      "current_price": 0.034,
+      "live_pnl_pct": -30.61
     },
     {
       "signal_id": "2fed7d16",
@@ -298,8 +298,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.69,
-      "live_pnl_pct": -0.72
+      "current_price": 0.695,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "2647fa37",
@@ -472,8 +472,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0165,
-      "live_pnl_pct": -58.23
+      "current_price": 0.0125,
+      "live_pnl_pct": -68.35
     },
     {
       "signal_id": "c0667f71",
@@ -603,8 +603,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.085,
-      "live_pnl_pct": 13.33
+      "current_price": 0.06,
+      "live_pnl_pct": -20.0
     },
     {
       "signal_id": "f5e6e08f",
@@ -646,8 +646,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0865,
-      "live_pnl_pct": -7.49
+      "current_price": 0.092,
+      "live_pnl_pct": -1.6
     },
     {
       "signal_id": "85510544",
@@ -775,8 +775,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0245,
-      "live_pnl_pct": -63.43
+      "current_price": 0.0295,
+      "live_pnl_pct": -55.97
     },
     {
       "signal_id": "9e2dfb58",
@@ -861,8 +861,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.245,
-      "live_pnl_pct": 0.0
+      "current_price": 0.485,
+      "live_pnl_pct": 97.96
     },
     {
       "signal_id": "97c19e4e",
@@ -949,16 +949,102 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.012,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "4c102e88",
+      "timestamp": "2026-03-06T09:28:07.516260+00:00",
+      "status": "active",
+      "market_id": "1480664",
+      "condition_id": "",
+      "token_id": "77077828071778843564236977904549670703643703316649402148999462594565071281826",
+      "question": "Will Ethereum reach $2,300 March 2-8?",
+      "outcome": "Yes",
+      "slug": "will-ethereum-reach-2300-march-2-8",
+      "category": "",
+      "resolution_date": "2026-03-09T04:00:00Z",
+      "entry_price": 0.08,
+      "max_entry_price": 0.092,
+      "tp_price": 0.1,
+      "sl_price": 0.064,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-09T04:00:00+00:00",
+      "edge_score": 39.4,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 1.0
+      },
+      "convexity_band": "10x",
+      "potential_multiple": 12.5,
+      "days_to_close": 2,
+      "liquidity_usd": 36201.6896,
+      "volume_24h": 95674.42673599998,
+      "rationale": "Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.08,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "a06f953e",
+      "timestamp": "2026-03-06T09:28:07.516904+00:00",
+      "status": "active",
+      "market_id": "1508211",
+      "condition_id": "",
+      "token_id": "36621326862948867052909875492802434369808558798521273520211891149091024467852",
+      "question": "Antalya 2: Anhelina Kalinina vs Panna Udvardy",
+      "outcome": "Anhelina Kalinina",
+      "slug": "wta-kalinin-udvardy-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T08:00:00Z",
+      "entry_price": 0.86,
+      "max_entry_price": 0.946,
+      "tp_price": 0.99,
+      "sl_price": 0.688,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-11T09:28:07.516886+00:00",
+      "edge_score": 39.3,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 9.8,
+        "dislocation": 11.0,
+        "external": 2.3
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 46954.0327,
+      "volume_24h": 92792.33575600004,
+      "rationale": "Smart money 10/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 2.3/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.86,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 22,
+    "total_signals": 24,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T08:46:27.098337+00:00"
+  "last_updated": "2026-03-06T09:28:07.517204+00:00"
 }
