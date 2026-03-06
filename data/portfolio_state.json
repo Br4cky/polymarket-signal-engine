@@ -27,7 +27,7 @@
           "dislocation": 12.0,
           "external": 0.5
         },
-        "days_to_close": 1,
+        "days_to_close": 0,
         "resolution_date": "2026-03-07T00:00:00Z",
         "potential_multiple": 6.5,
         "slug": "will-iran-strike-turkey-in-march"
@@ -83,7 +83,7 @@
           "dislocation": 9.67,
           "external": 0.5
         },
-        "days_to_close": 1,
+        "days_to_close": 0,
         "resolution_date": "2026-03-07T00:00:00Z",
         "potential_multiple": 7.4,
         "slug": "will-a-gulf-state-strike-iran-by-march-7"
@@ -195,7 +195,7 @@
           "dislocation": 11.0,
           "external": 4.59
         },
-        "days_to_close": 4,
+        "days_to_close": 3,
         "resolution_date": "2026-03-10T00:00:00Z",
         "potential_multiple": 60.6,
         "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
@@ -335,7 +335,7 @@
           "dislocation": 8.06,
           "external": 7.0
         },
-        "days_to_close": 12,
+        "days_to_close": 11,
         "resolution_date": "2026-03-18T00:00:00Z",
         "potential_multiple": 95.2,
         "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
@@ -379,10 +379,10 @@
         "entry_timestamp": "2026-03-05T20:28:02.034357+00:00",
         "shares": 1206.71,
         "entry_usd": 55.18,
-        "current_price": 0.049,
-        "current_value": 59.13,
-        "unrealized_pnl": 3.95,
-        "unrealized_pnl_pct": 7.16,
+        "current_price": 0.0455,
+        "current_value": 54.91,
+        "unrealized_pnl": -0.27,
+        "unrealized_pnl_pct": -0.49,
         "edge_score_at_entry": 36.1,
         "edge_tier_at_entry": "medium",
         "layer_scores_at_entry": {
@@ -447,7 +447,7 @@
           "dislocation": 12.0,
           "external": 0.5
         },
-        "days_to_close": 2,
+        "days_to_close": 1,
         "resolution_date": "2026-03-08T00:00:00Z",
         "potential_multiple": 3.3,
         "slug": "will-india-win-the-2026-icc-mens-t20-world-cup"
@@ -475,7 +475,7 @@
           "dislocation": 10.0,
           "external": 3.58
         },
-        "days_to_close": 12,
+        "days_to_close": 11,
         "resolution_date": "2026-03-17T23:55:00Z",
         "potential_multiple": 4.4,
         "slug": "will-dominican-republic-win-the-2026-world-baseball-classic"
@@ -2416,7 +2416,7 @@
     "win_count": 27,
     "loss_count": 44,
     "peak_equity": 5411.570000000001,
-    "max_drawdown": -8.02,
+    "max_drawdown": -8.1,
     "equity_history": [
       {
         "timestamp": "2026-03-04T23:31:07.319896+00:00",
@@ -2805,6 +2805,10 @@
       {
         "timestamp": "2026-03-05T23:45:48.190863+00:00",
         "equity": 4977.43
+      },
+      {
+        "timestamp": "2026-03-06T00:01:08.831024+00:00",
+        "equity": 4973.21
       }
     ],
     "stop_cooldowns": {
@@ -2815,5 +2819,5 @@
     }
   },
   "created_at": "2026-03-04T23:31:07.320008+00:00",
-  "last_updated": "2026-03-05T23:45:52.735864+00:00"
+  "last_updated": "2026-03-06T00:01:13.901179+00:00"
 }

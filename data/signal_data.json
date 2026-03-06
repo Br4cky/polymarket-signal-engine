@@ -1,8 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-05T23:45:52.739349+00:00",
-    "markets_scanned": 6,
-    "tokens_scored": 10,
+    "timestamp": "2026-03-06T00:01:13.904629+00:00",
+    "markets_scanned": 300,
+    "tokens_scored": 274,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -434,9 +435,9 @@
   },
   "portfolio": {
     "total_capital": 5000,
-    "combined_equity": 4977.43,
-    "combined_pnl": -20.97,
-    "combined_pnl_pct": -0.42,
+    "combined_equity": 4973.21,
+    "combined_pnl": -25.19,
+    "combined_pnl_pct": -0.5,
     "combined_win_rate": 0.38,
     "combined_total_trades": 71,
     "open_positions": 20,
@@ -444,15 +445,15 @@
       "name": "Repricing Engine",
       "capital": 5000,
       "cash": 3603.59,
-      "equity": 4977.43,
-      "pnl": -20.97,
-      "total_pnl": -20.97,
+      "equity": 4973.21,
+      "pnl": -25.19,
+      "total_pnl": -25.19,
       "win_rate": 0.38,
       "win_count": 27,
       "loss_count": 44,
       "open_positions": 20,
       "closed_trades": 71,
-      "max_drawdown": -8.02,
+      "max_drawdown": -8.1,
       "peak_equity": 5411.570000000001,
       "equity_history": [
         {
@@ -842,6 +843,10 @@
         {
           "timestamp": "2026-03-05T23:45:48.190863+00:00",
           "equity": 4977.43
+        },
+        {
+          "timestamp": "2026-03-06T00:01:08.831024+00:00",
+          "equity": 4973.21
         }
       ]
     }
@@ -870,7 +875,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-07T00:00:00Z",
       "potential_multiple": 6.5,
       "slug": "will-iran-strike-turkey-in-march"
@@ -926,7 +931,7 @@
         "dislocation": 9.67,
         "external": 0.5
       },
-      "days_to_close": 1,
+      "days_to_close": 0,
       "resolution_date": "2026-03-07T00:00:00Z",
       "potential_multiple": 7.4,
       "slug": "will-a-gulf-state-strike-iran-by-march-7"
@@ -1038,7 +1043,7 @@
         "dislocation": 11.0,
         "external": 4.59
       },
-      "days_to_close": 4,
+      "days_to_close": 3,
       "resolution_date": "2026-03-10T00:00:00Z",
       "potential_multiple": 60.6,
       "slug": "will-us-or-israel-strike-iran-on-march-8-2026"
@@ -1178,7 +1183,7 @@
         "dislocation": 8.06,
         "external": 7.0
       },
-      "days_to_close": 12,
+      "days_to_close": 11,
       "resolution_date": "2026-03-18T00:00:00Z",
       "potential_multiple": 95.2,
       "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-march-2026-meeting"
@@ -1222,10 +1227,10 @@
       "entry_timestamp": "2026-03-05T20:28:02.034357+00:00",
       "shares": 1206.71,
       "entry_usd": 55.18,
-      "current_price": 0.049,
-      "current_value": 59.13,
-      "unrealized_pnl": 3.95,
-      "unrealized_pnl_pct": 7.16,
+      "current_price": 0.0455,
+      "current_value": 54.91,
+      "unrealized_pnl": -0.27,
+      "unrealized_pnl_pct": -0.49,
       "edge_score_at_entry": 36.1,
       "edge_tier_at_entry": "medium",
       "layer_scores_at_entry": {
@@ -1290,7 +1295,7 @@
         "dislocation": 12.0,
         "external": 0.5
       },
-      "days_to_close": 2,
+      "days_to_close": 1,
       "resolution_date": "2026-03-08T00:00:00Z",
       "potential_multiple": 3.3,
       "slug": "will-india-win-the-2026-icc-mens-t20-world-cup"
@@ -1318,7 +1323,7 @@
         "dislocation": 10.0,
         "external": 3.58
       },
-      "days_to_close": 12,
+      "days_to_close": 11,
       "resolution_date": "2026-03-17T23:55:00Z",
       "potential_multiple": 4.4,
       "slug": "will-dominican-republic-win-the-2026-world-baseball-classic"
@@ -2718,16 +2723,16 @@
       "slug": "wta-parry-william-2026-03-05",
       "token_id": "42710151130914711556784994022550871767767803022402471963515351069836771937855",
       "outcome": "Diane Parry",
-      "current_price": 0.935,
+      "current_price": 0.7695,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 49.4,
+      "edge_score": 49.0,
       "layer_scores": {
         "structural": 0.0,
-        "smart_money": 18.4,
+        "smart_money": 18.19,
         "dislocation": 11.0,
-        "external": 5.94
+        "external": 5.67
       },
       "structural_detail": {
         "structural_total": 0.0,
@@ -2758,18 +2763,18 @@
       "smart_money_detail": {
         "whale_accumulation": 7.0,
         "leaderboard_alignment": 6.0,
-        "position_concentration": 5.4,
-        "smart_money_total": 18.4,
+        "position_concentration": 5.19,
+        "smart_money_total": 18.19,
         "whale_count": 5,
         "elite_count": 3,
-        "total_whale_value": 52534.87
+        "total_whale_value": 53692.44
       },
       "external_detail": {
         "news_score": 0,
-        "trends_score": 5.44,
+        "trends_score": 5.17,
         "sentiment_score": 0.5,
         "activity_score": 0,
-        "external_total": 5.94,
+        "external_total": 5.67,
         "details": {
           "matching_articles": 0,
           "articles_6h": 0,
@@ -2777,7 +2782,7 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": true,
-          "best_spike_ratio": 5.12,
+          "best_spike_ratio": 4.89,
           "entities_checked": 2,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -2786,13 +2791,13 @@
         }
       },
       "convexity_band": "yield",
-      "potential_multiple": 1.1,
+      "potential_multiple": 1.3,
       "days_to_close": 6,
       "resolution_date": "2026-03-12T19:00:00Z",
-      "liquidity_usd": 61168.50295,
-      "volume_24h": 124363.026319,
+      "liquidity_usd": 54114.24975,
+      "volume_24h": 255882.63225000005,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188260+00:00",
+      "timestamp": "2026-03-06T00:01:08.828646+00:00",
       "base_event": "wta-parry-william"
     },
     {
@@ -2802,16 +2807,16 @@
       "slug": "wta-parry-william-2026-03-05",
       "token_id": "53101571827858750627975476114540203466735533870830957054460858426477407627409",
       "outcome": "Venus Williams",
-      "current_price": 0.065,
+      "current_price": 0.2305,
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 49.4,
+      "edge_score": 49.0,
       "layer_scores": {
         "structural": 0.0,
-        "smart_money": 18.4,
+        "smart_money": 18.19,
         "dislocation": 11.0,
-        "external": 5.94
+        "external": 5.67
       },
       "structural_detail": {
         "structural_total": 0.0,
@@ -2842,18 +2847,18 @@
       "smart_money_detail": {
         "whale_accumulation": 7.0,
         "leaderboard_alignment": 6.0,
-        "position_concentration": 5.4,
-        "smart_money_total": 18.4,
+        "position_concentration": 5.19,
+        "smart_money_total": 18.19,
         "whale_count": 5,
         "elite_count": 3,
-        "total_whale_value": 52534.87
+        "total_whale_value": 53692.44
       },
       "external_detail": {
         "news_score": 0,
-        "trends_score": 5.44,
+        "trends_score": 5.17,
         "sentiment_score": 0.5,
         "activity_score": 0,
-        "external_total": 5.94,
+        "external_total": 5.67,
         "details": {
           "matching_articles": 0,
           "articles_6h": 0,
@@ -2861,7 +2866,7 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": true,
-          "best_spike_ratio": 5.12,
+          "best_spike_ratio": 4.89,
           "entities_checked": 2,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -2869,15 +2874,96 @@
           "engagement_ratio": 0
         }
       },
-      "convexity_band": "10x",
-      "potential_multiple": 15.4,
+      "convexity_band": "5x",
+      "potential_multiple": 4.3,
       "days_to_close": 6,
       "resolution_date": "2026-03-12T19:00:00Z",
-      "liquidity_usd": 61168.50295,
-      "volume_24h": 124363.026319,
+      "liquidity_usd": 54114.24975,
+      "volume_24h": 255882.63225000005,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188273+00:00",
+      "timestamp": "2026-03-06T00:01:08.828655+00:00",
       "base_event": "wta-parry-william"
+    },
+    {
+      "market_id": "1465975",
+      "question": "Will US or Israel strike Iran on March 10, 2026?",
+      "category": "",
+      "slug": "will-us-or-israel-strike-iran-on-march-10-2026",
+      "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
+      "outcome": "No",
+      "current_price": 0.0185,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 43.2,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 4.4
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 12.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 5.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 3.9,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 4.4,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": true,
+          "best_spike_ratio": 3.83,
+          "entities_checked": 2,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 54.1,
+      "days_to_close": 3,
+      "resolution_date": "2026-03-10T00:00:00Z",
+      "liquidity_usd": 50677.62792,
+      "volume_24h": 114893.653618,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-06T00:01:08.828885+00:00",
+      "base_event": "will-us-israel-strike-iran"
     },
     {
       "market_id": "1413025",
@@ -2957,10 +3043,10 @@
       "potential_multiple": 2.4,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 296656.4202,
-      "volume_24h": 288204.0320280003,
+      "liquidity_usd": 299528.0716,
+      "volume_24h": 287572.66350800026,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.187981+00:00",
+      "timestamp": "2026-03-06T00:01:08.828600+00:00",
       "base_event": "lal-cel-rea-rea"
     },
     {
@@ -3041,92 +3127,11 @@
       "potential_multiple": 1.7,
       "days_to_close": 1,
       "resolution_date": "2026-03-07T20:00:00Z",
-      "liquidity_usd": 296656.4202,
-      "volume_24h": 288204.0320280003,
+      "liquidity_usd": 299528.0716,
+      "volume_24h": 287572.66350800026,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.187996+00:00",
+      "timestamp": "2026-03-06T00:01:08.828611+00:00",
       "base_event": "lal-cel-rea-rea"
-    },
-    {
-      "market_id": "1465975",
-      "question": "Will US or Israel strike Iran on March 10, 2026?",
-      "category": "",
-      "slug": "will-us-or-israel-strike-iran-on-march-10-2026",
-      "token_id": "113436739329541771212816015820501050432087529640242907928908020725032478969068",
-      "outcome": "No",
-      "current_price": 0.0185,
-      "bid": 0.0,
-      "ask": 0.0,
-      "spread_pct": 0.0,
-      "edge_score": 40.7,
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 0.0,
-        "dislocation": 11.0,
-        "external": 4.59
-      },
-      "structural_detail": {
-        "structural_total": 0.0,
-        "combinatorial": {
-          "score": 0.0,
-          "yes_no_sum": 1.0,
-          "mispricing_type": "none"
-        },
-        "cross_platform": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        },
-        "manifold": {
-          "score": 0,
-          "divergence_pct": 0,
-          "direction": "none"
-        }
-      },
-      "dislocation_detail": {
-        "dislocation_total": 11.0,
-        "price_velocity": 0.0,
-        "volume_anomaly": 7.0,
-        "order_book": 0.0,
-        "price_trajectory": 0.0,
-        "time_decay": 4.0
-      },
-      "smart_money_detail": {
-        "whale_accumulation": 0.0,
-        "leaderboard_alignment": 0.0,
-        "position_concentration": 0.0,
-        "smart_money_total": 0.0
-      },
-      "external_detail": {
-        "news_score": 0,
-        "trends_score": 4.09,
-        "sentiment_score": 0.5,
-        "activity_score": 0,
-        "external_total": 4.59,
-        "details": {
-          "matching_articles": 0,
-          "articles_6h": 0,
-          "articles_24h": 0,
-          "most_relevant_headline": "",
-          "recency_hours": 999,
-          "spike_detected": true,
-          "best_spike_ratio": 3.99,
-          "entities_checked": 2,
-          "fear_greed_value": 22,
-          "fear_greed_class": "Extreme Fear",
-          "comment_count": 0,
-          "engagement_ratio": 0
-        }
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 54.1,
-      "days_to_close": 4,
-      "resolution_date": "2026-03-10T00:00:00Z",
-      "liquidity_usd": 50792.37777,
-      "volume_24h": 112346.211513,
-      "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188318+00:00",
-      "base_event": "will-us-israel-strike-iran"
     },
     {
       "market_id": "654414",
@@ -3139,11 +3144,11 @@
       "bid": 0.001,
       "ask": 0.999,
       "spread_pct": 99800.0,
-      "edge_score": 37.0,
+      "edge_score": 37.1,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 15.0,
-        "dislocation": 11.07,
+        "dislocation": 11.08,
         "external": 0.5
       },
       "structural_detail": {
@@ -3165,9 +3170,9 @@
         }
       },
       "dislocation_detail": {
-        "dislocation_total": 11.07,
+        "dislocation_total": 11.08,
         "price_velocity": 0.0,
-        "volume_anomaly": 5.57,
+        "volume_anomaly": 5.58,
         "order_book": 2.5,
         "price_trajectory": 0.0,
         "time_decay": 3.0
@@ -3206,11 +3211,92 @@
       "potential_multiple": 95.2,
       "days_to_close": 12,
       "resolution_date": "2026-03-18T00:00:00Z",
-      "liquidity_usd": 2383724.28177,
-      "volume_24h": 4466798.862445999,
+      "liquidity_usd": 2367967.48025,
+      "volume_24h": 4480350.746683999,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.187793+00:00",
+      "timestamp": "2026-03-06T00:01:08.828431+00:00",
       "base_event": "will-there-no-change-fed-interest-rates-after-marchmeeting"
+    },
+    {
+      "market_id": "1462808",
+      "question": "Will Elon Musk post 180-199 tweets from March 3 to March 10, 2026?",
+      "category": "",
+      "slug": "elon-musk-of-tweets-march-3-march-10-180-199",
+      "token_id": "59059371156910253918083944148371353064424603124754557211185640032833962729639",
+      "outcome": "Yes",
+      "current_price": 0.0455,
+      "bid": 0.0,
+      "ask": 0.0,
+      "spread_pct": 0.0,
+      "edge_score": 36.1,
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 11.0,
+        "external": 0.5
+      },
+      "structural_detail": {
+        "structural_total": 0.0,
+        "combinatorial": {
+          "score": 0.0,
+          "yes_no_sum": 1.0,
+          "mispricing_type": "none"
+        },
+        "cross_platform": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        },
+        "manifold": {
+          "score": 0,
+          "divergence_pct": 0,
+          "direction": "none"
+        }
+      },
+      "dislocation_detail": {
+        "dislocation_total": 11.0,
+        "price_velocity": 0.0,
+        "volume_anomaly": 7.0,
+        "order_book": 0.0,
+        "price_trajectory": 0.0,
+        "time_decay": 4.0
+      },
+      "smart_money_detail": {
+        "whale_accumulation": 0.0,
+        "leaderboard_alignment": 0.0,
+        "position_concentration": 0.0,
+        "smart_money_total": 0.0
+      },
+      "external_detail": {
+        "news_score": 0,
+        "trends_score": 0,
+        "sentiment_score": 0.5,
+        "activity_score": 0,
+        "external_total": 0.5,
+        "details": {
+          "matching_articles": 0,
+          "articles_6h": 0,
+          "articles_24h": 0,
+          "most_relevant_headline": "",
+          "recency_hours": 999,
+          "spike_detected": false,
+          "best_spike_ratio": 0,
+          "entities_checked": 0,
+          "fear_greed_value": 22,
+          "fear_greed_class": "Extreme Fear",
+          "comment_count": 0,
+          "engagement_ratio": 0
+        }
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 22.0,
+      "days_to_close": 4,
+      "resolution_date": "2026-03-10T16:00:00Z",
+      "liquidity_usd": 29491.47415,
+      "volume_24h": 101880.19445999985,
+      "recommended_action": "BUY",
+      "timestamp": "2026-03-06T00:01:08.828941+00:00",
+      "base_event": "elon-musk-tweets-march-march"
     },
     {
       "market_id": "956344",
@@ -3285,12 +3371,12 @@
       },
       "convexity_band": "yield",
       "potential_multiple": 1.4,
-      "days_to_close": 2,
+      "days_to_close": 1,
       "resolution_date": "2026-03-08T00:00:00Z",
-      "liquidity_usd": 39852.6619,
-      "volume_24h": 104599.98079499995,
+      "liquidity_usd": 38596.5401,
+      "volume_24h": 106082.03603299995,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188367+00:00",
+      "timestamp": "2026-03-06T00:01:08.828911+00:00",
       "base_event": "will-india-win-theicc-mens-t-world-cup"
     },
     {
@@ -3366,12 +3452,12 @@
       },
       "convexity_band": "2x",
       "potential_multiple": 3.3,
-      "days_to_close": 2,
+      "days_to_close": 1,
       "resolution_date": "2026-03-08T00:00:00Z",
-      "liquidity_usd": 39852.6619,
-      "volume_24h": 104599.98079499995,
+      "liquidity_usd": 38596.5401,
+      "volume_24h": 106082.03603299995,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188375+00:00",
+      "timestamp": "2026-03-06T00:01:08.828916+00:00",
       "base_event": "will-india-win-theicc-mens-t-world-cup"
     },
     {
@@ -3385,12 +3471,12 @@
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 33.8,
+      "edge_score": 33.6,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
         "dislocation": 10.0,
-        "external": 3.58
+        "external": 3.45
       },
       "structural_detail": {
         "structural_total": 0.0,
@@ -3426,10 +3512,10 @@
       },
       "external_detail": {
         "news_score": 0,
-        "trends_score": 3.08,
+        "trends_score": 2.95,
         "sentiment_score": 0.5,
         "activity_score": 0,
-        "external_total": 3.58,
+        "external_total": 3.45,
         "details": {
           "matching_articles": 0,
           "articles_6h": 0,
@@ -3437,7 +3523,7 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": true,
-          "best_spike_ratio": 3.57,
+          "best_spike_ratio": 3.46,
           "entities_checked": 1,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -3447,12 +3533,12 @@
       },
       "convexity_band": "5x",
       "potential_multiple": 4.9,
-      "days_to_close": 12,
+      "days_to_close": 11,
       "resolution_date": "2026-03-17T23:55:00Z",
-      "liquidity_usd": 25105.0708,
-      "volume_24h": 148243.505969,
+      "liquidity_usd": 25143.1449,
+      "volume_24h": 148171.972637,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188154+00:00",
+      "timestamp": "2026-03-06T00:01:08.828775+00:00",
       "base_event": "will-dominican-republic-win-theworld-baseball-classic"
     },
     {
@@ -3466,12 +3552,12 @@
       "bid": 0.0,
       "ask": 0.0,
       "spread_pct": 0.0,
-      "edge_score": 33.8,
+      "edge_score": 33.6,
       "layer_scores": {
         "structural": 0.0,
         "smart_money": 0.0,
         "dislocation": 10.0,
-        "external": 3.58
+        "external": 3.45
       },
       "structural_detail": {
         "structural_total": 0.0,
@@ -3507,10 +3593,10 @@
       },
       "external_detail": {
         "news_score": 0,
-        "trends_score": 3.08,
+        "trends_score": 2.95,
         "sentiment_score": 0.5,
         "activity_score": 0,
-        "external_total": 3.58,
+        "external_total": 3.45,
         "details": {
           "matching_articles": 0,
           "articles_6h": 0,
@@ -3518,7 +3604,7 @@
           "most_relevant_headline": "",
           "recency_hours": 999,
           "spike_detected": true,
-          "best_spike_ratio": 3.57,
+          "best_spike_ratio": 3.46,
           "entities_checked": 1,
           "fear_greed_value": 22,
           "fear_greed_class": "Extreme Fear",
@@ -3528,84 +3614,79 @@
       },
       "convexity_band": "yield",
       "potential_multiple": 1.3,
-      "days_to_close": 12,
+      "days_to_close": 11,
       "resolution_date": "2026-03-17T23:55:00Z",
-      "liquidity_usd": 25105.0708,
-      "volume_24h": 148243.505969,
+      "liquidity_usd": 25143.1449,
+      "volume_24h": 148171.972637,
       "recommended_action": "BUY",
-      "timestamp": "2026-03-05T23:45:48.188166+00:00",
+      "timestamp": "2026-03-06T00:01:08.828784+00:00",
       "base_event": "will-dominican-republic-win-theworld-baseball-classic"
     }
   ],
   "statistics": {
     "by_category": {
       "": {
-        "count": 10,
-        "avg_edge": 39.9
+        "count": 11,
+        "avg_edge": 39.7
       }
     },
     "by_convexity": {
       "yield": {
         "count": 4,
-        "total_liquidity": 422782.65585,
-        "avg_edge": 40.2
+        "total_liquidity": 417382.00635000004,
+        "avg_edge": 40.0
       },
-      "10x": {
-        "count": 1,
-        "total_liquidity": 61168.50295,
-        "avg_edge": 49.4
+      "5x": {
+        "count": 2,
+        "total_liquidity": 79257.39465,
+        "avg_edge": 41.3
+      },
+      "20x": {
+        "count": 3,
+        "total_liquidity": 2448136.58232,
+        "avg_edge": 38.8
       },
       "2x": {
         "count": 2,
-        "total_liquidity": 336509.0821,
+        "total_liquidity": 338124.6117,
         "avg_edge": 38.8
-      },
-      "20x": {
-        "count": 2,
-        "total_liquidity": 2434516.65954,
-        "avg_edge": 38.9
-      },
-      "5x": {
-        "count": 1,
-        "total_liquidity": 25105.0708,
-        "avg_edge": 33.8
       }
     }
   },
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 270,
+      "tokens_scored": 274,
       "tokens_with_signal": 41,
-      "coverage_pct": 15.2,
-      "avg_score": 8.51,
+      "coverage_pct": 15.0,
+      "avg_score": 8.71,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 270,
-      "tokens_with_signal": 191,
-      "coverage_pct": 70.7,
-      "avg_score": 11.14,
-      "max_score": 24.53,
+      "tokens_scored": 274,
+      "tokens_with_signal": 197,
+      "coverage_pct": 71.9,
+      "avg_score": 11.52,
+      "max_score": 24.59,
       "quality_traders": 53,
-      "markets_indexed": 4530
+      "markets_indexed": 4526
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 270,
-      "tokens_with_signal": 235,
-      "coverage_pct": 87.0,
-      "avg_score": 9.71,
+      "tokens_scored": 274,
+      "tokens_with_signal": 241,
+      "coverage_pct": 88.0,
+      "avg_score": 9.75,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 270,
-      "tokens_with_signal": 270,
+      "tokens_scored": 274,
+      "tokens_with_signal": 274,
       "coverage_pct": 100.0,
-      "avg_score": 0.89,
-      "max_score": 7.0
+      "avg_score": 0.81,
+      "max_score": 5.67
     }
   },
   "calibration": {
