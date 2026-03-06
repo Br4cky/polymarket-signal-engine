@@ -126,8 +126,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.022,
-      "live_pnl_pct": 33.33
+      "current_price": 0.0225,
+      "live_pnl_pct": 36.36
     },
     {
       "signal_id": "0308ac14",
@@ -255,8 +255,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.034,
-      "live_pnl_pct": -30.61
+      "current_price": 0.0345,
+      "live_pnl_pct": -29.59
     },
     {
       "signal_id": "2fed7d16",
@@ -298,8 +298,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.695,
-      "live_pnl_pct": 0.0
+      "current_price": 0.69,
+      "live_pnl_pct": -0.72
     },
     {
       "signal_id": "2647fa37",
@@ -603,8 +603,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.06,
-      "live_pnl_pct": -20.0
+      "current_price": 0.055,
+      "live_pnl_pct": -26.67
     },
     {
       "signal_id": "f5e6e08f",
@@ -646,8 +646,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.092,
-      "live_pnl_pct": -1.6
+      "current_price": 0.0975,
+      "live_pnl_pct": 4.28
     },
     {
       "signal_id": "85510544",
@@ -775,8 +775,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0295,
-      "live_pnl_pct": -55.97
+      "current_price": 0.0335,
+      "live_pnl_pct": -50.0
     },
     {
       "signal_id": "9e2dfb58",
@@ -861,8 +861,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.485,
-      "live_pnl_pct": 97.96
+      "current_price": 0.39,
+      "live_pnl_pct": 59.18
     },
     {
       "signal_id": "97c19e4e",
@@ -990,8 +990,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.08,
-      "live_pnl_pct": 0.0
+      "current_price": 0.053,
+      "live_pnl_pct": -33.75
     },
     {
       "signal_id": "a06f953e",
@@ -1033,18 +1033,61 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.86,
+      "current_price": 0.85,
+      "live_pnl_pct": -1.16
+    },
+    {
+      "signal_id": "48ad0c97",
+      "timestamp": "2026-03-06T10:08:02.884130+00:00",
+      "status": "active",
+      "market_id": "956349",
+      "condition_id": "",
+      "token_id": "65008518571572657271211632870860379070221892511688233911018004120158193148414",
+      "question": "Will New Zealand win the 2026 ICC Men\u2019s T20 World Cup?",
+      "outcome": "Yes",
+      "slug": "will-new-zealand-win-the-2026-icc-mens-t20-world-cup",
+      "category": "",
+      "resolution_date": "2026-03-08T00:00:00Z",
+      "entry_price": 0.31,
+      "max_entry_price": 0.341,
+      "tp_price": 0.3875,
+      "sl_price": 0.248,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-08T00:00:00+00:00",
+      "edge_score": 35.4,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 0.0,
+        "dislocation": 12.0,
+        "external": 1.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.2,
+      "days_to_close": 1,
+      "liquidity_usd": 15949.33509,
+      "volume_24h": 149680.69228900003,
+      "rationale": "Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.31,
       "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 24,
+    "total_signals": 25,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T09:28:07.517204+00:00"
+  "last_updated": "2026-03-06T10:08:02.884468+00:00"
 }
