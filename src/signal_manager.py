@@ -342,6 +342,11 @@ def _check_price_history_for_resolution(
     Scans price history from signal timestamp onwards.
     If both TP and SL are hit, the one that happened FIRST wins.
 
+    Also tracks the actual price at which TP/SL was first crossed — this
+    distinguishes genuine TP/SL hits (price near TP/SL level) from market
+    resolution jumps (price leaps from below TP straight to ~$1 or ~$0
+    when the contract settles).
+
     Returns dict: either {resolved: True, ...} or {resolved: False, peak_price, trough_price}
     """
     tp_price = signal['tp_price']
@@ -355,7 +360,9 @@ def _check_price_history_for_resolution(
         signal_time = None
 
     tp_hit_time = None
+    tp_hit_price = None  # actual price when TP was first crossed
     sl_hit_time = None
+    sl_hit_price = None  # actual price when SL was first crossed
     peak_price = entry_price
     trough_price = entry_price
 
@@ -381,33 +388,83 @@ def _check_price_history_for_resolution(
         peak_price = max(peak_price, price)
         trough_price = min(trough_price, price)
 
-        # Check TP hit (price >= tp_price)
+        # Check TP hit (price >= tp_price) — record the actual price too
         if tp_hit_time is None and price >= tp_price:
             tp_hit_time = ts
+            tp_hit_price = price
 
         # Check SL hit (price <= sl_price)
         if sl_hit_time is None and price <= sl_price:
             sl_hit_time = ts
+            sl_hit_price = price
 
-    # Determine resolution
+    # ── Determine resolution type ──
+    # Key distinction: if the crossing price is way beyond TP/SL (near $1 or $0),
+    # it's likely a market resolution jump, not a gradual TP/SL hit.
+    # A genuine TP hit looks like price moving from 0.30 → 0.35 → 0.41 (near TP).
+    # A resolution jump looks like price going from 0.30 → 0.99 in one candle.
+
+    def _is_resolution_jump_tp(hit_price, tp):
+        """Was this TP crossing a resolution jump rather than gradual?"""
+        if hit_price is None:
+            return False
+        # If price jumped past 90¢ AND is more than 30% beyond TP, it's a jump
+        return hit_price >= 0.90 and hit_price > tp * 1.30
+
+    def _is_resolution_jump_sl(hit_price, sl):
+        """Was this SL crossing a resolution crash rather than gradual?"""
+        if hit_price is None:
+            return False
+        # If price dropped below 10¢ AND is more than 50% below SL, it's a crash
+        return hit_price <= 0.10 and hit_price < sl * 0.50
+
+    # Determine which event happened first
+    first_event = None
+    first_time = None
+    first_price = None
+
     if tp_hit_time is not None and sl_hit_time is not None:
-        # Both hit — which came first?
         try:
             tp_t = _parse_ts(tp_hit_time)
             sl_t = _parse_ts(sl_hit_time)
             if tp_t <= sl_t:
-                return _make_resolution('tp_hit', tp_price, peak_price, trough_price, entry_price, tp_hit_time)
+                first_event, first_time, first_price = 'tp', tp_hit_time, tp_hit_price
             else:
-                return _make_resolution('sl_hit', sl_price, peak_price, trough_price, entry_price, sl_hit_time)
+                first_event, first_time, first_price = 'sl', sl_hit_time, sl_hit_price
         except (ValueError, TypeError):
-            # Can't determine order — take TP (benefit of the doubt)
-            return _make_resolution('tp_hit', tp_price, peak_price, trough_price, entry_price, tp_hit_time)
+            first_event, first_time, first_price = 'tp', tp_hit_time, tp_hit_price
+    elif tp_hit_time is not None:
+        first_event, first_time, first_price = 'tp', tp_hit_time, tp_hit_price
+    elif sl_hit_time is not None:
+        first_event, first_time, first_price = 'sl', sl_hit_time, sl_hit_price
 
-    if tp_hit_time is not None:
-        return _make_resolution('tp_hit', tp_price, peak_price, trough_price, entry_price, tp_hit_time)
+    if first_event == 'tp':
+        if _is_resolution_jump_tp(first_price, tp_price):
+            # Price jumped straight to ~$1 — market resolved, not a genuine TP hit
+            # Trader gets $1.00 payout
+            return _make_resolution(
+                'market_resolved', 1.0, peak_price, trough_price,
+                entry_price, first_time
+            )
+        else:
+            return _make_resolution(
+                'tp_hit', tp_price, peak_price, trough_price,
+                entry_price, first_time
+            )
 
-    if sl_hit_time is not None:
-        return _make_resolution('sl_hit', sl_price, peak_price, trough_price, entry_price, sl_hit_time)
+    if first_event == 'sl':
+        if _is_resolution_jump_sl(first_price, sl_price):
+            # Price crashed to ~$0 — market resolved against us
+            # Trader gets $0.00 payout
+            return _make_resolution(
+                'market_resolved', 0.0, peak_price, trough_price,
+                entry_price, first_time
+            )
+        else:
+            return _make_resolution(
+                'sl_hit', sl_price, peak_price, trough_price,
+                entry_price, first_time
+            )
 
     # Neither hit yet
     return {
@@ -447,18 +504,14 @@ def verify_signals(
     """
     Verify all active signals against price history.
 
-    For each active signal:
-      1. Check if the underlying market has resolved (settled YES/NO)
-      2. Check if signal expired (past expiry datetime)
-      3. Fetch price history (CLOB 60s candles) since signal was issued
-      4. Check if TP or SL was hit at any point
-      5. Update peak/trough tracking if still active
-
-    Market resolution detection:
-      - If the signal's market_id is no longer in the actively-traded markets list,
-        it's likely resolved/closed.
-      - Confirmed by checking if current price is near $1.00 (win) or $0.00 (loss).
-      - P&L is based on the actual payout ($1 or $0), NOT our TP/SL levels.
+    Resolution priority (in order):
+      1. Price history TP/SL: did price gradually cross TP or SL?
+         → _check_price_history_for_resolution handles this, INCLUDING
+           detecting resolution jumps (price leaping to ~$1 or ~$0 in one
+           candle, which is a market settlement, not a genuine TP/SL hit).
+      2. Market resolution fallback: if no price history available but
+         market has disappeared from active list with extreme price → settled.
+      3. Expiry: if past expiry datetime, close with last known price.
 
     Args:
         signals_state: Full signals state dict with 'active' list
@@ -480,37 +533,7 @@ def verify_signals(
     for signal in active:
         token_id = signal['token_id']
         entry = signal['entry_price']
-
-        # 0. Check if market has resolved (contract settled at $1 or $0)
-        # Detection: market no longer in active list AND price at extreme
-        if active_market_ids and signal['market_id'] not in active_market_ids:
-            cp = current_prices.get(token_id, 0)
-            if cp <= 0:
-                cp = safe_float(signal.get('current_price', 0))
-
-            if cp >= 0.95 or cp <= 0.05:
-                # Market resolved — payout is $1 (win) or $0 (loss)
-                payout = 1.0 if cp >= 0.50 else 0.0
-                pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
-                won = payout > entry
-
-                signal['status'] = 'market_resolved'
-                signal['resolved_at'] = now.isoformat()
-                signal['resolution_type'] = 'market_resolved'
-                signal['final_price'] = payout
-                signal['peak_price'] = signal.get('peak_price') or max(entry, cp)
-                signal['trough_price'] = signal.get('trough_price') or min(entry, cp)
-                signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
-                newly_resolved.append(signal)
-
-                result_str = 'WIN' if won else 'LOSS'
-                logger.info(
-                    f"MARKET RESOLVED ({result_str}): {signal['signal_id']} "
-                    f"entry=${entry:.4f} → payout=${payout:.2f} "
-                    f"pnl={pnl_pct:+.1f}% "
-                    f"({signal['question'][:40]}...)"
-                )
-                continue
+        market_gone = active_market_ids and signal['market_id'] not in active_market_ids
 
         # 1. Check expiry
         try:
@@ -529,7 +552,6 @@ def verify_signals(
                     if lp > 0:
                         last_price = lp
 
-                entry = signal['entry_price']
                 signal['status'] = 'expired'
                 signal['resolved_at'] = now.isoformat()
                 signal['resolution_type'] = 'expired'
@@ -547,7 +569,7 @@ def verify_signals(
         except (ValueError, TypeError):
             pass
 
-        # 2. Fetch price history and check TP/SL
+        # 2. Fetch price history and check TP/SL (and resolution jumps)
         try:
             history = fetch_price_history(token_id)
         except Exception as e:
@@ -559,59 +581,108 @@ def verify_signals(
                 f"Signal {signal['signal_id']}: got {len(history)} price points, "
                 f"checking TP={signal['tp_price']:.4f} SL={signal['sl_price']:.4f}"
             )
-        else:
-            logger.info(
-                f"No price history for signal {signal['signal_id']} "
-                f"token={token_id[:20]}... — using current_prices fallback"
-            )
-            # Fallback: update from current_prices map if available
-            cp = current_prices.get(token_id, 0)
-            if cp > 0 and cp != signal.get('current_price'):
-                entry = signal['entry_price']
-                signal['current_price'] = round(cp, 4)
-                signal['live_pnl_pct'] = round(
-                    ((cp - entry) / entry * 100) if entry > 0 else 0, 2
+
+            result = _check_price_history_for_resolution(signal, history)
+
+            if result.get('resolved'):
+                signal['status'] = result['resolution_type']
+                try:
+                    signal['resolved_at'] = _parse_ts(result['resolved_at']).isoformat()
+                except (ValueError, TypeError):
+                    signal['resolved_at'] = now.isoformat()
+                signal['resolution_type'] = result['resolution_type']
+                signal['final_price'] = result['final_price']
+                signal['peak_price'] = result['peak_price']
+                signal['trough_price'] = result['trough_price']
+                signal['hypothetical_pnl_pct'] = result['hypothetical_pnl_pct']
+                newly_resolved.append(signal)
+
+                rt = result['resolution_type']
+                if rt == 'market_resolved':
+                    won = result['hypothetical_pnl_pct'] > 0
+                    label = f"MARKET SETTLED ({'WIN' if won else 'LOSS'})"
+                else:
+                    label = 'WIN' if rt == 'tp_hit' else 'LOSS'
+                logger.info(
+                    f"SIGNAL {label}: {signal['signal_id']} "
+                    f"{rt} {result['hypothetical_pnl_pct']:+.1f}% "
+                    f"(peak={result['peak_price']:.4f} trough={result['trough_price']:.4f}) "
+                    f"({signal['question'][:40]}...)"
                 )
-            still_active.append(signal)
-            continue
+                continue
 
-        result = _check_price_history_for_resolution(signal, history)
-
-        if result.get('resolved'):
-            signal['status'] = result['resolution_type']
-            try:
-                signal['resolved_at'] = _parse_ts(result['resolved_at']).isoformat()
-            except (ValueError, TypeError):
-                signal['resolved_at'] = now.isoformat()
-            signal['resolution_type'] = result['resolution_type']
-            signal['final_price'] = result['final_price']
-            signal['peak_price'] = result['peak_price']
-            signal['trough_price'] = result['trough_price']
-            signal['hypothetical_pnl_pct'] = result['hypothetical_pnl_pct']
-            newly_resolved.append(signal)
-
-            won = 'WIN' if result['resolution_type'] == 'tp_hit' else 'LOSS'
-            logger.info(
-                f"SIGNAL {won}: {signal['signal_id']} "
-                f"{result['resolution_type']} {result['hypothetical_pnl_pct']:+.1f}% "
-                f"(peak={result['peak_price']:.4f} trough={result['trough_price']:.4f}) "
-                f"({signal['question'][:40]}...)"
-            )
-        else:
-            # Still active — update tracking
+            # Still active — update tracking from price history
             signal['peak_price'] = result.get('peak_price', signal.get('peak_price'))
             signal['trough_price'] = result.get('trough_price', signal.get('trough_price'))
 
-            # Update current price from latest history point
-            if history:
-                lp = safe_float(history[-1].get('price', 0))
-                if lp > 0:
-                    signal['current_price'] = round(lp, 4)
-                    entry = signal['entry_price']
-                    signal['live_pnl_pct'] = round(
-                        ((lp - entry) / entry * 100) if entry > 0 else 0, 2
+            lp = safe_float(history[-1].get('price', 0))
+            if lp > 0:
+                signal['current_price'] = round(lp, 4)
+                signal['live_pnl_pct'] = round(
+                    ((lp - entry) / entry * 100) if entry > 0 else 0, 2
+                )
+
+            # 3. If TP/SL wasn't hit but market is gone → market resolved
+            #    (e.g., no price history near extremes, but market disappeared)
+            if market_gone:
+                cp = current_prices.get(token_id, 0) or safe_float(signal.get('current_price', 0))
+                if cp >= 0.95 or cp <= 0.05:
+                    payout = 1.0 if cp >= 0.50 else 0.0
+                    pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
+                    signal['status'] = 'market_resolved'
+                    signal['resolved_at'] = now.isoformat()
+                    signal['resolution_type'] = 'market_resolved'
+                    signal['final_price'] = payout
+                    signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
+                    newly_resolved.append(signal)
+                    won = payout > entry
+                    logger.info(
+                        f"MARKET RESOLVED ({'WIN' if won else 'LOSS'}): {signal['signal_id']} "
+                        f"entry=${entry:.4f} → payout=${payout:.2f} "
+                        f"pnl={pnl_pct:+.1f}% "
+                        f"({signal['question'][:40]}...)"
                     )
+                    continue
+
             still_active.append(signal)
+            continue
+
+        # No price history available
+        logger.info(
+            f"No price history for signal {signal['signal_id']} "
+            f"token={token_id[:20]}..."
+        )
+
+        # 4. Fallback: no history, but market might have resolved
+        if market_gone:
+            cp = current_prices.get(token_id, 0) or safe_float(signal.get('current_price', 0))
+            if cp >= 0.95 or cp <= 0.05:
+                payout = 1.0 if cp >= 0.50 else 0.0
+                pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
+                signal['status'] = 'market_resolved'
+                signal['resolved_at'] = now.isoformat()
+                signal['resolution_type'] = 'market_resolved'
+                signal['final_price'] = payout
+                signal['peak_price'] = signal.get('peak_price') or max(entry, cp)
+                signal['trough_price'] = signal.get('trough_price') or min(entry, cp)
+                signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
+                newly_resolved.append(signal)
+                won = payout > entry
+                logger.info(
+                    f"MARKET RESOLVED ({'WIN' if won else 'LOSS'}): {signal['signal_id']} "
+                    f"entry=${entry:.4f} → payout=${payout:.2f} (no price history) "
+                    f"({signal['question'][:40]}...)"
+                )
+                continue
+
+        # Update from current_prices map if available
+        cp = current_prices.get(token_id, 0)
+        if cp > 0 and cp != signal.get('current_price'):
+            signal['current_price'] = round(cp, 4)
+            signal['live_pnl_pct'] = round(
+                ((cp - entry) / entry * 100) if entry > 0 else 0, 2
+            )
+        still_active.append(signal)
 
     return newly_resolved, still_active
 
