@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T13:22:48.345607+00:00",
+    "timestamp": "2026-03-06T14:11:51.993964+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 241,
-    "opportunities_found": 12,
+    "tokens_scored": 246,
+    "opportunities_found": 15,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -91,8 +91,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0105,
-        "live_pnl_pct": 0.0
+        "current_price": 0.0175,
+        "live_pnl_pct": 66.67
       },
       {
         "signal_id": "e5b43940",
@@ -306,8 +306,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.69,
-        "live_pnl_pct": -0.72
+        "current_price": 0.685,
+        "live_pnl_pct": -1.44
       },
       {
         "signal_id": "2647fa37",
@@ -566,8 +566,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.295,
-        "live_pnl_pct": -3.28
+        "current_price": 0.305,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "3806466a",
@@ -611,8 +611,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0425,
-        "live_pnl_pct": -43.33
+        "current_price": 0.031,
+        "live_pnl_pct": -58.67
       },
       {
         "signal_id": "f5e6e08f",
@@ -783,8 +783,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.0375,
-        "live_pnl_pct": -44.03
+        "current_price": 0.028,
+        "live_pnl_pct": -58.21
       },
       {
         "signal_id": "9e2dfb58",
@@ -998,8 +998,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.046,
-        "live_pnl_pct": -42.5
+        "current_price": 0.0355,
+        "live_pnl_pct": -55.62
       },
       {
         "signal_id": "a06f953e",
@@ -1084,8 +1084,8 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3145,
-        "live_pnl_pct": 1.45
+        "current_price": 0.3155,
+        "live_pnl_pct": 1.77
       },
       {
         "signal_id": "153b1be0",
@@ -1129,12 +1129,98 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.665,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "717c1e8b",
+        "timestamp": "2026-03-06T14:11:51.991039+00:00",
+        "status": "active",
+        "market_id": "1410004",
+        "condition_id": "",
+        "token_id": "5152899176384218798778584179167375341474203396573650617227864038006297533597",
+        "question": "Wolverhampton Wanderers FC vs. Liverpool FC: O/U 3.5",
+        "outcome": "Over",
+        "slug": "efa-wol-liv-2026-03-07-total-3pt5",
+        "category": "",
+        "resolution_date": "2026-03-07T15:00:00Z",
+        "entry_price": 0.335,
+        "max_entry_price": 0.3685,
+        "tp_price": 0.4188,
+        "sl_price": 0.268,
+        "tp_pct": 25.0,
+        "sl_pct": -20.0,
+        "expiry": "2026-03-07T15:00:00+00:00",
+        "edge_score": 39.6,
+        "edge_tier": "medium",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 10.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.0,
+        "days_to_close": 1,
+        "liquidity_usd": 42245.9788,
+        "volume_24h": 153269.05656100003,
+        "rationale": "Smart money 10/25 (2 whales) | Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.335,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "93261ac4",
+        "timestamp": "2026-03-06T14:11:51.991802+00:00",
+        "status": "active",
+        "market_id": "654413",
+        "condition_id": "",
+        "token_id": "62938043365772447095885755955446362343142416536419862840923032141775380249586",
+        "question": "Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?",
+        "outcome": "Yes",
+        "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-march-2026-meeting",
+        "category": "",
+        "resolution_date": "2026-03-18T00:00:00Z",
+        "entry_price": 0.014,
+        "max_entry_price": 0.0168,
+        "tp_price": 0.0175,
+        "sl_price": 0.0123,
+        "tp_pct": 25.0,
+        "sl_pct": -12.0,
+        "expiry": "2026-03-11T14:11:51.991782+00:00",
+        "edge_score": 35.9,
+        "edge_tier": "medium",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 15.0,
+          "dislocation": 10.34,
+          "external": 1.0
+        },
+        "convexity_band": "20x",
+        "potential_multiple": 71.4,
+        "days_to_close": 11,
+        "liquidity_usd": 1036673.44909,
+        "volume_24h": 3830923.2258830005,
+        "rationale": "Smart money 15/25 (3 whales) | Dislocation 10/30 (vol spike, time decay, book imbalance) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.014,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [],
     "metrics": {
-      "total_signals_issued": 26,
-      "active_signals": 26,
+      "total_signals_issued": 28,
+      "active_signals": 28,
       "total_resolved": 0,
       "wins": 0,
       "losses": 0,
@@ -1171,37 +1257,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 73,
-      "coverage_pct": 30.3,
-      "avg_score": 8.57,
+      "tokens_scored": 246,
+      "tokens_with_signal": 69,
+      "coverage_pct": 28.0,
+      "avg_score": 8.62,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 150,
-      "coverage_pct": 62.2,
-      "avg_score": 8.15,
+      "tokens_scored": 246,
+      "tokens_with_signal": 157,
+      "coverage_pct": 63.8,
+      "avg_score": 7.96,
       "max_score": 19.95,
       "quality_traders": 51,
-      "markets_indexed": 4664
+      "markets_indexed": 4644
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 206,
-      "coverage_pct": 85.5,
-      "avg_score": 9.04,
+      "tokens_scored": 246,
+      "tokens_with_signal": 209,
+      "coverage_pct": 85.0,
+      "avg_score": 9.14,
       "max_score": 14.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 241,
+      "tokens_scored": 246,
+      "tokens_with_signal": 246,
       "coverage_pct": 100.0,
-      "avg_score": 1.05,
-      "max_score": 3.47
+      "avg_score": 1.07,
+      "max_score": 7.5
     }
   },
   "calibration": {}
