@@ -126,8 +126,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.018,
-      "live_pnl_pct": 9.09
+      "current_price": 0.0185,
+      "live_pnl_pct": 12.12
     },
     {
       "signal_id": "0308ac14",
@@ -255,8 +255,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0515,
-      "live_pnl_pct": 5.1
+      "current_price": 0.0525,
+      "live_pnl_pct": 7.14
     },
     {
       "signal_id": "2fed7d16",
@@ -298,8 +298,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.695,
-      "live_pnl_pct": 0.0
+      "current_price": 0.69,
+      "live_pnl_pct": -0.72
     },
     {
       "signal_id": "2647fa37",
@@ -474,16 +474,59 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.0395,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "c0667f71",
+      "timestamp": "2026-03-06T03:37:08.942258+00:00",
+      "status": "active",
+      "market_id": "1496850",
+      "condition_id": "",
+      "token_id": "75043321716112645741947534630972173580638327608490126910199538979143671518198",
+      "question": "BNP Paribas Open: Storm Hunter vs Magdalena Frech",
+      "outcome": "Storm Hunter",
+      "slug": "wta-hunter-frech-2026-03-05",
+      "category": "",
+      "resolution_date": "2026-03-12T19:00:00Z",
+      "entry_price": 0.84,
+      "max_entry_price": 0.924,
+      "tp_price": 0.99,
+      "sl_price": 0.672,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-11T03:37:08.942229+00:00",
+      "edge_score": 39.1,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 11.0,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 65942.9658,
+      "volume_24h": 131920.10666199995,
+      "rationale": "Smart money 11/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.84,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 11,
+    "total_signals": 12,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T01:04:52.768989+00:00"
+  "last_updated": "2026-03-06T03:37:08.942614+00:00"
 }
