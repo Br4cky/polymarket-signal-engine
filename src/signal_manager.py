@@ -511,13 +511,15 @@ def verify_signals(
     Verify all active signals against price history.
 
     Resolution priority (in order):
-      1. Price history TP/SL: did price gradually cross TP or SL?
+      1. Price history TP/SL: did price cross TP or SL during the signal's
+         lifetime? Always checked FIRST, even if the signal has expired.
          → _check_price_history_for_resolution handles this, INCLUDING
            detecting resolution jumps (price leaping to ~$1 or ~$0 in one
            candle, which is a market settlement, not a genuine TP/SL hit).
-      2. Market resolution fallback: if no price history available but
-         market has disappeared from active list with extreme price → settled.
-      3. Expiry: if past expiry datetime, close with last known price.
+      2. Market resolution fallback: if TP/SL wasn't hit but market has
+         disappeared from active list with extreme price → settled.
+      3. Expiry: ONLY if neither TP/SL was hit NOR market resolved,
+         and past expiry datetime → close with last known price.
 
     Args:
         signals_state: Full signals state dict with 'active' list
@@ -541,41 +543,16 @@ def verify_signals(
         entry = signal['entry_price']
         market_gone = active_market_ids and signal['market_id'] not in active_market_ids
 
-        # 1. Check expiry
+        # Check if signal has expired (used later as fallback)
+        is_expired = False
         try:
             expiry = _parse_ts(signal.get('expiry', ''))
-            if now >= expiry:
-                # Expired — fetch last known price for final P&L
-                history = []
-                try:
-                    history = fetch_price_history(token_id)
-                except Exception:
-                    pass
-
-                last_price = signal.get('current_price', signal['entry_price'])
-                if history:
-                    lp = safe_float(history[-1].get('price', 0))
-                    if lp > 0:
-                        last_price = lp
-
-                signal['status'] = 'expired'
-                signal['resolved_at'] = now.isoformat()
-                signal['resolution_type'] = 'expired'
-                signal['final_price'] = round(last_price, 4)
-                signal['hypothetical_pnl_pct'] = round(
-                    ((last_price - entry) / entry * 100) if entry > 0 else 0, 2
-                )
-                newly_resolved.append(signal)
-                logger.info(
-                    f"SIGNAL EXPIRED: {signal['signal_id']} "
-                    f"pnl={signal['hypothetical_pnl_pct']:+.1f}% "
-                    f"({signal['question'][:40]}...)"
-                )
-                continue
+            is_expired = now >= expiry
         except (ValueError, TypeError):
             pass
 
-        # 2. Fetch price history and check TP/SL (and resolution jumps)
+        # 1. Fetch price history and check TP/SL FIRST (even if expired)
+        #    A signal that expired but hit TP during its lifetime is a WIN, not an expiry.
         try:
             history = fetch_price_history(token_id)
         except Exception as e:
@@ -650,6 +627,27 @@ def verify_signals(
                     )
                     continue
 
+            # 4. Expiry fallback: TP/SL wasn't hit in price history, market not gone
+            if is_expired:
+                last_price = signal.get('current_price', entry)
+                lp = safe_float(history[-1].get('price', 0))
+                if lp > 0:
+                    last_price = lp
+                signal['status'] = 'expired'
+                signal['resolved_at'] = now.isoformat()
+                signal['resolution_type'] = 'expired'
+                signal['final_price'] = round(last_price, 4)
+                signal['hypothetical_pnl_pct'] = round(
+                    ((last_price - entry) / entry * 100) if entry > 0 else 0, 2
+                )
+                newly_resolved.append(signal)
+                logger.info(
+                    f"SIGNAL EXPIRED: {signal['signal_id']} "
+                    f"pnl={signal['hypothetical_pnl_pct']:+.1f}% "
+                    f"({signal['question'][:40]}...)"
+                )
+                continue
+
             still_active.append(signal)
             continue
 
@@ -659,7 +657,7 @@ def verify_signals(
             f"token={token_id[:20]}..."
         )
 
-        # 4. Fallback: no history, but market might have resolved
+        # 5. Fallback: no history, but market might have resolved
         if market_gone:
             cp = current_prices.get(token_id, 0) or safe_float(signal.get('current_price', 0))
             if cp >= 0.95 or cp <= 0.05:
@@ -680,6 +678,27 @@ def verify_signals(
                     f"({signal['question'][:40]}...)"
                 )
                 continue
+
+        # 6. Expiry fallback (no price history path)
+        if is_expired:
+            last_price = signal.get('current_price', entry)
+            cp = current_prices.get(token_id, 0)
+            if cp > 0:
+                last_price = cp
+            signal['status'] = 'expired'
+            signal['resolved_at'] = now.isoformat()
+            signal['resolution_type'] = 'expired'
+            signal['final_price'] = round(last_price, 4)
+            signal['hypothetical_pnl_pct'] = round(
+                ((last_price - entry) / entry * 100) if entry > 0 else 0, 2
+            )
+            newly_resolved.append(signal)
+            logger.info(
+                f"SIGNAL EXPIRED: {signal['signal_id']} "
+                f"pnl={signal['hypothetical_pnl_pct']:+.1f}% "
+                f"({signal['question'][:40]}...)"
+            )
+            continue
 
         # Update from current_prices map if available
         cp = current_prices.get(token_id, 0)
