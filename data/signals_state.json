@@ -40,8 +40,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.415,
-      "live_pnl_pct": 0.0
+      "current_price": 0.425,
+      "live_pnl_pct": 2.41
     },
     {
       "signal_id": "a6c61ad5",
@@ -558,8 +558,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.305,
-      "live_pnl_pct": 0.0
+      "current_price": 0.295,
+      "live_pnl_pct": -3.28
     },
     {
       "signal_id": "3806466a",
@@ -603,8 +603,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.031,
-      "live_pnl_pct": -58.67
+      "current_price": 0.012,
+      "live_pnl_pct": -84.0
     },
     {
       "signal_id": "f5e6e08f",
@@ -990,8 +990,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0355,
-      "live_pnl_pct": -55.62
+      "current_price": 0.0105,
+      "live_pnl_pct": -86.88
     },
     {
       "signal_id": "a06f953e",
@@ -1162,8 +1162,8 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.335,
-      "live_pnl_pct": 0.0
+      "current_price": 0.325,
+      "live_pnl_pct": -2.99
     },
     {
       "signal_id": "93261ac4",
@@ -1205,18 +1205,61 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.014,
+      "current_price": 0.0145,
+      "live_pnl_pct": 3.57
+    },
+    {
+      "signal_id": "83fb3e3d",
+      "timestamp": "2026-03-06T15:02:42.905752+00:00",
+      "status": "active",
+      "market_id": "1428102",
+      "condition_id": "",
+      "token_id": "99415518956095632362801967038477301336639419939130385104513695627524935912283",
+      "question": "First Round Pool A: Panama vs. Cuba",
+      "outcome": "Panama",
+      "slug": "wbc-pan-cub-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T15:00:00Z",
+      "entry_price": 0.385,
+      "max_entry_price": 0.4235,
+      "tp_price": 0.4813,
+      "sl_price": 0.308,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-11T15:02:42.905722+00:00",
+      "edge_score": 36.5,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 9.0,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.6,
+      "days_to_close": 6,
+      "liquidity_usd": 30828.8615,
+      "volume_24h": 102524.31801799996,
+      "rationale": "Smart money 9/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.385,
       "live_pnl_pct": 0.0
     }
   ],
   "resolved": [],
   "cooldowns": {},
   "stats": {
-    "total_signals": 28,
+    "total_signals": 29,
     "total_wins": 0,
     "total_losses": 0,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T14:11:51.992119+00:00"
+  "last_updated": "2026-03-06T15:02:42.906103+00:00"
 }
