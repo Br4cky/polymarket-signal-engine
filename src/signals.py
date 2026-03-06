@@ -417,46 +417,78 @@ def classify_convexity(current_price: float, outcome: str) -> dict:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# MARKET AGE BONUS — Favour newer markets for repricing strategy
+# MARKET EFFICIENCY DISCOUNT — Scale edge score by price discovery maturity
 # ═══════════════════════════════════════════════════════════════════════════
 
-def compute_market_age_bonus(created_at: Optional[str]) -> float:
+def compute_market_efficiency_multiplier(
+    created_at: Optional[str],
+    volume_total: float,
+) -> float:
     """
-    Newer markets have more mispricing because prices haven't converged yet.
-    Adds directly to edge score (capped at +5).
+    Markets with more volume and longer trading history have more efficient
+    prices — apparent mispricings are less likely to be real. This returns
+    a multiplier (0.50–1.0) applied to the raw edge score.
 
-    ≤ 7 days old:  +5 pts
-    8-14 days:     +4 pts
-    15-30 days:    +3 pts
-    31-60 days:    +2 pts
-    61-90 days:    +1 pt
-    90+ days:      +0
+    Two factors combine:
+      - Age factor (40% weight): how long the market has been open
+      - Volume factor (60% weight): how much money has priced it
+
+    Age factor (0–1, higher = more discovered):
+        < 1 day    → 0.00   (brand new, price is very soft)
+        3 days     → 0.15
+        7 days     → 0.30
+        14 days    → 0.50
+        30 days    → 0.75
+        60+ days   → 1.00   (well established)
+
+    Volume factor (0–1, higher = more discovered):
+        < $5k      → 0.00   (negligible activity)
+        $25k       → 0.20
+        $100k      → 0.45
+        $250k      → 0.65
+        $500k      → 0.80
+        $1M+       → 1.00   (heavily traded)
+
+    Combined efficiency → multiplier:
+        efficiency 0.0  → multiplier 1.00  (full confidence in edge)
+        efficiency 0.5  → multiplier 0.75
+        efficiency 1.0  → multiplier 0.50  (halved — strong evidence required)
 
     Args:
         created_at: ISO date string of when the market was created
+        volume_total: total lifetime volume in USD
 
-    Returns: bonus points (0-5)
+    Returns: multiplier between 0.50 and 1.00
     """
-    if not created_at:
-        return 0.0
+    # ── Age factor ──
+    age_factor = 0.5  # default: assume moderately established if unknown
+    if created_at:
+        try:
+            created = datetime.fromisoformat(str(created_at))
+            if created.tzinfo is None:
+                created = created.replace(tzinfo=timezone.utc)
+            age_days = (datetime.now(timezone.utc) - created).total_seconds() / 86400.0
+            # Smooth curve: 0 at day 0, ~1.0 at 60 days
+            age_factor = min(1.0, age_days / 60.0)
+        except (ValueError, TypeError):
+            age_factor = 0.5
 
-    try:
-        created = datetime.fromisoformat(str(created_at))
-        if created.tzinfo is None:
-            created = created.replace(tzinfo=timezone.utc)
-        age_days = (datetime.now(timezone.utc) - created).total_seconds() / 86400.0
-    except (ValueError, TypeError):
-        return 0.0
-
-    if age_days <= 7:
-        return 5.0
-    elif age_days <= 14:
-        return 4.0
-    elif age_days <= 30:
-        return 3.0
-    elif age_days <= 60:
-        return 2.0
-    elif age_days <= 90:
-        return 1.0
+    # ── Volume factor ──
+    # Log-scale mapping: $0→0, $5k→~0.08, $25k→~0.25, $100k→~0.50,
+    #                     $250k→~0.65, $500k→~0.77, $1M→~0.88, $5M→1.0
+    import math
+    if volume_total <= 0:
+        vol_factor = 0.0
     else:
-        return 0.0
+        # log10(5000)≈3.7, log10(5_000_000)≈6.7 → normalise to 0–1
+        log_vol = math.log10(max(1.0, volume_total))
+        vol_factor = min(1.0, max(0.0, (log_vol - 3.7) / 3.0))
+
+    # ── Combine: volume is the stronger signal ──
+    efficiency = 0.4 * age_factor + 0.6 * vol_factor
+
+    # ── Map to multiplier: 1.0 (no discount) to 0.50 (max discount) ──
+    max_discount = 0.50
+    multiplier = 1.0 - (efficiency * max_discount)
+
+    return round(max(0.50, min(1.0, multiplier)), 3)

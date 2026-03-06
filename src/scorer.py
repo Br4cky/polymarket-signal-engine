@@ -12,7 +12,7 @@ from src.signals import (
     compute_structural_score,
     compute_dislocation_score,
     classify_convexity,
-    compute_market_age_bonus,
+    compute_market_efficiency_multiplier,
 )
 from src.event_clustering import extract_base_event, are_conflicting, extract_underlying_asset, extract_direction
 from src.utils import safe_float
@@ -97,15 +97,22 @@ def compute_edge_score(
 
     edge_score = round(min(100.0, weighted * 100.0), 1)
 
-    # ── Market Age Bonus (repricing strategy) ──
-    age_bonus = compute_market_age_bonus(created_at)
-    edge_score = round(min(100.0, edge_score + age_bonus), 1)
+    # ── Market Efficiency Discount ──
+    # More volume + longer trading history = price is more discovered.
+    # Multiplier 0.50–1.0: new/low-vol markets keep full score,
+    # old/high-vol markets need stronger raw evidence to pass threshold.
+    volume_total = safe_float(market.get('volume_total', 0))
+    efficiency_mult = compute_market_efficiency_multiplier(created_at, volume_total)
+    raw_edge = edge_score
+    edge_score = round(edge_score * efficiency_mult, 1)
 
     # ── Classification (metadata only — does NOT drive trading decisions) ──
     convexity = classify_convexity(current_price, token.get('outcome', 'YES'))
 
     return {
         'edge_score': edge_score,
+        'raw_edge_score': raw_edge,
+        'efficiency_multiplier': efficiency_mult,
         'layer_scores': {
             'structural': structural['structural_total'],
             'smart_money': round(smart_money_total, 2),
@@ -118,7 +125,6 @@ def compute_edge_score(
         'external_detail': external,
         'convexity': convexity,
         'days_to_close': days_to_close,
-        'age_bonus': age_bonus
     }
 
 
