@@ -37,11 +37,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.425,
-      "trough_price": 0.415,
+      "trough_price": 0.395,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.425,
-      "live_pnl_pct": 2.41
+      "current_price": 0.395,
+      "live_pnl_pct": -4.82
     },
     {
       "signal_id": "2fed7d16",
@@ -83,8 +83,8 @@
       "trough_price": 0.685,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.685,
-      "live_pnl_pct": -1.44
+      "current_price": 0.69,
+      "live_pnl_pct": -0.72
     },
     {
       "signal_id": "2647fa37",
@@ -126,8 +126,8 @@
       "trough_price": 0.205,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.22,
-      "live_pnl_pct": 7.32
+      "current_price": 0.21,
+      "live_pnl_pct": 2.44
     },
     {
       "signal_id": "26119f95",
@@ -165,12 +165,12 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.305,
+      "peak_price": 0.315,
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.295,
-      "live_pnl_pct": -3.28
+      "current_price": 0.315,
+      "live_pnl_pct": 3.28
     },
     {
       "signal_id": "9e2dfb58",
@@ -298,8 +298,8 @@
       "trough_price": 0.3095,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3095,
-      "live_pnl_pct": -0.16
+      "current_price": 0.313,
+      "live_pnl_pct": 0.97
     },
     {
       "signal_id": "717c1e8b",
@@ -470,46 +470,46 @@
       ],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
+      "peak_price": 0.0195,
+      "trough_price": 0.0195,
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.0195,
       "live_pnl_pct": 0.0
     },
     {
-      "signal_id": "71168991",
-      "timestamp": "2026-03-06T18:04:59.017027+00:00",
+      "signal_id": "0a0e0226",
+      "timestamp": "2026-03-06T19:05:00.916595+00:00",
       "status": "active",
-      "market_id": "1511173",
+      "market_id": "1502744",
       "condition_id": "",
-      "token_id": "88550650329372475796299615192421527490454102051896708855355667247628996986824",
-      "question": "Thionville: Hugo Gaston vs Moise Kouame",
-      "outcome": "Hugo Gaston",
-      "slug": "atp-gaston-kouame-2026-03-06",
+      "token_id": "112091828007988485462194727378611202328237857467903027672465407923734605120740",
+      "question": "Brasilia: Eduardo Ribeiro vs Gustavo Heide",
+      "outcome": "Eduardo Ribeiro",
+      "slug": "atp-ribeiro-heide-2026-03-06",
       "category": "",
-      "resolution_date": "2026-03-13T16:00:00Z",
-      "entry_price": 0.695,
-      "max_entry_price": 0.7645,
-      "tp_price": 0.8687,
-      "sl_price": 0.556,
+      "resolution_date": "2026-03-13T14:00:00Z",
+      "entry_price": 0.37,
+      "max_entry_price": 0.407,
+      "tp_price": 0.4625,
+      "sl_price": 0.296,
       "tp_pct": 25.0,
       "sl_pct": -20.0,
-      "expiry": "2026-03-11T18:04:59.017006+00:00",
-      "edge_score": 39.6,
+      "expiry": "2026-03-11T19:05:00.916569+00:00",
+      "edge_score": 37.5,
       "edge_tier": "medium",
       "layer_scores": {
         "structural": 0.0,
-        "smart_money": 11.57,
+        "smart_money": 9.0,
         "dislocation": 11.0,
         "external": 1.0
       },
-      "convexity_band": "yield",
-      "potential_multiple": 1.4,
+      "convexity_band": "2x",
+      "potential_multiple": 2.7,
       "days_to_close": 6,
-      "liquidity_usd": 21188.6937,
-      "volume_24h": 191103.848351,
-      "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "liquidity_usd": 16517.3097,
+      "volume_24h": 141593.808282,
+      "rationale": "Smart money 9/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
@@ -517,7 +517,7 @@
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.695,
+      "current_price": 0.37,
       "live_pnl_pct": 0.0
     }
   ],
@@ -1600,6 +1600,49 @@
       "hypothetical_pnl_pct": 24.99,
       "current_price": 0.565,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "71168991",
+      "timestamp": "2026-03-06T18:04:59.017027+00:00",
+      "status": "tp_hit",
+      "market_id": "1511173",
+      "condition_id": "",
+      "token_id": "88550650329372475796299615192421527490454102051896708855355667247628996986824",
+      "question": "Thionville: Hugo Gaston vs Moise Kouame",
+      "outcome": "Hugo Gaston",
+      "slug": "atp-gaston-kouame-2026-03-06",
+      "category": "",
+      "resolution_date": "2026-03-13T16:00:00Z",
+      "entry_price": 0.695,
+      "max_entry_price": 0.7645,
+      "tp_price": 0.8687,
+      "sl_price": 0.556,
+      "tp_pct": 25.0,
+      "sl_pct": -20.0,
+      "expiry": "2026-03-11T18:04:59.017006+00:00",
+      "edge_score": 39.6,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 11.57,
+        "dislocation": 11.0,
+        "external": 1.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 21188.6937,
+      "volume_24h": 191103.848351,
+      "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+      "tp_sources": [],
+      "resolved_at": "2026-03-06T19:00:29+00:00",
+      "resolution_type": "tp_hit",
+      "peak_price": 0.9995,
+      "trough_price": 0.695,
+      "final_price": 0.8687,
+      "hypothetical_pnl_pct": 24.99,
+      "current_price": 0.695,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -1619,11 +1662,11 @@
     "664912": "2026-03-06T17:28:35.373779+00:00"
   },
   "stats": {
-    "total_signals": 37,
-    "total_wins": 11,
+    "total_signals": 38,
+    "total_wins": 12,
     "total_losses": 14,
     "total_expired": 0
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-06T18:04:59.017459+00:00"
+  "last_updated": "2026-03-06T19:05:00.917084+00:00"
 }

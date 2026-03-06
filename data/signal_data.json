@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-06T18:04:59.019885+00:00",
+    "timestamp": "2026-03-06T19:05:00.919442+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 235,
-    "opportunities_found": 15,
+    "tokens_scored": 243,
+    "opportunities_found": 13,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -45,11 +45,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.425,
-        "trough_price": 0.415,
+        "trough_price": 0.395,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.425,
-        "live_pnl_pct": 2.41
+        "current_price": 0.395,
+        "live_pnl_pct": -4.82
       },
       {
         "signal_id": "2fed7d16",
@@ -91,8 +91,8 @@
         "trough_price": 0.685,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.685,
-        "live_pnl_pct": -1.44
+        "current_price": 0.69,
+        "live_pnl_pct": -0.72
       },
       {
         "signal_id": "2647fa37",
@@ -134,8 +134,8 @@
         "trough_price": 0.205,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.22,
-        "live_pnl_pct": 7.32
+        "current_price": 0.21,
+        "live_pnl_pct": 2.44
       },
       {
         "signal_id": "26119f95",
@@ -173,12 +173,12 @@
         "tp_sources": [],
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.305,
+        "peak_price": 0.315,
         "trough_price": 0.295,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.295,
-        "live_pnl_pct": -3.28
+        "current_price": 0.315,
+        "live_pnl_pct": 3.28
       },
       {
         "signal_id": "9e2dfb58",
@@ -306,8 +306,8 @@
         "trough_price": 0.3095,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3095,
-        "live_pnl_pct": -0.16
+        "current_price": 0.313,
+        "live_pnl_pct": 0.97
       },
       {
         "signal_id": "717c1e8b",
@@ -478,46 +478,46 @@
         ],
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.0195,
+        "trough_price": 0.0195,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.0195,
         "live_pnl_pct": 0.0
       },
       {
-        "signal_id": "71168991",
-        "timestamp": "2026-03-06T18:04:59.017027+00:00",
+        "signal_id": "0a0e0226",
+        "timestamp": "2026-03-06T19:05:00.916595+00:00",
         "status": "active",
-        "market_id": "1511173",
+        "market_id": "1502744",
         "condition_id": "",
-        "token_id": "88550650329372475796299615192421527490454102051896708855355667247628996986824",
-        "question": "Thionville: Hugo Gaston vs Moise Kouame",
-        "outcome": "Hugo Gaston",
-        "slug": "atp-gaston-kouame-2026-03-06",
+        "token_id": "112091828007988485462194727378611202328237857467903027672465407923734605120740",
+        "question": "Brasilia: Eduardo Ribeiro vs Gustavo Heide",
+        "outcome": "Eduardo Ribeiro",
+        "slug": "atp-ribeiro-heide-2026-03-06",
         "category": "",
-        "resolution_date": "2026-03-13T16:00:00Z",
-        "entry_price": 0.695,
-        "max_entry_price": 0.7645,
-        "tp_price": 0.8687,
-        "sl_price": 0.556,
+        "resolution_date": "2026-03-13T14:00:00Z",
+        "entry_price": 0.37,
+        "max_entry_price": 0.407,
+        "tp_price": 0.4625,
+        "sl_price": 0.296,
         "tp_pct": 25.0,
         "sl_pct": -20.0,
-        "expiry": "2026-03-11T18:04:59.017006+00:00",
-        "edge_score": 39.6,
+        "expiry": "2026-03-11T19:05:00.916569+00:00",
+        "edge_score": 37.5,
         "edge_tier": "medium",
         "layer_scores": {
           "structural": 0.0,
-          "smart_money": 11.57,
+          "smart_money": 9.0,
           "dislocation": 11.0,
           "external": 1.0
         },
-        "convexity_band": "yield",
-        "potential_multiple": 1.4,
+        "convexity_band": "2x",
+        "potential_multiple": 2.7,
         "days_to_close": 6,
-        "liquidity_usd": 21188.6937,
-        "volume_24h": 191103.848351,
-        "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+        "liquidity_usd": 16517.3097,
+        "volume_24h": 141593.808282,
+        "rationale": "Smart money 9/25 (2 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
         "tp_sources": [],
         "resolved_at": null,
         "resolution_type": null,
@@ -525,7 +525,7 @@
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.695,
+        "current_price": 0.37,
         "live_pnl_pct": 0.0
       }
     ],
@@ -1608,19 +1608,62 @@
         "hypothetical_pnl_pct": 24.99,
         "current_price": 0.565,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "71168991",
+        "timestamp": "2026-03-06T18:04:59.017027+00:00",
+        "status": "tp_hit",
+        "market_id": "1511173",
+        "condition_id": "",
+        "token_id": "88550650329372475796299615192421527490454102051896708855355667247628996986824",
+        "question": "Thionville: Hugo Gaston vs Moise Kouame",
+        "outcome": "Hugo Gaston",
+        "slug": "atp-gaston-kouame-2026-03-06",
+        "category": "",
+        "resolution_date": "2026-03-13T16:00:00Z",
+        "entry_price": 0.695,
+        "max_entry_price": 0.7645,
+        "tp_price": 0.8687,
+        "sl_price": 0.556,
+        "tp_pct": 25.0,
+        "sl_pct": -20.0,
+        "expiry": "2026-03-11T18:04:59.017006+00:00",
+        "edge_score": 39.6,
+        "edge_tier": "medium",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 11.57,
+          "dislocation": 11.0,
+          "external": 1.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.4,
+        "days_to_close": 6,
+        "liquidity_usd": 21188.6937,
+        "volume_24h": 191103.848351,
+        "rationale": "Smart money 12/25 (3 whales) | Dislocation 11/30 (vol spike, time decay) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": "2026-03-06T19:00:29+00:00",
+        "resolution_type": "tp_hit",
+        "peak_price": 0.9995,
+        "trough_price": 0.695,
+        "final_price": 0.8687,
+        "hypothetical_pnl_pct": 24.99,
+        "current_price": 0.695,
+        "live_pnl_pct": 0.0
       }
     ],
     "metrics": {
-      "total_signals_issued": 37,
+      "total_signals_issued": 38,
       "active_signals": 12,
-      "total_resolved": 25,
-      "wins": 11,
+      "total_resolved": 26,
+      "wins": 12,
       "losses": 14,
       "expired": 0,
-      "win_rate": 0.44,
-      "avg_win_pct": 23.72,
+      "win_rate": 0.462,
+      "avg_win_pct": 23.82,
       "avg_loss_pct": -18.29,
-      "ev_per_signal": 0.2,
+      "ev_per_signal": 1.15,
       "by_tier": {
         "high": {
           "total": 8,
@@ -1630,11 +1673,11 @@
           "avg_pnl": -4.62
         },
         "medium": {
-          "total": 15,
-          "wins": 8,
+          "total": 16,
+          "wins": 9,
           "losses": 7,
-          "win_rate": 0.533,
-          "avg_pnl": 4.6
+          "win_rate": 0.562,
+          "avg_pnl": 5.88
         },
         "low": {
           "total": 2,
@@ -1649,41 +1692,41 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 235,
+      "tokens_scored": 243,
       "tokens_with_signal": 43,
-      "coverage_pct": 18.3,
-      "avg_score": 8.54,
+      "coverage_pct": 17.7,
+      "avg_score": 8.69,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 235,
-      "tokens_with_signal": 163,
-      "coverage_pct": 69.4,
-      "avg_score": 10.75,
-      "max_score": 23.61,
+      "tokens_scored": 243,
+      "tokens_with_signal": 178,
+      "coverage_pct": 73.3,
+      "avg_score": 11.29,
+      "max_score": 23.25,
       "quality_traders": 51,
-      "markets_indexed": 4616
+      "markets_indexed": 4754
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 235,
-      "tokens_with_signal": 208,
-      "coverage_pct": 88.5,
-      "avg_score": 9.35,
-      "max_score": 21.68
+      "tokens_scored": 243,
+      "tokens_with_signal": 221,
+      "coverage_pct": 90.9,
+      "avg_score": 9.57,
+      "max_score": 22.66
     },
     "external": {
       "active": true,
-      "tokens_scored": 235,
-      "tokens_with_signal": 235,
+      "tokens_scored": 243,
+      "tokens_with_signal": 243,
       "coverage_pct": 100.0,
       "avg_score": 1.07,
       "max_score": 4.09
     }
   },
   "calibration": {
-    "total_trades": 25,
+    "total_trades": 26,
     "overall_win_rate": 0,
     "overall_avg_pnl_pct": 0,
     "quintiles": [],
