@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-07T10:04:09.314685+00:00",
+    "timestamp": "2026-03-07T10:40:32.628262+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 264,
-    "opportunities_found": 47,
+    "tokens_scored": 262,
+    "opportunities_found": 56,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,49 +95,6 @@
         "live_pnl_pct": 9.76
       },
       {
-        "signal_id": "9e2dfb58",
-        "timestamp": "2026-03-06T08:46:27.096126+00:00",
-        "status": "active",
-        "market_id": "1507135",
-        "condition_id": "",
-        "token_id": "106185524851676938505541505296578625344873475096630621539275575354569736248366",
-        "question": "LoL: JD Gaming vs Weibo Gaming (BO5) - LPL Playoffs",
-        "outcome": "JD Gaming",
-        "slug": "lol-jdg-wb-2026-03-07",
-        "category": "",
-        "resolution_date": "2026-03-07T15:00:00Z",
-        "entry_price": 0.525,
-        "max_entry_price": 0.5775,
-        "tp_price": 0.7088,
-        "sl_price": 0.3938,
-        "tp_pct": 35.0,
-        "sl_pct": -25.0,
-        "expiry": "2026-03-07T15:00:00+00:00",
-        "edge_score": 42.2,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 12.0,
-          "dislocation": 12.0,
-          "external": 1.0
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.9,
-        "days_to_close": 1,
-        "liquidity_usd": 141187.4313,
-        "volume_24h": 94109.27682799996,
-        "rationale": "Smart money 12/25 (2 whales) | Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
-        "tp_sources": [],
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": 0.665,
-        "trough_price": 0.505,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.665,
-        "live_pnl_pct": 26.67
-      },
-      {
         "signal_id": "97c19e4e",
         "timestamp": "2026-03-06T08:46:27.097397+00:00",
         "status": "active",
@@ -220,8 +177,8 @@
         "trough_price": 0.307,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3085,
-        "live_pnl_pct": -0.48
+        "current_price": 0.309,
+        "live_pnl_pct": -0.32
       },
       {
         "signal_id": "ed2953f5",
@@ -265,8 +222,8 @@
         "trough_price": 0.846,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.8495,
-        "live_pnl_pct": -2.41
+        "current_price": 0.86,
+        "live_pnl_pct": -1.21
       },
       {
         "signal_id": "768eaacf",
@@ -442,11 +399,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.845,
-        "trough_price": 0.805,
+        "trough_price": 0.795,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.805,
-        "live_pnl_pct": -2.42
+        "current_price": 0.795,
+        "live_pnl_pct": -3.64
       },
       {
         "signal_id": "b0ae5248",
@@ -490,8 +447,8 @@
         "trough_price": 0.605,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.625,
-        "live_pnl_pct": 3.31
+        "current_price": 0.615,
+        "live_pnl_pct": 1.65
       },
       {
         "signal_id": "becb7c4c",
@@ -532,11 +489,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.405,
-        "trough_price": 0.34,
+        "trough_price": 0.325,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.34,
-        "live_pnl_pct": -8.11
+        "current_price": 0.325,
+        "live_pnl_pct": -12.16
       },
       {
         "signal_id": "0b081b71",
@@ -577,11 +534,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.265,
-        "trough_price": 0.265,
+        "trough_price": 0.255,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.265,
-        "live_pnl_pct": 0.0
+        "current_price": 0.255,
+        "live_pnl_pct": -3.77
       },
       {
         "signal_id": "01c22013",
@@ -712,11 +669,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.205,
-        "trough_price": 0.185,
+        "trough_price": 0.18,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.185,
-        "live_pnl_pct": -5.13
+        "current_price": 0.18,
+        "live_pnl_pct": -7.69
       },
       {
         "signal_id": "ee1dc261",
@@ -760,8 +717,8 @@
         "trough_price": 0.0355,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.038,
-        "live_pnl_pct": -1.3
+        "current_price": 0.037,
+        "live_pnl_pct": -3.9
       },
       {
         "signal_id": "354ad1f5",
@@ -801,12 +758,12 @@
         "sl_fraction": 0.212,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.55,
+        "peak_price": 0.555,
         "trough_price": 0.53,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.55,
-        "live_pnl_pct": 3.77
+        "current_price": 0.555,
+        "live_pnl_pct": 4.72
       },
       {
         "signal_id": "c0334848",
@@ -895,8 +852,8 @@
         "trough_price": 0.445,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.445,
-        "live_pnl_pct": -4.3
+        "current_price": 0.455,
+        "live_pnl_pct": -2.15
       },
       {
         "signal_id": "2d67a2fa",
@@ -981,12 +938,12 @@
         "sl_fraction": 0.212,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.435,
+        "peak_price": 0.475,
         "trough_price": 0.405,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.425,
-        "live_pnl_pct": -2.3
+        "current_price": 0.475,
+        "live_pnl_pct": 9.2
       },
       {
         "signal_id": "6cdb99c4",
@@ -1030,8 +987,8 @@
         "trough_price": 0.585,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.595,
-        "live_pnl_pct": 1.71
+        "current_price": 0.585,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "18e15c0b",
@@ -1075,8 +1032,8 @@
         "trough_price": 0.36,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.36,
-        "live_pnl_pct": -13.25
+        "current_price": 0.375,
+        "live_pnl_pct": -9.64
       },
       {
         "signal_id": "a8cc3132",
@@ -1207,11 +1164,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.2615,
-        "trough_price": 0.2505,
+        "trough_price": 0.2265,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.2505,
-        "live_pnl_pct": -4.21
+        "current_price": 0.2265,
+        "live_pnl_pct": -13.38
       },
       {
         "signal_id": "7ae2d2a9",
@@ -1251,60 +1208,15 @@
         "sl_fraction": 0.212,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.14,
+        "peak_price": 0.17,
         "trough_price": 0.125,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.125,
-        "live_pnl_pct": -10.71
+        "current_price": 0.17,
+        "live_pnl_pct": 21.43
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "860ea824",
-        "timestamp": "2026-03-07T02:45:38.134948+00:00",
-        "status": "market_resolved",
-        "market_id": "1351850",
-        "condition_id": "",
-        "token_id": "60032733653602147270167840418572127593420793498298328740476796133825369309597",
-        "question": "Hurricanes vs. Oilers",
-        "outcome": "Oilers",
-        "slug": "nhl-car-edm-2026-03-06",
-        "category": "",
-        "resolution_date": "2026-03-07T02:00:00Z",
-        "entry_price": 0.335,
-        "min_entry_price": 0.325,
-        "max_entry_price": 0.355,
-        "tp_price": 0.4864,
-        "sl_price": 0.2345,
-        "tp_pct": 45.2,
-        "sl_pct": -30.0,
-        "expiry": null,
-        "edge_score": 36.5,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 22.51,
-          "dislocation": 19.07,
-          "external": 0.0
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 3.0,
-        "days_to_close": 0,
-        "liquidity_usd": 18507.1112,
-        "volume_24h": 1149945.6828040013,
-        "rationale": "Smart money 23/25 (7 whales) | Dislocation 19/30 (velocity, vol spike, trajectory)",
-        "tp_fraction": 0.228,
-        "sl_fraction": 0.3,
-        "resolved_at": "2026-03-07T04:16:23+00:00",
-        "resolution_type": "market_resolved",
-        "peak_price": 0.335,
-        "trough_price": 0.085,
-        "final_price": 0.0,
-        "hypothetical_pnl_pct": -100.0,
-        "current_price": 0.335,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "a4c561a3",
         "timestamp": "2026-03-07T02:45:38.135415+00:00",
@@ -3507,26 +3419,69 @@
         "hypothetical_pnl_pct": -100.0,
         "current_price": 0.015,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "9e2dfb58",
+        "timestamp": "2026-03-06T08:46:27.096126+00:00",
+        "status": "tp_hit",
+        "market_id": "1507135",
+        "condition_id": "",
+        "token_id": "106185524851676938505541505296578625344873475096630621539275575354569736248366",
+        "question": "LoL: JD Gaming vs Weibo Gaming (BO5) - LPL Playoffs",
+        "outcome": "JD Gaming",
+        "slug": "lol-jdg-wb-2026-03-07",
+        "category": "",
+        "resolution_date": "2026-03-07T15:00:00Z",
+        "entry_price": 0.525,
+        "max_entry_price": 0.5775,
+        "tp_price": 0.7088,
+        "sl_price": 0.3938,
+        "tp_pct": 35.0,
+        "sl_pct": -25.0,
+        "expiry": "2026-03-07T15:00:00+00:00",
+        "edge_score": 42.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 12.0,
+          "dislocation": 12.0,
+          "external": 1.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.9,
+        "days_to_close": 1,
+        "liquidity_usd": 141187.4313,
+        "volume_24h": 94109.27682799996,
+        "rationale": "Smart money 12/25 (2 whales) | Dislocation 12/30 (vol spike, time decay) | External 1.0/15",
+        "tp_sources": [],
+        "resolved_at": "2026-03-07T10:36:21+00:00",
+        "resolution_type": "tp_hit",
+        "peak_price": 0.81,
+        "trough_price": 0.505,
+        "final_price": 0.7088,
+        "hypothetical_pnl_pct": 35.01,
+        "current_price": 0.665,
+        "live_pnl_pct": 26.67
       }
     ],
     "metrics": {
       "total_signals_issued": 168,
-      "active_signals": 28,
-      "total_resolved": 140,
-      "wins": 50,
+      "active_signals": 27,
+      "total_resolved": 141,
+      "wins": 51,
       "losses": 83,
       "market_resolved": 53,
-      "win_rate": 0.376,
-      "avg_win_pct": 51.74,
+      "win_rate": 0.381,
+      "avg_win_pct": 51.42,
       "avg_loss_pct": -58.5,
-      "ev_per_signal": -17.06,
+      "ev_per_signal": -16.67,
       "by_tier": {
         "high": {
-          "total": 55,
-          "wins": 16,
+          "total": 56,
+          "wins": 17,
           "losses": 33,
-          "win_rate": 0.327,
-          "avg_pnl": -27.14
+          "win_rate": 0.34,
+          "avg_pnl": -26.03
         },
         "medium": {
           "total": 77,
@@ -3548,33 +3503,33 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 45,
-      "coverage_pct": 17.0,
-      "avg_score": 8.91,
+      "tokens_scored": 262,
+      "tokens_with_signal": 48,
+      "coverage_pct": 18.3,
+      "avg_score": 8.55,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 168,
-      "coverage_pct": 63.6,
-      "avg_score": 11.47,
+      "tokens_scored": 262,
+      "tokens_with_signal": 171,
+      "coverage_pct": 65.3,
+      "avg_score": 11.78,
       "max_score": 21.78,
       "quality_traders": 51,
-      "markets_indexed": 5028
+      "markets_indexed": 5012
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 218,
-      "coverage_pct": 82.6,
-      "avg_score": 7.6,
-      "max_score": 22.89
+      "tokens_scored": 262,
+      "tokens_with_signal": 216,
+      "coverage_pct": 82.4,
+      "avg_score": 7.63,
+      "max_score": 23.69
     },
     "external": {
       "active": true,
-      "tokens_scored": 264,
+      "tokens_scored": 262,
       "tokens_with_signal": 5,
       "coverage_pct": 1.9,
       "avg_score": 3.3,
@@ -3582,7 +3537,7 @@
     }
   },
   "calibration": {
-    "total_trades": 140,
+    "total_trades": 141,
     "overall_win_rate": 0,
     "overall_avg_pnl_pct": 0,
     "quintiles": [],
