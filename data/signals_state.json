@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.23,
-      "live_pnl_pct": 12.2
+      "current_price": 0.22,
+      "live_pnl_pct": 7.32
     },
     {
       "signal_id": "97c19e4e",
@@ -126,8 +126,8 @@
       "trough_price": 0.645,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.65,
-      "live_pnl_pct": 0.78
+      "current_price": 0.645,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "48ad0c97",
@@ -166,11 +166,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.3155,
-      "trough_price": 0.3015,
+      "trough_price": 0.3055,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3015,
-      "live_pnl_pct": -2.74
+      "current_price": 0.3055,
+      "live_pnl_pct": -1.45
     },
     {
       "signal_id": "ed2953f5",
@@ -214,8 +214,8 @@
       "trough_price": 0.8405,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.8695,
-      "live_pnl_pct": -0.11
+      "current_price": 0.869,
+      "live_pnl_pct": -0.17
     },
     {
       "signal_id": "768eaacf",
@@ -304,8 +304,8 @@
       "trough_price": 0.575,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.595,
-      "live_pnl_pct": 1.71
+      "current_price": 0.585,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "becb7c4c",
@@ -349,8 +349,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.365,
-      "live_pnl_pct": -1.35
+      "current_price": 0.345,
+      "live_pnl_pct": -6.76
     },
     {
       "signal_id": "01c22013",
@@ -394,8 +394,8 @@
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.295,
-      "live_pnl_pct": -6.35
+      "current_price": 0.305,
+      "live_pnl_pct": -3.17
     },
     {
       "signal_id": "4235ebf2",
@@ -484,53 +484,8 @@
       "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.175,
-      "live_pnl_pct": -10.26
-    },
-    {
-      "signal_id": "c0334848",
-      "timestamp": "2026-03-07T05:57:58.397337+00:00",
-      "status": "active",
-      "market_id": "1461171",
-      "condition_id": "",
-      "token_id": "41754438686226985658869092258527439667230307071732370758415020713007061382016",
-      "question": "Will Atalanta BC win on 2026-03-07?",
-      "outcome": "Yes",
-      "slug": "sea-ata-udi-2026-03-07-ata",
-      "category": "",
-      "resolution_date": "2026-03-07T17:00:00Z",
-      "entry_price": 0.555,
-      "min_entry_price": 0.54,
-      "max_entry_price": 0.576,
-      "tp_price": 0.6228,
-      "sl_price": 0.4872,
-      "tp_pct": 12.2,
-      "sl_pct": -12.2,
-      "expiry": "2026-03-07T17:00:00+00:00",
-      "edge_score": 26.3,
-      "edge_tier": "medium",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 17.94,
-        "dislocation": 8.0,
-        "external": 0.0
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.8,
-      "days_to_close": 0,
-      "liquidity_usd": 239087.6185,
-      "volume_24h": 113958.30163099998,
-      "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike)",
-      "tp_fraction": 0.152,
-      "sl_fraction": 0.212,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": 0.565,
-      "trough_price": 0.505,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.505,
-      "live_pnl_pct": -9.01
+      "current_price": 0.18,
+      "live_pnl_pct": -7.69
     },
     {
       "signal_id": "2d67a2fa",
@@ -578,51 +533,6 @@
       "live_pnl_pct": 182.86
     },
     {
-      "signal_id": "a8cc3132",
-      "timestamp": "2026-03-07T08:40:22.066221+00:00",
-      "status": "active",
-      "market_id": "1412008",
-      "condition_id": "",
-      "token_id": "37707889101703388554573183121087149960763059727816355008500588986442790693936",
-      "question": "Will BV Borussia 09 Dortmund win on 2026-03-07?",
-      "outcome": "Yes",
-      "slug": "bun-koe-dor-2026-03-07-dor",
-      "category": "",
-      "resolution_date": "2026-03-07T17:30:00Z",
-      "entry_price": 0.53,
-      "min_entry_price": 0.515,
-      "max_entry_price": 0.551,
-      "tp_price": 0.6005,
-      "sl_price": 0.4595,
-      "tp_pct": 13.3,
-      "sl_pct": -13.3,
-      "expiry": "2026-03-07T17:30:00+00:00",
-      "edge_score": 25.0,
-      "edge_tier": "medium",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 16.94,
-        "dislocation": 8.0,
-        "external": 0.0
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.9,
-      "days_to_close": 0,
-      "liquidity_usd": 309880.0207,
-      "volume_24h": 91385.77862599997,
-      "rationale": "Smart money 17/25 (3 whales) | Dislocation 8/30 (vol spike)",
-      "tp_fraction": 0.15,
-      "sl_fraction": 0.212,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": 0.545,
-      "trough_price": 0.525,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.525,
-      "live_pnl_pct": -0.94
-    },
-    {
       "signal_id": "596158c0",
       "timestamp": "2026-03-07T08:40:22.066722+00:00",
       "status": "active",
@@ -664,8 +574,8 @@
       "trough_price": 0.695,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.705,
-      "live_pnl_pct": 1.44
+      "current_price": 0.695,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "b1b555e5",
@@ -711,6 +621,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.435,
       "live_pnl_pct": -15.53
+    },
+    {
+      "signal_id": "29df4910",
+      "timestamp": "2026-03-07T18:01:00.113255+00:00",
+      "status": "active",
+      "market_id": "1412008",
+      "condition_id": "",
+      "token_id": "37707889101703388554573183121087149960763059727816355008500588986442790693936",
+      "question": "Will BV Borussia 09 Dortmund win on 2026-03-07?",
+      "outcome": "Yes",
+      "slug": "bun-koe-dor-2026-03-07-dor",
+      "category": "",
+      "resolution_date": "2026-03-07T17:30:00Z",
+      "entry_price": 0.705,
+      "min_entry_price": 0.69,
+      "max_entry_price": 0.735,
+      "tp_price": 0.7758,
+      "sl_price": 0.6342,
+      "tp_pct": 10.0,
+      "sl_pct": -10.0,
+      "expiry": null,
+      "edge_score": 41.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.64,
+        "dislocation": 22.54,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 0,
+      "liquidity_usd": 59023.1324,
+      "volume_24h": 663089.7248319996,
+      "rationale": "Smart money 19/25 (6 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.24,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.705,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -7656,6 +7611,96 @@
       "hypothetical_pnl_pct": -100.0,
       "current_price": 0.72,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "c0334848",
+      "timestamp": "2026-03-07T05:57:58.397337+00:00",
+      "status": "sl_hit",
+      "market_id": "1461171",
+      "condition_id": "",
+      "token_id": "41754438686226985658869092258527439667230307071732370758415020713007061382016",
+      "question": "Will Atalanta BC win on 2026-03-07?",
+      "outcome": "Yes",
+      "slug": "sea-ata-udi-2026-03-07-ata",
+      "category": "",
+      "resolution_date": "2026-03-07T17:00:00Z",
+      "entry_price": 0.555,
+      "min_entry_price": 0.54,
+      "max_entry_price": 0.576,
+      "tp_price": 0.6228,
+      "sl_price": 0.4872,
+      "tp_pct": 12.2,
+      "sl_pct": -12.2,
+      "expiry": "2026-03-07T17:00:00+00:00",
+      "edge_score": 26.3,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.94,
+        "dislocation": 8.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.8,
+      "days_to_close": 0,
+      "liquidity_usd": 239087.6185,
+      "volume_24h": 113958.30163099998,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike)",
+      "tp_fraction": 0.152,
+      "sl_fraction": 0.212,
+      "resolved_at": "2026-03-07T17:57:25+00:00",
+      "resolution_type": "sl_hit",
+      "peak_price": 0.565,
+      "trough_price": 0.265,
+      "final_price": 0.4872,
+      "hypothetical_pnl_pct": -12.22,
+      "current_price": 0.505,
+      "live_pnl_pct": -9.01
+    },
+    {
+      "signal_id": "a8cc3132",
+      "timestamp": "2026-03-07T08:40:22.066221+00:00",
+      "status": "tp_hit",
+      "market_id": "1412008",
+      "condition_id": "",
+      "token_id": "37707889101703388554573183121087149960763059727816355008500588986442790693936",
+      "question": "Will BV Borussia 09 Dortmund win on 2026-03-07?",
+      "outcome": "Yes",
+      "slug": "bun-koe-dor-2026-03-07-dor",
+      "category": "",
+      "resolution_date": "2026-03-07T17:30:00Z",
+      "entry_price": 0.53,
+      "min_entry_price": 0.515,
+      "max_entry_price": 0.551,
+      "tp_price": 0.6005,
+      "sl_price": 0.4595,
+      "tp_pct": 13.3,
+      "sl_pct": -13.3,
+      "expiry": "2026-03-07T17:30:00+00:00",
+      "edge_score": 25.0,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.94,
+        "dislocation": 8.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.9,
+      "days_to_close": 0,
+      "liquidity_usd": 309880.0207,
+      "volume_24h": 91385.77862599997,
+      "rationale": "Smart money 17/25 (3 whales) | Dislocation 8/30 (vol spike)",
+      "tp_fraction": 0.15,
+      "sl_fraction": 0.212,
+      "resolved_at": "2026-03-07T17:57:18+00:00",
+      "resolution_type": "tp_hit",
+      "peak_price": 0.695,
+      "trough_price": 0.525,
+      "final_price": 0.6005,
+      "hypothetical_pnl_pct": 13.3,
+      "current_price": 0.525,
+      "live_pnl_pct": -0.94
     }
   ],
   "cooldowns": {
@@ -7753,15 +7798,16 @@
     "1468354": "2026-03-07T15:38:03.779135+00:00",
     "1411990": "2026-03-07T16:01:13.776774+00:00",
     "1413214": "2026-03-07T16:01:13.776779+00:00",
-    "1411947": "2026-03-07T16:40:06.964576+00:00"
+    "1411947": "2026-03-07T16:40:06.964576+00:00",
+    "1461171": "2026-03-07T18:01:00.106431+00:00"
   },
   "stats": {
-    "total_signals": 173,
-    "total_wins": 55,
-    "total_losses": 95,
+    "total_signals": 174,
+    "total_wins": 56,
+    "total_losses": 96,
     "total_expired": 7,
     "total_market_resolved": 56
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T17:36:15.575011+00:00"
+  "last_updated": "2026-03-07T18:01:00.132012+00:00"
 }
