@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.22,
-      "live_pnl_pct": 7.32
+      "current_price": 0.215,
+      "live_pnl_pct": 4.88
     },
     {
       "signal_id": "97c19e4e",
@@ -211,11 +211,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.903,
-      "trough_price": 0.8405,
+      "trough_price": 0.8365,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.8415,
-      "live_pnl_pct": -3.33
+      "current_price": 0.838,
+      "live_pnl_pct": -3.73
     },
     {
       "signal_id": "768eaacf",
@@ -304,8 +304,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.375,
-      "live_pnl_pct": 1.35
+      "current_price": 0.345,
+      "live_pnl_pct": -6.76
     },
     {
       "signal_id": "01c22013",
@@ -525,57 +525,12 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.235,
+      "peak_price": 0.245,
       "trough_price": 0.22,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.235,
-      "live_pnl_pct": 6.82
-    },
-    {
-      "signal_id": "eaf16478",
-      "timestamp": "2026-03-07T21:50:02.885049+00:00",
-      "status": "active",
-      "market_id": "1476085",
-      "condition_id": "",
-      "token_id": "83336699376542172840522520333781119696840468305745300914858552915770865347739",
-      "question": "Magic vs. Timberwolves",
-      "outcome": "Timberwolves",
-      "slug": "nba-orl-min-2026-03-07",
-      "category": "",
-      "resolution_date": "2026-03-07T20:00:00Z",
-      "entry_price": 0.265,
-      "min_entry_price": 0.255,
-      "max_entry_price": 0.285,
-      "tp_price": 0.4376,
-      "sl_price": 0.1855,
-      "tp_pct": 65.1,
-      "sl_pct": -30.0,
-      "expiry": null,
-      "edge_score": 39.5,
-      "edge_tier": "high",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 21.34,
-        "dislocation": 20.03,
-        "external": 0.0
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 3.8,
-      "days_to_close": 0,
-      "liquidity_usd": 77155.8894,
-      "volume_24h": 1861284.2091170049,
-      "rationale": "Smart money 21/25 (8 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
-      "tp_fraction": 0.235,
-      "sl_fraction": 0.3,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.265,
-      "live_pnl_pct": 0.0
+      "current_price": 0.245,
+      "live_pnl_pct": 11.36
     }
   ],
   "resolved": [
@@ -8466,6 +8421,51 @@
       "hypothetical_pnl_pct": 17.32,
       "current_price": 0.575,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "eaf16478",
+      "timestamp": "2026-03-07T21:50:02.885049+00:00",
+      "status": "sl_hit",
+      "market_id": "1476085",
+      "condition_id": "",
+      "token_id": "83336699376542172840522520333781119696840468305745300914858552915770865347739",
+      "question": "Magic vs. Timberwolves",
+      "outcome": "Timberwolves",
+      "slug": "nba-orl-min-2026-03-07",
+      "category": "",
+      "resolution_date": "2026-03-07T20:00:00Z",
+      "entry_price": 0.265,
+      "min_entry_price": 0.255,
+      "max_entry_price": 0.285,
+      "tp_price": 0.4376,
+      "sl_price": 0.1855,
+      "tp_pct": 65.1,
+      "sl_pct": -30.0,
+      "expiry": null,
+      "edge_score": 39.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.34,
+        "dislocation": 20.03,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.8,
+      "days_to_close": 0,
+      "liquidity_usd": 77155.8894,
+      "volume_24h": 1861284.2091170049,
+      "rationale": "Smart money 21/25 (8 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.235,
+      "sl_fraction": 0.3,
+      "resolved_at": "2026-03-07T21:59:24+00:00",
+      "resolution_type": "sl_hit",
+      "peak_price": 0.265,
+      "trough_price": 0.185,
+      "final_price": 0.1855,
+      "hypothetical_pnl_pct": -30.0,
+      "current_price": 0.265,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -8574,15 +8574,16 @@
     "1389663": "2026-03-07T20:57:01.799094+00:00",
     "1516461": "2026-03-07T21:29:36.311445+00:00",
     "1356082": "2026-03-07T21:29:36.311454+00:00",
-    "1413020": "2026-03-07T21:29:36.311459+00:00"
+    "1413020": "2026-03-07T21:29:36.311459+00:00",
+    "1476085": "2026-03-07T22:02:20.242705+00:00"
   },
   "stats": {
     "total_signals": 191,
     "total_wins": 65,
-    "total_losses": 106,
+    "total_losses": 107,
     "total_expired": 7,
     "total_market_resolved": 59
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T21:50:02.904894+00:00"
+  "last_updated": "2026-03-07T22:02:20.263054+00:00"
 }
