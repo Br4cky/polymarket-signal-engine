@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.215,
-      "live_pnl_pct": 4.88
+      "current_price": 0.22,
+      "live_pnl_pct": 7.32
     },
     {
       "signal_id": "97c19e4e",
@@ -169,8 +169,8 @@
       "trough_price": 0.306,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.306,
-      "live_pnl_pct": -1.29
+      "current_price": 0.3065,
+      "live_pnl_pct": -1.13
     },
     {
       "signal_id": "ed2953f5",
@@ -214,8 +214,8 @@
       "trough_price": 0.8405,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.8585,
-      "live_pnl_pct": -1.38
+      "current_price": 0.8665,
+      "live_pnl_pct": -0.46
     },
     {
       "signal_id": "768eaacf",
@@ -349,8 +349,8 @@
       "trough_price": 0.495,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.505,
-      "live_pnl_pct": -3.81
+      "current_price": 0.515,
+      "live_pnl_pct": -1.9
     },
     {
       "signal_id": "b0ae5248",
@@ -390,12 +390,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.645,
+      "peak_price": 0.635,
       "trough_price": 0.605,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.645,
-      "live_pnl_pct": 6.61
+      "current_price": 0.635,
+      "live_pnl_pct": 4.96
     },
     {
       "signal_id": "becb7c4c",
@@ -436,11 +436,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.405,
-      "trough_price": 0.32,
+      "trough_price": 0.325,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.32,
-      "live_pnl_pct": -13.51
+      "current_price": 0.325,
+      "live_pnl_pct": -12.16
     },
     {
       "signal_id": "0b081b71",
@@ -619,8 +619,8 @@
       "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.19,
-      "live_pnl_pct": -2.56
+      "current_price": 0.185,
+      "live_pnl_pct": -5.13
     },
     {
       "signal_id": "ee1dc261",
@@ -664,8 +664,8 @@
       "trough_price": 0.0355,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0365,
-      "live_pnl_pct": -5.19
+      "current_price": 0.036,
+      "live_pnl_pct": -6.49
     },
     {
       "signal_id": "c0334848",
@@ -935,51 +935,6 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.695,
-      "live_pnl_pct": 0.0
-    },
-    {
-      "signal_id": "1104b5b4",
-      "timestamp": "2026-03-07T13:45:34.090649+00:00",
-      "status": "active",
-      "market_id": "1389652",
-      "condition_id": "",
-      "token_id": "68363078718996366304028134395843160301317022594501394865855566433440183368602",
-      "question": "Will Arsenal FC win on 2026-03-07?",
-      "outcome": "No",
-      "slug": "efa-man2-ars-2026-03-07-ars",
-      "category": "",
-      "resolution_date": "2026-03-07T15:00:00Z",
-      "entry_price": 0.34,
-      "min_entry_price": 0.33,
-      "max_entry_price": 0.36,
-      "tp_price": 0.4958,
-      "sl_price": 0.2278,
-      "tp_pct": 45.8,
-      "sl_pct": -33.0,
-      "expiry": "2026-03-07T15:00:00+00:00",
-      "edge_score": 40.0,
-      "edge_tier": "high",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 19.77,
-        "dislocation": 20.45,
-        "external": 0.0
-      },
-      "convexity_band": "2x",
-      "potential_multiple": 2.9,
-      "days_to_close": 0,
-      "liquidity_usd": 35500.127,
-      "volume_24h": 472679.1777049992,
-      "rationale": "Smart money 20/25 (4 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
-      "tp_fraction": 0.236,
-      "sl_fraction": 0.33,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.34,
       "live_pnl_pct": 0.0
     }
   ],
@@ -7476,6 +7431,51 @@
       "hypothetical_pnl_pct": -25.01,
       "current_price": 0.243,
       "live_pnl_pct": -7.07
+    },
+    {
+      "signal_id": "1104b5b4",
+      "timestamp": "2026-03-07T13:45:34.090649+00:00",
+      "status": "market_resolved",
+      "market_id": "1389652",
+      "condition_id": "",
+      "token_id": "68363078718996366304028134395843160301317022594501394865855566433440183368602",
+      "question": "Will Arsenal FC win on 2026-03-07?",
+      "outcome": "No",
+      "slug": "efa-man2-ars-2026-03-07-ars",
+      "category": "",
+      "resolution_date": "2026-03-07T15:00:00Z",
+      "entry_price": 0.34,
+      "min_entry_price": 0.33,
+      "max_entry_price": 0.36,
+      "tp_price": 0.4958,
+      "sl_price": 0.2278,
+      "tp_pct": 45.8,
+      "sl_pct": -33.0,
+      "expiry": "2026-03-07T15:00:00+00:00",
+      "edge_score": 40.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.77,
+        "dislocation": 20.45,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.9,
+      "days_to_close": 0,
+      "liquidity_usd": 35500.127,
+      "volume_24h": 472679.1777049992,
+      "rationale": "Smart money 20/25 (4 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.236,
+      "sl_fraction": 0.33,
+      "resolved_at": "2026-03-07T14:00:31+00:00",
+      "resolution_type": "market_resolved",
+      "peak_price": 0.34,
+      "trough_price": 0.085,
+      "final_price": 0.0,
+      "hypothetical_pnl_pct": -100.0,
+      "current_price": 0.34,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -7566,15 +7566,16 @@
     "1414341": "2026-03-07T12:58:08.959702+00:00",
     "1467763": "2026-03-07T12:58:08.959706+00:00",
     "1447509": "2026-03-07T12:58:08.959712+00:00",
-    "1484016": "2026-03-07T13:45:34.084347+00:00"
+    "1484016": "2026-03-07T13:45:34.084347+00:00",
+    "1389652": "2026-03-07T14:05:16.663045+00:00"
   },
   "stats": {
     "total_signals": 169,
     "total_wins": 52,
-    "total_losses": 88,
+    "total_losses": 89,
     "total_expired": 7,
-    "total_market_resolved": 53
+    "total_market_resolved": 54
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T13:45:34.104592+00:00"
+  "last_updated": "2026-03-07T14:05:16.685223+00:00"
 }
