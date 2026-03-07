@@ -350,8 +350,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
                 conflict_skips += 1
                 continue
 
-            # Emit the signal
+            # Emit the signal (may return None if quality gates fail)
             signal = emit_signal(opp, config)
+            if signal is None:
+                continue
             signals_state['active'].append(signal)
             signals_state['stats']['total_signals'] = signals_state['stats'].get('total_signals', 0) + 1
             active_tokens.add(opp['token_id'])

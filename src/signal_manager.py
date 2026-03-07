@@ -67,11 +67,17 @@ def compute_tp_sl(
     opp = opportunity or {}
     edge_score = opp.get('edge_score', 0)
     layer_scores = opp.get('layer_scores', {})
-    bid = opp.get('bid', entry_price - 0.01)
-    ask = opp.get('ask', entry_price + 0.01)
+    bid_raw = opp.get('bid', 0)
+    ask_raw = opp.get('ask', 0)
     bid_depth = opp.get('bid_depth', 0)
     ask_depth = opp.get('ask_depth', 0)
     spread_pct = opp.get('spread_pct', 0)
+
+    # ── Sanity-check bid/ask data ──
+    # Order book data can be garbage (bid=0.01, ask=0.99) for thin markets.
+    # Only trust bid/ask if they're within 15% of entry price.
+    bid = bid_raw if (bid_raw > 0 and abs(bid_raw - entry_price) / entry_price < 0.15) else 0
+    ask = ask_raw if (ask_raw > 0 and abs(ask_raw - entry_price) / entry_price < 0.15) else 0
 
     # ── How many scoring layers actually contributed? ──
     active_layers = sum(1 for v in layer_scores.values() if v and v > 0)
@@ -167,18 +173,25 @@ def compute_tp_sl(
     # ══════════════════════════════════════════════════════════════════
     # ENTRY RANGE: grounded in order book reality
     # ══════════════════════════════════════════════════════════════════
-    # Min entry: the bid price (realistic fill). If no bid data, use entry - 1¢
-    min_entry = bid if bid > 0 and bid < entry_price else entry_price - 0.01
+    # Min entry: the bid price if trusted, otherwise entry - small buffer
+    if bid > 0:
+        min_entry = bid
+    else:
+        # No trusted bid — use price-level heuristic
+        if entry_price < 0.10:
+            min_entry = entry_price - 0.005
+        elif entry_price < 0.50:
+            min_entry = entry_price - 0.01
+        else:
+            min_entry = entry_price - 0.015
 
-    # Max entry buffer: based on spread width and price level
-    # Tight spread → small buffer (easy to fill near current price)
-    # Wide spread → larger buffer (may need to cross more of the spread)
-    if spread_pct > 0:
-        # Spread-based: buffer is roughly half the spread (you'll fill inside it)
-        spread_abs = (ask - bid) if (ask > bid > 0) else entry_price * spread_pct / 100
+    # Max entry buffer: based on trusted spread or price-level heuristic
+    if bid > 0 and ask > 0 and ask > bid:
+        # Trusted spread data — buffer is ~60% of the spread
+        spread_abs = ask - bid
         max_entry_buffer = max(0.005, spread_abs * 0.6)
     else:
-        # No spread data — use price-level heuristic
+        # No trusted spread — use price-level heuristic
         if entry_price < 0.05:
             max_entry_buffer = 0.008
         elif entry_price < 0.15:
@@ -279,10 +292,12 @@ def generate_rationale(opportunity: dict) -> str:
     return " | ".join(parts)
 
 
-def emit_signal(opportunity: dict, config: dict) -> dict:
+def emit_signal(opportunity: dict, config: dict) -> Optional[dict]:
     """
     Create a signal from a scored opportunity.
-    Returns a fully-formed signal dict ready for persistence and messaging.
+    Returns a fully-formed signal dict ready for persistence and messaging,
+    or None if the signal fails quality gates (e.g. TP too small to be
+    distinguishable from noise).
     """
     from src.portfolio import get_edge_tier, get_edge_tier_name
 
@@ -291,8 +306,26 @@ def emit_signal(opportunity: dict, config: dict) -> dict:
     tier = get_edge_tier(edge_score, config)
     tier_name = get_edge_tier_name(edge_score, config)
 
-    # Compute TP/SL/max entry — using actual mispricing data from layers
+    # Compute TP/SL/entry range
     targets = compute_tp_sl(entry_price, tier, tier_name, opportunity=opportunity)
+
+    # ── Quality gate: reject signals where TP is within market noise ──
+    # A 2-3% TP on a high-priced token isn't a mispricing signal, it's
+    # random fluctuation. Minimum TP must be meaningful.
+    MIN_TP_PCT = 8.0   # at least 8% TP to be worth signalling
+    MIN_TP_ABS = 0.03  # at least 3¢ absolute move to TP
+
+    tp_pct_abs = abs(targets['tp_pct'])
+    tp_abs = abs(targets['tp_price'] - entry_price)
+
+    if tp_pct_abs < MIN_TP_PCT and tp_abs < MIN_TP_ABS:
+        logger.info(
+            f"SIGNAL REJECTED (TP too small): {opportunity['outcome']} @ ${entry_price:.4f} "
+            f"TP={targets['tp_price']:.4f} ({targets['tp_pct']:+.1f}%) "
+            f"— need >={MIN_TP_PCT}% or >=${MIN_TP_ABS:.2f} abs "
+            f"({opportunity['question'][:50]}...)"
+        )
+        return None
 
     # Expiry = contract resolution date (every Polymarket contract resolves)
     # No artificial max_hold_days — signals run until TP, SL, or market resolution.
