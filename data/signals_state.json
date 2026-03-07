@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.215,
-      "live_pnl_pct": 4.88
+      "current_price": 0.21,
+      "live_pnl_pct": 2.44
     },
     {
       "signal_id": "97c19e4e",
@@ -126,8 +126,8 @@
       "trough_price": 0.635,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.635,
-      "live_pnl_pct": -1.55
+      "current_price": 0.645,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "48ad0c97",
@@ -169,8 +169,8 @@
       "trough_price": 0.305,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.305,
-      "live_pnl_pct": -1.61
+      "current_price": 0.306,
+      "live_pnl_pct": -1.29
     },
     {
       "signal_id": "ed2953f5",
@@ -214,8 +214,8 @@
       "trough_price": 0.8365,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.838,
-      "live_pnl_pct": -3.73
+      "current_price": 0.8655,
+      "live_pnl_pct": -0.57
     },
     {
       "signal_id": "768eaacf",
@@ -259,8 +259,8 @@
       "trough_price": 0.77,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.785,
-      "live_pnl_pct": 1.29
+      "current_price": 0.795,
+      "live_pnl_pct": 2.58
     },
     {
       "signal_id": "becb7c4c",
@@ -304,8 +304,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.345,
-      "live_pnl_pct": -6.76
+      "current_price": 0.385,
+      "live_pnl_pct": 4.05
     },
     {
       "signal_id": "01c22013",
@@ -349,8 +349,8 @@
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.315,
-      "live_pnl_pct": 0.0
+      "current_price": 0.305,
+      "live_pnl_pct": -3.17
     },
     {
       "signal_id": "4235ebf2",
@@ -525,12 +525,57 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.245,
+      "peak_price": 0.255,
       "trough_price": 0.22,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.245,
-      "live_pnl_pct": 11.36
+      "current_price": 0.225,
+      "live_pnl_pct": 2.27
+    },
+    {
+      "signal_id": "b1b9c849",
+      "timestamp": "2026-03-07T22:38:05.269823+00:00",
+      "status": "active",
+      "market_id": "1356095",
+      "condition_id": "",
+      "token_id": "105709410307179108278938322091998515631291665895818948148009443767588943804581",
+      "question": "Predators vs. Sabres: O/U 6.5",
+      "outcome": "Over",
+      "slug": "nhl-nsh-buf-2026-03-07-total-6pt5",
+      "category": "",
+      "resolution_date": "2026-03-07T22:30:00Z",
+      "entry_price": 0.525,
+      "min_entry_price": 0.51,
+      "max_entry_price": 0.546,
+      "tp_price": 0.6354,
+      "sl_price": 0.4146,
+      "tp_pct": 21.0,
+      "sl_pct": -21.0,
+      "expiry": null,
+      "edge_score": 38.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.2,
+        "dislocation": 20.04,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.9,
+      "days_to_close": 0,
+      "liquidity_usd": 174595.2221,
+      "volume_24h": 968002.8169560003,
+      "rationale": "Smart money 23/25 (7 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.232,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.525,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -8578,12 +8623,12 @@
     "1476085": "2026-03-07T22:02:20.242705+00:00"
   },
   "stats": {
-    "total_signals": 191,
+    "total_signals": 192,
     "total_wins": 65,
     "total_losses": 107,
     "total_expired": 7,
     "total_market_resolved": 59
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T22:02:20.263054+00:00"
+  "last_updated": "2026-03-07T22:38:05.288769+00:00"
 }
