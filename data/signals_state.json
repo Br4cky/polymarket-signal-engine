@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.22,
-      "live_pnl_pct": 7.32
+      "current_price": 0.23,
+      "live_pnl_pct": 12.2
     },
     {
       "signal_id": "97c19e4e",
@@ -126,8 +126,8 @@
       "trough_price": 0.645,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.655,
-      "live_pnl_pct": 1.55
+      "current_price": 0.645,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "48ad0c97",
@@ -300,12 +300,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.585,
+      "peak_price": 0.595,
       "trough_price": 0.575,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.585,
-      "live_pnl_pct": 0.0
+      "current_price": 0.595,
+      "live_pnl_pct": 1.71
     },
     {
       "signal_id": "becb7c4c",
@@ -349,8 +349,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.345,
-      "live_pnl_pct": -6.76
+      "current_price": 0.375,
+      "live_pnl_pct": 1.35
     },
     {
       "signal_id": "01c22013",
@@ -439,8 +439,8 @@
       "trough_price": 0.105,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.11,
-      "live_pnl_pct": -4.35
+      "current_price": 0.105,
+      "live_pnl_pct": -8.7
     },
     {
       "signal_id": "dd03bb86",
@@ -484,8 +484,8 @@
       "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.18,
-      "live_pnl_pct": -7.69
+      "current_price": 0.175,
+      "live_pnl_pct": -10.26
     },
     {
       "signal_id": "c0334848",
@@ -525,12 +525,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.575,
+      "peak_price": 0.565,
       "trough_price": 0.555,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.575,
-      "live_pnl_pct": 3.6
+      "current_price": 0.555,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "2d67a2fa",
@@ -615,12 +615,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.535,
+      "peak_price": 0.545,
       "trough_price": 0.525,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.535,
-      "live_pnl_pct": 0.94
+      "current_price": 0.545,
+      "live_pnl_pct": 2.83
     },
     {
       "signal_id": "596158c0",
@@ -660,11 +660,56 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.695,
+      "peak_price": 0.705,
       "trough_price": 0.695,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.695,
+      "current_price": 0.705,
+      "live_pnl_pct": 1.44
+    },
+    {
+      "signal_id": "b1b555e5",
+      "timestamp": "2026-03-07T17:03:55.568342+00:00",
+      "status": "active",
+      "market_id": "1411963",
+      "condition_id": "",
+      "token_id": "14945977761607055743561758300384411887692026835808032091986323441265853032356",
+      "question": "Will RC Strasbourg Alsace win on 2026-03-07?",
+      "outcome": "Yes",
+      "slug": "fl1-aja-str-2026-03-07-str",
+      "category": "",
+      "resolution_date": "2026-03-07T18:00:00Z",
+      "entry_price": 0.515,
+      "min_entry_price": 0.5,
+      "max_entry_price": 0.536,
+      "tp_price": 0.6359,
+      "sl_price": 0.3941,
+      "tp_pct": 23.5,
+      "sl_pct": -23.5,
+      "expiry": "2026-03-07T18:00:00+00:00",
+      "edge_score": 45.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.44,
+        "dislocation": 23.32,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.9,
+      "days_to_close": 0,
+      "liquidity_usd": 367987.7297,
+      "volume_24h": 665156.434646,
+      "rationale": "Smart money 22/25 (5 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.249,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.515,
       "live_pnl_pct": 0.0
     }
   ],
@@ -7711,12 +7756,12 @@
     "1411947": "2026-03-07T16:40:06.964576+00:00"
   },
   "stats": {
-    "total_signals": 172,
+    "total_signals": 173,
     "total_wins": 55,
     "total_losses": 95,
     "total_expired": 7,
     "total_market_resolved": 56
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T16:40:06.993376+00:00"
+  "last_updated": "2026-03-07T17:03:55.586123+00:00"
 }
