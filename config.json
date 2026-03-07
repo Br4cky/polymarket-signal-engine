@@ -44,7 +44,7 @@
       "dislocation": 0.50,
       "external": 0.15
     },
-    "edge_threshold": 15,
+    "edge_threshold": 20,
     "strong_signal_threshold": 35
   },
   "funds": {

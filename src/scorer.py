@@ -171,14 +171,21 @@ def rank_opportunities(
         layer_scores = scores.get('layer_scores', {})
 
         # ── Dynamic threshold by layer composition ──
+        # Dislocation-only signals are noisy — require higher threshold
+        # Multi-layer confirmation lowers the bar slightly
         effective_threshold = threshold
+        active_layers = sum(1 for v in layer_scores.values() if v and v > 0)
         if edge > 0:
             dislocation_pct = layer_scores.get('dislocation', 0) / edge * 100
             structural_score = layer_scores.get('structural', 0)
+            has_smart_money = layer_scores.get('smart_money', 0) > 0
 
-            if dislocation_pct > 65:
+            if dislocation_pct > 65 and not has_smart_money:
+                # Dislocation-heavy without smart money confirmation — raise bar
+                effective_threshold = max(threshold, threshold * 1.50)
+            elif dislocation_pct > 65:
                 effective_threshold = max(threshold, threshold * 1.30)
-            elif structural_score > 8:
+            elif structural_score > 8 and active_layers >= 2:
                 effective_threshold = max(threshold * 0.80, 10)
 
         if edge < effective_threshold:

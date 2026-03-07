@@ -309,7 +309,97 @@ def emit_signal(opportunity: dict, config: dict) -> Optional[dict]:
     # Compute TP/SL/entry range
     targets = compute_tp_sl(entry_price, tier, tier_name, opportunity=opportunity)
 
-    # ── Quality gate: reject signals where TP is within market noise ──
+    # ══════════════════════════════════════════════════════════════════
+    # QUALITY GATES — data-backed filters from signal performance analysis
+    # ══════════════════════════════════════════════════════════════════
+
+    layer_scores = opportunity.get('layer_scores', {})
+    active_layers = sum(1 for v in layer_scores.values() if v and v > 0)
+    has_smart_money = layer_scores.get('smart_money', 0) > 0
+    has_dislocation = layer_scores.get('dislocation', 0) > 0
+    has_external = layer_scores.get('external', 0) > 0
+    has_structural = layer_scores.get('structural', 0) > 0
+
+    # ── Gate 1: Layer quality requirement ──
+    # Data: 2-layer signals without smart money = -361% total P&L
+    # Data: Only disl+exte+smar (3-layer) combo is profitable (+335%, 46% WR)
+    # Rule: Require either 3+ active layers, OR 2 layers with smart money confirmed
+    if active_layers < 2:
+        logger.info(
+            f"SIGNAL REJECTED (insufficient layers): {opportunity['outcome']} @ ${entry_price:.4f} "
+            f"layers={active_layers} ({opportunity['question'][:50]}...)"
+        )
+        return None
+
+    if active_layers == 2 and not has_smart_money:
+        logger.info(
+            f"SIGNAL REJECTED (2 layers without smart money): {opportunity['outcome']} @ ${entry_price:.4f} "
+            f"layers={active_layers}, smart_money={layer_scores.get('smart_money', 0)} "
+            f"({opportunity['question'][:50]}...)"
+        )
+        return None
+
+    # ── Gate 2: Minimum edge score ──
+    # Data: Edge 15-25 = 35% WR, -17% avg P&L; Edge 25-35 = 27% WR, -19% avg
+    # Data: Edge 35-50 = 42% WR, -3.5% avg; Edge 50+ = 50% WR, +28% avg
+    # Rule: Raise effective minimum to 35 (config threshold still filters at 15
+    # in rank_opportunities for dashboard display, but signals need 35+)
+    MIN_SIGNAL_EDGE = 35.0
+    if edge_score < MIN_SIGNAL_EDGE:
+        logger.info(
+            f"SIGNAL REJECTED (edge too low): {opportunity['outcome']} @ ${entry_price:.4f} "
+            f"edge={edge_score:.1f} (need >={MIN_SIGNAL_EDGE}) "
+            f"({opportunity['question'][:50]}...)"
+        )
+        return None
+
+    # ── Gate 3: Cheap token filter ──
+    # Data: Under 15¢ tokens = -789% total P&L (wipeouts from $0 resolution dominate)
+    # Rule: Tokens under 10¢ need edge 50+ AND smart money. 10-20¢ need edge 40+.
+    if entry_price < 0.10:
+        if edge_score < 50 or not has_smart_money:
+            logger.info(
+                f"SIGNAL REJECTED (cheap token <10¢ needs edge>=50 + smart money): "
+                f"{opportunity['outcome']} @ ${entry_price:.4f} "
+                f"edge={edge_score:.1f}, smart_money={has_smart_money} "
+                f"({opportunity['question'][:50]}...)"
+            )
+            return None
+    elif entry_price < 0.20:
+        if edge_score < 40:
+            logger.info(
+                f"SIGNAL REJECTED (token <20¢ needs edge>=40): "
+                f"{opportunity['outcome']} @ ${entry_price:.4f} "
+                f"edge={edge_score:.1f} ({opportunity['question'][:50]}...)"
+            )
+            return None
+
+    # ── Gate 4: Category filter for known-losing patterns ──
+    # Data: Crypto price targets = 0% WR; Musk tweet markets = -250%
+    question_lower = opportunity.get('question', '').lower()
+    slug_lower = opportunity.get('slug', '').lower()
+
+    TOXIC_PATTERNS = [
+        # Crypto price targets: "Will BTC hit $X" — 0% win rate
+        ('crypto_price_target', lambda q, s: any(
+            tok in q for tok in ['hit $', 'reach $', 'above $', 'below $']
+        ) and any(
+            coin in q for coin in ['bitcoin', 'btc', 'ethereum', 'eth', 'solana', 'sol', 'xrp', 'doge']
+        )),
+        # Musk tweet markets — extremely noisy, -250% P&L
+        ('musk_tweets', lambda q, s: 'musk' in q and ('tweet' in q or 'post' in q or 'x.com' in q)),
+    ]
+
+    for pattern_name, pattern_fn in TOXIC_PATTERNS:
+        if pattern_fn(question_lower, slug_lower):
+            logger.info(
+                f"SIGNAL REJECTED (toxic category: {pattern_name}): "
+                f"{opportunity['outcome']} @ ${entry_price:.4f} "
+                f"({opportunity['question'][:50]}...)"
+            )
+            return None
+
+    # ── Gate 5: TP quality — reject noise signals ──
     # A 2-3% TP on a high-priced token isn't a mispricing signal, it's
     # random fluctuation. Minimum TP must be meaningful.
     MIN_TP_PCT = 8.0   # at least 8% TP to be worth signalling

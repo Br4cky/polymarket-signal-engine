@@ -286,11 +286,10 @@ def run_pipeline(config: dict, execute_trades: bool = False):
         update_signal_stats(signals_state, newly_resolved)
         wins = sum(1 for s in newly_resolved if s.get('resolution_type') == 'tp_hit')
         losses = sum(1 for s in newly_resolved if s.get('resolution_type') == 'sl_hit')
-        expired = sum(1 for s in newly_resolved if s.get('resolution_type') == 'expired')
         mkt_resolved = sum(1 for s in newly_resolved if s.get('resolution_type') == 'market_resolved')
         logger.info(
             f"Signal verification: {len(newly_resolved)} resolved "
-            f"({wins} TP, {losses} SL, {mkt_resolved} market settled, {expired} expired)"
+            f"({wins} TP, {losses} SL, {mkt_resolved} market settled)"
         )
 
         # Send Telegram notifications for resolved signals
