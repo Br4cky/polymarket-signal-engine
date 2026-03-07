@@ -83,8 +83,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.23,
-      "live_pnl_pct": 12.2
+      "current_price": 0.22,
+      "live_pnl_pct": 7.32
     },
     {
       "signal_id": "9e2dfb58",
@@ -122,12 +122,12 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.525,
-      "trough_price": 0.495,
+      "peak_price": 0.67,
+      "trough_price": 0.505,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.495,
-      "live_pnl_pct": -5.71
+      "current_price": 0.67,
+      "live_pnl_pct": 27.62
     },
     {
       "signal_id": "97c19e4e",
@@ -169,8 +169,8 @@
       "trough_price": 0.645,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.655,
-      "live_pnl_pct": 1.55
+      "current_price": 0.645,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "48ad0c97",
@@ -212,8 +212,8 @@
       "trough_price": 0.307,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.311,
-      "live_pnl_pct": 0.32
+      "current_price": 0.3085,
+      "live_pnl_pct": -0.48
     },
     {
       "signal_id": "ed2953f5",
@@ -254,11 +254,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.903,
-      "trough_price": 0.847,
+      "trough_price": 0.843,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.8475,
-      "live_pnl_pct": -2.64
+      "current_price": 0.843,
+      "live_pnl_pct": -3.16
     },
     {
       "signal_id": "768eaacf",
@@ -392,8 +392,8 @@
       "trough_price": 0.505,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.515,
-      "live_pnl_pct": -1.9
+      "current_price": 0.505,
+      "live_pnl_pct": -3.81
     },
     {
       "signal_id": "382447f3",
@@ -478,12 +478,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.615,
+      "peak_price": 0.625,
       "trough_price": 0.605,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.615,
-      "live_pnl_pct": 1.65
+      "current_price": 0.625,
+      "live_pnl_pct": 3.31
     },
     {
       "signal_id": "becb7c4c",
@@ -524,11 +524,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.405,
-      "trough_price": 0.345,
+      "trough_price": 0.34,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.355,
-      "live_pnl_pct": -4.05
+      "current_price": 0.34,
+      "live_pnl_pct": -8.11
     },
     {
       "signal_id": "0b081b71",
@@ -614,11 +614,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.315,
-      "trough_price": 0.305,
+      "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.305,
-      "live_pnl_pct": -3.17
+      "current_price": 0.295,
+      "live_pnl_pct": -6.35
     },
     {
       "signal_id": "4235ebf2",
@@ -749,11 +749,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.0165,
-      "trough_price": 0.0125,
+      "trough_price": 0.0105,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.015,
-      "live_pnl_pct": 20.0
+      "current_price": 0.0105,
+      "live_pnl_pct": -16.0
     },
     {
       "signal_id": "ee1dc261",
@@ -797,8 +797,8 @@
       "trough_price": 0.0355,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.0375,
-      "live_pnl_pct": -2.6
+      "current_price": 0.037,
+      "live_pnl_pct": -3.9
     },
     {
       "signal_id": "354ad1f5",
@@ -838,12 +838,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.545,
+      "peak_price": 0.55,
       "trough_price": 0.53,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.545,
-      "live_pnl_pct": 2.83
+      "current_price": 0.55,
+      "live_pnl_pct": 3.77
     },
     {
       "signal_id": "c0334848",
@@ -1109,11 +1109,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.45,
-      "trough_price": 0.395,
+      "trough_price": 0.365,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.44,
-      "live_pnl_pct": 6.02
+      "current_price": 0.365,
+      "live_pnl_pct": -12.05
     },
     {
       "signal_id": "a8cc3132",
@@ -1243,57 +1243,12 @@
       "sl_fraction": 0.25,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
+      "peak_price": 0.2615,
+      "trough_price": 0.252,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.2615,
-      "live_pnl_pct": 0.0
-    },
-    {
-      "signal_id": "bb11de0d",
-      "timestamp": "2026-03-07T09:07:54.684789+00:00",
-      "status": "active",
-      "market_id": "1505712",
-      "condition_id": "",
-      "token_id": "93229627242934545381961235487243342553089595883962859954384685743826290782569",
-      "question": "Bitcoin Up or Down - March 7, 3AM ET",
-      "outcome": "Up",
-      "slug": "bitcoin-up-or-down-march-7-3am-et",
-      "category": "",
-      "resolution_date": "2026-03-07T09:00:00Z",
-      "entry_price": 0.02,
-      "min_entry_price": 0.015,
-      "max_entry_price": 0.0304,
-      "tp_price": 0.1239,
-      "sl_price": 0.0158,
-      "tp_pct": 519.4,
-      "sl_pct": -21.3,
-      "expiry": null,
-      "edge_score": 25.8,
-      "edge_tier": "medium",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 16.94,
-        "dislocation": 8.0,
-        "external": 0.0
-      },
-      "convexity_band": "20x",
-      "potential_multiple": 50.0,
-      "days_to_close": 0,
-      "liquidity_usd": 4054.016,
-      "volume_24h": 128982.80373999989,
-      "rationale": "Smart money 17/25 (3 whales) | Dislocation 8/30 (vol spike)",
-      "tp_fraction": 0.106,
-      "sl_fraction": 0.212,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.02,
-      "live_pnl_pct": 0.0
+      "current_price": 0.252,
+      "live_pnl_pct": -3.63
     },
     {
       "signal_id": "7ae2d2a9",
@@ -1333,11 +1288,56 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.14,
+      "trough_price": 0.115,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.115,
+      "live_pnl_pct": -17.86
+    },
+    {
+      "signal_id": "1db975d5",
+      "timestamp": "2026-03-07T09:49:19.892422+00:00",
+      "status": "active",
+      "market_id": "1507136",
+      "condition_id": "",
+      "token_id": "45200280607321753966106143804255432678657125037063157330376003735311296752607",
+      "question": "LoL: JD Gaming vs Weibo Gaming - Game 1 Winner",
+      "outcome": "Weibo Gaming",
+      "slug": "lol-jdg-wb-2026-03-07-game1",
+      "category": "",
+      "resolution_date": "2026-03-07T13:00:00Z",
+      "entry_price": 0.015,
+      "min_entry_price": 0.01,
+      "max_entry_price": 0.023,
+      "tp_price": 0.1643,
+      "sl_price": 0.0112,
+      "tp_pct": 995.5,
+      "sl_pct": -25.0,
+      "expiry": "2026-03-07T13:00:00+00:00",
+      "edge_score": 31.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 15.2,
+        "dislocation": 15.0,
+        "external": 0.0
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 66.7,
+      "days_to_close": 0,
+      "liquidity_usd": 19128.604,
+      "volume_24h": 492155.3841930001,
+      "rationale": "Smart money 15/25 (2 whales) | Dislocation 15/30 (vol spike, trajectory)",
+      "tp_fraction": 0.152,
+      "sl_fraction": 0.25,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.14,
+      "current_price": 0.015,
       "live_pnl_pct": 0.0
     }
   ],
@@ -7386,6 +7386,51 @@
       "hypothetical_pnl_pct": -3.83,
       "current_price": 0.835,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "bb11de0d",
+      "timestamp": "2026-03-07T09:07:54.684789+00:00",
+      "status": "market_resolved",
+      "market_id": "1505712",
+      "condition_id": "",
+      "token_id": "93229627242934545381961235487243342553089595883962859954384685743826290782569",
+      "question": "Bitcoin Up or Down - March 7, 3AM ET",
+      "outcome": "Up",
+      "slug": "bitcoin-up-or-down-march-7-3am-et",
+      "category": "",
+      "resolution_date": "2026-03-07T09:00:00Z",
+      "entry_price": 0.02,
+      "min_entry_price": 0.015,
+      "max_entry_price": 0.0304,
+      "tp_price": 0.1239,
+      "sl_price": 0.0158,
+      "tp_pct": 519.4,
+      "sl_pct": -21.3,
+      "expiry": null,
+      "edge_score": 25.8,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.94,
+        "dislocation": 8.0,
+        "external": 0.0
+      },
+      "convexity_band": "20x",
+      "potential_multiple": 50.0,
+      "days_to_close": 0,
+      "liquidity_usd": 4054.016,
+      "volume_24h": 128982.80373999989,
+      "rationale": "Smart money 17/25 (3 whales) | Dislocation 8/30 (vol spike)",
+      "tp_fraction": 0.106,
+      "sl_fraction": 0.212,
+      "resolved_at": "2026-03-07T09:48:26+00:00",
+      "resolution_type": "market_resolved",
+      "peak_price": 0.02,
+      "trough_price": 0.0005,
+      "final_price": 0.0,
+      "hypothetical_pnl_pct": -100.0,
+      "current_price": 0.02,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -7468,15 +7513,16 @@
     "1505487": "2026-03-07T08:40:22.059235+00:00",
     "1466031": "2026-03-07T09:07:54.677340+00:00",
     "1467313": "2026-03-07T09:07:54.677349+00:00",
-    "1484007": "2026-03-07T09:07:54.677352+00:00"
+    "1484007": "2026-03-07T09:07:54.677352+00:00",
+    "1505712": "2026-03-07T09:49:19.885840+00:00"
   },
   "stats": {
-    "total_signals": 167,
+    "total_signals": 168,
     "total_wins": 50,
-    "total_losses": 80,
+    "total_losses": 81,
     "total_expired": 7,
-    "total_market_resolved": 51
+    "total_market_resolved": 52
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T09:07:54.686072+00:00"
+  "last_updated": "2026-03-07T09:49:19.892757+00:00"
 }
