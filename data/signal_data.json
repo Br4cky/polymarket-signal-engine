@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-07T10:40:32.628262+00:00",
+    "timestamp": "2026-03-07T11:03:08.232617+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 262,
-    "opportunities_found": 56,
+    "tokens_scored": 265,
+    "opportunities_found": 59,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -48,8 +48,8 @@
         "trough_price": 0.685,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.69,
-        "live_pnl_pct": -0.72
+        "current_price": 0.695,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "2647fa37",
@@ -177,8 +177,8 @@
         "trough_price": 0.307,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.309,
-        "live_pnl_pct": -0.32
+        "current_price": 0.3085,
+        "live_pnl_pct": -0.48
       },
       {
         "signal_id": "ed2953f5",
@@ -219,11 +219,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.903,
-        "trough_price": 0.846,
+        "trough_price": 0.8425,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.86,
-        "live_pnl_pct": -1.21
+        "current_price": 0.8425,
+        "live_pnl_pct": -3.22
       },
       {
         "signal_id": "768eaacf",
@@ -264,11 +264,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.795,
-        "trough_price": 0.775,
+        "trough_price": 0.77,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.775,
-        "live_pnl_pct": 0.0
+        "current_price": 0.77,
+        "live_pnl_pct": -0.65
       },
       {
         "signal_id": "dff0aa3c",
@@ -399,11 +399,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.845,
-        "trough_price": 0.795,
+        "trough_price": 0.805,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.795,
-        "live_pnl_pct": -3.64
+        "current_price": 0.815,
+        "live_pnl_pct": -1.21
       },
       {
         "signal_id": "b0ae5248",
@@ -447,8 +447,8 @@
         "trough_price": 0.605,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.615,
-        "live_pnl_pct": 1.65
+        "current_price": 0.625,
+        "live_pnl_pct": 3.31
       },
       {
         "signal_id": "becb7c4c",
@@ -489,11 +489,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.405,
-        "trough_price": 0.325,
+        "trough_price": 0.34,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.325,
-        "live_pnl_pct": -12.16
+        "current_price": 0.345,
+        "live_pnl_pct": -6.76
       },
       {
         "signal_id": "0b081b71",
@@ -669,11 +669,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.205,
-        "trough_price": 0.18,
+        "trough_price": 0.175,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.18,
-        "live_pnl_pct": -7.69
+        "current_price": 0.175,
+        "live_pnl_pct": -10.26
       },
       {
         "signal_id": "ee1dc261",
@@ -717,8 +717,8 @@
         "trough_price": 0.0355,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.037,
-        "live_pnl_pct": -3.9
+        "current_price": 0.0375,
+        "live_pnl_pct": -2.6
       },
       {
         "signal_id": "354ad1f5",
@@ -901,51 +901,6 @@
         "live_pnl_pct": 182.86
       },
       {
-        "signal_id": "3b8129c8",
-        "timestamp": "2026-03-07T06:50:09.258980+00:00",
-        "status": "active",
-        "market_id": "1519496",
-        "condition_id": "",
-        "token_id": "77595937131913601581640489004954199750112670226451270903587856355104437271867",
-        "question": "Counter-Strike: paiN vs FaZe (BO3) - ESL Pro League Stage 2",
-        "outcome": "paiN",
-        "slug": "cs2-pain-faze-2026-03-07",
-        "category": "",
-        "resolution_date": "2026-03-07T16:30:00Z",
-        "entry_price": 0.435,
-        "min_entry_price": 0.425,
-        "max_entry_price": 0.455,
-        "tp_price": 0.5195,
-        "sl_price": 0.3505,
-        "tp_pct": 19.4,
-        "sl_pct": -19.4,
-        "expiry": "2026-03-07T16:30:00+00:00",
-        "edge_score": 24.8,
-        "edge_tier": "medium",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 16.2,
-          "dislocation": 8.0,
-          "external": 0.0
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 2.3,
-        "days_to_close": 0,
-        "liquidity_usd": 44898.1194,
-        "volume_24h": 199110.8671319999,
-        "rationale": "Smart money 16/25 (2 whales) | Dislocation 8/30 (vol spike)",
-        "tp_fraction": 0.15,
-        "sl_fraction": 0.212,
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": 0.475,
-        "trough_price": 0.405,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.475,
-        "live_pnl_pct": 9.2
-      },
-      {
         "signal_id": "6cdb99c4",
         "timestamp": "2026-03-07T06:50:09.260016+00:00",
         "status": "active",
@@ -1032,8 +987,8 @@
         "trough_price": 0.36,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.375,
-        "live_pnl_pct": -9.64
+        "current_price": 0.39,
+        "live_pnl_pct": -6.02
       },
       {
         "signal_id": "a8cc3132",
@@ -1164,11 +1119,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.2615,
-        "trough_price": 0.2265,
+        "trough_price": 0.237,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.2265,
-        "live_pnl_pct": -13.38
+        "current_price": 0.2395,
+        "live_pnl_pct": -8.41
       },
       {
         "signal_id": "7ae2d2a9",
@@ -1208,60 +1163,15 @@
         "sl_fraction": 0.212,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.17,
+        "peak_price": 0.185,
         "trough_price": 0.125,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.17,
-        "live_pnl_pct": 21.43
+        "current_price": 0.18,
+        "live_pnl_pct": 28.57
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "a4c561a3",
-        "timestamp": "2026-03-07T02:45:38.135415+00:00",
-        "status": "tp_hit",
-        "market_id": "1506315",
-        "condition_id": "",
-        "token_id": "71639319968197797334272146342905158390473959992608217864047432829025391173576",
-        "question": "BNP Paribas Open: Tomas Etcheverry vs Denis Shapovalov",
-        "outcome": "Tomas Etcheverry",
-        "slug": "atp-etcheve-shapova-2026-03-06",
-        "category": "",
-        "resolution_date": "2026-03-13T19:00:00Z",
-        "entry_price": 0.38,
-        "min_entry_price": 0.37,
-        "max_entry_price": 0.4,
-        "tp_price": 0.526,
-        "sl_price": 0.2831,
-        "tp_pct": 38.4,
-        "sl_pct": -25.5,
-        "expiry": "2026-03-13T19:00:00+00:00",
-        "edge_score": 31.6,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 17.94,
-          "dislocation": 8.0,
-          "external": 5.54
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 2.6,
-        "days_to_close": 6,
-        "liquidity_usd": 48590.0536,
-        "volume_24h": 110281.96273300001,
-        "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike) | External 5.5/15",
-        "tp_fraction": 0.235,
-        "sl_fraction": 0.255,
-        "resolved_at": "2026-03-07T04:00:29+00:00",
-        "resolution_type": "tp_hit",
-        "peak_price": 0.54,
-        "trough_price": 0.0005,
-        "final_price": 0.526,
-        "hypothetical_pnl_pct": 38.42,
-        "current_price": 0.38,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "61136c2c",
         "timestamp": "2026-03-07T02:45:38.135866+00:00",
@@ -3462,19 +3372,64 @@
         "hypothetical_pnl_pct": 35.01,
         "current_price": 0.665,
         "live_pnl_pct": 26.67
+      },
+      {
+        "signal_id": "3b8129c8",
+        "timestamp": "2026-03-07T06:50:09.258980+00:00",
+        "status": "tp_hit",
+        "market_id": "1519496",
+        "condition_id": "",
+        "token_id": "77595937131913601581640489004954199750112670226451270903587856355104437271867",
+        "question": "Counter-Strike: paiN vs FaZe (BO3) - ESL Pro League Stage 2",
+        "outcome": "paiN",
+        "slug": "cs2-pain-faze-2026-03-07",
+        "category": "",
+        "resolution_date": "2026-03-07T16:30:00Z",
+        "entry_price": 0.435,
+        "min_entry_price": 0.425,
+        "max_entry_price": 0.455,
+        "tp_price": 0.5195,
+        "sl_price": 0.3505,
+        "tp_pct": 19.4,
+        "sl_pct": -19.4,
+        "expiry": "2026-03-07T16:30:00+00:00",
+        "edge_score": 24.8,
+        "edge_tier": "medium",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 16.2,
+          "dislocation": 8.0,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.3,
+        "days_to_close": 0,
+        "liquidity_usd": 44898.1194,
+        "volume_24h": 199110.8671319999,
+        "rationale": "Smart money 16/25 (2 whales) | Dislocation 8/30 (vol spike)",
+        "tp_fraction": 0.15,
+        "sl_fraction": 0.212,
+        "resolved_at": "2026-03-07T10:59:24+00:00",
+        "resolution_type": "tp_hit",
+        "peak_price": 0.57,
+        "trough_price": 0.405,
+        "final_price": 0.5195,
+        "hypothetical_pnl_pct": 19.43,
+        "current_price": 0.475,
+        "live_pnl_pct": 9.2
       }
     ],
     "metrics": {
       "total_signals_issued": 168,
-      "active_signals": 27,
-      "total_resolved": 141,
-      "wins": 51,
+      "active_signals": 26,
+      "total_resolved": 142,
+      "wins": 52,
       "losses": 83,
       "market_resolved": 53,
-      "win_rate": 0.381,
-      "avg_win_pct": 51.42,
+      "win_rate": 0.385,
+      "avg_win_pct": 50.8,
       "avg_loss_pct": -58.5,
-      "ev_per_signal": -16.67,
+      "ev_per_signal": -16.4,
       "by_tier": {
         "high": {
           "total": 56,
@@ -3484,11 +3439,11 @@
           "avg_pnl": -26.03
         },
         "medium": {
-          "total": 77,
-          "wins": 33,
+          "total": 78,
+          "wins": 34,
           "losses": 43,
-          "win_rate": 0.434,
-          "avg_pnl": -4.44
+          "win_rate": 0.442,
+          "avg_pnl": -4.13
         },
         "low": {
           "total": 8,
@@ -3503,41 +3458,41 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 262,
-      "tokens_with_signal": 48,
-      "coverage_pct": 18.3,
-      "avg_score": 8.55,
+      "tokens_scored": 265,
+      "tokens_with_signal": 49,
+      "coverage_pct": 18.5,
+      "avg_score": 8.39,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 262,
-      "tokens_with_signal": 171,
-      "coverage_pct": 65.3,
-      "avg_score": 11.78,
+      "tokens_scored": 265,
+      "tokens_with_signal": 175,
+      "coverage_pct": 66.0,
+      "avg_score": 11.64,
       "max_score": 21.78,
       "quality_traders": 51,
-      "markets_indexed": 5012
+      "markets_indexed": 5030
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 262,
-      "tokens_with_signal": 216,
-      "coverage_pct": 82.4,
-      "avg_score": 7.63,
-      "max_score": 23.69
+      "tokens_scored": 265,
+      "tokens_with_signal": 220,
+      "coverage_pct": 83.0,
+      "avg_score": 7.55,
+      "max_score": 23.57
     },
     "external": {
       "active": true,
-      "tokens_scored": 262,
-      "tokens_with_signal": 5,
-      "coverage_pct": 1.9,
-      "avg_score": 3.3,
-      "max_score": 3.42
+      "tokens_scored": 265,
+      "tokens_with_signal": 9,
+      "coverage_pct": 3.4,
+      "avg_score": 3.92,
+      "max_score": 8.0
     }
   },
   "calibration": {
-    "total_trades": 141,
+    "total_trades": 142,
     "overall_win_rate": 0,
     "overall_avg_pnl_pct": 0,
     "quintiles": [],
