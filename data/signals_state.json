@@ -126,8 +126,8 @@
       "trough_price": 0.645,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.645,
-      "live_pnl_pct": 0.0
+      "current_price": 0.655,
+      "live_pnl_pct": 1.55
     },
     {
       "signal_id": "48ad0c97",
@@ -214,8 +214,8 @@
       "trough_price": 0.8405,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.869,
-      "live_pnl_pct": -0.17
+      "current_price": 0.8695,
+      "live_pnl_pct": -0.11
     },
     {
       "signal_id": "768eaacf",
@@ -349,8 +349,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.36,
-      "live_pnl_pct": -2.7
+      "current_price": 0.345,
+      "live_pnl_pct": -6.76
     },
     {
       "signal_id": "01c22013",
@@ -394,8 +394,8 @@
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3,
-      "live_pnl_pct": -4.76
+      "current_price": 0.305,
+      "live_pnl_pct": -3.17
     },
     {
       "signal_id": "4235ebf2",
@@ -439,8 +439,8 @@
       "trough_price": 0.105,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.115,
-      "live_pnl_pct": 0.0
+      "current_price": 0.11,
+      "live_pnl_pct": -4.35
     },
     {
       "signal_id": "dd03bb86",
@@ -484,8 +484,8 @@
       "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.185,
-      "live_pnl_pct": -5.13
+      "current_price": 0.18,
+      "live_pnl_pct": -7.69
     },
     {
       "signal_id": "c0334848",
@@ -525,12 +525,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.565,
+      "peak_price": 0.575,
       "trough_price": 0.555,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.555,
-      "live_pnl_pct": 0.0
+      "current_price": 0.575,
+      "live_pnl_pct": 3.6
     },
     {
       "signal_id": "2d67a2fa",
@@ -578,51 +578,6 @@
       "live_pnl_pct": 182.86
     },
     {
-      "signal_id": "6cdb99c4",
-      "timestamp": "2026-03-07T06:50:09.260016+00:00",
-      "status": "active",
-      "market_id": "1519529",
-      "condition_id": "",
-      "token_id": "35108376467103625664526726870049406785724248133626917833577426201943661955122",
-      "question": "Counter-Strike: FUT Esports vs Heroic (BO3) - ESL Pro League Stage 2",
-      "outcome": "FUT Esports",
-      "slug": "cs2-fut-hero-2026-03-07",
-      "category": "",
-      "resolution_date": "2026-03-07T21:30:00Z",
-      "entry_price": 0.585,
-      "min_entry_price": 0.57,
-      "max_entry_price": 0.615,
-      "tp_price": 0.6461,
-      "sl_price": 0.5239,
-      "tp_pct": 10.4,
-      "sl_pct": -10.4,
-      "expiry": "2026-03-07T21:30:00+00:00",
-      "edge_score": 23.5,
-      "edge_tier": "medium",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 14.17,
-        "dislocation": 8.0,
-        "external": 0.0
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.7,
-      "days_to_close": 0,
-      "liquidity_usd": 62635.6522,
-      "volume_24h": 143316.55783200002,
-      "rationale": "Smart money 14/25 (2 whales) | Dislocation 8/30 (vol spike)",
-      "tp_fraction": 0.147,
-      "sl_fraction": 0.212,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": 0.595,
-      "trough_price": 0.585,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.585,
-      "live_pnl_pct": 0.0
-    },
-    {
       "signal_id": "a8cc3132",
       "timestamp": "2026-03-07T08:40:22.066221+00:00",
       "status": "active",
@@ -660,12 +615,12 @@
       "sl_fraction": 0.212,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.53,
+      "peak_price": 0.535,
       "trough_price": 0.525,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.525,
-      "live_pnl_pct": -0.94
+      "current_price": 0.535,
+      "live_pnl_pct": 0.94
     },
     {
       "signal_id": "596158c0",
@@ -710,51 +665,6 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.695,
-      "live_pnl_pct": 0.0
-    },
-    {
-      "signal_id": "5a9a4c39",
-      "timestamp": "2026-03-07T16:01:13.781953+00:00",
-      "status": "active",
-      "market_id": "1411947",
-      "condition_id": "",
-      "token_id": "66053362048016636992519734552806090670042911260936507586282734846379647868968",
-      "question": "Will Bayer 04 Leverkusen win on 2026-03-07?",
-      "outcome": "Yes",
-      "slug": "bun-fre-b04-2026-03-07-b04",
-      "category": "",
-      "resolution_date": "2026-03-07T14:30:00Z",
-      "entry_price": 0.72,
-      "min_entry_price": 0.705,
-      "max_entry_price": 0.75,
-      "tp_price": 0.7902,
-      "sl_price": 0.6498,
-      "tp_pct": 9.8,
-      "sl_pct": -9.8,
-      "expiry": null,
-      "edge_score": 46.2,
-      "edge_tier": "high",
-      "layer_scores": {
-        "structural": 0.0,
-        "smart_money": 22.24,
-        "dislocation": 23.19,
-        "external": 0.0
-      },
-      "convexity_band": "yield",
-      "potential_multiple": 1.4,
-      "days_to_close": 0,
-      "liquidity_usd": 36968.0449,
-      "volume_24h": 451245.2984960001,
-      "rationale": "Smart money 22/25 (7 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
-      "tp_fraction": 0.251,
-      "sl_fraction": 0.33,
-      "resolved_at": null,
-      "resolution_type": null,
-      "peak_price": null,
-      "trough_price": null,
-      "final_price": null,
-      "hypothetical_pnl_pct": null,
-      "current_price": 0.72,
       "live_pnl_pct": 0.0
     }
   ],
@@ -7611,6 +7521,96 @@
       "hypothetical_pnl_pct": -29.91,
       "current_price": 0.44,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "6cdb99c4",
+      "timestamp": "2026-03-07T06:50:09.260016+00:00",
+      "status": "tp_hit",
+      "market_id": "1519529",
+      "condition_id": "",
+      "token_id": "35108376467103625664526726870049406785724248133626917833577426201943661955122",
+      "question": "Counter-Strike: FUT Esports vs Heroic (BO3) - ESL Pro League Stage 2",
+      "outcome": "FUT Esports",
+      "slug": "cs2-fut-hero-2026-03-07",
+      "category": "",
+      "resolution_date": "2026-03-07T21:30:00Z",
+      "entry_price": 0.585,
+      "min_entry_price": 0.57,
+      "max_entry_price": 0.615,
+      "tp_price": 0.6461,
+      "sl_price": 0.5239,
+      "tp_pct": 10.4,
+      "sl_pct": -10.4,
+      "expiry": "2026-03-07T21:30:00+00:00",
+      "edge_score": 23.5,
+      "edge_tier": "medium",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 14.17,
+        "dislocation": 8.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 0,
+      "liquidity_usd": 62635.6522,
+      "volume_24h": 143316.55783200002,
+      "rationale": "Smart money 14/25 (2 whales) | Dislocation 8/30 (vol spike)",
+      "tp_fraction": 0.147,
+      "sl_fraction": 0.212,
+      "resolved_at": "2026-03-07T16:39:23+00:00",
+      "resolution_type": "tp_hit",
+      "peak_price": 0.795,
+      "trough_price": 0.585,
+      "final_price": 0.6461,
+      "hypothetical_pnl_pct": 10.44,
+      "current_price": 0.585,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "5a9a4c39",
+      "timestamp": "2026-03-07T16:01:13.781953+00:00",
+      "status": "market_resolved",
+      "market_id": "1411947",
+      "condition_id": "",
+      "token_id": "66053362048016636992519734552806090670042911260936507586282734846379647868968",
+      "question": "Will Bayer 04 Leverkusen win on 2026-03-07?",
+      "outcome": "Yes",
+      "slug": "bun-fre-b04-2026-03-07-b04",
+      "category": "",
+      "resolution_date": "2026-03-07T14:30:00Z",
+      "entry_price": 0.72,
+      "min_entry_price": 0.705,
+      "max_entry_price": 0.75,
+      "tp_price": 0.7902,
+      "sl_price": 0.6498,
+      "tp_pct": 9.8,
+      "sl_pct": -9.8,
+      "expiry": null,
+      "edge_score": 46.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.24,
+        "dislocation": 23.19,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 0,
+      "liquidity_usd": 36968.0449,
+      "volume_24h": 451245.2984960001,
+      "rationale": "Smart money 22/25 (7 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.251,
+      "sl_fraction": 0.33,
+      "resolved_at": "2026-03-07T16:39:26+00:00",
+      "resolution_type": "market_resolved",
+      "peak_price": 0.72,
+      "trough_price": 0.0005,
+      "final_price": 0.0,
+      "hypothetical_pnl_pct": -100.0,
+      "current_price": 0.72,
+      "live_pnl_pct": 0.0
     }
   ],
   "cooldowns": {
@@ -7707,15 +7707,16 @@
     "1519518": "2026-03-07T14:41:01.726491+00:00",
     "1468354": "2026-03-07T15:38:03.779135+00:00",
     "1411990": "2026-03-07T16:01:13.776774+00:00",
-    "1413214": "2026-03-07T16:01:13.776779+00:00"
+    "1413214": "2026-03-07T16:01:13.776779+00:00",
+    "1411947": "2026-03-07T16:40:06.964576+00:00"
   },
   "stats": {
     "total_signals": 172,
-    "total_wins": 54,
-    "total_losses": 94,
+    "total_wins": 55,
+    "total_losses": 95,
     "total_expired": 7,
-    "total_market_resolved": 55
+    "total_market_resolved": 56
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-07T16:01:13.802139+00:00"
+  "last_updated": "2026-03-07T16:40:06.993376+00:00"
 }
