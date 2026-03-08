@@ -171,8 +171,8 @@
       "trough_price": 0.735,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.7415,
-      "live_pnl_pct": -14.82
+      "current_price": 0.7545,
+      "live_pnl_pct": -13.33
     },
     {
       "signal_id": "768eaacf",
@@ -261,8 +261,8 @@
       "trough_price": 0.32,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.385,
-      "live_pnl_pct": 4.05
+      "current_price": 0.395,
+      "live_pnl_pct": 6.76
     },
     {
       "signal_id": "2d67a2fa",
@@ -392,11 +392,56 @@
       "sl_fraction": 0.3,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.625,
+      "trough_price": 0.585,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.625,
+      "live_pnl_pct": 6.84
+    },
+    {
+      "signal_id": "c80d5446",
+      "timestamp": "2026-03-08T11:50:05.813088+00:00",
+      "status": "active",
+      "market_id": "1461180",
+      "condition_id": "",
+      "token_id": "39951035317168576754112260797062287558643233731729295708600676066784509013257",
+      "question": "Will US Cremonese win on 2026-03-08?",
+      "outcome": "Yes",
+      "slug": "sea-lec-cre-2026-03-08-cre",
+      "category": "",
+      "resolution_date": "2026-03-08T11:30:00Z",
+      "entry_price": 0.255,
+      "min_entry_price": 0.245,
+      "max_entry_price": 0.275,
+      "tp_price": 0.4552,
+      "sl_price": 0.1785,
+      "tp_pct": 78.5,
+      "sl_pct": -30.0,
+      "expiry": null,
+      "edge_score": 44.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.75,
+        "dislocation": 19.89,
+        "external": 1.46
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.9,
+      "days_to_close": 0,
+      "liquidity_usd": 27983.3122,
+      "volume_24h": 359861.419697,
+      "rationale": "Smart money 22/25 (6 whales) | Dislocation 20/30 (velocity, vol spike, trajectory) | External 1.5/15",
+      "tp_fraction": 0.269,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.585,
+      "current_price": 0.255,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9221,12 +9266,12 @@
     "1356127": "2026-03-08T06:11:28.481025+00:00"
   },
   "stats": {
-    "total_signals": 205,
+    "total_signals": 206,
     "total_wins": 69,
     "total_losses": 120,
     "total_expired": 7,
     "total_market_resolved": 65
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-08T11:28:38.970877+00:00"
+  "last_updated": "2026-03-08T11:50:05.833002+00:00"
 }
