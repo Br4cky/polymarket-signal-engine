@@ -171,8 +171,8 @@
       "trough_price": 0.744,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.745,
-      "live_pnl_pct": -14.42
+      "current_price": 0.7455,
+      "live_pnl_pct": -14.36
     },
     {
       "signal_id": "768eaacf",
@@ -308,6 +308,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.495,
       "live_pnl_pct": 182.86
+    },
+    {
+      "signal_id": "182defc1",
+      "timestamp": "2026-03-08T08:50:07.313330+00:00",
+      "status": "active",
+      "market_id": "1461194",
+      "condition_id": "",
+      "token_id": "25816105568931567065722830403757996686630307358297339076082369046653425021046",
+      "question": "Will Bologna FC 1909 win on 2026-03-08?",
+      "outcome": "Yes",
+      "slug": "sea-bol-ver-2026-03-08-bol",
+      "category": "",
+      "resolution_date": "2026-03-08T14:00:00Z",
+      "entry_price": 0.585,
+      "min_entry_price": 0.57,
+      "max_entry_price": 0.606,
+      "tp_price": 0.6792,
+      "sl_price": 0.4908,
+      "tp_pct": 16.1,
+      "sl_pct": -16.1,
+      "expiry": "2026-03-08T14:00:00+00:00",
+      "edge_score": 36.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.54,
+        "dislocation": 15.4,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 0,
+      "liquidity_usd": 401045.6575,
+      "volume_24h": 258878.84100499982,
+      "rationale": "Smart money 20/25 (7 whales) | Dislocation 15/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.227,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.585,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9131,12 +9176,12 @@
     "1356127": "2026-03-08T06:11:28.481025+00:00"
   },
   "stats": {
-    "total_signals": 203,
+    "total_signals": 204,
     "total_wins": 69,
     "total_losses": 120,
     "total_expired": 7,
     "total_market_resolved": 65
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-08T08:04:55.658476+00:00"
+  "last_updated": "2026-03-08T08:50:07.323453+00:00"
 }
