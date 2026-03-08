@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-08T10:58:36.392054+00:00",
+    "timestamp": "2026-03-08T11:28:38.980638+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 261,
-    "opportunities_found": 70,
+    "tokens_scored": 271,
+    "opportunities_found": 80,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -134,8 +134,8 @@
         "trough_price": 0.292,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3065,
-        "live_pnl_pct": -1.13
+        "current_price": 0.307,
+        "live_pnl_pct": -0.97
       },
       {
         "signal_id": "ed2953f5",
@@ -179,8 +179,8 @@
         "trough_price": 0.735,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7565,
-        "live_pnl_pct": -13.1
+        "current_price": 0.7415,
+        "live_pnl_pct": -14.82
       },
       {
         "signal_id": "768eaacf",
@@ -265,12 +265,12 @@
         "sl_fraction": 0.275,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.435,
+        "peak_price": 0.43,
         "trough_price": 0.32,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.435,
-        "live_pnl_pct": 17.57
+        "current_price": 0.385,
+        "live_pnl_pct": 4.05
       },
       {
         "signal_id": "2d67a2fa",
@@ -357,6 +357,51 @@
         "resolution_type": null,
         "peak_price": 0.585,
         "trough_price": 0.585,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.585,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "0551d56e",
+        "timestamp": "2026-03-08T11:28:38.952808+00:00",
+        "status": "active",
+        "market_id": "1461178",
+        "condition_id": "",
+        "token_id": "105092572360664599790702661139359847356716014067416018141936165029297996428859",
+        "question": "Will US Lecce win on 2026-03-08?",
+        "outcome": "No",
+        "slug": "sea-lec-cre-2026-03-08-lec",
+        "category": "",
+        "resolution_date": "2026-03-08T11:30:00Z",
+        "entry_price": 0.585,
+        "min_entry_price": 0.57,
+        "max_entry_price": 0.606,
+        "tp_price": 0.6886,
+        "sl_price": 0.4814,
+        "tp_pct": 17.7,
+        "sl_pct": -17.7,
+        "expiry": "2026-03-08T11:30:00+00:00",
+        "edge_score": 45.7,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 22.43,
+          "dislocation": 21.08,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 0,
+        "liquidity_usd": 354501.6877,
+        "volume_24h": 295850.199916,
+        "rationale": "Smart money 22/25 (5 whales) | Dislocation 21/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.25,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.585,
@@ -2614,8 +2659,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 204,
-      "active_signals": 8,
+      "total_signals_issued": 205,
+      "active_signals": 9,
       "total_resolved": 196,
       "wins": 69,
       "losses": 120,
@@ -2652,37 +2697,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 261,
-      "tokens_with_signal": 38,
-      "coverage_pct": 14.6,
-      "avg_score": 8.63,
+      "tokens_scored": 271,
+      "tokens_with_signal": 43,
+      "coverage_pct": 15.9,
+      "avg_score": 8.7,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 261,
-      "tokens_with_signal": 161,
-      "coverage_pct": 61.7,
-      "avg_score": 11.67,
-      "max_score": 20.9,
+      "tokens_scored": 271,
+      "tokens_with_signal": 168,
+      "coverage_pct": 62.0,
+      "avg_score": 11.94,
+      "max_score": 22.43,
       "quality_traders": 52,
-      "markets_indexed": 4902
+      "markets_indexed": 4892
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 261,
-      "tokens_with_signal": 230,
-      "coverage_pct": 88.1,
-      "avg_score": 7.72,
-      "max_score": 21.24
+      "tokens_scored": 271,
+      "tokens_with_signal": 238,
+      "coverage_pct": 87.8,
+      "avg_score": 7.95,
+      "max_score": 23.56
     },
     "external": {
       "active": true,
-      "tokens_scored": 261,
-      "tokens_with_signal": 6,
-      "coverage_pct": 2.3,
-      "avg_score": 4.06,
-      "max_score": 6.5
+      "tokens_scored": 271,
+      "tokens_with_signal": 5,
+      "coverage_pct": 1.8,
+      "avg_score": 1.54,
+      "max_score": 1.91
     }
   },
   "calibration": {
