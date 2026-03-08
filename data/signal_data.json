@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-08T12:03:39.512950+00:00",
+    "timestamp": "2026-03-08T13:12:23.241693+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 277,
-    "opportunities_found": 81,
+    "tokens_scored": 269,
+    "opportunities_found": 82,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -91,8 +91,8 @@
         "trough_price": 0.2,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.205,
-        "live_pnl_pct": 0.0
+        "current_price": 0.215,
+        "live_pnl_pct": 4.88
       },
       {
         "signal_id": "48ad0c97",
@@ -134,8 +134,8 @@
         "trough_price": 0.292,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.304,
-        "live_pnl_pct": -1.94
+        "current_price": 0.308,
+        "live_pnl_pct": -0.65
       },
       {
         "signal_id": "ed2953f5",
@@ -179,8 +179,8 @@
         "trough_price": 0.735,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7555,
-        "live_pnl_pct": -13.21
+        "current_price": 0.7635,
+        "live_pnl_pct": -12.29
       },
       {
         "signal_id": "768eaacf",
@@ -269,8 +269,8 @@
         "trough_price": 0.32,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.395,
-        "live_pnl_pct": 6.76
+        "current_price": 0.405,
+        "live_pnl_pct": 9.46
       },
       {
         "signal_id": "2d67a2fa",
@@ -355,11 +355,56 @@
         "sl_fraction": 0.3,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.585,
+        "peak_price": 0.595,
         "trough_price": 0.585,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.585,
+        "current_price": 0.595,
+        "live_pnl_pct": 1.71
+      },
+      {
+        "signal_id": "7ff352e8",
+        "timestamp": "2026-03-08T13:12:23.218002+00:00",
+        "status": "active",
+        "market_id": "1417740",
+        "condition_id": "",
+        "token_id": "58157927203576169352378744322470811684500049404843304465232781703359140030597",
+        "question": "Will Villarreal CF win on 2026-03-08?",
+        "outcome": "No",
+        "slug": "lal-vil-elc-2026-03-08-vil",
+        "category": "",
+        "resolution_date": "2026-03-08T13:00:00Z",
+        "entry_price": 0.325,
+        "min_entry_price": 0.315,
+        "max_entry_price": 0.345,
+        "tp_price": 0.478,
+        "sl_price": 0.2275,
+        "tp_pct": 47.1,
+        "sl_pct": -30.0,
+        "expiry": null,
+        "edge_score": 36.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.17,
+          "dislocation": 18.66,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.1,
+        "days_to_close": 0,
+        "liquidity_usd": 37757.9126,
+        "volume_24h": 854152.4642240001,
+        "rationale": "Smart money 18/25 (5 whales) | Dislocation 19/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.227,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.325,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2614,8 +2659,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 206,
-      "active_signals": 8,
+      "total_signals_issued": 207,
+      "active_signals": 9,
       "total_resolved": 198,
       "wins": 69,
       "losses": 122,
@@ -2652,37 +2697,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 41,
-      "coverage_pct": 14.8,
-      "avg_score": 8.8,
+      "tokens_scored": 269,
+      "tokens_with_signal": 37,
+      "coverage_pct": 13.8,
+      "avg_score": 8.69,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 176,
-      "coverage_pct": 63.5,
-      "avg_score": 12.03,
-      "max_score": 22.67,
+      "tokens_scored": 269,
+      "tokens_with_signal": 177,
+      "coverage_pct": 65.8,
+      "avg_score": 11.85,
+      "max_score": 22.9,
       "quality_traders": 51,
-      "markets_indexed": 4776
+      "markets_indexed": 4758
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 248,
-      "coverage_pct": 89.5,
-      "avg_score": 7.79,
-      "max_score": 24.01
+      "tokens_scored": 269,
+      "tokens_with_signal": 239,
+      "coverage_pct": 88.8,
+      "avg_score": 8.0,
+      "max_score": 23.39
     },
     "external": {
       "active": true,
-      "tokens_scored": 277,
+      "tokens_scored": 269,
       "tokens_with_signal": 7,
-      "coverage_pct": 2.5,
-      "avg_score": 1.51,
-      "max_score": 1.91
+      "coverage_pct": 2.6,
+      "avg_score": 3.67,
+      "max_score": 6.5
     }
   },
   "calibration": {
