@@ -356,11 +356,10 @@ def emit_signal(opportunity: dict, config: dict) -> Optional[dict]:
         return None
 
     # ── Gate 2: Minimum edge score ──
-    # Data: Edge 15-25 = 35% WR, -17% avg P&L; Edge 25-35 = 27% WR, -19% avg
-    # Data: Edge 35-50 = 42% WR, -3.5% avg; Edge 50+ = 50% WR, +28% avg
-    # Rule: Raise effective minimum to 35 (config threshold still filters at 15
-    # in rank_opportunities for dashboard display, but signals need 35+)
-    MIN_SIGNAL_EDGE = 35.0
+    # Data: Edge 15-25 = 35% WR; Edge 25-35 = 27% WR; Edge 35-50 = 42% WR; Edge 50+ = 50% WR
+    # With DTC=0 banned and layer gates active, edge 30+ is viable —
+    # the worst losses came from DTC=0 markets and weak layer combos, not edge 30-35.
+    MIN_SIGNAL_EDGE = 30.0
     if edge_score < MIN_SIGNAL_EDGE:
         logger.info(
             f"SIGNAL REJECTED (edge too low): {opportunity['outcome']} @ ${entry_price:.4f} "
@@ -810,6 +809,47 @@ def verify_signals(
                     )
                     continue
 
+            # 4. Resolution date passed + market gone → force resolve
+            #    Some markets settle but the last cached price isn't near $0/$1
+            #    (e.g. price was 0.50 and market disappeared). If the resolution
+            #    date is well past and the market is no longer trading, it's settled.
+            resolution_date = signal.get('resolution_date', '')
+            if resolution_date and market_gone:
+                try:
+                    res_dt = _parse_ts(resolution_date)
+                    hours_past = (now - res_dt).total_seconds() / 3600
+                    if hours_past > 6:  # 6+ hours past resolution date
+                        # Market gone + past resolution = definitely settled
+                        # Use peak/trough to infer outcome: if peak went above TP,
+                        # likely settled in our favour; otherwise against us
+                        peak = signal.get('peak_price') or entry
+                        trough = signal.get('trough_price') or entry
+                        cp = current_prices.get(token_id, 0) or safe_float(signal.get('current_price', 0))
+
+                        # Best guess at payout: if price was last seen high, likely $1; low, likely $0
+                        if cp >= 0.50 or peak >= signal.get('tp_price', 0.99):
+                            payout = 1.0
+                        else:
+                            payout = 0.0
+
+                        pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
+                        signal['status'] = 'market_resolved'
+                        signal['resolved_at'] = now.isoformat()
+                        signal['resolution_type'] = 'market_resolved'
+                        signal['final_price'] = payout
+                        signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
+                        newly_resolved.append(signal)
+                        won = pnl_pct > 0
+                        logger.info(
+                            f"FORCE RESOLVED (past resolution date by {hours_past:.0f}h): "
+                            f"{signal['signal_id']} → payout=${payout:.2f} "
+                            f"pnl={pnl_pct:+.1f}% "
+                            f"({signal['question'][:40]}...)"
+                        )
+                        continue
+                except (ValueError, TypeError):
+                    pass
+
             still_active.append(signal)
             continue
 
@@ -840,6 +880,39 @@ def verify_signals(
                     f"({signal['question'][:40]}...)"
                 )
                 continue
+
+        # 6. Resolution date passed + market gone (no history) → force resolve
+        resolution_date = signal.get('resolution_date', '')
+        if resolution_date and market_gone:
+            try:
+                res_dt = _parse_ts(resolution_date)
+                hours_past = (now - res_dt).total_seconds() / 3600
+                if hours_past > 6:
+                    cp = current_prices.get(token_id, 0) or safe_float(signal.get('current_price', 0))
+                    peak = signal.get('peak_price') or entry
+                    if cp >= 0.50 or peak >= signal.get('tp_price', 0.99):
+                        payout = 1.0
+                    else:
+                        payout = 0.0
+                    pnl_pct = ((payout - entry) / entry * 100) if entry > 0 else 0
+                    signal['status'] = 'market_resolved'
+                    signal['resolved_at'] = now.isoformat()
+                    signal['resolution_type'] = 'market_resolved'
+                    signal['final_price'] = payout
+                    signal['peak_price'] = signal.get('peak_price') or max(entry, cp)
+                    signal['trough_price'] = signal.get('trough_price') or min(entry, cp)
+                    signal['hypothetical_pnl_pct'] = round(pnl_pct, 2)
+                    newly_resolved.append(signal)
+                    won = pnl_pct > 0
+                    logger.info(
+                        f"FORCE RESOLVED (past resolution, no history): "
+                        f"{signal['signal_id']} → payout=${payout:.2f} "
+                        f"pnl={pnl_pct:+.1f}% "
+                        f"({signal['question'][:40]}...)"
+                    )
+                    continue
+            except (ValueError, TypeError):
+                pass
 
         # Update from current_prices map if available
         cp = current_prices.get(token_id, 0)
