@@ -40,8 +40,8 @@
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.215,
-      "live_pnl_pct": 4.88
+      "current_price": 0.22,
+      "live_pnl_pct": 7.32
     },
     {
       "signal_id": "2d67a2fa",
@@ -9117,5 +9117,5 @@
     "total_market_resolved": 73
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-09T11:11:56.909681+00:00"
+  "last_updated": "2026-03-09T11:56:55.527396+00:00"
 }
