@@ -81,7 +81,7 @@
       }
     },
     "min_liquidity_usd": 500,
-    "min_days_to_close": 0,
+    "min_days_to_close": 1,
     "max_days_to_close": 90,
     "slippage_pct": 0.5,
     "max_exposure_pct": 60,

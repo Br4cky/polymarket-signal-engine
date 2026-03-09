@@ -87,22 +87,30 @@ def compute_tp_sl(
     # ══════════════════════════════════════════════════════════════════
     available_upside = max(0.01, 1.0 - entry_price)
 
-    # Base TP fraction by tier (conservative starting points)
-    # These represent how much of the available upside we target
-    base_tp = {'high': 0.20, 'medium': 0.15, 'low': 0.10}
-    tp_fraction = base_tp.get(edge_tier_name, 0.12)
+    # Base TP fraction by tier — targets a meaningful chunk of available upside.
+    # Data showed old values (0.10-0.20) were too conservative: 14/38 TP hits
+    # saw the contract settle at $1 after we exited, leaving +370% on the table.
+    base_tp = {'high': 0.35, 'medium': 0.25, 'low': 0.15}
+    tp_fraction = base_tp.get(edge_tier_name, 0.18)
 
     # Scale by edge strength: edge 15-70 maps to 0.8x-1.4x multiplier
     # Stronger edge = we think mispricing is larger = target more upside
     edge_mult = 0.8 + (min(edge_score, 70) - 15) * (0.6 / 55)
     tp_fraction *= edge_mult
 
-    # Multi-layer confirmation bonus: each additional confirming layer
-    # adds confidence, so we can target slightly more
+    # Multi-layer confirmation bonus: more confirming layers = higher confidence
+    # = target more of the available upside. Data: 3-layer signals were the
+    # only profitable combo (+335%, 46% WR), so reward them aggressively.
+    has_smart_money = layer_scores.get('smart_money', 0) > 0
     if active_layers >= 3:
-        tp_fraction *= 1.20   # 3+ layers: 20% more aggressive
+        tp_fraction *= 1.40   # 3+ layers: 40% more aggressive (was 20%)
     elif active_layers >= 2:
-        tp_fraction *= 1.10   # 2 layers: 10% more aggressive
+        tp_fraction *= 1.15   # 2 layers: 15% more aggressive
+
+    # Smart money + multi-layer bonus: whale positioning on a multi-layer
+    # signal is the highest conviction setup we have
+    if has_smart_money and active_layers >= 3:
+        tp_fraction *= 1.15   # Additional 15% boost for best signals
 
     # Cheap token dampener: tokens under 15¢ have huge theoretical upside
     # but price moves are noisy, so be conservative with TP target
@@ -111,8 +119,9 @@ def compute_tp_sl(
     elif entry_price < 0.15:
         tp_fraction *= 0.85
 
-    # Clamp: never target less than 5% or more than 50% of available upside
-    tp_fraction = max(0.05, min(0.50, tp_fraction))
+    # Clamp: never target less than 10% or more than 70% of available upside
+    # Widened from 5-50% to allow strong signals to ride further toward settlement
+    tp_fraction = max(0.10, min(0.70, tp_fraction))
 
     tp_price = entry_price + (tp_fraction * available_upside)
 
@@ -149,6 +158,13 @@ def compute_tp_sl(
         sl_fraction = min(sl_fraction, 0.25)
     elif entry_price < 0.10:
         sl_fraction = min(sl_fraction, 0.30)
+
+    # Short-duration markets (DTC 1-3): tighten SL by 20% since these
+    # resolve quickly and there's less time for our thesis to play out.
+    # If SL fires, we want the loss to be smaller.
+    days_to_close = opp.get('days_to_close', 999)
+    if days_to_close <= 3:
+        sl_fraction *= 0.80
 
     # Clamp: never less than 10% or more than 40% of downside
     sl_fraction = max(0.10, min(0.40, sl_fraction))

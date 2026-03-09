@@ -259,10 +259,12 @@ class PolymarketClient:
             return cached
 
         clob_base = self.config.get("clob_api_base", "https://clob.polymarket.com")
+        # Use 1-minute candles for finer-grained TP/SL detection.
+        # Previous 60-min fidelity missed intra-hour SL crossings on fast markets.
         params = {
             "market": token_id,
             "interval": "max",
-            "fidelity": "60"
+            "fidelity": "1"
         }
 
         result = self._get(f"{clob_base}/prices-history", params=params)
