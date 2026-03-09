@@ -36,7 +36,7 @@
       "tp_sources": [],
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.23,
+      "peak_price": 0.24,
       "trough_price": 0.2,
       "final_price": null,
       "hypothetical_pnl_pct": null,
@@ -85,8 +85,8 @@
       "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.495,
-      "live_pnl_pct": 182.86
+      "current_price": 0.615,
+      "live_pnl_pct": 251.43
     }
   ],
   "resolved": [
@@ -9117,5 +9117,5 @@
     "total_market_resolved": 73
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-09T09:16:31.896591+00:00"
+  "last_updated": "2026-03-09T10:15:01.533395+00:00"
 }
