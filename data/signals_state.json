@@ -87,6 +87,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.855,
       "live_pnl_pct": -1.16
+    },
+    {
+      "signal_id": "6476a340",
+      "timestamp": "2026-03-10T05:43:51.202241+00:00",
+      "status": "active",
+      "market_id": "1537759",
+      "condition_id": "",
+      "token_id": "55128716049166879538688213060630115808381999757428176757593669471896278785372",
+      "question": "BNP Paribas Open: Marta Kostyuk vs Elena Rybakina",
+      "outcome": "Elena Rybakina",
+      "slug": "wta-kostyuk-rybakin-2026-03-09",
+      "category": "",
+      "resolution_date": "2026-03-17T03:00:00Z",
+      "entry_price": 0.83,
+      "min_entry_price": 0.815,
+      "max_entry_price": 0.86,
+      "tp_price": 0.9227,
+      "sl_price": 0.7373,
+      "tp_pct": 11.2,
+      "sl_pct": -11.2,
+      "expiry": "2026-03-17T03:00:00+00:00",
+      "edge_score": 30.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.51,
+        "dislocation": 8.0,
+        "external": 3.42
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 16843.6747,
+      "volume_24h": 118847.43147999996,
+      "rationale": "Smart money 19/25 (3 whales) | Dislocation 8/30 (vol spike) | External 3.4/15",
+      "tp_fraction": 0.545,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.83,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9081,12 +9126,12 @@
     "1530281": "2026-03-10T04:50:47.874595+00:00"
   },
   "stats": {
-    "total_signals": 252,
+    "total_signals": 253,
     "total_wins": 96,
     "total_losses": 147,
     "total_expired": 7,
     "total_market_resolved": 77
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-10T04:50:47.882001+00:00"
+  "last_updated": "2026-03-10T05:43:51.204940+00:00"
 }
