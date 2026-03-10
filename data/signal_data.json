@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-10T07:36:01.554733+00:00",
+    "timestamp": "2026-03-10T08:10:16.549852+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 304,
-    "opportunities_found": 14,
+    "tokens_scored": 309,
+    "opportunities_found": 12,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -48,8 +48,8 @@
         "trough_price": 0.2,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.2,
-        "live_pnl_pct": -2.44
+        "current_price": 0.205,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "391791df",
@@ -2388,37 +2388,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 304,
-      "tokens_with_signal": 85,
-      "coverage_pct": 28.0,
-      "avg_score": 8.72,
+      "tokens_scored": 309,
+      "tokens_with_signal": 82,
+      "coverage_pct": 26.5,
+      "avg_score": 8.62,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 304,
-      "tokens_with_signal": 201,
-      "coverage_pct": 66.1,
-      "avg_score": 10.31,
-      "max_score": 22.21,
+      "tokens_scored": 309,
+      "tokens_with_signal": 197,
+      "coverage_pct": 63.8,
+      "avg_score": 10.57,
+      "max_score": 22.2,
       "quality_traders": 52,
-      "markets_indexed": 5446
+      "markets_indexed": 5450
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 304,
-      "tokens_with_signal": 244,
-      "coverage_pct": 80.3,
-      "avg_score": 7.34,
-      "max_score": 22.56
+      "tokens_scored": 309,
+      "tokens_with_signal": 249,
+      "coverage_pct": 80.6,
+      "avg_score": 7.28,
+      "max_score": 19.4
     },
     "external": {
-      "active": true,
-      "tokens_scored": 304,
-      "tokens_with_signal": 7,
-      "coverage_pct": 2.3,
-      "avg_score": 1.66,
-      "max_score": 1.72
+      "active": false,
+      "tokens_scored": 309,
+      "tokens_with_signal": 0,
+      "coverage_pct": 0.0,
+      "avg_score": 0,
+      "max_score": 0
     }
   },
   "calibration": {
