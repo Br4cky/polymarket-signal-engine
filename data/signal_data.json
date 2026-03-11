@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-11T18:11:27.568305+00:00",
+    "timestamp": "2026-03-11T19:18:30.418469+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 240,
-    "opportunities_found": 3,
+    "tokens_scored": 268,
+    "opportunities_found": 9,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -52,6 +52,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.875,
         "live_pnl_pct": 1.16
+      },
+      {
+        "signal_id": "0f000a00",
+        "timestamp": "2026-03-11T19:18:30.407563+00:00",
+        "status": "active",
+        "market_id": "1547340",
+        "condition_id": "",
+        "token_id": "85553777889056404372214087452750763156632451246432829218296107627562705221340",
+        "question": "BNP Paribas Open: Rinky Hijikata vs Cameron Norrie",
+        "outcome": "Cameron Norrie",
+        "slug": "atp-hijikat-norrie-2026-03-11",
+        "category": "",
+        "resolution_date": "2026-03-18T18:00:00Z",
+        "entry_price": 0.825,
+        "min_entry_price": 0.81,
+        "max_entry_price": 0.855,
+        "tp_price": 0.9225,
+        "sl_price": 0.7275,
+        "tp_pct": 11.8,
+        "sl_pct": -11.8,
+        "expiry": "2026-03-18T18:00:00+00:00",
+        "edge_score": 32.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 17.46,
+          "dislocation": 8.0,
+          "external": 7.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 30837.6733,
+        "volume_24h": 116540.48711100004,
+        "rationale": "Smart money 17/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+        "tp_fraction": 0.557,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.825,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2305,8 +2350,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 255,
-      "active_signals": 1,
+      "total_signals_issued": 256,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 79,
       "losses": 121,
@@ -2343,37 +2388,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 240,
-      "tokens_with_signal": 45,
-      "coverage_pct": 18.8,
-      "avg_score": 8.7,
+      "tokens_scored": 268,
+      "tokens_with_signal": 48,
+      "coverage_pct": 17.9,
+      "avg_score": 8.62,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 240,
-      "tokens_with_signal": 148,
-      "coverage_pct": 61.7,
-      "avg_score": 12.22,
-      "max_score": 21.94,
+      "tokens_scored": 268,
+      "tokens_with_signal": 172,
+      "coverage_pct": 64.2,
+      "avg_score": 12.69,
+      "max_score": 22.08,
       "quality_traders": 50,
-      "markets_indexed": 5086
+      "markets_indexed": 5000
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 240,
-      "tokens_with_signal": 181,
-      "coverage_pct": 75.4,
-      "avg_score": 7.18,
-      "max_score": 18.09
+      "tokens_scored": 268,
+      "tokens_with_signal": 214,
+      "coverage_pct": 79.9,
+      "avg_score": 7.61,
+      "max_score": 26.0
     },
     "external": {
-      "active": false,
-      "tokens_scored": 240,
-      "tokens_with_signal": 0,
-      "coverage_pct": 0.0,
-      "avg_score": 0,
-      "max_score": 0
+      "active": true,
+      "tokens_scored": 268,
+      "tokens_with_signal": 3,
+      "coverage_pct": 1.1,
+      "avg_score": 5.0,
+      "max_score": 7.0
     }
   },
   "calibration": {
