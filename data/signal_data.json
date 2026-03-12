@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-11T23:59:26.026016+00:00",
+    "timestamp": "2026-03-12T02:31:27.857727+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 257,
-    "opportunities_found": 12,
+    "tokens_scored": 273,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.835,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.875,
-        "live_pnl_pct": 1.16
+        "current_price": 0.865,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2343,37 +2343,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 49,
-      "coverage_pct": 19.1,
-      "avg_score": 8.32,
+      "tokens_scored": 273,
+      "tokens_with_signal": 50,
+      "coverage_pct": 18.3,
+      "avg_score": 8.75,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 154,
-      "coverage_pct": 59.9,
-      "avg_score": 12.02,
-      "max_score": 22.3,
+      "tokens_scored": 273,
+      "tokens_with_signal": 164,
+      "coverage_pct": 60.1,
+      "avg_score": 12.54,
+      "max_score": 23.62,
       "quality_traders": 50,
-      "markets_indexed": 4988
+      "markets_indexed": 4940
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 208,
-      "coverage_pct": 80.9,
-      "avg_score": 7.5,
-      "max_score": 19.92
+      "tokens_scored": 273,
+      "tokens_with_signal": 226,
+      "coverage_pct": 82.8,
+      "avg_score": 7.89,
+      "max_score": 23.73
     },
     "external": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 4,
-      "coverage_pct": 1.6,
-      "avg_score": 1.45,
-      "max_score": 1.48
+      "tokens_scored": 273,
+      "tokens_with_signal": 5,
+      "coverage_pct": 1.8,
+      "avg_score": 1.72,
+      "max_score": 2.06
     }
   },
   "calibration": {
