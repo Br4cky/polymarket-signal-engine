@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-13T16:09:56.439702+00:00",
+    "timestamp": "2026-03-13T17:05:45.294189+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 250,
-    "opportunities_found": 7,
+    "tokens_scored": 259,
+    "opportunities_found": 8,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.835,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.875,
-        "live_pnl_pct": 1.16
+        "current_price": 0.86,
+        "live_pnl_pct": -0.58
       }
     ],
     "recent_resolved": [
@@ -2343,36 +2343,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 38,
-      "coverage_pct": 15.2,
-      "avg_score": 8.62,
+      "tokens_scored": 259,
+      "tokens_with_signal": 41,
+      "coverage_pct": 15.8,
+      "avg_score": 8.69,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 135,
-      "coverage_pct": 54.0,
-      "avg_score": 10.22,
-      "max_score": 20.12,
+      "tokens_scored": 259,
+      "tokens_with_signal": 145,
+      "coverage_pct": 56.0,
+      "avg_score": 11.02,
+      "max_score": 20.21,
       "quality_traders": 51,
-      "markets_indexed": 5232
+      "markets_indexed": 5194
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 228,
-      "coverage_pct": 91.2,
-      "avg_score": 6.61,
-      "max_score": 22.13
+      "tokens_scored": 259,
+      "tokens_with_signal": 233,
+      "coverage_pct": 90.0,
+      "avg_score": 6.55,
+      "max_score": 18.38
     },
     "external": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 5,
-      "coverage_pct": 2.0,
-      "avg_score": 2.65,
+      "tokens_scored": 259,
+      "tokens_with_signal": 3,
+      "coverage_pct": 1.2,
+      "avg_score": 3.17,
       "max_score": 3.37
     }
   },
