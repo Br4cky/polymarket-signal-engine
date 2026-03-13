@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-13T19:39:28.488405+00:00",
+    "timestamp": "2026-03-13T20:08:14.357606+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 277,
-    "opportunities_found": 7,
+    "tokens_scored": 269,
+    "opportunities_found": 6,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.835,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.87,
-        "live_pnl_pct": 0.58
+        "current_price": 0.875,
+        "live_pnl_pct": 1.16
       }
     ],
     "recent_resolved": [
@@ -2343,36 +2343,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 41,
-      "coverage_pct": 14.8,
-      "avg_score": 8.94,
+      "tokens_scored": 269,
+      "tokens_with_signal": 40,
+      "coverage_pct": 14.9,
+      "avg_score": 8.98,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 164,
-      "coverage_pct": 59.2,
-      "avg_score": 11.76,
-      "max_score": 21.74,
+      "tokens_scored": 269,
+      "tokens_with_signal": 163,
+      "coverage_pct": 60.6,
+      "avg_score": 12.09,
+      "max_score": 22.56,
       "quality_traders": 51,
-      "markets_indexed": 5194
+      "markets_indexed": 5188
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 249,
-      "coverage_pct": 89.9,
-      "avg_score": 6.55,
-      "max_score": 13.57
+      "tokens_scored": 269,
+      "tokens_with_signal": 237,
+      "coverage_pct": 88.1,
+      "avg_score": 6.89,
+      "max_score": 22.77
     },
     "external": {
       "active": true,
-      "tokens_scored": 277,
-      "tokens_with_signal": 3,
-      "coverage_pct": 1.1,
-      "avg_score": 3.17,
+      "tokens_scored": 269,
+      "tokens_with_signal": 4,
+      "coverage_pct": 1.5,
+      "avg_score": 3.11,
       "max_score": 3.37
     }
   },
