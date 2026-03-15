@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-15T21:49:05.971225+00:00",
+    "timestamp": "2026-03-15T22:06:24.587096+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 214,
+    "tokens_scored": 202,
     "opportunities_found": 7,
     "engine_version": "4.0.0"
   },
@@ -52,6 +52,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.845,
         "live_pnl_pct": -2.31
+      },
+      {
+        "signal_id": "c9b91391",
+        "timestamp": "2026-03-15T22:06:24.576521+00:00",
+        "status": "active",
+        "market_id": "1594303",
+        "condition_id": "",
+        "token_id": "97152688894538954921494975130868980679966373158159925962064805303460911973797",
+        "question": "BNP Paribas Open: Daniil Medvedev vs Jannik Sinner",
+        "outcome": "Daniil Medvedev",
+        "slug": "atp-medvede-sinner-2026-03-15",
+        "category": "",
+        "resolution_date": "2026-03-22T21:00:00Z",
+        "entry_price": 0.295,
+        "min_entry_price": 0.285,
+        "max_entry_price": 0.315,
+        "tp_price": 0.7077,
+        "sl_price": 0.2242,
+        "tp_pct": 139.9,
+        "sl_pct": -24.0,
+        "expiry": "2026-03-22T21:00:00+00:00",
+        "edge_score": 36.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.23,
+          "dislocation": 14.54,
+          "external": 3.75
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.4,
+        "days_to_close": 6,
+        "liquidity_usd": 45286.6148,
+        "volume_24h": 1065189.201027,
+        "rationale": "Smart money 20/25 (4 whales) | Dislocation 15/30 (vol spike, book imbalance, trajectory) | External 3.8/15",
+        "tp_fraction": 0.585,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.295,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2305,8 +2350,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 267,
-      "active_signals": 1,
+      "total_signals_issued": 268,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 82,
       "losses": 118,
@@ -2343,35 +2388,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 214,
+      "tokens_scored": 202,
       "tokens_with_signal": 37,
-      "coverage_pct": 17.3,
-      "avg_score": 8.58,
+      "coverage_pct": 18.3,
+      "avg_score": 8.59,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 214,
-      "tokens_with_signal": 127,
-      "coverage_pct": 59.3,
-      "avg_score": 14.03,
-      "max_score": 24.26,
+      "tokens_scored": 202,
+      "tokens_with_signal": 114,
+      "coverage_pct": 56.4,
+      "avg_score": 13.45,
+      "max_score": 23.9,
       "quality_traders": 52,
-      "markets_indexed": 5050
+      "markets_indexed": 5082
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 214,
-      "tokens_with_signal": 171,
-      "coverage_pct": 79.9,
-      "avg_score": 7.67,
-      "max_score": 24.73
+      "tokens_scored": 202,
+      "tokens_with_signal": 161,
+      "coverage_pct": 79.7,
+      "avg_score": 7.14,
+      "max_score": 26.33
     },
     "external": {
       "active": true,
-      "tokens_scored": 214,
+      "tokens_scored": 202,
       "tokens_with_signal": 6,
-      "coverage_pct": 2.8,
+      "coverage_pct": 3.0,
       "avg_score": 3.99,
       "max_score": 7.0
     }

@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.845,
       "live_pnl_pct": -2.31
+    },
+    {
+      "signal_id": "c9b91391",
+      "timestamp": "2026-03-15T22:06:24.576521+00:00",
+      "status": "active",
+      "market_id": "1594303",
+      "condition_id": "",
+      "token_id": "97152688894538954921494975130868980679966373158159925962064805303460911973797",
+      "question": "BNP Paribas Open: Daniil Medvedev vs Jannik Sinner",
+      "outcome": "Daniil Medvedev",
+      "slug": "atp-medvede-sinner-2026-03-15",
+      "category": "",
+      "resolution_date": "2026-03-22T21:00:00Z",
+      "entry_price": 0.295,
+      "min_entry_price": 0.285,
+      "max_entry_price": 0.315,
+      "tp_price": 0.7077,
+      "sl_price": 0.2242,
+      "tp_pct": 139.9,
+      "sl_pct": -24.0,
+      "expiry": "2026-03-22T21:00:00+00:00",
+      "edge_score": 36.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.23,
+        "dislocation": 14.54,
+        "external": 3.75
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.4,
+      "days_to_close": 6,
+      "liquidity_usd": 45286.6148,
+      "volume_24h": 1065189.201027,
+      "rationale": "Smart money 20/25 (4 whales) | Dislocation 15/30 (vol spike, book imbalance, trajectory) | External 3.8/15",
+      "tp_fraction": 0.585,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.295,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9026,12 +9071,12 @@
     "1583326": "2026-03-15T19:42:13.602436+00:00"
   },
   "stats": {
-    "total_signals": 267,
+    "total_signals": 268,
     "total_wins": 105,
     "total_losses": 154,
     "total_expired": 7,
     "total_market_resolved": 78
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-15T21:49:05.959454+00:00"
+  "last_updated": "2026-03-15T22:06:24.577487+00:00"
 }
