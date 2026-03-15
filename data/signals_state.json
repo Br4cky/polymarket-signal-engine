@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.845,
       "live_pnl_pct": -2.31
+    },
+    {
+      "signal_id": "bd810655",
+      "timestamp": "2026-03-15T13:05:39.252623+00:00",
+      "status": "active",
+      "market_id": "1539639",
+      "condition_id": "",
+      "token_id": "28020352151757646657485659372717606428136078942424210982886030490012850924040",
+      "question": "ODI Series Bangladesh vs Pakistan: Bangladesh vs Pakistan",
+      "outcome": "Pakistan",
+      "slug": "crint-bgd-pak-2026-03-15",
+      "category": "",
+      "resolution_date": "2026-03-22T04:15:00Z",
+      "entry_price": 0.165,
+      "min_entry_price": 0.155,
+      "max_entry_price": 0.185,
+      "tp_price": 0.534,
+      "sl_price": 0.1254,
+      "tp_pct": 223.6,
+      "sl_pct": -24.0,
+      "expiry": "2026-03-22T04:15:00+00:00",
+      "edge_score": 42.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 12.17,
+        "dislocation": 24.6,
+        "external": 0.0
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 6.1,
+      "days_to_close": 6,
+      "liquidity_usd": 14009.0684,
+      "volume_24h": 353194.01559699967,
+      "rationale": "Smart money 12/25 (2 whales) | Dislocation 25/30 (velocity, vol spike, book imbalance, trajectory)",
+      "tp_fraction": 0.442,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.165,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9025,12 +9070,12 @@
     "1567494": "2026-03-15T05:28:50.485971+00:00"
   },
   "stats": {
-    "total_signals": 265,
+    "total_signals": 266,
     "total_wins": 105,
     "total_losses": 152,
     "total_expired": 7,
     "total_market_resolved": 78
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-15T11:58:09.957991+00:00"
+  "last_updated": "2026-03-15T13:05:39.254022+00:00"
 }
