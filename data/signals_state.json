@@ -84,11 +84,56 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.7695,
-      "trough_price": 0.753,
+      "trough_price": 0.7505,
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.753,
       "live_pnl_pct": -2.14
+    },
+    {
+      "signal_id": "2019bb0b",
+      "timestamp": "2026-03-17T23:23:29.131843+00:00",
+      "status": "active",
+      "market_id": "1627456",
+      "condition_id": "",
+      "token_id": "63997675206694569698071788498969401422858553683776366679414949922051894542063",
+      "question": "Final Stage: USA vs. Venezuela",
+      "outcome": "USA",
+      "slug": "wbc-usa-ven-2026-03-17",
+      "category": "",
+      "resolution_date": "2026-03-25T00:00:00Z",
+      "entry_price": 0.675,
+      "min_entry_price": 0.66,
+      "max_entry_price": 0.696,
+      "tp_price": 0.8028,
+      "sl_price": 0.5472,
+      "tp_pct": 18.9,
+      "sl_pct": -18.9,
+      "expiry": "2026-03-25T00:00:00+00:00",
+      "edge_score": 31.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.63,
+        "dislocation": 11.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.5,
+      "days_to_close": 7,
+      "liquidity_usd": 338048.8913,
+      "volume_24h": 480204.66842299985,
+      "rationale": "Smart money 21/25 (5 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+      "tp_fraction": 0.393,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.675,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9072,12 +9117,12 @@
     "1594303": "2026-03-15T22:54:51.394853+00:00"
   },
   "stats": {
-    "total_signals": 269,
+    "total_signals": 270,
     "total_wins": 105,
     "total_losses": 155,
     "total_expired": 7,
     "total_market_resolved": 78
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-17T22:43:11.198341+00:00"
+  "last_updated": "2026-03-17T23:23:29.133995+00:00"
 }
