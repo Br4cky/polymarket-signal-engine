@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-18T12:07:49.543258+00:00",
+    "timestamp": "2026-03-18T14:01:41.946102+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 265,
-    "opportunities_found": 5,
+    "tokens_scored": 271,
+    "opportunities_found": 7,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -92,11 +92,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.7695,
-        "trough_price": 0.7005,
+        "trough_price": 0.6465,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7005,
-        "live_pnl_pct": -8.97
+        "current_price": 0.648,
+        "live_pnl_pct": -15.79
       }
     ],
     "recent_resolved": [
@@ -2388,37 +2388,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 265,
-      "tokens_with_signal": 58,
-      "coverage_pct": 21.9,
-      "avg_score": 8.89,
+      "tokens_scored": 271,
+      "tokens_with_signal": 56,
+      "coverage_pct": 20.7,
+      "avg_score": 9.07,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 265,
-      "tokens_with_signal": 160,
-      "coverage_pct": 60.4,
-      "avg_score": 11.34,
-      "max_score": 22.39,
+      "tokens_scored": 271,
+      "tokens_with_signal": 167,
+      "coverage_pct": 61.6,
+      "avg_score": 11.62,
+      "max_score": 22.41,
       "quality_traders": 51,
-      "markets_indexed": 4960
+      "markets_indexed": 4886
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 265,
-      "tokens_with_signal": 212,
-      "coverage_pct": 80.0,
-      "avg_score": 6.74,
-      "max_score": 15.01
+      "tokens_scored": 271,
+      "tokens_with_signal": 219,
+      "coverage_pct": 80.8,
+      "avg_score": 7.02,
+      "max_score": 23.6
     },
     "external": {
       "active": true,
-      "tokens_scored": 265,
-      "tokens_with_signal": 12,
-      "coverage_pct": 4.5,
-      "avg_score": 2.81,
-      "max_score": 7.0
+      "tokens_scored": 271,
+      "tokens_with_signal": 14,
+      "coverage_pct": 5.2,
+      "avg_score": 2.09,
+      "max_score": 3.42
     }
   },
   "calibration": {
