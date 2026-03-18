@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-18T15:13:09.973330+00:00",
+    "timestamp": "2026-03-18T16:25:36.706383+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 275,
-    "opportunities_found": 13,
+    "tokens_scored": 257,
+    "opportunities_found": 9,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.815,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.845,
-        "live_pnl_pct": -2.31
+        "current_price": 0.855,
+        "live_pnl_pct": -1.16
       }
     ],
     "recent_resolved": [
@@ -2343,36 +2343,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 51,
-      "coverage_pct": 18.5,
-      "avg_score": 8.95,
+      "tokens_scored": 257,
+      "tokens_with_signal": 46,
+      "coverage_pct": 17.9,
+      "avg_score": 9.01,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 168,
-      "coverage_pct": 61.1,
+      "tokens_scored": 257,
+      "tokens_with_signal": 164,
+      "coverage_pct": 63.8,
       "avg_score": 11.39,
-      "max_score": 22.48,
+      "max_score": 22.44,
       "quality_traders": 51,
-      "markets_indexed": 4910
+      "markets_indexed": 4808
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 230,
-      "coverage_pct": 83.6,
-      "avg_score": 6.9,
-      "max_score": 24.36
+      "tokens_scored": 257,
+      "tokens_with_signal": 222,
+      "coverage_pct": 86.4,
+      "avg_score": 6.58,
+      "max_score": 17.27
     },
     "external": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 16,
-      "coverage_pct": 5.8,
-      "avg_score": 2.33,
+      "tokens_scored": 257,
+      "tokens_with_signal": 18,
+      "coverage_pct": 7.0,
+      "avg_score": 2.23,
       "max_score": 3.42
     }
   },
