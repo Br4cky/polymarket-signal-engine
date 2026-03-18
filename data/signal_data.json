@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-18T06:10:03.673237+00:00",
+    "timestamp": "2026-03-18T07:25:21.219628+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 209,
-    "opportunities_found": 3,
+    "tokens_scored": 241,
+    "opportunities_found": 5,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.7285,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7515,
-        "live_pnl_pct": -2.34
+        "current_price": 0.75,
+        "live_pnl_pct": -2.53
       }
     ],
     "recent_resolved": [
@@ -2388,37 +2388,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 209,
-      "tokens_with_signal": 45,
-      "coverage_pct": 21.5,
-      "avg_score": 9.12,
+      "tokens_scored": 241,
+      "tokens_with_signal": 46,
+      "coverage_pct": 19.1,
+      "avg_score": 9.1,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 209,
-      "tokens_with_signal": 125,
-      "coverage_pct": 59.8,
-      "avg_score": 10.17,
-      "max_score": 22.19,
+      "tokens_scored": 241,
+      "tokens_with_signal": 146,
+      "coverage_pct": 60.6,
+      "avg_score": 10.6,
+      "max_score": 22.2,
       "quality_traders": 51,
-      "markets_indexed": 4880
+      "markets_indexed": 4764
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 209,
-      "tokens_with_signal": 161,
-      "coverage_pct": 77.0,
-      "avg_score": 6.71,
-      "max_score": 22.23
+      "tokens_scored": 241,
+      "tokens_with_signal": 190,
+      "coverage_pct": 78.8,
+      "avg_score": 6.96,
+      "max_score": 23.55
     },
     "external": {
       "active": true,
-      "tokens_scored": 209,
-      "tokens_with_signal": 7,
-      "coverage_pct": 3.3,
-      "avg_score": 2.07,
-      "max_score": 4.22
+      "tokens_scored": 241,
+      "tokens_with_signal": 9,
+      "coverage_pct": 3.7,
+      "avg_score": 1.71,
+      "max_score": 2.08
     }
   },
   "calibration": {
