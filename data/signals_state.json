@@ -132,8 +132,8 @@
       "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.305,
-      "live_pnl_pct": -8.96
+      "current_price": 0.295,
+      "live_pnl_pct": -11.94
     },
     {
       "signal_id": "6458f217",
@@ -223,6 +223,51 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.375,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "a7cf7655",
+      "timestamp": "2026-03-21T16:40:19.552834+00:00",
+      "status": "active",
+      "market_id": "1658806",
+      "condition_id": "",
+      "token_id": "14691985574098624408325787589736388888881348586053185956152168313884379632629",
+      "question": "Miami Open: Kamil Majchrzak vs Learner Tien",
+      "outcome": "Kamil Majchrzak",
+      "slug": "atp-majchrz-tien-2026-03-21",
+      "category": "",
+      "resolution_date": "2026-03-28T14:00:00Z",
+      "entry_price": 0.29,
+      "min_entry_price": 0.28,
+      "max_entry_price": 0.31,
+      "tp_price": 0.6786,
+      "sl_price": 0.216,
+      "tp_pct": 134.0,
+      "sl_pct": -25.5,
+      "expiry": "2026-03-28T14:00:00+00:00",
+      "edge_score": 30.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.14,
+        "dislocation": 8.0,
+        "external": 2.94
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.4,
+      "days_to_close": 6,
+      "liquidity_usd": 40387.0439,
+      "volume_24h": 270986.1362069999,
+      "rationale": "Smart money 21/25 (5 whales) | Dislocation 8/30 (vol spike) | External 2.9/15",
+      "tp_fraction": 0.547,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.29,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9230,12 +9275,12 @@
     "1655474": "2026-03-21T04:34:01.180167+00:00"
   },
   "stats": {
-    "total_signals": 297,
+    "total_signals": 298,
     "total_wins": 116,
     "total_losses": 169,
     "total_expired": 7,
     "total_market_resolved": 80
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-21T15:58:04.670389+00:00"
+  "last_updated": "2026-03-21T16:40:19.555534+00:00"
 }
