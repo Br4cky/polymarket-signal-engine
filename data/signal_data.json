@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-21T13:51:29.313360+00:00",
+    "timestamp": "2026-03-21T14:20:12.474664+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 303,
+    "tokens_scored": 300,
     "opportunities_found": 8,
     "engine_version": "4.0.0"
   },
@@ -142,6 +142,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.305,
         "live_pnl_pct": -8.96
+      },
+      {
+        "signal_id": "6458f217",
+        "timestamp": "2026-03-21T14:20:12.463260+00:00",
+        "status": "active",
+        "market_id": "1665981",
+        "condition_id": "",
+        "token_id": "59225215309188916427944200110830336195483543653081163898421203368708527905722",
+        "question": "Texas Tech Red Raiders vs. Alabama Crimson Tide",
+        "outcome": "Texas Tech Red Raiders",
+        "slug": "cbb-txtech-ala-2026-03-22",
+        "category": "",
+        "resolution_date": "2026-03-22T16:00:00Z",
+        "entry_price": 0.495,
+        "min_entry_price": 0.485,
+        "max_entry_price": 0.509,
+        "tp_price": 0.6931,
+        "sl_price": 0.4,
+        "tp_pct": 40.0,
+        "sl_pct": -19.2,
+        "expiry": "2026-03-22T16:00:00+00:00",
+        "edge_score": 31.0,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.51,
+          "dislocation": 11.0,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.0,
+        "days_to_close": 1,
+        "liquidity_usd": 3529490.1723,
+        "volume_24h": 486413.08466999966,
+        "rationale": "Smart money 21/25 (3 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+        "tp_fraction": 0.392,
+        "sl_fraction": 0.192,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.495,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2395,8 +2440,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 295,
-      "active_signals": 3,
+      "total_signals_issued": 296,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 82,
       "losses": 118,
@@ -2433,35 +2478,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 303,
-      "tokens_with_signal": 39,
-      "coverage_pct": 12.9,
-      "avg_score": 8.9,
+      "tokens_scored": 300,
+      "tokens_with_signal": 36,
+      "coverage_pct": 12.0,
+      "avg_score": 8.95,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 303,
-      "tokens_with_signal": 181,
-      "coverage_pct": 59.7,
-      "avg_score": 13.63,
-      "max_score": 22.99,
+      "tokens_scored": 300,
+      "tokens_with_signal": 174,
+      "coverage_pct": 58.0,
+      "avg_score": 14.32,
+      "max_score": 23.06,
       "quality_traders": 50,
-      "markets_indexed": 4302
+      "markets_indexed": 4292
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 303,
-      "tokens_with_signal": 280,
-      "coverage_pct": 92.4,
-      "avg_score": 7.99,
-      "max_score": 27.0
+      "tokens_scored": 300,
+      "tokens_with_signal": 279,
+      "coverage_pct": 93.0,
+      "avg_score": 7.89,
+      "max_score": 26.36
     },
     "external": {
       "active": true,
-      "tokens_scored": 303,
+      "tokens_scored": 300,
       "tokens_with_signal": 49,
-      "coverage_pct": 16.2,
+      "coverage_pct": 16.3,
       "avg_score": 2.93,
       "max_score": 7.0
     }
