@@ -83,12 +83,57 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.6995,
-      "trough_price": 0.6115,
+      "peak_price": 0.764,
+      "trough_price": 0.625,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.6115,
-      "live_pnl_pct": -12.58
+      "current_price": 0.764,
+      "live_pnl_pct": 9.22
+    },
+    {
+      "signal_id": "61d8d6e7",
+      "timestamp": "2026-03-23T13:56:44.482640+00:00",
+      "status": "active",
+      "market_id": "1569627",
+      "condition_id": "",
+      "token_id": "85191934649046129480174964255278880752271767733539167443243111973456166096127",
+      "question": "US x Iran ceasefire by April 15?",
+      "outcome": "Yes",
+      "slug": "us-x-iran-ceasefire-by-april-15-182",
+      "category": "",
+      "resolution_date": "2026-04-15T00:00:00Z",
+      "entry_price": 0.375,
+      "min_entry_price": 0.365,
+      "max_entry_price": 0.395,
+      "tp_price": 0.6306,
+      "sl_price": 0.2512,
+      "tp_pct": 68.2,
+      "sl_pct": -33.0,
+      "expiry": "2026-04-15T00:00:00+00:00",
+      "edge_score": 34.8,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 15.17,
+        "dislocation": 21.35,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.7,
+      "days_to_close": 22,
+      "liquidity_usd": 93100.0825,
+      "volume_24h": 920011.9224279994,
+      "rationale": "Smart money 15/25 (2 whales) | Dislocation 21/30 (velocity, vol spike, book imbalance, trajectory)",
+      "tp_fraction": 0.409,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.375,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9096,12 +9141,12 @@
     "1640919": "2026-03-23T11:30:25.718584+00:00"
   },
   "stats": {
-    "total_signals": 311,
+    "total_signals": 312,
     "total_wins": 123,
     "total_losses": 179,
     "total_expired": 7,
     "total_market_resolved": 82
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-23T12:10:06.620659+00:00"
+  "last_updated": "2026-03-23T13:56:44.483982+00:00"
 }
