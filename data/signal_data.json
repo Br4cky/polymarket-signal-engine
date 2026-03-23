@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-23T20:04:57.911407+00:00",
+    "timestamp": "2026-03-23T20:55:34.871488+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 250,
-    "opportunities_found": 20,
+    "tokens_scored": 246,
+    "opportunities_found": 19,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.625,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7095,
-        "live_pnl_pct": 1.43
+        "current_price": 0.728,
+        "live_pnl_pct": 4.07
       },
       {
         "signal_id": "61d8d6e7",
@@ -142,6 +142,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.385,
         "live_pnl_pct": 2.67
+      },
+      {
+        "signal_id": "c1d21502",
+        "timestamp": "2026-03-23T20:55:34.859545+00:00",
+        "status": "active",
+        "market_id": "1686066",
+        "condition_id": "",
+        "token_id": "75211148074512858581412663361796100429496844354904592346922193135828917684182",
+        "question": "Miami Open: Hailey Baptiste vs Jelena Ostapenko",
+        "outcome": "Hailey Baptiste",
+        "slug": "wta-baptist-ostapen-2026-03-23",
+        "category": "",
+        "resolution_date": "2026-03-30T15:00:00Z",
+        "entry_price": 0.91,
+        "min_entry_price": 0.895,
+        "max_entry_price": 0.94,
+        "tp_price": 0.9598,
+        "sl_price": 0.8602,
+        "tp_pct": 5.5,
+        "sl_pct": -5.5,
+        "expiry": "2026-03-30T15:00:00+00:00",
+        "edge_score": 31.7,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.06,
+          "dislocation": 8.0,
+          "external": 3.8
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 68422.7988,
+        "volume_24h": 145176.08986100004,
+        "rationale": "Smart money 20/25 (4 whales) | Dislocation 8/30 (vol spike) | External 3.8/15",
+        "tp_fraction": 0.553,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.91,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2397,8 +2442,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 313,
-      "active_signals": 3,
+      "total_signals_issued": 314,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 84,
       "losses": 116,
@@ -2435,36 +2480,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 54,
-      "coverage_pct": 21.6,
-      "avg_score": 8.97,
+      "tokens_scored": 246,
+      "tokens_with_signal": 49,
+      "coverage_pct": 19.9,
+      "avg_score": 9.14,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 250,
+      "tokens_scored": 246,
       "tokens_with_signal": 142,
-      "coverage_pct": 56.8,
-      "avg_score": 13.38,
+      "coverage_pct": 57.7,
+      "avg_score": 13.53,
       "max_score": 22.62,
       "quality_traders": 50,
-      "markets_indexed": 4786
+      "markets_indexed": 4810
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 221,
-      "coverage_pct": 88.4,
-      "avg_score": 7.64,
-      "max_score": 17.98
+      "tokens_scored": 246,
+      "tokens_with_signal": 218,
+      "coverage_pct": 88.6,
+      "avg_score": 7.29,
+      "max_score": 18.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 250,
-      "tokens_with_signal": 9,
-      "coverage_pct": 3.6,
-      "avg_score": 1.94,
+      "tokens_scored": 246,
+      "tokens_with_signal": 11,
+      "coverage_pct": 4.5,
+      "avg_score": 2.28,
       "max_score": 6.71
     }
   },
