@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-24T11:39:32.138670+00:00",
+    "timestamp": "2026-03-24T12:41:02.989229+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 224,
-    "opportunities_found": 6,
+    "tokens_scored": 222,
+    "opportunities_found": 8,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.625,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7455,
-        "live_pnl_pct": 6.58
+        "current_price": 0.7275,
+        "live_pnl_pct": 4.0
       },
       {
         "signal_id": "61d8d6e7",
@@ -140,8 +140,8 @@
         "trough_price": 0.275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.305,
-        "live_pnl_pct": -18.67
+        "current_price": 0.325,
+        "live_pnl_pct": -13.33
       }
     ],
     "recent_resolved": [
@@ -2435,35 +2435,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 224,
-      "tokens_with_signal": 58,
-      "coverage_pct": 25.9,
-      "avg_score": 8.81,
+      "tokens_scored": 222,
+      "tokens_with_signal": 57,
+      "coverage_pct": 25.7,
+      "avg_score": 9.16,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 224,
-      "tokens_with_signal": 132,
-      "coverage_pct": 58.9,
-      "avg_score": 9.56,
+      "tokens_scored": 222,
+      "tokens_with_signal": 129,
+      "coverage_pct": 58.1,
+      "avg_score": 10.6,
       "max_score": 21.26,
       "quality_traders": 51,
-      "markets_indexed": 4812
+      "markets_indexed": 4804
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 224,
-      "tokens_with_signal": 184,
-      "coverage_pct": 82.1,
-      "avg_score": 6.77,
-      "max_score": 18.16
+      "tokens_scored": 222,
+      "tokens_with_signal": 180,
+      "coverage_pct": 81.1,
+      "avg_score": 6.66,
+      "max_score": 16.39
     },
     "external": {
       "active": true,
-      "tokens_scored": 224,
+      "tokens_scored": 222,
       "tokens_with_signal": 9,
-      "coverage_pct": 4.0,
+      "coverage_pct": 4.1,
       "avg_score": 4.31,
       "max_score": 7.0
     }
