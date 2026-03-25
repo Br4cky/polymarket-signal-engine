@@ -87,8 +87,8 @@
       "trough_price": 0.5865,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.8075,
-      "live_pnl_pct": 15.44
+      "current_price": 0.8285,
+      "live_pnl_pct": 18.44
     },
     {
       "signal_id": "61d8d6e7",
@@ -132,8 +132,8 @@
       "trough_price": 0.275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.325,
-      "live_pnl_pct": -13.33
+      "current_price": 0.355,
+      "live_pnl_pct": -5.33
     },
     {
       "signal_id": "6e10d1fe",
@@ -177,8 +177,53 @@
       "trough_price": 0.41,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.435,
-      "live_pnl_pct": 4.82
+      "current_price": 0.41,
+      "live_pnl_pct": -1.2
+    },
+    {
+      "signal_id": "31af93fd",
+      "timestamp": "2026-03-25T17:25:13.692538+00:00",
+      "status": "active",
+      "market_id": "1698847",
+      "condition_id": "",
+      "token_id": "95243458755002944515883684588141209638659028031966075532600662402688446037590",
+      "question": "Miami Open: Elena Rybakina vs Jessica Pegula",
+      "outcome": "Jessica Pegula",
+      "slug": "wta-rybakin-pegula-2026-03-25",
+      "category": "",
+      "resolution_date": "2026-04-01T15:00:00Z",
+      "entry_price": 0.455,
+      "min_entry_price": 0.445,
+      "max_entry_price": 0.475,
+      "tp_price": 0.6915,
+      "sl_price": 0.3185,
+      "tp_pct": 52.0,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-01T15:00:00+00:00",
+      "edge_score": 40.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.3,
+        "dislocation": 19.78,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.2,
+      "days_to_close": 6,
+      "liquidity_usd": 79108.2129,
+      "volume_24h": 560129.2841149997,
+      "rationale": "Smart money 18/25 (7 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.434,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.455,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9184,12 +9229,12 @@
     "1699001": "2026-03-24T23:11:14.439870+00:00"
   },
   "stats": {
-    "total_signals": 328,
+    "total_signals": 329,
     "total_wins": 133,
     "total_losses": 184,
     "total_expired": 7,
     "total_market_resolved": 85
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-25T16:19:26.565188+00:00"
+  "last_updated": "2026-03-25T17:25:13.693485+00:00"
 }
