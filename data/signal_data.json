@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-25T21:52:45.708362+00:00",
+    "timestamp": "2026-03-25T22:46:12.626752+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 256,
+    "tokens_scored": 258,
     "opportunities_found": 10,
     "engine_version": "4.0.0"
   },
@@ -95,8 +95,8 @@
         "trough_price": 0.5865,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.83,
-        "live_pnl_pct": 18.66
+        "current_price": 0.847,
+        "live_pnl_pct": 21.09
       },
       {
         "signal_id": "61d8d6e7",
@@ -2480,37 +2480,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 256,
-      "tokens_with_signal": 52,
-      "coverage_pct": 20.3,
-      "avg_score": 9.17,
+      "tokens_scored": 258,
+      "tokens_with_signal": 50,
+      "coverage_pct": 19.4,
+      "avg_score": 9.15,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 256,
-      "tokens_with_signal": 143,
-      "coverage_pct": 55.9,
-      "avg_score": 12.48,
-      "max_score": 23.3,
+      "tokens_scored": 258,
+      "tokens_with_signal": 144,
+      "coverage_pct": 55.8,
+      "avg_score": 12.33,
+      "max_score": 23.28,
       "quality_traders": 51,
-      "markets_indexed": 4660
+      "markets_indexed": 4664
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 256,
-      "tokens_with_signal": 206,
-      "coverage_pct": 80.5,
-      "avg_score": 7.93,
-      "max_score": 20.02
+      "tokens_scored": 258,
+      "tokens_with_signal": 208,
+      "coverage_pct": 80.6,
+      "avg_score": 7.94,
+      "max_score": 17.2
     },
     "external": {
       "active": true,
-      "tokens_scored": 256,
-      "tokens_with_signal": 16,
-      "coverage_pct": 6.2,
-      "avg_score": 3.07,
-      "max_score": 5.23
+      "tokens_scored": 258,
+      "tokens_with_signal": 20,
+      "coverage_pct": 7.8,
+      "avg_score": 3.47,
+      "max_score": 6.74
     }
   },
   "calibration": {
