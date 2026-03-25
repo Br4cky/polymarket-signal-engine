@@ -87,8 +87,8 @@
       "trough_price": 0.5865,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.847,
-      "live_pnl_pct": 21.09
+      "current_price": 0.8465,
+      "live_pnl_pct": 21.02
     },
     {
       "signal_id": "61d8d6e7",
@@ -178,6 +178,51 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.415,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "20a5e45c",
+      "timestamp": "2026-03-25T23:25:33.491300+00:00",
+      "status": "active",
+      "market_id": "1698831",
+      "condition_id": "",
+      "token_id": "21530225887318233416057098477661385602377994003996188138930364021757541375563",
+      "question": "Miami Open: Aryna Sabalenka vs Hailey Baptiste",
+      "outcome": "Aryna Sabalenka",
+      "slug": "wta-sabalen-baptist-2026-03-25",
+      "category": "",
+      "resolution_date": "2026-04-01T15:00:00Z",
+      "entry_price": 0.915,
+      "min_entry_price": 0.9,
+      "max_entry_price": 0.945,
+      "tp_price": 0.9621,
+      "sl_price": 0.8679,
+      "tp_pct": 5.1,
+      "sl_pct": -5.1,
+      "expiry": "2026-04-01T15:00:00+00:00",
+      "edge_score": 31.8,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.16,
+        "dislocation": 8.0,
+        "external": 6.74
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 41196.3658,
+      "volume_24h": 199922.21085600008,
+      "rationale": "Smart money 18/25 (4 whales) | Dislocation 8/30 (vol spike) | External 6.7/15",
+      "tp_fraction": 0.554,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.915,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9183,12 +9228,12 @@
     "1709379": "2026-03-25T21:52:45.692188+00:00"
   },
   "stats": {
-    "total_signals": 331,
+    "total_signals": 332,
     "total_wins": 134,
     "total_losses": 186,
     "total_expired": 7,
     "total_market_resolved": 85
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-25T22:46:12.616673+00:00"
+  "last_updated": "2026-03-25T23:25:33.492296+00:00"
 }
