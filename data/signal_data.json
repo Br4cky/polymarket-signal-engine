@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-25T18:37:04.885605+00:00",
+    "timestamp": "2026-03-25T19:34:42.113874+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 238,
-    "opportunities_found": 11,
+    "tokens_scored": 253,
+    "opportunities_found": 8,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.5865,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.824,
-        "live_pnl_pct": 17.8
+        "current_price": 0.818,
+        "live_pnl_pct": 16.94
       },
       {
         "signal_id": "61d8d6e7",
@@ -140,8 +140,8 @@
         "trough_price": 0.275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.365,
-        "live_pnl_pct": -2.67
+        "current_price": 0.335,
+        "live_pnl_pct": -10.67
       },
       {
         "signal_id": "6e10d1fe",
@@ -182,104 +182,14 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.515,
-        "trough_price": 0.405,
+        "trough_price": 0.395,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.405,
-        "live_pnl_pct": -2.41
-      },
-      {
-        "signal_id": "ce685ae8",
-        "timestamp": "2026-03-25T18:37:04.874222+00:00",
-        "status": "active",
-        "market_id": "1698847",
-        "condition_id": "",
-        "token_id": "95243458755002944515883684588141209638659028031966075532600662402688446037590",
-        "question": "Miami Open: Elena Rybakina vs Jessica Pegula",
-        "outcome": "Jessica Pegula",
-        "slug": "wta-rybakin-pegula-2026-03-25",
-        "category": "",
-        "resolution_date": "2026-04-01T15:00:00Z",
-        "entry_price": 0.425,
-        "min_entry_price": 0.415,
-        "max_entry_price": 0.445,
-        "tp_price": 0.6543,
-        "sl_price": 0.2975,
-        "tp_pct": 54.0,
-        "sl_pct": -30.0,
-        "expiry": "2026-04-01T15:00:00+00:00",
-        "edge_score": 32.5,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 21.56,
-          "dislocation": 12.67,
-          "external": 0.0
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 2.4,
-        "days_to_close": 6,
-        "liquidity_usd": 63312.3413,
-        "volume_24h": 1098739.4617389997,
-        "rationale": "Smart money 22/25 (7 whales) | Dislocation 13/30 (velocity, vol spike, trajectory)",
-        "tp_fraction": 0.399,
-        "sl_fraction": 0.3,
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.425,
-        "live_pnl_pct": 0.0
+        "current_price": 0.395,
+        "live_pnl_pct": -4.82
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "d457c0de",
-        "timestamp": "2026-03-19T21:48:11.842497+00:00",
-        "status": "sl_hit",
-        "market_id": "1611389",
-        "condition_id": "",
-        "token_id": "110142436125234584418333291612154222101061267795469461927356828822761145781262",
-        "question": "Miami Open: Raphael Collignon vs Grigor Dimitrov",
-        "outcome": "Grigor Dimitrov",
-        "slug": "atp-collign-dimitro-2026-03-18",
-        "category": "",
-        "resolution_date": "2026-03-25T14:00:00Z",
-        "entry_price": 0.89,
-        "min_entry_price": 0.875,
-        "max_entry_price": 0.92,
-        "tp_price": 0.9511,
-        "sl_price": 0.8289,
-        "tp_pct": 6.9,
-        "sl_pct": -6.9,
-        "expiry": "2026-03-25T14:00:00+00:00",
-        "edge_score": 32.0,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 21.92,
-          "dislocation": 8.0,
-          "external": 3.57
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.1,
-        "days_to_close": 5,
-        "liquidity_usd": 27836.3559,
-        "volume_24h": 191591.41694100006,
-        "rationale": "Smart money 22/25 (6 whales) | Dislocation 8/30 (vol spike) | External 3.6/15",
-        "tp_fraction": 0.555,
-        "sl_fraction": 0.255,
-        "resolved_at": "2026-03-19T21:50:27+00:00",
-        "resolution_type": "sl_hit",
-        "peak_price": 0.89,
-        "trough_price": 0.0005,
-        "final_price": 0.8289,
-        "hypothetical_pnl_pct": -6.87,
-        "current_price": 0.89,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "e0e71e75",
         "timestamp": "2026-03-19T21:48:11.842909+00:00",
@@ -2484,33 +2394,78 @@
         "hypothetical_pnl_pct": 51.98,
         "current_price": 0.455,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "ce685ae8",
+        "timestamp": "2026-03-25T18:37:04.874222+00:00",
+        "status": "sl_hit",
+        "market_id": "1698847",
+        "condition_id": "",
+        "token_id": "95243458755002944515883684588141209638659028031966075532600662402688446037590",
+        "question": "Miami Open: Elena Rybakina vs Jessica Pegula",
+        "outcome": "Jessica Pegula",
+        "slug": "wta-rybakin-pegula-2026-03-25",
+        "category": "",
+        "resolution_date": "2026-04-01T15:00:00Z",
+        "entry_price": 0.425,
+        "min_entry_price": 0.415,
+        "max_entry_price": 0.445,
+        "tp_price": 0.6543,
+        "sl_price": 0.2975,
+        "tp_pct": 54.0,
+        "sl_pct": -30.0,
+        "expiry": "2026-04-01T15:00:00+00:00",
+        "edge_score": 32.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 21.56,
+          "dislocation": 12.67,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.4,
+        "days_to_close": 6,
+        "liquidity_usd": 63312.3413,
+        "volume_24h": 1098739.4617389997,
+        "rationale": "Smart money 22/25 (7 whales) | Dislocation 13/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.399,
+        "sl_fraction": 0.3,
+        "resolved_at": "2026-03-25T18:40:32+00:00",
+        "resolution_type": "sl_hit",
+        "peak_price": 0.425,
+        "trough_price": 0.0005,
+        "final_price": 0.2975,
+        "hypothetical_pnl_pct": -30.0,
+        "current_price": 0.425,
+        "live_pnl_pct": 0.0
       }
     ],
     "metrics": {
       "total_signals_issued": 330,
-      "active_signals": 5,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 86,
       "losses": 114,
-      "market_resolved": 40,
+      "market_resolved": 39,
       "win_rate": 0.43,
       "avg_win_pct": 39.29,
-      "avg_loss_pct": -42.86,
-      "ev_per_signal": -7.53,
+      "avg_loss_pct": -42.24,
+      "ev_per_signal": -7.18,
       "by_tier": {
         "high": {
-          "total": 164,
+          "total": 165,
           "wins": 74,
-          "losses": 90,
-          "win_rate": 0.451,
-          "avg_pnl": -8.68
+          "losses": 91,
+          "win_rate": 0.448,
+          "avg_pnl": -8.81
         },
         "medium": {
-          "total": 29,
+          "total": 28,
           "wins": 12,
-          "losses": 17,
-          "win_rate": 0.414,
-          "avg_pnl": 4.06
+          "losses": 16,
+          "win_rate": 0.429,
+          "avg_pnl": 7.78
         },
         "low": {
           "total": 7,
@@ -2525,35 +2480,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 53,
-      "coverage_pct": 22.3,
+      "tokens_scored": 253,
+      "tokens_with_signal": 55,
+      "coverage_pct": 21.7,
       "avg_score": 8.8,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 130,
-      "coverage_pct": 54.6,
-      "avg_score": 10.97,
-      "max_score": 22.88,
+      "tokens_scored": 253,
+      "tokens_with_signal": 132,
+      "coverage_pct": 52.2,
+      "avg_score": 11.32,
+      "max_score": 22.91,
       "quality_traders": 51,
-      "markets_indexed": 4718
+      "markets_indexed": 4678
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 189,
+      "tokens_scored": 253,
+      "tokens_with_signal": 201,
       "coverage_pct": 79.4,
       "avg_score": 7.69,
-      "max_score": 22.19
+      "max_score": 22.69
     },
     "external": {
       "active": true,
-      "tokens_scored": 238,
+      "tokens_scored": 253,
       "tokens_with_signal": 17,
-      "coverage_pct": 7.1,
+      "coverage_pct": 6.7,
       "avg_score": 3.11,
       "max_score": 5.23
     }
