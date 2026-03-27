@@ -87,8 +87,53 @@
       "trough_price": 0.35,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.365,
-      "live_pnl_pct": -12.05
+      "current_price": 0.415,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "a60b8565",
+      "timestamp": "2026-03-27T17:42:47.713845+00:00",
+      "status": "active",
+      "market_id": "1711524",
+      "condition_id": "",
+      "token_id": "20806112297129352451751751442923736215085580865789594277018026481990886753758",
+      "question": "New York Yankees vs. San Francisco Giants",
+      "outcome": "New York Yankees",
+      "slug": "mlb-nyy-sf-2026-03-27",
+      "category": "",
+      "resolution_date": "2026-04-03T20:35:00Z",
+      "entry_price": 0.545,
+      "min_entry_price": 0.53,
+      "max_entry_price": 0.566,
+      "tp_price": 0.7963,
+      "sl_price": 0.3815,
+      "tp_pct": 46.1,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-03T20:35:00+00:00",
+      "edge_score": 31.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.35,
+        "dislocation": 8.0,
+        "external": 3.85
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.8,
+      "days_to_close": 7,
+      "liquidity_usd": 487556.3193,
+      "volume_24h": 432529.0791030002,
+      "rationale": "Smart money 22/25 (6 whales) | Dislocation 8/30 (vol spike) | External 3.9/15",
+      "tp_fraction": 0.552,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.545,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9092,12 +9137,12 @@
     "1569627": "2026-03-27T11:36:21.936152+00:00"
   },
   "stats": {
-    "total_signals": 336,
+    "total_signals": 337,
     "total_wins": 137,
     "total_losses": 190,
     "total_expired": 7,
     "total_market_resolved": 85
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-27T16:43:22.866916+00:00"
+  "last_updated": "2026-03-27T17:42:47.715277+00:00"
 }

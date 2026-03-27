@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-27T16:43:22.876600+00:00",
+    "timestamp": "2026-03-27T17:42:47.724995+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 232,
-    "opportunities_found": 9,
+    "tokens_scored": 243,
+    "opportunities_found": 10,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,53 @@
         "trough_price": 0.35,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.365,
-        "live_pnl_pct": -12.05
+        "current_price": 0.415,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "a60b8565",
+        "timestamp": "2026-03-27T17:42:47.713845+00:00",
+        "status": "active",
+        "market_id": "1711524",
+        "condition_id": "",
+        "token_id": "20806112297129352451751751442923736215085580865789594277018026481990886753758",
+        "question": "New York Yankees vs. San Francisco Giants",
+        "outcome": "New York Yankees",
+        "slug": "mlb-nyy-sf-2026-03-27",
+        "category": "",
+        "resolution_date": "2026-04-03T20:35:00Z",
+        "entry_price": 0.545,
+        "min_entry_price": 0.53,
+        "max_entry_price": 0.566,
+        "tp_price": 0.7963,
+        "sl_price": 0.3815,
+        "tp_pct": 46.1,
+        "sl_pct": -30.0,
+        "expiry": "2026-04-03T20:35:00+00:00",
+        "edge_score": 31.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 22.35,
+          "dislocation": 8.0,
+          "external": 3.85
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 7,
+        "liquidity_usd": 487556.3193,
+        "volume_24h": 432529.0791030002,
+        "rationale": "Smart money 22/25 (6 whales) | Dislocation 8/30 (vol spike) | External 3.9/15",
+        "tp_fraction": 0.552,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.545,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 336,
-      "active_signals": 2,
+      "total_signals_issued": 337,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 87,
       "losses": 113,
@@ -2390,37 +2435,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 52,
-      "coverage_pct": 22.4,
-      "avg_score": 8.35,
+      "tokens_scored": 243,
+      "tokens_with_signal": 55,
+      "coverage_pct": 22.6,
+      "avg_score": 8.25,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 111,
-      "coverage_pct": 47.8,
-      "avg_score": 12.32,
-      "max_score": 23.0,
+      "tokens_scored": 243,
+      "tokens_with_signal": 121,
+      "coverage_pct": 49.8,
+      "avg_score": 12.97,
+      "max_score": 22.98,
       "quality_traders": 50,
-      "markets_indexed": 4814
+      "markets_indexed": 4638
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 197,
-      "coverage_pct": 84.9,
-      "avg_score": 7.83,
-      "max_score": 24.56
+      "tokens_scored": 243,
+      "tokens_with_signal": 210,
+      "coverage_pct": 86.4,
+      "avg_score": 7.68,
+      "max_score": 27.19
     },
     "external": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 2,
-      "coverage_pct": 0.9,
-      "avg_score": 1.43,
-      "max_score": 1.43
+      "tokens_scored": 243,
+      "tokens_with_signal": 4,
+      "coverage_pct": 1.6,
+      "avg_score": 2.64,
+      "max_score": 3.85
     }
   },
   "calibration": {
