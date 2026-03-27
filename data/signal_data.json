@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-27T02:43:48.320239+00:00",
+    "timestamp": "2026-03-27T05:05:26.460472+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 212,
+    "tokens_scored": 216,
     "opportunities_found": 9,
     "engine_version": "4.0.0"
   },
@@ -95,8 +95,8 @@
         "trough_price": 0.5865,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7025,
-        "live_pnl_pct": 0.43
+        "current_price": 0.652,
+        "live_pnl_pct": -6.79
       },
       {
         "signal_id": "61d8d6e7",
@@ -137,7 +137,7 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.455,
-        "trough_price": 0.275,
+        "trough_price": 0.255,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.275,
@@ -185,8 +185,53 @@
         "trough_price": 0.35,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.375,
-        "live_pnl_pct": -9.64
+        "current_price": 0.385,
+        "live_pnl_pct": -7.23
+      },
+      {
+        "signal_id": "4e7448ad",
+        "timestamp": "2026-03-27T05:05:26.449729+00:00",
+        "status": "active",
+        "market_id": "1727903",
+        "condition_id": "",
+        "token_id": "9494515092999463437026397921278683100212453080461937827040759845662516237420",
+        "question": "Yokkaichi: Yuta Shimizu vs Harry Wendelken",
+        "outcome": "Harry Wendelken",
+        "slug": "atp-shimizu-wendelk-2026-03-26",
+        "category": "",
+        "resolution_date": "2026-04-03T02:00:00Z",
+        "entry_price": 0.825,
+        "min_entry_price": 0.81,
+        "max_entry_price": 0.855,
+        "tp_price": 0.9212,
+        "sl_price": 0.7288,
+        "tp_pct": 11.7,
+        "sl_pct": -11.7,
+        "expiry": "2026-04-03T02:00:00+00:00",
+        "edge_score": 31.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 19.32,
+          "dislocation": 8.0,
+          "external": 3.01
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 34841.7851,
+        "volume_24h": 93008.88589199998,
+        "rationale": "Smart money 19/25 (4 whales) | Dislocation 8/30 (vol spike) | External 3.0/15",
+        "tp_fraction": 0.55,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.825,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 334,
-      "active_signals": 4,
+      "total_signals_issued": 335,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 86,
       "losses": 114,
@@ -2480,37 +2525,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 212,
-      "tokens_with_signal": 46,
-      "coverage_pct": 21.7,
-      "avg_score": 8.97,
+      "tokens_scored": 216,
+      "tokens_with_signal": 54,
+      "coverage_pct": 25.0,
+      "avg_score": 8.92,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 212,
-      "tokens_with_signal": 111,
-      "coverage_pct": 52.4,
-      "avg_score": 12.91,
-      "max_score": 24.23,
+      "tokens_scored": 216,
+      "tokens_with_signal": 95,
+      "coverage_pct": 44.0,
+      "avg_score": 9.26,
+      "max_score": 19.32,
       "quality_traders": 50,
-      "markets_indexed": 4446
+      "markets_indexed": 4490
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 212,
-      "tokens_with_signal": 166,
-      "coverage_pct": 78.3,
-      "avg_score": 8.57,
-      "max_score": 25.0
+      "tokens_scored": 216,
+      "tokens_with_signal": 170,
+      "coverage_pct": 78.7,
+      "avg_score": 7.56,
+      "max_score": 22.77
     },
     "external": {
       "active": true,
-      "tokens_scored": 212,
-      "tokens_with_signal": 6,
-      "coverage_pct": 2.8,
-      "avg_score": 2.59,
-      "max_score": 4.44
+      "tokens_scored": 216,
+      "tokens_with_signal": 7,
+      "coverage_pct": 3.2,
+      "avg_score": 2.47,
+      "max_score": 3.61
     }
   },
   "calibration": {
