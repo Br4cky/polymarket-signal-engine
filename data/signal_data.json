@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-27T22:59:31.815880+00:00",
+    "timestamp": "2026-03-27T23:42:06.199676+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 257,
-    "opportunities_found": 19,
+    "tokens_scored": 261,
+    "opportunities_found": 23,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -137,11 +137,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.445,
-        "trough_price": 0.425,
+        "trough_price": 0.315,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.435,
-        "live_pnl_pct": 2.35
+        "current_price": 0.315,
+        "live_pnl_pct": -25.88
       },
       {
         "signal_id": "7e778d34",
@@ -181,11 +181,56 @@
         "sl_fraction": 0.33,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.395,
+        "trough_price": 0.385,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.385,
+        "live_pnl_pct": -2.53
+      },
+      {
+        "signal_id": "9ff4529c",
+        "timestamp": "2026-03-27T23:42:06.178692+00:00",
+        "status": "active",
+        "market_id": "1739487",
+        "condition_id": "",
+        "token_id": "108572317893727746871935294711875752523908213728731981146544293823476042745316",
+        "question": "Miami Open: Alexander Zverev vs Jannik Sinner",
+        "outcome": "Jannik Sinner",
+        "slug": "atp-zverev-sinner-2026-03-27",
+        "category": "",
+        "resolution_date": "2026-04-03T21:00:00Z",
+        "entry_price": 0.835,
+        "min_entry_price": 0.82,
+        "max_entry_price": 0.865,
+        "tp_price": 0.899,
+        "sl_price": 0.771,
+        "tp_pct": 7.7,
+        "sl_pct": -7.7,
+        "expiry": "2026-04-03T21:00:00+00:00",
+        "edge_score": 30.0,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 22.8,
+          "dislocation": 9.0,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 70689.5863,
+        "volume_24h": 548245.6865049999,
+        "rationale": "Smart money 23/25 (7 whales) | Dislocation 9/30 (vol spike)",
+        "tp_fraction": 0.388,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.395,
+        "current_price": 0.835,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 341,
-      "active_signals": 4,
+      "total_signals_issued": 342,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 90,
       "losses": 110,
@@ -2480,36 +2525,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 257,
+      "tokens_scored": 261,
       "tokens_with_signal": 48,
-      "coverage_pct": 18.7,
-      "avg_score": 8.33,
+      "coverage_pct": 18.4,
+      "avg_score": 8.31,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 153,
-      "coverage_pct": 59.5,
-      "avg_score": 12.42,
-      "max_score": 23.31,
+      "tokens_scored": 261,
+      "tokens_with_signal": 157,
+      "coverage_pct": 60.2,
+      "avg_score": 14.07,
+      "max_score": 24.52,
       "quality_traders": 50,
-      "markets_indexed": 4492
+      "markets_indexed": 4618
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 214,
-      "coverage_pct": 83.3,
-      "avg_score": 7.72,
-      "max_score": 22.59
+      "tokens_scored": 261,
+      "tokens_with_signal": 218,
+      "coverage_pct": 83.5,
+      "avg_score": 8.11,
+      "max_score": 26.94
     },
     "external": {
       "active": true,
-      "tokens_scored": 257,
-      "tokens_with_signal": 7,
-      "coverage_pct": 2.7,
-      "avg_score": 3.81,
+      "tokens_scored": 261,
+      "tokens_with_signal": 8,
+      "coverage_pct": 3.1,
+      "avg_score": 3.16,
       "max_score": 5.7
     }
   },
