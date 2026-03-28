@@ -89,6 +89,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.415,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "223b5f3c",
+      "timestamp": "2026-03-28T21:22:03.848990+00:00",
+      "status": "active",
+      "market_id": "1711550",
+      "condition_id": "",
+      "token_id": "71905623272915670719891097961506932555020655562762994464343200426200266246615",
+      "question": "Athletics vs. Toronto Blue Jays",
+      "outcome": "Athletics",
+      "slug": "mlb-oak-tor-2026-03-28",
+      "category": "",
+      "resolution_date": "2026-04-04T19:07:00Z",
+      "entry_price": 0.92,
+      "min_entry_price": 0.905,
+      "max_entry_price": 0.95,
+      "tp_price": 0.9641,
+      "sl_price": 0.8759,
+      "tp_pct": 4.8,
+      "sl_pct": -4.8,
+      "expiry": "2026-04-04T19:07:00+00:00",
+      "edge_score": 31.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.09,
+        "dislocation": 9.0,
+        "external": 1.37
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 30932.4597,
+      "volume_24h": 448840.742591,
+      "rationale": "Smart money 23/25 (5 whales) | Dislocation 9/30 (vol spike) | External 1.4/15",
+      "tp_fraction": 0.551,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.92,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9094,12 +9139,12 @@
     "1739460": "2026-03-28T19:44:59.407139+00:00"
   },
   "stats": {
-    "total_signals": 346,
+    "total_signals": 347,
     "total_wins": 143,
     "total_losses": 194,
     "total_expired": 7,
     "total_market_resolved": 85
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-28T20:51:12.529273+00:00"
+  "last_updated": "2026-03-28T21:22:03.851344+00:00"
 }

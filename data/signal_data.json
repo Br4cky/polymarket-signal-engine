@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-28T20:51:12.538632+00:00",
+    "timestamp": "2026-03-28T21:22:03.861046+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 269,
-    "opportunities_found": 21,
+    "tokens_scored": 260,
+    "opportunities_found": 16,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -96,6 +96,51 @@
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.415,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "223b5f3c",
+        "timestamp": "2026-03-28T21:22:03.848990+00:00",
+        "status": "active",
+        "market_id": "1711550",
+        "condition_id": "",
+        "token_id": "71905623272915670719891097961506932555020655562762994464343200426200266246615",
+        "question": "Athletics vs. Toronto Blue Jays",
+        "outcome": "Athletics",
+        "slug": "mlb-oak-tor-2026-03-28",
+        "category": "",
+        "resolution_date": "2026-04-04T19:07:00Z",
+        "entry_price": 0.92,
+        "min_entry_price": 0.905,
+        "max_entry_price": 0.95,
+        "tp_price": 0.9641,
+        "sl_price": 0.8759,
+        "tp_pct": 4.8,
+        "sl_pct": -4.8,
+        "expiry": "2026-04-04T19:07:00+00:00",
+        "edge_score": 31.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 23.09,
+          "dislocation": 9.0,
+          "external": 1.37
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 30932.4597,
+        "volume_24h": 448840.742591,
+        "rationale": "Smart money 23/25 (5 whales) | Dislocation 9/30 (vol spike) | External 1.4/15",
+        "tp_fraction": 0.551,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.92,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 346,
-      "active_signals": 2,
+      "total_signals_issued": 347,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 91,
       "losses": 109,
@@ -2390,35 +2435,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 44,
-      "coverage_pct": 16.4,
-      "avg_score": 8.04,
+      "tokens_scored": 260,
+      "tokens_with_signal": 41,
+      "coverage_pct": 15.8,
+      "avg_score": 8.42,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 161,
-      "coverage_pct": 59.9,
+      "tokens_scored": 260,
+      "tokens_with_signal": 147,
+      "coverage_pct": 56.5,
       "avg_score": 14.01,
-      "max_score": 24.12,
+      "max_score": 23.83,
       "quality_traders": 51,
-      "markets_indexed": 4718
+      "markets_indexed": 4698
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 220,
-      "coverage_pct": 81.8,
-      "avg_score": 8.21,
-      "max_score": 25.56
+      "tokens_scored": 260,
+      "tokens_with_signal": 212,
+      "coverage_pct": 81.5,
+      "avg_score": 8.41,
+      "max_score": 25.49
     },
     "external": {
       "active": true,
-      "tokens_scored": 269,
+      "tokens_scored": 260,
       "tokens_with_signal": 34,
-      "coverage_pct": 12.6,
+      "coverage_pct": 13.1,
       "avg_score": 2.49,
       "max_score": 4.94
     }
