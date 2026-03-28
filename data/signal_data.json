@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-28T14:58:48.227057+00:00",
+    "timestamp": "2026-03-28T15:41:14.251082+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 237,
+    "tokens_scored": 231,
     "opportunities_found": 9,
     "engine_version": "4.0.0"
   },
@@ -97,6 +97,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.455,
         "live_pnl_pct": 9.64
+      },
+      {
+        "signal_id": "02b92a2d",
+        "timestamp": "2026-03-28T15:41:14.239733+00:00",
+        "status": "active",
+        "market_id": "1747957",
+        "condition_id": "",
+        "token_id": "101819019713866295558068508474995671567806457678841043911723869681636007068422",
+        "question": "Dubrovnik: Andrea Lazaro Garcia vs Mayar Sherif",
+        "outcome": "Andrea Lazaro Garcia",
+        "slug": "wta-garcia-sherif-2026-03-28",
+        "category": "",
+        "resolution_date": "2026-04-04T12:00:00Z",
+        "entry_price": 0.883,
+        "min_entry_price": 0.868,
+        "max_entry_price": 0.913,
+        "tp_price": 0.9467,
+        "sl_price": 0.8193,
+        "tp_pct": 7.2,
+        "sl_pct": -7.2,
+        "expiry": "2026-04-04T12:00:00+00:00",
+        "edge_score": 30.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 22.14,
+          "dislocation": 8.0,
+          "external": 1.79
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 29236.36223,
+        "volume_24h": 367510.7045629991,
+        "rationale": "Smart money 22/25 (4 whales) | Dislocation 8/30 (vol spike) | External 1.8/15",
+        "tp_fraction": 0.545,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.883,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 344,
-      "active_signals": 2,
+      "total_signals_issued": 345,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 90,
       "losses": 110,
@@ -2390,35 +2435,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 237,
-      "tokens_with_signal": 45,
+      "tokens_scored": 231,
+      "tokens_with_signal": 44,
       "coverage_pct": 19.0,
-      "avg_score": 8.3,
+      "avg_score": 8.14,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 237,
-      "tokens_with_signal": 128,
-      "coverage_pct": 54.0,
-      "avg_score": 11.88,
-      "max_score": 20.85,
+      "tokens_scored": 231,
+      "tokens_with_signal": 124,
+      "coverage_pct": 53.7,
+      "avg_score": 12.33,
+      "max_score": 22.14,
       "quality_traders": 50,
-      "markets_indexed": 4820
+      "markets_indexed": 4784
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 237,
-      "tokens_with_signal": 204,
+      "tokens_scored": 231,
+      "tokens_with_signal": 199,
       "coverage_pct": 86.1,
-      "avg_score": 7.62,
-      "max_score": 23.04
+      "avg_score": 7.54,
+      "max_score": 24.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 237,
+      "tokens_scored": 231,
       "tokens_with_signal": 26,
-      "coverage_pct": 11.0,
+      "coverage_pct": 11.3,
       "avg_score": 2.9,
       "max_score": 4.94
     }
