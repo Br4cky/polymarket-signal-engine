@@ -87,7 +87,52 @@
       "trough_price": 0.395,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.395,
+      "current_price": 0.405,
+      "live_pnl_pct": 2.53
+    },
+    {
+      "signal_id": "fc02b188",
+      "timestamp": "2026-03-29T18:04:22.416551+00:00",
+      "status": "active",
+      "market_id": "1711582",
+      "condition_id": "",
+      "token_id": "82423266408294586331941672254306222906949655430137769401902061641388260045767",
+      "question": "Athletics vs. Toronto Blue Jays",
+      "outcome": "Athletics",
+      "slug": "mlb-oak-tor-2026-03-29",
+      "category": "",
+      "resolution_date": "2026-04-05T17:37:00Z",
+      "entry_price": 0.325,
+      "min_entry_price": 0.315,
+      "max_entry_price": 0.345,
+      "tp_price": 0.6961,
+      "sl_price": 0.2421,
+      "tp_pct": 114.2,
+      "sl_pct": -25.5,
+      "expiry": "2026-04-05T17:37:00+00:00",
+      "edge_score": 31.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.1,
+        "dislocation": 8.0,
+        "external": 1.57
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.1,
+      "days_to_close": 6,
+      "liquidity_usd": 25724.3045,
+      "volume_24h": 227240.53180499954,
+      "rationale": "Smart money 23/25 (5 whales) | Dislocation 8/30 (vol spike) | External 1.6/15",
+      "tp_fraction": 0.55,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.325,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9094,12 +9139,12 @@
     "1640919": "2026-03-29T14:07:12.874810+00:00"
   },
   "stats": {
-    "total_signals": 350,
+    "total_signals": 351,
     "total_wins": 145,
     "total_losses": 196,
     "total_expired": 7,
     "total_market_resolved": 85
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-29T17:22:17.513355+00:00"
+  "last_updated": "2026-03-29T18:04:22.418859+00:00"
 }
