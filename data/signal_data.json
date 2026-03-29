@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-03-29T11:53:21.551287+00:00",
+    "timestamp": "2026-03-29T13:08:49.395896+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 246,
+    "tokens_scored": 241,
     "opportunities_found": 5,
     "engine_version": "4.0.0"
   },
@@ -92,11 +92,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.515,
-        "trough_price": 0.335,
+        "trough_price": 0.325,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.335,
-        "live_pnl_pct": -19.28
+        "current_price": 0.325,
+        "live_pnl_pct": -21.69
       }
     ],
     "recent_resolved": [
@@ -2390,35 +2390,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 246,
-      "tokens_with_signal": 55,
-      "coverage_pct": 22.4,
-      "avg_score": 8.39,
+      "tokens_scored": 241,
+      "tokens_with_signal": 53,
+      "coverage_pct": 22.0,
+      "avg_score": 8.34,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 246,
-      "tokens_with_signal": 101,
+      "tokens_scored": 241,
+      "tokens_with_signal": 99,
       "coverage_pct": 41.1,
-      "avg_score": 10.48,
-      "max_score": 22.32,
+      "avg_score": 10.77,
+      "max_score": 22.48,
       "quality_traders": 51,
-      "markets_indexed": 4458
+      "markets_indexed": 4408
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 246,
-      "tokens_with_signal": 208,
-      "coverage_pct": 84.6,
-      "avg_score": 7.88,
-      "max_score": 21.37
+      "tokens_scored": 241,
+      "tokens_with_signal": 202,
+      "coverage_pct": 83.8,
+      "avg_score": 7.75,
+      "max_score": 21.27
     },
     "external": {
       "active": true,
-      "tokens_scored": 246,
+      "tokens_scored": 241,
       "tokens_with_signal": 6,
-      "coverage_pct": 2.4,
+      "coverage_pct": 2.5,
       "avg_score": 2.55,
       "max_score": 3.22
     }
