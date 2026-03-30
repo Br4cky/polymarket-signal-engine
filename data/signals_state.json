@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.935,
       "live_pnl_pct": 8.09
+    },
+    {
+      "signal_id": "2a45c961",
+      "timestamp": "2026-03-30T14:21:44.119102+00:00",
+      "status": "active",
+      "market_id": "1762400",
+      "condition_id": "",
+      "token_id": "52844380396127057623492444951859110222127794324793183246967621868687726682888",
+      "question": "Grand Prix Hassan II: Aleksandar Vukic vs Taha Baadi",
+      "outcome": "Aleksandar Vukic",
+      "slug": "atp-vukic-baadi-2026-03-30",
+      "category": "",
+      "resolution_date": "2026-04-06T09:00:00Z",
+      "entry_price": 0.705,
+      "min_entry_price": 0.69,
+      "max_entry_price": 0.735,
+      "tp_price": 0.8685,
+      "sl_price": 0.5415,
+      "tp_pct": 23.2,
+      "sl_pct": -23.2,
+      "expiry": "2026-04-06T09:00:00+00:00",
+      "edge_score": 31.8,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.81,
+        "dislocation": 8.0,
+        "external": 5.74
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 79744.6637,
+      "volume_24h": 174202.99668299986,
+      "rationale": "Smart money 19/25 (3 whales) | Dislocation 8/30 (vol spike) | External 5.7/15",
+      "tp_fraction": 0.554,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.705,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9050,12 +9095,12 @@
     "1766511": "2026-03-30T10:51:42.175079+00:00"
   },
   "stats": {
-    "total_signals": 357,
+    "total_signals": 358,
     "total_wins": 149,
     "total_losses": 200,
     "total_expired": 7,
     "total_market_resolved": 88
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-30T12:49:10.704123+00:00"
+  "last_updated": "2026-03-30T14:21:44.120208+00:00"
 }
