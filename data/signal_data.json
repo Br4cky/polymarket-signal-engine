@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-03-30T07:53:33.739803+00:00",
+    "timestamp": "2026-03-30T09:22:24.010635+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 219,
-    "opportunities_found": 4,
+    "tokens_scored": 216,
+    "opportunities_found": 6,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -52,6 +52,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.935,
         "live_pnl_pct": 8.09
+      },
+      {
+        "signal_id": "91dc64db",
+        "timestamp": "2026-03-30T09:22:24.000184+00:00",
+        "status": "active",
+        "market_id": "1766511",
+        "condition_id": "",
+        "token_id": "62921333194424443286437158352878976237275544961419286281106274521967098387442",
+        "question": "Bucharest Open, Qualification: George Loffhagen vs Jurij Rodionov",
+        "outcome": "George Loffhagen",
+        "slug": "atp-loffhag-rodiono-2026-03-29",
+        "category": "",
+        "resolution_date": "2026-04-05T11:00:00Z",
+        "entry_price": 0.565,
+        "min_entry_price": 0.55,
+        "max_entry_price": 0.595,
+        "tp_price": 0.8082,
+        "sl_price": 0.4209,
+        "tp_pct": 43.0,
+        "sl_pct": -25.5,
+        "expiry": "2026-04-05T11:00:00+00:00",
+        "edge_score": 32.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.24,
+          "dislocation": 8.0,
+          "external": 5.68
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 6,
+        "liquidity_usd": 57384.2946,
+        "volume_24h": 224445.58978399992,
+        "rationale": "Smart money 20/25 (3 whales) | Dislocation 8/30 (vol spike) | External 5.7/15",
+        "tp_fraction": 0.559,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.565,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 356,
-      "active_signals": 1,
+      "total_signals_issued": 357,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 95,
       "losses": 105,
@@ -2345,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 41,
-      "coverage_pct": 18.7,
+      "tokens_scored": 216,
+      "tokens_with_signal": 43,
+      "coverage_pct": 19.9,
       "avg_score": 8.48,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 75,
-      "coverage_pct": 34.2,
-      "avg_score": 9.27,
-      "max_score": 19.8,
+      "tokens_scored": 216,
+      "tokens_with_signal": 82,
+      "coverage_pct": 38.0,
+      "avg_score": 9.73,
+      "max_score": 20.24,
       "quality_traders": 50,
-      "markets_indexed": 4516
+      "markets_indexed": 4520
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 182,
-      "coverage_pct": 83.1,
-      "avg_score": 7.35,
-      "max_score": 15.24
+      "tokens_scored": 216,
+      "tokens_with_signal": 170,
+      "coverage_pct": 78.7,
+      "avg_score": 7.57,
+      "max_score": 15.88
     },
     "external": {
-      "active": false,
-      "tokens_scored": 219,
-      "tokens_with_signal": 0,
-      "coverage_pct": 0.0,
-      "avg_score": 0,
-      "max_score": 0
+      "active": true,
+      "tokens_scored": 216,
+      "tokens_with_signal": 2,
+      "coverage_pct": 0.9,
+      "avg_score": 5.68,
+      "max_score": 5.68
     }
   },
   "calibration": {
