@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.935,
       "live_pnl_pct": 8.09
+    },
+    {
+      "signal_id": "d844f468",
+      "timestamp": "2026-03-30T16:49:02.480432+00:00",
+      "status": "active",
+      "market_id": "1762392",
+      "condition_id": "",
+      "token_id": "109211793519604472933430337385742822780685787120165655820106399943786691191774",
+      "question": "Grand Prix Hassan II: Karim Bennani vs Quentin Halys",
+      "outcome": "Karim Bennani",
+      "slug": "atp-bennan-halys-2026-03-30",
+      "category": "",
+      "resolution_date": "2026-04-06T09:00:00Z",
+      "entry_price": 0.275,
+      "min_entry_price": 0.265,
+      "max_entry_price": 0.295,
+      "tp_price": 0.5826,
+      "sl_price": 0.1925,
+      "tp_pct": 111.9,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-06T09:00:00+00:00",
+      "edge_score": 38.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.0,
+        "dislocation": 16.66,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.6,
+      "days_to_close": 6,
+      "liquidity_usd": 22733.3334,
+      "volume_24h": 418080.6349200001,
+      "rationale": "Smart money 20/25 (3 whales) | Dislocation 17/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.424,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.275,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9051,12 +9096,12 @@
     "1762400": "2026-03-30T15:51:21.583706+00:00"
   },
   "stats": {
-    "total_signals": 358,
+    "total_signals": 359,
     "total_wins": 149,
     "total_losses": 201,
     "total_expired": 7,
     "total_market_resolved": 89
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-30T15:51:21.591462+00:00"
+  "last_updated": "2026-03-30T16:49:02.482300+00:00"
 }
