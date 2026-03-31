@@ -38,12 +38,57 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.935,
+      "peak_price": 0.945,
       "trough_price": 0.815,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.935,
-      "live_pnl_pct": 8.09
+      "current_price": 0.945,
+      "live_pnl_pct": 9.25
+    },
+    {
+      "signal_id": "c0d1de70",
+      "timestamp": "2026-03-31T15:53:46.281027+00:00",
+      "status": "active",
+      "market_id": "1762308",
+      "condition_id": "",
+      "token_id": "104481912696456633969951101610593124043067896797972953523426159645748877574866",
+      "question": "Bucharest Open: Damir Dzumhur vs Filip Jianu",
+      "outcome": "Damir Dzumhur",
+      "slug": "atp-dzumhur-jianu-2026-03-30",
+      "category": "",
+      "resolution_date": "2026-04-06T07:00:00Z",
+      "entry_price": 0.8795,
+      "min_entry_price": 0.8645,
+      "max_entry_price": 0.9095,
+      "tp_price": 0.9466,
+      "sl_price": 0.8124,
+      "tp_pct": 7.6,
+      "sl_pct": -7.6,
+      "expiry": "2026-04-06T07:00:00+00:00",
+      "edge_score": 32.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.04,
+        "dislocation": 9.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 5,
+      "liquidity_usd": 14303.31899,
+      "volume_24h": 341163.78325299965,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 9/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.557,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.8795,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9050,12 +9095,12 @@
     "1711616": "2026-03-31T03:36:34.782689+00:00"
   },
   "stats": {
-    "total_signals": 364,
+    "total_signals": 365,
     "total_wins": 154,
     "total_losses": 202,
     "total_expired": 7,
     "total_market_resolved": 89
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-03-31T14:24:10.494707+00:00"
+  "last_updated": "2026-03-31T15:53:46.281753+00:00"
 }
