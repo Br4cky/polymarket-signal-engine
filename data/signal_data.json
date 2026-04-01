@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-01T03:41:41.209602+00:00",
+    "timestamp": "2026-04-01T05:53:38.490277+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 179,
-    "opportunities_found": 11,
+    "tokens_scored": 173,
+    "opportunities_found": 6,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -2299,37 +2299,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 179,
-      "tokens_with_signal": 56,
-      "coverage_pct": 31.3,
-      "avg_score": 8.72,
+      "tokens_scored": 173,
+      "tokens_with_signal": 55,
+      "coverage_pct": 31.8,
+      "avg_score": 8.71,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 179,
-      "tokens_with_signal": 112,
-      "coverage_pct": 62.6,
-      "avg_score": 9.99,
-      "max_score": 23.1,
+      "tokens_scored": 173,
+      "tokens_with_signal": 97,
+      "coverage_pct": 56.1,
+      "avg_score": 8.6,
+      "max_score": 18.0,
       "quality_traders": 51,
-      "markets_indexed": 4506
+      "markets_indexed": 4560
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 179,
-      "tokens_with_signal": 134,
-      "coverage_pct": 74.9,
-      "avg_score": 7.41,
-      "max_score": 23.87
+      "tokens_scored": 173,
+      "tokens_with_signal": 130,
+      "coverage_pct": 75.1,
+      "avg_score": 7.07,
+      "max_score": 16.9
     },
     "external": {
       "active": true,
-      "tokens_scored": 179,
-      "tokens_with_signal": 10,
-      "coverage_pct": 5.6,
-      "avg_score": 1.38,
-      "max_score": 1.56
+      "tokens_scored": 173,
+      "tokens_with_signal": 12,
+      "coverage_pct": 6.9,
+      "avg_score": 1.43,
+      "max_score": 1.67
     }
   },
   "calibration": {
