@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.915,
       "live_pnl_pct": 5.78
+    },
+    {
+      "signal_id": "dce8cbaf",
+      "timestamp": "2026-04-02T14:15:44.541967+00:00",
+      "status": "active",
+      "market_id": "1811320",
+      "condition_id": "",
+      "token_id": "9659456552866765340990593642884286659477888722181904204151313160186703057000",
+      "question": "Grand Prix Hassan II: Rafael Jodar vs Tomas Machac",
+      "outcome": "Rafael Jodar",
+      "slug": "atp-jodar-machac-2026-04-01",
+      "category": "",
+      "resolution_date": "2026-04-08T09:00:00Z",
+      "entry_price": 0.845,
+      "min_entry_price": 0.83,
+      "max_entry_price": 0.866,
+      "tp_price": 0.916,
+      "sl_price": 0.774,
+      "tp_pct": 8.4,
+      "sl_pct": -8.4,
+      "expiry": "2026-04-08T09:00:00+00:00",
+      "edge_score": 46.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.72,
+        "dislocation": 22.22,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 5,
+      "liquidity_usd": 134535.0962,
+      "volume_24h": 544933.3112529988,
+      "rationale": "Smart money 22/25 (4 whales) | Dislocation 22/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.458,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.845,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9049,12 +9094,12 @@
     "1811309": "2026-04-01T23:12:19.883412+00:00"
   },
   "stats": {
-    "total_signals": 384,
+    "total_signals": 385,
     "total_wins": 168,
     "total_losses": 208,
     "total_expired": 7,
     "total_market_resolved": 90
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-02T12:45:08.995223+00:00"
+  "last_updated": "2026-04-02T14:15:44.544011+00:00"
 }
