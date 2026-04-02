@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.915,
       "live_pnl_pct": 5.78
+    },
+    {
+      "signal_id": "9c63bd4c",
+      "timestamp": "2026-04-02T21:59:40.913250+00:00",
+      "status": "active",
+      "market_id": "1811326",
+      "condition_id": "",
+      "token_id": "94861957964998728338753223207318707086198092636802153294009424865128585256485",
+      "question": "US Men's Clay Court Championships: Learner Tien vs Nishesh Basavareddy",
+      "outcome": "Learner Tien",
+      "slug": "atp-tien-basavar-2026-04-01",
+      "category": "",
+      "resolution_date": "2026-04-08T15:00:00Z",
+      "entry_price": 0.845,
+      "min_entry_price": 0.83,
+      "max_entry_price": 0.875,
+      "tp_price": 0.9295,
+      "sl_price": 0.7605,
+      "tp_pct": 10.0,
+      "sl_pct": -10.0,
+      "expiry": "2026-04-08T15:00:00+00:00",
+      "edge_score": 30.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.73,
+        "dislocation": 8.0,
+        "external": 2.1
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 5,
+      "liquidity_usd": 71440.9365,
+      "volume_24h": 102965.28129599996,
+      "rationale": "Smart money 20/25 (3 whales) | Dislocation 8/30 (vol spike) | External 2.1/15",
+      "tp_fraction": 0.545,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.845,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9049,12 +9094,12 @@
     "1811325": "2026-04-02T20:25:42.176750+00:00"
   },
   "stats": {
-    "total_signals": 389,
+    "total_signals": 390,
     "total_wins": 171,
     "total_losses": 210,
     "total_expired": 7,
     "total_market_resolved": 92
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-02T21:09:18.058246+00:00"
+  "last_updated": "2026-04-02T21:59:40.915011+00:00"
 }
