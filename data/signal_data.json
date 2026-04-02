@@ -1,13 +1,104 @@
 {
   "metadata": {
-    "timestamp": "2026-04-01T23:57:03.375168+00:00",
+    "timestamp": "2026-04-02T02:39:49.392609+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 263,
-    "opportunities_found": 10,
+    "tokens_scored": 206,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "c7bdee68",
+        "timestamp": "2026-04-02T02:39:49.380762+00:00",
+        "status": "active",
+        "market_id": "1569627",
+        "condition_id": "",
+        "token_id": "8442709013751543525223072638303914942960068246422295030411662679470140144155",
+        "question": "US x Iran ceasefire by April 15?",
+        "outcome": "No",
+        "slug": "us-x-iran-ceasefire-by-april-15-182-528-637",
+        "category": "",
+        "resolution_date": "2026-04-15T00:00:00Z",
+        "entry_price": 0.865,
+        "min_entry_price": 0.85,
+        "max_entry_price": 0.886,
+        "tp_price": 0.9387,
+        "sl_price": 0.7913,
+        "tp_pct": 8.5,
+        "sl_pct": -8.5,
+        "expiry": "2026-04-15T00:00:00+00:00",
+        "edge_score": 30.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 5.7,
+          "smart_money": 12.0,
+          "dislocation": 17.9,
+          "external": 4.51
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 12,
+        "liquidity_usd": 477355.5026,
+        "volume_24h": 3413905.9607539997,
+        "rationale": "Structural 6/30 (Manifold div 14.5%) | Smart money 12/25 (1 whales) | Dislocation 18/30 (velocity, vol spike, trajectory) | External 4.5/15",
+        "tp_fraction": 0.546,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.865,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "194a1c15",
+        "timestamp": "2026-04-02T02:39:49.381195+00:00",
+        "status": "active",
+        "market_id": "1729434",
+        "condition_id": "",
+        "token_id": "22387209209064959406965328112927485127747950171938717319813001790462084524667",
+        "question": "Cleveland Guardians vs. Los Angeles Dodgers",
+        "outcome": "Cleveland Guardians",
+        "slug": "mlb-cle-lad-2026-04-01",
+        "category": "",
+        "resolution_date": "2026-04-09T00:20:00Z",
+        "entry_price": 0.92,
+        "min_entry_price": 0.905,
+        "max_entry_price": 0.95,
+        "tp_price": 0.9512,
+        "sl_price": 0.8888,
+        "tp_pct": 3.4,
+        "sl_pct": -3.4,
+        "expiry": "2026-04-09T00:20:00+00:00",
+        "edge_score": 30.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.32,
+          "dislocation": 11.0,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 26656.36,
+        "volume_24h": 382948.33395799977,
+        "rationale": "Smart money 20/25 (4 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+        "tp_fraction": 0.39,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.92,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "61d8d6e7",
@@ -2261,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 382,
-      "active_signals": 0,
+      "total_signals_issued": 384,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 101,
       "losses": 99,
@@ -2299,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 263,
-      "tokens_with_signal": 58,
-      "coverage_pct": 22.1,
-      "avg_score": 8.51,
+      "tokens_scored": 206,
+      "tokens_with_signal": 60,
+      "coverage_pct": 29.1,
+      "avg_score": 8.42,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 263,
-      "tokens_with_signal": 189,
-      "coverage_pct": 71.9,
-      "avg_score": 12.81,
-      "max_score": 23.54,
-      "quality_traders": 50,
-      "markets_indexed": 4412
+      "tokens_scored": 206,
+      "tokens_with_signal": 140,
+      "coverage_pct": 68.0,
+      "avg_score": 11.77,
+      "max_score": 23.35,
+      "quality_traders": 51,
+      "markets_indexed": 4438
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 263,
-      "tokens_with_signal": 229,
-      "coverage_pct": 87.1,
-      "avg_score": 7.38,
-      "max_score": 23.09
+      "tokens_scored": 206,
+      "tokens_with_signal": 171,
+      "coverage_pct": 83.0,
+      "avg_score": 7.91,
+      "max_score": 26.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 263,
-      "tokens_with_signal": 20,
-      "coverage_pct": 7.6,
-      "avg_score": 1.88,
-      "max_score": 6.02
+      "tokens_scored": 206,
+      "tokens_with_signal": 26,
+      "coverage_pct": 12.6,
+      "avg_score": 2.67,
+      "max_score": 4.51
     }
   },
   "calibration": {
