@@ -38,12 +38,57 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.51,
+      "peak_price": 0.515,
       "trough_price": 0.485,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.505,
-      "live_pnl_pct": 4.12
+      "current_price": 0.51,
+      "live_pnl_pct": 5.15
+    },
+    {
+      "signal_id": "6640ed33",
+      "timestamp": "2026-04-04T13:22:42.467373+00:00",
+      "status": "active",
+      "market_id": "1846040",
+      "condition_id": "",
+      "token_id": "5633178338420277268614618473572087436311599101773570486765666714611936290543",
+      "question": "Grand Prix Hassan II: Luciano Darderi vs Marco Trungelliti",
+      "outcome": "Luciano Darderi",
+      "slug": "atp-darderi-trungel-2026-04-04",
+      "category": "",
+      "resolution_date": "2026-04-11T12:00:00Z",
+      "entry_price": 0.495,
+      "min_entry_price": 0.485,
+      "max_entry_price": 0.509,
+      "tp_price": 0.7785,
+      "sl_price": 0.3688,
+      "tp_pct": 57.3,
+      "sl_pct": -25.5,
+      "expiry": "2026-04-11T12:00:00+00:00",
+      "edge_score": 33.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.51,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.0,
+      "days_to_close": 6,
+      "liquidity_usd": 102669.6354,
+      "volume_24h": 87260.724423,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.561,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.495,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9059,12 +9104,12 @@
     "1640919": "2026-04-03T20:46:56.689723+00:00"
   },
   "stats": {
-    "total_signals": 408,
+    "total_signals": 409,
     "total_wins": 182,
     "total_losses": 218,
     "total_expired": 7,
     "total_market_resolved": 93
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-04T12:05:42.695629+00:00"
+  "last_updated": "2026-04-04T13:22:42.468481+00:00"
 }
