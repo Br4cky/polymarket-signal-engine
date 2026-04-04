@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-04T10:23:41.892627+00:00",
+    "timestamp": "2026-04-04T11:06:45.474124+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 208,
-    "opportunities_found": 10,
+    "tokens_scored": 207,
+    "opportunities_found": 7,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.485,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.505,
-        "live_pnl_pct": 4.12
+        "current_price": 0.495,
+        "live_pnl_pct": 2.06
       }
     ],
     "recent_resolved": [
@@ -2345,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 208,
-      "tokens_with_signal": 37,
-      "coverage_pct": 17.8,
-      "avg_score": 7.98,
+      "tokens_scored": 207,
+      "tokens_with_signal": 33,
+      "coverage_pct": 15.9,
+      "avg_score": 8.07,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 208,
-      "tokens_with_signal": 137,
-      "coverage_pct": 65.9,
-      "avg_score": 11.27,
-      "max_score": 20.8,
+      "tokens_scored": 207,
+      "tokens_with_signal": 136,
+      "coverage_pct": 65.7,
+      "avg_score": 11.48,
+      "max_score": 21.8,
       "quality_traders": 50,
-      "markets_indexed": 4694
+      "markets_indexed": 4726
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 208,
-      "tokens_with_signal": 175,
-      "coverage_pct": 84.1,
-      "avg_score": 7.09,
-      "max_score": 20.3
+      "tokens_scored": 207,
+      "tokens_with_signal": 172,
+      "coverage_pct": 83.1,
+      "avg_score": 7.47,
+      "max_score": 27.83
     },
     "external": {
       "active": true,
-      "tokens_scored": 208,
-      "tokens_with_signal": 3,
-      "coverage_pct": 1.4,
-      "avg_score": 3.23,
+      "tokens_scored": 207,
+      "tokens_with_signal": 4,
+      "coverage_pct": 1.9,
+      "avg_score": 3.26,
       "max_score": 3.34
     }
   },
