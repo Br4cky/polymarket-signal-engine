@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-04T16:07:58.127016+00:00",
+    "timestamp": "2026-04-04T16:58:40.767618+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 184,
-    "opportunities_found": 7,
+    "tokens_scored": 181,
+    "opportunities_found": 6,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.485,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.515,
-        "live_pnl_pct": 6.19
+        "current_price": 0.505,
+        "live_pnl_pct": 4.12
       }
     ],
     "recent_resolved": [
@@ -2345,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 184,
-      "tokens_with_signal": 24,
-      "coverage_pct": 13.0,
-      "avg_score": 8.3,
+      "tokens_scored": 181,
+      "tokens_with_signal": 23,
+      "coverage_pct": 12.7,
+      "avg_score": 8.55,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 184,
-      "tokens_with_signal": 128,
-      "coverage_pct": 69.6,
-      "avg_score": 12.78,
-      "max_score": 22.88,
+      "tokens_scored": 181,
+      "tokens_with_signal": 127,
+      "coverage_pct": 70.2,
+      "avg_score": 12.29,
+      "max_score": 23.34,
       "quality_traders": 50,
-      "markets_indexed": 4656
+      "markets_indexed": 4522
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 184,
-      "tokens_with_signal": 161,
-      "coverage_pct": 87.5,
-      "avg_score": 6.93,
-      "max_score": 28.0
+      "tokens_scored": 181,
+      "tokens_with_signal": 160,
+      "coverage_pct": 88.4,
+      "avg_score": 6.59,
+      "max_score": 23.47
     },
     "external": {
       "active": true,
-      "tokens_scored": 184,
-      "tokens_with_signal": 8,
-      "coverage_pct": 4.3,
-      "avg_score": 2.59,
+      "tokens_scored": 181,
+      "tokens_with_signal": 5,
+      "coverage_pct": 2.8,
+      "avg_score": 2.7,
       "max_score": 3.34
     }
   },
