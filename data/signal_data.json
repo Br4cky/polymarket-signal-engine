@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-05T17:00:48.019719+00:00",
+    "timestamp": "2026-04-05T17:41:10.101229+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 228,
-    "opportunities_found": 13,
+    "tokens_scored": 214,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -51,6 +51,51 @@
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.735,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "52dacd12",
+        "timestamp": "2026-04-05T17:41:10.090224+00:00",
+        "status": "active",
+        "market_id": "1867027",
+        "condition_id": "",
+        "token_id": "66791981361252733561144618273010901472873297102661417849807468928754030188195",
+        "question": "Credit One Charleston Open: Jessica Pegula vs Yulia Starodubtseva",
+        "outcome": "Jessica Pegula",
+        "slug": "wta-pegula-starodu-2026-04-05",
+        "category": "",
+        "resolution_date": "2026-04-12T17:00:00Z",
+        "entry_price": 0.845,
+        "min_entry_price": 0.83,
+        "max_entry_price": 0.875,
+        "tp_price": 0.9302,
+        "sl_price": 0.7598,
+        "tp_pct": 10.1,
+        "sl_pct": -10.1,
+        "expiry": "2026-04-12T17:00:00+00:00",
+        "edge_score": 31.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 19.39,
+          "dislocation": 8.0,
+          "external": 3.97
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 59287.2353,
+        "volume_24h": 158119.639554,
+        "rationale": "Smart money 19/25 (4 whales) | Dislocation 8/30 (vol spike) | External 4.0/15",
+        "tp_fraction": 0.55,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.845,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 431,
-      "active_signals": 1,
+      "total_signals_issued": 432,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 109,
       "losses": 91,
@@ -2345,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 228,
-      "tokens_with_signal": 41,
-      "coverage_pct": 18.0,
-      "avg_score": 7.96,
+      "tokens_scored": 214,
+      "tokens_with_signal": 39,
+      "coverage_pct": 18.2,
+      "avg_score": 8.08,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 228,
-      "tokens_with_signal": 170,
-      "coverage_pct": 74.6,
-      "avg_score": 12.92,
-      "max_score": 22.6,
+      "tokens_scored": 214,
+      "tokens_with_signal": 166,
+      "coverage_pct": 77.6,
+      "avg_score": 13.15,
+      "max_score": 23.49,
       "quality_traders": 51,
-      "markets_indexed": 4754
+      "markets_indexed": 4690
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 228,
-      "tokens_with_signal": 195,
-      "coverage_pct": 85.5,
-      "avg_score": 7.54,
-      "max_score": 26.74
+      "tokens_scored": 214,
+      "tokens_with_signal": 184,
+      "coverage_pct": 86.0,
+      "avg_score": 7.3,
+      "max_score": 27.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 228,
-      "tokens_with_signal": 12,
-      "coverage_pct": 5.3,
-      "avg_score": 4.11,
-      "max_score": 7.0
+      "tokens_scored": 214,
+      "tokens_with_signal": 10,
+      "coverage_pct": 4.7,
+      "avg_score": 3.27,
+      "max_score": 3.97
     }
   },
   "calibration": {
