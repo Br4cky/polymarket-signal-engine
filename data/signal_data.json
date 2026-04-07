@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-04-07T14:08:48.493318+00:00",
+    "timestamp": "2026-04-07T15:50:36.459082+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 236,
-    "opportunities_found": 18,
+    "tokens_scored": 234,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "22779171",
+        "timestamp": "2026-04-07T15:50:36.447984+00:00",
+        "status": "active",
+        "market_id": "1886042",
+        "condition_id": "",
+        "token_id": "37499397586437985904893975946715622364037803186783577005844838737976517058850",
+        "question": "Rolex Monte Carlo Masters: Cameron Norrie vs Alex de Minaur",
+        "outcome": "Cameron Norrie",
+        "slug": "atp-norrie-minaur-2026-04-08",
+        "category": "",
+        "resolution_date": "2026-04-15T08:00:00Z",
+        "entry_price": 0.335,
+        "min_entry_price": 0.325,
+        "max_entry_price": 0.355,
+        "tp_price": 0.6965,
+        "sl_price": 0.2345,
+        "tp_pct": 107.9,
+        "sl_pct": -30.0,
+        "expiry": "2026-04-15T08:00:00+00:00",
+        "edge_score": 30.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 19.6,
+          "dislocation": 8.0,
+          "external": 4.92
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.0,
+        "days_to_close": 7,
+        "liquidity_usd": 95258.0959,
+        "volume_24h": 503608.81414899876,
+        "rationale": "Smart money 20/25 (4 whales) | Dislocation 8/30 (vol spike) | External 4.9/15",
+        "tp_fraction": 0.544,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.335,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "c9533690",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 468,
-      "active_signals": 0,
+      "total_signals_issued": 469,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 104,
       "losses": 96,
@@ -2299,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 42,
-      "coverage_pct": 17.8,
-      "avg_score": 7.94,
+      "tokens_scored": 234,
+      "tokens_with_signal": 40,
+      "coverage_pct": 17.1,
+      "avg_score": 8.34,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 119,
-      "coverage_pct": 50.4,
-      "avg_score": 11.85,
+      "tokens_scored": 234,
+      "tokens_with_signal": 122,
+      "coverage_pct": 52.1,
+      "avg_score": 11.72,
       "max_score": 23.1,
       "quality_traders": 50,
-      "markets_indexed": 4290
+      "markets_indexed": 4130
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 185,
-      "coverage_pct": 78.4,
-      "avg_score": 6.99,
-      "max_score": 20.59
+      "tokens_scored": 234,
+      "tokens_with_signal": 178,
+      "coverage_pct": 76.1,
+      "avg_score": 7.21,
+      "max_score": 22.02
     },
     "external": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 4,
-      "coverage_pct": 1.7,
-      "avg_score": 4.01,
+      "tokens_scored": 234,
+      "tokens_with_signal": 7,
+      "coverage_pct": 3.0,
+      "avg_score": 3.89,
       "max_score": 4.95
     }
   },
