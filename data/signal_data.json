@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-04-07T21:32:41.779588+00:00",
+    "timestamp": "2026-04-07T22:12:41.460258+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 266,
-    "opportunities_found": 14,
+    "tokens_scored": 271,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "4b6e5bef",
+        "timestamp": "2026-04-07T22:12:41.447612+00:00",
+        "status": "active",
+        "market_id": "1815849",
+        "condition_id": "",
+        "token_id": "65448416125570779603115460105805741822778482201477555477702639878705882431575",
+        "question": "Arizona Diamondbacks vs. New York Mets",
+        "outcome": "Arizona Diamondbacks",
+        "slug": "mlb-ari-nym-2026-04-07",
+        "category": "",
+        "resolution_date": "2026-04-14T23:10:00Z",
+        "entry_price": 0.635,
+        "min_entry_price": 0.62,
+        "max_entry_price": 0.665,
+        "tp_price": 0.778,
+        "sl_price": 0.492,
+        "tp_pct": 22.5,
+        "sl_pct": -22.5,
+        "expiry": "2026-04-14T23:10:00+00:00",
+        "edge_score": 30.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 22.73,
+          "dislocation": 10.0,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.6,
+        "days_to_close": 7,
+        "liquidity_usd": 69028.8667,
+        "volume_24h": 456527.01673599984,
+        "rationale": "Smart money 23/25 (5 whales) | Dislocation 10/30 (vol spike)",
+        "tp_fraction": 0.392,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.635,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "4169ce3e",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 473,
-      "active_signals": 0,
+      "total_signals_issued": 474,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 102,
       "losses": 98,
@@ -2299,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 45,
-      "coverage_pct": 16.9,
-      "avg_score": 8.11,
+      "tokens_scored": 271,
+      "tokens_with_signal": 47,
+      "coverage_pct": 17.3,
+      "avg_score": 8.24,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 138,
-      "coverage_pct": 51.9,
-      "avg_score": 12.98,
-      "max_score": 23.14,
+      "tokens_scored": 271,
+      "tokens_with_signal": 144,
+      "coverage_pct": 53.1,
+      "avg_score": 13.65,
+      "max_score": 23.27,
       "quality_traders": 50,
-      "markets_indexed": 3924
+      "markets_indexed": 3912
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 266,
+      "tokens_scored": 271,
       "tokens_with_signal": 203,
-      "coverage_pct": 76.3,
-      "avg_score": 8.17,
-      "max_score": 25.61
+      "coverage_pct": 74.9,
+      "avg_score": 8.65,
+      "max_score": 24.27
     },
     "external": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 4,
-      "coverage_pct": 1.5,
-      "avg_score": 3.46,
+      "tokens_scored": 271,
+      "tokens_with_signal": 6,
+      "coverage_pct": 2.2,
+      "avg_score": 2.79,
       "max_score": 3.84
     }
   },

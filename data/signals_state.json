@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "4b6e5bef",
+      "timestamp": "2026-04-07T22:12:41.447612+00:00",
+      "status": "active",
+      "market_id": "1815849",
+      "condition_id": "",
+      "token_id": "65448416125570779603115460105805741822778482201477555477702639878705882431575",
+      "question": "Arizona Diamondbacks vs. New York Mets",
+      "outcome": "Arizona Diamondbacks",
+      "slug": "mlb-ari-nym-2026-04-07",
+      "category": "",
+      "resolution_date": "2026-04-14T23:10:00Z",
+      "entry_price": 0.635,
+      "min_entry_price": 0.62,
+      "max_entry_price": 0.665,
+      "tp_price": 0.778,
+      "sl_price": 0.492,
+      "tp_pct": 22.5,
+      "sl_pct": -22.5,
+      "expiry": "2026-04-14T23:10:00+00:00",
+      "edge_score": 30.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.73,
+        "dislocation": 10.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.6,
+      "days_to_close": 7,
+      "liquidity_usd": 69028.8667,
+      "volume_24h": 456527.01673599984,
+      "rationale": "Smart money 23/25 (5 whales) | Dislocation 10/30 (vol spike)",
+      "tp_fraction": 0.392,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.635,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "bf0a91f5",
@@ -9029,12 +9075,12 @@
     "1815833": "2026-04-07T20:36:24.440166+00:00"
   },
   "stats": {
-    "total_signals": 473,
+    "total_signals": 474,
     "total_wins": 210,
     "total_losses": 256,
     "total_expired": 7,
     "total_market_resolved": 105
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-07T21:32:41.769754+00:00"
+  "last_updated": "2026-04-07T22:12:41.450000+00:00"
 }
