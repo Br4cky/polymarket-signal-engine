@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.5815,
-      "live_pnl_pct": -1.44
+      "current_price": 0.5725,
+      "live_pnl_pct": -2.97
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,53 @@
       "trough_price": 0.275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.385,
-      "live_pnl_pct": 40.0
+      "current_price": 0.395,
+      "live_pnl_pct": 43.64
+    },
+    {
+      "signal_id": "592c4bd9",
+      "timestamp": "2026-04-09T05:06:20.889375+00:00",
+      "status": "active",
+      "market_id": "1707841",
+      "condition_id": "",
+      "token_id": "38902668316823899581329108924389881286009857048696806385615295625967267371713",
+      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
+      "outcome": "No",
+      "slug": "israel-x-hezbollah-ceasefire-by-april-30-2026-989",
+      "category": "",
+      "resolution_date": "2026-04-30T00:00:00Z",
+      "entry_price": 0.708,
+      "min_entry_price": 0.693,
+      "max_entry_price": 0.738,
+      "tp_price": 0.8685,
+      "sl_price": 0.5475,
+      "tp_pct": 22.7,
+      "sl_pct": -22.7,
+      "expiry": "2026-04-30T00:00:00+00:00",
+      "edge_score": 31.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 13.17,
+        "dislocation": 13.12,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 20,
+      "liquidity_usd": 35584.17624,
+      "volume_24h": 408627.77178300003,
+      "rationale": "Smart money 13/25 (2 whales) | Dislocation 13/30 (vol spike, book imbalance, trajectory) | External 7.0/15",
+      "tp_fraction": 0.55,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.708,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9109,12 +9154,12 @@
     "1829062": "2026-04-08T23:08:25.459916+00:00"
   },
   "stats": {
-    "total_signals": 496,
+    "total_signals": 497,
     "total_wins": 223,
     "total_losses": 264,
     "total_expired": 7,
     "total_market_resolved": 108
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-09T02:41:12.097831+00:00"
+  "last_updated": "2026-04-09T05:06:20.889910+00:00"
 }
