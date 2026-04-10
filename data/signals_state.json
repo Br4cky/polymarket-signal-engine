@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.6265,
-      "live_pnl_pct": 6.19
+      "current_price": 0.6275,
+      "live_pnl_pct": 6.36
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,8 @@
       "trough_price": 0.275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.325,
-      "live_pnl_pct": 18.18
+      "current_price": 0.315,
+      "live_pnl_pct": 14.55
     },
     {
       "signal_id": "12396cb3",
@@ -173,12 +173,12 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.9615,
+      "peak_price": 0.9625,
       "trough_price": 0.929,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.9595,
-      "live_pnl_pct": 3.06
+      "current_price": 0.9525,
+      "live_pnl_pct": 2.31
     }
   ],
   "resolved": [
@@ -9207,5 +9207,5 @@
     "total_market_resolved": 110
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T01:10:50.046806+00:00"
+  "last_updated": "2026-04-10T04:25:08.164261+00:00"
 }
