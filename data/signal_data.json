@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-10T22:10:35.840269+00:00",
+    "timestamp": "2026-04-10T23:04:03.590776+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 230,
-    "opportunities_found": 15,
+    "tokens_scored": 241,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.664,
-        "live_pnl_pct": 12.54
+        "current_price": 0.6655,
+        "live_pnl_pct": 12.8
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.235,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.285,
-        "live_pnl_pct": 3.64
+        "current_price": 0.295,
+        "live_pnl_pct": 7.27
       },
       {
         "signal_id": "5f3d9f7c",
@@ -181,12 +181,57 @@
         "sl_fraction": 0.33,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.615,
+        "peak_price": 0.645,
         "trough_price": 0.605,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.615,
         "live_pnl_pct": 1.65
+      },
+      {
+        "signal_id": "4177781d",
+        "timestamp": "2026-04-10T23:04:03.577912+00:00",
+        "status": "active",
+        "market_id": "568630",
+        "condition_id": "",
+        "token_id": "47650382966763423119144863600890688449355617504160622255560357009005625541749",
+        "question": "Will Rory McIlroy win the 2026 Masters tournament?",
+        "outcome": "Yes",
+        "slug": "will-rory-mcilroy-win-the-2026-masters-tournament",
+        "category": "",
+        "resolution_date": "2026-04-13T00:00:00Z",
+        "entry_price": 0.675,
+        "min_entry_price": 0.66,
+        "max_entry_price": 0.705,
+        "tp_price": 0.8061,
+        "sl_price": 0.5454,
+        "tp_pct": 19.4,
+        "sl_pct": -19.2,
+        "expiry": "2026-04-13T00:00:00+00:00",
+        "edge_score": 33.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 15.2,
+          "dislocation": 27.0,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.5,
+        "days_to_close": 2,
+        "liquidity_usd": 19688.2003,
+        "volume_24h": 443619.56248499977,
+        "rationale": "Smart money 15/25 (2 whales) | Dislocation 27/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.403,
+        "sl_fraction": 0.192,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.675,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 524,
-      "active_signals": 4,
+      "total_signals_issued": 525,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 108,
       "losses": 92,
@@ -2480,36 +2525,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 230,
+      "tokens_scored": 241,
       "tokens_with_signal": 58,
-      "coverage_pct": 25.2,
-      "avg_score": 8.09,
+      "coverage_pct": 24.1,
+      "avg_score": 8.06,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 153,
-      "coverage_pct": 66.5,
-      "avg_score": 12.76,
-      "max_score": 23.25,
+      "tokens_scored": 241,
+      "tokens_with_signal": 158,
+      "coverage_pct": 65.6,
+      "avg_score": 13.63,
+      "max_score": 23.0,
       "quality_traders": 50,
-      "markets_indexed": 4080
+      "markets_indexed": 4104
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 170,
-      "coverage_pct": 73.9,
-      "avg_score": 7.21,
-      "max_score": 13.89
+      "tokens_scored": 241,
+      "tokens_with_signal": 187,
+      "coverage_pct": 77.6,
+      "avg_score": 7.24,
+      "max_score": 27.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 12,
-      "coverage_pct": 5.2,
-      "avg_score": 4.73,
+      "tokens_scored": 241,
+      "tokens_with_signal": 14,
+      "coverage_pct": 5.8,
+      "avg_score": 4.25,
       "max_score": 7.0
     }
   },

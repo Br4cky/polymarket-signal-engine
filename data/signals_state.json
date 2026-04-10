@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.664,
-      "live_pnl_pct": 12.54
+      "current_price": 0.6655,
+      "live_pnl_pct": 12.8
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,8 @@
       "trough_price": 0.235,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.285,
-      "live_pnl_pct": 3.64
+      "current_price": 0.295,
+      "live_pnl_pct": 7.27
     },
     {
       "signal_id": "5f3d9f7c",
@@ -173,12 +173,57 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.615,
+      "peak_price": 0.645,
       "trough_price": 0.605,
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.615,
       "live_pnl_pct": 1.65
+    },
+    {
+      "signal_id": "4177781d",
+      "timestamp": "2026-04-10T23:04:03.577912+00:00",
+      "status": "active",
+      "market_id": "568630",
+      "condition_id": "",
+      "token_id": "47650382966763423119144863600890688449355617504160622255560357009005625541749",
+      "question": "Will Rory McIlroy win the 2026 Masters tournament?",
+      "outcome": "Yes",
+      "slug": "will-rory-mcilroy-win-the-2026-masters-tournament",
+      "category": "",
+      "resolution_date": "2026-04-13T00:00:00Z",
+      "entry_price": 0.675,
+      "min_entry_price": 0.66,
+      "max_entry_price": 0.705,
+      "tp_price": 0.8061,
+      "sl_price": 0.5454,
+      "tp_pct": 19.4,
+      "sl_pct": -19.2,
+      "expiry": "2026-04-13T00:00:00+00:00",
+      "edge_score": 33.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 15.2,
+        "dislocation": 27.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.5,
+      "days_to_close": 2,
+      "liquidity_usd": 19688.2003,
+      "volume_24h": 443619.56248499977,
+      "rationale": "Smart money 15/25 (2 whales) | Dislocation 27/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.403,
+      "sl_fraction": 0.192,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.675,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9197,12 +9242,12 @@
     "1931521": "2026-04-10T19:19:30.831881+00:00"
   },
   "stats": {
-    "total_signals": 524,
+    "total_signals": 525,
     "total_wins": 239,
     "total_losses": 274,
     "total_expired": 7,
     "total_market_resolved": 112
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T22:10:35.824073+00:00"
+  "last_updated": "2026-04-10T23:04:03.580731+00:00"
 }
