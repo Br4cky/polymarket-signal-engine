@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-10T12:43:46.064025+00:00",
+    "timestamp": "2026-04-10T14:11:54.075460+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 266,
-    "opportunities_found": 22,
+    "tokens_scored": 269,
+    "opportunities_found": 18,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.638,
-        "live_pnl_pct": 8.14
+        "current_price": 0.6535,
+        "live_pnl_pct": 10.76
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.305,
-        "live_pnl_pct": 10.91
+        "current_price": 0.28,
+        "live_pnl_pct": 1.82
       },
       {
         "signal_id": "12396cb3",
@@ -185,8 +185,8 @@
         "trough_price": 0.9275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.939,
-        "live_pnl_pct": 0.86
+        "current_price": 0.949,
+        "live_pnl_pct": 1.93
       },
       {
         "signal_id": "3133c5f7",
@@ -226,11 +226,56 @@
         "sl_fraction": 0.255,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.345,
+        "trough_price": 0.335,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.345,
+        "live_pnl_pct": 2.99
+      },
+      {
+        "signal_id": "b01a479a",
+        "timestamp": "2026-04-10T14:11:54.063803+00:00",
+        "status": "active",
+        "market_id": "1846224",
+        "condition_id": "",
+        "token_id": "71893431823762484482344895088109316830502468227783311541232122035567020578454",
+        "question": "Indian Premier League: Rajasthan Royals vs Royal Challengers Bangalore",
+        "outcome": "Royal Challengers Bangalore",
+        "slug": "cricipl-raj-roy-2026-04-10",
+        "category": "",
+        "resolution_date": "2026-04-17T10:00:00Z",
+        "entry_price": 0.475,
+        "min_entry_price": 0.465,
+        "max_entry_price": 0.489,
+        "tp_price": 0.6869,
+        "sl_price": 0.3325,
+        "tp_pct": 44.6,
+        "sl_pct": -30.0,
+        "expiry": "2026-04-17T10:00:00+00:00",
+        "edge_score": 33.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.2,
+          "dislocation": 17.45,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.1,
+        "days_to_close": 6,
+        "liquidity_usd": 100686.8093,
+        "volume_24h": 513133.81827899977,
+        "rationale": "Smart money 14/25 (2 whales) | Dislocation 17/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.404,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.335,
+        "current_price": 0.475,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2487,8 +2532,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 517,
-      "active_signals": 5,
+      "total_signals_issued": 518,
+      "active_signals": 6,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2525,36 +2570,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 70,
-      "coverage_pct": 26.3,
-      "avg_score": 8.38,
+      "tokens_scored": 269,
+      "tokens_with_signal": 66,
+      "coverage_pct": 24.5,
+      "avg_score": 8.39,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 153,
-      "coverage_pct": 57.5,
-      "avg_score": 12.03,
-      "max_score": 21.19,
+      "tokens_scored": 269,
+      "tokens_with_signal": 155,
+      "coverage_pct": 57.6,
+      "avg_score": 11.84,
+      "max_score": 21.18,
       "quality_traders": 50,
-      "markets_indexed": 4248
+      "markets_indexed": 4240
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 214,
-      "coverage_pct": 80.5,
-      "avg_score": 6.87,
-      "max_score": 15.0
+      "tokens_scored": 269,
+      "tokens_with_signal": 210,
+      "coverage_pct": 78.1,
+      "avg_score": 6.89,
+      "max_score": 17.45
     },
     "external": {
       "active": true,
-      "tokens_scored": 266,
-      "tokens_with_signal": 23,
-      "coverage_pct": 8.6,
-      "avg_score": 4.73,
+      "tokens_scored": 269,
+      "tokens_with_signal": 21,
+      "coverage_pct": 7.8,
+      "avg_score": 5.16,
       "max_score": 7.0
     }
   },
