@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-04-10T19:19:30.849391+00:00",
+    "timestamp": "2026-04-10T20:03:25.679387+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 252,
+    "tokens_scored": 261,
     "opportunities_found": 15,
     "engine_version": "4.0.0"
   },
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.682,
-        "live_pnl_pct": 15.59
+        "current_price": 0.695,
+        "live_pnl_pct": 17.8
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.235,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.28,
-        "live_pnl_pct": 1.82
+        "current_price": 0.285,
+        "live_pnl_pct": 3.64
       },
       {
         "signal_id": "5f3d9f7c",
@@ -140,8 +140,8 @@
         "trough_price": 0.9275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.9535,
-        "live_pnl_pct": 2.42
+        "current_price": 0.9545,
+        "live_pnl_pct": 2.52
       },
       {
         "signal_id": "d42f6c94",
@@ -181,12 +181,57 @@
         "sl_fraction": 0.33,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.405,
-        "trough_price": 0.335,
+        "peak_price": 0.435,
+        "trough_price": 0.305,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.385,
-        "live_pnl_pct": -4.94
+        "current_price": 0.305,
+        "live_pnl_pct": -24.69
+      },
+      {
+        "signal_id": "266db88d",
+        "timestamp": "2026-04-10T20:03:25.667590+00:00",
+        "status": "active",
+        "market_id": "1860409",
+        "condition_id": "",
+        "token_id": "7253239084039025643994405215269235389848977553079683219328303048282108903413",
+        "question": "Los Angeles Angels vs. Cincinnati Reds",
+        "outcome": "Cincinnati Reds",
+        "slug": "mlb-laa-cin-2026-04-10",
+        "category": "",
+        "resolution_date": "2026-04-17T22:45:00Z",
+        "entry_price": 0.605,
+        "min_entry_price": 0.59,
+        "max_entry_price": 0.626,
+        "tp_price": 0.765,
+        "sl_price": 0.445,
+        "tp_pct": 26.4,
+        "sl_pct": -26.4,
+        "expiry": "2026-04-17T22:45:00+00:00",
+        "edge_score": 33.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 23.32,
+          "dislocation": 12.29,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 7,
+        "liquidity_usd": 843623.7156,
+        "volume_24h": 547321.1404939999,
+        "rationale": "Smart money 23/25 (6 whales) | Dislocation 12/30 (velocity, vol spike)",
+        "tp_fraction": 0.405,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.605,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 522,
-      "active_signals": 4,
+      "total_signals_issued": 523,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2480,36 +2525,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 252,
-      "tokens_with_signal": 68,
-      "coverage_pct": 27.0,
-      "avg_score": 8.29,
+      "tokens_scored": 261,
+      "tokens_with_signal": 66,
+      "coverage_pct": 25.3,
+      "avg_score": 8.25,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 252,
-      "tokens_with_signal": 167,
-      "coverage_pct": 66.3,
-      "avg_score": 12.85,
-      "max_score": 23.44,
+      "tokens_scored": 261,
+      "tokens_with_signal": 172,
+      "coverage_pct": 65.9,
+      "avg_score": 12.73,
+      "max_score": 23.32,
       "quality_traders": 50,
-      "markets_indexed": 4050
+      "markets_indexed": 4064
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 252,
-      "tokens_with_signal": 183,
-      "coverage_pct": 72.6,
-      "avg_score": 7.45,
-      "max_score": 21.85
+      "tokens_scored": 261,
+      "tokens_with_signal": 200,
+      "coverage_pct": 76.6,
+      "avg_score": 7.49,
+      "max_score": 25.4
     },
     "external": {
       "active": true,
-      "tokens_scored": 252,
-      "tokens_with_signal": 19,
-      "coverage_pct": 7.5,
-      "avg_score": 3.84,
+      "tokens_scored": 261,
+      "tokens_with_signal": 17,
+      "coverage_pct": 6.5,
+      "avg_score": 4.13,
       "max_score": 7.0
     }
   },

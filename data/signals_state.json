@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.682,
-      "live_pnl_pct": 15.59
+      "current_price": 0.695,
+      "live_pnl_pct": 17.8
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,8 @@
       "trough_price": 0.235,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.28,
-      "live_pnl_pct": 1.82
+      "current_price": 0.285,
+      "live_pnl_pct": 3.64
     },
     {
       "signal_id": "5f3d9f7c",
@@ -132,8 +132,8 @@
       "trough_price": 0.9275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.9535,
-      "live_pnl_pct": 2.42
+      "current_price": 0.9545,
+      "live_pnl_pct": 2.52
     },
     {
       "signal_id": "d42f6c94",
@@ -173,12 +173,57 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.405,
-      "trough_price": 0.335,
+      "peak_price": 0.435,
+      "trough_price": 0.305,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.385,
-      "live_pnl_pct": -4.94
+      "current_price": 0.305,
+      "live_pnl_pct": -24.69
+    },
+    {
+      "signal_id": "266db88d",
+      "timestamp": "2026-04-10T20:03:25.667590+00:00",
+      "status": "active",
+      "market_id": "1860409",
+      "condition_id": "",
+      "token_id": "7253239084039025643994405215269235389848977553079683219328303048282108903413",
+      "question": "Los Angeles Angels vs. Cincinnati Reds",
+      "outcome": "Cincinnati Reds",
+      "slug": "mlb-laa-cin-2026-04-10",
+      "category": "",
+      "resolution_date": "2026-04-17T22:45:00Z",
+      "entry_price": 0.605,
+      "min_entry_price": 0.59,
+      "max_entry_price": 0.626,
+      "tp_price": 0.765,
+      "sl_price": 0.445,
+      "tp_pct": 26.4,
+      "sl_pct": -26.4,
+      "expiry": "2026-04-17T22:45:00+00:00",
+      "edge_score": 33.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.32,
+        "dislocation": 12.29,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 7,
+      "liquidity_usd": 843623.7156,
+      "volume_24h": 547321.1404939999,
+      "rationale": "Smart money 23/25 (6 whales) | Dislocation 12/30 (velocity, vol spike)",
+      "tp_fraction": 0.405,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.605,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9197,12 +9242,12 @@
     "1931521": "2026-04-10T19:19:30.831881+00:00"
   },
   "stats": {
-    "total_signals": 522,
+    "total_signals": 523,
     "total_wins": 237,
     "total_losses": 274,
     "total_expired": 7,
     "total_market_resolved": 112
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T19:19:30.839537+00:00"
+  "last_updated": "2026-04-10T20:03:25.669598+00:00"
 }
