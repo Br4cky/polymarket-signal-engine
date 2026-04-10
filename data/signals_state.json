@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.6305,
-      "live_pnl_pct": 6.86
+      "current_price": 0.6355,
+      "live_pnl_pct": 7.71
     },
     {
       "signal_id": "d1b5207d",
@@ -132,8 +132,8 @@
       "trough_price": 0.745,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.815,
-      "live_pnl_pct": 5.16
+      "current_price": 0.805,
+      "live_pnl_pct": 3.87
     },
     {
       "signal_id": "5f3d9f7c",
@@ -174,11 +174,56 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.9625,
-      "trough_price": 0.929,
+      "trough_price": 0.9275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.9425,
-      "live_pnl_pct": 1.24
+      "current_price": 0.937,
+      "live_pnl_pct": 0.64
+    },
+    {
+      "signal_id": "bf3ccea1",
+      "timestamp": "2026-04-10T11:41:58.765932+00:00",
+      "status": "active",
+      "market_id": "1919284",
+      "condition_id": "",
+      "token_id": "37060027026934705447616231995876280456665987131016503438526026478803998170996",
+      "question": "Upper Austria Ladies Linz: Jelena Ostapenko vs Gabriela Ruse",
+      "outcome": "Jelena Ostapenko",
+      "slug": "wta-ostapen-ruse-2026-04-10",
+      "category": "",
+      "resolution_date": "2026-04-17T11:00:00Z",
+      "entry_price": 0.69,
+      "min_entry_price": 0.675,
+      "max_entry_price": 0.72,
+      "tp_price": 0.8585,
+      "sl_price": 0.5215,
+      "tp_pct": 24.4,
+      "sl_pct": -24.4,
+      "expiry": "2026-04-17T11:00:00+00:00",
+      "edge_score": 30.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.65,
+        "dislocation": 8.0,
+        "external": 3.01
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 76566.1832,
+      "volume_24h": 106214.24371400001,
+      "rationale": "Smart money 19/25 (5 whales) | Dislocation 8/30 (vol spike) | External 3.0/15",
+      "tp_fraction": 0.544,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.69,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9198,12 +9243,12 @@
     "1928759": "2026-04-10T10:46:26.537644+00:00"
   },
   "stats": {
-    "total_signals": 515,
+    "total_signals": 516,
     "total_wins": 233,
     "total_losses": 271,
     "total_expired": 7,
     "total_market_resolved": 110
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T10:46:26.544569+00:00"
+  "last_updated": "2026-04-10T11:41:58.768580+00:00"
 }
