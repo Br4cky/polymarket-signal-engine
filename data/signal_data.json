@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-10T23:04:03.590776+00:00",
+    "timestamp": "2026-04-10T23:49:42.028617+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 241,
-    "opportunities_found": 17,
+    "tokens_scored": 283,
+    "opportunities_found": 21,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.6655,
-        "live_pnl_pct": 12.8
+        "current_price": 0.666,
+        "live_pnl_pct": 12.88
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.235,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.295,
-        "live_pnl_pct": 7.27
+        "current_price": 0.285,
+        "live_pnl_pct": 3.64
       },
       {
         "signal_id": "5f3d9f7c",
@@ -144,51 +144,6 @@
         "live_pnl_pct": 2.95
       },
       {
-        "signal_id": "266db88d",
-        "timestamp": "2026-04-10T20:03:25.667590+00:00",
-        "status": "active",
-        "market_id": "1860409",
-        "condition_id": "",
-        "token_id": "7253239084039025643994405215269235389848977553079683219328303048282108903413",
-        "question": "Los Angeles Angels vs. Cincinnati Reds",
-        "outcome": "Cincinnati Reds",
-        "slug": "mlb-laa-cin-2026-04-10",
-        "category": "",
-        "resolution_date": "2026-04-17T22:45:00Z",
-        "entry_price": 0.605,
-        "min_entry_price": 0.59,
-        "max_entry_price": 0.626,
-        "tp_price": 0.765,
-        "sl_price": 0.445,
-        "tp_pct": 26.4,
-        "sl_pct": -26.4,
-        "expiry": "2026-04-17T22:45:00+00:00",
-        "edge_score": 33.9,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 23.32,
-          "dislocation": 12.29,
-          "external": 0.0
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.7,
-        "days_to_close": 7,
-        "liquidity_usd": 843623.7156,
-        "volume_24h": 547321.1404939999,
-        "rationale": "Smart money 23/25 (6 whales) | Dislocation 12/30 (velocity, vol spike)",
-        "tp_fraction": 0.405,
-        "sl_fraction": 0.33,
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": 0.645,
-        "trough_price": 0.605,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.615,
-        "live_pnl_pct": 1.65
-      },
-      {
         "signal_id": "4177781d",
         "timestamp": "2026-04-10T23:04:03.577912+00:00",
         "status": "active",
@@ -226,60 +181,15 @@
         "sl_fraction": 0.192,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.695,
+        "trough_price": 0.675,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.675,
-        "live_pnl_pct": 0.0
+        "current_price": 0.695,
+        "live_pnl_pct": 2.96
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "268b6a78",
-        "timestamp": "2026-04-07T17:48:41.489498+00:00",
-        "status": "market_resolved",
-        "market_id": "1879539",
-        "condition_id": "",
-        "token_id": "90638493920584726374838880286387763424575110364975137000163175161547976187318",
-        "question": "Upper Austria Ladies Linz: Julia Grabher vs Alexandra Eala",
-        "outcome": "Julia Grabher",
-        "slug": "wta-grabher-eala-2026-04-07",
-        "category": "",
-        "resolution_date": "2026-04-14T08:00:00Z",
-        "entry_price": 0.265,
-        "min_entry_price": 0.255,
-        "max_entry_price": 0.279,
-        "tp_price": 0.6777,
-        "sl_price": 0.1974,
-        "tp_pct": 155.7,
-        "sl_pct": -25.5,
-        "expiry": "2026-04-14T08:00:00+00:00",
-        "edge_score": 33.0,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 20.53,
-          "dislocation": 8.0,
-          "external": 7.0
-        },
-        "convexity_band": "2x",
-        "potential_multiple": 3.8,
-        "days_to_close": 6,
-        "liquidity_usd": 151873.3793,
-        "volume_24h": 367608.10816099955,
-        "rationale": "Smart money 21/25 (5 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
-        "tp_fraction": 0.561,
-        "sl_fraction": 0.255,
-        "resolved_at": "2026-04-07T17:50:46+00:00",
-        "resolution_type": "market_resolved",
-        "peak_price": 0.265,
-        "trough_price": 0.0005,
-        "final_price": 0.0,
-        "hypothetical_pnl_pct": -100.0,
-        "current_price": 0.265,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "5a0c1138",
         "timestamp": "2026-04-07T18:46:05.902871+00:00",
@@ -2484,26 +2394,71 @@
         "hypothetical_pnl_pct": 4.24,
         "current_price": 0.915,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "266db88d",
+        "timestamp": "2026-04-10T20:03:25.667590+00:00",
+        "status": "sl_hit",
+        "market_id": "1860409",
+        "condition_id": "",
+        "token_id": "7253239084039025643994405215269235389848977553079683219328303048282108903413",
+        "question": "Los Angeles Angels vs. Cincinnati Reds",
+        "outcome": "Cincinnati Reds",
+        "slug": "mlb-laa-cin-2026-04-10",
+        "category": "",
+        "resolution_date": "2026-04-17T22:45:00Z",
+        "entry_price": 0.605,
+        "min_entry_price": 0.59,
+        "max_entry_price": 0.626,
+        "tp_price": 0.765,
+        "sl_price": 0.445,
+        "tp_pct": 26.4,
+        "sl_pct": -26.4,
+        "expiry": "2026-04-17T22:45:00+00:00",
+        "edge_score": 33.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 23.32,
+          "dislocation": 12.29,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 7,
+        "liquidity_usd": 843623.7156,
+        "volume_24h": 547321.1404939999,
+        "rationale": "Smart money 23/25 (6 whales) | Dislocation 12/30 (velocity, vol spike)",
+        "tp_fraction": 0.405,
+        "sl_fraction": 0.33,
+        "resolved_at": "2026-04-10T23:30:13+00:00",
+        "resolution_type": "sl_hit",
+        "peak_price": 0.645,
+        "trough_price": 0.175,
+        "final_price": 0.445,
+        "hypothetical_pnl_pct": -26.45,
+        "current_price": 0.615,
+        "live_pnl_pct": 1.65
       }
     ],
     "metrics": {
       "total_signals_issued": 525,
-      "active_signals": 5,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 108,
       "losses": 92,
       "market_resolved": 28,
       "win_rate": 0.54,
       "avg_win_pct": 32.34,
-      "avg_loss_pct": -42.13,
-      "ev_per_signal": -1.91,
+      "avg_loss_pct": -42.09,
+      "ev_per_signal": -1.89,
       "by_tier": {
         "high": {
           "total": 200,
           "wins": 108,
           "losses": 92,
           "win_rate": 0.54,
-          "avg_pnl": -1.91
+          "avg_pnl": -1.89
         },
         "medium": {
           "total": 0,
@@ -2525,36 +2480,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 58,
-      "coverage_pct": 24.1,
-      "avg_score": 8.06,
+      "tokens_scored": 283,
+      "tokens_with_signal": 64,
+      "coverage_pct": 22.6,
+      "avg_score": 8.41,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 158,
-      "coverage_pct": 65.6,
-      "avg_score": 13.63,
-      "max_score": 23.0,
+      "tokens_scored": 283,
+      "tokens_with_signal": 191,
+      "coverage_pct": 67.5,
+      "avg_score": 14.56,
+      "max_score": 23.37,
       "quality_traders": 50,
-      "markets_indexed": 4104
+      "markets_indexed": 4050
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 187,
-      "coverage_pct": 77.6,
-      "avg_score": 7.24,
-      "max_score": 27.0
+      "tokens_scored": 283,
+      "tokens_with_signal": 225,
+      "coverage_pct": 79.5,
+      "avg_score": 7.61,
+      "max_score": 25.77
     },
     "external": {
       "active": true,
-      "tokens_scored": 241,
-      "tokens_with_signal": 14,
-      "coverage_pct": 5.8,
-      "avg_score": 4.25,
+      "tokens_scored": 283,
+      "tokens_with_signal": 13,
+      "coverage_pct": 4.6,
+      "avg_score": 4.04,
       "max_score": 7.0
     }
   },
