@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.63,
-      "live_pnl_pct": 6.78
+      "current_price": 0.638,
+      "live_pnl_pct": 8.14
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,8 @@
       "trough_price": 0.275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.315,
-      "live_pnl_pct": 14.55
+      "current_price": 0.305,
+      "live_pnl_pct": 10.91
     },
     {
       "signal_id": "12396cb3",
@@ -177,8 +177,53 @@
       "trough_price": 0.929,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.9575,
-      "live_pnl_pct": 2.85
+      "current_price": 0.9555,
+      "live_pnl_pct": 2.63
+    },
+    {
+      "signal_id": "019c8760",
+      "timestamp": "2026-04-10T09:46:38.094853+00:00",
+      "status": "active",
+      "market_id": "1928759",
+      "condition_id": "",
+      "token_id": "15461628053841507933836721870426130032882638404534888229677596335982895234386",
+      "question": "Rolex Monte Carlo Masters: Joao Fonseca vs Alexander Zverev",
+      "outcome": "Joao Fonseca",
+      "slug": "atp-fonseca-zverev-2026-04-10",
+      "category": "",
+      "resolution_date": "2026-04-17T09:00:00Z",
+      "entry_price": 0.355,
+      "min_entry_price": 0.345,
+      "max_entry_price": 0.375,
+      "tp_price": 0.6253,
+      "sl_price": 0.2485,
+      "tp_pct": 76.1,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-17T09:00:00+00:00",
+      "edge_score": 37.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.32,
+        "dislocation": 14.13,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.8,
+      "days_to_close": 6,
+      "liquidity_usd": 46701.5557,
+      "volume_24h": 597843.3301860008,
+      "rationale": "Smart money 23/25 (8 whales) | Dislocation 14/30 (vol spike, trajectory)",
+      "tp_fraction": 0.419,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.355,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9200,12 +9245,12 @@
     "1844640": "2026-04-09T20:19:58.513546+00:00"
   },
   "stats": {
-    "total_signals": 514,
+    "total_signals": 515,
     "total_wins": 233,
     "total_losses": 270,
     "total_expired": 7,
     "total_market_resolved": 110
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T08:15:08.597872+00:00"
+  "last_updated": "2026-04-10T09:46:38.096823+00:00"
 }
