@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.6585,
-      "live_pnl_pct": 11.61
+      "current_price": 0.6295,
+      "live_pnl_pct": 6.69
     },
     {
       "signal_id": "d1b5207d",
@@ -87,8 +87,8 @@
       "trough_price": 0.235,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.295,
-      "live_pnl_pct": 7.27
+      "current_price": 0.325,
+      "live_pnl_pct": 18.18
     },
     {
       "signal_id": "5f3d9f7c",
@@ -132,8 +132,8 @@
       "trough_price": 0.9275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.9545,
-      "live_pnl_pct": 2.52
+      "current_price": 0.9575,
+      "live_pnl_pct": 2.85
     },
     {
       "signal_id": "3133c5f7",
@@ -173,12 +173,57 @@
       "sl_fraction": 0.255,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.635,
-      "trough_price": 0.335,
+      "peak_price": 0.7,
+      "trough_price": 0.295,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.375,
-      "live_pnl_pct": 11.94
+      "current_price": 0.295,
+      "live_pnl_pct": -11.94
+    },
+    {
+      "signal_id": "a3215608",
+      "timestamp": "2026-04-10T17:15:10.902316+00:00",
+      "status": "active",
+      "market_id": "1931502",
+      "condition_id": "",
+      "token_id": "90924865940595549729825596846726922721730405555160418492431175188202615990055",
+      "question": "Upper Austria Ladies Linz: Anastasia Potapova vs Lilli Tagger",
+      "outcome": "Anastasia Potapova",
+      "slug": "wta-potapov-tagger-2026-04-10",
+      "category": "",
+      "resolution_date": "2026-04-17T14:00:00Z",
+      "entry_price": 0.355,
+      "min_entry_price": 0.345,
+      "max_entry_price": 0.375,
+      "tp_price": 0.7179,
+      "sl_price": 0.2645,
+      "tp_pct": 102.2,
+      "sl_pct": -25.5,
+      "expiry": "2026-04-17T14:00:00+00:00",
+      "edge_score": 33.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.57,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.8,
+      "days_to_close": 6,
+      "liquidity_usd": 84540.5525,
+      "volume_24h": 231159.27138,
+      "rationale": "Smart money 20/25 (5 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.563,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.355,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9198,12 +9243,12 @@
     "1846224": "2026-04-10T16:15:03.543849+00:00"
   },
   "stats": {
-    "total_signals": 519,
+    "total_signals": 520,
     "total_wins": 235,
     "total_losses": 273,
     "total_expired": 7,
     "total_market_resolved": 110
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-10T16:15:03.551241+00:00"
+  "last_updated": "2026-04-10T17:15:10.905140+00:00"
 }
