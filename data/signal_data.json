@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-11T10:04:56.648799+00:00",
+    "timestamp": "2026-04-11T10:54:10.589054+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 236,
-    "opportunities_found": 11,
+    "tokens_scored": 248,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.691,
-        "live_pnl_pct": 17.12
+        "current_price": 0.679,
+        "live_pnl_pct": 15.08
       },
       {
         "signal_id": "d1b5207d",
@@ -140,8 +140,8 @@
         "trough_price": 0.9275,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.968,
-        "live_pnl_pct": 3.97
+        "current_price": 0.9675,
+        "live_pnl_pct": 3.92
       },
       {
         "signal_id": "4177781d",
@@ -187,6 +187,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.695,
         "live_pnl_pct": 2.96
+      },
+      {
+        "signal_id": "549e4646",
+        "timestamp": "2026-04-11T10:54:10.575697+00:00",
+        "status": "active",
+        "market_id": "1938110",
+        "condition_id": "",
+        "token_id": "25616421805826350413584016530881276541681108585231232595632121379942092488104",
+        "question": "Madrid: Polina Kudermetova vs Lisa Pigato",
+        "outcome": "Lisa Pigato",
+        "slug": "wta-kuderme-pigato-2026-04-11",
+        "category": "",
+        "resolution_date": "2026-04-18T09:00:00Z",
+        "entry_price": 0.93,
+        "min_entry_price": 0.915,
+        "max_entry_price": 0.96,
+        "tp_price": 0.9693,
+        "sl_price": 0.8907,
+        "tp_pct": 4.2,
+        "sl_pct": -4.2,
+        "expiry": "2026-04-18T09:00:00+00:00",
+        "edge_score": 33.0,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 19.71,
+          "dislocation": 8.0,
+          "external": 5.38
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 49897.12594,
+        "volume_24h": 122491.85692599986,
+        "rationale": "Smart money 20/25 (4 whales) | Dislocation 8/30 (vol spike) | External 5.4/15",
+        "tp_fraction": 0.561,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.93,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 526,
-      "active_signals": 4,
+      "total_signals_issued": 527,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 108,
       "losses": 92,
@@ -2480,36 +2525,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 236,
+      "tokens_scored": 248,
       "tokens_with_signal": 56,
-      "coverage_pct": 23.7,
+      "coverage_pct": 22.6,
       "avg_score": 8.2,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 133,
-      "coverage_pct": 56.4,
-      "avg_score": 12.63,
-      "max_score": 21.68,
+      "tokens_scored": 248,
+      "tokens_with_signal": 151,
+      "coverage_pct": 60.9,
+      "avg_score": 12.58,
+      "max_score": 21.92,
       "quality_traders": 50,
-      "markets_indexed": 4270
+      "markets_indexed": 4434
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 176,
-      "coverage_pct": 74.6,
-      "avg_score": 7.33,
-      "max_score": 21.76
+      "tokens_scored": 248,
+      "tokens_with_signal": 193,
+      "coverage_pct": 77.8,
+      "avg_score": 7.64,
+      "max_score": 27.5
     },
     "external": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 19,
-      "coverage_pct": 8.1,
-      "avg_score": 3.35,
+      "tokens_scored": 248,
+      "tokens_with_signal": 22,
+      "coverage_pct": 8.9,
+      "avg_score": 3.38,
       "max_score": 7.0
     }
   },

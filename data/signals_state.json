@@ -42,8 +42,8 @@
       "trough_price": 0.457,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.691,
-      "live_pnl_pct": 17.12
+      "current_price": 0.679,
+      "live_pnl_pct": 15.08
     },
     {
       "signal_id": "d1b5207d",
@@ -132,8 +132,8 @@
       "trough_price": 0.9275,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.968,
-      "live_pnl_pct": 3.97
+      "current_price": 0.9675,
+      "live_pnl_pct": 3.92
     },
     {
       "signal_id": "4177781d",
@@ -179,6 +179,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.695,
       "live_pnl_pct": 2.96
+    },
+    {
+      "signal_id": "549e4646",
+      "timestamp": "2026-04-11T10:54:10.575697+00:00",
+      "status": "active",
+      "market_id": "1938110",
+      "condition_id": "",
+      "token_id": "25616421805826350413584016530881276541681108585231232595632121379942092488104",
+      "question": "Madrid: Polina Kudermetova vs Lisa Pigato",
+      "outcome": "Lisa Pigato",
+      "slug": "wta-kuderme-pigato-2026-04-11",
+      "category": "",
+      "resolution_date": "2026-04-18T09:00:00Z",
+      "entry_price": 0.93,
+      "min_entry_price": 0.915,
+      "max_entry_price": 0.96,
+      "tp_price": 0.9693,
+      "sl_price": 0.8907,
+      "tp_pct": 4.2,
+      "sl_pct": -4.2,
+      "expiry": "2026-04-18T09:00:00+00:00",
+      "edge_score": 33.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.71,
+        "dislocation": 8.0,
+        "external": 5.38
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 49897.12594,
+      "volume_24h": 122491.85692599986,
+      "rationale": "Smart money 20/25 (4 whales) | Dislocation 8/30 (vol spike) | External 5.4/15",
+      "tp_fraction": 0.561,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.93,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9197,12 +9242,12 @@
     "1860409": "2026-04-10T23:49:42.009721+00:00"
   },
   "stats": {
-    "total_signals": 526,
+    "total_signals": 527,
     "total_wins": 240,
     "total_losses": 275,
     "total_expired": 7,
     "total_market_resolved": 112
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-11T10:04:56.638976+00:00"
+  "last_updated": "2026-04-11T10:54:10.579208+00:00"
 }
