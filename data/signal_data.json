@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-11T22:59:52.368681+00:00",
+    "timestamp": "2026-04-11T23:44:28.441666+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 236,
-    "opportunities_found": 24,
+    "tokens_scored": 245,
+    "opportunities_found": 20,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.724,
-        "live_pnl_pct": 22.71
+        "current_price": 0.7275,
+        "live_pnl_pct": 23.31
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.225,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.265,
-        "live_pnl_pct": -3.64
+        "current_price": 0.255,
+        "live_pnl_pct": -7.27
       },
       {
         "signal_id": "5f3d9f7c",
@@ -144,51 +144,6 @@
         "live_pnl_pct": 4.03
       },
       {
-        "signal_id": "c9082502",
-        "timestamp": "2026-04-11T22:59:52.354287+00:00",
-        "status": "active",
-        "market_id": "1877591",
-        "condition_id": "",
-        "token_id": "37695348339828914639361433903232537051142347356879978396050377064706667514723",
-        "question": "Athletics vs. New York Mets",
-        "outcome": "Athletics",
-        "slug": "mlb-oak-nym-2026-04-11",
-        "category": "",
-        "resolution_date": "2026-04-18T20:10:00Z",
-        "entry_price": 0.7105,
-        "min_entry_price": 0.6955,
-        "max_entry_price": 0.7405,
-        "tp_price": 0.8426,
-        "sl_price": 0.5784,
-        "tp_pct": 18.6,
-        "sl_pct": -18.6,
-        "expiry": "2026-04-18T20:10:00+00:00",
-        "edge_score": 45.6,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 23.34,
-          "dislocation": 20.97,
-          "external": 0.0
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.4,
-        "days_to_close": 6,
-        "liquidity_usd": 30253.18957,
-        "volume_24h": 464448.15172199975,
-        "rationale": "Smart money 23/25 (7 whales) | Dislocation 21/30 (velocity, vol spike, trajectory)",
-        "tp_fraction": 0.456,
-        "sl_fraction": 0.3,
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.7105,
-        "live_pnl_pct": 0.0
-      },
-      {
         "signal_id": "303bd0e9",
         "timestamp": "2026-04-11T22:59:52.354699+00:00",
         "status": "active",
@@ -226,60 +181,15 @@
         "sl_fraction": 0.24,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.205,
+        "trough_price": 0.195,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.195,
-        "live_pnl_pct": 0.0
+        "current_price": 0.205,
+        "live_pnl_pct": 5.13
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "1eb071ef",
-        "timestamp": "2026-04-08T14:29:15.232764+00:00",
-        "status": "sl_hit",
-        "market_id": "1896754",
-        "condition_id": "",
-        "token_id": "45028053184370489600367941499525240823650426841993469753007873020637284300423",
-        "question": "Madrid: Oksana Selekhmeteva vs Selena Janicijevic",
-        "outcome": "Oksana Selekhmeteva",
-        "slug": "wta-selekhm-janicij-2026-04-07",
-        "category": "",
-        "resolution_date": "2026-04-14T14:30:00Z",
-        "entry_price": 0.58,
-        "min_entry_price": 0.565,
-        "max_entry_price": 0.61,
-        "tp_price": 0.8096,
-        "sl_price": 0.4321,
-        "tp_pct": 39.6,
-        "sl_pct": -25.5,
-        "expiry": "2026-04-14T14:30:00+00:00",
-        "edge_score": 30.6,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 22.05,
-          "dislocation": 8.0,
-          "external": 1.45
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.7,
-        "days_to_close": 6,
-        "liquidity_usd": 46123.0756,
-        "volume_24h": 214711.58891999943,
-        "rationale": "Smart money 22/25 (4 whales) | Dislocation 8/30 (vol spike) | External 1.4/15",
-        "tp_fraction": 0.547,
-        "sl_fraction": 0.255,
-        "resolved_at": "2026-04-08T14:30:56+00:00",
-        "resolution_type": "sl_hit",
-        "peak_price": 0.9995,
-        "trough_price": 0.255,
-        "final_price": 0.4321,
-        "hypothetical_pnl_pct": -25.5,
-        "current_price": 0.58,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "19afeddc",
         "timestamp": "2026-04-08T16:05:08.063692+00:00",
@@ -2484,26 +2394,71 @@
         "hypothetical_pnl_pct": -100.0,
         "current_price": 0.215,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "c9082502",
+        "timestamp": "2026-04-11T22:59:52.354287+00:00",
+        "status": "tp_hit",
+        "market_id": "1877591",
+        "condition_id": "",
+        "token_id": "37695348339828914639361433903232537051142347356879978396050377064706667514723",
+        "question": "Athletics vs. New York Mets",
+        "outcome": "Athletics",
+        "slug": "mlb-oak-nym-2026-04-11",
+        "category": "",
+        "resolution_date": "2026-04-18T20:10:00Z",
+        "entry_price": 0.7105,
+        "min_entry_price": 0.6955,
+        "max_entry_price": 0.7405,
+        "tp_price": 0.8426,
+        "sl_price": 0.5784,
+        "tp_pct": 18.6,
+        "sl_pct": -18.6,
+        "expiry": "2026-04-18T20:10:00+00:00",
+        "edge_score": 45.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 23.34,
+          "dislocation": 20.97,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.4,
+        "days_to_close": 6,
+        "liquidity_usd": 30253.18957,
+        "volume_24h": 464448.15172199975,
+        "rationale": "Smart money 23/25 (7 whales) | Dislocation 21/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.456,
+        "sl_fraction": 0.3,
+        "resolved_at": "2026-04-11T23:10:49+00:00",
+        "resolution_type": "tp_hit",
+        "peak_price": 0.9995,
+        "trough_price": 0.7105,
+        "final_price": 0.8426,
+        "hypothetical_pnl_pct": 18.59,
+        "current_price": 0.7105,
+        "live_pnl_pct": 0.0
       }
     ],
     "metrics": {
       "total_signals_issued": 538,
-      "active_signals": 5,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 109,
       "losses": 91,
       "market_resolved": 28,
       "win_rate": 0.545,
-      "avg_win_pct": 31.99,
+      "avg_win_pct": 32.01,
       "avg_loss_pct": -41.97,
-      "ev_per_signal": -1.66,
+      "ev_per_signal": -1.65,
       "by_tier": {
         "high": {
           "total": 200,
           "wins": 109,
           "losses": 91,
           "win_rate": 0.545,
-          "avg_pnl": -1.66
+          "avg_pnl": -1.65
         },
         "medium": {
           "total": 0,
@@ -2525,36 +2480,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 49,
-      "coverage_pct": 20.8,
-      "avg_score": 7.99,
+      "tokens_scored": 245,
+      "tokens_with_signal": 47,
+      "coverage_pct": 19.2,
+      "avg_score": 7.93,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 156,
+      "tokens_scored": 245,
+      "tokens_with_signal": 162,
       "coverage_pct": 66.1,
-      "avg_score": 13.49,
-      "max_score": 24.52,
+      "avg_score": 13.7,
+      "max_score": 24.42,
       "quality_traders": 50,
-      "markets_indexed": 4314
+      "markets_indexed": 4302
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 171,
-      "coverage_pct": 72.5,
-      "avg_score": 7.94,
-      "max_score": 27.96
+      "tokens_scored": 245,
+      "tokens_with_signal": 179,
+      "coverage_pct": 73.1,
+      "avg_score": 7.75,
+      "max_score": 28.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 236,
-      "tokens_with_signal": 18,
-      "coverage_pct": 7.6,
-      "avg_score": 3.26,
+      "tokens_scored": 245,
+      "tokens_with_signal": 22,
+      "coverage_pct": 9.0,
+      "avg_score": 3.15,
       "max_score": 7.0
     }
   },
