@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-11T15:10:19.920331+00:00",
+    "timestamp": "2026-04-11T15:54:36.951239+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 234,
-    "opportunities_found": 10,
+    "tokens_scored": 222,
+    "opportunities_found": 12,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7185,
-        "live_pnl_pct": 21.78
+        "current_price": 0.721,
+        "live_pnl_pct": 22.2
       },
       {
         "signal_id": "d1b5207d",
@@ -95,8 +95,8 @@
         "trough_price": 0.235,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.235,
-        "live_pnl_pct": -14.55
+        "current_price": 0.25,
+        "live_pnl_pct": -9.09
       },
       {
         "signal_id": "5f3d9f7c",
@@ -185,8 +185,53 @@
         "trough_price": 0.675,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.69,
-        "live_pnl_pct": 2.22
+        "current_price": 0.695,
+        "live_pnl_pct": 2.96
+      },
+      {
+        "signal_id": "de17f7bc",
+        "timestamp": "2026-04-11T15:54:36.938201+00:00",
+        "status": "active",
+        "market_id": "1862678",
+        "condition_id": "",
+        "token_id": "20419820857513945432494428949205329164283425496033025101422550334134195227358",
+        "question": "Indian Premier League: Chennai Super Kings vs Delhi Capitals",
+        "outcome": "Chennai Super Kings",
+        "slug": "cricipl-che-del-2026-04-11",
+        "category": "",
+        "resolution_date": "2026-04-18T10:00:00Z",
+        "entry_price": 0.655,
+        "min_entry_price": 0.64,
+        "max_entry_price": 0.676,
+        "tp_price": 0.805,
+        "sl_price": 0.505,
+        "tp_pct": 22.9,
+        "sl_pct": -22.9,
+        "expiry": "2026-04-18T10:00:00+00:00",
+        "edge_score": 40.7,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 11.9,
+          "dislocation": 24.35,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.5,
+        "days_to_close": 6,
+        "liquidity_usd": 194408.9817,
+        "volume_24h": 504802.02339899866,
+        "rationale": "Smart money 12/25 (1 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.435,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.655,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 530,
-      "active_signals": 4,
+      "total_signals_issued": 531,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 109,
       "losses": 91,
@@ -2480,37 +2525,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 234,
-      "tokens_with_signal": 47,
-      "coverage_pct": 20.1,
-      "avg_score": 7.82,
+      "tokens_scored": 222,
+      "tokens_with_signal": 45,
+      "coverage_pct": 20.3,
+      "avg_score": 7.75,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 234,
-      "tokens_with_signal": 162,
-      "coverage_pct": 69.2,
-      "avg_score": 13.2,
+      "tokens_scored": 222,
+      "tokens_with_signal": 149,
+      "coverage_pct": 67.1,
+      "avg_score": 12.83,
       "max_score": 23.43,
       "quality_traders": 50,
-      "markets_indexed": 4334
+      "markets_indexed": 4326
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 234,
-      "tokens_with_signal": 174,
-      "coverage_pct": 74.4,
-      "avg_score": 8.14,
-      "max_score": 27.69
+      "tokens_scored": 222,
+      "tokens_with_signal": 162,
+      "coverage_pct": 73.0,
+      "avg_score": 8.24,
+      "max_score": 25.62
     },
     "external": {
       "active": true,
-      "tokens_scored": 234,
-      "tokens_with_signal": 17,
-      "coverage_pct": 7.3,
-      "avg_score": 2.72,
-      "max_score": 5.66
+      "tokens_scored": 222,
+      "tokens_with_signal": 15,
+      "coverage_pct": 6.8,
+      "avg_score": 2.33,
+      "max_score": 4.16
     }
   },
   "calibration": {
