@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-11T23:44:28.441666+00:00",
+    "timestamp": "2026-04-12T00:11:43.467646+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 245,
-    "opportunities_found": 20,
+    "tokens_scored": 244,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.457,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7275,
-        "live_pnl_pct": 23.31
+        "current_price": 0.7255,
+        "live_pnl_pct": 22.97
       },
       {
         "signal_id": "d1b5207d",
@@ -2480,36 +2480,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 245,
-      "tokens_with_signal": 47,
-      "coverage_pct": 19.2,
+      "tokens_scored": 244,
+      "tokens_with_signal": 46,
+      "coverage_pct": 18.9,
       "avg_score": 7.93,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 245,
-      "tokens_with_signal": 162,
-      "coverage_pct": 66.1,
-      "avg_score": 13.7,
-      "max_score": 24.42,
+      "tokens_scored": 244,
+      "tokens_with_signal": 166,
+      "coverage_pct": 68.0,
+      "avg_score": 13.45,
+      "max_score": 23.35,
       "quality_traders": 50,
-      "markets_indexed": 4302
+      "markets_indexed": 4308
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 245,
-      "tokens_with_signal": 179,
-      "coverage_pct": 73.1,
-      "avg_score": 7.75,
-      "max_score": 28.0
+      "tokens_scored": 244,
+      "tokens_with_signal": 177,
+      "coverage_pct": 72.5,
+      "avg_score": 7.54,
+      "max_score": 25.44
     },
     "external": {
       "active": true,
-      "tokens_scored": 245,
-      "tokens_with_signal": 22,
-      "coverage_pct": 9.0,
-      "avg_score": 3.15,
+      "tokens_scored": 244,
+      "tokens_with_signal": 23,
+      "coverage_pct": 9.4,
+      "avg_score": 3.35,
       "max_score": 7.0
     }
   },
