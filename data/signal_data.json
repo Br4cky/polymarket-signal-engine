@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-04-12T22:54:42.763141+00:00",
+    "timestamp": "2026-04-12T23:44:51.157519+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 232,
+    "tokens_scored": 258,
     "opportunities_found": 10,
     "engine_version": "4.0.0"
   },
@@ -50,8 +50,8 @@
         "trough_price": 0.185,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.215,
-        "live_pnl_pct": 10.26
+        "current_price": 0.205,
+        "live_pnl_pct": 5.13
       },
       {
         "signal_id": "f6559694",
@@ -137,11 +137,56 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.3,
-        "trough_price": 0.275,
+        "trough_price": 0.245,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.29,
-        "live_pnl_pct": 5.45
+        "current_price": 0.255,
+        "live_pnl_pct": -7.27
+      },
+      {
+        "signal_id": "256e1f94",
+        "timestamp": "2026-04-12T23:44:51.146484+00:00",
+        "status": "active",
+        "market_id": "1890656",
+        "condition_id": "",
+        "token_id": "36348988882210654327793333821373148284800969268104550207011578943670467241135",
+        "question": "Chicago White Sox vs. Kansas City Royals",
+        "outcome": "Chicago White Sox",
+        "slug": "mlb-cws-kc-2026-04-12",
+        "category": "",
+        "resolution_date": "2026-04-19T18:10:00Z",
+        "entry_price": 0.725,
+        "min_entry_price": 0.71,
+        "max_entry_price": 0.746,
+        "tp_price": 0.8482,
+        "sl_price": 0.6018,
+        "tp_pct": 17.0,
+        "sl_pct": -17.0,
+        "expiry": "2026-04-19T18:10:00+00:00",
+        "edge_score": 43.7,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 23.12,
+          "dislocation": 20.58,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.4,
+        "days_to_close": 6,
+        "liquidity_usd": 108673.0961,
+        "volume_24h": 753454.8557269992,
+        "rationale": "Smart money 23/25 (9 whales) | Dislocation 21/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.448,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.725,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2397,8 +2442,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 550,
-      "active_signals": 3,
+      "total_signals_issued": 551,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 110,
       "losses": 90,
@@ -2435,36 +2480,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 38,
-      "coverage_pct": 16.4,
-      "avg_score": 7.89,
+      "tokens_scored": 258,
+      "tokens_with_signal": 41,
+      "coverage_pct": 15.9,
+      "avg_score": 7.86,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 143,
-      "coverage_pct": 61.6,
-      "avg_score": 14.55,
-      "max_score": 24.38,
+      "tokens_scored": 258,
+      "tokens_with_signal": 148,
+      "coverage_pct": 57.4,
+      "avg_score": 14.8,
+      "max_score": 24.27,
       "quality_traders": 50,
-      "markets_indexed": 4456
+      "markets_indexed": 4344
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 190,
-      "coverage_pct": 81.9,
-      "avg_score": 8.14,
-      "max_score": 24.79
+      "tokens_scored": 258,
+      "tokens_with_signal": 210,
+      "coverage_pct": 81.4,
+      "avg_score": 7.77,
+      "max_score": 25.67
     },
     "external": {
       "active": true,
-      "tokens_scored": 232,
-      "tokens_with_signal": 7,
-      "coverage_pct": 3.0,
-      "avg_score": 2.29,
+      "tokens_scored": 258,
+      "tokens_with_signal": 6,
+      "coverage_pct": 2.3,
+      "avg_score": 2.39,
       "max_score": 4.2
     }
   },
