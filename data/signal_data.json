@@ -1,58 +1,13 @@
 {
   "metadata": {
-    "timestamp": "2026-04-13T01:15:31.254335+00:00",
+    "timestamp": "2026-04-13T04:37:07.202663+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 238,
-    "opportunities_found": 7,
+    "tokens_scored": 216,
+    "opportunities_found": 9,
     "engine_version": "4.0.0"
   },
   "signals": {
     "active": [
-      {
-        "signal_id": "303bd0e9",
-        "timestamp": "2026-04-11T22:59:52.354699+00:00",
-        "status": "active",
-        "market_id": "1891045",
-        "condition_id": "",
-        "token_id": "105996910047701493251330110675593189381920168501202228596450727040123025647647",
-        "question": "Nuggets vs. Spurs",
-        "outcome": "Nuggets",
-        "slug": "nba-den-sas-2026-04-12",
-        "category": "",
-        "resolution_date": "2026-04-13T00:30:00Z",
-        "entry_price": 0.195,
-        "min_entry_price": 0.185,
-        "max_entry_price": 0.215,
-        "tp_price": 0.5454,
-        "sl_price": 0.1482,
-        "tp_pct": 179.7,
-        "sl_pct": -24.0,
-        "expiry": "2026-04-13T00:30:00+00:00",
-        "edge_score": 40.8,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 15.5,
-          "dislocation": 22.04,
-          "external": 0.0
-        },
-        "convexity_band": "5x",
-        "potential_multiple": 5.1,
-        "days_to_close": 1,
-        "liquidity_usd": 93221.4295,
-        "volume_24h": 514837.33417699905,
-        "rationale": "Smart money 16/25 (3 whales) | Dislocation 22/30 (velocity, vol spike, trajectory)",
-        "tp_fraction": 0.435,
-        "sl_fraction": 0.24,
-        "resolved_at": null,
-        "resolution_type": null,
-        "peak_price": 0.365,
-        "trough_price": 0.185,
-        "final_price": null,
-        "hypothetical_pnl_pct": null,
-        "current_price": 0.34,
-        "live_pnl_pct": 74.36
-      },
       {
         "signal_id": "f6559694",
         "timestamp": "2026-04-12T03:53:10.401087+00:00",
@@ -95,8 +50,8 @@
         "trough_price": 0.885,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.915,
-        "live_pnl_pct": 0.0
+        "current_price": 0.925,
+        "live_pnl_pct": 1.09
       },
       {
         "signal_id": "2f6ebdd9",
@@ -140,56 +95,11 @@
         "trough_price": 0.245,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.28,
-        "live_pnl_pct": 1.82
+        "current_price": 0.275,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
-      {
-        "signal_id": "5e52ee0e",
-        "timestamp": "2026-04-09T14:01:06.048688+00:00",
-        "status": "tp_hit",
-        "market_id": "1919269",
-        "condition_id": "",
-        "token_id": "77664109793197211047821044731695697480289028919513551316402345217716460692337",
-        "question": "Rolex Monte Carlo Masters: Jiri Lehecka vs Alexander Bublik",
-        "outcome": "Alexander Bublik",
-        "slug": "atp-lehecka-bublik-2026-04-09",
-        "category": "",
-        "resolution_date": "2026-04-16T12:00:00Z",
-        "entry_price": 0.735,
-        "min_entry_price": 0.72,
-        "max_entry_price": 0.756,
-        "tp_price": 0.9048,
-        "sl_price": 0.5652,
-        "tp_pct": 23.1,
-        "sl_pct": -23.1,
-        "expiry": "2026-04-16T12:00:00+00:00",
-        "edge_score": 45.9,
-        "edge_tier": "high",
-        "layer_scores": {
-          "structural": 0.0,
-          "smart_money": 18.74,
-          "dislocation": 20.61,
-          "external": 4.78
-        },
-        "convexity_band": "yield",
-        "potential_multiple": 1.4,
-        "days_to_close": 6,
-        "liquidity_usd": 141294.9904,
-        "volume_24h": 552603.3709570003,
-        "rationale": "Smart money 19/25 (6 whales) | Dislocation 21/30 (velocity, vol spike, trajectory) | External 4.8/15",
-        "tp_fraction": 0.641,
-        "sl_fraction": 0.3,
-        "resolved_at": "2026-04-09T14:20:42+00:00",
-        "resolution_type": "tp_hit",
-        "peak_price": 0.9995,
-        "trough_price": 0.735,
-        "final_price": 0.9048,
-        "hypothetical_pnl_pct": 23.1,
-        "current_price": 0.735,
-        "live_pnl_pct": 0.0
-      },
       {
         "signal_id": "30a5b2a3",
         "timestamp": "2026-04-09T15:31:21.928461+00:00",
@@ -2394,26 +2304,71 @@
         "hypothetical_pnl_pct": 16.99,
         "current_price": 0.725,
         "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "303bd0e9",
+        "timestamp": "2026-04-11T22:59:52.354699+00:00",
+        "status": "tp_hit",
+        "market_id": "1891045",
+        "condition_id": "",
+        "token_id": "105996910047701493251330110675593189381920168501202228596450727040123025647647",
+        "question": "Nuggets vs. Spurs",
+        "outcome": "Nuggets",
+        "slug": "nba-den-sas-2026-04-12",
+        "category": "",
+        "resolution_date": "2026-04-13T00:30:00Z",
+        "entry_price": 0.195,
+        "min_entry_price": 0.185,
+        "max_entry_price": 0.215,
+        "tp_price": 0.5454,
+        "sl_price": 0.1482,
+        "tp_pct": 179.7,
+        "sl_pct": -24.0,
+        "expiry": "2026-04-13T00:30:00+00:00",
+        "edge_score": 40.8,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 15.5,
+          "dislocation": 22.04,
+          "external": 0.0
+        },
+        "convexity_band": "5x",
+        "potential_multiple": 5.1,
+        "days_to_close": 1,
+        "liquidity_usd": 93221.4295,
+        "volume_24h": 514837.33417699905,
+        "rationale": "Smart money 16/25 (3 whales) | Dislocation 22/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.435,
+        "sl_fraction": 0.24,
+        "resolved_at": "2026-04-13T01:40:50+00:00",
+        "resolution_type": "tp_hit",
+        "peak_price": 0.9995,
+        "trough_price": 0.185,
+        "final_price": 0.5454,
+        "hypothetical_pnl_pct": 179.69,
+        "current_price": 0.34,
+        "live_pnl_pct": 74.36
       }
     ],
     "metrics": {
       "total_signals_issued": 551,
-      "active_signals": 3,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 111,
       "losses": 89,
       "market_resolved": 28,
       "win_rate": 0.555,
-      "avg_win_pct": 32.4,
+      "avg_win_pct": 33.26,
       "avg_loss_pct": -42.58,
-      "ev_per_signal": -0.97,
+      "ev_per_signal": -0.49,
       "by_tier": {
         "high": {
           "total": 200,
           "wins": 111,
           "losses": 89,
           "win_rate": 0.555,
-          "avg_pnl": -0.97
+          "avg_pnl": -0.49
         },
         "medium": {
           "total": 0,
@@ -2435,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 43,
-      "coverage_pct": 18.1,
-      "avg_score": 7.83,
+      "tokens_scored": 216,
+      "tokens_with_signal": 47,
+      "coverage_pct": 21.8,
+      "avg_score": 7.79,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 121,
-      "coverage_pct": 50.8,
-      "avg_score": 14.46,
-      "max_score": 23.6,
+      "tokens_scored": 216,
+      "tokens_with_signal": 103,
+      "coverage_pct": 47.7,
+      "avg_score": 11.65,
+      "max_score": 20.1,
       "quality_traders": 50,
-      "markets_indexed": 4492
+      "markets_indexed": 4546
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 238,
-      "tokens_with_signal": 190,
-      "coverage_pct": 79.8,
-      "avg_score": 7.58,
-      "max_score": 26.0
+      "tokens_scored": 216,
+      "tokens_with_signal": 169,
+      "coverage_pct": 78.2,
+      "avg_score": 6.79,
+      "max_score": 17.26
     },
     "external": {
       "active": true,
-      "tokens_scored": 238,
+      "tokens_scored": 216,
       "tokens_with_signal": 3,
-      "coverage_pct": 1.3,
-      "avg_score": 3.08,
-      "max_score": 3.92
+      "coverage_pct": 1.4,
+      "avg_score": 4.13,
+      "max_score": 5.34
     }
   },
   "calibration": {
