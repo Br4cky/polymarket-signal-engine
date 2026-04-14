@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.245,
-      "trough_price": 0.185,
+      "trough_price": 0.175,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.185,
-      "live_pnl_pct": -24.49
+      "current_price": 0.175,
+      "live_pnl_pct": -28.57
     },
     {
       "signal_id": "9dbcbd5d",
@@ -89,6 +89,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.585,
       "live_pnl_pct": 2.63
+    },
+    {
+      "signal_id": "5fd1c520",
+      "timestamp": "2026-04-14T21:41:37.481999+00:00",
+      "status": "active",
+      "market_id": "1918061",
+      "condition_id": "",
+      "token_id": "38959719301937978601085279193950254185282108605966094436979998950232837360690",
+      "question": "Chicago Cubs vs. Philadelphia Phillies",
+      "outcome": "Chicago Cubs",
+      "slug": "mlb-chc-phi-2026-04-14",
+      "category": "",
+      "resolution_date": "2026-04-21T22:40:00Z",
+      "entry_price": 0.43,
+      "min_entry_price": 0.42,
+      "max_entry_price": 0.444,
+      "tp_price": 0.6538,
+      "sl_price": 0.2881,
+      "tp_pct": 52.1,
+      "sl_pct": -33.0,
+      "expiry": "2026-04-21T22:40:00+00:00",
+      "edge_score": 31.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.7,
+        "dislocation": 10.0,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.3,
+      "days_to_close": 7,
+      "liquidity_usd": 488282.6962,
+      "volume_24h": 605426.6205329994,
+      "rationale": "Smart money 24/25 (7 whales) | Dislocation 10/30 (vol spike)",
+      "tp_fraction": 0.393,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.43,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9101,12 +9146,12 @@
     "1959622": "2026-04-14T18:13:39.288683+00:00"
   },
   "stats": {
-    "total_signals": 562,
+    "total_signals": 563,
     "total_wins": 264,
     "total_losses": 289,
     "total_expired": 7,
     "total_market_resolved": 115
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-14T20:42:35.727416+00:00"
+  "last_updated": "2026-04-14T21:41:37.484464+00:00"
 }
