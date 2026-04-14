@@ -42,8 +42,53 @@
       "trough_price": 0.185,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.185,
-      "live_pnl_pct": -24.49
+      "current_price": 0.195,
+      "live_pnl_pct": -20.41
+    },
+    {
+      "signal_id": "9dbcbd5d",
+      "timestamp": "2026-04-14T19:48:15.142718+00:00",
+      "status": "active",
+      "market_id": "1947830",
+      "condition_id": "",
+      "token_id": "56569001198387703358343172186502206619196462035758104765113515234553532721424",
+      "question": "BMW Open: Fabian Marozsan vs Stefanos Tsitsipas",
+      "outcome": "Stefanos Tsitsipas",
+      "slug": "atp-marozsa-tsitsip-2026-04-13",
+      "category": "",
+      "resolution_date": "2026-04-20T08:00:00Z",
+      "entry_price": 0.57,
+      "min_entry_price": 0.555,
+      "max_entry_price": 0.591,
+      "tp_price": 0.7394,
+      "sl_price": 0.4006,
+      "tp_pct": 29.7,
+      "sl_pct": -29.7,
+      "expiry": "2026-04-20T08:00:00+00:00",
+      "edge_score": 31.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.45,
+        "dislocation": 12.91,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.8,
+      "days_to_close": 5,
+      "liquidity_usd": 105739.7869,
+      "volume_24h": 540373.9494610002,
+      "rationale": "Smart money 18/25 (4 whales) | Dislocation 13/30 (velocity, vol spike)",
+      "tp_fraction": 0.394,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.57,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9056,12 +9101,12 @@
     "1959622": "2026-04-14T18:13:39.288683+00:00"
   },
   "stats": {
-    "total_signals": 561,
+    "total_signals": 562,
     "total_wins": 264,
     "total_losses": 289,
     "total_expired": 7,
     "total_market_resolved": 115
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-14T18:13:39.295018+00:00"
+  "last_updated": "2026-04-14T19:48:15.145047+00:00"
 }

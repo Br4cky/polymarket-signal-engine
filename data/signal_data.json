@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-14T18:13:39.304657+00:00",
+    "timestamp": "2026-04-14T19:48:15.155197+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 227,
-    "opportunities_found": 13,
+    "tokens_scored": 242,
+    "opportunities_found": 17,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,53 @@
         "trough_price": 0.185,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.185,
-        "live_pnl_pct": -24.49
+        "current_price": 0.195,
+        "live_pnl_pct": -20.41
+      },
+      {
+        "signal_id": "9dbcbd5d",
+        "timestamp": "2026-04-14T19:48:15.142718+00:00",
+        "status": "active",
+        "market_id": "1947830",
+        "condition_id": "",
+        "token_id": "56569001198387703358343172186502206619196462035758104765113515234553532721424",
+        "question": "BMW Open: Fabian Marozsan vs Stefanos Tsitsipas",
+        "outcome": "Stefanos Tsitsipas",
+        "slug": "atp-marozsa-tsitsip-2026-04-13",
+        "category": "",
+        "resolution_date": "2026-04-20T08:00:00Z",
+        "entry_price": 0.57,
+        "min_entry_price": 0.555,
+        "max_entry_price": 0.591,
+        "tp_price": 0.7394,
+        "sl_price": 0.4006,
+        "tp_pct": 29.7,
+        "sl_pct": -29.7,
+        "expiry": "2026-04-20T08:00:00+00:00",
+        "edge_score": 31.4,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.45,
+          "dislocation": 12.91,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 5,
+        "liquidity_usd": 105739.7869,
+        "volume_24h": 540373.9494610002,
+        "rationale": "Smart money 18/25 (4 whales) | Dislocation 13/30 (velocity, vol spike)",
+        "tp_fraction": 0.394,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.57,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 561,
-      "active_signals": 1,
+      "total_signals_issued": 562,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 112,
       "losses": 88,
@@ -2345,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 227,
-      "tokens_with_signal": 41,
-      "coverage_pct": 18.1,
-      "avg_score": 8.15,
+      "tokens_scored": 242,
+      "tokens_with_signal": 39,
+      "coverage_pct": 16.1,
+      "avg_score": 8.3,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 227,
-      "tokens_with_signal": 150,
-      "coverage_pct": 66.1,
-      "avg_score": 13.42,
-      "max_score": 23.82,
+      "tokens_scored": 242,
+      "tokens_with_signal": 161,
+      "coverage_pct": 66.5,
+      "avg_score": 14.15,
+      "max_score": 24.15,
       "quality_traders": 50,
-      "markets_indexed": 4392
+      "markets_indexed": 4430
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 227,
-      "tokens_with_signal": 175,
-      "coverage_pct": 77.1,
-      "avg_score": 8.12,
-      "max_score": 26.81
+      "tokens_scored": 242,
+      "tokens_with_signal": 187,
+      "coverage_pct": 77.3,
+      "avg_score": 7.98,
+      "max_score": 24.8
     },
     "external": {
       "active": true,
-      "tokens_scored": 227,
-      "tokens_with_signal": 4,
-      "coverage_pct": 1.8,
-      "avg_score": 1.28,
-      "max_score": 1.36
+      "tokens_scored": 242,
+      "tokens_with_signal": 6,
+      "coverage_pct": 2.5,
+      "avg_score": 2.35,
+      "max_score": 4.5
     }
   },
   "calibration": {
