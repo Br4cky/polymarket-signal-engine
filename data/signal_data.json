@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-15T00:15:48.016216+00:00",
+    "timestamp": "2026-04-15T03:48:31.240627+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 242,
-    "opportunities_found": 31,
+    "tokens_scored": 224,
+    "opportunities_found": 14,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.165,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.195,
-        "live_pnl_pct": -20.41
+        "current_price": 0.245,
+        "live_pnl_pct": 0.0
       },
       {
         "signal_id": "9dbcbd5d",
@@ -97,6 +97,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.585,
         "live_pnl_pct": 2.63
+      },
+      {
+        "signal_id": "3958c16c",
+        "timestamp": "2026-04-15T03:48:31.229560+00:00",
+        "status": "active",
+        "market_id": "1918083",
+        "condition_id": "",
+        "token_id": "105574672091058515953023332984432598181865306523478594420006435237929682580188",
+        "question": "Texas Rangers vs. Athletics",
+        "outcome": "Texas Rangers",
+        "slug": "mlb-tex-oak-2026-04-14",
+        "category": "",
+        "resolution_date": "2026-04-22T01:40:00Z",
+        "entry_price": 0.215,
+        "min_entry_price": 0.205,
+        "max_entry_price": 0.235,
+        "tp_price": 0.5822,
+        "sl_price": 0.1505,
+        "tp_pct": 170.8,
+        "sl_pct": -30.0,
+        "expiry": "2026-04-22T01:40:00+00:00",
+        "edge_score": 48.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 21.34,
+          "dislocation": 23.91,
+          "external": 0.0
+        },
+        "convexity_band": "5x",
+        "potential_multiple": 4.7,
+        "days_to_close": 6,
+        "liquidity_usd": 36967.885,
+        "volume_24h": 405776.2239719994,
+        "rationale": "Smart money 21/25 (6 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.468,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.215,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 564,
-      "active_signals": 2,
+      "total_signals_issued": 565,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 111,
       "losses": 89,
@@ -2390,37 +2435,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 242,
-      "tokens_with_signal": 41,
-      "coverage_pct": 16.9,
-      "avg_score": 8.21,
+      "tokens_scored": 224,
+      "tokens_with_signal": 45,
+      "coverage_pct": 20.1,
+      "avg_score": 8.41,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 242,
-      "tokens_with_signal": 164,
-      "coverage_pct": 67.8,
-      "avg_score": 15.1,
-      "max_score": 24.47,
+      "tokens_scored": 224,
+      "tokens_with_signal": 140,
+      "coverage_pct": 62.5,
+      "avg_score": 12.55,
+      "max_score": 23.58,
       "quality_traders": 50,
-      "markets_indexed": 4242
+      "markets_indexed": 4430
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 242,
-      "tokens_with_signal": 175,
-      "coverage_pct": 72.3,
-      "avg_score": 8.67,
-      "max_score": 24.37
+      "tokens_scored": 224,
+      "tokens_with_signal": 157,
+      "coverage_pct": 70.1,
+      "avg_score": 7.49,
+      "max_score": 23.91
     },
     "external": {
       "active": true,
-      "tokens_scored": 242,
-      "tokens_with_signal": 4,
-      "coverage_pct": 1.7,
-      "avg_score": 1.29,
-      "max_score": 1.37
+      "tokens_scored": 224,
+      "tokens_with_signal": 3,
+      "coverage_pct": 1.3,
+      "avg_score": 1.78,
+      "max_score": 1.94
     }
   },
   "calibration": {
