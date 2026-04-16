@@ -42,8 +42,53 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.245,
-      "live_pnl_pct": -7.55
+      "current_price": 0.255,
+      "live_pnl_pct": -3.77
+    },
+    {
+      "signal_id": "a5e9f044",
+      "timestamp": "2026-04-16T23:32:54.419066+00:00",
+      "status": "active",
+      "market_id": "1919421",
+      "condition_id": "",
+      "token_id": "64575112906857627673396031002364315784778510108272214779568803819416675082435",
+      "question": "US x Iran permanent peace deal by April 30, 2026?",
+      "outcome": "Yes",
+      "slug": "us-x-iran-permanent-peace-deal-by-april-30-2026",
+      "category": "",
+      "resolution_date": "2026-04-30T00:00:00Z",
+      "entry_price": 0.415,
+      "min_entry_price": 0.405,
+      "max_entry_price": 0.429,
+      "tp_price": 0.6529,
+      "sl_price": 0.2781,
+      "tp_pct": 57.3,
+      "sl_pct": -33.0,
+      "expiry": "2026-04-30T00:00:00+00:00",
+      "edge_score": 34.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.5,
+        "dislocation": 18.92,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.4,
+      "days_to_close": 13,
+      "liquidity_usd": 109306.1376,
+      "volume_24h": 573374.59116,
+      "rationale": "Smart money 16/25 (3 whales) | Dislocation 19/30 (velocity, vol spike, book imbalance, trajectory)",
+      "tp_fraction": 0.407,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.415,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9070,12 +9115,12 @@
     "1936877": "2026-04-16T22:49:34.199329+00:00"
   },
   "stats": {
-    "total_signals": 592,
+    "total_signals": 593,
     "total_wins": 276,
     "total_losses": 308,
     "total_expired": 7,
     "total_market_resolved": 123
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-16T22:49:34.208307+00:00"
+  "last_updated": "2026-04-16T23:32:54.422402+00:00"
 }
