@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.215,
       "live_pnl_pct": -29.51
+    },
+    {
+      "signal_id": "3965da31",
+      "timestamp": "2026-04-18T23:44:15.483617+00:00",
+      "status": "active",
+      "market_id": "1958054",
+      "condition_id": "",
+      "token_id": "3319090775030335646128886519130407921710098081840734538552641471023433190478",
+      "question": "San Francisco Giants vs. Washington Nationals",
+      "outcome": "San Francisco Giants",
+      "slug": "mlb-sf-wsh-2026-04-18",
+      "category": "",
+      "resolution_date": "2026-04-25T20:05:00Z",
+      "entry_price": 0.715,
+      "min_entry_price": 0.7,
+      "max_entry_price": 0.745,
+      "tp_price": 0.8267,
+      "sl_price": 0.6033,
+      "tp_pct": 15.6,
+      "sl_pct": -15.6,
+      "expiry": "2026-04-25T20:05:00+00:00",
+      "edge_score": 30.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.5,
+        "dislocation": 11.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 51915.1871,
+      "volume_24h": 326870.3136069994,
+      "rationale": "Smart money 20/25 (9 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+      "tp_fraction": 0.392,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.715,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9071,12 +9116,12 @@
     "1947914": "2026-04-18T16:50:11.192113+00:00"
   },
   "stats": {
-    "total_signals": 626,
+    "total_signals": 627,
     "total_wins": 293,
     "total_losses": 325,
     "total_expired": 7,
     "total_market_resolved": 127
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-18T22:54:43.957796+00:00"
+  "last_updated": "2026-04-18T23:44:15.486409+00:00"
 }
