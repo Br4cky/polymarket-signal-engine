@@ -42,8 +42,8 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.285,
-      "live_pnl_pct": 7.55
+      "current_price": 0.255,
+      "live_pnl_pct": -3.77
     },
     {
       "signal_id": "e985f8bb",
@@ -87,8 +87,8 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.295,
-      "live_pnl_pct": -3.28
+      "current_price": 0.285,
+      "live_pnl_pct": -6.56
     },
     {
       "signal_id": "10780d87",
@@ -132,8 +132,8 @@
       "trough_price": 0.335,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.545,
-      "live_pnl_pct": 45.33
+      "current_price": 0.555,
+      "live_pnl_pct": 48.0
     },
     {
       "signal_id": "e0fd7c0f",
@@ -177,8 +177,98 @@
       "trough_price": 0.72,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.785,
-      "live_pnl_pct": 8.28
+      "current_price": 0.805,
+      "live_pnl_pct": 11.03
+    },
+    {
+      "signal_id": "f92cc344",
+      "timestamp": "2026-04-18T11:56:00.788992+00:00",
+      "status": "active",
+      "market_id": "1947902",
+      "condition_id": "",
+      "token_id": "100577438563113879142337784798701570878608004896074649861219572823389862139206",
+      "question": "Indian Premier League: Royal Challengers Bangalore vs Delhi Capitals",
+      "outcome": "Royal Challengers Bangalore",
+      "slug": "cricipl-roy-del-2026-04-18",
+      "category": "",
+      "resolution_date": "2026-04-25T06:00:00Z",
+      "entry_price": 0.365,
+      "min_entry_price": 0.355,
+      "max_entry_price": 0.385,
+      "tp_price": 0.6367,
+      "sl_price": 0.2774,
+      "tp_pct": 74.4,
+      "sl_pct": -24.0,
+      "expiry": "2026-04-25T06:00:00+00:00",
+      "edge_score": 39.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 11.9,
+        "dislocation": 23.89,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.7,
+      "days_to_close": 6,
+      "liquidity_usd": 39207.6288,
+      "volume_24h": 811735.3500880013,
+      "rationale": "Smart money 12/25 (1 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.428,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.365,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "1ac3a0a0",
+      "timestamp": "2026-04-18T11:56:00.789422+00:00",
+      "status": "active",
+      "market_id": "2007061",
+      "condition_id": "",
+      "token_id": "72100993786237908632834497410117023462252440998752497753015112277341276306968",
+      "question": "Barcelona Open: Andrey Rublev vs Hamad Medjedovic",
+      "outcome": "Andrey Rublev",
+      "slug": "atp-rublev-medjedo-2026-04-18",
+      "category": "",
+      "resolution_date": "2026-04-25T11:30:00Z",
+      "entry_price": 0.625,
+      "min_entry_price": 0.61,
+      "max_entry_price": 0.646,
+      "tp_price": 0.8332,
+      "sl_price": 0.4375,
+      "tp_pct": 33.3,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-25T11:30:00+00:00",
+      "edge_score": 32.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.28,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.6,
+      "days_to_close": 6,
+      "liquidity_usd": 140500.597,
+      "volume_24h": 607913.5470879999,
+      "rationale": "Smart money 20/25 (5 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.555,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.625,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9206,12 +9296,12 @@
     "2005354": "2026-04-18T07:48:47.041416+00:00"
   },
   "stats": {
-    "total_signals": 618,
+    "total_signals": 620,
     "total_wins": 287,
     "total_losses": 320,
     "total_expired": 7,
     "total_market_resolved": 125
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-18T11:08:11.169663+00:00"
+  "last_updated": "2026-04-18T11:56:00.792577+00:00"
 }
