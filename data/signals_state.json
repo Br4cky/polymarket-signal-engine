@@ -42,8 +42,8 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.315,
-      "live_pnl_pct": 18.87
+      "current_price": 0.305,
+      "live_pnl_pct": 15.09
     },
     {
       "signal_id": "e985f8bb",
@@ -87,8 +87,8 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.285,
-      "live_pnl_pct": -6.56
+      "current_price": 0.295,
+      "live_pnl_pct": -3.28
     },
     {
       "signal_id": "10780d87",
@@ -132,8 +132,8 @@
       "trough_price": 0.335,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.535,
-      "live_pnl_pct": 42.67
+      "current_price": 0.525,
+      "live_pnl_pct": 40.0
     },
     {
       "signal_id": "e0fd7c0f",
@@ -173,12 +173,57 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.77,
+      "peak_price": 0.795,
       "trough_price": 0.72,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.77,
-      "live_pnl_pct": 6.21
+      "current_price": 0.785,
+      "live_pnl_pct": 8.28
+    },
+    {
+      "signal_id": "846a8e01",
+      "timestamp": "2026-04-18T05:15:13.655056+00:00",
+      "status": "active",
+      "market_id": "1998213",
+      "condition_id": "",
+      "token_id": "13969328376939488901535598350585209211518510663457287120844882581684953808539",
+      "question": "Busan: August Holmgren vs Liam Broady",
+      "outcome": "August Holmgren",
+      "slug": "atp-holmgre-broady-2026-04-17",
+      "category": "",
+      "resolution_date": "2026-04-24T06:30:00Z",
+      "entry_price": 0.415,
+      "min_entry_price": 0.405,
+      "max_entry_price": 0.435,
+      "tp_price": 0.6838,
+      "sl_price": 0.2905,
+      "tp_pct": 64.8,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-24T06:30:00+00:00",
+      "edge_score": 46.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 23.12,
+        "dislocation": 22.69,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.4,
+      "days_to_close": 6,
+      "liquidity_usd": 97765.9758,
+      "volume_24h": 1099825.6892099995,
+      "rationale": "Smart money 23/25 (6 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.459,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.415,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9205,12 +9250,12 @@
     "1946774": "2026-04-18T02:59:19.502089+00:00"
   },
   "stats": {
-    "total_signals": 616,
+    "total_signals": 617,
     "total_wins": 287,
     "total_losses": 318,
     "total_expired": 7,
     "total_market_resolved": 123
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-18T02:59:19.511458+00:00"
+  "last_updated": "2026-04-18T05:15:13.657686+00:00"
 }
