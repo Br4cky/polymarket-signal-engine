@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.225,
       "live_pnl_pct": -26.23
+    },
+    {
+      "signal_id": "ff5bde4e",
+      "timestamp": "2026-04-19T14:16:10.118624+00:00",
+      "status": "active",
+      "market_id": "2015061",
+      "condition_id": "",
+      "token_id": "103266304091144867103206626910747836664557795945377836151735527917111502855411",
+      "question": "Open Capfinances Rouen Metropole: Marta Kostyuk vs Veronika Podrez",
+      "outcome": "Marta Kostyuk",
+      "slug": "wta-kostyuk-podrez-2026-04-19",
+      "category": "",
+      "resolution_date": "2026-04-26T12:00:00Z",
+      "entry_price": 0.885,
+      "min_entry_price": 0.87,
+      "max_entry_price": 0.906,
+      "tp_price": 0.9513,
+      "sl_price": 0.8187,
+      "tp_pct": 7.5,
+      "sl_pct": -7.5,
+      "expiry": "2026-04-26T12:00:00+00:00",
+      "edge_score": 35.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.32,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 126526.4722,
+      "volume_24h": 93962.91059100002,
+      "rationale": "Smart money 20/25 (4 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.576,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.885,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9070,12 +9115,12 @@
     "1959740": "2026-04-19T13:27:08.962487+00:00"
   },
   "stats": {
-    "total_signals": 634,
+    "total_signals": 635,
     "total_wins": 298,
     "total_losses": 328,
     "total_expired": 7,
     "total_market_resolved": 128
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-19T13:27:08.969089+00:00"
+  "last_updated": "2026-04-19T14:16:10.119465+00:00"
 }
