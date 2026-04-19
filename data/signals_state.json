@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "342d701b",
+      "timestamp": "2026-04-19T21:25:54.143672+00:00",
+      "status": "active",
+      "market_id": "1968838",
+      "condition_id": "",
+      "token_id": "110915999334113742590166054182833484999110298629849414080456922298179794361576",
+      "question": "Texas Rangers vs. Seattle Mariners",
+      "outcome": "Seattle Mariners",
+      "slug": "mlb-tex-sea-2026-04-19",
+      "category": "",
+      "resolution_date": "2026-04-26T20:10:00Z",
+      "entry_price": 0.885,
+      "min_entry_price": 0.87,
+      "max_entry_price": 0.906,
+      "tp_price": 0.9393,
+      "sl_price": 0.8307,
+      "tp_pct": 6.1,
+      "sl_pct": -6.1,
+      "expiry": "2026-04-26T20:10:00+00:00",
+      "edge_score": 49.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.45,
+        "dislocation": 25.15,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 125203.5855,
+      "volume_24h": 506400.7207079962,
+      "rationale": "Smart money 21/25 (9 whales) | Dislocation 25/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.473,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.885,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "f07f46c1",
@@ -9021,12 +9067,12 @@
     "1968811": "2026-04-19T19:15:03.479236+00:00"
   },
   "stats": {
-    "total_signals": 642,
+    "total_signals": 643,
     "total_wins": 305,
     "total_losses": 330,
     "total_expired": 7,
     "total_market_resolved": 128
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-19T20:47:06.807262+00:00"
+  "last_updated": "2026-04-19T21:25:54.146037+00:00"
 }
