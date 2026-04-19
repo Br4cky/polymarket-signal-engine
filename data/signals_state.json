@@ -42,8 +42,53 @@
       "trough_price": 0.215,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.225,
-      "live_pnl_pct": -26.23
+      "current_price": 0.235,
+      "live_pnl_pct": -22.95
+    },
+    {
+      "signal_id": "abf796ae",
+      "timestamp": "2026-04-19T11:29:17.853023+00:00",
+      "status": "active",
+      "market_id": "1959740",
+      "condition_id": "",
+      "token_id": "112124118996661222567185917006818717519961688583092514680596354181057333169376",
+      "question": "Indian Premier League: Kolkata Knight Riders vs Rajasthan Royals",
+      "outcome": "Kolkata Knight Riders",
+      "slug": "cricipl-kol-raj-2026-04-19",
+      "category": "",
+      "resolution_date": "2026-04-26T06:00:00Z",
+      "entry_price": 0.585,
+      "min_entry_price": 0.57,
+      "max_entry_price": 0.615,
+      "tp_price": 0.7607,
+      "sl_price": 0.4093,
+      "tp_pct": 30.0,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-26T06:00:00+00:00",
+      "edge_score": 38.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 11.9,
+        "dislocation": 21.96,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 6,
+      "liquidity_usd": 42846.9324,
+      "volume_24h": 417724.5594259999,
+      "rationale": "Smart money 12/25 (1 whales) | Dislocation 22/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.423,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.585,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9070,12 +9115,12 @@
     "2013079": "2026-04-19T10:02:02.897608+00:00"
   },
   "stats": {
-    "total_signals": 630,
+    "total_signals": 631,
     "total_wins": 295,
     "total_losses": 327,
     "total_expired": 7,
     "total_market_resolved": 128
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-19T10:48:24.949115+00:00"
+  "last_updated": "2026-04-19T11:29:17.854022+00:00"
 }
