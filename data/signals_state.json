@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "7a2de7c2",
+      "timestamp": "2026-04-20T01:16:19.190003+00:00",
+      "status": "active",
+      "market_id": "1968840",
+      "condition_id": "",
+      "token_id": "10266322376663726726626271999008397349563693274603285322148321501327795711219",
+      "question": "Atlanta Braves vs. Philadelphia Phillies",
+      "outcome": "Philadelphia Phillies",
+      "slug": "mlb-atl-phi-2026-04-19",
+      "category": "",
+      "resolution_date": "2026-04-26T23:20:00Z",
+      "entry_price": 0.225,
+      "min_entry_price": 0.215,
+      "max_entry_price": 0.245,
+      "tp_price": 0.5763,
+      "sl_price": 0.171,
+      "tp_pct": 156.1,
+      "sl_pct": -24.0,
+      "expiry": "2026-04-26T23:20:00+00:00",
+      "edge_score": 44.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.82,
+        "dislocation": 22.54,
+        "external": 0.0
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.4,
+      "days_to_close": 6,
+      "liquidity_usd": 67065.0196,
+      "volume_24h": 632013.9135560007,
+      "rationale": "Smart money 21/25 (8 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.453,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.225,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "a818c0d6",
@@ -9018,12 +9064,12 @@
     "1968811": "2026-04-19T19:15:03.479236+00:00"
   },
   "stats": {
-    "total_signals": 643,
+    "total_signals": 644,
     "total_wins": 306,
     "total_losses": 330,
     "total_expired": 7,
     "total_market_resolved": 128
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-19T23:45:51.978715+00:00"
+  "last_updated": "2026-04-20T01:16:19.190278+00:00"
 }
