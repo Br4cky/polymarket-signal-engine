@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-04-20T14:20:00.190224+00:00",
+    "timestamp": "2026-04-20T15:52:47.536210+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 219,
-    "opportunities_found": 15,
+    "tokens_scored": 216,
+    "opportunities_found": 18,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "c1286e0f",
+        "timestamp": "2026-04-20T15:52:47.523554+00:00",
+        "status": "active",
+        "market_id": "1970618",
+        "condition_id": "",
+        "token_id": "5528866041812017056357317303325226878075325831212288099933088699109790955358",
+        "question": "Indian Premier League: Gujarat Titans vs Mumbai Indians",
+        "outcome": "Gujarat Titans",
+        "slug": "cricipl-guj-mum-2026-04-20",
+        "category": "",
+        "resolution_date": "2026-04-27T10:00:00Z",
+        "entry_price": 0.715,
+        "min_entry_price": 0.7,
+        "max_entry_price": 0.745,
+        "tp_price": 0.8423,
+        "sl_price": 0.5877,
+        "tp_pct": 17.8,
+        "sl_pct": -17.8,
+        "expiry": "2026-04-27T10:00:00+00:00",
+        "edge_score": 43.4,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 11.9,
+          "dislocation": 26.85,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.4,
+        "days_to_close": 6,
+        "liquidity_usd": 58708.7433,
+        "volume_24h": 634801.8339860021,
+        "rationale": "Smart money 12/25 (1 whales) | Dislocation 27/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.447,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.715,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "95c09dc7",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 644,
-      "active_signals": 0,
+      "total_signals_issued": 645,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 106,
       "losses": 94,
@@ -2299,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 35,
-      "coverage_pct": 16.0,
-      "avg_score": 8.05,
+      "tokens_scored": 216,
+      "tokens_with_signal": 36,
+      "coverage_pct": 16.7,
+      "avg_score": 8.11,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 135,
-      "coverage_pct": 61.6,
-      "avg_score": 10.78,
-      "max_score": 24.02,
+      "tokens_scored": 216,
+      "tokens_with_signal": 139,
+      "coverage_pct": 64.4,
+      "avg_score": 11.04,
+      "max_score": 23.43,
       "quality_traders": 50,
-      "markets_indexed": 4322
+      "markets_indexed": 4278
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 164,
-      "coverage_pct": 74.9,
-      "avg_score": 6.95,
-      "max_score": 19.56
+      "tokens_scored": 216,
+      "tokens_with_signal": 158,
+      "coverage_pct": 73.1,
+      "avg_score": 7.25,
+      "max_score": 26.85
     },
     "external": {
       "active": true,
-      "tokens_scored": 219,
-      "tokens_with_signal": 12,
-      "coverage_pct": 5.5,
-      "avg_score": 1.71,
+      "tokens_scored": 216,
+      "tokens_with_signal": 11,
+      "coverage_pct": 5.1,
+      "avg_score": 1.75,
       "max_score": 1.75
     }
   },

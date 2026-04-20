@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "c1286e0f",
+      "timestamp": "2026-04-20T15:52:47.523554+00:00",
+      "status": "active",
+      "market_id": "1970618",
+      "condition_id": "",
+      "token_id": "5528866041812017056357317303325226878075325831212288099933088699109790955358",
+      "question": "Indian Premier League: Gujarat Titans vs Mumbai Indians",
+      "outcome": "Gujarat Titans",
+      "slug": "cricipl-guj-mum-2026-04-20",
+      "category": "",
+      "resolution_date": "2026-04-27T10:00:00Z",
+      "entry_price": 0.715,
+      "min_entry_price": 0.7,
+      "max_entry_price": 0.745,
+      "tp_price": 0.8423,
+      "sl_price": 0.5877,
+      "tp_pct": 17.8,
+      "sl_pct": -17.8,
+      "expiry": "2026-04-27T10:00:00+00:00",
+      "edge_score": 43.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 11.9,
+        "dislocation": 26.85,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 58708.7433,
+      "volume_24h": 634801.8339860021,
+      "rationale": "Smart money 12/25 (1 whales) | Dislocation 27/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.447,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.715,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "fcf95978",
@@ -9018,12 +9064,12 @@
     "1968840": "2026-04-20T04:36:25.295778+00:00"
   },
   "stats": {
-    "total_signals": 644,
+    "total_signals": 645,
     "total_wins": 306,
     "total_losses": 331,
     "total_expired": 7,
     "total_market_resolved": 128
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-20T14:20:00.181127+00:00"
+  "last_updated": "2026-04-20T15:52:47.526246+00:00"
 }
