@@ -38,11 +38,56 @@
       "sl_fraction": 0.255,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.452,
+      "trough_price": 0.416,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.416,
+      "live_pnl_pct": -6.2
+    },
+    {
+      "signal_id": "a3a19c8d",
+      "timestamp": "2026-04-21T08:02:12.378516+00:00",
+      "status": "active",
+      "market_id": "2034484",
+      "condition_id": "",
+      "token_id": "8394810520671809429951849126458424038322813816367357823326868999933718517744",
+      "question": "Gwangju: Marat Sharipov vs Leandro Riedi",
+      "outcome": "Marat Sharipov",
+      "slug": "atp-sharipo-riedi-2026-04-21",
+      "category": "",
+      "resolution_date": "2026-04-28T05:00:00Z",
+      "entry_price": 0.215,
+      "min_entry_price": 0.205,
+      "max_entry_price": 0.235,
+      "tp_price": 0.6417,
+      "sl_price": 0.1602,
+      "tp_pct": 198.5,
+      "sl_pct": -25.5,
+      "expiry": "2026-04-28T05:00:00+00:00",
+      "edge_score": 30.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.38,
+        "dislocation": 8.0,
+        "external": 3.33
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.7,
+      "days_to_close": 6,
+      "liquidity_usd": 75333.6918,
+      "volume_24h": 210147.46185000008,
+      "rationale": "Smart money 19/25 (3 whales) | Dislocation 8/30 (vol spike) | External 3.3/15",
+      "tp_fraction": 0.544,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.4435,
+      "current_price": 0.215,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9059,12 +9104,12 @@
     "1980464": "2026-04-21T05:58:27.063495+00:00"
   },
   "stats": {
-    "total_signals": 650,
+    "total_signals": 651,
     "total_wins": 308,
     "total_losses": 334,
     "total_expired": 7,
     "total_market_resolved": 130
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-21T05:58:27.069587+00:00"
+  "last_updated": "2026-04-21T08:02:12.380182+00:00"
 }
