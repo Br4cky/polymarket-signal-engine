@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "ac0e45ff",
+      "timestamp": "2026-04-23T15:20:04.624700+00:00",
+      "status": "active",
+      "market_id": "2047624",
+      "condition_id": "",
+      "token_id": "18571682304136553537217891043025846681895811350648777928404701301927611930501",
+      "question": "Madrid Open: Patrick Kypson vs Stefanos Tsitsipas",
+      "outcome": "Patrick Kypson",
+      "slug": "atp-kypson-tsitsip-2026-04-23",
+      "category": "",
+      "resolution_date": "2026-04-30T09:00:00Z",
+      "entry_price": 0.325,
+      "min_entry_price": 0.315,
+      "max_entry_price": 0.345,
+      "tp_price": 0.6932,
+      "sl_price": 0.2275,
+      "tp_pct": 113.3,
+      "sl_pct": -30.0,
+      "expiry": "2026-04-30T09:00:00+00:00",
+      "edge_score": 30.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.38,
+        "dislocation": 8.0,
+        "external": 5.11
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.1,
+      "days_to_close": 6,
+      "liquidity_usd": 22507.3255,
+      "volume_24h": 395475.4668719998,
+      "rationale": "Smart money 19/25 (6 whales) | Dislocation 8/30 (vol spike) | External 5.1/15",
+      "tp_fraction": 0.545,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.325,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "682e430a",
@@ -9019,12 +9065,12 @@
     "2053395": "2026-04-23T12:52:39.641737+00:00"
   },
   "stats": {
-    "total_signals": 679,
+    "total_signals": 680,
     "total_wins": 321,
     "total_losses": 351,
     "total_expired": 7,
     "total_market_resolved": 140
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-23T12:52:39.648648+00:00"
+  "last_updated": "2026-04-23T15:20:04.626659+00:00"
 }
