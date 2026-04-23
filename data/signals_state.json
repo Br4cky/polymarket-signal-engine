@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "3340a69e",
+      "timestamp": "2026-04-23T11:41:18.177966+00:00",
+      "status": "active",
+      "market_id": "2053395",
+      "condition_id": "",
+      "token_id": "101959608055825652640614668753688625307806607813594585796281042475048615832866",
+      "question": "Madrid Open: Cristian Garin vs Alexander Blockx",
+      "outcome": "Cristian Garin",
+      "slug": "atp-garin-blockx-2026-04-23",
+      "category": "",
+      "resolution_date": "2026-04-30T09:00:00Z",
+      "entry_price": 0.355,
+      "min_entry_price": 0.345,
+      "max_entry_price": 0.375,
+      "tp_price": 0.6072,
+      "sl_price": 0.2698,
+      "tp_pct": 71.0,
+      "sl_pct": -24.0,
+      "expiry": "2026-04-30T09:00:00+00:00",
+      "edge_score": 30.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.41,
+        "dislocation": 11.0,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.8,
+      "days_to_close": 6,
+      "liquidity_usd": 67443.8089,
+      "volume_24h": 335936.0960009994,
+      "rationale": "Smart money 19/25 (5 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+      "tp_fraction": 0.391,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.355,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "4e6fb66b",
@@ -9022,12 +9068,12 @@
     "2034613": "2026-04-22T20:43:43.744506+00:00"
   },
   "stats": {
-    "total_signals": 678,
+    "total_signals": 679,
     "total_wins": 321,
     "total_losses": 350,
     "total_expired": 7,
     "total_market_resolved": 139
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-23T10:12:55.741483+00:00"
+  "last_updated": "2026-04-23T11:41:18.180554+00:00"
 }
