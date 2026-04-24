@@ -42,8 +42,53 @@
       "trough_price": 0.255,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.275,
-      "live_pnl_pct": 7.84
+      "current_price": 0.265,
+      "live_pnl_pct": 3.92
+    },
+    {
+      "signal_id": "1e52f2cd",
+      "timestamp": "2026-04-24T19:13:41.518238+00:00",
+      "status": "active",
+      "market_id": "2055122",
+      "condition_id": "",
+      "token_id": "57433638683271342540223970603988418599126461444984827008762427105923536108417",
+      "question": "Madrid Open: Cameron Norrie vs Tomas Machac",
+      "outcome": "Tomas Machac",
+      "slug": "atp-norrie-machac-2026-04-24",
+      "category": "",
+      "resolution_date": "2026-05-01T09:00:00Z",
+      "entry_price": 0.915,
+      "min_entry_price": 0.9,
+      "max_entry_price": 0.936,
+      "tp_price": 0.9507,
+      "sl_price": 0.8793,
+      "tp_pct": 3.9,
+      "sl_pct": -3.9,
+      "expiry": "2026-05-01T09:00:00+00:00",
+      "edge_score": 37.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.7,
+        "dislocation": 16.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 123792.2388,
+      "volume_24h": 613820.0603419999,
+      "rationale": "Smart money 21/25 (4 whales) | Dislocation 16/30 (vol spike, trajectory)",
+      "tp_fraction": 0.419,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.915,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9064,12 +9109,12 @@
     "2007171": "2026-04-24T17:06:50.532033+00:00"
   },
   "stats": {
-    "total_signals": 695,
+    "total_signals": 696,
     "total_wins": 328,
     "total_losses": 359,
     "total_expired": 7,
     "total_market_resolved": 143
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-24T18:05:56.136975+00:00"
+  "last_updated": "2026-04-24T19:13:41.519962+00:00"
 }
