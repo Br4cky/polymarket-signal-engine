@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "f96eb964",
+      "timestamp": "2026-04-25T14:15:44.979269+00:00",
+      "status": "active",
+      "market_id": "2061057",
+      "condition_id": "",
+      "token_id": "88838037610254477904510216925596139189352760873007005080817796151938976641503",
+      "question": "Madrid Open: Vilius Gaubas vs Felix Auger-Aliassime",
+      "outcome": "Felix Auger-Aliassime",
+      "slug": "atp-gaubas-augeral-2026-04-25",
+      "category": "",
+      "resolution_date": "2026-05-02T09:00:00Z",
+      "entry_price": 0.935,
+      "min_entry_price": 0.92,
+      "max_entry_price": 0.956,
+      "tp_price": 0.9715,
+      "sl_price": 0.8985,
+      "tp_pct": 3.9,
+      "sl_pct": -3.9,
+      "expiry": "2026-05-02T09:00:00+00:00",
+      "edge_score": 33.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.8,
+        "dislocation": 8.0,
+        "external": 6.32
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 113077.7135,
+      "volume_24h": 118648.49389000017,
+      "rationale": "Smart money 19/25 (3 whales) | Dislocation 8/30 (vol spike) | External 6.3/15",
+      "tp_fraction": 0.561,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.935,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "293be9b1",
@@ -9018,12 +9064,12 @@
     "2063000": "2026-04-25T13:16:52.441105+00:00"
   },
   "stats": {
-    "total_signals": 702,
+    "total_signals": 703,
     "total_wins": 331,
     "total_losses": 364,
     "total_expired": 7,
     "total_market_resolved": 143
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-25T13:16:52.447403+00:00"
+  "last_updated": "2026-04-25T14:15:44.980895+00:00"
 }
