@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "100da60a",
+      "timestamp": "2026-04-25T10:13:54.428743+00:00",
+      "status": "active",
+      "market_id": "2060925",
+      "condition_id": "",
+      "token_id": "26951622916923257557501258952695757313041710563210120961488305086049218225475",
+      "question": "Madrid Open: Laura Samson vs Anna Bondar",
+      "outcome": "Laura Samson",
+      "slug": "wta-samson-bondar-2026-04-25",
+      "category": "",
+      "resolution_date": "2026-05-02T09:00:00Z",
+      "entry_price": 0.45,
+      "min_entry_price": 0.44,
+      "max_entry_price": 0.47,
+      "tp_price": 0.7588,
+      "sl_price": 0.3352,
+      "tp_pct": 68.6,
+      "sl_pct": -25.5,
+      "expiry": "2026-05-02T09:00:00+00:00",
+      "edge_score": 33.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.38,
+        "dislocation": 8.0,
+        "external": 5.7
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.2,
+      "days_to_close": 6,
+      "liquidity_usd": 24291.886,
+      "volume_24h": 112389.38660799994,
+      "rationale": "Smart money 19/25 (4 whales) | Dislocation 8/30 (vol spike) | External 5.7/15",
+      "tp_fraction": 0.561,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.45,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "592c4bd9",
@@ -9016,12 +9062,12 @@
     "2014062": "2026-04-24T23:56:40.698873+00:00"
   },
   "stats": {
-    "total_signals": 697,
+    "total_signals": 698,
     "total_wins": 329,
     "total_losses": 361,
     "total_expired": 7,
     "total_market_resolved": 143
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-25T09:17:36.968392+00:00"
+  "last_updated": "2026-04-25T10:13:54.430073+00:00"
 }

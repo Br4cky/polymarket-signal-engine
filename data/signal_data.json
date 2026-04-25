@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-04-25T09:17:36.978018+00:00",
+    "timestamp": "2026-04-25T10:13:54.439162+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 264,
-    "opportunities_found": 6,
+    "tokens_scored": 271,
+    "opportunities_found": 12,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "100da60a",
+        "timestamp": "2026-04-25T10:13:54.428743+00:00",
+        "status": "active",
+        "market_id": "2060925",
+        "condition_id": "",
+        "token_id": "26951622916923257557501258952695757313041710563210120961488305086049218225475",
+        "question": "Madrid Open: Laura Samson vs Anna Bondar",
+        "outcome": "Laura Samson",
+        "slug": "wta-samson-bondar-2026-04-25",
+        "category": "",
+        "resolution_date": "2026-05-02T09:00:00Z",
+        "entry_price": 0.45,
+        "min_entry_price": 0.44,
+        "max_entry_price": 0.47,
+        "tp_price": 0.7588,
+        "sl_price": 0.3352,
+        "tp_pct": 68.6,
+        "sl_pct": -25.5,
+        "expiry": "2026-05-02T09:00:00+00:00",
+        "edge_score": 33.0,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 19.38,
+          "dislocation": 8.0,
+          "external": 5.7
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.2,
+        "days_to_close": 6,
+        "liquidity_usd": 24291.886,
+        "volume_24h": 112389.38660799994,
+        "rationale": "Smart money 19/25 (4 whales) | Dislocation 8/30 (vol spike) | External 5.7/15",
+        "tp_fraction": 0.561,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.45,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "fe18f5eb",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 697,
-      "active_signals": 0,
+      "total_signals_issued": 698,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 105,
       "losses": 95,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 264,
+      "tokens_scored": 271,
       "tokens_with_signal": 45,
-      "coverage_pct": 17.0,
-      "avg_score": 7.96,
+      "coverage_pct": 16.6,
+      "avg_score": 7.94,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 108,
-      "coverage_pct": 40.9,
-      "avg_score": 11.33,
-      "max_score": 23.22,
+      "tokens_scored": 271,
+      "tokens_with_signal": 116,
+      "coverage_pct": 42.8,
+      "avg_score": 11.78,
+      "max_score": 23.21,
       "quality_traders": 50,
-      "markets_indexed": 3916
+      "markets_indexed": 3904
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 207,
-      "coverage_pct": 78.4,
-      "avg_score": 6.79,
-      "max_score": 18.21
+      "tokens_scored": 271,
+      "tokens_with_signal": 214,
+      "coverage_pct": 79.0,
+      "avg_score": 6.88,
+      "max_score": 14.36
     },
     "external": {
       "active": true,
-      "tokens_scored": 264,
-      "tokens_with_signal": 14,
-      "coverage_pct": 5.3,
-      "avg_score": 2.9,
-      "max_score": 4.22
+      "tokens_scored": 271,
+      "tokens_with_signal": 19,
+      "coverage_pct": 7.0,
+      "avg_score": 3.47,
+      "max_score": 6.46
     }
   },
   "calibration": {
