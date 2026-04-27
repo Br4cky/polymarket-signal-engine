@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "3e149cba",
+      "timestamp": "2026-04-27T22:13:40.371788+00:00",
+      "status": "active",
+      "market_id": "2089480",
+      "condition_id": "",
+      "token_id": "10668746098816432120037682157052448018897163093392301342972453073923140749984",
+      "question": "Madrid Open: Anastasia Potapova vs Elena Rybakina",
+      "outcome": "Anastasia Potapova",
+      "slug": "wta-potapov-rybakin-2026-04-27",
+      "category": "",
+      "resolution_date": "2026-05-04T19:00:00Z",
+      "entry_price": 0.695,
+      "min_entry_price": 0.68,
+      "max_entry_price": 0.716,
+      "tp_price": 0.8406,
+      "sl_price": 0.5494,
+      "tp_pct": 21.0,
+      "sl_pct": -21.0,
+      "expiry": "2026-05-04T19:00:00+00:00",
+      "edge_score": 50.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.71,
+        "dislocation": 25.0,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 167781.2067,
+      "volume_24h": 706697.4126720002,
+      "rationale": "Smart money 23/25 (5 whales) | Dislocation 25/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.477,
+      "sl_fraction": 0.363,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.695,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "d1b5207d",
@@ -9020,12 +9066,12 @@
     "2086785": "2026-04-27T17:13:39.834497+00:00"
   },
   "stats": {
-    "total_signals": 736,
+    "total_signals": 737,
     "total_wins": 346,
     "total_losses": 383,
     "total_expired": 7,
     "total_market_resolved": 146
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-27T21:11:27.702512+00:00"
+  "last_updated": "2026-04-27T22:13:40.372850+00:00"
 }
