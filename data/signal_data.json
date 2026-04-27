@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-04-27T04:07:19.650186+00:00",
+    "timestamp": "2026-04-27T06:48:30.248905+00:00",
     "markets_scanned": 300,
     "tokens_scored": 217,
-    "opportunities_found": 6,
+    "opportunities_found": 8,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "6ced964c",
+        "timestamp": "2026-04-27T06:48:30.237862+00:00",
+        "status": "active",
+        "market_id": "2086873",
+        "condition_id": "",
+        "token_id": "69231335872749062828452107599618167093140709525135844746238297036783648773521",
+        "question": "Madrid Open: Solana Sierra vs Karolina Pliskova",
+        "outcome": "Solana Sierra",
+        "slug": "wta-sierra-pliskov-2026-04-27",
+        "category": "",
+        "resolution_date": "2026-05-04T09:00:00Z",
+        "entry_price": 0.425,
+        "min_entry_price": 0.415,
+        "max_entry_price": 0.445,
+        "tp_price": 0.7376,
+        "sl_price": 0.3166,
+        "tp_pct": 73.5,
+        "sl_pct": -25.5,
+        "expiry": "2026-05-04T09:00:00+00:00",
+        "edge_score": 30.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.2,
+          "dislocation": 8.0,
+          "external": 7.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.4,
+        "days_to_close": 7,
+        "liquidity_usd": 71216.2254,
+        "volume_24h": 88174.63784699999,
+        "rationale": "Smart money 14/25 (2 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+        "tp_fraction": 0.544,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.425,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "ec06bc62",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 731,
-      "active_signals": 0,
+      "total_signals_issued": 732,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 100,
       "losses": 100,
@@ -2300,36 +2346,36 @@
     "structural": {
       "active": true,
       "tokens_scored": 217,
-      "tokens_with_signal": 41,
-      "coverage_pct": 18.9,
-      "avg_score": 8.43,
+      "tokens_with_signal": 44,
+      "coverage_pct": 20.3,
+      "avg_score": 7.64,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
       "tokens_scored": 217,
-      "tokens_with_signal": 100,
-      "coverage_pct": 46.1,
-      "avg_score": 11.08,
-      "max_score": 23.11,
-      "quality_traders": 50,
-      "markets_indexed": 3754
+      "tokens_with_signal": 99,
+      "coverage_pct": 45.6,
+      "avg_score": 10.52,
+      "max_score": 22.36,
+      "quality_traders": 51,
+      "markets_indexed": 3896
     },
     "dislocation": {
       "active": true,
       "tokens_scored": 217,
-      "tokens_with_signal": 157,
-      "coverage_pct": 72.4,
-      "avg_score": 6.71,
-      "max_score": 21.5
+      "tokens_with_signal": 158,
+      "coverage_pct": 72.8,
+      "avg_score": 6.52,
+      "max_score": 13.69
     },
     "external": {
       "active": true,
       "tokens_scored": 217,
-      "tokens_with_signal": 29,
-      "coverage_pct": 13.4,
-      "avg_score": 1.37,
-      "max_score": 1.81
+      "tokens_with_signal": 27,
+      "coverage_pct": 12.4,
+      "avg_score": 1.81,
+      "max_score": 7.0
     }
   },
   "calibration": {
