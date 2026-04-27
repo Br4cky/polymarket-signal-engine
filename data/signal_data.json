@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-04-27T06:48:30.248905+00:00",
+    "timestamp": "2026-04-27T09:16:00.919295+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 217,
-    "opportunities_found": 8,
+    "tokens_scored": 213,
+    "opportunities_found": 11,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -46,8 +46,8 @@
         "sl_fraction": 0.255,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.425,
+        "trough_price": 0.425,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.425,
@@ -2345,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 217,
-      "tokens_with_signal": 44,
-      "coverage_pct": 20.3,
-      "avg_score": 7.64,
+      "tokens_scored": 213,
+      "tokens_with_signal": 39,
+      "coverage_pct": 18.3,
+      "avg_score": 8.16,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 217,
-      "tokens_with_signal": 99,
-      "coverage_pct": 45.6,
-      "avg_score": 10.52,
+      "tokens_scored": 213,
+      "tokens_with_signal": 98,
+      "coverage_pct": 46.0,
+      "avg_score": 10.95,
       "max_score": 22.36,
-      "quality_traders": 51,
-      "markets_indexed": 3896
+      "quality_traders": 50,
+      "markets_indexed": 3824
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 217,
-      "tokens_with_signal": 158,
-      "coverage_pct": 72.8,
-      "avg_score": 6.52,
-      "max_score": 13.69
+      "tokens_scored": 213,
+      "tokens_with_signal": 164,
+      "coverage_pct": 77.0,
+      "avg_score": 6.5,
+      "max_score": 14.42
     },
     "external": {
       "active": true,
-      "tokens_scored": 217,
-      "tokens_with_signal": 27,
-      "coverage_pct": 12.4,
-      "avg_score": 1.81,
+      "tokens_scored": 213,
+      "tokens_with_signal": 32,
+      "coverage_pct": 15.0,
+      "avg_score": 1.96,
       "max_score": 7.0
     }
   },
