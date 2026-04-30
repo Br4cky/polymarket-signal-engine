@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "bf1c55da",
+      "timestamp": "2026-04-30T15:29:20.761371+00:00",
+      "status": "active",
+      "market_id": "2090796",
+      "condition_id": "",
+      "token_id": "89468132209419091456524081918099254988011450487954694087573500370307899318350",
+      "question": "Indian Premier League: Gujarat Titans vs Royal Challengers Bengaluru",
+      "outcome": "Gujarat Titans",
+      "slug": "cricipl-guj-roy-2026-04-30",
+      "category": "",
+      "resolution_date": "2026-05-07T14:00:00Z",
+      "entry_price": 0.845,
+      "min_entry_price": 0.83,
+      "max_entry_price": 0.875,
+      "tp_price": 0.9189,
+      "sl_price": 0.7711,
+      "tp_pct": 8.7,
+      "sl_pct": -8.7,
+      "expiry": "2026-05-07T14:00:00+00:00",
+      "edge_score": 50.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.12,
+        "dislocation": 26.52,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 90259.8756,
+      "volume_24h": 319312.3454520002,
+      "rationale": "Smart money 18/25 (4 whales) | Dislocation 27/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.477,
+      "sl_fraction": 0.363,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.845,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "5fd1c520",
@@ -9016,12 +9062,12 @@
     "2059866": "2026-04-30T01:30:15.752563+00:00"
   },
   "stats": {
-    "total_signals": 760,
+    "total_signals": 761,
     "total_wins": 356,
     "total_losses": 397,
     "total_expired": 7,
     "total_market_resolved": 151
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-04-30T13:15:18.801037+00:00"
+  "last_updated": "2026-04-30T15:29:20.764757+00:00"
 }
