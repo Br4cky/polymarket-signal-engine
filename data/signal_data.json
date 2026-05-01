@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-05-01T13:30:26.225998+00:00",
+    "timestamp": "2026-05-01T14:43:57.044602+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 273,
-    "opportunities_found": 22,
+    "tokens_scored": 269,
+    "opportunities_found": 21,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "979315af",
+        "timestamp": "2026-05-01T14:43:57.031915+00:00",
+        "status": "active",
+        "market_id": "2090808",
+        "condition_id": "",
+        "token_id": "99341450150389173948374676729237539096048455531411983633377954645657486598850",
+        "question": "Indian Premier League: Rajasthan Royals vs Delhi Capitals",
+        "outcome": "Delhi Capitals",
+        "slug": "cricipl-raj-del-2026-05-01",
+        "category": "",
+        "resolution_date": "2026-05-08T14:00:00Z",
+        "entry_price": 0.535,
+        "min_entry_price": 0.52,
+        "max_entry_price": 0.565,
+        "tp_price": 0.7325,
+        "sl_price": 0.3585,
+        "tp_pct": 36.9,
+        "sl_pct": -33.0,
+        "expiry": "2026-05-08T14:00:00+00:00",
+        "edge_score": 38.4,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 11.64,
+          "dislocation": 22.27,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.9,
+        "days_to_close": 6,
+        "liquidity_usd": 77820.5316,
+        "volume_24h": 479624.14132100006,
+        "rationale": "Smart money 12/25 (2 whales) | Dislocation 22/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.425,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.535,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "04405a29",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 768,
-      "active_signals": 0,
+      "total_signals_issued": 769,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 97,
       "losses": 103,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 55,
-      "coverage_pct": 20.1,
-      "avg_score": 7.37,
+      "tokens_scored": 269,
+      "tokens_with_signal": 53,
+      "coverage_pct": 19.7,
+      "avg_score": 7.31,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 186,
-      "coverage_pct": 68.1,
-      "avg_score": 9.03,
-      "max_score": 19.29,
+      "tokens_scored": 269,
+      "tokens_with_signal": 181,
+      "coverage_pct": 67.3,
+      "avg_score": 8.42,
+      "max_score": 19.12,
       "quality_traders": 53,
-      "markets_indexed": 3794
+      "markets_indexed": 3688
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 214,
-      "coverage_pct": 78.4,
-      "avg_score": 7.18,
-      "max_score": 19.6
+      "tokens_scored": 269,
+      "tokens_with_signal": 199,
+      "coverage_pct": 74.0,
+      "avg_score": 7.9,
+      "max_score": 24.82
     },
     "external": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 14,
-      "coverage_pct": 5.1,
-      "avg_score": 3.43,
-      "max_score": 5.7
+      "tokens_scored": 269,
+      "tokens_with_signal": 16,
+      "coverage_pct": 5.9,
+      "avg_score": 3.18,
+      "max_score": 7.0
     }
   },
   "calibration": {
