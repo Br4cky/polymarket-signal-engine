@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-05-01T22:12:51.035297+00:00",
+    "timestamp": "2026-05-01T23:15:00.296330+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 273,
-    "opportunities_found": 29,
+    "tokens_scored": 280,
+    "opportunities_found": 37,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -52,6 +52,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.495,
         "live_pnl_pct": -1.98
+      },
+      {
+        "signal_id": "2f196ed8",
+        "timestamp": "2026-05-01T23:15:00.281087+00:00",
+        "status": "active",
+        "market_id": "2047423",
+        "condition_id": "",
+        "token_id": "103276346517706583724291562088856295045370865542838991157026154495929964898102",
+        "question": "US x Iran diplomatic meeting by May 5, 2026?",
+        "outcome": "No",
+        "slug": "us-x-iran-diplomatic-meeting-by-may-5-2026",
+        "category": "",
+        "resolution_date": "2026-05-05T00:00:00Z",
+        "entry_price": 0.944,
+        "min_entry_price": 0.929,
+        "max_entry_price": 0.974,
+        "tp_price": 0.9749,
+        "sl_price": 0.9131,
+        "tp_pct": 3.3,
+        "sl_pct": -3.3,
+        "expiry": "2026-05-05T00:00:00+00:00",
+        "edge_score": 31.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 10.0,
+          "smart_money": 17.0,
+          "dislocation": 14.02,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 3,
+        "liquidity_usd": 92137.34718,
+        "volume_24h": 335934.05498299986,
+        "rationale": "Structural 10/30 (Manifold div 66.5%) | Smart money 17/25 (3 whales) | Dislocation 14/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.551,
+        "sl_fraction": 0.192,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.944,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 773,
-      "active_signals": 1,
+      "total_signals_issued": 774,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 97,
       "losses": 103,
@@ -2345,35 +2390,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 49,
-      "coverage_pct": 17.9,
-      "avg_score": 7.63,
+      "tokens_scored": 280,
+      "tokens_with_signal": 47,
+      "coverage_pct": 16.8,
+      "avg_score": 7.39,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 189,
-      "coverage_pct": 69.2,
-      "avg_score": 12.28,
+      "tokens_scored": 280,
+      "tokens_with_signal": 213,
+      "coverage_pct": 76.1,
+      "avg_score": 13.17,
       "max_score": 22.36,
       "quality_traders": 53,
-      "markets_indexed": 4038
+      "markets_indexed": 4090
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 273,
-      "tokens_with_signal": 209,
-      "coverage_pct": 76.6,
-      "avg_score": 7.59,
-      "max_score": 19.86
+      "tokens_scored": 280,
+      "tokens_with_signal": 208,
+      "coverage_pct": 74.3,
+      "avg_score": 7.7,
+      "max_score": 22.34
     },
     "external": {
       "active": true,
-      "tokens_scored": 273,
+      "tokens_scored": 280,
       "tokens_with_signal": 11,
-      "coverage_pct": 4.0,
+      "coverage_pct": 3.9,
       "avg_score": 3.71,
       "max_score": 7.0
     }

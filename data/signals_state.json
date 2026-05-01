@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.495,
       "live_pnl_pct": -1.98
+    },
+    {
+      "signal_id": "2f196ed8",
+      "timestamp": "2026-05-01T23:15:00.281087+00:00",
+      "status": "active",
+      "market_id": "2047423",
+      "condition_id": "",
+      "token_id": "103276346517706583724291562088856295045370865542838991157026154495929964898102",
+      "question": "US x Iran diplomatic meeting by May 5, 2026?",
+      "outcome": "No",
+      "slug": "us-x-iran-diplomatic-meeting-by-may-5-2026",
+      "category": "",
+      "resolution_date": "2026-05-05T00:00:00Z",
+      "entry_price": 0.944,
+      "min_entry_price": 0.929,
+      "max_entry_price": 0.974,
+      "tp_price": 0.9749,
+      "sl_price": 0.9131,
+      "tp_pct": 3.3,
+      "sl_pct": -3.3,
+      "expiry": "2026-05-05T00:00:00+00:00",
+      "edge_score": 31.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 17.0,
+        "dislocation": 14.02,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 3,
+      "liquidity_usd": 92137.34718,
+      "volume_24h": 335934.05498299986,
+      "rationale": "Structural 10/30 (Manifold div 66.5%) | Smart money 17/25 (3 whales) | Dislocation 14/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.551,
+      "sl_fraction": 0.192,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.944,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9058,12 +9103,12 @@
     "2077451": "2026-05-01T21:14:32.723622+00:00"
   },
   "stats": {
-    "total_signals": 773,
+    "total_signals": 774,
     "total_wins": 364,
     "total_losses": 401,
     "total_expired": 7,
     "total_market_resolved": 151
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-01T22:12:51.025553+00:00"
+  "last_updated": "2026-05-01T23:15:00.285934+00:00"
 }
