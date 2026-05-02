@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.505,
-      "trough_price": 0.495,
+      "trough_price": 0.485,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.495,
-      "live_pnl_pct": -1.98
+      "current_price": 0.505,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "2f196ed8",
@@ -83,11 +83,56 @@
       "sl_fraction": 0.192,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.944,
+      "trough_price": 0.934,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.9415,
+      "live_pnl_pct": -0.26
+    },
+    {
+      "signal_id": "d3a6d6a9",
+      "timestamp": "2026-05-02T00:12:37.761666+00:00",
+      "status": "active",
+      "market_id": "2077453",
+      "condition_id": "",
+      "token_id": "41263679632370175481588310361637573518141116731918983134374031506254259017739",
+      "question": "Texas Rangers vs. Detroit Tigers",
+      "outcome": "Texas Rangers",
+      "slug": "mlb-tex-det-2026-05-01",
+      "category": "",
+      "resolution_date": "2026-05-08T22:40:00Z",
+      "entry_price": 0.835,
+      "min_entry_price": 0.82,
+      "max_entry_price": 0.865,
+      "tp_price": 0.9473,
+      "sl_price": 0.7227,
+      "tp_pct": 13.5,
+      "sl_pct": -13.5,
+      "expiry": "2026-05-08T22:40:00+00:00",
+      "edge_score": 52.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.64,
+        "dislocation": 27.64,
+        "external": 1.96
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 57809.9379,
+      "volume_24h": 417604.16452399985,
+      "rationale": "Smart money 19/25 (6 whales) | Dislocation 28/30 (velocity, vol spike, book imbalance, trajectory) | External 2.0/15",
+      "tp_fraction": 0.681,
+      "sl_fraction": 0.363,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.944,
+      "current_price": 0.835,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9103,12 +9148,12 @@
     "2077451": "2026-05-01T21:14:32.723622+00:00"
   },
   "stats": {
-    "total_signals": 774,
+    "total_signals": 775,
     "total_wins": 364,
     "total_losses": 401,
     "total_expired": 7,
     "total_market_resolved": 151
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-01T23:15:00.285934+00:00"
+  "last_updated": "2026-05-02T00:12:37.769141+00:00"
 }
