@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-05-04T13:15:56.130582+00:00",
+    "timestamp": "2026-05-04T15:27:59.784566+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 269,
-    "opportunities_found": 12,
+    "tokens_scored": 271,
+    "opportunities_found": 24,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "a4686961",
+        "timestamp": "2026-05-04T15:27:59.771367+00:00",
+        "status": "active",
+        "market_id": "2141132",
+        "condition_id": "",
+        "token_id": "51143071580641523598809489068700372759933736535452247853166913387941313613178",
+        "question": "Indian Premier League: Mumbai Indians vs Lucknow Super Giants",
+        "outcome": "Lucknow Super Giants",
+        "slug": "cricipl-mum-luc-2026-05-04",
+        "category": "",
+        "resolution_date": "2026-05-11T10:00:00Z",
+        "entry_price": 0.545,
+        "min_entry_price": 0.53,
+        "max_entry_price": 0.575,
+        "tp_price": 0.7305,
+        "sl_price": 0.3815,
+        "tp_pct": 34.0,
+        "sl_pct": -30.0,
+        "expiry": "2026-05-11T10:00:00+00:00",
+        "edge_score": 34.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 10.43,
+          "dislocation": 20.08,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 6,
+        "liquidity_usd": 49528.6384,
+        "volume_24h": 591012.1808539997,
+        "rationale": "Smart money 10/25 (4 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.408,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.545,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "c3d5d8d3",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 814,
-      "active_signals": 0,
+      "total_signals_issued": 815,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 105,
       "losses": 95,
@@ -2299,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 53,
-      "coverage_pct": 19.7,
-      "avg_score": 8.13,
+      "tokens_scored": 271,
+      "tokens_with_signal": 51,
+      "coverage_pct": 18.8,
+      "avg_score": 8.11,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 148,
-      "coverage_pct": 55.0,
-      "avg_score": 8.72,
-      "max_score": 20.68,
+      "tokens_scored": 271,
+      "tokens_with_signal": 125,
+      "coverage_pct": 46.1,
+      "avg_score": 12.96,
+      "max_score": 22.1,
       "quality_traders": 51,
-      "markets_indexed": 3852
+      "markets_indexed": 3420
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 204,
-      "coverage_pct": 75.8,
-      "avg_score": 7.85,
-      "max_score": 24.7
+      "tokens_scored": 271,
+      "tokens_with_signal": 208,
+      "coverage_pct": 76.8,
+      "avg_score": 8.28,
+      "max_score": 27.47
     },
     "external": {
       "active": true,
-      "tokens_scored": 269,
-      "tokens_with_signal": 14,
-      "coverage_pct": 5.2,
-      "avg_score": 1.31,
+      "tokens_scored": 271,
+      "tokens_with_signal": 12,
+      "coverage_pct": 4.4,
+      "avg_score": 1.33,
       "max_score": 1.55
     }
   },
