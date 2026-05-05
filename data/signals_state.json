@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "8cb8643d",
+      "timestamp": "2026-05-05T12:19:14.241351+00:00",
+      "status": "active",
+      "market_id": "2061882",
+      "condition_id": "",
+      "token_id": "68423036743529711019872216494877841714172009351924626242671634874270153197928",
+      "question": "Will FC Bayern M\u00fcnchen win on 2026-05-06?",
+      "outcome": "Yes",
+      "slug": "ucl-bay-psg-2026-05-06-bay",
+      "category": "",
+      "resolution_date": "2026-05-06T19:00:00Z",
+      "entry_price": 0.585,
+      "min_entry_price": 0.57,
+      "max_entry_price": 0.606,
+      "tp_price": 0.7713,
+      "sl_price": 0.4306,
+      "tp_pct": 31.8,
+      "sl_pct": -26.4,
+      "expiry": "2026-05-06T19:00:00+00:00",
+      "edge_score": 43.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.86,
+        "dislocation": 20.89,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 1,
+      "liquidity_usd": 482968.7252,
+      "volume_24h": 257095.75506099995,
+      "rationale": "Smart money 22/25 (5 whales) | Dislocation 21/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.449,
+      "sl_fraction": 0.264,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.585,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "b5e19375",
@@ -9015,12 +9061,12 @@
     "2147172": "2026-05-05T09:28:09.333558+00:00"
   },
   "stats": {
-    "total_signals": 828,
+    "total_signals": 829,
     "total_wins": 401,
     "total_losses": 420,
     "total_expired": 7,
     "total_market_resolved": 157
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-05T11:07:36.702147+00:00"
+  "last_updated": "2026-05-05T12:19:14.244655+00:00"
 }
