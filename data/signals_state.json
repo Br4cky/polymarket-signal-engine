@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.405,
       "live_pnl_pct": -2.41
+    },
+    {
+      "signal_id": "693b7fa8",
+      "timestamp": "2026-05-08T08:15:49.820898+00:00",
+      "status": "active",
+      "market_id": "2182370",
+      "condition_id": "",
+      "token_id": "62958583752306365935450320830037633353911282485540650122087166284697575332817",
+      "question": "Wuxi: Soon-Woo Kwon vs Akira Santillan",
+      "outcome": "Soon-Woo Kwon",
+      "slug": "atp-kwon-santill-2026-05-08",
+      "category": "",
+      "resolution_date": "2026-05-15T06:30:00Z",
+      "entry_price": 0.907,
+      "min_entry_price": 0.892,
+      "max_entry_price": 0.937,
+      "tp_price": 0.9584,
+      "sl_price": 0.8556,
+      "tp_pct": 5.7,
+      "sl_pct": -5.7,
+      "expiry": "2026-05-15T06:30:00+00:00",
+      "edge_score": 31.6,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.87,
+        "dislocation": 8.0,
+        "external": 5.41
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 98724.62645,
+      "volume_24h": 110432.84700099996,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike) | External 5.4/15",
+      "tp_fraction": 0.553,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.907,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9064,12 +9109,12 @@
     "2132513": "2026-05-08T01:31:26.792363+00:00"
   },
   "stats": {
-    "total_signals": 864,
+    "total_signals": 865,
     "total_wins": 422,
     "total_losses": 434,
     "total_expired": 7,
     "total_market_resolved": 159
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-08T06:27:49.588977+00:00"
+  "last_updated": "2026-05-08T08:15:49.822206+00:00"
 }
