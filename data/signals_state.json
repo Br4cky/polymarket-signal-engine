@@ -89,6 +89,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.815,
       "live_pnl_pct": -1.21
+    },
+    {
+      "signal_id": "9e30baaa",
+      "timestamp": "2026-05-08T21:48:15.194828+00:00",
+      "status": "active",
+      "market_id": "2175622",
+      "condition_id": "",
+      "token_id": "111044068760608009900785061735475276276339428109012537591237635356510454319107",
+      "question": "Internazionali BNL d'Italia: Yannick Hanfmann vs Luciano Darderi",
+      "outcome": "Luciano Darderi",
+      "slug": "atp-hanfman-darderi-2026-05-08",
+      "category": "",
+      "resolution_date": "2026-05-15T09:00:00Z",
+      "entry_price": 0.885,
+      "min_entry_price": 0.87,
+      "max_entry_price": 0.906,
+      "tp_price": 0.9649,
+      "sl_price": 0.8051,
+      "tp_pct": 9.0,
+      "sl_pct": -9.0,
+      "expiry": "2026-05-15T09:00:00+00:00",
+      "edge_score": 54.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.94,
+        "dislocation": 25.06,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 126503.8089,
+      "volume_24h": 261550.31626100006,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 25/30 (velocity, vol spike, trajectory) | External 7.0/15",
+      "tp_fraction": 0.695,
+      "sl_fraction": 0.363,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.885,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9108,12 +9153,12 @@
     "2177508": "2026-05-08T20:39:59.421656+00:00"
   },
   "stats": {
-    "total_signals": 877,
+    "total_signals": 878,
     "total_wins": 430,
     "total_losses": 438,
     "total_expired": 7,
     "total_market_resolved": 161
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-08T20:39:59.429865+00:00"
+  "last_updated": "2026-05-08T21:48:15.199175+00:00"
 }
