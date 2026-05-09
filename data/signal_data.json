@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-05-09T09:00:39.194253+00:00",
+    "timestamp": "2026-05-09T10:14:00.764441+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 275,
-    "opportunities_found": 7,
+    "tokens_scored": 268,
+    "opportunities_found": 13,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -97,6 +97,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.815,
         "live_pnl_pct": -1.21
+      },
+      {
+        "signal_id": "727440b6",
+        "timestamp": "2026-05-09T10:14:00.751467+00:00",
+        "status": "active",
+        "market_id": "2184808",
+        "condition_id": "",
+        "token_id": "14837948390423483065317480778660524053931155965189297080099581560797170363357",
+        "question": "Internazionali BNL d'Italia: Corentin Moutet vs Pablo Llamas Ruiz",
+        "outcome": "Corentin Moutet",
+        "slug": "atp-moutet-ruiz-2026-05-09",
+        "category": "",
+        "resolution_date": "2026-05-16T09:00:00Z",
+        "entry_price": 0.235,
+        "min_entry_price": 0.225,
+        "max_entry_price": 0.249,
+        "tp_price": 0.6579,
+        "sl_price": 0.1645,
+        "tp_pct": 180.0,
+        "sl_pct": -30.0,
+        "expiry": "2026-05-16T09:00:00+00:00",
+        "edge_score": 31.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 16.95,
+          "dislocation": 9.0,
+          "external": 5.74
+        },
+        "convexity_band": "5x",
+        "potential_multiple": 4.3,
+        "days_to_close": 6,
+        "liquidity_usd": 139570.275,
+        "volume_24h": 185598.96560100003,
+        "rationale": "Smart money 17/25 (3 whales) | Dislocation 9/30 (vol spike) | External 5.7/15",
+        "tp_fraction": 0.553,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.235,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 886,
-      "active_signals": 2,
+      "total_signals_issued": 887,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 115,
       "losses": 85,
@@ -2390,36 +2435,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 39,
-      "coverage_pct": 14.2,
-      "avg_score": 8.22,
+      "tokens_scored": 268,
+      "tokens_with_signal": 37,
+      "coverage_pct": 13.8,
+      "avg_score": 7.93,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 181,
-      "coverage_pct": 65.8,
-      "avg_score": 11.19,
+      "tokens_scored": 268,
+      "tokens_with_signal": 170,
+      "coverage_pct": 63.4,
+      "avg_score": 11.86,
       "max_score": 21.8,
       "quality_traders": 50,
-      "markets_indexed": 3594
+      "markets_indexed": 3418
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 203,
-      "coverage_pct": 73.8,
-      "avg_score": 7.37,
-      "max_score": 23.67
+      "tokens_scored": 268,
+      "tokens_with_signal": 190,
+      "coverage_pct": 70.9,
+      "avg_score": 7.19,
+      "max_score": 25.21
     },
     "external": {
       "active": true,
-      "tokens_scored": 275,
-      "tokens_with_signal": 21,
-      "coverage_pct": 7.6,
-      "avg_score": 4.26,
+      "tokens_scored": 268,
+      "tokens_with_signal": 16,
+      "coverage_pct": 6.0,
+      "avg_score": 4.85,
       "max_score": 7.0
     }
   },
