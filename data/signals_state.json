@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.405,
       "live_pnl_pct": -2.41
+    },
+    {
+      "signal_id": "e4c25ea8",
+      "timestamp": "2026-05-10T14:15:17.236661+00:00",
+      "status": "active",
+      "market_id": "2189956",
+      "condition_id": "",
+      "token_id": "109788268173543423528320344440958334045651222225010175521027618045191907465591",
+      "question": "Internazionali BNL d'Italia: Karen Khachanov vs Botic van de Zandschulp",
+      "outcome": "Karen Khachanov",
+      "slug": "atp-khachan-zandsch-2026-05-10",
+      "category": "",
+      "resolution_date": "2026-05-17T09:00:00Z",
+      "entry_price": 0.24,
+      "min_entry_price": 0.23,
+      "max_entry_price": 0.254,
+      "tp_price": 0.5948,
+      "sl_price": 0.168,
+      "tp_pct": 147.9,
+      "sl_pct": -30.0,
+      "expiry": "2026-05-17T09:00:00+00:00",
+      "edge_score": 48.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.58,
+        "dislocation": 23.44,
+        "external": 0.0
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 4.2,
+      "days_to_close": 6,
+      "liquidity_usd": 116577.4456,
+      "volume_24h": 278832.09246800013,
+      "rationale": "Smart money 20/25 (3 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.467,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.24,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9067,12 +9112,12 @@
     "2209492": "2026-05-10T09:09:46.995638+00:00"
   },
   "stats": {
-    "total_signals": 908,
+    "total_signals": 909,
     "total_wins": 449,
     "total_losses": 451,
     "total_expired": 7,
     "total_market_resolved": 161
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-10T12:47:49.023803+00:00"
+  "last_updated": "2026-05-10T14:15:17.238096+00:00"
 }
