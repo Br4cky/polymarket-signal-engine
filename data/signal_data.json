@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-05-11T19:27:10.377625+00:00",
+    "timestamp": "2026-05-11T21:08:08.131514+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 280,
-    "opportunities_found": 17,
+    "tokens_scored": 240,
+    "opportunities_found": 15,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -52,6 +52,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.295,
         "live_pnl_pct": -3.28
+      },
+      {
+        "signal_id": "4c254a79",
+        "timestamp": "2026-05-11T21:08:08.120224+00:00",
+        "status": "active",
+        "market_id": "2002685",
+        "condition_id": "",
+        "token_id": "7317570394658929543950187060522864400071290481021499158014297549243573640501",
+        "question": "Starmer out by May 15, 2026?",
+        "outcome": "Yes",
+        "slug": "starmer-out-by-may-15-2026",
+        "category": "",
+        "resolution_date": "2026-06-30T12:00:00Z",
+        "entry_price": 0.3905,
+        "min_entry_price": 0.3805,
+        "max_entry_price": 0.4105,
+        "tp_price": 0.6282,
+        "sl_price": 0.2733,
+        "tp_pct": 60.9,
+        "sl_pct": -30.0,
+        "expiry": "2026-06-30T12:00:00+00:00",
+        "edge_score": 30.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 6.0,
+          "dislocation": 24.17,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.6,
+        "days_to_close": 49,
+        "liquidity_usd": 46476.04393,
+        "volume_24h": 662812.7717379999,
+        "rationale": "Smart money 6/25 (1 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.39,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.3905,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 933,
-      "active_signals": 1,
+      "total_signals_issued": 934,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 116,
       "losses": 84,
@@ -2345,37 +2390,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 280,
+      "tokens_scored": 240,
       "tokens_with_signal": 33,
-      "coverage_pct": 11.8,
-      "avg_score": 8.04,
+      "coverage_pct": 13.8,
+      "avg_score": 8.28,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 280,
-      "tokens_with_signal": 188,
-      "coverage_pct": 67.1,
-      "avg_score": 10.48,
-      "max_score": 22.0,
-      "quality_traders": 50,
-      "markets_indexed": 3112
+      "tokens_scored": 240,
+      "tokens_with_signal": 176,
+      "coverage_pct": 73.3,
+      "avg_score": 9.04,
+      "max_score": 21.49,
+      "quality_traders": 51,
+      "markets_indexed": 3428
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 280,
-      "tokens_with_signal": 216,
-      "coverage_pct": 77.1,
-      "avg_score": 7.5,
-      "max_score": 25.79
+      "tokens_scored": 240,
+      "tokens_with_signal": 171,
+      "coverage_pct": 71.2,
+      "avg_score": 7.64,
+      "max_score": 24.17
     },
     "external": {
       "active": true,
-      "tokens_scored": 280,
-      "tokens_with_signal": 7,
-      "coverage_pct": 2.5,
-      "avg_score": 1.4,
-      "max_score": 1.46
+      "tokens_scored": 240,
+      "tokens_with_signal": 4,
+      "coverage_pct": 1.7,
+      "avg_score": 1.36,
+      "max_score": 1.45
     }
   },
   "calibration": {

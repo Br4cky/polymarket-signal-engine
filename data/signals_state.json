@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.295,
       "live_pnl_pct": -3.28
+    },
+    {
+      "signal_id": "4c254a79",
+      "timestamp": "2026-05-11T21:08:08.120224+00:00",
+      "status": "active",
+      "market_id": "2002685",
+      "condition_id": "",
+      "token_id": "7317570394658929543950187060522864400071290481021499158014297549243573640501",
+      "question": "Starmer out by May 15, 2026?",
+      "outcome": "Yes",
+      "slug": "starmer-out-by-may-15-2026",
+      "category": "",
+      "resolution_date": "2026-06-30T12:00:00Z",
+      "entry_price": 0.3905,
+      "min_entry_price": 0.3805,
+      "max_entry_price": 0.4105,
+      "tp_price": 0.6282,
+      "sl_price": 0.2733,
+      "tp_pct": 60.9,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-30T12:00:00+00:00",
+      "edge_score": 30.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 6.0,
+        "dislocation": 24.17,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.6,
+      "days_to_close": 49,
+      "liquidity_usd": 46476.04393,
+      "volume_24h": 662812.7717379999,
+      "rationale": "Smart money 6/25 (1 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.39,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.3905,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9073,12 +9118,12 @@
     "2214769": "2026-05-11T17:50:38.143920+00:00"
   },
   "stats": {
-    "total_signals": 933,
+    "total_signals": 934,
     "total_wins": 461,
     "total_losses": 464,
     "total_expired": 7,
     "total_market_resolved": 166
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-11T19:27:10.367505+00:00"
+  "last_updated": "2026-05-11T21:08:08.121842+00:00"
 }
