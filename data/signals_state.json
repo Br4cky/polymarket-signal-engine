@@ -83,12 +83,57 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.31,
+      "peak_price": 0.315,
       "trough_price": 0.195,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.235,
-      "live_pnl_pct": 14.63
+      "current_price": 0.315,
+      "live_pnl_pct": 53.66
+    },
+    {
+      "signal_id": "f1388881",
+      "timestamp": "2026-05-14T12:07:06.019019+00:00",
+      "status": "active",
+      "market_id": "2245172",
+      "condition_id": "",
+      "token_id": "60820450951748338624008087456323920027317888277936294877666216006746381061610",
+      "question": "Paris: Alina Charaeva vs Tamara Korpatsch",
+      "outcome": "Alina Charaeva",
+      "slug": "wta-charaev-korpats-2026-05-14",
+      "category": "",
+      "resolution_date": "2026-05-21T08:00:00Z",
+      "entry_price": 0.885,
+      "min_entry_price": 0.87,
+      "max_entry_price": 0.915,
+      "tp_price": 0.935,
+      "sl_price": 0.835,
+      "tp_pct": 5.7,
+      "sl_pct": -5.7,
+      "expiry": "2026-05-21T08:00:00+00:00",
+      "edge_score": 40.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.02,
+        "dislocation": 19.73,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 47954.9876,
+      "volume_24h": 304988.7264790001,
+      "rationale": "Smart money 17/25 (4 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.435,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.885,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9107,12 +9152,12 @@
     "2181663": "2026-05-14T04:36:25.622959+00:00"
   },
   "stats": {
-    "total_signals": 960,
+    "total_signals": 961,
     "total_wins": 474,
     "total_losses": 477,
     "total_expired": 7,
     "total_market_resolved": 167
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-14T10:07:48.422379+00:00"
+  "last_updated": "2026-05-14T12:07:06.021294+00:00"
 }
