@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-05-14T04:36:25.639941+00:00",
+    "timestamp": "2026-05-14T07:40:13.821366+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 230,
-    "opportunities_found": 10,
+    "tokens_scored": 281,
+    "opportunities_found": 12,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.195,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.225,
-        "live_pnl_pct": 9.76
+        "current_price": 0.235,
+        "live_pnl_pct": 14.63
       }
     ],
     "recent_resolved": [
@@ -2390,36 +2390,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 45,
-      "coverage_pct": 19.6,
-      "avg_score": 7.69,
+      "tokens_scored": 281,
+      "tokens_with_signal": 58,
+      "coverage_pct": 20.6,
+      "avg_score": 7.49,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 139,
-      "coverage_pct": 60.4,
-      "avg_score": 8.94,
-      "max_score": 21.45,
-      "quality_traders": 50,
-      "markets_indexed": 3734
+      "tokens_scored": 281,
+      "tokens_with_signal": 165,
+      "coverage_pct": 58.7,
+      "avg_score": 8.49,
+      "max_score": 21.55,
+      "quality_traders": 51,
+      "markets_indexed": 4134
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 163,
-      "coverage_pct": 70.9,
-      "avg_score": 6.26,
-      "max_score": 16.38
+      "tokens_scored": 281,
+      "tokens_with_signal": 209,
+      "coverage_pct": 74.4,
+      "avg_score": 6.42,
+      "max_score": 15.58
     },
     "external": {
       "active": true,
-      "tokens_scored": 230,
-      "tokens_with_signal": 20,
-      "coverage_pct": 8.7,
-      "avg_score": 2.42,
+      "tokens_scored": 281,
+      "tokens_with_signal": 24,
+      "coverage_pct": 8.5,
+      "avg_score": 2.31,
       "max_score": 5.72
     }
   },
