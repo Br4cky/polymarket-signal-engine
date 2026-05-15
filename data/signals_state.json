@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "f49e27a0",
+      "timestamp": "2026-05-15T11:08:49.308292+00:00",
+      "status": "active",
+      "market_id": "2261212",
+      "condition_id": "",
+      "token_id": "52460024089487665244053882768589370538900243522225443873177530722318854461918",
+      "question": "Valencia: Alejandro Tabilo vs Dusan Lajovic",
+      "outcome": "Alejandro Tabilo",
+      "slug": "atp-tabilo-lajovic-2026-05-15",
+      "category": "",
+      "resolution_date": "2026-05-22T08:30:00Z",
+      "entry_price": 0.705,
+      "min_entry_price": 0.69,
+      "max_entry_price": 0.726,
+      "tp_price": 0.8683,
+      "sl_price": 0.5417,
+      "tp_pct": 23.2,
+      "sl_pct": -23.2,
+      "expiry": "2026-05-22T08:30:00+00:00",
+      "edge_score": 31.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 19.05,
+        "dislocation": 10.0,
+        "external": 3.37
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 107853.955,
+      "volume_24h": 355790.1558080008,
+      "rationale": "Smart money 19/25 (4 whales) | Dislocation 10/30 (vol spike) | External 3.4/15",
+      "tp_fraction": 0.553,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.705,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "97dc9893",
@@ -9020,12 +9066,12 @@
     "2109449": "2026-05-15T08:37:14.978590+00:00"
   },
   "stats": {
-    "total_signals": 970,
+    "total_signals": 971,
     "total_wins": 478,
     "total_losses": 485,
     "total_expired": 7,
     "total_market_resolved": 168
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-15T08:37:14.985879+00:00"
+  "last_updated": "2026-05-15T11:08:49.310018+00:00"
 }
