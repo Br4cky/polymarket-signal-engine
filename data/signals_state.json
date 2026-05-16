@@ -38,11 +38,56 @@
       "sl_fraction": 0.255,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.715,
+      "trough_price": 0.705,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.715,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "f27ac229",
+      "timestamp": "2026-05-16T07:24:46.417140+00:00",
+      "status": "active",
+      "market_id": "2265581",
+      "condition_id": "",
+      "token_id": "112836331112931606009219975672083355638441729078373223274645878387663446825152",
+      "question": "Internazionali BNL d'Italia: Coco Gauff vs Elina Svitolina",
+      "outcome": "Coco Gauff",
+      "slug": "wta-gauff-svitoli-2026-05-16",
+      "category": "",
+      "resolution_date": "2026-05-23T15:00:00Z",
+      "entry_price": 0.575,
+      "min_entry_price": 0.56,
+      "max_entry_price": 0.596,
+      "tp_price": 0.8102,
+      "sl_price": 0.4284,
+      "tp_pct": 40.9,
+      "sl_pct": -25.5,
+      "expiry": "2026-05-23T15:00:00+00:00",
+      "edge_score": 31.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.5,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 7,
+      "liquidity_usd": 257628.5708,
+      "volume_24h": 110667.04170900014,
+      "rationale": "Smart money 16/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.553,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.715,
+      "current_price": 0.575,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9063,12 +9108,12 @@
     "2152416": "2026-05-15T21:41:22.219503+00:00"
   },
   "stats": {
-    "total_signals": 982,
+    "total_signals": 983,
     "total_wins": 485,
     "total_losses": 489,
     "total_expired": 7,
     "total_market_resolved": 168
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-16T05:01:30.642735+00:00"
+  "last_updated": "2026-05-16T07:24:46.417839+00:00"
 }
