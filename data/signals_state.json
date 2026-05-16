@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.575,
       "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "bdd57739",
+      "timestamp": "2026-05-16T12:52:17.967578+00:00",
+      "status": "active",
+      "market_id": "2269302",
+      "condition_id": "",
+      "token_id": "101391094830829633898537385843482695843275638564694055809900175510535503406510",
+      "question": "Bengaluru 2: Keegan Smith vs Philip Sekulic",
+      "outcome": "Keegan Smith",
+      "slug": "atp-smit-sekulic-2026-05-16",
+      "category": "",
+      "resolution_date": "2026-05-23T11:00:00Z",
+      "entry_price": 0.845,
+      "min_entry_price": 0.83,
+      "max_entry_price": 0.875,
+      "tp_price": 0.9313,
+      "sl_price": 0.7587,
+      "tp_pct": 10.2,
+      "sl_pct": -10.2,
+      "expiry": "2026-05-23T11:00:00+00:00",
+      "edge_score": 32.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 16.07,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 84050.8565,
+      "volume_24h": 65575.88243500007,
+      "rationale": "Smart money 16/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.557,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.845,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9065,12 +9110,12 @@
     "2263884": "2026-05-16T11:44:07.979315+00:00"
   },
   "stats": {
-    "total_signals": 984,
+    "total_signals": 985,
     "total_wins": 485,
     "total_losses": 491,
     "total_expired": 7,
     "total_market_resolved": 168
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-16T11:44:07.985997+00:00"
+  "last_updated": "2026-05-16T12:52:17.969008+00:00"
 }

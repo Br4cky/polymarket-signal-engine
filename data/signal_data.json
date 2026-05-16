@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-05-16T11:44:07.995676+00:00",
+    "timestamp": "2026-05-16T12:52:17.978332+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 251,
+    "tokens_scored": 244,
     "opportunities_found": 14,
     "engine_version": "4.0.0"
   },
@@ -51,6 +51,51 @@
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.575,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "bdd57739",
+        "timestamp": "2026-05-16T12:52:17.967578+00:00",
+        "status": "active",
+        "market_id": "2269302",
+        "condition_id": "",
+        "token_id": "101391094830829633898537385843482695843275638564694055809900175510535503406510",
+        "question": "Bengaluru 2: Keegan Smith vs Philip Sekulic",
+        "outcome": "Keegan Smith",
+        "slug": "atp-smit-sekulic-2026-05-16",
+        "category": "",
+        "resolution_date": "2026-05-23T11:00:00Z",
+        "entry_price": 0.845,
+        "min_entry_price": 0.83,
+        "max_entry_price": 0.875,
+        "tp_price": 0.9313,
+        "sl_price": 0.7587,
+        "tp_pct": 10.2,
+        "sl_pct": -10.2,
+        "expiry": "2026-05-23T11:00:00+00:00",
+        "edge_score": 32.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 16.07,
+          "dislocation": 8.0,
+          "external": 7.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 84050.8565,
+        "volume_24h": 65575.88243500007,
+        "rationale": "Smart money 16/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+        "tp_fraction": 0.557,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.845,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2307,8 +2352,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 984,
-      "active_signals": 1,
+      "total_signals_issued": 985,
+      "active_signals": 2,
       "total_resolved": 200,
       "wins": 113,
       "losses": 87,
@@ -2345,36 +2390,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 251,
+      "tokens_scored": 244,
       "tokens_with_signal": 38,
-      "coverage_pct": 15.1,
-      "avg_score": 7.97,
+      "coverage_pct": 15.6,
+      "avg_score": 7.77,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 251,
+      "tokens_scored": 244,
       "tokens_with_signal": 164,
-      "coverage_pct": 65.3,
-      "avg_score": 11.21,
-      "max_score": 22.98,
+      "coverage_pct": 67.2,
+      "avg_score": 11.64,
+      "max_score": 22.94,
       "quality_traders": 51,
-      "markets_indexed": 3712
+      "markets_indexed": 3710
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 251,
-      "tokens_with_signal": 196,
-      "coverage_pct": 78.1,
-      "avg_score": 7.43,
-      "max_score": 27.32
+      "tokens_scored": 244,
+      "tokens_with_signal": 194,
+      "coverage_pct": 79.5,
+      "avg_score": 7.49,
+      "max_score": 17.07
     },
     "external": {
       "active": true,
-      "tokens_scored": 251,
-      "tokens_with_signal": 34,
-      "coverage_pct": 13.5,
-      "avg_score": 3.96,
+      "tokens_scored": 244,
+      "tokens_with_signal": 32,
+      "coverage_pct": 13.1,
+      "avg_score": 4.4,
       "max_score": 7.0
     }
   },
