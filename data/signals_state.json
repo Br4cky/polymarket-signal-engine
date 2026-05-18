@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "bc0766f0",
+      "timestamp": "2026-05-18T00:16:32.503817+00:00",
+      "status": "active",
+      "market_id": "2230504",
+      "condition_id": "",
+      "token_id": "62950304702513127354927727047174334508241441581958126995838991994595583164813",
+      "question": "San Diego Padres vs. Seattle Mariners",
+      "outcome": "San Diego Padres",
+      "slug": "mlb-sd-sea-2026-05-17",
+      "category": "",
+      "resolution_date": "2026-05-24T23:20:00Z",
+      "entry_price": 0.595,
+      "min_entry_price": 0.58,
+      "max_entry_price": 0.625,
+      "tp_price": 0.7805,
+      "sl_price": 0.4165,
+      "tp_pct": 31.2,
+      "sl_pct": -30.0,
+      "expiry": "2026-05-24T23:20:00+00:00",
+      "edge_score": 46.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.93,
+        "dislocation": 24.52,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 6,
+      "liquidity_usd": 87116.4927,
+      "volume_24h": 1418202.3932819997,
+      "rationale": "Smart money 22/25 (6 whales) | Dislocation 25/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.458,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.595,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "ee01cc92",
@@ -9017,12 +9063,12 @@
     "2230484": "2026-05-17T20:00:47.327974+00:00"
   },
   "stats": {
-    "total_signals": 1009,
+    "total_signals": 1010,
     "total_wins": 501,
     "total_losses": 501,
     "total_expired": 7,
     "total_market_resolved": 170
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-17T23:06:43.430019+00:00"
+  "last_updated": "2026-05-18T00:16:32.504814+00:00"
 }
