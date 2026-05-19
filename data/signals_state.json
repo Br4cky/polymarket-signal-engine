@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "55c290fc",
+      "timestamp": "2026-05-19T07:56:17.195949+00:00",
+      "status": "active",
+      "market_id": "2274029",
+      "condition_id": "",
+      "token_id": "14307028232422022213612592160348706278250793006838119243561590615066331173954",
+      "question": "Geneva Open: Jenson Brooksby vs Casper Ruud",
+      "outcome": "Casper Ruud",
+      "slug": "atp-brooksb-ruud-2026-05-18",
+      "category": "",
+      "resolution_date": "2026-05-25T08:00:00Z",
+      "entry_price": 0.855,
+      "min_entry_price": 0.84,
+      "max_entry_price": 0.885,
+      "tp_price": 0.9347,
+      "sl_price": 0.7753,
+      "tp_pct": 9.3,
+      "sl_pct": -9.3,
+      "expiry": "2026-05-25T08:00:00+00:00",
+      "edge_score": 31.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.94,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 72282.8023,
+      "volume_24h": 137196.687286,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.55,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.855,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "cc7a6734",
@@ -9013,12 +9059,12 @@
     "2240823": "2026-05-19T03:54:40.992274+00:00"
   },
   "stats": {
-    "total_signals": 1016,
+    "total_signals": 1017,
     "total_wins": 505,
     "total_losses": 504,
     "total_expired": 7,
     "total_market_resolved": 170
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-19T03:54:40.999029+00:00"
+  "last_updated": "2026-05-19T07:56:17.196946+00:00"
 }
