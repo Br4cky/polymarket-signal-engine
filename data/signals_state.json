@@ -42,8 +42,53 @@
       "trough_price": 0.555,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.555,
-      "live_pnl_pct": -1.77
+      "current_price": 0.565,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "3c1ecb3a",
+      "timestamp": "2026-05-20T10:59:21.256990+00:00",
+      "status": "active",
+      "market_id": "2303390",
+      "condition_id": "",
+      "token_id": "108340822439002618388185250187797462387805848729508674529721515742570694258931",
+      "question": "Geneva Open: Francisco Comesana vs Jaume Munar",
+      "outcome": "Francisco Comesana",
+      "slug": "atp-comesan-munar-2026-05-20",
+      "category": "",
+      "resolution_date": "2026-05-27T08:00:00Z",
+      "entry_price": 0.395,
+      "min_entry_price": 0.385,
+      "max_entry_price": 0.415,
+      "tp_price": 0.7354,
+      "sl_price": 0.2943,
+      "tp_pct": 86.2,
+      "sl_pct": -25.5,
+      "expiry": "2026-05-27T08:00:00+00:00",
+      "edge_score": 33.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.96,
+        "dislocation": 8.0,
+        "external": 7.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.5,
+      "days_to_close": 6,
+      "liquidity_usd": 90573.1621,
+      "volume_24h": 100365.46339100017,
+      "rationale": "Smart money 18/25 (4 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.563,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.395,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9059,12 +9104,12 @@
     "2250203": "2026-05-20T03:55:01.236458+00:00"
   },
   "stats": {
-    "total_signals": 1027,
+    "total_signals": 1028,
     "total_wins": 510,
     "total_losses": 509,
     "total_expired": 7,
     "total_market_resolved": 174
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-20T07:54:40.667580+00:00"
+  "last_updated": "2026-05-20T10:59:21.259571+00:00"
 }
