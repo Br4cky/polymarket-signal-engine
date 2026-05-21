@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "72504393",
+      "timestamp": "2026-05-21T00:04:04.550221+00:00",
+      "status": "active",
+      "market_id": "2260367",
+      "condition_id": "",
+      "token_id": "51263530646730364562006946240551968129466711133415870332524354100049627255451",
+      "question": "Atlanta Braves vs. Miami Marlins",
+      "outcome": "Miami Marlins",
+      "slug": "mlb-atl-mia-2026-05-20",
+      "category": "",
+      "resolution_date": "2026-05-27T22:40:00Z",
+      "entry_price": 0.135,
+      "min_entry_price": 0.125,
+      "max_entry_price": 0.1434,
+      "tp_price": 0.4796,
+      "sl_price": 0.1026,
+      "tp_pct": 255.2,
+      "sl_pct": -24.0,
+      "expiry": "2026-05-27T22:40:00+00:00",
+      "edge_score": 48.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.66,
+        "dislocation": 23.66,
+        "external": 0.0
+      },
+      "convexity_band": "5x",
+      "potential_multiple": 7.4,
+      "days_to_close": 6,
+      "liquidity_usd": 114185.5543,
+      "volume_24h": 482996.0004570001,
+      "rationale": "Smart money 23/25 (7 whales) | Dislocation 24/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.398,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.135,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "8cb8643d",
@@ -9020,12 +9066,12 @@
     "2296484": "2026-05-20T21:20:19.756067+00:00"
   },
   "stats": {
-    "total_signals": 1039,
+    "total_signals": 1040,
     "total_wins": 515,
     "total_losses": 517,
     "total_expired": 7,
     "total_market_resolved": 175
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-20T22:51:36.427357+00:00"
+  "last_updated": "2026-05-21T00:04:04.552010+00:00"
 }
