@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "51b8239e",
+      "timestamp": "2026-05-21T11:43:16.354014+00:00",
+      "status": "active",
+      "market_id": "2313247",
+      "condition_id": "",
+      "token_id": "27692529916134304926078677132674669197047914218405944818842320297707834680305",
+      "question": "Hamburg European Open: Ignacio Buse vs Ugo Humbert",
+      "outcome": "Ignacio Buse",
+      "slug": "atp-buse-humbert-2026-05-21",
+      "category": "",
+      "resolution_date": "2026-05-28T10:00:00Z",
+      "entry_price": 0.935,
+      "min_entry_price": 0.92,
+      "max_entry_price": 0.965,
+      "tp_price": 0.9764,
+      "sl_price": 0.8936,
+      "tp_pct": 4.4,
+      "sl_pct": -4.4,
+      "expiry": "2026-05-28T10:00:00+00:00",
+      "edge_score": 45.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.77,
+        "dislocation": 20.02,
+        "external": 4.78
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 44672.1323,
+      "volume_24h": 365292.573351,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 20/30 (velocity, vol spike, book imbalance, trajectory) | External 4.8/15",
+      "tp_fraction": 0.637,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.935,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "79c24dbb",
@@ -9019,12 +9065,12 @@
     "2260367": "2026-05-21T04:28:35.428755+00:00"
   },
   "stats": {
-    "total_signals": 1041,
+    "total_signals": 1042,
     "total_wins": 516,
     "total_losses": 518,
     "total_expired": 7,
     "total_market_resolved": 176
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-21T08:15:04.500114+00:00"
+  "last_updated": "2026-05-21T11:43:16.356366+00:00"
 }
