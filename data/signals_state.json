@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "214fa931",
+      "timestamp": "2026-05-22T23:26:08.059187+00:00",
+      "status": "active",
+      "market_id": "2277105",
+      "condition_id": "",
+      "token_id": "64700540662747536395131334099124411125561204840004079775900444526222443172419",
+      "question": "Minnesota Twins vs. Boston Red Sox",
+      "outcome": "Minnesota Twins",
+      "slug": "mlb-min-bos-2026-05-22",
+      "category": "",
+      "resolution_date": "2026-05-29T23:10:00Z",
+      "entry_price": 0.425,
+      "min_entry_price": 0.415,
+      "max_entry_price": 0.439,
+      "tp_price": 0.6488,
+      "sl_price": 0.323,
+      "tp_pct": 52.7,
+      "sl_pct": -24.0,
+      "expiry": "2026-05-29T23:10:00+00:00",
+      "edge_score": 30.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.35,
+        "dislocation": 11.0,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.4,
+      "days_to_close": 6,
+      "liquidity_usd": 561440.7445,
+      "volume_24h": 461975.00909499935,
+      "rationale": "Smart money 20/25 (5 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+      "tp_fraction": 0.389,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.425,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "9aa76690",
@@ -9022,12 +9068,12 @@
     "2277095": "2026-05-22T20:57:03.692055+00:00"
   },
   "stats": {
-    "total_signals": 1066,
+    "total_signals": 1067,
     "total_wins": 527,
     "total_losses": 532,
     "total_expired": 7,
     "total_market_resolved": 179
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-22T22:16:58.678057+00:00"
+  "last_updated": "2026-05-22T23:26:08.061359+00:00"
 }
