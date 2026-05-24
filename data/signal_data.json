@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-05-24T15:40:16.912308+00:00",
+    "timestamp": "2026-05-24T16:50:16.515352+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 322,
-    "opportunities_found": 19,
+    "tokens_scored": 308,
+    "opportunities_found": 24,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -47,11 +47,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.555,
-        "trough_price": 0.435,
+        "trough_price": 0.425,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.455,
-        "live_pnl_pct": -18.02
+        "current_price": 0.425,
+        "live_pnl_pct": -23.42
       },
       {
         "signal_id": "ce845a16",
@@ -91,11 +91,56 @@
         "sl_fraction": 0.3,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.78,
+        "trough_price": 0.585,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.585,
+        "live_pnl_pct": -3.31
+      },
+      {
+        "signal_id": "0b83a978",
+        "timestamp": "2026-05-24T16:50:16.502151+00:00",
+        "status": "active",
+        "market_id": "2292406",
+        "condition_id": "",
+        "token_id": "59710346704703871423091222524487677910093261807061482533916656731602753847622",
+        "question": "Pittsburgh Pirates vs. Toronto Blue Jays",
+        "outcome": "Pittsburgh Pirates",
+        "slug": "mlb-pit-tor-2026-05-24",
+        "category": "",
+        "resolution_date": "2026-05-31T16:15:00Z",
+        "entry_price": 0.67,
+        "min_entry_price": 0.655,
+        "max_entry_price": 0.7,
+        "tp_price": 0.8192,
+        "sl_price": 0.5208,
+        "tp_pct": 22.3,
+        "sl_pct": -22.3,
+        "expiry": "2026-05-31T16:15:00+00:00",
+        "edge_score": 44.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 21.06,
+          "dislocation": 22.71,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.5,
+        "days_to_close": 6,
+        "liquidity_usd": 53401.2896,
+        "volume_24h": 845701.9706830004,
+        "rationale": "Smart money 21/25 (6 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.452,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.605,
+        "current_price": 0.67,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1093,
-      "active_signals": 2,
+      "total_signals_issued": 1094,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 99,
       "losses": 101,
@@ -2390,36 +2435,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 322,
+      "tokens_scored": 308,
       "tokens_with_signal": 50,
-      "coverage_pct": 15.5,
-      "avg_score": 8.45,
+      "coverage_pct": 16.2,
+      "avg_score": 8.3,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 322,
-      "tokens_with_signal": 232,
-      "coverage_pct": 72.0,
-      "avg_score": 12.55,
-      "max_score": 23.12,
+      "tokens_scored": 308,
+      "tokens_with_signal": 235,
+      "coverage_pct": 76.3,
+      "avg_score": 12.36,
+      "max_score": 24.73,
       "quality_traders": 51,
-      "markets_indexed": 3998
+      "markets_indexed": 3948
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 322,
-      "tokens_with_signal": 281,
-      "coverage_pct": 87.3,
-      "avg_score": 7.81,
-      "max_score": 25.0
+      "tokens_scored": 308,
+      "tokens_with_signal": 263,
+      "coverage_pct": 85.4,
+      "avg_score": 8.12,
+      "max_score": 28.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 322,
-      "tokens_with_signal": 26,
-      "coverage_pct": 8.1,
-      "avg_score": 2.14,
+      "tokens_scored": 308,
+      "tokens_with_signal": 20,
+      "coverage_pct": 6.5,
+      "avg_score": 2.35,
       "max_score": 4.38
     }
   },

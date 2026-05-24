@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.555,
-      "trough_price": 0.435,
+      "trough_price": 0.425,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.455,
-      "live_pnl_pct": -18.02
+      "current_price": 0.425,
+      "live_pnl_pct": -23.42
     },
     {
       "signal_id": "ce845a16",
@@ -83,11 +83,56 @@
       "sl_fraction": 0.3,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.78,
+      "trough_price": 0.585,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.585,
+      "live_pnl_pct": -3.31
+    },
+    {
+      "signal_id": "0b83a978",
+      "timestamp": "2026-05-24T16:50:16.502151+00:00",
+      "status": "active",
+      "market_id": "2292406",
+      "condition_id": "",
+      "token_id": "59710346704703871423091222524487677910093261807061482533916656731602753847622",
+      "question": "Pittsburgh Pirates vs. Toronto Blue Jays",
+      "outcome": "Pittsburgh Pirates",
+      "slug": "mlb-pit-tor-2026-05-24",
+      "category": "",
+      "resolution_date": "2026-05-31T16:15:00Z",
+      "entry_price": 0.67,
+      "min_entry_price": 0.655,
+      "max_entry_price": 0.7,
+      "tp_price": 0.8192,
+      "sl_price": 0.5208,
+      "tp_pct": 22.3,
+      "sl_pct": -22.3,
+      "expiry": "2026-05-31T16:15:00+00:00",
+      "edge_score": 44.6,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.06,
+        "dislocation": 22.71,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.5,
+      "days_to_close": 6,
+      "liquidity_usd": 53401.2896,
+      "volume_24h": 845701.9706830004,
+      "rationale": "Smart money 21/25 (6 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.452,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.605,
+      "current_price": 0.67,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9114,12 +9159,12 @@
     "2328130": "2026-05-24T14:09:22.326960+00:00"
   },
   "stats": {
-    "total_signals": 1093,
+    "total_signals": 1094,
     "total_wins": 541,
     "total_losses": 543,
     "total_expired": 7,
     "total_market_resolved": 181
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-24T15:40:16.902759+00:00"
+  "last_updated": "2026-05-24T16:50:16.505413+00:00"
 }
