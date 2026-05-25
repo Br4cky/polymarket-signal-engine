@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "6dd8a722",
+      "timestamp": "2026-05-25T22:47:56.786959+00:00",
+      "status": "active",
+      "market_id": "2302340",
+      "condition_id": "",
+      "token_id": "12606045356314178137795243180410859769940487222498652421259394342199106087722",
+      "question": "Arizona Diamondbacks vs. San Francisco Giants",
+      "outcome": "Arizona Diamondbacks",
+      "slug": "mlb-ari-sf-2026-05-25",
+      "category": "",
+      "resolution_date": "2026-06-01T21:05:00Z",
+      "entry_price": 0.735,
+      "min_entry_price": 0.72,
+      "max_entry_price": 0.756,
+      "tp_price": 0.8554,
+      "sl_price": 0.6146,
+      "tp_pct": 16.4,
+      "sl_pct": -16.4,
+      "expiry": "2026-06-01T21:05:00+00:00",
+      "edge_score": 45.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.24,
+        "dislocation": 22.01,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 6,
+      "liquidity_usd": 242099.9704,
+      "volume_24h": 501432.13604099967,
+      "rationale": "Smart money 21/25 (8 whales) | Dislocation 22/30 (velocity, vol spike, book imbalance, trajectory)",
+      "tp_fraction": 0.454,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.735,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "ab43676b",
@@ -9022,12 +9068,12 @@
     "2302336": "2026-05-25T21:40:14.584245+00:00"
   },
   "stats": {
-    "total_signals": 1120,
+    "total_signals": 1121,
     "total_wins": 558,
     "total_losses": 555,
     "total_expired": 7,
     "total_market_resolved": 183
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-05-25T21:40:14.590114+00:00"
+  "last_updated": "2026-05-25T22:47:56.789459+00:00"
 }
