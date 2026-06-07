@@ -44,6 +44,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.495,
       "live_pnl_pct": 57.14
+    },
+    {
+      "signal_id": "1b8e7ab3",
+      "timestamp": "2026-06-07T17:27:10.159958+00:00",
+      "status": "active",
+      "market_id": "2410045",
+      "condition_id": "",
+      "token_id": "96938017585810752412259515452882451485664768632907210340667634174872604901466",
+      "question": "Pittsburgh Pirates vs. Atlanta Braves",
+      "outcome": "Pittsburgh Pirates",
+      "slug": "mlb-pit-atl-2026-06-07",
+      "category": "",
+      "resolution_date": "2026-06-14T17:35:00Z",
+      "entry_price": 0.435,
+      "min_entry_price": 0.425,
+      "max_entry_price": 0.449,
+      "tp_price": 0.6613,
+      "sl_price": 0.3045,
+      "tp_pct": 52.0,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-14T17:35:00+00:00",
+      "edge_score": 32.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.84,
+        "dislocation": 15.07,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.3,
+      "days_to_close": 7,
+      "liquidity_usd": 518916.195,
+      "volume_24h": 709269.0391909987,
+      "rationale": "Smart money 18/25 (3 whales) | Dislocation 15/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.401,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.435,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9073,12 +9118,12 @@
     "2447621": "2026-06-07T15:59:44.421510+00:00"
   },
   "stats": {
-    "total_signals": 1338,
+    "total_signals": 1339,
     "total_wins": 669,
     "total_losses": 661,
     "total_expired": 7,
     "total_market_resolved": 210
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-07T15:59:44.428572+00:00"
+  "last_updated": "2026-06-07T17:27:10.161666+00:00"
 }
