@@ -84,11 +84,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.305,
-      "trough_price": 0.295,
+      "trough_price": 0.285,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.295,
-      "live_pnl_pct": -3.28
+      "current_price": 0.285,
+      "live_pnl_pct": -6.56
     },
     {
       "signal_id": "7a0b1ecc",
@@ -128,11 +128,56 @@
       "sl_fraction": 0.255,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.455,
+      "trough_price": 0.445,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.445,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "1fc693c1",
+      "timestamp": "2026-06-09T11:49:15.698331+00:00",
+      "status": "active",
+      "market_id": "2454981",
+      "condition_id": "",
+      "token_id": "94930493642088585293086613093938950848557467374482539770019019545440453733382",
+      "question": "Libema Open: Gabriel Diallo vs Adrian Mannarino",
+      "outcome": "Gabriel Diallo",
+      "slug": "atp-diallo-mannari-2026-06-08",
+      "category": "",
+      "resolution_date": "2026-06-15T08:00:00Z",
+      "entry_price": 0.255,
+      "min_entry_price": 0.245,
+      "max_entry_price": 0.275,
+      "tp_price": 0.6618,
+      "sl_price": 0.19,
+      "tp_pct": 159.5,
+      "sl_pct": -25.5,
+      "expiry": "2026-06-15T08:00:00+00:00",
+      "edge_score": 30.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.99,
+        "dislocation": 8.0,
+        "external": 5.47
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.9,
+      "days_to_close": 5,
+      "liquidity_usd": 45871.1634,
+      "volume_24h": 196169.4907690001,
+      "rationale": "Smart money 18/25 (5 whales) | Dislocation 8/30 (vol spike) | External 5.5/15",
+      "tp_fraction": 0.546,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.445,
+      "current_price": 0.255,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9151,12 +9196,12 @@
     "2418695": "2026-06-09T00:22:04.424964+00:00"
   },
   "stats": {
-    "total_signals": 1354,
+    "total_signals": 1355,
     "total_wins": 677,
     "total_losses": 667,
     "total_expired": 7,
     "total_market_resolved": 210
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-09T08:32:19.770052+00:00"
+  "last_updated": "2026-06-09T11:49:15.701396+00:00"
 }
