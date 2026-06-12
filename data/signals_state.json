@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "97a3679a",
+      "timestamp": "2026-06-12T22:16:54.127999+00:00",
+      "status": "active",
+      "market_id": "2453986",
+      "condition_id": "",
+      "token_id": "64689448713467610616114366033929826210635591051181591320230914154593787134800",
+      "question": "Los Angeles Dodgers vs. Chicago White Sox",
+      "outcome": "Chicago White Sox",
+      "slug": "mlb-lad-cws-2026-06-12",
+      "category": "",
+      "resolution_date": "2026-06-19T23:40:00Z",
+      "entry_price": 0.415,
+      "min_entry_price": 0.405,
+      "max_entry_price": 0.429,
+      "tp_price": 0.6511,
+      "sl_price": 0.2905,
+      "tp_pct": 56.9,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-19T23:40:00+00:00",
+      "edge_score": 33.6,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.11,
+        "dislocation": 14.66,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.4,
+      "days_to_close": 7,
+      "liquidity_usd": 398326.6986,
+      "volume_24h": 841066.6551630003,
+      "rationale": "Smart money 20/25 (4 whales) | Dislocation 15/30 (velocity, vol spike)",
+      "tp_fraction": 0.404,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.415,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "61f79a8f",
@@ -9009,12 +9055,12 @@
     "2431841": "2026-06-12T20:34:45.530082+00:00"
   },
   "stats": {
-    "total_signals": 1374,
+    "total_signals": 1375,
     "total_wins": 687,
     "total_losses": 680,
     "total_expired": 7,
     "total_market_resolved": 216
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-12T20:34:45.537576+00:00"
+  "last_updated": "2026-06-12T22:16:54.130083+00:00"
 }
