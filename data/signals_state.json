@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "031dfb9b",
+      "timestamp": "2026-06-13T19:48:00.521467+00:00",
+      "status": "active",
+      "market_id": "2461949",
+      "condition_id": "",
+      "token_id": "17764575625530125809347615452944812454368134160768131567991915747075405315592",
+      "question": "New York Yankees vs. Toronto Blue Jays",
+      "outcome": "New York Yankees",
+      "slug": "mlb-nyy-tor-2026-06-13",
+      "category": "",
+      "resolution_date": "2026-06-20T19:07:00Z",
+      "entry_price": 0.495,
+      "min_entry_price": 0.485,
+      "max_entry_price": 0.515,
+      "tp_price": 0.6942,
+      "sl_price": 0.3465,
+      "tp_pct": 40.2,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-20T19:07:00+00:00",
+      "edge_score": 31.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.74,
+        "dislocation": 11.79,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.0,
+      "days_to_close": 6,
+      "liquidity_usd": 40234.6301,
+      "volume_24h": 1142367.0250010008,
+      "rationale": "Smart money 23/25 (7 whales) | Dislocation 12/30 (vol spike, trajectory)",
+      "tp_fraction": 0.394,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.495,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "e506d47d",
@@ -9010,12 +9056,12 @@
     "2453996": "2026-06-13T08:02:05.099894+00:00"
   },
   "stats": {
-    "total_signals": 1377,
+    "total_signals": 1378,
     "total_wins": 688,
     "total_losses": 682,
     "total_expired": 7,
     "total_market_resolved": 216
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-13T17:53:39.373991+00:00"
+  "last_updated": "2026-06-13T19:48:00.524048+00:00"
 }
