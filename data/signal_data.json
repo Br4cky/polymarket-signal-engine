@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-06-14T21:00:44.252751+00:00",
+    "timestamp": "2026-06-14T22:21:36.665555+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 343,
-    "opportunities_found": 40,
+    "tokens_scored": 281,
+    "opportunities_found": 24,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -50,8 +50,8 @@
         "trough_price": 0.745,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.755,
-        "live_pnl_pct": -1.31
+        "current_price": 0.775,
+        "live_pnl_pct": 1.31
       }
     ],
     "recent_resolved": [
@@ -2345,36 +2345,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 59,
-      "coverage_pct": 17.2,
-      "avg_score": 8.82,
+      "tokens_scored": 281,
+      "tokens_with_signal": 58,
+      "coverage_pct": 20.6,
+      "avg_score": 8.59,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 202,
-      "coverage_pct": 58.9,
-      "avg_score": 11.87,
-      "max_score": 21.09,
-      "quality_traders": 51,
-      "markets_indexed": 3480
+      "tokens_scored": 281,
+      "tokens_with_signal": 163,
+      "coverage_pct": 58.0,
+      "avg_score": 12.09,
+      "max_score": 22.48,
+      "quality_traders": 50,
+      "markets_indexed": 3820
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 295,
-      "coverage_pct": 86.0,
-      "avg_score": 7.74,
-      "max_score": 26.0
+      "tokens_scored": 281,
+      "tokens_with_signal": 232,
+      "coverage_pct": 82.6,
+      "avg_score": 8.03,
+      "max_score": 24.87
     },
     "external": {
       "active": true,
-      "tokens_scored": 343,
+      "tokens_scored": 281,
       "tokens_with_signal": 46,
-      "coverage_pct": 13.4,
-      "avg_score": 2.54,
+      "coverage_pct": 16.4,
+      "avg_score": 2.56,
       "max_score": 6.31
     }
   },
