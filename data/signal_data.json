@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-06-16T21:01:47.012377+00:00",
+    "timestamp": "2026-06-16T23:01:17.463865+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 307,
-    "opportunities_found": 10,
+    "tokens_scored": 289,
+    "opportunities_found": 20,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "75722951",
+        "timestamp": "2026-06-16T23:01:17.451917+00:00",
+        "status": "active",
+        "market_id": "2490309",
+        "condition_id": "",
+        "token_id": "18141977798271706048605044399292739369870989679270841636832886925041880052399",
+        "question": "Kansas City Royals vs. Washington Nationals",
+        "outcome": "Washington Nationals",
+        "slug": "mlb-kc-wsh-2026-06-16",
+        "category": "",
+        "resolution_date": "2026-06-23T22:45:00Z",
+        "entry_price": 0.58,
+        "min_entry_price": 0.565,
+        "max_entry_price": 0.61,
+        "tp_price": 0.753,
+        "sl_price": 0.407,
+        "tp_pct": 29.8,
+        "sl_pct": -29.8,
+        "expiry": "2026-06-23T22:45:00+00:00",
+        "edge_score": 35.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.03,
+          "dislocation": 18.14,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 6,
+        "liquidity_usd": 23009.7953,
+        "volume_24h": 1356553.458062998,
+        "rationale": "Smart money 18/25 (4 whales) | Dislocation 18/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.412,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.58,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "e86a0324",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1389,
-      "active_signals": 0,
+      "total_signals_issued": 1390,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 307,
+      "tokens_scored": 289,
       "tokens_with_signal": 53,
-      "coverage_pct": 17.3,
-      "avg_score": 9.36,
+      "coverage_pct": 18.3,
+      "avg_score": 9.52,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 307,
-      "tokens_with_signal": 231,
-      "coverage_pct": 75.2,
-      "avg_score": 10.18,
-      "max_score": 23.94,
+      "tokens_scored": 289,
+      "tokens_with_signal": 220,
+      "coverage_pct": 76.1,
+      "avg_score": 11.16,
+      "max_score": 22.16,
       "quality_traders": 51,
-      "markets_indexed": 3546
+      "markets_indexed": 3602
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 307,
-      "tokens_with_signal": 263,
-      "coverage_pct": 85.7,
-      "avg_score": 7.79,
-      "max_score": 25.81
+      "tokens_scored": 289,
+      "tokens_with_signal": 253,
+      "coverage_pct": 87.5,
+      "avg_score": 8.08,
+      "max_score": 23.42
     },
     "external": {
       "active": true,
-      "tokens_scored": 307,
-      "tokens_with_signal": 13,
-      "coverage_pct": 4.2,
-      "avg_score": 1.39,
-      "max_score": 1.4
+      "tokens_scored": 289,
+      "tokens_with_signal": 2,
+      "coverage_pct": 0.7,
+      "avg_score": 1.31,
+      "max_score": 1.31
     }
   },
   "calibration": {
