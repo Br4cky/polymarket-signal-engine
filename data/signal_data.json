@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-06-17T05:32:42.848025+00:00",
+    "timestamp": "2026-06-17T10:22:53.905348+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 291,
-    "opportunities_found": 10,
+    "tokens_scored": 303,
+    "opportunities_found": 27,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "ca2bc99b",
+        "timestamp": "2026-06-17T10:22:53.890889+00:00",
+        "status": "active",
+        "market_id": "2532494",
+        "condition_id": "",
+        "token_id": "75460950192645042052772726269356774443771036401301730225802497851077201677875",
+        "question": "Grass Court Championships: Donna Vekic vs Alexandra Eala",
+        "outcome": "Alexandra Eala",
+        "slug": "wta-vekic-eala-2026-06-15",
+        "category": "",
+        "resolution_date": "2026-06-22T08:00:00Z",
+        "entry_price": 0.715,
+        "min_entry_price": 0.7,
+        "max_entry_price": 0.736,
+        "tp_price": 0.8407,
+        "sl_price": 0.5893,
+        "tp_pct": 17.6,
+        "sl_pct": -17.6,
+        "expiry": "2026-06-22T08:00:00+00:00",
+        "edge_score": 42.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 15.34,
+          "dislocation": 22.62,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.4,
+        "days_to_close": 4,
+        "liquidity_usd": 132009.1673,
+        "volume_24h": 421819.4935759996,
+        "rationale": "Smart money 15/25 (4 whales) | Dislocation 23/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.441,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.715,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "11b4b360",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1394,
-      "active_signals": 0,
+      "total_signals_issued": 1395,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 291,
-      "tokens_with_signal": 61,
-      "coverage_pct": 21.0,
-      "avg_score": 9.51,
+      "tokens_scored": 303,
+      "tokens_with_signal": 60,
+      "coverage_pct": 19.8,
+      "avg_score": 9.56,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 291,
-      "tokens_with_signal": 185,
-      "coverage_pct": 63.6,
-      "avg_score": 10.58,
-      "max_score": 20.84,
+      "tokens_scored": 303,
+      "tokens_with_signal": 173,
+      "coverage_pct": 57.1,
+      "avg_score": 10.33,
+      "max_score": 22.53,
       "quality_traders": 51,
-      "markets_indexed": 3320
+      "markets_indexed": 3468
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 291,
-      "tokens_with_signal": 235,
-      "coverage_pct": 80.8,
-      "avg_score": 7.87,
-      "max_score": 22.56
+      "tokens_scored": 303,
+      "tokens_with_signal": 257,
+      "coverage_pct": 84.8,
+      "avg_score": 7.43,
+      "max_score": 22.62
     },
     "external": {
       "active": true,
-      "tokens_scored": 291,
-      "tokens_with_signal": 32,
-      "coverage_pct": 11.0,
-      "avg_score": 1.76,
-      "max_score": 3.5
+      "tokens_scored": 303,
+      "tokens_with_signal": 29,
+      "coverage_pct": 9.6,
+      "avg_score": 2.31,
+      "max_score": 7.0
     }
   },
   "calibration": {
