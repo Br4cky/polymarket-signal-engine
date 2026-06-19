@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "1aef702b",
+      "timestamp": "2026-06-19T20:23:48.833973+00:00",
+      "status": "active",
+      "market_id": "2587340",
+      "condition_id": "",
+      "token_id": "10430678435508825945083758839766261241163409767620719698068047167258334966803",
+      "question": "Halle Open: Frances Tiafoe vs Felix Auger-Aliassime",
+      "outcome": "Frances Tiafoe",
+      "slug": "atp-tiafoe-augeral-2026-06-19",
+      "category": "",
+      "resolution_date": "2026-06-26T09:30:00Z",
+      "entry_price": 0.335,
+      "min_entry_price": 0.325,
+      "max_entry_price": 0.355,
+      "tp_price": 0.7039,
+      "sl_price": 0.2345,
+      "tp_pct": 110.1,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-26T09:30:00+00:00",
+      "edge_score": 31.9,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.75,
+        "dislocation": 10.76,
+        "external": 2.17
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.0,
+      "days_to_close": 6,
+      "liquidity_usd": 90692.6866,
+      "volume_24h": 660783.2490350007,
+      "rationale": "Smart money 21/25 (5 whales) | Dislocation 11/30 (vol spike, trajectory) | External 2.2/15",
+      "tp_fraction": 0.555,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.335,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "6b17f486",
@@ -9010,12 +9056,12 @@
     "2587344": "2026-06-19T16:32:25.783409+00:00"
   },
   "stats": {
-    "total_signals": 1410,
+    "total_signals": 1411,
     "total_wins": 711,
     "total_losses": 692,
     "total_expired": 7,
     "total_market_resolved": 218
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-19T18:26:35.224325+00:00"
+  "last_updated": "2026-06-19T20:23:48.834935+00:00"
 }

@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-06-19T18:26:35.234124+00:00",
+    "timestamp": "2026-06-19T20:23:48.844554+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 343,
-    "opportunities_found": 10,
+    "tokens_scored": 320,
+    "opportunities_found": 6,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "1aef702b",
+        "timestamp": "2026-06-19T20:23:48.833973+00:00",
+        "status": "active",
+        "market_id": "2587340",
+        "condition_id": "",
+        "token_id": "10430678435508825945083758839766261241163409767620719698068047167258334966803",
+        "question": "Halle Open: Frances Tiafoe vs Felix Auger-Aliassime",
+        "outcome": "Frances Tiafoe",
+        "slug": "atp-tiafoe-augeral-2026-06-19",
+        "category": "",
+        "resolution_date": "2026-06-26T09:30:00Z",
+        "entry_price": 0.335,
+        "min_entry_price": 0.325,
+        "max_entry_price": 0.355,
+        "tp_price": 0.7039,
+        "sl_price": 0.2345,
+        "tp_pct": 110.1,
+        "sl_pct": -30.0,
+        "expiry": "2026-06-26T09:30:00+00:00",
+        "edge_score": 31.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.75,
+          "dislocation": 10.76,
+          "external": 2.17
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.0,
+        "days_to_close": 6,
+        "liquidity_usd": 90692.6866,
+        "volume_24h": 660783.2490350007,
+        "rationale": "Smart money 21/25 (5 whales) | Dislocation 11/30 (vol spike, trajectory) | External 2.2/15",
+        "tp_fraction": 0.555,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.335,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "07f898a6",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1410,
-      "active_signals": 0,
+      "total_signals_issued": 1411,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 113,
       "losses": 87,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 154,
-      "coverage_pct": 44.9,
-      "avg_score": 8.84,
+      "tokens_scored": 320,
+      "tokens_with_signal": 128,
+      "coverage_pct": 40.0,
+      "avg_score": 8.76,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 231,
-      "coverage_pct": 67.3,
-      "avg_score": 8.56,
-      "max_score": 20.44,
+      "tokens_scored": 320,
+      "tokens_with_signal": 226,
+      "coverage_pct": 70.6,
+      "avg_score": 11.14,
+      "max_score": 23.6,
       "quality_traders": 50,
-      "markets_indexed": 3426
+      "markets_indexed": 3736
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 301,
-      "coverage_pct": 87.8,
-      "avg_score": 7.26,
-      "max_score": 20.34
+      "tokens_scored": 320,
+      "tokens_with_signal": 290,
+      "coverage_pct": 90.6,
+      "avg_score": 7.55,
+      "max_score": 27.02
     },
     "external": {
       "active": true,
-      "tokens_scored": 343,
-      "tokens_with_signal": 3,
-      "coverage_pct": 0.9,
-      "avg_score": 3.78,
-      "max_score": 7.0
+      "tokens_scored": 320,
+      "tokens_with_signal": 2,
+      "coverage_pct": 0.6,
+      "avg_score": 2.17,
+      "max_score": 2.17
     }
   },
   "calibration": {
