@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "2a976740",
+      "timestamp": "2026-06-19T00:17:01.609190+00:00",
+      "status": "active",
+      "market_id": "2517172",
+      "condition_id": "",
+      "token_id": "43153340026679518307837215748792553140163079673122501117814988235352137932626",
+      "question": "Chicago White Sox vs. New York Yankees",
+      "outcome": "Chicago White Sox",
+      "slug": "mlb-cws-nyy-2026-06-18",
+      "category": "",
+      "resolution_date": "2026-06-25T23:05:00Z",
+      "entry_price": 0.355,
+      "min_entry_price": 0.345,
+      "max_entry_price": 0.375,
+      "tp_price": 0.61,
+      "sl_price": 0.2485,
+      "tp_pct": 71.8,
+      "sl_pct": -30.0,
+      "expiry": "2026-06-25T23:05:00+00:00",
+      "edge_score": 31.7,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.52,
+        "dislocation": 12.33,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.8,
+      "days_to_close": 6,
+      "liquidity_usd": 84470.7552,
+      "volume_24h": 873375.3003060005,
+      "rationale": "Smart money 22/25 (7 whales) | Dislocation 12/30 (vol spike, trajectory)",
+      "tp_fraction": 0.395,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.355,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "46ea4652",
@@ -9009,12 +9055,12 @@
     "2371796": "2026-06-18T14:31:20.005835+00:00"
   },
   "stats": {
-    "total_signals": 1403,
+    "total_signals": 1404,
     "total_wins": 707,
     "total_losses": 689,
     "total_expired": 7,
     "total_market_resolved": 217
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-18T22:27:46.745536+00:00"
+  "last_updated": "2026-06-19T00:17:01.611055+00:00"
 }
