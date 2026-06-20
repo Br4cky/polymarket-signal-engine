@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "36ae5632",
+      "timestamp": "2026-06-20T10:42:37.961389+00:00",
+      "status": "active",
+      "market_id": "2610814",
+      "condition_id": "",
+      "token_id": "113631572050908457741239426548682127571542436355282277790969254356104734468956",
+      "question": "Bad Homburg Open, Qualification: Irina-Camelia Begu vs Tamara Korpatsch",
+      "outcome": "Irina-Camelia Begu",
+      "slug": "wta-begu-korpats-2026-06-20",
+      "category": "",
+      "resolution_date": "2026-06-27T09:00:00Z",
+      "entry_price": 0.905,
+      "min_entry_price": 0.89,
+      "max_entry_price": 0.926,
+      "tp_price": 0.9574,
+      "sl_price": 0.8526,
+      "tp_pct": 5.8,
+      "sl_pct": -5.8,
+      "expiry": "2026-06-27T09:00:00+00:00",
+      "edge_score": 31.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.4,
+        "dislocation": 8.0,
+        "external": 3.86
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 126433.0572,
+      "volume_24h": 211502.09171000007,
+      "rationale": "Smart money 20/25 (5 whales) | Dislocation 8/30 (vol spike) | External 3.9/15",
+      "tp_fraction": 0.552,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.905,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "9f61ddf9",
@@ -9011,12 +9057,12 @@
     "2531449": "2026-06-20T08:00:36.753752+00:00"
   },
   "stats": {
-    "total_signals": 1413,
+    "total_signals": 1414,
     "total_wins": 712,
     "total_losses": 694,
     "total_expired": 7,
     "total_market_resolved": 219
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-20T08:00:36.760417+00:00"
+  "last_updated": "2026-06-20T10:42:37.963663+00:00"
 }
