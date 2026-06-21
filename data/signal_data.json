@@ -1,13 +1,59 @@
 {
   "metadata": {
-    "timestamp": "2026-06-21T07:17:29.792143+00:00",
+    "timestamp": "2026-06-21T10:55:46.095368+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 299,
-    "opportunities_found": 16,
+    "tokens_scored": 329,
+    "opportunities_found": 29,
     "engine_version": "4.0.0"
   },
   "signals": {
-    "active": [],
+    "active": [
+      {
+        "signal_id": "021e77e1",
+        "timestamp": "2026-06-21T10:55:46.081853+00:00",
+        "status": "active",
+        "market_id": "2611138",
+        "condition_id": "",
+        "token_id": "106683741755856029447068453649568687577477382652394410370525109570786532050608",
+        "question": "Bad Homburg Open: Liudmila Samsonova vs Katerina Siniakova",
+        "outcome": "Katerina Siniakova",
+        "slug": "wta-samsono-siniako-2026-06-21",
+        "category": "",
+        "resolution_date": "2026-06-28T09:00:00Z",
+        "entry_price": 0.35,
+        "min_entry_price": 0.34,
+        "max_entry_price": 0.364,
+        "tp_price": 0.7038,
+        "sl_price": 0.266,
+        "tp_pct": 101.1,
+        "sl_pct": -24.0,
+        "expiry": "2026-06-28T09:00:00+00:00",
+        "edge_score": 30.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.14,
+          "dislocation": 10.0,
+          "external": 7.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.9,
+        "days_to_close": 6,
+        "liquidity_usd": 199254.5475,
+        "volume_24h": 445028.36659799964,
+        "rationale": "Smart money 14/25 (2 whales) | Dislocation 10/30 (vol spike) | External 7.0/15",
+        "tp_fraction": 0.544,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.35,
+        "live_pnl_pct": 0.0
+      }
+    ],
     "recent_resolved": [
       {
         "signal_id": "97a3679a",
@@ -2261,8 +2307,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1424,
-      "active_signals": 0,
+      "total_signals_issued": 1425,
+      "active_signals": 1,
       "total_resolved": 200,
       "wins": 110,
       "losses": 90,
@@ -2299,37 +2345,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 299,
-      "tokens_with_signal": 112,
-      "coverage_pct": 37.5,
-      "avg_score": 8.79,
+      "tokens_scored": 329,
+      "tokens_with_signal": 99,
+      "coverage_pct": 30.1,
+      "avg_score": 8.97,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 299,
-      "tokens_with_signal": 201,
-      "coverage_pct": 67.2,
-      "avg_score": 7.63,
+      "tokens_scored": 329,
+      "tokens_with_signal": 224,
+      "coverage_pct": 68.1,
+      "avg_score": 7.77,
       "max_score": 18.0,
       "quality_traders": 51,
-      "markets_indexed": 3606
+      "markets_indexed": 3572
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 299,
-      "tokens_with_signal": 241,
-      "coverage_pct": 80.6,
-      "avg_score": 7.61,
-      "max_score": 24.43
+      "tokens_scored": 329,
+      "tokens_with_signal": 283,
+      "coverage_pct": 86.0,
+      "avg_score": 7.82,
+      "max_score": 20.52
     },
     "external": {
       "active": true,
-      "tokens_scored": 299,
-      "tokens_with_signal": 23,
-      "coverage_pct": 7.7,
-      "avg_score": 1.93,
-      "max_score": 4.69
+      "tokens_scored": 329,
+      "tokens_with_signal": 39,
+      "coverage_pct": 11.9,
+      "avg_score": 2.95,
+      "max_score": 7.0
     }
   },
   "calibration": {

@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "021e77e1",
+      "timestamp": "2026-06-21T10:55:46.081853+00:00",
+      "status": "active",
+      "market_id": "2611138",
+      "condition_id": "",
+      "token_id": "106683741755856029447068453649568687577477382652394410370525109570786532050608",
+      "question": "Bad Homburg Open: Liudmila Samsonova vs Katerina Siniakova",
+      "outcome": "Katerina Siniakova",
+      "slug": "wta-samsono-siniako-2026-06-21",
+      "category": "",
+      "resolution_date": "2026-06-28T09:00:00Z",
+      "entry_price": 0.35,
+      "min_entry_price": 0.34,
+      "max_entry_price": 0.364,
+      "tp_price": 0.7038,
+      "sl_price": 0.266,
+      "tp_pct": 101.1,
+      "sl_pct": -24.0,
+      "expiry": "2026-06-28T09:00:00+00:00",
+      "edge_score": 30.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 14.14,
+        "dislocation": 10.0,
+        "external": 7.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 2.9,
+      "days_to_close": 6,
+      "liquidity_usd": 199254.5475,
+      "volume_24h": 445028.36659799964,
+      "rationale": "Smart money 14/25 (2 whales) | Dislocation 10/30 (vol spike) | External 7.0/15",
+      "tp_fraction": 0.544,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.35,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "10ff1fe1",
@@ -9014,12 +9060,12 @@
     "2611008": "2026-06-20T17:56:59.319847+00:00"
   },
   "stats": {
-    "total_signals": 1424,
+    "total_signals": 1425,
     "total_wins": 719,
     "total_losses": 698,
     "total_expired": 7,
     "total_market_resolved": 219
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-21T07:17:29.782568+00:00"
+  "last_updated": "2026-06-21T10:55:46.085023+00:00"
 }
