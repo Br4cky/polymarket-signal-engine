@@ -1,5 +1,51 @@
 {
-  "active": [],
+  "active": [
+    {
+      "signal_id": "0c966f5e",
+      "timestamp": "2026-06-23T11:47:38.575184+00:00",
+      "status": "active",
+      "market_id": "2611175",
+      "condition_id": "",
+      "token_id": "48625161432271381473288009946858974124503981824536098677904252593885328451092",
+      "question": "Bad Homburg Open: Ann Li vs Ekaterina Alexandrova",
+      "outcome": "Ekaterina Alexandrova",
+      "slug": "wta-annli-alexand-2026-06-21",
+      "category": "",
+      "resolution_date": "2026-06-28T09:00:00Z",
+      "entry_price": 0.835,
+      "min_entry_price": 0.82,
+      "max_entry_price": 0.856,
+      "tp_price": 0.9404,
+      "sl_price": 0.7296,
+      "tp_pct": 12.6,
+      "sl_pct": -12.6,
+      "expiry": "2026-06-28T09:00:00+00:00",
+      "edge_score": 45.6,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 10.0,
+        "dislocation": 24.95,
+        "external": 7.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 4,
+      "liquidity_usd": 103909.6828,
+      "volume_24h": 635430.8532760001,
+      "rationale": "Smart money 10/25 (1 whales) | Dislocation 25/30 (velocity, vol spike, book imbalance, trajectory) | External 7.0/15",
+      "tp_fraction": 0.639,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.835,
+      "live_pnl_pct": 0.0
+    }
+  ],
   "resolved": [
     {
       "signal_id": "4d6e82cc",
@@ -9010,12 +9056,12 @@
     "2552449": "2026-06-21T20:33:53.340625+00:00"
   },
   "stats": {
-    "total_signals": 1433,
+    "total_signals": 1434,
     "total_wins": 723,
     "total_losses": 703,
     "total_expired": 7,
     "total_market_resolved": 220
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-23T08:29:19.271253+00:00"
+  "last_updated": "2026-06-23T11:47:38.578435+00:00"
 }
