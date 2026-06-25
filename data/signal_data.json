@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-06-25T09:53:27.202477+00:00",
+    "timestamp": "2026-06-25T12:16:46.927149+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 317,
-    "opportunities_found": 28,
+    "tokens_scored": 339,
+    "opportunities_found": 42,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -97,6 +97,96 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.195,
         "live_pnl_pct": -9.3
+      },
+      {
+        "signal_id": "eeef25c0",
+        "timestamp": "2026-06-25T12:16:46.909942+00:00",
+        "status": "active",
+        "market_id": "2668401",
+        "condition_id": "",
+        "token_id": "83522225386091343573307816604315342869026503261214034704196979294945976593496",
+        "question": "Bad Homburg Open: Naomi Osaka vs Ekaterina Alexandrova",
+        "outcome": "Ekaterina Alexandrova",
+        "slug": "wta-osaka-alexand-2026-06-25",
+        "category": "",
+        "resolution_date": "2026-07-02T09:00:00Z",
+        "entry_price": 0.013,
+        "min_entry_price": 0.008,
+        "max_entry_price": 0.021,
+        "tp_price": 0.4757,
+        "sl_price": 0.0097,
+        "tp_pct": 3558.9,
+        "sl_pct": -25.0,
+        "expiry": "2026-07-02T09:00:00+00:00",
+        "edge_score": 50.6,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 20.8,
+          "dislocation": 22.55,
+          "external": 4.41
+        },
+        "convexity_band": "20x",
+        "potential_multiple": 76.9,
+        "days_to_close": 6,
+        "liquidity_usd": 97598.58323,
+        "volume_24h": 405214.1361829998,
+        "rationale": "Smart money 21/25 (3 whales) | Dislocation 23/30 (velocity, vol spike, book imbalance, trajectory) | External 4.4/15",
+        "tp_fraction": 0.469,
+        "sl_fraction": 0.25,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.013,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "665e7d00",
+        "timestamp": "2026-06-25T12:16:46.910347+00:00",
+        "status": "active",
+        "market_id": "2658946",
+        "condition_id": "",
+        "token_id": "43869051789059807231990755867362085942243175221628649032731783592766514478213",
+        "question": "Mallorca Championships: Luciano Darderi vs Nuno Borges",
+        "outcome": "Luciano Darderi",
+        "slug": "atp-darderi-borges-2026-06-25",
+        "category": "",
+        "resolution_date": "2026-07-02T09:00:00Z",
+        "entry_price": 0.375,
+        "min_entry_price": 0.365,
+        "max_entry_price": 0.389,
+        "tp_price": 0.724,
+        "sl_price": 0.285,
+        "tp_pct": 93.1,
+        "sl_pct": -24.0,
+        "expiry": "2026-07-02T09:00:00+00:00",
+        "edge_score": 32.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 21.67,
+          "dislocation": 10.0,
+          "external": 2.09
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 2.7,
+        "days_to_close": 6,
+        "liquidity_usd": 127958.1709,
+        "volume_24h": 396397.58100700023,
+        "rationale": "Smart money 22/25 (3 whales) | Dislocation 10/30 (vol spike) | External 2.1/15",
+        "tp_fraction": 0.558,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.375,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2442,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1446,
-      "active_signals": 2,
+      "total_signals_issued": 1448,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2390,37 +2480,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 317,
-      "tokens_with_signal": 119,
-      "coverage_pct": 37.5,
-      "avg_score": 8.99,
+      "tokens_scored": 339,
+      "tokens_with_signal": 118,
+      "coverage_pct": 34.8,
+      "avg_score": 9.05,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 317,
-      "tokens_with_signal": 196,
-      "coverage_pct": 61.8,
-      "avg_score": 13.39,
-      "max_score": 23.07,
+      "tokens_scored": 339,
+      "tokens_with_signal": 216,
+      "coverage_pct": 63.7,
+      "avg_score": 13.62,
+      "max_score": 23.08,
       "quality_traders": 51,
-      "markets_indexed": 3054
+      "markets_indexed": 2998
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 317,
-      "tokens_with_signal": 272,
-      "coverage_pct": 85.8,
-      "avg_score": 7.31,
-      "max_score": 21.03
+      "tokens_scored": 339,
+      "tokens_with_signal": 297,
+      "coverage_pct": 87.6,
+      "avg_score": 7.48,
+      "max_score": 22.55
     },
     "external": {
       "active": true,
-      "tokens_scored": 317,
-      "tokens_with_signal": 10,
-      "coverage_pct": 3.2,
-      "avg_score": 2.49,
-      "max_score": 4.82
+      "tokens_scored": 339,
+      "tokens_with_signal": 23,
+      "coverage_pct": 6.8,
+      "avg_score": 4.25,
+      "max_score": 7.0
     }
   },
   "calibration": {
