@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.775,
-      "trough_price": 0.755,
+      "trough_price": 0.75,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.765,
-      "live_pnl_pct": 1.32
+      "current_price": 0.75,
+      "live_pnl_pct": -0.66
     },
     {
       "signal_id": "3fc2237f",
@@ -84,11 +84,56 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.215,
-      "trough_price": 0.195,
+      "trough_price": 0.185,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.195,
-      "live_pnl_pct": -9.3
+      "current_price": 0.185,
+      "live_pnl_pct": -13.95
+    },
+    {
+      "signal_id": "da6f4063",
+      "timestamp": "2026-06-25T17:34:11.288016+00:00",
+      "status": "active",
+      "market_id": "2673843",
+      "condition_id": "",
+      "token_id": "97960915991789144322231908706874181673889417923693843460421013295590361014858",
+      "question": "Bad Homburg Open: Karolina Muchova vs Clara Tauson",
+      "outcome": "Karolina Muchova",
+      "slug": "wta-muchova-tauson-2026-06-25",
+      "category": "",
+      "resolution_date": "2026-07-02T15:00:00Z",
+      "entry_price": 0.914,
+      "min_entry_price": 0.899,
+      "max_entry_price": 0.944,
+      "tp_price": 0.9613,
+      "sl_price": 0.8667,
+      "tp_pct": 5.2,
+      "sl_pct": -5.2,
+      "expiry": "2026-07-02T15:00:00+00:00",
+      "edge_score": 31.2,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 17.8,
+        "dislocation": 11.0,
+        "external": 3.54
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 83772.18299,
+      "volume_24h": 645793.8244350005,
+      "rationale": "Smart money 18/25 (2 whales) | Dislocation 11/30 (vol spike, book imbalance) | External 3.5/15",
+      "tp_fraction": 0.55,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.914,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9103,12 +9148,12 @@
     "2658946": "2026-06-25T15:23:01.994087+00:00"
   },
   "stats": {
-    "total_signals": 1448,
+    "total_signals": 1449,
     "total_wins": 729,
     "total_losses": 710,
     "total_expired": 7,
     "total_market_resolved": 221
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-25T15:23:02.005791+00:00"
+  "last_updated": "2026-06-25T17:34:11.293520+00:00"
 }

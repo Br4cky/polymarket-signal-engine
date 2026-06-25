@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-06-25T15:23:02.015513+00:00",
+    "timestamp": "2026-06-25T17:34:11.303982+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 347,
-    "opportunities_found": 43,
+    "tokens_scored": 357,
+    "opportunities_found": 36,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -47,11 +47,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.775,
-        "trough_price": 0.755,
+        "trough_price": 0.75,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.765,
-        "live_pnl_pct": 1.32
+        "current_price": 0.75,
+        "live_pnl_pct": -0.66
       },
       {
         "signal_id": "3fc2237f",
@@ -92,11 +92,56 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.215,
-        "trough_price": 0.195,
+        "trough_price": 0.185,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.195,
-        "live_pnl_pct": -9.3
+        "current_price": 0.185,
+        "live_pnl_pct": -13.95
+      },
+      {
+        "signal_id": "da6f4063",
+        "timestamp": "2026-06-25T17:34:11.288016+00:00",
+        "status": "active",
+        "market_id": "2673843",
+        "condition_id": "",
+        "token_id": "97960915991789144322231908706874181673889417923693843460421013295590361014858",
+        "question": "Bad Homburg Open: Karolina Muchova vs Clara Tauson",
+        "outcome": "Karolina Muchova",
+        "slug": "wta-muchova-tauson-2026-06-25",
+        "category": "",
+        "resolution_date": "2026-07-02T15:00:00Z",
+        "entry_price": 0.914,
+        "min_entry_price": 0.899,
+        "max_entry_price": 0.944,
+        "tp_price": 0.9613,
+        "sl_price": 0.8667,
+        "tp_pct": 5.2,
+        "sl_pct": -5.2,
+        "expiry": "2026-07-02T15:00:00+00:00",
+        "edge_score": 31.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 17.8,
+          "dislocation": 11.0,
+          "external": 3.54
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 6,
+        "liquidity_usd": 83772.18299,
+        "volume_24h": 645793.8244350005,
+        "rationale": "Smart money 18/25 (2 whales) | Dislocation 11/30 (vol spike, book imbalance) | External 3.5/15",
+        "tp_fraction": 0.55,
+        "sl_fraction": 0.33,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.914,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2352,8 +2397,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1448,
-      "active_signals": 2,
+      "total_signals_issued": 1449,
+      "active_signals": 3,
       "total_resolved": 200,
       "wins": 106,
       "losses": 94,
@@ -2390,37 +2435,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 113,
-      "coverage_pct": 32.6,
-      "avg_score": 9.16,
+      "tokens_scored": 357,
+      "tokens_with_signal": 108,
+      "coverage_pct": 30.3,
+      "avg_score": 9.34,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 219,
-      "coverage_pct": 63.1,
-      "avg_score": 13.91,
-      "max_score": 23.09,
+      "tokens_scored": 357,
+      "tokens_with_signal": 231,
+      "coverage_pct": 64.7,
+      "avg_score": 13.66,
+      "max_score": 23.17,
       "quality_traders": 51,
-      "markets_indexed": 2994
+      "markets_indexed": 3024
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 318,
+      "tokens_scored": 357,
+      "tokens_with_signal": 327,
       "coverage_pct": 91.6,
-      "avg_score": 7.37,
-      "max_score": 17.71
+      "avg_score": 7.43,
+      "max_score": 18.27
     },
     "external": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 19,
-      "coverage_pct": 5.5,
+      "tokens_scored": 357,
+      "tokens_with_signal": 3,
+      "coverage_pct": 0.8,
       "avg_score": 3.97,
-      "max_score": 7.0
+      "max_score": 4.82
     }
   },
   "calibration": {
