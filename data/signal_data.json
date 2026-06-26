@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-06-26T13:38:18.772409+00:00",
+    "timestamp": "2026-06-26T16:03:29.387560+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 325,
-    "opportunities_found": 22,
+    "tokens_scored": 318,
+    "opportunities_found": 28,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.175,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.205,
-        "live_pnl_pct": -4.65
+        "current_price": 0.195,
+        "live_pnl_pct": -9.3
       }
     ],
     "recent_resolved": [
@@ -2390,36 +2390,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 325,
-      "tokens_with_signal": 99,
-      "coverage_pct": 30.5,
-      "avg_score": 8.82,
+      "tokens_scored": 318,
+      "tokens_with_signal": 93,
+      "coverage_pct": 29.2,
+      "avg_score": 8.71,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 325,
-      "tokens_with_signal": 189,
-      "coverage_pct": 58.2,
-      "avg_score": 12.24,
+      "tokens_scored": 318,
+      "tokens_with_signal": 194,
+      "coverage_pct": 61.0,
+      "avg_score": 12.42,
       "max_score": 22.39,
       "quality_traders": 50,
-      "markets_indexed": 3106
+      "markets_indexed": 3118
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 325,
-      "tokens_with_signal": 287,
-      "coverage_pct": 88.3,
-      "avg_score": 7.15,
-      "max_score": 20.27
+      "tokens_scored": 318,
+      "tokens_with_signal": 281,
+      "coverage_pct": 88.4,
+      "avg_score": 7.45,
+      "max_score": 28.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 325,
-      "tokens_with_signal": 8,
-      "coverage_pct": 2.5,
-      "avg_score": 4.17,
+      "tokens_scored": 318,
+      "tokens_with_signal": 11,
+      "coverage_pct": 3.5,
+      "avg_score": 3.73,
       "max_score": 7.0
     }
   },
