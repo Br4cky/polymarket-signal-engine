@@ -89,6 +89,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.205,
       "live_pnl_pct": -4.65
+    },
+    {
+      "signal_id": "771ffd17",
+      "timestamp": "2026-06-26T11:31:08.931215+00:00",
+      "status": "active",
+      "market_id": "2682466",
+      "condition_id": "",
+      "token_id": "89068985807076626184905877845980861767793386328589937873292079458453757424538",
+      "question": "Lexus Eastbourne Open: Tatjana Maria vs Jelena Ostapenko",
+      "outcome": "Tatjana Maria",
+      "slug": "wta-maria-ostapen-2026-06-26",
+      "category": "",
+      "resolution_date": "2026-07-03T10:00:00Z",
+      "entry_price": 0.625,
+      "min_entry_price": 0.61,
+      "max_entry_price": 0.655,
+      "tp_price": 0.7836,
+      "sl_price": 0.4664,
+      "tp_pct": 25.4,
+      "sl_pct": -25.4,
+      "expiry": "2026-07-03T10:00:00+00:00",
+      "edge_score": 38.0,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.61,
+        "dislocation": 15.92,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.6,
+      "days_to_close": 6,
+      "liquidity_usd": 42425.3264,
+      "volume_24h": 409774.0589159996,
+      "rationale": "Smart money 21/25 (3 whales) | Dislocation 16/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.423,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.625,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9103,12 +9148,12 @@
     "2658946": "2026-06-25T15:23:01.994087+00:00"
   },
   "stats": {
-    "total_signals": 1449,
+    "total_signals": 1450,
     "total_wins": 730,
     "total_losses": 710,
     "total_expired": 7,
     "total_market_resolved": 221
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-26T08:29:45.137586+00:00"
+  "last_updated": "2026-06-26T11:31:08.935326+00:00"
 }
