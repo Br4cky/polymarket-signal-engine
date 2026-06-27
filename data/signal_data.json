@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-06-27T21:22:03.776391+00:00",
+    "timestamp": "2026-06-27T22:26:47.393049+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 375,
-    "opportunities_found": 28,
+    "tokens_scored": 328,
+    "opportunities_found": 29,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -91,12 +91,12 @@
         "sl_fraction": 0.24,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.555,
+        "peak_price": 0.565,
         "trough_price": 0.555,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.555,
-        "live_pnl_pct": 0.0
+        "current_price": 0.565,
+        "live_pnl_pct": 1.8
       },
       {
         "signal_id": "38e4aefe",
@@ -2435,35 +2435,35 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 375,
-      "tokens_with_signal": 86,
-      "coverage_pct": 22.9,
-      "avg_score": 9.36,
+      "tokens_scored": 328,
+      "tokens_with_signal": 85,
+      "coverage_pct": 25.9,
+      "avg_score": 9.43,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 375,
-      "tokens_with_signal": 251,
-      "coverage_pct": 66.9,
-      "avg_score": 12.95,
-      "max_score": 22.88,
+      "tokens_scored": 328,
+      "tokens_with_signal": 219,
+      "coverage_pct": 66.8,
+      "avg_score": 13.96,
+      "max_score": 23.73,
       "quality_traders": 50,
-      "markets_indexed": 3004
+      "markets_indexed": 2978
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 375,
-      "tokens_with_signal": 346,
-      "coverage_pct": 92.3,
-      "avg_score": 7.96,
-      "max_score": 19.86
+      "tokens_scored": 328,
+      "tokens_with_signal": 302,
+      "coverage_pct": 92.1,
+      "avg_score": 8.59,
+      "max_score": 28.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 375,
+      "tokens_scored": 328,
       "tokens_with_signal": 9,
-      "coverage_pct": 2.4,
+      "coverage_pct": 2.7,
       "avg_score": 3.46,
       "max_score": 7.0
     }
