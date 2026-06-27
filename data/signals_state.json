@@ -128,11 +128,56 @@
       "sl_fraction": 0.255,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.285,
+      "peak_price": 0.295,
       "trough_price": 0.255,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.265,
+      "current_price": 0.295,
+      "live_pnl_pct": 11.32
+    },
+    {
+      "signal_id": "3942e9a0",
+      "timestamp": "2026-06-27T18:44:31.361265+00:00",
+      "status": "active",
+      "market_id": "2707638",
+      "condition_id": "",
+      "token_id": "80586504082442332963746905414103247150266050966178984595022874970009238848808",
+      "question": "ITF Palma Del Rio: Eva Vedder vs Amandine Hesse",
+      "outcome": "Eva Vedder",
+      "slug": "itf-vedder-hesse-2026-06-27",
+      "category": "",
+      "resolution_date": "2026-07-04T18:30:00Z",
+      "entry_price": 0.595,
+      "min_entry_price": 0.58,
+      "max_entry_price": 0.625,
+      "tp_price": 0.8187,
+      "sl_price": 0.4433,
+      "tp_pct": 37.6,
+      "sl_pct": -25.5,
+      "expiry": "2026-07-04T18:30:00+00:00",
+      "edge_score": 31.5,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 15.2,
+        "dislocation": 8.0,
+        "external": 6.38
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.7,
+      "days_to_close": 6,
+      "liquidity_usd": 13467.2955,
+      "volume_24h": 45341.81732799998,
+      "rationale": "Smart money 15/25 (2 whales) | Dislocation 8/30 (vol spike) | External 6.4/15",
+      "tp_fraction": 0.552,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.595,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9143,12 +9188,12 @@
     "2694601": "2026-06-27T13:04:03.790951+00:00"
   },
   "stats": {
-    "total_signals": 1456,
+    "total_signals": 1457,
     "total_wins": 734,
     "total_losses": 712,
     "total_expired": 7,
     "total_market_resolved": 222
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-27T17:21:17.518706+00:00"
+  "last_updated": "2026-06-27T18:44:31.366529+00:00"
 }
