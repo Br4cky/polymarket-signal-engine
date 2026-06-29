@@ -173,12 +173,12 @@
       "sl_fraction": 0.264,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.565,
+      "peak_price": 0.575,
       "trough_price": 0.555,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.565,
-      "live_pnl_pct": 1.8
+      "current_price": 0.575,
+      "live_pnl_pct": 3.6
     }
   ],
   "resolved": [
@@ -9198,5 +9198,5 @@
     "total_market_resolved": 224
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-28T23:58:27.450507+00:00"
+  "last_updated": "2026-06-29T04:16:54.547675+00:00"
 }
