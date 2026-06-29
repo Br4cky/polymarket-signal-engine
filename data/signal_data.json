@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-06-29T22:16:03.599466+00:00",
+    "timestamp": "2026-06-29T23:23:00.703997+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 293,
+    "tokens_scored": 270,
     "opportunities_found": 31,
     "engine_version": "4.0.0"
   },
@@ -187,6 +187,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.495,
         "live_pnl_pct": -1.98
+      },
+      {
+        "signal_id": "4fc20d8e",
+        "timestamp": "2026-06-29T23:23:00.689262+00:00",
+        "status": "active",
+        "market_id": "2702128",
+        "condition_id": "",
+        "token_id": "56946804926569223271830312327615447065746277562696909677290865862907339738135",
+        "question": "Wimbledon ATP: Jesper de Jong vs Rinky Hijikata",
+        "outcome": "Rinky Hijikata",
+        "slug": "atp-jong-hijikat-2026-06-29",
+        "category": "",
+        "resolution_date": "2026-07-06T10:00:00Z",
+        "entry_price": 0.835,
+        "min_entry_price": 0.82,
+        "max_entry_price": 0.865,
+        "tp_price": 0.9049,
+        "sl_price": 0.7651,
+        "tp_pct": 8.4,
+        "sl_pct": -8.4,
+        "expiry": "2026-07-06T10:00:00+00:00",
+        "edge_score": 38.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.64,
+          "dislocation": 17.94,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 19122.4117,
+        "volume_24h": 550544.9043240001,
+        "rationale": "Smart money 19/25 (3 whales) | Dislocation 18/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.423,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.835,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2442,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1473,
-      "active_signals": 4,
+      "total_signals_issued": 1474,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2480,37 +2525,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 293,
-      "tokens_with_signal": 93,
-      "coverage_pct": 31.7,
-      "avg_score": 9.24,
+      "tokens_scored": 270,
+      "tokens_with_signal": 84,
+      "coverage_pct": 31.1,
+      "avg_score": 8.97,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 293,
-      "tokens_with_signal": 180,
-      "coverage_pct": 61.4,
-      "avg_score": 10.17,
-      "max_score": 22.36,
+      "tokens_scored": 270,
+      "tokens_with_signal": 160,
+      "coverage_pct": 59.3,
+      "avg_score": 9.4,
+      "max_score": 21.36,
       "quality_traders": 51,
-      "markets_indexed": 3170
+      "markets_indexed": 3158
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 293,
-      "tokens_with_signal": 263,
-      "coverage_pct": 89.8,
-      "avg_score": 8.15,
-      "max_score": 27.39
+      "tokens_scored": 270,
+      "tokens_with_signal": 242,
+      "coverage_pct": 89.6,
+      "avg_score": 7.88,
+      "max_score": 23.31
     },
     "external": {
-      "active": true,
-      "tokens_scored": 293,
-      "tokens_with_signal": 3,
-      "coverage_pct": 1.0,
-      "avg_score": 7.5,
-      "max_score": 8.0
+      "active": false,
+      "tokens_scored": 270,
+      "tokens_with_signal": 0,
+      "coverage_pct": 0.0,
+      "avg_score": 0,
+      "max_score": 0
     }
   },
   "calibration": {

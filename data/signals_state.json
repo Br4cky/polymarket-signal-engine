@@ -179,6 +179,51 @@
       "hypothetical_pnl_pct": null,
       "current_price": 0.495,
       "live_pnl_pct": -1.98
+    },
+    {
+      "signal_id": "4fc20d8e",
+      "timestamp": "2026-06-29T23:23:00.689262+00:00",
+      "status": "active",
+      "market_id": "2702128",
+      "condition_id": "",
+      "token_id": "56946804926569223271830312327615447065746277562696909677290865862907339738135",
+      "question": "Wimbledon ATP: Jesper de Jong vs Rinky Hijikata",
+      "outcome": "Rinky Hijikata",
+      "slug": "atp-jong-hijikat-2026-06-29",
+      "category": "",
+      "resolution_date": "2026-07-06T10:00:00Z",
+      "entry_price": 0.835,
+      "min_entry_price": 0.82,
+      "max_entry_price": 0.865,
+      "tp_price": 0.9049,
+      "sl_price": 0.7651,
+      "tp_pct": 8.4,
+      "sl_pct": -8.4,
+      "expiry": "2026-07-06T10:00:00+00:00",
+      "edge_score": 38.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.64,
+        "dislocation": 17.94,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.2,
+      "days_to_close": 6,
+      "liquidity_usd": 19122.4117,
+      "volume_24h": 550544.9043240001,
+      "rationale": "Smart money 19/25 (3 whales) | Dislocation 18/30 (velocity, vol spike, trajectory)",
+      "tp_fraction": 0.423,
+      "sl_fraction": 0.3,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.835,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9192,12 +9237,12 @@
     "2707623": "2026-06-29T22:16:03.580041+00:00"
   },
   "stats": {
-    "total_signals": 1473,
+    "total_signals": 1474,
     "total_wins": 744,
     "total_losses": 718,
     "total_expired": 7,
     "total_market_resolved": 224
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-06-29T22:16:03.589500+00:00"
+  "last_updated": "2026-06-29T23:23:00.693925+00:00"
 }
