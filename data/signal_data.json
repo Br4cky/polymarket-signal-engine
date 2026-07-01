@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-01T20:33:08.351725+00:00",
+    "timestamp": "2026-07-01T22:09:21.914359+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 346,
-    "opportunities_found": 62,
+    "tokens_scored": 297,
+    "opportunities_found": 65,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.465,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.475,
-        "live_pnl_pct": -2.06
+        "current_price": 0.465,
+        "live_pnl_pct": -4.12
       },
       {
         "signal_id": "bc7630d2",
@@ -136,11 +136,56 @@
         "sl_fraction": 0.33,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.615,
+        "trough_price": 0.595,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.595,
+        "live_pnl_pct": -3.25
+      },
+      {
+        "signal_id": "b3887b33",
+        "timestamp": "2026-07-01T22:09:21.895030+00:00",
+        "status": "active",
+        "market_id": "2721765",
+        "condition_id": "",
+        "token_id": "67596909630505748192273119086224135081859582478741941473155557882450542807607",
+        "question": "Argentina vs. Cabo Verde: Team to Advance",
+        "outcome": "Argentina",
+        "slug": "fifwc-arg-cvi-2026-07-03-team-to-advance",
+        "category": "",
+        "resolution_date": "2026-07-03T22:00:00Z",
+        "entry_price": 0.915,
+        "min_entry_price": 0.9,
+        "max_entry_price": 0.936,
+        "tp_price": 0.9485,
+        "sl_price": 0.8815,
+        "tp_pct": 3.7,
+        "sl_pct": -3.7,
+        "expiry": "2026-07-03T22:00:00+00:00",
+        "edge_score": 31.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 21.55,
+          "dislocation": 11.32,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.1,
+        "days_to_close": 1,
+        "liquidity_usd": 195592.7835,
+        "volume_24h": 552202.9007859993,
+        "rationale": "Smart money 22/25 (7 whales) | Dislocation 11/30 (velocity, vol spike)",
+        "tp_fraction": 0.394,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.615,
+        "current_price": 0.915,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2397,8 +2442,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1503,
-      "active_signals": 3,
+      "total_signals_issued": 1504,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 107,
       "losses": 93,
@@ -2435,37 +2480,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 346,
-      "tokens_with_signal": 114,
-      "coverage_pct": 32.9,
-      "avg_score": 8.66,
+      "tokens_scored": 297,
+      "tokens_with_signal": 118,
+      "coverage_pct": 39.7,
+      "avg_score": 8.23,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 346,
-      "tokens_with_signal": 246,
-      "coverage_pct": 71.1,
-      "avg_score": 14.7,
-      "max_score": 22.49,
-      "quality_traders": 51,
-      "markets_indexed": 4474
+      "tokens_scored": 297,
+      "tokens_with_signal": 197,
+      "coverage_pct": 66.3,
+      "avg_score": 14.57,
+      "max_score": 23.63,
+      "quality_traders": 50,
+      "markets_indexed": 4006
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 346,
-      "tokens_with_signal": 314,
-      "coverage_pct": 90.8,
-      "avg_score": 8.03,
-      "max_score": 24.07
+      "tokens_scored": 297,
+      "tokens_with_signal": 266,
+      "coverage_pct": 89.6,
+      "avg_score": 8.06,
+      "max_score": 28.0
     },
     "external": {
       "active": true,
-      "tokens_scored": 346,
+      "tokens_scored": 297,
       "tokens_with_signal": 16,
-      "coverage_pct": 4.6,
-      "avg_score": 2.71,
-      "max_score": 5.64
+      "coverage_pct": 5.4,
+      "avg_score": 2.54,
+      "max_score": 3.0
     }
   },
   "calibration": {

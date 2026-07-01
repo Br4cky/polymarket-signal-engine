@@ -87,8 +87,8 @@
       "trough_price": 0.465,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.475,
-      "live_pnl_pct": -2.06
+      "current_price": 0.465,
+      "live_pnl_pct": -4.12
     },
     {
       "signal_id": "bc7630d2",
@@ -128,11 +128,56 @@
       "sl_fraction": 0.33,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.615,
+      "trough_price": 0.595,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.595,
+      "live_pnl_pct": -3.25
+    },
+    {
+      "signal_id": "b3887b33",
+      "timestamp": "2026-07-01T22:09:21.895030+00:00",
+      "status": "active",
+      "market_id": "2721765",
+      "condition_id": "",
+      "token_id": "67596909630505748192273119086224135081859582478741941473155557882450542807607",
+      "question": "Argentina vs. Cabo Verde: Team to Advance",
+      "outcome": "Argentina",
+      "slug": "fifwc-arg-cvi-2026-07-03-team-to-advance",
+      "category": "",
+      "resolution_date": "2026-07-03T22:00:00Z",
+      "entry_price": 0.915,
+      "min_entry_price": 0.9,
+      "max_entry_price": 0.936,
+      "tp_price": 0.9485,
+      "sl_price": 0.8815,
+      "tp_pct": 3.7,
+      "sl_pct": -3.7,
+      "expiry": "2026-07-03T22:00:00+00:00",
+      "edge_score": 31.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 21.55,
+        "dislocation": 11.32,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 1,
+      "liquidity_usd": 195592.7835,
+      "volume_24h": 552202.9007859993,
+      "rationale": "Smart money 22/25 (7 whales) | Dislocation 11/30 (velocity, vol spike)",
+      "tp_fraction": 0.394,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.615,
+      "current_price": 0.915,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9159,12 +9204,12 @@
     "2735940": "2026-07-01T20:33:08.323390+00:00"
   },
   "stats": {
-    "total_signals": 1503,
+    "total_signals": 1504,
     "total_wins": 758,
     "total_losses": 735,
     "total_expired": 7,
     "total_market_resolved": 228
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-01T20:33:08.341347+00:00"
+  "last_updated": "2026-07-01T22:09:21.904688+00:00"
 }
