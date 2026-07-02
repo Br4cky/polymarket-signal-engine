@@ -132,8 +132,8 @@
       "trough_price": 0.585,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.605,
-      "live_pnl_pct": -1.63
+      "current_price": 0.595,
+      "live_pnl_pct": -3.25
     },
     {
       "signal_id": "b3887b33",
@@ -178,6 +178,51 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.915,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "09f2561d",
+      "timestamp": "2026-07-02T12:05:15.875893+00:00",
+      "status": "active",
+      "market_id": "2747660",
+      "condition_id": "",
+      "token_id": "93835275603119116001523537214634751863279452571215810070170234896817059228361",
+      "question": "Wimbledon ATP: Zizou Bergs vs Jaime Faria",
+      "outcome": "Zizou Bergs",
+      "slug": "atp-bergs-faria-2026-07-02",
+      "category": "",
+      "resolution_date": "2026-07-09T10:00:00Z",
+      "entry_price": 0.775,
+      "min_entry_price": 0.76,
+      "max_entry_price": 0.796,
+      "tp_price": 0.9004,
+      "sl_price": 0.6496,
+      "tp_pct": 16.2,
+      "sl_pct": -16.2,
+      "expiry": "2026-07-09T10:00:00+00:00",
+      "edge_score": 32.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 20.48,
+        "dislocation": 9.0,
+        "external": 3.93
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.3,
+      "days_to_close": 6,
+      "liquidity_usd": 186594.5266,
+      "volume_24h": 274970.18870199996,
+      "rationale": "Smart money 20/25 (5 whales) | Dislocation 9/30 (vol spike) | External 3.9/15",
+      "tp_fraction": 0.557,
+      "sl_fraction": 0.33,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.775,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9201,12 +9246,12 @@
     "2735940": "2026-07-01T20:33:08.323390+00:00"
   },
   "stats": {
-    "total_signals": 1506,
+    "total_signals": 1507,
     "total_wins": 760,
     "total_losses": 735,
     "total_expired": 7,
     "total_market_resolved": 228
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-02T09:40:20.878720+00:00"
+  "last_updated": "2026-07-02T12:05:15.883843+00:00"
 }
