@@ -218,11 +218,56 @@
       "sl_fraction": 0.24,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.535,
+      "trough_price": 0.535,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.535,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "29c90269",
+      "timestamp": "2026-07-04T08:12:36.753934+00:00",
+      "status": "active",
+      "market_id": "2766759",
+      "condition_id": "",
+      "token_id": "51911548599887870208512834589104874988746646324647658251485676564237334602135",
+      "question": "Will Mexico win on 2026-07-05?",
+      "outcome": "Yes",
+      "slug": "fifwc-mex-eng-2026-07-05-mex",
+      "category": "",
+      "resolution_date": "2026-07-06T00:00:00Z",
+      "entry_price": 0.305,
+      "min_entry_price": 0.295,
+      "max_entry_price": 0.319,
+      "tp_price": 0.6837,
+      "sl_price": 0.2464,
+      "tp_pct": 124.2,
+      "sl_pct": -19.2,
+      "expiry": "2026-07-06T00:00:00+00:00",
+      "edge_score": 30.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 18.01,
+        "dislocation": 11.0,
+        "external": 0.0
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.3,
+      "days_to_close": 1,
+      "liquidity_usd": 599952.5031,
+      "volume_24h": 529921.9877709991,
+      "rationale": "Structural 10/30 (Manifold div 28.1%) | Smart money 18/25 (5 whales) | Dislocation 11/30 (vol spike, book imbalance)",
+      "tp_fraction": 0.545,
+      "sl_fraction": 0.192,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.535,
+      "current_price": 0.305,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9244,12 +9289,12 @@
     "2769799": "2026-07-03T15:40:31.488841+00:00"
   },
   "stats": {
-    "total_signals": 1529,
+    "total_signals": 1530,
     "total_wins": 769,
     "total_losses": 748,
     "total_expired": 7,
     "total_market_resolved": 231
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-04T05:18:03.562461+00:00"
+  "last_updated": "2026-07-04T08:12:36.760506+00:00"
 }
