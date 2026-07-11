@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-11T19:53:03.312211+00:00",
+    "timestamp": "2026-07-11T20:58:38.751277+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 392,
-    "opportunities_found": 23,
+    "tokens_scored": 405,
+    "opportunities_found": 30,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -47,11 +47,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.3613,
-        "trough_price": 0.3212,
+        "trough_price": 0.3162,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.3212,
-        "live_pnl_pct": -4.1
+        "current_price": 0.3162,
+        "live_pnl_pct": -5.6
       },
       {
         "signal_id": "bbfe65b7",
@@ -92,11 +92,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.4988,
-        "trough_price": 0.4688,
+        "trough_price": 0.4662,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.4788,
-        "live_pnl_pct": 0.79
+        "current_price": 0.4662,
+        "live_pnl_pct": -1.84
       },
       {
         "signal_id": "d63e0ed2",
@@ -185,8 +185,8 @@
         "trough_price": 0.7388,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7488,
-        "live_pnl_pct": 1.35
+        "current_price": 0.75,
+        "live_pnl_pct": 1.52
       },
       {
         "signal_id": "5dd57873",
@@ -226,12 +226,57 @@
         "sl_fraction": 0.264,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.7712,
+        "peak_price": 0.7837,
         "trough_price": 0.7438,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.7712,
-        "live_pnl_pct": 0.01
+        "current_price": 0.7837,
+        "live_pnl_pct": 1.63
+      },
+      {
+        "signal_id": "1a48188b",
+        "timestamp": "2026-07-11T20:58:38.735768+00:00",
+        "status": "active",
+        "market_id": "2877577",
+        "condition_id": "",
+        "token_id": "113001005530964189090445865771127695969099001461290034724228071177902240127999",
+        "question": "Newport: Alexis Galarneau vs Jacob Fearnley",
+        "outcome": "Alexis Galarneau",
+        "slug": "atp-galarne-fearnle-2026-07-11",
+        "category": "",
+        "resolution_date": "2026-07-18T19:30:00Z",
+        "entry_price": 0.285,
+        "min_entry_price": 0.275,
+        "max_entry_price": 0.299,
+        "tp_price": 0.6834,
+        "sl_price": 0.2123,
+        "tp_pct": 139.8,
+        "sl_pct": -25.5,
+        "expiry": "2026-07-18T19:30:00+00:00",
+        "edge_score": 32.3,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.11,
+          "dislocation": 8.0,
+          "external": 4.53
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.5,
+        "days_to_close": 6,
+        "liquidity_usd": 147428.3877,
+        "volume_24h": 50148.172531000004,
+        "rationale": "Smart money 18/25 (4 whales) | Dislocation 8/30 (vol spike) | External 4.5/15",
+        "tp_fraction": 0.557,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.285,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2487,8 +2532,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1624,
-      "active_signals": 5,
+      "total_signals_issued": 1625,
+      "active_signals": 6,
       "total_resolved": 200,
       "wins": 98,
       "losses": 102,
@@ -2525,36 +2570,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 392,
-      "tokens_with_signal": 104,
-      "coverage_pct": 26.5,
-      "avg_score": 8.09,
+      "tokens_scored": 405,
+      "tokens_with_signal": 103,
+      "coverage_pct": 25.4,
+      "avg_score": 8.02,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 392,
-      "tokens_with_signal": 254,
-      "coverage_pct": 64.8,
-      "avg_score": 12.17,
+      "tokens_scored": 405,
+      "tokens_with_signal": 271,
+      "coverage_pct": 66.9,
+      "avg_score": 12.4,
       "max_score": 23.1,
       "quality_traders": 52,
-      "markets_indexed": 2952
+      "markets_indexed": 2888
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 392,
-      "tokens_with_signal": 340,
-      "coverage_pct": 86.7,
-      "avg_score": 8.5,
-      "max_score": 26.41
+      "tokens_scored": 405,
+      "tokens_with_signal": 352,
+      "coverage_pct": 86.9,
+      "avg_score": 8.6,
+      "max_score": 25.03
     },
     "external": {
       "active": true,
-      "tokens_scored": 392,
-      "tokens_with_signal": 22,
-      "coverage_pct": 5.6,
-      "avg_score": 3.44,
+      "tokens_scored": 405,
+      "tokens_with_signal": 25,
+      "coverage_pct": 6.2,
+      "avg_score": 3.56,
       "max_score": 7.0
     }
   },

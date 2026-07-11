@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.3613,
-      "trough_price": 0.3212,
+      "trough_price": 0.3162,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.3212,
-      "live_pnl_pct": -4.1
+      "current_price": 0.3162,
+      "live_pnl_pct": -5.6
     },
     {
       "signal_id": "bbfe65b7",
@@ -84,11 +84,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.4988,
-      "trough_price": 0.4688,
+      "trough_price": 0.4662,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.4788,
-      "live_pnl_pct": 0.79
+      "current_price": 0.4662,
+      "live_pnl_pct": -1.84
     },
     {
       "signal_id": "d63e0ed2",
@@ -177,8 +177,8 @@
       "trough_price": 0.7388,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.7488,
-      "live_pnl_pct": 1.35
+      "current_price": 0.75,
+      "live_pnl_pct": 1.52
     },
     {
       "signal_id": "5dd57873",
@@ -218,12 +218,57 @@
       "sl_fraction": 0.264,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.7712,
+      "peak_price": 0.7837,
       "trough_price": 0.7438,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.7712,
-      "live_pnl_pct": 0.01
+      "current_price": 0.7837,
+      "live_pnl_pct": 1.63
+    },
+    {
+      "signal_id": "1a48188b",
+      "timestamp": "2026-07-11T20:58:38.735768+00:00",
+      "status": "active",
+      "market_id": "2877577",
+      "condition_id": "",
+      "token_id": "113001005530964189090445865771127695969099001461290034724228071177902240127999",
+      "question": "Newport: Alexis Galarneau vs Jacob Fearnley",
+      "outcome": "Alexis Galarneau",
+      "slug": "atp-galarne-fearnle-2026-07-11",
+      "category": "",
+      "resolution_date": "2026-07-18T19:30:00Z",
+      "entry_price": 0.285,
+      "min_entry_price": 0.275,
+      "max_entry_price": 0.299,
+      "tp_price": 0.6834,
+      "sl_price": 0.2123,
+      "tp_pct": 139.8,
+      "sl_pct": -25.5,
+      "expiry": "2026-07-18T19:30:00+00:00",
+      "edge_score": 32.3,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 18.11,
+        "dislocation": 8.0,
+        "external": 4.53
+      },
+      "convexity_band": "2x",
+      "potential_multiple": 3.5,
+      "days_to_close": 6,
+      "liquidity_usd": 147428.3877,
+      "volume_24h": 50148.172531000004,
+      "rationale": "Smart money 18/25 (4 whales) | Dislocation 8/30 (vol spike) | External 4.5/15",
+      "tp_fraction": 0.557,
+      "sl_fraction": 0.255,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.285,
+      "live_pnl_pct": 0.0
     }
   ],
   "resolved": [
@@ -9247,12 +9292,12 @@
     "2877550": "2026-07-11T19:53:03.292204+00:00"
   },
   "stats": {
-    "total_signals": 1624,
+    "total_signals": 1625,
     "total_wins": 813,
     "total_losses": 799,
     "total_expired": 7,
     "total_market_resolved": 242
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-11T19:53:03.302202+00:00"
+  "last_updated": "2026-07-11T20:58:38.740743+00:00"
 }
