@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-12T06:27:14.011230+00:00",
+    "timestamp": "2026-07-12T08:46:13.283022+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 339,
-    "opportunities_found": 42,
+    "tokens_scored": 358,
+    "opportunities_found": 46,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -46,8 +46,8 @@
         "sl_fraction": 0.3,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.795,
+        "trough_price": 0.795,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.795,
@@ -91,8 +91,8 @@
         "sl_fraction": 0.24,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.515,
+        "trough_price": 0.515,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.515,
@@ -136,11 +136,56 @@
         "sl_fraction": 0.264,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.905,
+        "trough_price": 0.895,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.895,
+        "live_pnl_pct": -1.1
+      },
+      {
+        "signal_id": "c238629b",
+        "timestamp": "2026-07-12T08:46:13.270627+00:00",
+        "status": "active",
+        "market_id": "2880294",
+        "condition_id": "",
+        "token_id": "48208521961816492239948780573157134894288519996473576193996943308552989258978",
+        "question": "France vs. Spain: Both Teams to Score",
+        "outcome": "Yes",
+        "slug": "fifwc-fra-esp-2026-07-14-btts",
+        "category": "",
+        "resolution_date": "2026-07-14T19:00:00Z",
+        "entry_price": 0.595,
+        "min_entry_price": 0.58,
+        "max_entry_price": 0.616,
+        "tp_price": 0.8149,
+        "sl_price": 0.4522,
+        "tp_pct": 37.0,
+        "sl_pct": -24.0,
+        "expiry": "2026-07-14T19:00:00+00:00",
+        "edge_score": 30.0,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 6.85,
+          "smart_money": 15.2,
+          "dislocation": 10.76,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 2,
+        "liquidity_usd": 244351.249,
+        "volume_24h": 158494.37934599997,
+        "rationale": "Structural 7/30 (Manifold div 16.4%) | Smart money 15/25 (2 whales) | Dislocation 11/30 (vol spike, trajectory)",
+        "tp_fraction": 0.543,
+        "sl_fraction": 0.24,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.905,
+        "current_price": 0.595,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2397,8 +2442,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1632,
-      "active_signals": 3,
+      "total_signals_issued": 1633,
+      "active_signals": 4,
       "total_resolved": 200,
       "wins": 97,
       "losses": 103,
@@ -2435,37 +2480,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 339,
-      "tokens_with_signal": 123,
-      "coverage_pct": 36.3,
-      "avg_score": 8.11,
+      "tokens_scored": 358,
+      "tokens_with_signal": 122,
+      "coverage_pct": 34.1,
+      "avg_score": 8.06,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 339,
-      "tokens_with_signal": 113,
-      "coverage_pct": 33.3,
-      "avg_score": 8.46,
+      "tokens_scored": 358,
+      "tokens_with_signal": 131,
+      "coverage_pct": 36.6,
+      "avg_score": 8.68,
       "max_score": 22.8,
       "quality_traders": 52,
-      "markets_indexed": 3478
+      "markets_indexed": 3466
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 339,
-      "tokens_with_signal": 259,
-      "coverage_pct": 76.4,
-      "avg_score": 6.93,
-      "max_score": 17.39
+      "tokens_scored": 358,
+      "tokens_with_signal": 287,
+      "coverage_pct": 80.2,
+      "avg_score": 7.4,
+      "max_score": 24.61
     },
     "external": {
       "active": true,
-      "tokens_scored": 339,
-      "tokens_with_signal": 13,
-      "coverage_pct": 3.8,
-      "avg_score": 4.28,
-      "max_score": 8.0
+      "tokens_scored": 358,
+      "tokens_with_signal": 20,
+      "coverage_pct": 5.6,
+      "avg_score": 3.19,
+      "max_score": 7.0
     }
   },
   "calibration": {
