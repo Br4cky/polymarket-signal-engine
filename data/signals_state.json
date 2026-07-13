@@ -39,11 +39,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.515,
-      "trough_price": 0.515,
+      "trough_price": 0.5112,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.515,
-      "live_pnl_pct": 0.0
+      "current_price": 0.5112,
+      "live_pnl_pct": -0.73
     },
     {
       "signal_id": "47e58325",
@@ -132,8 +132,8 @@
       "trough_price": 0.585,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.585,
-      "live_pnl_pct": -1.68
+      "current_price": 0.595,
+      "live_pnl_pct": 0.0
     },
     {
       "signal_id": "6797d013",
@@ -174,11 +174,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.415,
-      "trough_price": 0.415,
+      "trough_price": 0.4113,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.415,
-      "live_pnl_pct": 0.0
+      "current_price": 0.4113,
+      "live_pnl_pct": -0.9
     },
     {
       "signal_id": "6df9ef11",
@@ -313,6 +313,51 @@
       "final_price": null,
       "hypothetical_pnl_pct": null,
       "current_price": 0.935,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "365a10ca",
+      "timestamp": "2026-07-13T03:40:19.350346+00:00",
+      "status": "active",
+      "market_id": "2879969",
+      "condition_id": "",
+      "token_id": "83785114880562288951559015996987718979440142886963020085739232032042142573237",
+      "question": "Will France vs. Spain end in a draw?",
+      "outcome": "No",
+      "slug": "fifwc-fra-esp-2026-07-14-draw",
+      "category": "",
+      "resolution_date": "2026-07-14T19:00:00Z",
+      "entry_price": 0.7013,
+      "min_entry_price": 0.6863,
+      "max_entry_price": 0.7223,
+      "tp_price": 0.8728,
+      "sl_price": 0.533,
+      "tp_pct": 24.5,
+      "sl_pct": -24.0,
+      "expiry": "2026-07-14T19:00:00+00:00",
+      "edge_score": 35.1,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 10.0,
+        "smart_money": 14.67,
+        "dislocation": 16.31,
+        "external": 0.0
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.4,
+      "days_to_close": 1,
+      "liquidity_usd": 3582235.224225,
+      "volume_24h": 724990.2849009956,
+      "rationale": "Structural 10/30 (Manifold div 24.1%) | Smart money 15/25 (2 whales) | Dislocation 16/30 (velocity, vol spike)",
+      "tp_fraction": 0.574,
+      "sl_fraction": 0.24,
+      "resolved_at": null,
+      "resolution_type": null,
+      "peak_price": null,
+      "trough_price": null,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.70125,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9346,12 +9391,12 @@
     "2816965": "2026-07-12T22:59:11.011694+00:00"
   },
   "stats": {
-    "total_signals": 1655,
+    "total_signals": 1656,
     "total_wins": 827,
     "total_losses": 814,
     "total_expired": 7,
     "total_market_resolved": 243
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-13T00:04:52.818124+00:00"
+  "last_updated": "2026-07-13T03:40:19.358222+00:00"
 }
