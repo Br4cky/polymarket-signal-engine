@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-12T22:59:11.029681+00:00",
+    "timestamp": "2026-07-13T00:04:52.828324+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 374,
-    "opportunities_found": 64,
+    "tokens_scored": 375,
+    "opportunities_found": 62,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -316,8 +316,8 @@
         "sl_fraction": 0.264,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.935,
+        "trough_price": 0.935,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.935,
@@ -2615,37 +2615,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 374,
-      "tokens_with_signal": 160,
-      "coverage_pct": 42.8,
+      "tokens_scored": 375,
+      "tokens_with_signal": 161,
+      "coverage_pct": 42.9,
       "avg_score": 8.33,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 374,
-      "tokens_with_signal": 124,
-      "coverage_pct": 33.2,
-      "avg_score": 10.18,
+      "tokens_scored": 375,
+      "tokens_with_signal": 136,
+      "coverage_pct": 36.3,
+      "avg_score": 9.51,
       "max_score": 22.95,
       "quality_traders": 51,
-      "markets_indexed": 3314
+      "markets_indexed": 3342
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 374,
-      "tokens_with_signal": 300,
-      "coverage_pct": 80.2,
-      "avg_score": 7.14,
-      "max_score": 24.93
+      "tokens_scored": 375,
+      "tokens_with_signal": 298,
+      "coverage_pct": 79.5,
+      "avg_score": 6.98,
+      "max_score": 16.59
     },
     "external": {
       "active": true,
-      "tokens_scored": 374,
+      "tokens_scored": 375,
       "tokens_with_signal": 12,
       "coverage_pct": 3.2,
-      "avg_score": 1.56,
-      "max_score": 2.22
+      "avg_score": 1.51,
+      "max_score": 2.18
     }
   },
   "calibration": {
