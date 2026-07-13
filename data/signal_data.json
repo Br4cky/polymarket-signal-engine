@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-13T03:40:19.368172+00:00",
+    "timestamp": "2026-07-13T06:46:38.568066+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 347,
-    "opportunities_found": 61,
+    "tokens_scored": 336,
+    "opportunities_found": 56,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -47,11 +47,11 @@
         "resolved_at": null,
         "resolution_type": null,
         "peak_price": 0.515,
-        "trough_price": 0.5112,
+        "trough_price": 0.5062,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.5112,
-        "live_pnl_pct": -0.73
+        "current_price": 0.5062,
+        "live_pnl_pct": -1.7
       },
       {
         "signal_id": "47e58325",
@@ -271,12 +271,12 @@
         "sl_fraction": 0.264,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.905,
+        "peak_price": 0.915,
         "trough_price": 0.905,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.905,
-        "live_pnl_pct": 0.0
+        "current_price": 0.915,
+        "live_pnl_pct": 1.1
       },
       {
         "signal_id": "4f9287ef",
@@ -361,11 +361,56 @@
         "sl_fraction": 0.24,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.7013,
+        "trough_price": 0.7013,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.7013,
+        "live_pnl_pct": -0.01
+      },
+      {
+        "signal_id": "feca034b",
+        "timestamp": "2026-07-13T06:46:38.552665+00:00",
+        "status": "active",
+        "market_id": "2879970",
+        "condition_id": "",
+        "token_id": "59701348329688999702254197580644416038122802547584947510322394691994999642374",
+        "question": "Will Spain win on 2026-07-14?",
+        "outcome": "Yes",
+        "slug": "fifwc-fra-esp-2026-07-14-esp",
+        "category": "",
+        "resolution_date": "2026-07-14T19:00:00Z",
+        "entry_price": 0.2938,
+        "min_entry_price": 0.2838,
+        "max_entry_price": 0.3078,
+        "tp_price": 0.6838,
+        "sl_price": 0.2374,
+        "tp_pct": 132.8,
+        "sl_pct": -19.2,
+        "expiry": "2026-07-14T19:00:00+00:00",
+        "edge_score": 31.5,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 9.98,
+          "smart_money": 17.75,
+          "dislocation": 12.36,
+          "external": 0.0
+        },
+        "convexity_band": "2x",
+        "potential_multiple": 3.4,
+        "days_to_close": 1,
+        "liquidity_usd": 3068539.7363,
+        "volume_24h": 1095590.1417140004,
+        "rationale": "Structural 10/30 (Manifold div 21.6%) | Smart money 18/25 (4 whales) | Dislocation 12/30 (velocity, vol spike)",
+        "tp_fraction": 0.552,
+        "sl_fraction": 0.192,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.70125,
+        "current_price": 0.29375,
         "live_pnl_pct": 0.0
       }
     ],
@@ -2622,8 +2667,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1656,
-      "active_signals": 8,
+      "total_signals_issued": 1657,
+      "active_signals": 9,
       "total_resolved": 200,
       "wins": 96,
       "losses": 104,
@@ -2660,36 +2705,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 156,
-      "coverage_pct": 45.0,
-      "avg_score": 8.23,
+      "tokens_scored": 336,
+      "tokens_with_signal": 143,
+      "coverage_pct": 42.6,
+      "avg_score": 8.52,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 119,
-      "coverage_pct": 34.3,
-      "avg_score": 7.36,
-      "max_score": 20.4,
+      "tokens_scored": 336,
+      "tokens_with_signal": 111,
+      "coverage_pct": 33.0,
+      "avg_score": 7.94,
+      "max_score": 22.17,
       "quality_traders": 51,
-      "markets_indexed": 3314
+      "markets_indexed": 3332
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 347,
+      "tokens_scored": 336,
       "tokens_with_signal": 270,
-      "coverage_pct": 77.8,
-      "avg_score": 7.05,
-      "max_score": 27.21
+      "coverage_pct": 80.4,
+      "avg_score": 6.83,
+      "max_score": 21.6
     },
     "external": {
       "active": true,
-      "tokens_scored": 347,
-      "tokens_with_signal": 24,
-      "coverage_pct": 6.9,
-      "avg_score": 4.02,
+      "tokens_scored": 336,
+      "tokens_with_signal": 23,
+      "coverage_pct": 6.8,
+      "avg_score": 3.81,
       "max_score": 7.0
     }
   },
