@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-16T06:13:28.836516+00:00",
+    "timestamp": "2026-07-16T08:43:05.935888+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 332,
-    "opportunities_found": 19,
+    "tokens_scored": 362,
+    "opportunities_found": 31,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.358,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.363,
-        "live_pnl_pct": -21.51
+        "current_price": 0.3815,
+        "live_pnl_pct": -17.51
       },
       {
         "signal_id": "d5772e69",
@@ -136,12 +136,102 @@
         "sl_fraction": 0.255,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.535,
+        "peak_price": 0.545,
         "trough_price": 0.51,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.535,
-        "live_pnl_pct": 3.88
+        "current_price": 0.545,
+        "live_pnl_pct": 5.83
+      },
+      {
+        "signal_id": "af707da6",
+        "timestamp": "2026-07-16T08:43:05.921036+00:00",
+        "status": "active",
+        "market_id": "2922920",
+        "condition_id": "",
+        "token_id": "73524972481083349073176612804953229147103076284742161142541489217765031895836",
+        "question": "Swiss Open: Juan Manuel Cerundolo vs Miomir Kecmanovic",
+        "outcome": "Juan Manuel Cerundolo",
+        "slug": "atp-cerund-kecmano-2026-07-15",
+        "category": "",
+        "resolution_date": "2026-07-22T08:00:00Z",
+        "entry_price": 0.565,
+        "min_entry_price": 0.55,
+        "max_entry_price": 0.586,
+        "tp_price": 0.7526,
+        "sl_price": 0.3955,
+        "tp_pct": 33.2,
+        "sl_pct": -30.0,
+        "expiry": "2026-07-22T08:00:00+00:00",
+        "edge_score": 39.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.2,
+          "dislocation": 19.59,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 5,
+        "liquidity_usd": 177796.2945,
+        "volume_24h": 134589.69792800004,
+        "rationale": "Smart money 14/25 (2 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.431,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.565,
+        "live_pnl_pct": 0.0
+      },
+      {
+        "signal_id": "bd1b5f21",
+        "timestamp": "2026-07-16T08:43:05.921667+00:00",
+        "status": "active",
+        "market_id": "2926147",
+        "condition_id": "",
+        "token_id": "35885015946485107869071143454647501097376382224315875817089125394600314148428",
+        "question": "Iasi Open: Alevtina Ibragimova vs Paula Badosa",
+        "outcome": "Paula Badosa",
+        "slug": "wta-ibragim-badosa-2026-07-16",
+        "category": "",
+        "resolution_date": "2026-07-23T07:00:00Z",
+        "entry_price": 0.845,
+        "min_entry_price": 0.83,
+        "max_entry_price": 0.866,
+        "tp_price": 0.931,
+        "sl_price": 0.759,
+        "tp_pct": 10.2,
+        "sl_pct": -10.2,
+        "expiry": "2026-07-23T07:00:00+00:00",
+        "edge_score": 31.9,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 14.2,
+          "dislocation": 8.0,
+          "external": 7.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.2,
+        "days_to_close": 6,
+        "liquidity_usd": 127906.3063,
+        "volume_24h": 25521.286774000004,
+        "rationale": "Smart money 14/25 (2 whales) | Dislocation 8/30 (vol spike) | External 7.0/15",
+        "tp_fraction": 0.555,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.845,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2397,8 +2487,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1702,
-      "active_signals": 3,
+      "total_signals_issued": 1704,
+      "active_signals": 5,
       "total_resolved": 200,
       "wins": 88,
       "losses": 112,
@@ -2435,37 +2525,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 332,
-      "tokens_with_signal": 101,
-      "coverage_pct": 30.4,
-      "avg_score": 8.61,
+      "tokens_scored": 362,
+      "tokens_with_signal": 106,
+      "coverage_pct": 29.3,
+      "avg_score": 8.63,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 332,
-      "tokens_with_signal": 69,
-      "coverage_pct": 20.8,
-      "avg_score": 6.02,
-      "max_score": 22.3,
+      "tokens_scored": 362,
+      "tokens_with_signal": 82,
+      "coverage_pct": 22.7,
+      "avg_score": 6.68,
+      "max_score": 22.32,
       "quality_traders": 51,
-      "markets_indexed": 3510
+      "markets_indexed": 3512
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 332,
-      "tokens_with_signal": 261,
-      "coverage_pct": 78.6,
-      "avg_score": 7.1,
-      "max_score": 18.0
+      "tokens_scored": 362,
+      "tokens_with_signal": 295,
+      "coverage_pct": 81.5,
+      "avg_score": 7.13,
+      "max_score": 19.72
     },
     "external": {
       "active": true,
-      "tokens_scored": 332,
-      "tokens_with_signal": 30,
-      "coverage_pct": 9.0,
-      "avg_score": 3.04,
-      "max_score": 7.0
+      "tokens_scored": 362,
+      "tokens_with_signal": 39,
+      "coverage_pct": 10.8,
+      "avg_score": 3.47,
+      "max_score": 8.0
     }
   },
   "calibration": {
