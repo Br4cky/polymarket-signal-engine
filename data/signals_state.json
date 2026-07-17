@@ -578,12 +578,12 @@
       "sl_fraction": 0.192,
       "resolved_at": null,
       "resolution_type": null,
-      "peak_price": 0.505,
+      "peak_price": 0.515,
       "trough_price": 0.505,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.505,
-      "live_pnl_pct": 0.0
+      "current_price": 0.515,
+      "live_pnl_pct": 1.98
     },
     {
       "signal_id": "f0959618",
@@ -624,11 +624,11 @@
       "resolved_at": null,
       "resolution_type": null,
       "peak_price": 0.345,
-      "trough_price": 0.345,
+      "trough_price": 0.335,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.345,
-      "live_pnl_pct": 0.0
+      "current_price": 0.335,
+      "live_pnl_pct": -2.9
     },
     {
       "signal_id": "0e94ac03",
@@ -713,11 +713,56 @@
       "sl_fraction": 0.264,
       "resolved_at": null,
       "resolution_type": null,
+      "peak_price": 0.925,
+      "trough_price": 0.925,
+      "final_price": null,
+      "hypothetical_pnl_pct": null,
+      "current_price": 0.925,
+      "live_pnl_pct": 0.0
+    },
+    {
+      "signal_id": "7cfcce9e",
+      "timestamp": "2026-07-17T22:14:23.571630+00:00",
+      "status": "active",
+      "market_id": "2955395",
+      "condition_id": "",
+      "token_id": "2899007585167098232052640705708455559358405087271915165067965733663746121040",
+      "question": "Pozoblanco: Akira Santillan vs Izan Almazan Valiente",
+      "outcome": "Akira Santillan",
+      "slug": "atp-santill-valient-2026-07-17",
+      "category": "",
+      "resolution_date": "2026-07-24T18:30:00Z",
+      "entry_price": 0.895,
+      "min_entry_price": 0.88,
+      "max_entry_price": 0.916,
+      "tp_price": 0.9658,
+      "sl_price": 0.8242,
+      "tp_pct": 7.9,
+      "sl_pct": -7.9,
+      "expiry": "2026-07-24T18:30:00+00:00",
+      "edge_score": 51.4,
+      "edge_tier": "high",
+      "layer_scores": {
+        "structural": 0.0,
+        "smart_money": 22.31,
+        "dislocation": 23.29,
+        "external": 1.54
+      },
+      "convexity_band": "yield",
+      "potential_multiple": 1.1,
+      "days_to_close": 6,
+      "liquidity_usd": 181101.2962,
+      "volume_24h": 308329.00664299994,
+      "rationale": "Smart money 22/25 (5 whales) | Dislocation 23/30 (velocity, vol spike, book imbalance, trajectory) | External 1.5/15",
+      "tp_fraction": 0.675,
+      "sl_fraction": 0.363,
+      "resolved_at": null,
+      "resolution_type": null,
       "peak_price": null,
       "trough_price": null,
       "final_price": null,
       "hypothetical_pnl_pct": null,
-      "current_price": 0.925,
+      "current_price": 0.895,
       "live_pnl_pct": 0.0
     }
   ],
@@ -9747,12 +9792,12 @@
     "2951761": "2026-07-17T21:18:48.118797+00:00"
   },
   "stats": {
-    "total_signals": 1757,
+    "total_signals": 1758,
     "total_wins": 867,
     "total_losses": 867,
     "total_expired": 7,
     "total_market_resolved": 254
   },
   "created_at": "2026-03-05T23:13:46.937773+00:00",
-  "last_updated": "2026-07-17T21:18:48.137178+00:00"
+  "last_updated": "2026-07-17T22:14:23.584139+00:00"
 }
