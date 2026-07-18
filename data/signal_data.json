@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-07-18T05:59:35.617498+00:00",
+    "timestamp": "2026-07-18T08:00:41.909095+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 334,
+    "tokens_scored": 338,
     "opportunities_found": 52,
     "engine_version": "4.0.0"
   },
@@ -676,12 +676,12 @@
         "sl_fraction": 0.264,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": 0.945,
+        "peak_price": 0.955,
         "trough_price": 0.945,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.945,
-        "live_pnl_pct": 0.0
+        "current_price": 0.955,
+        "live_pnl_pct": 1.06
       },
       {
         "signal_id": "311d6642",
@@ -766,8 +766,8 @@
         "sl_fraction": 0.24,
         "resolved_at": null,
         "resolution_type": null,
-        "peak_price": null,
-        "trough_price": null,
+        "peak_price": 0.585,
+        "trough_price": 0.585,
         "final_price": null,
         "hypothetical_pnl_pct": null,
         "current_price": 0.585,
@@ -811,11 +811,56 @@
         "sl_fraction": 0.204,
         "resolved_at": null,
         "resolution_type": null,
+        "peak_price": 0.655,
+        "trough_price": 0.645,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.645,
+        "live_pnl_pct": -1.53
+      },
+      {
+        "signal_id": "9f420199",
+        "timestamp": "2026-07-18T08:00:41.889993+00:00",
+        "status": "active",
+        "market_id": "2960137",
+        "condition_id": "",
+        "token_id": "10007859465346629620147986266443292253605881260640803939818559778655301585548",
+        "question": "Swiss Open: Raphael Collignon vs Juan Manuel Cerundolo",
+        "outcome": "Raphael Collignon",
+        "slug": "atp-collign-cerund-2026-07-18",
+        "category": "",
+        "resolution_date": "2026-07-25T08:00:00Z",
+        "entry_price": 0.555,
+        "min_entry_price": 0.54,
+        "max_entry_price": 0.576,
+        "tp_price": 0.7972,
+        "sl_price": 0.4135,
+        "tp_pct": 43.6,
+        "sl_pct": -25.5,
+        "expiry": "2026-07-25T08:00:00+00:00",
+        "edge_score": 30.2,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 18.49,
+          "dislocation": 8.0,
+          "external": 3.16
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.8,
+        "days_to_close": 7,
+        "liquidity_usd": 259935.1673,
+        "volume_24h": 108104.24874499996,
+        "rationale": "Smart money 18/25 (3 whales) | Dislocation 8/30 (vol spike) | External 3.2/15",
+        "tp_fraction": 0.544,
+        "sl_fraction": 0.255,
+        "resolved_at": null,
+        "resolution_type": null,
         "peak_price": null,
         "trough_price": null,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.655,
+        "current_price": 0.555,
         "live_pnl_pct": 0.0
       }
     ],
@@ -3072,8 +3117,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1767,
-      "active_signals": 18,
+      "total_signals_issued": 1768,
+      "active_signals": 19,
       "total_resolved": 200,
       "wins": 93,
       "losses": 107,
@@ -3110,36 +3155,36 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 334,
-      "tokens_with_signal": 137,
-      "coverage_pct": 41.0,
-      "avg_score": 8.78,
+      "tokens_scored": 338,
+      "tokens_with_signal": 138,
+      "coverage_pct": 40.8,
+      "avg_score": 8.81,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 334,
+      "tokens_scored": 338,
       "tokens_with_signal": 164,
-      "coverage_pct": 49.1,
-      "avg_score": 10.89,
+      "coverage_pct": 48.5,
+      "avg_score": 10.61,
       "max_score": 23.18,
       "quality_traders": 52,
-      "markets_indexed": 3256
+      "markets_indexed": 3288
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 334,
-      "tokens_with_signal": 287,
-      "coverage_pct": 85.9,
-      "avg_score": 7.56,
-      "max_score": 19.18
+      "tokens_scored": 338,
+      "tokens_with_signal": 290,
+      "coverage_pct": 85.8,
+      "avg_score": 7.77,
+      "max_score": 24.7
     },
     "external": {
       "active": true,
-      "tokens_scored": 334,
-      "tokens_with_signal": 49,
-      "coverage_pct": 14.7,
-      "avg_score": 2.34,
+      "tokens_scored": 338,
+      "tokens_with_signal": 61,
+      "coverage_pct": 18.0,
+      "avg_score": 2.25,
       "max_score": 4.44
     }
   },
