@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "timestamp": "2026-07-19T16:21:04.697722+00:00",
+    "timestamp": "2026-07-19T17:32:27.133752+00:00",
     "markets_scanned": 300,
-    "tokens_scored": 344,
-    "opportunities_found": 30,
+    "tokens_scored": 342,
+    "opportunities_found": 27,
     "engine_version": "4.0.0"
   },
   "signals": {
@@ -95,8 +95,8 @@
         "trough_price": 0.185,
         "final_price": null,
         "hypothetical_pnl_pct": null,
-        "current_price": 0.2013,
-        "live_pnl_pct": 8.78
+        "current_price": 0.1963,
+        "live_pnl_pct": 6.08
       },
       {
         "signal_id": "c17d513d",
@@ -547,6 +547,51 @@
         "hypothetical_pnl_pct": null,
         "current_price": 0.2612,
         "live_pnl_pct": -2.77
+      },
+      {
+        "signal_id": "3338bd16",
+        "timestamp": "2026-07-19T17:32:27.116734+00:00",
+        "status": "active",
+        "market_id": "2905878",
+        "condition_id": "",
+        "token_id": "36500958407493512437721972429093529373702547370175380992080029462738588241963",
+        "question": "Chicago White Sox vs. Toronto Blue Jays",
+        "outcome": "Chicago White Sox",
+        "slug": "mlb-cws-tor-2026-07-19",
+        "category": "",
+        "resolution_date": "2026-07-26T16:15:00Z",
+        "entry_price": 0.605,
+        "min_entry_price": 0.59,
+        "max_entry_price": 0.626,
+        "tp_price": 0.774,
+        "sl_price": 0.436,
+        "tp_pct": 27.9,
+        "sl_pct": -27.9,
+        "expiry": "2026-07-26T16:15:00+00:00",
+        "edge_score": 39.1,
+        "edge_tier": "high",
+        "layer_scores": {
+          "structural": 0.0,
+          "smart_money": 17.53,
+          "dislocation": 20.06,
+          "external": 0.0
+        },
+        "convexity_band": "yield",
+        "potential_multiple": 1.7,
+        "days_to_close": 6,
+        "liquidity_usd": 157118.4162,
+        "volume_24h": 668236.5368980007,
+        "rationale": "Smart money 18/25 (5 whales) | Dislocation 20/30 (velocity, vol spike, trajectory)",
+        "tp_fraction": 0.428,
+        "sl_fraction": 0.3,
+        "resolved_at": null,
+        "resolution_type": null,
+        "peak_price": null,
+        "trough_price": null,
+        "final_price": null,
+        "hypothetical_pnl_pct": null,
+        "current_price": 0.605,
+        "live_pnl_pct": 0.0
       }
     ],
     "recent_resolved": [
@@ -2802,8 +2847,8 @@
       }
     ],
     "metrics": {
-      "total_signals_issued": 1798,
-      "active_signals": 12,
+      "total_signals_issued": 1799,
+      "active_signals": 13,
       "total_resolved": 200,
       "wins": 90,
       "losses": 110,
@@ -2840,37 +2885,37 @@
   "layer_health": {
     "structural": {
       "active": true,
-      "tokens_scored": 344,
-      "tokens_with_signal": 119,
-      "coverage_pct": 34.6,
-      "avg_score": 8.33,
+      "tokens_scored": 342,
+      "tokens_with_signal": 117,
+      "coverage_pct": 34.2,
+      "avg_score": 8.49,
       "max_score": 10.0
     },
     "smart_money": {
       "active": true,
-      "tokens_scored": 344,
-      "tokens_with_signal": 176,
-      "coverage_pct": 51.2,
-      "avg_score": 12.87,
-      "max_score": 23.75,
+      "tokens_scored": 342,
+      "tokens_with_signal": 188,
+      "coverage_pct": 55.0,
+      "avg_score": 13.41,
+      "max_score": 23.76,
       "quality_traders": 51,
-      "markets_indexed": 3206
+      "markets_indexed": 3260
     },
     "dislocation": {
       "active": true,
-      "tokens_scored": 344,
-      "tokens_with_signal": 308,
-      "coverage_pct": 89.5,
-      "avg_score": 8.4,
-      "max_score": 22.31
+      "tokens_scored": 342,
+      "tokens_with_signal": 298,
+      "coverage_pct": 87.1,
+      "avg_score": 8.57,
+      "max_score": 22.41
     },
     "external": {
       "active": true,
-      "tokens_scored": 344,
-      "tokens_with_signal": 14,
-      "coverage_pct": 4.1,
-      "avg_score": 3.39,
-      "max_score": 6.93
+      "tokens_scored": 342,
+      "tokens_with_signal": 17,
+      "coverage_pct": 5.0,
+      "avg_score": 3.73,
+      "max_score": 7.0
     }
   },
   "calibration": {
